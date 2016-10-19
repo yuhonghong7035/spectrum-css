@@ -1,0 +1,29 @@
+/* -------------------------*/
+/* HOME */
+/* -------------------------*/
+
+/* mobile first css */
+.cssdoc-HomeRow {
+  margin-top: 0.9rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cssdoc-HomePresentation {
+  background-color: rgb(251,251,251);
+}
+
+
+@media (min-width: 48em) {
+  /* 768px tablet css, will overwrite styles from mobile */
+  .cssdoc-HomeRow {
+    margin-top: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .cssdoc-HomePresentation-pitch {
+    line-height: 1rem;
+  }
+
+}

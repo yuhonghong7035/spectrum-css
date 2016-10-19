@@ -1,0 +1,67 @@
+/* -------------------------*/
+/* BASE */
+/* -------------------------*/
+
+/* typekit font loading */
+.wf-loading {
+  visibility: hidden;
+}
+
+/* TODO: the commons defines the font @ 14px, spectrum.corp use 18px */
+.spectrum--light,
+.spectrum--dark {
+  font-size: 1.125rem;
+  line-height: 24px;
+}
+
+/*TODO: move this when spectrum-css has header styles*/
+.spectrum-Heading {
+  color: rgb(75, 75, 75);
+  font-weight: normal;
+}
+
+.spectrum-Heading--subtitle3 {
+  color: rgb(75, 75, 75);
+  font-size: 1rem;
+}
+
+/*
+ * Used in the main content, along with the
+ * cssdoc-Header class.
+ */
+.cssdoc-MainContent {
+  background-color: #F5F5F5;
+}
+
+/* utilities */
+.u-cssdoc-clearFix {
+  zoom: 1;
+}
+
+.u-cssdoc-clearFix:before,
+.u-cssdoc-clearFix:after {
+  content: "";
+  display: table;
+}
+
+.u-cssdoc-clearFix:after {
+  clear: both;
+}
+
+
+
+
+/* utilities */
+.u-cssdoc-clearFix {
+  zoom: 1;
+}
+
+.u-cssdoc-clearFix:before,
+.u-cssdoc-clearFix:after {
+  content: "";
+  display: table;
+}
+
+.u-cssdoc-clearFix:after {
+  clear: both;
+}

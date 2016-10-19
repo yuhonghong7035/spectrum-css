@@ -1,0 +1,95 @@
+/* mobile first css */
+
+/* Header and top-rail are consistent for all pages */
+.cssdoc-Header {
+  min-height: 48px;
+}
+
+.cssdoc-Header-Link {
+  text-decoration: none;
+}
+
+.ccsdoc-Header-LogoImage {
+  margin-top: 10px;
+}
+
+.cssdoc-Header-Title {
+  font-weight: normal;
+}
+
+/*  stuff TODO for menu or mostly fixed by flexgrid
+
+.cssdoc-VersionTagContainer {
+  display: inline-block;
+  margin-left: .5rem;
+  vertical-align: middle;
+}
+
+
+.cssdoc-Header-nav {
+  position: absolute;
+  top: 4rem;
+  right: 20px;
+  left: 0;
+}
+
+.cssdoc-Header-link {
+  display: inline-block;
+
+  margin: 0.2rem 0.875rem 0 0.875rem;
+  padding: 0 1px 0 1px;
+
+  color: #8C8C8C !important;
+  text-decoration: none;
+  font-size: .9375rem;
+  line-height: 3.1;
+}
+
+/* white text and bottom line for selected  *
+.cssdoc-Header-link.is-selected {
+  border-bottom: solid 3px #fff;
+
+  color: #fff !important;
+}
+
+@media (min-width: 48em) {
+   768px tablet css, will overwrite styles from mobile
+  .cssdoc-Header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 2rem;
+  }
+
+  .cssdoc-Header-menu {
+    height: 7.25rem;
+  }
+}
+
+@media (min-width: 62em) {
+  /* 992px css, will overwrite styles from mobile and tablet *
+  .cssdoc-Header-menu {
+    min-height: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .cssdoc-Header-nav {
+    top: 0;
+    left: auto;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 64em) {
+  /* 1024px desktop css *
+
+}
+
+@media (min-width: 75em) {
+  /* 1200px desktop css, will overwrite styles from mobile and tablet *
+  .cssdoc-Header-nav {
+    right: 0;
+  }
+
+}
+*/
