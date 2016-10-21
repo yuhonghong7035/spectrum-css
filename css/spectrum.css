@@ -2911,7 +2911,7 @@
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
-  markup:
+  markup: |
     <button class="spectrum-Button spectrum-Button--minimal">Button</button>
     <button class="spectrum-Button spectrum-Button--minimal" disabled>Button</button>
   tags:
@@ -2928,7 +2928,7 @@
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
-  markup:
+  markup: |
     <button class="spectrum-Button spectrum-Button--primary">Button</button>
     <button class="spectrum-Button spectrum-Button--primary" disabled>Button</button>
   tags:
@@ -2945,7 +2945,7 @@
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
-  markup:
+  markup: |
     <button class="spectrum-Button spectrum-Button--secondary">Button</button>
     <button class="spectrum-Button spectrum-Button--secondary" disabled>Button</button>
   tags:
@@ -2962,7 +2962,7 @@
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
-  markup:
+  markup: |
     <button class="spectrum-Button spectrum-Button--warning">Button</button>
     <button class="spectrum-Button spectrum-Button--warning" disabled>Button</button>
   tags:
@@ -2979,7 +2979,7 @@
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
-  markup:
+  markup: |
     <button class="spectrum-Button spectrum-Button--quiet">Button</button>
     <button class="spectrum-Button spectrum-Button--quiet" disabled>Button</button>
   tags:
@@ -4055,6 +4055,31 @@
 .spectrum--dark .spectrum-Progress-status {
   background: #1473e6;
 }
+
+/* topdoc
+  name: Radio
+  description: The Spectrum radio thingy
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+      <div class="spectrum-Radio">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-description" for="radio-0">Kittens</label>
+      </div>
+      <div class="spectrum-Radio">
+        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-description" for="radio-0">Puppies</label>
+      </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
 
 .spectrum-Radio {
   display: inline-block;

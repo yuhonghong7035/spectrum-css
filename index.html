@@ -1,145 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Spectrum CSS - Documentation</title>
-    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/rainbow.css">
-    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.css">
-    <link rel="stylesheet" type="text/css" href="css/spectrum.css">
-    <link rel="stylesheet" type="text/css" href="css/theme-base.css">
-    <link rel="stylesheet" type="text/css" href="css/theme-header.css">
-    <link rel="stylesheet" type="text/css" href="css/theme-home.css">
-    <link rel="stylesheet" type="text/css" href="css/theme-scroll.css">
-    <script type="text/javascript" src="js/main.js"></script><!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  </head>
-  <body class="u-cssdoc-clearfix spectrum--light">
-    <header class="row cssdoc-Header start-xs middle-xs"><a href="http://spectrum.corp.adobe.com" class="cssdoc-Header-Link col-xs-offset-1 col-xs-1 end-sm"><img src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo" class="ccsdoc-Header-LogoImage box"></a>
-      <div class="col-xs">
-        <h3 class="cssdoc-Header-Title spectrum-Heading spectrum-Heading--subtitle3 box">spectrum-css</h3>
-      </div>
-    </header>
-    <section class="cssdoc-HomePresentation row center-xs">
-      <div class="cssdoc-HomeRow col-xs">
-        <div class="box"><!-- full width boxes in a single column will act like rows and I want less markup -->
-          <h1 class="spectrum-Heading spectrum-Heading--display cssdoc-HomePresentation-title">Spectrum-CSS</h1>
-          <p class="cssdoc-HomePresentation-pitch">A web implementation of Spectrum</p>
-          <p class="cssdoc-HomePresentation-pitch">Part of Adobe's living design system</p>
-          <p class="cssdoc-HomePresentation-pitch">git.corp.adobe.com/spectrum/spectrum-css</p>
-        </div>
-      </div>
-    </section>
-    <section class="cssdoc-MainContent row">
-      <div class="cssdoc-Nav col-xs-12 col-sm-3 center-xs start-sm">
-        <nav class="box">
-          <div class="row center-xs around-xs start-sm">
-            <div class="cssdoc-Nav-Item col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-5 col-md-7 col-lg-offset-7"><a href="#button---minimal" class="cssdoc-Nav-Link box">Button - Minimal</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="cssdoc-Nav-Item col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-5 col-md-7 col-lg-offset-7"><a href="#button---primary" class="cssdoc-Nav-Link box">Button - Primary</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="cssdoc-Nav-Item col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-5 col-md-7 col-lg-offset-7"><a href="#button---secondary" class="cssdoc-Nav-Link box">Button - Secondary</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="cssdoc-Nav-Item col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-5 col-md-7 col-lg-offset-7"><a href="#button---warning" class="cssdoc-Nav-Link box">Button - Warning</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="cssdoc-Nav-Item col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-5 col-md-7 col-lg-offset-7"><a href="#button---quiet" class="cssdoc-Nav-Link box">Button - Quiet</a></div>
-          </div>
-        </nav>
-      </div>
-      <div class="cssdoc-Components col-xs-12 col-sm-9">
-        <article class="box"></article>
-        <header id="button---minimal" class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <h2 class="cssdoc-ComponentName box">Button - Minimal</h2>
-          </div>
-        </header>
-        <section class="cssdoc-ComponentMarkup row">
-          <div class="col-xs-offset-1 col-xs-11"><button class="spectrum-Button spectrum-Button--minimal">Button</button><button class="spectrum-Button spectrum-Button--minimal" disabled>Button</button></div>
-        </section>
-        <footer class="row">
-          <div class="col-xs-offset-1 col-xs-11 showcode"><a href="#">Show code snippets</a></div>
-          <section class="cssdoc-CodeExample col-xs-offset-1 col-xs-11">
-            <div>
-              <h3>HTML</h3>
-              <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
-            </div>
-          </section>
-        </footer>
-        <header id="button---primary" class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <h2 class="cssdoc-ComponentName box">Button - Primary</h2>
-          </div>
-        </header>
-        <section class="cssdoc-ComponentMarkup row">
-          <div class="col-xs-offset-1 col-xs-11"><button class="spectrum-Button spectrum-Button--primary">Button</button><button class="spectrum-Button spectrum-Button--primary" disabled>Button</button></div>
-        </section>
-        <footer class="row">
-          <div class="col-xs-offset-1 col-xs-11 showcode"><a href="#">Show code snippets</a></div>
-          <section class="cssdoc-CodeExample col-xs-offset-1 col-xs-11">
-            <div>
-              <h3>HTML</h3>
-              <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
-            </div>
-          </section>
-        </footer>
-        <header id="button---secondary" class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <h2 class="cssdoc-ComponentName box">Button - Secondary</h2>
-          </div>
-        </header>
-        <section class="cssdoc-ComponentMarkup row">
-          <div class="col-xs-offset-1 col-xs-11"><button class="spectrum-Button spectrum-Button--secondary">Button</button><button class="spectrum-Button spectrum-Button--secondary" disabled>Button</button></div>
-        </section>
-        <footer class="row">
-          <div class="col-xs-offset-1 col-xs-11 showcode"><a href="#">Show code snippets</a></div>
-          <section class="cssdoc-CodeExample col-xs-offset-1 col-xs-11">
-            <div>
-              <h3>HTML</h3>
-              <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
-            </div>
-          </section>
-        </footer>
-        <header id="button---warning" class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <h2 class="cssdoc-ComponentName box">Button - Warning</h2>
-          </div>
-        </header>
-        <section class="cssdoc-ComponentMarkup row">
-          <div class="col-xs-offset-1 col-xs-11"><button class="spectrum-Button spectrum-Button--warning">Button</button><button class="spectrum-Button spectrum-Button--warning" disabled>Button</button></div>
-        </section>
-        <footer class="row">
-          <div class="col-xs-offset-1 col-xs-11 showcode"><a href="#">Show code snippets</a></div>
-          <section class="cssdoc-CodeExample col-xs-offset-1 col-xs-11">
-            <div>
-              <h3>HTML</h3>
-              <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
-            </div>
-          </section>
-        </footer>
-        <header id="button---quiet" class="row">
-          <div class="col-xs-offset-1 col-xs-11">
-            <h2 class="cssdoc-ComponentName box">Button - Quiet</h2>
-          </div>
-        </header>
-        <section class="cssdoc-ComponentMarkup row">
-          <div class="col-xs-offset-1 col-xs-11"><button class="spectrum-Button spectrum-Button--quiet">Button</button><button class="spectrum-Button spectrum-Button--quiet" disabled>Button</button></div>
-        </section>
-        <footer class="row">
-          <div class="col-xs-offset-1 col-xs-11 showcode"><a href="#">Show code snippets</a></div>
-          <section class="cssdoc-CodeExample col-xs-offset-1 col-xs-11">
-            <div>
-              <h3>HTML</h3>
-              <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot;&gt;Button&lt;/button&gt;&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot; disabled&gt;Button&lt;/button&gt;</code></pre>
-            </div>
-          </section>
-        </footer>
-      </div>
-    </section>
-  </body>
-</html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Spectrum CSS - Documentation</title><meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0"><link rel="stylesheet" type="text/css" href="css/normalize.css"><link rel="stylesheet" type="text/css" href="css/rainbow.css"><link rel="stylesheet" type="text/css" href="css/flexboxgrid.css"><link rel="stylesheet" type="text/css" href="../css/spectrum.css"><link rel="stylesheet" type="text/css" href="css/theme-base.css"><link rel="stylesheet" type="text/css" href="css/theme-header.css"><link rel="stylesheet" type="text/css" href="css/theme-home.css"><link rel="stylesheet" type="text/css" href="css/theme-scroll.css"><script type="text/javascript" src="js/main.js"></script><script type="text/javascript" src="js/rainbow-custom.min.js"></script><!--if lt IE 9script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+--></head><body class="u-cssdoc-clearfix spectrum--light"><header class="cssdoc-header row"><div class="col-3 start-xs"><div class="cssdoc-header-link box"><a href="http://spectrum.corp.adobe.com"><img class="cssdoc-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><h3 class="cssdoc-header-title spectrum-Heading spectrum-Heading--subtitle2 box">spectrum-css</h3></div></div><div class="col-xs end-xs cssdoc-header-content"><div class="row"><div class="cssdoc-colorstop-label col-xs"><p class="box">color stop:</p></div><div class="cssdoc-colorstop-selector col-xs-1"><p class="box">light</p></div></div></div></header><section class="cssdoc-home-presentation row center-xs"><div class="cssdoc-home-content col-xs"><div class="box"><h1 class="spectrum-Heading spectrum-Heading--display cssdoc-home-presentation-title">spectrum-css</h1><p class="cssdoc-home-presentation-pitch">A web implementation of Spectrum</p><p class="cssdoc-home-presentation-pitch">Part of Adobe's living design system</p><p class="cssdoc-home-presentation-pitch">git.corp.adobe.com/spectrum/spectrum-css</p></div></div></section><section class="cssdoc-main-content row"><div class="cssdoc-nav col-sm-3"><nav class="box"><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---minimal">Button - Minimal</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---primary">Button - Primary</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---secondary">Button - Secondary</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---warning">Button - Warning</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---quiet">Button - Quiet</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#radio">Radio</a></div></div></nav></div><div class="cssdoc-components col-xs-12 col-sm-8"><article class="cssdoc-component box"><header class="row" id="button---minimal"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Minimal</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum button in 'minimal' style (defaults to minimal + secondary)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--minimal">Button</button>
+<button class="spectrum-Button spectrum-Button--minimal" disabled>Button</button>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---primary"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Primary</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A Spectrum 'primary' button (which is also the default style)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--primary">Button</button>
+<button class="spectrum-Button spectrum-Button--primary" disabled>Button</button>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---secondary"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Secondary</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum 'secondary' style button</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--secondary">Button</button>
+<button class="spectrum-Button spectrum-Button--secondary" disabled>Button</button>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---warning"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Warning</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A Spectrum button in 'warning' style</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--warning">Button</button>
+<button class="spectrum-Button spectrum-Button--warning" disabled>Button</button>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---quiet"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Quiet</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A 'quiet' Spectrum button (defaults to quiet + primary style)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--quiet">Button</button>
+<button class="spectrum-Button spectrum-Button--quiet" disabled>Button</button>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="radio"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Radio</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum radio thingy</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><div class="spectrum-Radio">
+  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-description" for="radio-0">Kittens</label>
+</div>
+<div class="spectrum-Radio">
+  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-description" for="radio-0">Puppies</label>
+</div>
+</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-0&quot;&gt;
+  &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Radio-description&quot; for=&quot;radio-0&quot;&gt;Kittens&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Radio&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-1&quot;&gt;
+  &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Radio-description&quot; for=&quot;radio-0&quot;&gt;Puppies&lt;/label&gt;
+&lt;/div&gt;
+</code></pre></div></div></section></article></div></section></body></html>

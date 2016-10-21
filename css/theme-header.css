@@ -1,20 +1,43 @@
 /* mobile first css */
 
-/* Header and top-rail are consistent for all pages */
-.cssdoc-Header {
+/* header and top-rail are consistent for all pages */
+.cssdoc-header {
   min-height: 48px;
 }
 
-.cssdoc-Header-Link {
-  text-decoration: none;
+.cssdoc-header-content {
+  padding-left: 0;
 }
 
-.ccsdoc-Header-LogoImage {
-  margin-top: 10px;
+.cssdoc-header-link {
+  margin-top: 18px
 }
 
-.cssdoc-Header-Title {
+.cssdoc-header-logo-image {
+  vertical-align: middle
+}
+
+.cssdoc-header-title {
   font-weight: normal;
+  margin-left: 10px;
+  display: inline;
+}
+
+.cssdoc-colorstop {
+  min-width: 300px;
+  float: right;
+}
+
+.cssdoc-colorstop-label {
+  font-size: .9rem;
+  padding-right: 0;
+}
+
+.cssdoc-colorstop-selector {
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 4px;
 }
 
 /*  stuff TODO for menu or mostly fixed by flexgrid
@@ -26,14 +49,14 @@
 }
 
 
-.cssdoc-Header-nav {
+.cssdoc-header-nav {
   position: absolute;
   top: 4rem;
   right: 20px;
   left: 0;
 }
 
-.cssdoc-Header-link {
+.cssdoc-header-link {
   display: inline-block;
 
   margin: 0.2rem 0.875rem 0 0.875rem;
@@ -46,7 +69,7 @@
 }
 
 /* white text and bottom line for selected  *
-.cssdoc-Header-link.is-selected {
+.cssdoc-header-link.is-selected {
   border-bottom: solid 3px #fff;
 
   color: #fff !important;
@@ -54,26 +77,26 @@
 
 @media (min-width: 48em) {
    768px tablet css, will overwrite styles from mobile
-  .cssdoc-Header {
+  .cssdoc-header {
     position: fixed;
     top: 0;
     right: 0;
     left: 2rem;
   }
 
-  .cssdoc-Header-menu {
+  .cssdoc-header-menu {
     height: 7.25rem;
   }
 }
 
 @media (min-width: 62em) {
   /* 992px css, will overwrite styles from mobile and tablet *
-  .cssdoc-Header-menu {
+  .cssdoc-header-menu {
     min-height: 3.25rem;
     height: 3.25rem;
   }
 
-  .cssdoc-Header-nav {
+  .cssdoc-header-nav {
     top: 0;
     left: auto;
     display: inline-block;
@@ -87,7 +110,7 @@
 
 @media (min-width: 75em) {
   /* 1200px desktop css, will overwrite styles from mobile and tablet *
-  .cssdoc-Header-nav {
+  .cssdoc-header-nav {
     right: 0;
   }
 
