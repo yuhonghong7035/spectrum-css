@@ -1,42 +1,1487 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Spectrum CSS - Documentation</title><meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0"><link rel="stylesheet" type="text/css" href="css/normalize.css"><link rel="stylesheet" type="text/css" href="css/rainbow.css"><link rel="stylesheet" type="text/css" href="css/flexboxgrid.css"><link rel="stylesheet" type="text/css" href="css/spectrum.css"><link rel="stylesheet" type="text/css" href="css/theme-base.css"><link rel="stylesheet" type="text/css" href="css/theme-header.css"><link rel="stylesheet" type="text/css" href="css/theme-home.css"><link rel="stylesheet" type="text/css" href="css/theme-scroll.css"><script type="text/javascript" src="js/main.js"></script><script type="text/javascript" src="js/rainbow-custom.min.js"></script><!--if lt IE 9script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
---></head><body class="u-cssdoc-clearfix spectrum--light"><header class="cssdoc-header row"><div class="col-3 start-xs"><div class="cssdoc-header-link box"><a href="http://spectrum.corp.adobe.com"><img class="cssdoc-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><h3 class="cssdoc-header-title spectrum-Heading spectrum-Heading--subtitle2 box">spectrum-css</h3></div></div><div class="col-xs end-xs cssdoc-header-content"><div class="row"><div class="cssdoc-colorstop-label col-xs"><p class="box">color stop:</p></div><div class="cssdoc-colorstop-selector col-xs-1"><p class="box">light</p></div></div></div></header><section class="cssdoc-home-presentation row center-xs"><div class="cssdoc-home-content col-xs"><div class="box"><h1 class="spectrum-Heading spectrum-Heading--display cssdoc-home-presentation-title">spectrum-css</h1><p class="cssdoc-home-presentation-pitch">A web implementation of Spectrum</p><p class="cssdoc-home-presentation-pitch">Part of Adobe's living design system</p><p class="cssdoc-home-presentation-pitch">git.corp.adobe.com/spectrum/spectrum-css</p></div></div></section><section class="cssdoc-main-content row"><div class="cssdoc-nav col-sm-3"><nav class="box"><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---minimal">Button - Minimal</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---primary">Button - Primary</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---secondary">Button - Secondary</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---warning">Button - Warning</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#button---quiet">Button - Quiet</a></div></div><div class="row center-xs around-xs start-sm"><div class="cssdoc-nav-item"><a class="cssdoc-nav-link box" href="#radio">Radio</a></div></div></nav></div><div class="cssdoc-components col-xs-12 col-sm-8"><article class="cssdoc-component box"><header class="row" id="button---minimal"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Minimal</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum button in 'minimal' style (defaults to minimal + secondary)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--minimal">Button</button>
-<button class="spectrum-Button spectrum-Button--minimal" disabled>Button</button>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;spectrum-Button spectrum-Button--minimal&quot; disabled&gt;Button&lt;/button&gt;
-</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---primary"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Primary</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A Spectrum 'primary' button (which is also the default style)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--primary">Button</button>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spectrum CSS - Documentation</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/rainbow.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/flexboxgrid.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/spectrum.css">
+    <link rel="stylesheet" type="text/css" href="css/sdldocs-base.css">
+    <link rel="stylesheet" type="text/css" href="css/sdldocs-header.css">
+    <link rel="stylesheet" type="text/css" href="css/sdldocs-presentation.css">
+    <link rel="stylesheet" type="text/css" href="css/sdldocs-navigation.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/rainbow-custom.min.js"></script>
+    <!--if lt IE 9
+    script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
+    
+    -->
+  </head>
+  <body class="u-sdldocs-clearfix spectrum--light">
+    <header class="sdldocs-header row">
+      <div class="col-3 start-xs">
+        <div class="sdldocs-header-link box"><a href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a>
+          <h3 class="sdldocs-header-title spectrum-Heading spectrum-Heading--subtitle2 box">spectrum-css</h3>
+        </div>
+      </div>
+      <div class="col-xs end-xs sdldocs-header-content">
+        <div class="row">
+          <div class="sdldocs-colorstop-label col-xs">
+            <p class="box">color stop:</p>
+          </div>
+          <div class="sdldocs-colorstop-selector col-xs-1">
+            <p class="box">light</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="sdldocs-home-presentation row center-xs">
+      <div class="sdldocs-home-content col-xs">
+        <div class="box">
+          <h1 class="spectrum-Heading spectrum-Heading--display sdldocs-home-presentation-title">spectrum-css</h1>
+          <p class="sdldocs-home-presentation-pitch">A web implementation of Spectrum</p>
+          <p class="sdldocs-home-presentation-pitch">Part of Adobe's living design system</p>
+          <p class="sdldocs-home-presentation-pitch">git.corp.adobe.com/spectrum/spectrum-css</p>
+        </div>
+      </div>
+    </section>
+    <section class="sdldocs-main-content row">
+      <div class="sdldocs-nav col-sm-3">
+        <nav class="box">
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---success">Alert - Success</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---info">Alert - Info</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---warning">Alert - Warning</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---error">Alert - Error</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---discloseable">Alert - Discloseable</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---primary">Button - Primary</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---secondary">Button - Secondary</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---cta">Button - CTA</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---warning">Button - Warning</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---quiet-primary">Button - Quiet Primary</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---quiet-secondary">Button - Quiet Secondary</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#checkbox">Checkbox</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#checkbox---disabled">Checkbox - disabled</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---default">Dialog - Default</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---success">Dialog - Success</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---info">Dialog - Info</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---warning">Dialog - Warning</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---error">Dialog - Error</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---modal">Dialog - Modal</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#progress---small">Progress - Small</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#progress---medium">Progress - Medium</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#progress---large">Progress - Large</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#progress---with-label">Progress - With Label</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#radio">Radio</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#radio---disabled">Radio - disabled</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#text-field---default">Text Field - Default</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#text-field---quiet">Text Field - Quiet</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#text-area---default">Text Area - Default</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#text-area---quiet">Text Area - Quiet</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---radial---small">Wait - Radial - Small</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---radial---medium">Wait - Radial - Medium</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---radial---large">Wait - Radial - Large</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---dots---small">Wait - Dots - Small</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---dots---medium">Wait - Dots - Medium</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#wait---dots---large">Wait - Dots - Large</a></div>
+          </div>
+        </nav>
+      </div>
+      <div class="sdldocs-components col-xs-12 col-sm-8">
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---success">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Success</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum alert 'success'</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--success">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Alert-typeIcon" role="img" aria-label="check circle"></div>
+  <div class="spectrum-Alert-header">Successful Alert Header</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--success&quot;&gt;
+  &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;check circle&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Successful Alert Header&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---info">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Info</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum alert 'info'</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--info">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Alert-typeIcon" role="img" aria-label="info circle"></div>
+  <div class="spectrum-Alert-header">Infomation Alert Header</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--info&quot;&gt;
+  &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;info circle&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Infomation Alert Header&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---warning">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Warning</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum alert 'warning'</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--warning">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">Warning Alert Header</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--warning&quot;&gt;
+  &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;alert&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Warning Alert Header&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---error">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Error</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum alert 'error'</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--error">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">Error Alert - Oh no</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--error&quot;&gt;
+  &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;alert&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Error Alert - Oh no&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---discloseable">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Discloseable</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum alert 'discloseable'. It has a close button in the footer. Combine this with other variants.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--error">
+  <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+  <div class="spectrum-Alert-footer">
+    <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--error&quot;&gt;
+  &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;alert&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Incorrect Payment Information - Error&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-footer&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot;&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---primary">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Primary</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'primary' button (which is also the default style)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary">Button</button>
 <button class="spectrum-Button spectrum-Button--primary" disabled>Button</button>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot;&gt;Button&lt;/button&gt;
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot;&gt;Button&lt;/button&gt;
 &lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; disabled&gt;Button&lt;/button&gt;
-</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---secondary"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Secondary</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum 'secondary' style button</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--secondary">Button</button>
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---secondary">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Secondary</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'secondary' style button</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--secondary">Button</button>
 <button class="spectrum-Button spectrum-Button--secondary" disabled>Button</button>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot;&gt;Button&lt;/button&gt;
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot;&gt;Button&lt;/button&gt;
 &lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; disabled&gt;Button&lt;/button&gt;
-</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---warning"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Warning</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A Spectrum button in 'warning' style</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--warning">Button</button>
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---cta">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - CTA</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'call-to-action' button</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--cta">Button</button>
+<button class="spectrum-Button spectrum-Button--cta" disabled>Button</button>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---warning">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Warning</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum button in 'warning' style</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--warning">Button</button>
 <button class="spectrum-Button spectrum-Button--warning" disabled>Button</button>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot;&gt;Button&lt;/button&gt;
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot;&gt;Button&lt;/button&gt;
 &lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot; disabled&gt;Button&lt;/button&gt;
-</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="button---quiet"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Quiet</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>A 'quiet' Spectrum button (defaults to quiet + primary style)</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><button class="spectrum-Button spectrum-Button--quiet">Button</button>
-<button class="spectrum-Button spectrum-Button--quiet" disabled>Button</button>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot;&gt;Button&lt;/button&gt;
-&lt;button class=&quot;spectrum-Button spectrum-Button--quiet&quot; disabled&gt;Button&lt;/button&gt;
-</code></pre></div></div></section></article><article class="cssdoc-component box"><header class="row" id="radio"><div class="col-xs"><h2 class="cssdoc-component-name spectrum-Heading spectrum-Heading--pagetitle box">Radio</h2></div></header><section class="cssdoc-component-description row"><div class="col-xs"><p>The Spectrum radio thingy</p></div></section><section class="cssdoc-component-markup row"><div class="col-xs-offset-1 col-xs"><div class="box"><div class="spectrum-Radio">
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---quiet-primary">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Quiet Primary</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A 'quiet primary' Spectrum button</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--quiet--primary">Button</button>
+<button class="spectrum-Button spectrum-Button--quiet--primary" disabled>Button</button>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="button---quiet-secondary">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Button - Quiet Secondary</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A 'quiet secondary' Spectrum button</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--quiet--secondary">Button</button>
+<button class="spectrum-Button spectrum-Button--quiet--secondary" disabled>Button</button>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; disabled&gt;Button&lt;/button&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="checkbox">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Checkbox</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum checkbox</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Checkbox">
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+</div>
+<div class="spectrum-Checkbox" checked>
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+</div>
+<div class="spectrum-Checkbox" indeterminate>
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-0&quot;&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-0&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Checkbox&quot; checked&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-1&quot; checked&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-1&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Checkbox&quot; indeterminate&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-2&quot;&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-2&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="checkbox---disabled">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Checkbox - disabled</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The 'disabled' Spectrum checkbox</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Checkbox" disabled>
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
+</div>
+<div class="spectrum-Checkbox" disabled checked>
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
+</div>
+<div class="spectrum-Checkbox" disabled indeterminate>
+  <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+  <span class="spectrum-Checkbox-checkmark"></span>
+  <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Checkbox&quot; disabled&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-3&quot; disabled&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-3&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Checkbox&quot; disabled checked&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-4&quot; disabled checked&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-4&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Checkbox&quot; disabled indeterminate&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-Checkbox-input&quot; id=&quot;checkbox-5&quot; disabled&gt;
+  &lt;span class=&quot;spectrum-Checkbox-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Checkbox-label&quot; for=&quot;checkbox-5&quot;&gt;Checkbox&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---default">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Default</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'default' dialog (which is also the default style)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
+<div class="spectrum-Dialog" id="defaultDialog">
+  <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This Dialog is not centered.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.add('is-open')&quot;&gt;Open Dialog - Default&lt;/button&gt;
+&lt;div class=&quot;spectrum-Dialog&quot; id=&quot;defaultDialog&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width: 400px;&quot;&gt;
+    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
+      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Default Dialog&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
+      &lt;p&gt;This Dialog is not centered.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
+      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---success">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Success</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'success' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button> <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon"></div> <h2 class="spectrum-Dialog-title">Success Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. </p> <p>This dialog is not centered. </p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('successDialog').classList.add('is-open')&quot;&gt;Open Dialog - Success&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--success&quot; id=&quot;successDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Success Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. &lt;/p&gt; &lt;p&gt;This dialog is not centered. &lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('successDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---info">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Info</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'info' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button> <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Info-Circle"></div> <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. </p> <p>This dialog is not centered. </p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('infoDialog').classList.add('is-open')&quot;&gt;Open Dialog - Info&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--info&quot; id=&quot;infoDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Info-Circle&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Info / Help Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. &lt;/p&gt; &lt;p&gt;This dialog is not centered. &lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('infoDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---warning">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Warning</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'warning' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button> <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div> <h2 class="spectrum-Dialog-title">Warning Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. This Dialog is not centered.</p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('warningDialog').classList.add('is-open')&quot;&gt;Open Dialog - Warning&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--warning&quot; id=&quot;warningDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Warning Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. This Dialog is not centered.&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('warningDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---error">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Error</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'error' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button> <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div> <h2 class="spectrum-Dialog-title">Error Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. This Dialog is not centered.</p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('errorDialog').classList.add('is-open')&quot;&gt;Open Dialog - Error&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--error&quot; id=&quot;errorDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Error Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. This Dialog is not centered.&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('errorDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="dialog---modal">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Modal</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'modal' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
+<div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
+  <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Defaul Dialog - Modal</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <p>This Dialog is not centered.</p>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
+      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.add('is-open')&quot;&gt;Open Dialog - Modal&lt;/button&gt;
+&lt;div class=&quot;spectrum-Dialog spectrum-Dialog--modal&quot; id=&quot;defaultModalDialog&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width: 400px;&quot;&gt;
+    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
+      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Defaul Dialog - Modal&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
+      &lt;p&gt;This Dialog is not centered.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
+      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="progress---small">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Progress - Small</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'small' progress (normal &amp; indeterminate)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label" hidden=""></div>
+  </div>
+</div>
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">indeterminate</div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot; hidden=&quot;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 0%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;indeterminate&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="progress---medium">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Progress - Medium</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'medium' progress (normal &amp; indeterminate)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label" hidden=""></div>
+  </div>
+</div>
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">indeterminate</div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot; hidden=&quot;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 0%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;indeterminate&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="progress---large">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Progress - Large</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'large' progress (normal &amp; indeterminate)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label" hidden=""></div>
+  </div>
+</div>
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">indeterminate</div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot; hidden=&quot;&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 0%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;indeterminate&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="progress---with-label">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Progress - With Label</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'Medium' progress with a label (left, bottom &amp; right)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--leftLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-label">left label</div>
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+  </div>
+</div>
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class="spectrum-Progress-bar">
+      <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">bottom label</div>
+  </div>
+</div>
+<div style="width: 200px; height: 25px; padding-top: 10px;">
+  <div class="spectrum-Progress spectrum-Progress--rightLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+    <div class=" spectrum-Progress-bar">
+      <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+    </div>
+    <div class="spectrum-Progress-label">right label</div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--leftLabel spectrum-Progress--medium&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;left label&lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot;spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot;spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;bottom label&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;width: 200px; height: 25px; padding-top: 10px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Progress spectrum-Progress--rightLabel spectrum-Progress--medium&quot; value=&quot;50&quot; role=&quot;progressbar&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+    &lt;div class=&quot; spectrum-Progress-bar&quot;&gt;
+      &lt;div class=&quot; spectrum-Progress-status&quot; handle=&quot;status&quot; style=&quot;width: 50%;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Progress-label&quot;&gt;right label&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="radio">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Radio</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum radio thingy</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Radio">
   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
   <span class="spectrum-Radio-checkmark"></span>
-  <label class="spectrum-Radio-description" for="radio-0">Kittens</label>
+  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
 </div>
 <div class="spectrum-Radio">
   <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
   <span class="spectrum-Radio-checkmark"></span>
-  <label class="spectrum-Radio-description" for="radio-0">Puppies</label>
+  <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
 </div>
-</div></div></section><section class="cssdoc-component-example col-xs-12"><div class="row end-xs"><a class="cssdoc-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div><div class="row"><div class="cssdoc-code-example box"><h3 class="cssdoc-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3><pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Radio&quot;&gt;
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Radio&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-0&quot;&gt;
   &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
-  &lt;label class=&quot;spectrum-Radio-description&quot; for=&quot;radio-0&quot;&gt;Kittens&lt;/label&gt;
+  &lt;label class=&quot;spectrum-Radio-label&quot; for=&quot;radio-0&quot;&gt;Kittens&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;spectrum-Radio&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-1&quot;&gt;
   &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
-  &lt;label class=&quot;spectrum-Radio-description&quot; for=&quot;radio-0&quot;&gt;Puppies&lt;/label&gt;
+  &lt;label class=&quot;spectrum-Radio-label&quot; for=&quot;radio-0&quot;&gt;Puppies&lt;/label&gt;
 &lt;/div&gt;
-</code></pre></div></div></section></article></div></section></body></html>
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="radio---disabled">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Radio - disabled</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The 'disabled' Spectrum radio</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Radio" disabled>
+  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" disabled>
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+</div>
+<div class="spectrum-Radio" disabled>
+  <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" disabled>
+  <span class="spectrum-Radio-checkmark"></span>
+  <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Radio&quot; disabled&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-0&quot; disabled&gt;
+  &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Radio-label&quot; for=&quot;radio-0&quot;&gt;Kittens&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-Radio&quot; disabled&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;pets&quot; class=&quot;spectrum-Radio-input&quot; id=&quot;radio-1&quot; disabled&gt;
+  &lt;span class=&quot;spectrum-Radio-checkmark&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-Radio-label&quot; for=&quot;radio-0&quot;&gt;Puppies&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="text-field---default">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Text Field - Default</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum text field</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+<input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield&quot; disabled&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="text-field---quiet">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Text Field - Quiet</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum text field - quiet</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
+<input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--quiet&quot;&gt;
+&lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--quiet&quot; disabled&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="text-area---default">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Text Area - Default</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum text area - (a multiline text field)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+<textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled></textarea>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;textarea placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--multiline&quot;&gt;&lt;/textarea&gt;
+&lt;textarea placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--multiline&quot; disabled&gt;&lt;/textarea&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="text-area---quiet">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Text Area - Quiet</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum text area - quiet</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet"></textarea>
+<textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled></textarea>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;textarea placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet&quot;&gt;&lt;/textarea&gt;
+&lt;textarea placeholder=&quot;Enter your name&quot; name=&quot;field&quot; value=&quot;&quot; class=&quot;spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet&quot; disabled&gt;&lt;/textarea&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---radial---small">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Radial - Small</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---radial---medium">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Radial - Medium</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait spectrum-Wait--medium"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait spectrum-Wait--medium&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---radial---large">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Radial - Large</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait spectrum-Wait--large"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait spectrum-Wait--large&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---dots---small">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Dots - Small</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait with dots dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait spectrum-Wait--dots"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait spectrum-Wait--dots&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---dots---medium">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Dots - Medium</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait with dots dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="wait---dots---large">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Wait - Dots - Large</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum wait with dots dingsbums</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Button spectrum-Button--minimal box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Wait spectrum-Wait--dots spectrum-Wait--large&quot;&gt;&lt;/span&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>

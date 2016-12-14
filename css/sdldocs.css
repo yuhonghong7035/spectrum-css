@@ -1,0 +1,26 @@
+/* -------------------------*/
+/* HOME */
+/* -------------------------*/
+/* mobile first css */
+.sdldocs-home-presentation {
+  background-color: #fbfbfb;
+}
+.sdldocs-home-content {
+  margin-top: 0.9rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sdldocs-home-presentation-title {
+  font-size: 3.1rem;
+}
+@media (min-width: 48em) {
+  .sdldocs-home-content {
+    margin-top: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .sdldocs-home-presentation-pitch {
+    line-height: 1rem;
+  }
+}
+/*# sourceMappingURL=sdldocs.css.map */
