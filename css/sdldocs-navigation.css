@@ -12,6 +12,26 @@
   margin-bottom: 3rem;
   display: none;
 }
+.sdldocs-menu {
+  margin-left: 1.1rem;
+}
+.sdldocs-menu-link {
+  display: inline-block;
+  margin: 0 0.875rem;
+  padding: 0;
+  color: #707070 !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 3rem;
+/* tint bottom line for selected  */
+}
+.sdldocs-menu-link:hover {
+  border-bottom: solid 2px #2c2c2c;
+}
+.sdldocs-menu-link.is-selected {
+  border-bottom: solid 2px #2c2c2c;
+}
 /*
 
 .sdldocs-ScrollNav-Wrapper {
@@ -87,4 +107,3 @@
     line-height: inherit;
   }
 }
-/*# sourceMappingURL=sdldocs-navigation.css.map */

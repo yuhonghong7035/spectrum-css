@@ -1,7 +1,209 @@
-/* -------------------------*/
-/* HOME */
-/* -------------------------*/
-/* mobile first css */
+@include '../vendor/normalize.css';
+@include '../vendor/flexboxgrid.css';
+@include '../vendor/rainbow.css';
+.sdldocs-body {
+  font-size: 1.1rem;
+}
+.sdldocs-link {
+  color: #4b4b4b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sdldocs-link:hover {
+  border-bottom: 2px solid #2c2c2c;
+}
+.sdldocs-main-content,
+.sdldocs-header {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.wf-loading {
+  visibility: hidden;
+}
+.spectrum {
+  font-size: 1.125rem;
+  line-height: 24px;
+}
+.spectrum-Heading {
+  font-weight: normal;
+}
+.spectrum-Heading--display {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 100;
+}
+.spectrum-Heading--pagetitle {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 100;
+}
+.spectrum-Heading--subtitle {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+.spectrum-Heading--subtitle2 {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+.spectrum-Text {
+  color: #4b4b4b; /* grey9 (Light); */
+  margin: 0 0 1rem 0;
+}
+.spectrum-Text--small {
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1rem;
+}
+.spectrum-Text--regular {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.25rem;
+}
+.spectrum-Text--large {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+}
+.sdldocs-component {
+  margin-bottom: 3rem;
+}
+.sdldocs-component-description {
+  padding-left: 1rem;
+  font-size: 0.99rem;
+}
+.sdldocs-component-description p {
+  margin-top: 0;
+}
+.sdldocs-component-markup {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+section.examples a,
+.sdldocs-code-link a {
+  color: #005abe;
+  text-decoration: none;
+}
+section.examples a:hover,
+.sdldocs-code-link a:hover {
+  text-decoration: underline;
+}
+.sdldocs-code-example {
+  display: none;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 0 14px 25px 14px;
+  font-size: 12px;
+  border-radius: 1px;
+  font-weight: 400;
+  width: 100%;
+}
+.sdldocs-code-example-title {
+  margin-bottom: 3px;
+}
+pre.html {
+  margin: 0;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+}
+.u-sdldocs-clearfix {
+  zoom: 1;
+}
+.u-sdldocs-clearfix:before,
+.u-sdldocs-clearfix:after {
+  content: "";
+  display: table;
+}
+.u-sdldocs-clearfix:after {
+  clear: both;
+}
+.sdldocs-header {
+  min-height: 48px;
+  line-height: 48px;
+}
+.sdldocs-header-content {
+  padding-left: 0;
+}
+.sdldocs-header-logo-link:hover {
+  text-decoration: none;
+}
+.sdldocs-header-logo-image {
+  vertical-align: middle;
+}
+.sdldocs-header-title {
+  font-weight: normal;
+  margin-left: 10px;
+  display: inline;
+}
+.sdldocs-colorstop {
+  min-width: 300px;
+  float: right;
+}
+.sdldocs-colorstop-label {
+  font-size: 0.9rem;
+  padding-right: 0;
+}
+.sdldocs-colorstop-selector {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 4px;
+}
+.sdldocs-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: 100%;
+}
+.sdldocs-nav {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: none;
+}
+.sdldocs-menu {
+  margin-left: 1.1rem;
+}
+.sdldocs-menu-link {
+  display: inline-block;
+  margin: 0 0.875rem;
+  padding: 0;
+  color: #707070 !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 3rem;
+/* tint bottom line for selected  */
+}
+.sdldocs-menu-link:hover {
+  border-bottom: solid 2px #2c2c2c;
+}
+.sdldocs-menu-link.is-selected {
+  border-bottom: solid 2px #2c2c2c;
+}
+.sdldocs-nav-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.sdldocs-nav-link {
+  color: #6b6b6b;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 80px;
+}
+@media (min-width: 48em) {
+  .sdldocs-nav {
+    display: block;
+  }
+  .sdldocs-nav-item {
+    border: none;
+  }
+  .sdldocs-nav-link {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
 .sdldocs-home-presentation {
   background-color: #fbfbfb;
 }
@@ -11,16 +213,71 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.sdldocs-home-presentation-title {
-  font-size: 3.1rem;
-}
 @media (min-width: 48em) {
   .sdldocs-home-content {
-    margin-top: 1.2;
+    margin-top: 1.2rem;
     margin-bottom: 1.5rem;
   }
   .sdldocs-home-presentation-pitch {
     line-height: 1rem;
   }
+}
+.sdldocs-article {
+  color: #4b4b4b; /* grey9 (Light); */
+  margin: 0 0 3rem 0;
+  font-weight: normal;
+}
+.sdldocs-article h1 {
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  font-weight: 100;
+}
+.sdldocs-article h2 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 100;
+}
+.sdldocs-article h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+.sdldocs-article a {
+  color: #4b4b4b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sdldocs-article a:hover {
+  border-bottom: 2px solid #005abe;
+}
+.sdldocs-article p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #4b4b4b;
+  margin: 0 0 1rem;
+}
+.sdldocs-article-recent-title {
+  margin-bottom: 3rem;
+}
+.sdldocs-article-title-link {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+.sdldocs-article-link-teaser {
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin-bottom: 0.1rem;
+}
+.sdldocs-article-back {
+  float: right;
+  padding-left: 1rem;
+}
+.sdldocs-article-back:before {
+  content: '<- ';
+}
+.sdldocs-article-footer {
+  margin-bottom: 3rem;
 }
 /*# sourceMappingURL=sdldocs.css.map */

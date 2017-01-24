@@ -1,19 +1,29 @@
 /* -------------------------*/
 /* BASE */
 /* -------------------------*/
+.sdldocs-body {
+  font-size: 1.1rem;
+}
+/* this is a temporary hack until link styles come from spectrum-css */
+.sdldocs-link {
+  color: #4b4b4b;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sdldocs-link:hover {
+  border-bottom: 2px solid #2c2c2c;
+}
 .sdldocs-main-content,
 .sdldocs-header {
   margin: 0 auto;
   max-width: 1100px;
-  background-color: #f5f5f5;
 }
 /* typekit font loading */
 .wf-loading {
   visibility: hidden;
 }
 /* TODO: the commons defines the font @ 14px, spectrum.corp use 18px */
-.spectrum--light,
-.spectrum--dark {
+.spectrum {
   font-size: 1.125rem;
   line-height: 24px;
 }
@@ -22,25 +32,43 @@
   font-weight: normal;
 }
 .spectrum-Heading--display {
-  font-size: 2.2rem;
-  line-height: 2.3rem;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
   font-weight: 100;
-  color: #2c2c2c;
 }
 .spectrum-Heading--pagetitle {
-  font-size: 1.4rem;
-  line-height: 1.7rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
   font-weight: 100;
-  color: #2c2c2c;
 }
 .spectrum-Heading--subtitle {
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   font-weight: bold;
 }
 .spectrum-Heading--subtitle2 {
-  font-size: 1rem;
-  color: #2c2c2c;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
   font-weight: bold;
+}
+.spectrum-Text {
+  color: #4b4b4b; /* grey9 (Light); */
+  margin: 0 0 1rem 0;
+}
+.spectrum-Text--small {
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1rem;
+}
+.spectrum-Text--regular {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.25rem;
+}
+.spectrum-Text--large {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.5rem;
 }
 .sdldocs-component {
   margin-bottom: 3rem;
@@ -48,7 +76,6 @@
 .sdldocs-component-description {
   padding-left: 1rem;
   font-size: 0.99rem;
-/*font-weight: 100;*/
 }
 .sdldocs-component-description p {
   margin-top: 0;
@@ -57,13 +84,13 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.sdldocs-code-link a,
-section.examples a {
-  color: #288edf;
+section.examples a,
+.sdldocs-code-link a {
+  color: #005abe;
   text-decoration: none;
 }
-.sdldocs-code-link a:hover,
-section.examples a:hover {
+section.examples a:hover,
+.sdldocs-code-link a:hover {
   text-decoration: underline;
 }
 .sdldocs-code-example {
@@ -79,7 +106,7 @@ section.examples a:hover {
 .sdldocs-code-example-title {
   margin-bottom: 3px;
 }
-/*let's help rainbow work right*/
+/* let's help rainbow work right */
 pre.html {
   margin: 0;
   white-space: pre-wrap; /* css-3 */
@@ -97,4 +124,3 @@ pre.html {
 .u-sdldocs-clearfix:after {
   clear: both;
 }
-/*# sourceMappingURL=sdldocs-base.css.map */

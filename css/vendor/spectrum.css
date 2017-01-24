@@ -1,53 +1,37 @@
+.spectrum--light,
+.spectrum--dark {
+  font-family: adobe-clean, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.spectrum--light:lang(zh-Hans),
+.spectrum--dark:lang(zh-Hans) {
+  font-family: adobe-clean-han-simplified-c, adobe-clean, Helvetica, Arial, sans-serif;
+}
+
+.spectrum--light:lang(zh),
+.spectrum--dark:lang(zh) {
+  font-family: adobe-clean-han-traditional, adobe-clean, Helvetica, Arial, sans-serif;
+}
+
+.spectrum--light:lang(ko),
+.spectrum--dark:lang(ko) {
+  font-family: adobe-clean-han-korean, adobe-clean, Helvetica, Arial, sans-serif;
+}
+
+.spectrum--light:lang(ja),
+.spectrum--dark:lang(ja) {
+  font-family: adobe-clean-han-japanese, adobe-clean, Helvetica, Arial, sans-serif;
+}
+
 .spectrum--light {
   background-color: #f5f5f5;
   color: #4b4b4b;
 }
 
-.spectrum--light {
-  font-family: adobe-clean, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
-}
-
-.spectrum--light:lang(zh-Hans) {
-  font-family: adobe-clean-han-simplified-c, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--light:lang(zh) {
-  font-family: adobe-clean-han-traditional, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--light:lang(ko) {
-  font-family: adobe-clean-han-korean, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--light:lang(ja) {
-  font-family: adobe-clean-han-japanese, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
 .spectrum--dark {
   background-color: #323232;
   color: #cdcdcd;
-}
-
-.spectrum--dark {
-  font-family: adobe-clean, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
-}
-
-.spectrum--dark:lang(zh-Hans) {
-  font-family: adobe-clean-han-simplified-c, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--dark:lang(zh) {
-  font-family: adobe-clean-han-traditional, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--dark:lang(ko) {
-  font-family: adobe-clean-han-korean, adobe-clean, Helvetica, Arial, sans-serif;
-}
-
-.spectrum--dark:lang(ja) {
-  font-family: adobe-clean-han-japanese, adobe-clean, Helvetica, Arial, sans-serif;
 }
 
 @font-face {
@@ -2778,89 +2762,6 @@
   content: '\ec91';
 }
 
-/* topdoc
-  name: Alert - Success
-  description: The Spectrum alert 'success'
-  markup: |
-      <div class="spectrum-Alert spectrum-Alert--success">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Alert-typeIcon" role="img" aria-label="check circle"></div>
-        <div class="spectrum-Alert-header">Successful Alert Header</div>
-        <div class="spectrum-Alert-content">This is an alert.</div>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
-/* topdoc
-  name: Alert - Info
-  description: The Spectrum alert 'info'
-  markup: |
-      <div class="spectrum-Alert spectrum-Alert--info">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Alert-typeIcon" role="img" aria-label="info circle"></div>
-        <div class="spectrum-Alert-header">Infomation Alert Header</div>
-        <div class="spectrum-Alert-content">This is an alert.</div>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
-/* topdoc
-  name: Alert - Warning
-  description: The Spectrum alert 'warning'
-  markup: |
-      <div class="spectrum-Alert spectrum-Alert--warning">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-        <div class="spectrum-Alert-header">Warning Alert Header</div>
-        <div class="spectrum-Alert-content">This is an alert.</div>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
-/* topdoc
-  name: Alert - Error
-  description: The Spectrum alert 'error'
-  markup: |
-      <div class="spectrum-Alert spectrum-Alert--error">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-        <div class="spectrum-Alert-header">Error Alert - Oh no</div>
-        <div class="spectrum-Alert-content">This is an alert.</div>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
-/* topdoc
-  name: Alert - Discloseable
-  description: The Spectrum alert 'discloseable'. It has a close button in the footer. Combine this with other variants.
-  markup: |
-      <div class="spectrum-Alert spectrum-Alert--error">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-        <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
-        <div class="spectrum-Alert-content">This is an alert.</div>
-        <div class="spectrum-Alert-footer">
-          <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
-        </div>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
 .spectrum-Alert {
   position: relative;
   display: inline-block;
@@ -2923,18 +2824,10 @@
 
 .spectrum--light .spectrum-Alert {
   background-color: #fff;
-  color: #2c2c2c;
-}
-
-.spectrum--light .spectrum-Alert .spectrum-Alert-typeIcon {
-  color: #1473e6;
-}
-
-.spectrum--light .spectrum-Alert--info {
   border-color: #1473e6;
 }
 
-.spectrum--light .spectrum-Alert--info .spectrum-Alert-typeIcon {
+.spectrum--light .spectrum-Alert .spectrum-Alert-typeIcon {
   color: #1473e6;
 }
 
@@ -2963,7 +2856,7 @@
 }
 
 .spectrum--light .spectrum-Alert-header {
-  color: #2c2c2c;
+  color: #2d2d2d;
 }
 
 .spectrum--light .spectrum-Alert-content {
@@ -2971,19 +2864,11 @@
 }
 
 .spectrum--dark .spectrum-Alert {
-  background-color: #282828;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Alert .spectrum-Alert-typeIcon {
-  color: #1473e6;
-}
-
-.spectrum--dark .spectrum-Alert--info {
+  background-color: #2a2a2a;
   border-color: #1473e6;
 }
 
-.spectrum--dark .spectrum-Alert--info .spectrum-Alert-typeIcon {
+.spectrum--dark .spectrum-Alert .spectrum-Alert-typeIcon {
   color: #1473e6;
 }
 
@@ -3012,12 +2897,29 @@
 }
 
 .spectrum--dark .spectrum-Alert-header {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .spectrum--dark .spectrum-Alert-content {
   color: #999;
 }
+
+/* topdoc
+  name: Button - Minimal
+  description: The Spectrum button in 'minimal' style (defaults to minimal + secondary)
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <button class="spectrum-Button spectrum-Button--minimal">Button</button>
+    <button class="spectrum-Button spectrum-Button--minimal" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
 
 /* topdoc
   name: Button - Primary
@@ -3038,7 +2940,7 @@
 
 /* topdoc
   name: Button - Secondary
-  description: A Spectrum 'secondary' style button
+  description: The Spectrum 'secondary' style button
   modifiers:
     :disabled: Disabled state
     :hover: Hover state
@@ -3046,23 +2948,6 @@
   markup: |
     <button class="spectrum-Button spectrum-Button--secondary">Button</button>
     <button class="spectrum-Button spectrum-Button--secondary" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Button - CTA
-  description: A Spectrum 'call-to-action' button
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <button class="spectrum-Button spectrum-Button--cta">Button</button>
-    <button class="spectrum-Button spectrum-Button--cta" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -3088,32 +2973,15 @@
 */
 
 /* topdoc
-  name: Button - Quiet Primary
-  description: A 'quiet primary' Spectrum button
+  name: Button - Quiet
+  description: A 'quiet' Spectrum button (defaults to quiet + primary style)
   modifiers:
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused
   markup: |
-    <button class="spectrum-Button spectrum-Button--quiet--primary">Button</button>
-    <button class="spectrum-Button spectrum-Button--quiet--primary" disabled>Button</button>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Button - Quiet Secondary
-  description: A 'quiet secondary' Spectrum button
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <button class="spectrum-Button spectrum-Button--quiet--secondary">Button</button>
-    <button class="spectrum-Button spectrum-Button--quiet--secondary" disabled>Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet">Button</button>
+    <button class="spectrum-Button spectrum-Button--quiet" disabled>Button</button>
   tags:
     - desktop
     - light
@@ -3132,7 +3000,7 @@
   border-style: solid;
   border-radius: 1rem;
   border-color: transparent;
-  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   font-size: 0.875rem;
   font-weight: bold;
   font-family: inherit;
@@ -3193,8 +3061,8 @@
 
 .spectrum--light .spectrum-Button--cta:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--light .spectrum-Button--cta:hover {
@@ -3212,8 +3080,8 @@
 .spectrum--light .spectrum-Button--cta:disabled,
 .spectrum--light .spectrum-Button--cta[disabled] {
   background-color: #eaeaea;
-  border-color: transparent;
   color: #c2c2c2;
+  border-color: transparent;
 }
 
 .spectrum--light .spectrum-Button--primary {
@@ -3224,8 +3092,8 @@
 
 .spectrum--light .spectrum-Button--primary:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--light .spectrum-Button--primary:hover {
@@ -3235,16 +3103,16 @@
 }
 
 .spectrum--light .spectrum-Button--primary:active {
-  background-color: #2c2c2c;
-  border-color: #2c2c2c;
+  background-color: #2d2d2d;
+  border-color: #2d2d2d;
   color: #fff;
 }
 
 .spectrum--light .spectrum-Button--primary:disabled,
 .spectrum--light .spectrum-Button--primary[disabled] {
   background-color: #eaeaea;
-  border-color: transparent;
   color: #c2c2c2;
+  border-color: transparent;
 }
 
 .spectrum--light .spectrum-Button--secondary {
@@ -3255,8 +3123,8 @@
 
 .spectrum--light .spectrum-Button--secondary:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--light .spectrum-Button--secondary:hover {
@@ -3274,8 +3142,8 @@
 .spectrum--light .spectrum-Button--secondary:disabled,
 .spectrum--light .spectrum-Button--secondary[disabled] {
   background-color: #eaeaea;
-  border-color: transparent;
   color: #c2c2c2;
+  border-color: transparent;
 }
 
 .spectrum--light .spectrum-Button--warning {
@@ -3286,8 +3154,8 @@
 
 .spectrum--light .spectrum-Button--warning:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #fff;
 }
 
 .spectrum--light .spectrum-Button--warning:hover {
@@ -3305,70 +3173,70 @@
 .spectrum--light .spectrum-Button--warning:disabled,
 .spectrum--light .spectrum-Button--warning[disabled] {
   background-color: #eaeaea;
-  border-color: transparent;
   color: #c2c2c2;
+  border-color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Button--quiet--primary {
-  background-color: transparent;
-  border-color: transparent;
-  color: #4b4b4b;
-}
-
-.spectrum--light .spectrum-Button--quiet--primary:focus {
-  background-color: #0064dc;
-  border-color: #0064dc;
-  color: #fff;
-}
-
-.spectrum--light .spectrum-Button--quiet--primary:hover {
-  background-color: #eaeaea;
-  border-color: transparent;
-  color: #2c2c2c;
-}
-
-.spectrum--light .spectrum-Button--quiet--primary:active {
-  background-color: #e1e1e1;
-  border-color: transparent;
-  color: #2c2c2c;
-}
-
-.spectrum--light .spectrum-Button--quiet--primary:disabled,
-.spectrum--light .spectrum-Button--quiet--primary[disabled] {
-  background-color: transparent;
-  border-color: transparent;
-  color: #c2c2c2;
-}
-
-.spectrum--light .spectrum-Button--quiet--secondary {
+.spectrum--light .spectrum-Button--quiet {
   background-color: transparent;
   border-color: transparent;
   color: #707070;
 }
 
-.spectrum--light .spectrum-Button--quiet--secondary:focus {
-  background-color: #0064dc;
+.spectrum--light .spectrum-Button--quiet:focus {
+  background-color: transparent;
+  color: #0064dc;
   border-color: #0064dc;
-  color: #fff;
 }
 
-.spectrum--light .spectrum-Button--quiet--secondary:hover {
-  background-color: #eaeaea;
-  border-color: transparent;
-  color: #4b4b4b;
-}
-
-.spectrum--light .spectrum-Button--quiet--secondary:active {
-  background-color: #e1e1e1;
-  border-color: transparent;
-  color: #4b4b4b;
-}
-
-.spectrum--light .spectrum-Button--quiet--secondary:disabled,
-.spectrum--light .spectrum-Button--quiet--secondary[disabled] {
+.spectrum--light .spectrum-Button--quiet:hover {
   background-color: transparent;
   border-color: transparent;
+  color: #4b4b4b;
+}
+
+.spectrum--light .spectrum-Button--quiet:active {
+  background-color: transparent;
+  border-color: transparent;
+  color: #2d2d2d;
+}
+
+.spectrum--light .spectrum-Button--quiet:disabled,
+.spectrum--light .spectrum-Button--quiet[disabled] {
+  background-color: #eaeaea;
   color: #c2c2c2;
+  border-color: transparent;
+}
+
+.spectrum--light .spectrum-Button--minimal {
+  background-color: transparent;
+  border-color: transparent;
+  color: #707070;
+}
+
+.spectrum--light .spectrum-Button--minimal:focus {
+  background-color: transparent;
+  color: #0064dc;
+  border-color: #0064dc;
+}
+
+.spectrum--light .spectrum-Button--minimal:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #4b4b4b;
+}
+
+.spectrum--light .spectrum-Button--minimal:active {
+  background-color: transparent;
+  border-color: transparent;
+  color: #2d2d2d;
+}
+
+.spectrum--light .spectrum-Button--minimal:disabled,
+.spectrum--light .spectrum-Button--minimal[disabled] {
+  background-color: #eaeaea;
+  color: #c2c2c2;
+  border-color: transparent;
 }
 
 .spectrum--dark .spectrum-Button:focus {
@@ -3391,8 +3259,8 @@
 
 .spectrum--dark .spectrum-Button--cta:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--dark .spectrum-Button--cta:hover {
@@ -3410,8 +3278,8 @@
 .spectrum--dark .spectrum-Button--cta:disabled,
 .spectrum--dark .spectrum-Button--cta[disabled] {
   background-color: #393939;
-  border-color: transparent;
   color: #525252;
+  border-color: transparent;
 }
 
 .spectrum--dark .spectrum-Button--primary {
@@ -3422,27 +3290,27 @@
 
 .spectrum--dark .spectrum-Button--primary:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--dark .spectrum-Button--primary:hover {
   background-color: #cdcdcd;
   border-color: #cdcdcd;
-  color: #282828;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--primary:active {
-  background-color: #fff;
-  border-color: #fff;
-  color: #282828;
+  background-color: #fcfcfc;
+  border-color: #fcfcfc;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--primary:disabled,
 .spectrum--dark .spectrum-Button--primary[disabled] {
   background-color: #393939;
-  border-color: transparent;
   color: #525252;
+  border-color: transparent;
 }
 
 .spectrum--dark .spectrum-Button--secondary {
@@ -3453,27 +3321,27 @@
 
 .spectrum--dark .spectrum-Button--secondary:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #0064dc;
 }
 
 .spectrum--dark .spectrum-Button--secondary:hover {
   background-color: #999;
   border-color: #999;
-  color: #282828;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--secondary:active {
   background-color: #cdcdcd;
   border-color: #cdcdcd;
-  color: #282828;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--secondary:disabled,
 .spectrum--dark .spectrum-Button--secondary[disabled] {
   background-color: #393939;
-  border-color: transparent;
   color: #525252;
+  border-color: transparent;
 }
 
 .spectrum--dark .spectrum-Button--warning {
@@ -3484,156 +3352,122 @@
 
 .spectrum--dark .spectrum-Button--warning:focus {
   background-color: #0064dc;
-  border-color: #0064dc;
   color: #fff;
+  border-color: #fff;
 }
 
 .spectrum--dark .spectrum-Button--warning:hover {
   background-color: #e61414;
   border-color: #e61414;
-  color: #282828;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--warning:active {
   background-color: #d20a0a;
   border-color: #d20a0a;
-  color: #282828;
+  color: #2a2a2a;
 }
 
 .spectrum--dark .spectrum-Button--warning:disabled,
 .spectrum--dark .spectrum-Button--warning[disabled] {
   background-color: #393939;
-  border-color: transparent;
   color: #525252;
+  border-color: #525252;
 }
 
-.spectrum--dark .spectrum-Button--quiet--primary {
-  background-color: transparent;
-  border-color: transparent;
-  color: #cdcdcd;
-}
-
-.spectrum--dark .spectrum-Button--quiet--primary:focus {
-  background-color: #0064dc;
-  border-color: #0064dc;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--quiet--primary:hover {
-  background-color: #393939;
-  border-color: transparent;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--quiet--primary:active {
-  background-color: #3e3e3e;
-  border-color: transparent;
-  color: #fff;
-}
-
-.spectrum--dark .spectrum-Button--quiet--primary:disabled,
-.spectrum--dark .spectrum-Button--quiet--primary[disabled] {
-  background-color: transparent;
-  border-color: transparent;
-  color: #525252;
-}
-
-.spectrum--dark .spectrum-Button--quiet--secondary {
+.spectrum--dark .spectrum-Button--quiet {
   background-color: transparent;
   border-color: transparent;
   color: #999;
 }
 
-.spectrum--dark .spectrum-Button--quiet--secondary:focus {
-  background-color: #0064dc;
+.spectrum--dark .spectrum-Button--quiet:focus {
+  background-color: transparent;
+  color: #0064dc;
   border-color: #0064dc;
-  color: #fff;
 }
 
-.spectrum--dark .spectrum-Button--quiet--secondary:hover {
-  background-color: #393939;
-  border-color: transparent;
-  color: #cdcdcd;
-}
-
-.spectrum--dark .spectrum-Button--quiet--secondary:active {
-  background-color: #3e3e3e;
-  border-color: transparent;
-  color: #cdcdcd;
-}
-
-.spectrum--dark .spectrum-Button--quiet--secondary:disabled,
-.spectrum--dark .spectrum-Button--quiet--secondary[disabled] {
+.spectrum--dark .spectrum-Button--quiet:hover {
   background-color: transparent;
   border-color: transparent;
-  color: #525252;
+  color: #cdcdcd;
 }
 
-/* topdoc
-  name: Checkbox
-  description: The Spectrum checkbox
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-      <div class="spectrum-Checkbox">
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-      </div>
-      <div class="spectrum-Checkbox" checked>
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-      </div>
-      <div class="spectrum-Checkbox" indeterminate>
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
+.spectrum--dark .spectrum-Button--quiet:active {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fcfcfc;
+}
 
-/* topdoc
-  name: Checkbox - disabled
-  description: The 'disabled' Spectrum checkbox
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-      <div class="spectrum-Checkbox" disabled>
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
-      </div>
-      <div class="spectrum-Checkbox" disabled checked>
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
-      </div>
-      <div class="spectrum-Checkbox" disabled indeterminate>
-        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
-        <span class="spectrum-Checkbox-checkmark"></span>
-        <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
+.spectrum--dark .spectrum-Button--quiet:disabled,
+.spectrum--dark .spectrum-Button--quiet[disabled] {
+  background-color: #393939;
+  color: #525252;
+  border-color: transparent;
+}
+
+.spectrum--dark .spectrum-Button--minimal {
+  background-color: transparent;
+  border-color: transparent;
+  color: #999;
+}
+
+.spectrum--dark .spectrum-Button--minimal:focus {
+  background-color: transparent;
+  color: #0064dc;
+  border-color: #0064dc;
+}
+
+.spectrum--dark .spectrum-Button--minimal:hover {
+  background-color: transparent;
+  border-color: transparent;
+  color: #cdcdcd;
+}
+
+.spectrum--dark .spectrum-Button--minimal:active {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fcfcfc;
+}
+
+.spectrum--dark .spectrum-Button--minimal:disabled,
+.spectrum--dark .spectrum-Button--minimal[disabled] {
+  background-color: #393939;
+  color: #525252;
+  border-color: transparent;
+}
 
 .spectrum-Checkbox {
   display: inline-block;
   position: relative;
   padding: 0.4375rem 0;
   font-size: 0;
+}
+
+.spectrum-Checkbox-checkmark {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 0.125rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  vertical-align: middle;
+  transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark:after {
+  position: absolute;
+  top: 0.6875rem;
+  left: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  content: '';
 }
 
 .spectrum-Checkbox-input {
@@ -3660,41 +3494,15 @@
   border-bottom-width: 0.3125rem;
 }
 
-.spectrum-Checkbox-label {
+.spectrum-Checkbox-description {
   margin: 0 0.5rem;
   font-size: 0.875rem;
   vertical-align: middle;
   transition: color 150ms ease-in-out;
 }
 
-.spectrum-Checkbox-checkmark {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 0.125rem;
-  border-width: 0.125rem;
-  border-style: solid;
-  vertical-align: middle;
-  transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
-}
-
-.spectrum-Checkbox-checkmark:after {
-  position: absolute;
-  top: 0.875rem;
-  left: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-  content: '';
-}
-
-.spectrum--light .spectrum-Checkbox-label {
-  color: #4b4b4b;
+.spectrum--light .spectrum-Checkbox-description {
+  color: #707070;
 }
 
 .spectrum--light .spectrum-Checkbox-checkmark {
@@ -3705,13 +3513,13 @@
   background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0zLjgsNy40QzMuNSw3LjQsMy4yLDcuMywzLDcuMUwwLjgsNC44Yy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwTDMuOCw1bDQtNGMwLjQtMC40LDEtMC40LDEuNCwwIHMwLjQsMSwwLDEuNEw0LjUsNy4xQzQuMyw3LjMsNCw3LjQsMy44LDcuNHoiIGZpbGw9IiNlMWUxZTEiLz4KPC9zdmc+');
 }
 
-.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark {
   border-color: #707070;
 }
 
 .spectrum--light .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
-  border-color: #1473e6;
-  box-shadow-color: #1473e6;
+  border-color: #2d8ceb;
+  box-shadow-color: #2d8ceb;
 }
 
 .spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -3719,19 +3527,21 @@
 }
 
 .spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
-  border-color: #707070;
+  border-color: #2d2d2d;
 }
 
-.spectrum--light .spectrum-Checkbox[disabled] .spectrum-Checkbox-checkmark {
-  border-color: #e1e1e1;
+.spectrum--light .spectrum-Checkbox:disabled .spectrum-Checkbox-checkmark,
+.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-checkmark {
+  border-color: #eaeaea;
 }
 
-.spectrum--light .spectrum-Checkbox[disabled] .spectrum-Checkbox-label {
-  color: #c2c2c2;
+.spectrum--light .spectrum-Checkbox:disabled .spectrum-Checkbox-description,
+.spectrum--light .spectrum-Checkbox.is-disabled .spectrum-Checkbox-description {
+  border-color: #c2c2c2;
 }
 
-.spectrum--dark .spectrum-Checkbox-label {
-  color: #cdcdcd;
+.spectrum--dark .spectrum-Checkbox-description {
+  color: #999;
 }
 
 .spectrum--dark .spectrum-Checkbox-checkmark {
@@ -3742,13 +3552,13 @@
   background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0zLjgsNy40QzMuNSw3LjQsMy4yLDcuMywzLDcuMUwwLjgsNC44Yy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwTDMuOCw1bDQtNGMwLjQtMC40LDEtMC40LDEuNCwwIHMwLjQsMSwwLDEuNEw0LjUsNy4xQzQuMyw3LjMsNCw3LjQsMy44LDcuNHoiIGZpbGw9IiMzZTNlM2UiLz4KPC9zdmc+');
 }
 
-.spectrum--dark .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+.spectrum--dark .spectrum-Checkbox-input:checked + .spectrum-Radio-checkmark {
   border-color: #999;
 }
 
 .spectrum--dark .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
-  border-color: #2d8ceb;
-  box-shadow-color: #2d8ceb;
+  border-color: #1473e6;
+  box-shadow-color: #1473e6;
 }
 
 .spectrum--dark .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -3756,198 +3566,18 @@
 }
 
 .spectrum--dark .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
-  border-color: #999;
+  border-color: #fcfcfc;
 }
 
-.spectrum--dark .spectrum-Checkbox[disabled] .spectrum-Checkbox-checkmark {
-  border-color: #3e3e3e;
+.spectrum--dark .spectrum-Checkbox:disabled .spectrum-Checkbox-checkmark,
+.spectrum--dark .spectrum-Checkbox.is-disabled .spectrum-Checkbox-checkmark {
+  border-color: #393939;
 }
 
-.spectrum--dark .spectrum-Checkbox[disabled] .spectrum-Checkbox-label {
-  color: #525252;
+.spectrum--dark .spectrum-Checkbox:disabled .spectrum-Checkbox-description,
+.spectrum--dark .spectrum-Checkbox.is-disabled .spectrum-Checkbox-description {
+  border-color: #525252;
 }
-
-/* topdoc
-  name: Dialog - Default
-  description: A Spectrum 'default' dialog (which is also the default style)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
-    <div class="spectrum-Dialog" id="defaultDialog">
-      <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-        <div class="spectrum-Dialog-header">
-          <h2 class="spectrum-Dialog-title">Default Dialog</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This Dialog is not centered.</p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Dialog - Success
-  description: A Spectrum 'success' dialog
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button>
-    <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
-      <div class="spectrum-Dialog-wrapper" style="width:400px;">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon"></div>
-          <h2 class="spectrum-Dialog-title">Success Dialog</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This dialog was created from markup. </p>
-          <p>This dialog is not centered. </p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Dialog - Info
-  description: A Spectrum 'info' dialog
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button>
-    <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog">
-      <div class="spectrum-Dialog-wrapper" style="width:400px;">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Info-Circle"></div>
-          <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This dialog was created from markup. </p>
-          <p>This dialog is not centered. </p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Dialog - Warning
-  description: A Spectrum 'warning' dialog
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button>
-    <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
-      <div class="spectrum-Dialog-wrapper" style="width:400px;">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
-          <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This dialog was created from markup. This Dialog is not centered.</p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Dialog - Error
-  description: A Spectrum 'error' dialog
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup:
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button>
-    <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog">
-      <div class="spectrum-Dialog-wrapper" style="width:400px;">
-        <div class="spectrum-Dialog-header">
-          <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
-          <h2 class="spectrum-Dialog-title">Error Dialog</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This dialog was created from markup. This Dialog is not centered.</p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Dialog - Modal
-  description: A Spectrum 'modal' dialog
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
-    <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-      <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-        <div class="spectrum-Dialog-header">
-          <h2 class="spectrum-Dialog-title">Defaul Dialog - Modal</h2>
-        </div>
-        <div class="spectrum-Dialog-content">
-          <p>This Dialog is not centered.</p>
-        </div>
-        <div class="spectrum-Dialog-footer">
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
-          <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
-        </div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
 
 .spectrum-Dialog {
   position: fixed;
@@ -3981,7 +3611,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  height: 0.125rem;
+  height: 0.0625rem;
   content: '';
 }
 
@@ -4085,20 +3715,30 @@
   padding-top: 1.875rem;
 }
 
-.spectrum--light .spectrum-Dialog-wrapper {
-  background: #fafafa;
+.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-title {
+  color: #f53c3c;
 }
 
-.spectrum--light .spectrum-Dialog-header {
-  background: #fafafa;
+.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
+  color: #f53c3c;
 }
 
-.spectrum--light .spectrum-Dialog-header:after {
-  background: #eaeaea;
+.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-title {
+  color: #2d2d2d;
 }
 
-.spectrum--light .spectrum-Dialog-footer {
-  background: #fafafa;
+.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
+  color: #2d2d2d;
+}
+
+.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-title,
+.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-title {
+  color: #1473e6;
+}
+
+.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
+.spectrum--light.spectrum-Dialog--info .spectrum-Dialog-typeIcon {
+  color: #1473e6;
 }
 
 .spectrum--light .spectrum-Dialog--success .spectrum-Dialog-title {
@@ -4109,50 +3749,46 @@
   color: #0f870f;
 }
 
-.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-title,
-.spectrum--light .spectrum-Dialog--info .spectrum-Dialog-title {
+.spectrum--light .spectrum-Dialog-wrapper {
+  background: #fff;
+}
+
+.spectrum--light .spectrum-Dialog-header {
+  background: #fff;
+}
+
+.spectrum--light .spectrum-Dialog-header:after {
+  background: #e1e1e1;
+}
+
+.spectrum--light .spectrum-Dialog-footer {
+  background: #fff;
+}
+
+.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title {
+  color: #f53c3c;
+}
+
+.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
+  color: #f53c3c;
+}
+
+.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-title {
+  color: #fcfcfc;
+}
+
+.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
+  color: #fcfcfc;
+}
+
+.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-title,
+.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-title {
   color: #1473e6;
 }
 
-.spectrum--light .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
-.spectrum--light .spectrum-Dialog--info .spectrum-Dialog-typeIcon {
+.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
+.spectrum--dark.spectrum-Dialog--info .spectrum-Dialog-typeIcon {
   color: #1473e6;
-}
-
-.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-title {
-  color: #e6af00;
-}
-
-.spectrum--light .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
-  color: #e6af00;
-}
-
-.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-title {
-  color: #e61414;
-}
-
-.spectrum--light .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
-  color: #e61414;
-}
-
-.spectrum--light .spectrum-Dialog--modal {
-  background: rgba(0,0,0,0.6);
-}
-
-.spectrum--dark .spectrum-Dialog-wrapper {
-  background: #2d2d2d;
-}
-
-.spectrum--dark .spectrum-Dialog-header {
-  background: #2d2d2d;
-}
-
-.spectrum--dark .spectrum-Dialog-header:after {
-  background: #393939;
-}
-
-.spectrum--dark .spectrum-Dialog-footer {
-  background: #2d2d2d;
 }
 
 .spectrum--dark .spectrum-Dialog--success .spectrum-Dialog-title {
@@ -4163,167 +3799,39 @@
   color: #0f870f;
 }
 
-.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-title,
-.spectrum--dark .spectrum-Dialog--info .spectrum-Dialog-title {
-  color: #1473e6;
+.spectrum--dark .spectrum-Dialog-wrapper {
+  background: #2a2a2a;
 }
 
-.spectrum--dark .spectrum-Dialog--help .spectrum-Dialog-typeIcon,
-.spectrum--dark .spectrum-Dialog--info .spectrum-Dialog-typeIcon {
-  color: #1473e6;
+.spectrum--dark .spectrum-Dialog-header {
+  background: #2a2a2a;
 }
 
-.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-title {
-  color: #e6af00;
+.spectrum--dark .spectrum-Dialog-header:after {
+  background: #3e3e3e;
 }
 
-.spectrum--dark .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
-  color: #e6af00;
+.spectrum--dark .spectrum-Dialog-footer {
+  background: #2a2a2a;
 }
 
-.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title {
-  color: #e61414;
+@-moz-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
 }
 
-.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon {
-  color: #e61414;
+@-webkit-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
 }
 
-.spectrum--dark .spectrum-Dialog--modal {
-  background: rgba(0,0,0,0.6);
+@-o-keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
 }
-
-/* topdoc
-  name: Progress - Small
-  description: A Spectrum 'small' progress (normal & indeterminate)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-        <div class="spectrum-Progress-label" hidden=""></div>
-      </div>
-    </div>
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-        </div>
-        <div class="spectrum-Progress-label">indeterminate</div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Progress - Medium
-  description: A Spectrum 'medium' progress (normal & indeterminate)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-        <div class="spectrum-Progress-label" hidden=""></div>
-      </div>
-    </div>
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-        </div>
-        <div class="spectrum-Progress-label">indeterminate</div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Progress - Large
-  description: A Spectrum 'large' progress (normal & indeterminate)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-        <div class="spectrum-Progress-label" hidden=""></div>
-      </div>
-    </div>
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-        </div>
-        <div class="spectrum-Progress-label">indeterminate</div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Progress - With Label
-  description: A Spectrum 'Medium' progress with a label (left, bottom & right)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--leftLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-label">left label</div>
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-      </div>
-    </div>
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class="spectrum-Progress-bar">
-          <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-        <div class="spectrum-Progress-label">bottom label</div>
-      </div>
-    </div>
-    <div style="width: 200px; height: 25px; padding-top: 10px;">
-      <div class="spectrum-Progress spectrum-Progress--rightLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-        <div class=" spectrum-Progress-bar">
-          <div class=" spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-        </div>
-        <div class="spectrum-Progress-label">right label</div>
-      </div>
-    </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
 
 @keyframes spectrum-progress-indeterminate {
   to {
@@ -4384,16 +3892,16 @@
   animation: spectrum-progress-indeterminate 934ms cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite forwards;
 }
 
+.spectrum-Progress--leftLabel {
+  height: 0.8125rem;
+}
+
 .spectrum-Progress--leftLabel .spectrum-Progress-label {
-  left: 0;
-  padding-right: 0.625rem;
-  padding-left: 0;
-  text-align: right;
+  line-height: 0.8125rem;
 }
 
 .spectrum-Progress--leftLabel .spectrum-Progress-bar {
-  left: 2.5rem;
-  right: 0;
+  top: 0.28125rem;
 }
 
 .spectrum-Progress--bottomLabel {
@@ -4453,22 +3961,17 @@
   line-height: inherit;
 }
 
-.spectrum-Progress--small.spectrum-Progress--leftLabel {
+.spectrum-Progress--small.spectrum-Progress--leftLabel,
+.spectrum-Progress--small.spectrum-Progress--rightLabel {
   height: 0.8125rem;
 }
 
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-  top: 0.28125rem;
-}
-
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label {
-  line-height: 0.8125rem;
-}
-
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar,
 .spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
   top: 0.28125rem;
 }
 
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label,
 .spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
   line-height: 0.8125rem;
 }
@@ -4477,26 +3980,17 @@
   border-radius: 0.25rem;
 }
 
-.spectrum-Progress--medium.spectrum-Progress--leftLabel {
-  height: 0.875rem;
-}
-
-.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-  top: 0.25rem;
-}
-
-.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-label {
-  line-height: 0.875rem;
-}
-
+.spectrum-Progress--medium.spectrum-Progress--leftLabel,
 .spectrum-Progress--medium.spectrum-Progress--rightLabel {
   height: 0.875rem;
 }
 
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-bar,
 .spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-bar {
   top: 0.25rem;
 }
 
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-label,
 .spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-label {
   line-height: 0.875rem;
 }
@@ -4531,26 +4025,17 @@
   line-height: inherit;
 }
 
-.spectrum-Progress--large.spectrum-Progress--leftLabel {
-  height: 0.9375rem;
-}
-
-.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-  top: 0.21875rem;
-}
-
-.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-label {
-  line-height: 0.9375rem;
-}
-
+.spectrum-Progress--large.spectrum-Progress--leftLabel,
 .spectrum-Progress--large.spectrum-Progress--rightLabel {
   height: 0.9375rem;
 }
 
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-bar,
 .spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-bar {
   top: 0.21875rem;
 }
 
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-label,
 .spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-label {
   line-height: 0.9375rem;
 }
@@ -4560,7 +4045,7 @@
 }
 
 .spectrum--light .spectrum-Progress-status {
-  background: #1473e6;
+  background: #2d8ceb;
 }
 
 .spectrum--dark .spectrum-Progress-bar {
@@ -4568,7 +4053,7 @@
 }
 
 .spectrum--dark .spectrum-Progress-status {
-  background: #2d8ceb;
+  background: #1473e6;
 }
 
 /* topdoc
@@ -4582,37 +4067,12 @@
       <div class="spectrum-Radio">
         <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
         <span class="spectrum-Radio-checkmark"></span>
-        <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+        <label class="spectrum-Radio-description" for="radio-0">Kittens</label>
       </div>
       <div class="spectrum-Radio">
         <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
         <span class="spectrum-Radio-checkmark"></span>
-        <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
-      </div>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - radio
-*/
-
-/* topdoc
-  name: Radio - disabled
-  description: The 'disabled' Spectrum radio
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-      <div class="spectrum-Radio" disabled>
-        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" disabled>
-        <span class="spectrum-Radio-checkmark"></span>
-        <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-      </div>
-      <div class="spectrum-Radio" disabled>
-        <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" disabled>
-        <span class="spectrum-Radio-checkmark"></span>
-        <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
+        <label class="spectrum-Radio-description" for="radio-0">Puppies</label>
       </div>
   tags:
     - desktop
@@ -4642,7 +4102,7 @@
   border-width: 0.375rem;
 }
 
-.spectrum-Radio-label {
+.spectrum-Radio-description {
   margin: 0 0.5rem;
   font-size: 0.875rem;
   vertical-align: middle;
@@ -4661,42 +4121,25 @@
   transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.spectrum--light .spectrum-Radio-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.0001;
-  cursor: pointer;
-}
-
 .spectrum--light .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
   border-color: #707070;
 }
 
 .spectrum--light .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
-  border-color: #1473e6;
-  box-shadow: 0 0 0 0.0625rem #1473e6;
+  border-color: #2d8ceb;
+  box-shadow: 0 0 0 0.0625rem #2d8ceb;
 }
 
 .spectrum--light .spectrum-Radio-input:disabled {
-  border-color: #e1e1e1;
+  border-color: #eaeaea;
 }
 
-.spectrum--light .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
+.spectrum--light .spectrum-Radio-input:disabled ~ .spectrum-Radio-description {
   color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Radio {
-  display: inline-block;
-  position: relative;
-  padding: 0.4375rem 0;
-  font-size: 0;
-}
-
-.spectrum--light .spectrum-Radio .spectrum-Radio-label {
-  color: #4b4b4b;
+.spectrum--light .spectrum-Radio .spectrum-Radio-description {
+  color: #707070;
 }
 
 .spectrum--light .spectrum-Radio .spectrum-Radio-checkmark {
@@ -4708,34 +4151,24 @@
   box-shadow: none;
 }
 
-.spectrum--light .spectrum-Radio:hover .spectrum-Radio-label {
-  color: #4b4b4b;
+.spectrum--light .spectrum-Radio:hover .spectrum-Radio-description {
+  color: #707070;
 }
 
 .spectrum--light .spectrum-Radio:active .spectrum-Radio-checkmark {
-  border-color: #707070;
+  border-color: spectrum-color-switch-border-active;
 }
 
-.spectrum--light .spectrum-Radio:active .spectrum-Radio-label {
-  color: #4b4b4b;
+.spectrum--light .spectrum-Radio:active .spectrum-Radio-description {
+  color: #707070;
 }
 
 .spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-checkmark {
-  border-color: #e1e1e1;
+  border-color: #eaeaea;
 }
 
-.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-label {
+.spectrum--light .spectrum-Radio[disabled] .spectrum-Radio-description {
   color: #c2c2c2;
-}
-
-.spectrum--dark .spectrum-Radio-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.0001;
-  cursor: pointer;
 }
 
 .spectrum--dark .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
@@ -4743,27 +4176,20 @@
 }
 
 .spectrum--dark .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
-  border-color: #2d8ceb;
-  box-shadow: 0 0 0 0.0625rem #2d8ceb;
+  border-color: #1473e6;
+  box-shadow: 0 0 0 0.0625rem #1473e6;
 }
 
 .spectrum--dark .spectrum-Radio-input:disabled {
-  border-color: #3e3e3e;
+  border-color: #393939;
 }
 
-.spectrum--dark .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
+.spectrum--dark .spectrum-Radio-input:disabled ~ .spectrum-Radio-description {
   color: #525252;
 }
 
-.spectrum--dark .spectrum-Radio {
-  display: inline-block;
-  position: relative;
-  padding: 0.4375rem 0;
-  font-size: 0;
-}
-
-.spectrum--dark .spectrum-Radio .spectrum-Radio-label {
-  color: #cdcdcd;
+.spectrum--dark .spectrum-Radio .spectrum-Radio-description {
+  color: #999;
 }
 
 .spectrum--dark .spectrum-Radio .spectrum-Radio-checkmark {
@@ -4775,93 +4201,25 @@
   box-shadow: none;
 }
 
-.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-label {
-  color: #cdcdcd;
+.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-description {
+  color: #999;
 }
 
 .spectrum--dark .spectrum-Radio:active .spectrum-Radio-checkmark {
-  border-color: #999;
+  border-color: spectrum-color-switch-border-active;
 }
 
-.spectrum--dark .spectrum-Radio:active .spectrum-Radio-label {
-  color: #cdcdcd;
+.spectrum--dark .spectrum-Radio:active .spectrum-Radio-description {
+  color: #999;
 }
 
 .spectrum--dark .spectrum-Radio[disabled] .spectrum-Radio-checkmark {
-  border-color: #3e3e3e;
+  border-color: #393939;
 }
 
-.spectrum--dark .spectrum-Radio[disabled] .spectrum-Radio-label {
+.spectrum--dark .spectrum-Radio[disabled] .spectrum-Radio-description {
   color: #525252;
 }
-
-/* topdoc
-  name: Text Field - Default
-  description: A Spectrum text field
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
-    <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Text Field - Quiet
-  description: A Spectrum text field - quiet
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
-    <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Text Area - Default
-  description: A Spectrum text area - (a multiline text field)
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
-    <textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled></textarea>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
-
-/* topdoc
-  name: Text Area - Quiet
-  description: A Spectrum text area - quiet
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet"></textarea>
-    <textarea placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled></textarea>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
 
 .spectrum-Textfield {
   box-sizing: border-box;
@@ -4882,40 +4240,10 @@
   -webkit-appearance: none;
 }
 
-.spectrum-Textfield::-webkit-input-placeholder {
-  font-weight: normal;
-  font-style: italic;
-  transition: color 150ms ease-in-out;
-}
-
-.spectrum-Textfield::-moz-placeholder {
-  font-weight: normal;
-  font-style: italic;
-  transition: color 150ms ease-in-out;
-}
-
-.spectrum-Textfield:-ms-input-placeholder {
-  font-weight: normal;
-  font-style: italic;
-  transition: color 150ms ease-in-out;
-}
-
 .spectrum-Textfield::placeholder {
   font-weight: normal;
   font-style: italic;
   transition: color 150ms ease-in-out;
-}
-
-.spectrum-Textfield:hover::-webkit-input-placeholder {
-  font-weight: normal;
-}
-
-.spectrum-Textfield:hover::-moz-placeholder {
-  font-weight: normal;
-}
-
-.spectrum-Textfield:hover:-ms-input-placeholder {
-  font-weight: normal;
 }
 
 .spectrum-Textfield:hover::placeholder {
@@ -4925,18 +4253,6 @@
 .spectrum-Textfield:disabled {
   /* The opacity must be set to 1 */
   -webkit-opacity: 1;
-}
-
-.spectrum-Textfield:disabled::-webkit-input-placeholder {
-  font-weight: normal;
-}
-
-.spectrum-Textfield:disabled::-moz-placeholder {
-  font-weight: normal;
-}
-
-.spectrum-Textfield:disabled:-ms-input-placeholder {
-  font-weight: normal;
 }
 
 .spectrum-Textfield:disabled::placeholder {
@@ -4958,58 +4274,14 @@
   box-shadow: none;
 }
 
-.spectrum-Textfield--multiline {
-  height: auto;
-  padding: 0.25rem 0.5rem;
-  text-indent: 0;
-}
-
-.spectrum-Textfield--quiet {
-  border-radius: 0;
-  text-indent: 0;
-  border: none;
-  border-bottom: 0.0625rem solid;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .spectrum--light .spectrum-Textfield {
-  background-color: #fff;
   border-color: #e1e1e1;
+  background-color: #fff;
   color: #4b4b4b;
-}
-
-.spectrum--light .spectrum-Textfield::-webkit-input-placeholder {
-  color: #999;
-}
-
-.spectrum--light .spectrum-Textfield::-moz-placeholder {
-  color: #999;
-}
-
-.spectrum--light .spectrum-Textfield:-ms-input-placeholder {
-  color: #999;
 }
 
 .spectrum--light .spectrum-Textfield::placeholder {
   color: #999;
-}
-
-.spectrum--light .spectrum-Textfield:hover {
-  border-color: #c2c2c2;
-  box-shadow: 0 0 0 0.0625rem #c2c2c2;
-}
-
-.spectrum--light .spectrum-Textfield:hover::-webkit-input-placeholder {
-  color: #707070;
-}
-
-.spectrum--light .spectrum-Textfield:hover::-moz-placeholder {
-  color: #707070;
-}
-
-.spectrum--light .spectrum-Textfield:hover:-ms-input-placeholder {
-  color: #707070;
 }
 
 .spectrum--light .spectrum-Textfield:hover::placeholder {
@@ -5017,11 +4289,11 @@
 }
 
 .spectrum--light .spectrum-Textfield:focus {
-  border-color: #1473e6;
-  box-shadow: 0 0 0 0.0625rem #1473e6;
+  border-color: #2d8ceb;
+  box-shadow: 0 0 0 0.0625rem #2d8ceb;
 }
 
-.spectrum--light .spectrum-Textfield[disabled] {
+.spectrum--light .spectrum-Textfield:disabled {
   background-color: #eaeaea;
   border-color: transparent;
   color: #c2c2c2;
@@ -5029,19 +4301,7 @@
   -webkit-text-fill-color: #c2c2c2;
 }
 
-.spectrum--light .spectrum-Textfield[disabled]::-webkit-input-placeholder {
-  color: #e1e1e1;
-}
-
-.spectrum--light .spectrum-Textfield[disabled]::-moz-placeholder {
-  color: #e1e1e1;
-}
-
-.spectrum--light .spectrum-Textfield[disabled]:-ms-input-placeholder {
-  color: #e1e1e1;
-}
-
-.spectrum--light .spectrum-Textfield[disabled]::placeholder {
+.spectrum--light .spectrum-Textfield:disabled::placeholder {
   color: #e1e1e1;
 }
 
@@ -5056,21 +4316,17 @@
 
 .spectrum--light .spectrum-Textfield--quiet {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #e1e1e1;
   color: #4b4b4b;
 }
 
-.spectrum--light .spectrum-Textfield--quiet:hover {
-  box-shadow: 0 0.0625rem 0 transparent;
-}
-
 .spectrum--light .spectrum-Textfield--quiet:focus {
-  box-shadow: 0 0.0625rem 0 #1473e6;
+  box-shadow: 0 0.0625rem 0 #2d8ceb;
 }
 
 .spectrum--light .spectrum-Textfield--quiet:disabled {
+  border-color: $spectrum-color-input-border-disabled-quiet;
   background-color: transparent;
-  border-color: transparent;
 }
 
 .spectrum--light .spectrum-Textfield--quiet:invalid {
@@ -5081,43 +4337,20 @@
   box-shadow: 0 0.0625rem 0 #f53c3c;
 }
 
+.spectrum--light .spectrum-Textfield--multiline {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  text-indent: 0;
+}
+
 .spectrum--dark .spectrum-Textfield {
-  background-color: #fff;
   border-color: #3e3e3e;
+  background-color: #2a2a2a;
   color: #cdcdcd;
-}
-
-.spectrum--dark .spectrum-Textfield::-webkit-input-placeholder {
-  color: #707070;
-}
-
-.spectrum--dark .spectrum-Textfield::-moz-placeholder {
-  color: #707070;
-}
-
-.spectrum--dark .spectrum-Textfield:-ms-input-placeholder {
-  color: #707070;
 }
 
 .spectrum--dark .spectrum-Textfield::placeholder {
   color: #707070;
-}
-
-.spectrum--dark .spectrum-Textfield:hover {
-  border-color: #525252;
-  box-shadow: 0 0 0 0.0625rem #525252;
-}
-
-.spectrum--dark .spectrum-Textfield:hover::-webkit-input-placeholder {
-  color: #999;
-}
-
-.spectrum--dark .spectrum-Textfield:hover::-moz-placeholder {
-  color: #999;
-}
-
-.spectrum--dark .spectrum-Textfield:hover:-ms-input-placeholder {
-  color: #999;
 }
 
 .spectrum--dark .spectrum-Textfield:hover::placeholder {
@@ -5125,11 +4358,11 @@
 }
 
 .spectrum--dark .spectrum-Textfield:focus {
-  border-color: #2d8ceb;
-  box-shadow: 0 0 0 0.0625rem #2d8ceb;
+  border-color: #1473e6;
+  box-shadow: 0 0 0 0.0625rem #1473e6;
 }
 
-.spectrum--dark .spectrum-Textfield[disabled] {
+.spectrum--dark .spectrum-Textfield:disabled {
   background-color: #393939;
   border-color: transparent;
   color: #525252;
@@ -5137,19 +4370,7 @@
   -webkit-text-fill-color: #525252;
 }
 
-.spectrum--dark .spectrum-Textfield[disabled]::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.spectrum--dark .spectrum-Textfield[disabled]::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.spectrum--dark .spectrum-Textfield[disabled]:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.spectrum--dark .spectrum-Textfield[disabled]::placeholder {
+.spectrum--dark .spectrum-Textfield:disabled::placeholder {
   color: #3e3e3e;
 }
 
@@ -5164,21 +4385,17 @@
 
 .spectrum--dark .spectrum-Textfield--quiet {
   background-color: transparent;
-  border-color: transparent;
+  border-color: #3e3e3e;
   color: #cdcdcd;
 }
 
-.spectrum--dark .spectrum-Textfield--quiet:hover {
-  box-shadow: 0 0.0625rem 0 transparent;
-}
-
 .spectrum--dark .spectrum-Textfield--quiet:focus {
-  box-shadow: 0 0.0625rem 0 #2d8ceb;
+  box-shadow: 0 0.0625rem 0 #1473e6;
 }
 
 .spectrum--dark .spectrum-Textfield--quiet:disabled {
+  border-color: $spectrum-color-input-border-disabled-quiet;
   background-color: transparent;
-  border-color: transparent;
 }
 
 .spectrum--dark .spectrum-Textfield--quiet:invalid {
@@ -5189,77 +4406,41 @@
   box-shadow: 0 0.0625rem 0 #f53c3c;
 }
 
-/* topdoc
-  name: Wait - Radial - Small
-  description: A Spectrum wait dingsbums
-  markup: |
-    <span class="spectrum-Wait"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+.spectrum--dark .spectrum-Textfield--multiline {
+  height: auto;
+  padding: 0.25rem 0.5rem;
+  text-indent: 0;
+}
 
-/* topdoc
-  name: Wait - Radial - Medium
-  description: A Spectrum wait dingsbums
-  markup: |
-    <span class="spectrum-Wait spectrum-Wait--medium"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+@-moz-keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
 
-/* topdoc
-  name: Wait - Radial - Large
-  description: A Spectrum wait dingsbums
-  markup: |
-    <span class="spectrum-Wait spectrum-Wait--large"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+  to {
+    background-position: -60rem center;
+  }
+}
 
-/* topdoc
-  name: Wait - Dots - Small
-  description: A Spectrum wait with dots dingsbums
-  markup: |
-    <span class="spectrum-Wait spectrum-Wait--dots"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+@-webkit-keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
 
-/* topdoc
-  name: Wait - Dots - Medium
-  description: A Spectrum wait with dots dingsbums
-  markup: |
-    <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+  to {
+    background-position: -60rem center;
+  }
+}
 
-/* topdoc
-  name: Wait - Dots - Large
-  description: A Spectrum wait with dots dingsbums
-  markup: |
-    <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
-  tags:
-    - desktop
-    - light
-    - mobile
-    - button
-*/
+@-o-keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -60rem center;
+  }
+}
 
 @keyframes spectrum-wait-spinner-small-animation {
   from {
@@ -5268,6 +4449,36 @@
 
   to {
     background-position: -60rem center;
+  }
+}
+
+@-moz-keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -120rem center;
+  }
+}
+
+@-webkit-keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -120rem center;
+  }
+}
+
+@-o-keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -120rem center;
   }
 }
 
@@ -5281,6 +4492,36 @@
   }
 }
 
+@-moz-keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -240rem center;
+  }
+}
+
+@-webkit-keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -240rem center;
+  }
+}
+
+@-o-keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: -240rem center;
+  }
+}
+
 @keyframes spectrum-wait-spinner-large-animation {
   from {
     background-position: 0 center;
@@ -5288,6 +4529,36 @@
 
   to {
     background-position: -240rem center;
+  }
+}
+
+@-moz-keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -60rem center;
+  }
+}
+
+@-webkit-keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -60rem center;
+  }
+}
+
+@-o-keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -60rem center;
   }
 }
 
@@ -5301,6 +4572,36 @@
   }
 }
 
+@-moz-keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -80rem center;
+  }
+}
+
+@-webkit-keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -80rem center;
+  }
+}
+
+@-o-keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -80rem center;
+  }
+}
+
 @keyframes spectrum-wait-dots-medium-animation {
   0% {
     background-position: 0 center;
@@ -5308,6 +4609,36 @@
 
   100% {
     background-position: -80rem center;
+  }
+}
+
+@-moz-keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -160rem center;
+  }
+}
+
+@-webkit-keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -160rem center;
+  }
+}
+
+@-o-keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+
+  100% {
+    background-position: -160rem center;
   }
 }
 
