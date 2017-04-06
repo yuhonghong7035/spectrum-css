@@ -2897,7 +2897,7 @@
 
 .spectrum .spectrum-Alert {
   background-color: #282828;
-  color: #fff;
+  color: #999;
 }
 
 .spectrum .spectrum-Alert .spectrum-Alert-typeIcon {
@@ -2929,11 +2929,11 @@
 }
 
 .spectrum .spectrum-Alert--warning {
-  border-color: #e6af00;
+  border-color: #e6a000;
 }
 
 .spectrum .spectrum-Alert--warning .spectrum-Alert-typeIcon {
-  color: #e6af00;
+  color: #e6a000;
 }
 
 .spectrum .spectrum-Alert-header {
@@ -3811,11 +3811,11 @@
 }
 
 .spectrum .spectrum-Dialog--warning .spectrum-Dialog-title {
-  color: #e6af00;
+  color: #e6a000;
 }
 
 .spectrum .spectrum-Dialog--warning .spectrum-Dialog-typeIcon {
-  color: #e6af00;
+  color: #e6a000;
 }
 
 .spectrum .spectrum-Dialog--error .spectrum-Dialog-title {
@@ -4563,16 +4563,8 @@
   box-shadow: none;
 }
 
-.spectrum .spectrum-Radio:hover .spectrum-Radio-label {
-  color: #cdcdcd;
-}
-
 .spectrum .spectrum-Radio:active .spectrum-Radio-checkmark {
   border-color: #999;
-}
-
-.spectrum .spectrum-Radio:active .spectrum-Radio-label {
-  color: #cdcdcd;
 }
 
 .spectrum .spectrum-Radio[disabled] .spectrum-Radio-checkmark {
@@ -4580,6 +4572,298 @@
 }
 
 .spectrum .spectrum-Radio[disabled] .spectrum-Radio-label {
+  color: #525252;
+}
+
+/* topdoc
+  name: TabList - Horizontal
+  description: The Spectrum tab list
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal">
+      <div class="spectrum-Tab is-selected">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+
+/* topdoc
+  name: TabList - Horizontal
+  description: The Spectrum tab list with icons
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal">
+      <div class="spectrum-Tab is-selected">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+
+/* topdoc
+  name: TabList - Vertical
+  description: The Spectrum tab list
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical">
+      <div class="spectrum-Tab is-selected">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+
+/* topdoc
+  name: TabList - Vertical
+  description: The Spectrum tab list
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical">
+      <div class="spectrum-Tab is-selected">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - radio
+*/
+
+.spectrum .spectrum-TabList {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.spectrum .spectrum-TabList * {
+  outline: none;
+}
+
+.spectrum .spectrum-TabList .spectrum-Tab {
+  cursor: pointer;
+}
+
+.spectrum .spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
+  position: relative;
+  vertical-align: middle;
+  font-size: 1.125rem;
+}
+
+.spectrum .spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
+  position: relative;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.spectrum .spectrum-TabList .spectrum-Tab[disabled] {
+  cursor: default;
+}
+
+.spectrum .spectrum-TabList--horizontal {
+  display: block;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab {
+  position: relative;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  max-width: 15.625rem;
+  margin: 0 0.9375rem 0 0;
+  padding: 0rem 0.5rem;
+  line-height: 2rem;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon {
+  margin-right: 0.3125rem;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon:last-child {
+  margin-right: 0rem;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-label {
+  padding: 0.375rem 0;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.125rem;
+  border-bottom: 0.125rem solid;
+}
+
+.spectrum .spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.125rem;
+  border-bottom: 0.125rem solid;
+}
+
+.spectrum .spectrum-TabList--vertical {
+  display: inline-block;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab {
+  display: block;
+  overflow: visible;
+  min-width: 0;
+  margin: 0 0 0.25rem 0;
+  float: none;
+  text-align: left;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab:last-child {
+  margin-bottom: 0;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-icon {
+  padding: 0.25rem 0.4375rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  vertical-align: middle;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-label {
+  padding: 0.25rem 0.4375rem;
+  height: 1rem;
+  line-height: 1rem;
+  vertical-align: middle;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  display: block;
+  width: 0.125rem;
+  height: auto;
+  border: none;
+  border-left: 0.125rem solid;
+}
+
+.spectrum .spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  display: block;
+  width: 0.125rem;
+  height: auto;
+  border: none;
+  border-left: 0.125rem solid;
+}
+
+.spectrum .spectrum-TabList--large .spectrum-Tab {
+  margin: 0 1.0625rem 0 0;
+  padding: 0.625rem 0.5rem;
+  text-transform: none;
+  font-size: 0.875rem;
+}
+
+.spectrum .spectrum-Tab .spectrum-Tab-label {
+  color: #999;
+}
+
+.spectrum .spectrum-Tab:hover .spectrum-Tab-label {
+  color: #fff;
+}
+
+.spectrum .spectrum-Tab:focus .spectrum-Tab-label {
+  color: #46a0f5;
+}
+
+.spectrum .spectrum-Tab.is-selected .spectrum-Tab-label {
+  color: #fff;
+}
+
+.spectrum .spectrum-Tab[disabled] .spectrum-Tab-label {
   color: #525252;
 }
 
@@ -4776,15 +5060,15 @@
 }
 
 .spectrum .spectrum-Textfield:hover::-webkit-input-placeholder {
-  color: #999;
+  color: #cdcdcd;
 }
 
 .spectrum .spectrum-Textfield:hover:-ms-input-placeholder {
-  color: #999;
+  color: #cdcdcd;
 }
 
 .spectrum .spectrum-Textfield:hover::placeholder {
-  color: #999;
+  color: #cdcdcd;
 }
 
 .spectrum .spectrum-Textfield:focus {
@@ -4824,7 +5108,6 @@
 .spectrum .spectrum-Textfield--quiet {
   background-color: transparent;
   border-color: transparent;
-  color: #cdcdcd;
 }
 
 .spectrum .spectrum-Textfield--quiet:hover {
@@ -5727,10 +6010,6 @@
 
 .spectrum .spectrum-Wizard .spectrum-WizardStep.is-selected .spectrum-WizardStep-segment {
   border-bottom-color: #525252;
-}
-
-.spectrum .spectrum-Wizard.spectrum-Wizard--interactive .spectrum-WizardStep:hover .spectrum-WizardStep-marker {
-  background-color: #999;
 }
 
 .spectrum .spectrum-Wizard.spectrum-Wizard--interactive .spectrum-WizardStep:focus .spectrum-WizardStep-marker {
