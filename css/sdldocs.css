@@ -132,9 +132,10 @@ pre.html {
   vertical-align: middle;
 }
 .sdldocs-header-title {
-  font-weight: normal;
   margin-left: 10px;
-  display: inline;
+  font-size: 18px;
+  font-weight: normal;
+  display: none;
 }
 .sdldocs-colorstop {
   min-width: 300px;
@@ -149,6 +150,11 @@ pre.html {
   font-weight: bold;
   text-align: left;
   padding-left: 4px;
+}
+@media (min-width: 48em) {
+  .sdldocs-header-title {
+    display: inline;
+  }
 }
 .sdldocs-scroll {
   overflow-x: hidden;
@@ -203,9 +209,6 @@ pre.html {
     font-size: inherit;
     line-height: inherit;
   }
-}
-.sdldocs-home-presentation {
-  background-color: #fbfbfb;
 }
 .sdldocs-home-content {
   margin-top: 0.9rem;
