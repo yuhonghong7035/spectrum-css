@@ -1,6 +1,3 @@
-@include '../vendor/normalize.css';
-@include '../vendor/flexboxgrid.css';
-@include '../vendor/rainbow.css';
 .sdldocs-body {
   font-size: 1.1rem;
 }

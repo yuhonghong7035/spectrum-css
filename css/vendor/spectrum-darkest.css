@@ -25,20 +25,20 @@
 }
 
 @font-face {
-  font-family: 'AdobeSpectrumIcons24';
-  src: url("icons/24/AdobeSpectrumIcons24.eot");
+  font-family: 'spectrum-css-icons-18';
+  src: url("icons/18/spectrum-css-icons-18.eot");
   /* IE9 Compat Modes */
-  src: url("icons/24/AdobeSpectrumIcons24.eot?#iefix") format('embedded-opentype'), url("icons/24/AdobeSpectrumIcons24.woff2") format('woff2'), url("icons/24/AdobeSpectrumIcons24.woff") format('woff'), url("icons/24/AdobeSpectrumIcons24.ttf") format('truetype'), url("icons/24/AdobeSpectrumIcons24.svg#AdobeSpectrumIcons24") format('svg');
+  src: url("icons/18/spectrum-css-icons-18.eot?#iefix") format('embedded-opentype'), url("icons/18/spectrum-css-icons-18.woff2") format('woff2'), url("icons/18/spectrum-css-icons-18.woff") format('woff'), url("icons/18/spectrum-css-icons-18.ttf") format('truetype'), url("icons/18/spectrum-css-icons-18.svg#spectrum-css-icons-18") format('svg');
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'AdobeSpectrumIcons18';
-  src: url("icons/18/AdobeSpectrumIcons18.eot");
+  font-family: 'spectrum-css-icons-24';
+  src: url("icons/24/spectrum-css-icons-24.eot");
   /* IE9 Compat Modes */
-  src: url("icons/18/AdobeSpectrumIcons18.eot?#iefix") format('embedded-opentype'), url("icons/18/AdobeSpectrumIcons18.woff2") format('woff2'), url("icons/18/AdobeSpectrumIcons18.woff") format('woff'), url("icons/18/AdobeSpectrumIcons18.ttf") format('truetype'), url("icons/18/AdobeSpectrumIcons18.svg#AdobeSpectrumIcons18") format('svg');
+  src: url("icons/24/spectrum-css-icons-24.eot?#iefix") format('embedded-opentype'), url("icons/24/spectrum-css-icons-24.woff2") format('woff2'), url("icons/24/spectrum-css-icons-24.woff") format('woff'), url("icons/24/spectrum-css-icons-24.ttf") format('truetype'), url("icons/24/spectrum-css-icons-24.svg#spectrum-css-icons-24") format('svg');
   /* Legacy iOS */
   font-weight: normal;
   font-style: normal;
@@ -55,2701 +55,1365 @@
 }
 
 .spectrum .spectrum-Icon--sizeXXS {
-  font-family: AdobeSpectrumIcons18;
+  font-family: spectrum-css-icons-18;
   font-size: 9px;
 }
 
-.spectrum .spectrum-Icon--sizeXXS:before {
+.spectrum .spectrum-Icon--sizeXXS::before {
   height: 9px;
   width: 9px;
 }
 
 .spectrum .spectrum-Icon--sizeXS {
-  font-family: AdobeSpectrumIcons24;
+  font-family: spectrum-css-icons-24;
   font-size: 12px;
 }
 
-.spectrum .spectrum-Icon--sizeXS:before {
+.spectrum .spectrum-Icon--sizeXS::before {
   height: 12px;
   width: 12px;
 }
 
 .spectrum .spectrum-Icon--sizeS {
-  font-family: AdobeSpectrumIcons18;
+  font-family: spectrum-css-icons-18;
   font-size: 18px;
 }
 
-.spectrum .spectrum-Icon--sizeS:before {
+.spectrum .spectrum-Icon--sizeS::before {
   height: 18px;
   width: 18px;
 }
 
 .spectrum .spectrum-Icon--sizeM {
-  font-family: AdobeSpectrumIcons24;
+  font-family: spectrum-css-icons-24;
   font-size: 24px;
 }
 
-.spectrum .spectrum-Icon--sizeM:before {
+.spectrum .spectrum-Icon--sizeM::before {
   height: 24px;
   width: 24px;
 }
 
 .spectrum .spectrum-Icon--sizeL {
-  font-family: AdobeSpectrumIcons18;
+  font-family: spectrum-css-icons-18;
   font-size: 36px;
 }
 
-.spectrum .spectrum-Icon--sizeL:before {
+.spectrum .spectrum-Icon--sizeL::before {
   height: 36px;
   width: 36px;
 }
 
 .spectrum .spectrum-Icon--sizeXL {
-  font-family: AdobeSpectrumIcons24;
+  font-family: spectrum-css-icons-24;
   font-size: 48px;
 }
 
-.spectrum .spectrum-Icon--sizeXL:before {
+.spectrum .spectrum-Icon--sizeXL::before {
   height: 48px;
   width: 48px;
 }
 
 .spectrum .spectrum-Icon--sizeXXL {
-  font-family: AdobeSpectrumIcons24;
+  font-family: spectrum-css-icons-18;
   font-size: 72px;
 }
 
-.spectrum .spectrum-Icon--sizeXXL:before {
+.spectrum .spectrum-Icon--sizeXXL::before {
   height: 72px;
   width: 72px;
 }
 
-.spectrum .spectrum-Icon--123:before {
-  content: '\ea01';
+.spectrum .spectrum-Icon--Add::before {
+  content: "\ea01";
 }
 
-.spectrum .spectrum-Icon--ABC:before {
-  content: '\ea02';
+.spectrum .spectrum-Icon--AddCircle::before {
+  content: "\ea02";
 }
 
-.spectrum .spectrum-Icon--Actions:before {
-  content: '\ea03';
+.spectrum .spectrum-Icon--AddTo::before {
+  content: "\ea03";
 }
 
-.spectrum .spectrum-Icon--Add-Circle:before {
-  content: '\ea04';
+.spectrum .spectrum-Icon--AdobeDocumentCloud::before {
+  content: "\ea04";
 }
 
-.spectrum .spectrum-Icon--Add:before {
-  content: '\ea05';
+.spectrum .spectrum-Icon--AdobeLogo::before {
+  content: "\ea05";
 }
 
-.spectrum .spectrum-Icon--Adjust:before {
-  content: '\ea06';
+.spectrum .spectrum-Icon--AdobeSendNow::before {
+  content: "\ea06";
 }
 
-.spectrum .spectrum-Icon--Adobe:before {
-  content: '\ea07';
+.spectrum .spectrum-Icon--Alert::before {
+  content: "\ea07";
 }
 
-.spectrum .spectrum-Icon--AdobeAnalytics:before {
-  content: '\ea08';
+.spectrum .spectrum-Icon--Alias::before {
+  content: "\ea08";
 }
 
-.spectrum .spectrum-Icon--AdobeAudienceManager:before {
-  content: '\ea09';
+.spectrum .spectrum-Icon--AlignBottom::before {
+  content: "\ea09";
 }
 
-.spectrum .spectrum-Icon--AdobeCampaign:before {
-  content: '\ea0a';
+.spectrum .spectrum-Icon--AlignCenter::before {
+  content: "\ea0a";
 }
 
-.spectrum .spectrum-Icon--AdobeConnect:before {
-  content: '\ea0b';
+.spectrum .spectrum-Icon--AlignLeft::before {
+  content: "\ea0b";
 }
 
-.spectrum .spectrum-Icon--AdobeDocumentCloud:before {
-  content: '\ea0c';
+.spectrum .spectrum-Icon--AlignMiddle::before {
+  content: "\ea0c";
 }
 
-.spectrum .spectrum-Icon--AdobeExperienceManager:before {
-  content: '\ea0d';
+.spectrum .spectrum-Icon--AlignRight::before {
+  content: "\ea0d";
 }
 
-.spectrum .spectrum-Icon--AdobeMarketingCloud:before {
-  content: '\ea0e';
+.spectrum .spectrum-Icon--AlignTop::before {
+  content: "\ea0e";
 }
 
-.spectrum .spectrum-Icon--AdobeMediaOptimizer:before {
-  content: '\ea0f';
+.spectrum .spectrum-Icon--Anchor::before {
+  content: "\ea0f";
 }
 
-.spectrum .spectrum-Icon--AdobePrimetime:before {
-  content: '\ea10';
+.spectrum .spectrum-Icon--AnchorSelect::before {
+  content: "\ea10";
 }
 
-.spectrum .spectrum-Icon--AdobeSendNow:before {
-  content: '\ea11';
+.spectrum .spectrum-Icon--Android::before {
+  content: "\ea11";
 }
 
-.spectrum .spectrum-Icon--AdobeSocial:before {
-  content: '\ea12';
+.spectrum .spectrum-Icon--Annotate::before {
+  content: "\ea12";
 }
 
-.spectrum .spectrum-Icon--AdobeTarget:before {
-  content: '\ea13';
+.spectrum .spectrum-Icon--Apple::before {
+  content: "\ea13";
 }
 
-.spectrum .spectrum-Icon--Alert:before {
-  content: '\ea14';
+.spectrum .spectrum-Icon--Archive::before {
+  content: "\ea14";
 }
 
-.spectrum .spectrum-Icon--AlertAdd:before {
-  content: '\ea15';
+.spectrum .spectrum-Icon--Artboard::before {
+  content: "\ea15";
 }
 
-.spectrum .spectrum-Icon--AlertCheck:before {
-  content: '\ea16';
+.spectrum .spectrum-Icon--Asset::before {
+  content: "\ea16";
 }
 
-.spectrum .spectrum-Icon--Alias:before {
-  content: '\ea17';
+.spectrum .spectrum-Icon--Asterisk::before {
+  content: "\ea17";
 }
 
-.spectrum .spectrum-Icon--AmazonWebServices:before {
-  content: '\ea18';
+.spectrum .spectrum-Icon--At::before {
+  content: "\ea18";
 }
 
-.spectrum .spectrum-Icon--Anchor:before {
-  content: '\ea19';
+.spectrum .spectrum-Icon--Attach::before {
+  content: "\ea19";
 }
 
-.spectrum .spectrum-Icon--Android:before {
-  content: '\ea1a';
+.spectrum .spectrum-Icon--Audio::before {
+  content: "\ea1a";
 }
 
-.spectrum .spectrum-Icon--Annotate:before {
-  content: '\ea1b';
+.spectrum .spectrum-Icon--Back30Sekonds::before {
+  content: "\ea1b";
 }
 
-.spectrum .spectrum-Icon--Answer:before {
-  content: '\ea1c';
+.spectrum .spectrum-Icon--Behance::before {
+  content: "\ea1c";
 }
 
-.spectrum .spectrum-Icon--AnswerFavorite:before {
-  content: '\ea1d';
+.spectrum .spectrum-Icon--Bell::before {
+  content: "\ea1d";
 }
 
-.spectrum .spectrum-Icon--App:before {
-  content: '\ea1e';
+.spectrum .spectrum-Icon--Blog::before {
+  content: "\ea1e";
 }
 
-.spectrum .spectrum-Icon--Apple:before {
-  content: '\ea1f';
+.spectrum .spectrum-Icon--Blower::before {
+  content: "\ea1f";
 }
 
-.spectrum .spectrum-Icon--Apps:before {
-  content: '\ea20';
+.spectrum .spectrum-Icon--Blur::before {
+  content: "\ea20";
 }
 
-.spectrum .spectrum-Icon--Archive:before {
-  content: '\ea21';
+.spectrum .spectrum-Icon--Bookmark::before {
+  content: "\ea21";
 }
 
-.spectrum .spectrum-Icon--ArchiveRemove:before {
-  content: '\ea22';
+.spectrum .spectrum-Icon--Box::before {
+  content: "\ea22";
 }
 
-.spectrum .spectrum-Icon--ArrowDown:before {
-  content: '\ea23';
+.spectrum .spectrum-Icon--Brush::before {
+  content: "\ea23";
 }
 
-.spectrum .spectrum-Icon--ArrowLeft:before {
-  content: '\ea24';
+.spectrum .spectrum-Icon--Building::before {
+  content: "\ea24";
 }
 
-.spectrum .spectrum-Icon--ArrowRight:before {
-  content: '\ea25';
+.spectrum .spectrum-Icon--Calendar::before {
+  content: "\ea25";
 }
 
-.spectrum .spectrum-Icon--ArrowUp:before {
-  content: '\ea26';
+.spectrum .spectrum-Icon--CalendarLocked::before {
+  content: "\ea26";
 }
 
-.spectrum .spectrum-Icon--Asset:before {
-  content: '\ea27';
+.spectrum .spectrum-Icon--CalendarUnlocked::before {
+  content: "\ea27";
 }
 
-.spectrum .spectrum-Icon--AssetCheck:before {
-  content: '\ea28';
+.spectrum .spectrum-Icon--Camera::before {
+  content: "\ea28";
 }
 
-.spectrum .spectrum-Icon--Asterisk:before {
-  content: '\ea29';
+.spectrum .spectrum-Icon--Cancel::before {
+  content: "\ea29";
 }
 
-.spectrum .spectrum-Icon--At:before {
-  content: '\ea2a';
+.spectrum .spectrum-Icon--Captcha::before {
+  content: "\ea2a";
 }
 
-.spectrum .spectrum-Icon--Attach:before {
-  content: '\ea2b';
+.spectrum .spectrum-Icon--Chat::before {
+  content: "\ea2b";
 }
 
-.spectrum .spectrum-Icon--AttachmentExclude:before {
-  content: '\ea2c';
+.spectrum .spectrum-Icon--Checkmark::before {
+  content: "\ea2c";
 }
 
-.spectrum .spectrum-Icon--Back:before {
-  content: '\ea2d';
+.spectrum .spectrum-Icon--CheckmarkCircle::before {
+  content: "\ea2d";
 }
 
-.spectrum .spectrum-Icon--Back30Seconds:before {
-  content: '\ea2e';
+.spectrum .spectrum-Icon--ClassicGridView::before {
+  content: "\ea2e";
 }
 
-.spectrum .spectrum-Icon--Beaker:before {
-  content: '\ea2f';
+.spectrum .spectrum-Icon--Clock::before {
+  content: "\ea2f";
 }
 
-.spectrum .spectrum-Icon--BeakerCheck:before {
-  content: '\ea30';
+.spectrum .spectrum-Icon--CloneStamp::before {
+  content: "\ea30";
 }
 
-.spectrum .spectrum-Icon--BeakerShare:before {
-  content: '\ea31';
+.spectrum .spectrum-Icon--Close::before {
+  content: "\ea31";
 }
 
-.spectrum .spectrum-Icon--Behance:before {
-  content: '\ea32';
+.spectrum .spectrum-Icon--CloseCaptions::before {
+  content: "\ea32";
 }
 
-.spectrum .spectrum-Icon--Bell:before {
-  content: '\ea33';
+.spectrum .spectrum-Icon--CloseCircle::before {
+  content: "\ea33";
 }
 
-.spectrum .spectrum-Icon--BidRule:before {
-  content: '\ea34';
+.spectrum .spectrum-Icon--Code::before {
+  content: "\ea34";
 }
 
-.spectrum .spectrum-Icon--BidRuleAdd:before {
-  content: '\ea35';
+.spectrum .spectrum-Icon--ColorFill::before {
+  content: "\ea35";
 }
 
-.spectrum .spectrum-Icon--Blackberry:before {
-  content: '\ea36';
+.spectrum .spectrum-Icon--ColorPalette::before {
+  content: "\ea36";
 }
 
-.spectrum .spectrum-Icon--Blog:before {
-  content: '\ea37';
+.spectrum .spectrum-Icon--ColorWheel::before {
+  content: "\ea37";
 }
 
-.spectrum .spectrum-Icon--Blur:before {
-  content: '\ea38';
+.spectrum .spectrum-Icon--Comment::before {
+  content: "\ea38";
 }
 
-.spectrum .spectrum-Icon--Book:before {
-  content: '\ea39';
+.spectrum .spectrum-Icon--Contrast::before {
+  content: "\ea39";
 }
 
-.spectrum .spectrum-Icon--Bookmark:before {
-  content: '\ea3a';
+.spectrum .spectrum-Icon--Copy::before {
+  content: "\ea3a";
 }
 
-.spectrum .spectrum-Icon--Boolean:before {
-  content: '\ea3b';
+.spectrum .spectrum-Icon--CreativeCloud::before {
+  content: "\ea3b";
 }
 
-.spectrum .spectrum-Icon--Box:before {
-  content: '\ea3c';
+.spectrum .spectrum-Icon--CreditCard::before {
+  content: "\ea3c";
 }
 
-.spectrum .spectrum-Icon--BoxExport:before {
-  content: '\ea3d';
+.spectrum .spectrum-Icon--Crop::before {
+  content: "\ea3d";
 }
 
-.spectrum .spectrum-Icon--BoxImport:before {
-  content: '\ea3e';
+.spectrum .spectrum-Icon--Curate::before {
+  content: "\ea3e";
 }
 
-.spectrum .spectrum-Icon--Brackets:before {
-  content: '\ea3f';
+.spectrum .spectrum-Icon--Cut::before {
+  content: "\ea3f";
 }
 
-.spectrum .spectrum-Icon--BracketsSquare:before {
-  content: '\ea40';
+.spectrum .spectrum-Icon--Dashboard::before {
+  content: "\ea40";
 }
 
-.spectrum .spectrum-Icon--Branch-Circle:before {
-  content: '\ea41';
+.spectrum .spectrum-Icon--Data::before {
+  content: "\ea41";
 }
 
-.spectrum .spectrum-Icon--Branch1:before {
-  content: '\ea42';
+.spectrum .spectrum-Icon--Date::before {
+  content: "\ea42";
 }
 
-.spectrum .spectrum-Icon--Branch2:before {
-  content: '\ea43';
+.spectrum .spectrum-Icon--Delete::before {
+  content: "\ea43";
 }
 
-.spectrum .spectrum-Icon--Branch3:before {
-  content: '\ea44';
+.spectrum .spectrum-Icon--DeleteOutline::before {
+  content: "\ea44";
 }
 
-.spectrum .spectrum-Icon--Breakdown:before {
-  content: '\ea45';
+.spectrum .spectrum-Icon--DesktopAndMobile::before {
+  content: "\ea45";
 }
 
-.spectrum .spectrum-Icon--BreakdownAdd:before {
-  content: '\ea46';
+.spectrum .spectrum-Icon--DeviceDesktop::before {
+  content: "\ea46";
 }
 
-.spectrum .spectrum-Icon--Briefcase:before {
-  content: '\ea47';
+.spectrum .spectrum-Icon--DeviceLaptop::before {
+  content: "\ea47";
 }
 
-.spectrum .spectrum-Icon--Browse:before {
-  content: '\ea48';
+.spectrum .spectrum-Icon--DevicePhone::before {
+  content: "\ea48";
 }
 
-.spectrum .spectrum-Icon--Brush:before {
-  content: '\ea49';
+.spectrum .spectrum-Icon--DevicePhoneRefresh::before {
+  content: "\ea49";
 }
 
-.spectrum .spectrum-Icon--Bug:before {
-  content: '\ea4a';
+.spectrum .spectrum-Icon--DevicePreview::before {
+  content: "\ea4a";
 }
 
-.spectrum .spectrum-Icon--Building:before {
-  content: '\ea4b';
+.spectrum .spectrum-Icon--DeviceRotateLandscape::before {
+  content: "\ea4b";
 }
 
-.spectrum .spectrum-Icon--Button:before {
-  content: '\ea4c';
+.spectrum .spectrum-Icon--DeviceRotatePortrait::before {
+  content: "\ea4c";
 }
 
-.spectrum .spectrum-Icon--Calculator:before {
-  content: '\ea4d';
+.spectrum .spectrum-Icon--DeviceTV::before {
+  content: "\ea4d";
 }
 
-.spectrum .spectrum-Icon--Calendar:before {
-  content: '\ea4e';
+.spectrum .spectrum-Icon--DeviceTablet::before {
+  content: "\ea4e";
 }
 
-.spectrum .spectrum-Icon--CalendarAdd:before {
-  content: '\ea4f';
+.spectrum .spectrum-Icon--Devices::before {
+  content: "\ea4f";
 }
 
-.spectrum .spectrum-Icon--CalendarLocked:before {
-  content: '\ea50';
+.spectrum .spectrum-Icon--DistributeHorizontalCenter::before {
+  content: "\ea50";
 }
 
-.spectrum .spectrum-Icon--CalendarUnlocked:before {
-  content: '\ea51';
+.spectrum .spectrum-Icon--DistributeLeftEdge::before {
+  content: "\ea51";
 }
 
-.spectrum .spectrum-Icon--CallCenter:before {
-  content: '\ea52';
+.spectrum .spectrum-Icon--DistributeRightEdge::before {
+  content: "\ea52";
 }
 
-.spectrum .spectrum-Icon--Camera:before {
-  content: '\ea53';
+.spectrum .spectrum-Icon--DistributeSpaceHoriz::before {
+  content: "\ea53";
 }
 
-.spectrum .spectrum-Icon--CameraRefresh:before {
-  content: '\ea54';
+.spectrum .spectrum-Icon--DistributeSpaceVert::before {
+  content: "\ea54";
 }
 
-.spectrum .spectrum-Icon--Campaign:before {
-  content: '\ea55';
+.spectrum .spectrum-Icon--DividePath::before {
+  content: "\ea55";
 }
 
-.spectrum .spectrum-Icon--CampaignAdd:before {
-  content: '\ea56';
+.spectrum .spectrum-Icon--Document::before {
+  content: "\ea56";
 }
 
-.spectrum .spectrum-Icon--CampaignClose:before {
-  content: '\ea57';
+.spectrum .spectrum-Icon--DocumentOutline::before {
+  content: "\ea57";
 }
 
-.spectrum .spectrum-Icon--CampaignDelete:before {
-  content: '\ea58';
+.spectrum .spectrum-Icon--Download::before {
+  content: "\ea58";
 }
 
-.spectrum .spectrum-Icon--CampaignEdit:before {
-  content: '\ea59';
+.spectrum .spectrum-Icon--DownloadFromCloud::before {
+  content: "\ea59";
 }
 
-.spectrum .spectrum-Icon--Captcha:before {
-  content: '\ea5a';
+.spectrum .spectrum-Icon--Draw::before {
+  content: "\ea5a";
 }
 
-.spectrum .spectrum-Icon--Card:before {
-  content: '\ea5b';
+.spectrum .spectrum-Icon--Edit::before {
+  content: "\ea5c";
 }
 
-.spectrum .spectrum-Icon--Channel:before {
-  content: '\ea5c';
+.spectrum .spectrum-Icon--Education::before {
+  content: "\ea5b";
 }
 
-.spectrum .spectrum-Icon--Check-Circle:before {
-  content: '\ea5d';
+.spectrum .spectrum-Icon--Effects::before {
+  content: "\ea5d";
 }
 
-.spectrum .spectrum-Icon--Check:before {
-  content: '\ea5e';
+.spectrum .spectrum-Icon--Ellipse::before {
+  content: "\ea5e";
 }
 
-.spectrum .spectrum-Icon--CheckPause:before {
-  content: '\ea5f';
+.spectrum .spectrum-Icon--Email::before {
+  content: "\ea60";
 }
 
-.spectrum .spectrum-Icon--ChevronDoubleLeft:before {
-  content: '\ea60';
+.spectrum .spectrum-Icon--Engagement::before {
+  content: "\ea5f";
 }
 
-.spectrum .spectrum-Icon--ChevronDoubleRight:before {
-  content: '\ea61';
+.spectrum .spectrum-Icon--Erase::before {
+  content: "\ea61";
 }
 
-.spectrum .spectrum-Icon--ChevronDown:before {
-  content: '\ea62';
+.spectrum .spectrum-Icon--ExcludeOverlap::before {
+  content: "\ea62";
 }
 
-.spectrum .spectrum-Icon--ChevronLeft:before {
-  content: '\ea63';
+.spectrum .spectrum-Icon--Exposure::before {
+  content: "\ea63";
 }
 
-.spectrum .spectrum-Icon--ChevronRight:before {
-  content: '\ea64';
+.spectrum .spectrum-Icon--Facebook::before {
+  content: "\ea64";
 }
 
-.spectrum .spectrum-Icon--ChevronUp:before {
-  content: '\ea65';
+.spectrum .spectrum-Icon--Filter::before {
+  content: "\ea65";
 }
 
-.spectrum .spectrum-Icon--Chrome:before {
-  content: '\ea66';
+.spectrum .spectrum-Icon--Firefox::before {
+  content: "\ea66";
 }
 
-.spectrum .spectrum-Icon--Circle:before {
-  content: '\ea67';
+.spectrum .spectrum-Icon--Flag::before {
+  content: "\ea67";
 }
 
-.spectrum .spectrum-Icon--Clock:before {
-  content: '\ea68';
+.spectrum .spectrum-Icon--Flash::before {
+  content: "\ea68";
 }
 
-.spectrum .spectrum-Icon--ClockCheck:before {
-  content: '\ea69';
+.spectrum .spectrum-Icon--FlashAuto::before {
+  content: "\ea69";
 }
 
-.spectrum .spectrum-Icon--Close-Circle:before {
-  content: '\ea6a';
+.spectrum .spectrum-Icon--FlashOff::before {
+  content: "\ea6a";
 }
 
-.spectrum .spectrum-Icon--Close:before {
-  content: '\ea6b';
+.spectrum .spectrum-Icon--FlashOn::before {
+  content: "\ea6b";
 }
 
-.spectrum .spectrum-Icon--ClosedCaptions:before {
-  content: '\ea6c';
+.spectrum .spectrum-Icon--Flickr::before {
+  content: "\ea6c";
 }
 
-.spectrum .spectrum-Icon--Cloud:before {
-  content: '\ea6d';
+.spectrum .spectrum-Icon--FlipHorizontal::before {
+  content: "\ea6d";
 }
 
-.spectrum .spectrum-Icon--Code:before {
-  content: '\ea6e';
+.spectrum .spectrum-Icon--FlipVertical::before {
+  content: "\ea6e";
 }
 
-.spectrum .spectrum-Icon--Collection:before {
-  content: '\ea6f';
+.spectrum .spectrum-Icon--Folder::before {
+  content: "\ea6f";
 }
 
-.spectrum .spectrum-Icon--CollectionAdd:before {
-  content: '\ea70';
+.spectrum .spectrum-Icon--FolderOpen::before {
+  content: "\ea70";
 }
 
-.spectrum .spectrum-Icon--CollectionAddTo:before {
-  content: '\ea71';
+.spectrum .spectrum-Icon--FullScreen::before {
+  content: "\ea71";
 }
 
-.spectrum .spectrum-Icon--CollectionCheck:before {
-  content: '\ea72';
+.spectrum .spectrum-Icon--FullScreenExit::before {
+  content: "\ea72";
 }
 
-.spectrum .spectrum-Icon--CollectionEdit:before {
-  content: '\ea73';
+.spectrum .spectrum-Icon--Globe::before {
+  content: "\ea73";
 }
 
-.spectrum .spectrum-Icon--CollectionExclude:before {
-  content: '\ea74';
+.spectrum .spectrum-Icon--GlobeOutline::before {
+  content: "\ea74";
 }
 
-.spectrum .spectrum-Icon--CollectionLink:before {
-  content: '\ea75';
+.spectrum .spectrum-Icon--GooglePlus::before {
+  content: "\ea75";
 }
 
-.spectrum .spectrum-Icon--ColorPalette:before {
-  content: '\ea76';
+.spectrum .spectrum-Icon--Gradient::before {
+  content: "\ea76";
 }
 
-.spectrum .spectrum-Icon--ColumnSettings:before {
-  content: '\ea77';
+.spectrum .spectrum-Icon--Graphic::before {
+  content: "\ea77";
 }
 
-.spectrum .spectrum-Icon--ColumnTwoA:before {
-  content: '\ea78';
+.spectrum .spectrum-Icon--Heal::before {
+  content: "\ea78";
 }
 
-.spectrum .spectrum-Icon--ColumnTwoB:before {
-  content: '\ea79';
+.spectrum .spectrum-Icon--Heart::before {
+  content: "\ea79";
 }
 
-.spectrum .spectrum-Icon--ColumnTwoC:before {
-  content: '\ea7a';
+.spectrum .spectrum-Icon--Help::before {
+  content: "\ea7a";
 }
 
-.spectrum .spectrum-Icon--Comment:before {
-  content: '\ea7b';
+.spectrum .spectrum-Icon--HelpOutline::before {
+  content: "\ea7b";
 }
 
-.spectrum .spectrum-Icon--CommentAdd:before {
-  content: '\ea7c';
+.spectrum .spectrum-Icon--History::before {
+  content: "\ea7c";
 }
 
-.spectrum .spectrum-Icon--Compare:before {
-  content: '\ea7d';
+.spectrum .spectrum-Icon--Home::before {
+  content: "\ea7d";
 }
 
-.spectrum .spectrum-Icon--Compass:before {
-  content: '\ea7e';
+.spectrum .spectrum-Icon--Illustrator::before {
+  content: "\ea7e";
 }
 
-.spectrum .spectrum-Icon--ConfidenceFour:before {
-  content: '\ea7f';
+.spectrum .spectrum-Icon--Image::before {
+  content: "\ea7f";
 }
 
-.spectrum .spectrum-Icon--ConfidenceOne:before {
-  content: '\ea80';
+.spectrum .spectrum-Icon--ImageAlbum::before {
+  content: "\ea80";
 }
 
-.spectrum .spectrum-Icon--ConfidenceThree:before {
-  content: '\ea81';
+.spectrum .spectrum-Icon--ImageCarousel::before {
+  content: "\ea81";
 }
 
-.spectrum .spectrum-Icon--ConfidenceTwo:before {
-  content: '\ea82';
+.spectrum .spectrum-Icon--ImageText::before {
+  content: "\ea82";
 }
 
-.spectrum .spectrum-Icon--ConversionFunnel:before {
-  content: '\ea83';
+.spectrum .spectrum-Icon--Images::before {
+  content: "\ea83";
 }
 
-.spectrum .spectrum-Icon--Copy:before {
-  content: '\ea84';
+.spectrum .spectrum-Icon--InDesign::before {
+  content: "\ea84";
 }
 
-.spectrum .spectrum-Icon--CoverImage:before {
-  content: '\ea85';
+.spectrum .spectrum-Icon--Inbox::before {
+  content: "\ea85";
 }
 
-.spectrum .spectrum-Icon--CreativeCloud:before {
-  content: '\ea86';
+.spectrum .spectrum-Icon--Info::before {
+  content: "\ea86";
 }
 
-.spectrum .spectrum-Icon--CreditCard:before {
-  content: '\ea87';
+.spectrum .spectrum-Icon--InfoOutline::before {
+  content: "\ea87";
 }
 
-.spectrum .spectrum-Icon--Crop:before {
-  content: '\ea88';
+.spectrum .spectrum-Icon--Instagram::before {
+  content: "\ea88";
 }
 
-.spectrum .spectrum-Icon--Crosshairs:before {
-  content: '\ea89';
+.spectrum .spectrum-Icon--InternetExplorer::before {
+  content: "\ea89";
 }
 
-.spectrum .spectrum-Icon--Curate:before {
-  content: '\ea8a';
+.spectrum .spectrum-Icon--IntersectOverlap::before {
+  content: "\ea8a";
 }
 
-.spectrum .spectrum-Icon--CursorArrow:before {
-  content: '\ea8b';
+.spectrum .spectrum-Icon--InvertAdj::before {
+  content: "\ea8b";
 }
 
-.spectrum .spectrum-Icon--Cut:before {
-  content: '\ea8c';
+.spectrum .spectrum-Icon--Label::before {
+  content: "\ea8c";
 }
 
-.spectrum .spectrum-Icon--DPS:before {
-  content: '\ea8d';
+.spectrum .spectrum-Icon--Landscape::before {
+  content: "\ea8d";
 }
 
-.spectrum .spectrum-Icon--Dashboard:before {
-  content: '\ea8e';
+.spectrum .spectrum-Icon--Layers::before {
+  content: "\ea8e";
 }
 
-.spectrum .spectrum-Icon--Data:before {
-  content: '\ea8f';
+.spectrum .spectrum-Icon--LayersBackward::before {
+  content: "\ea8f";
 }
 
-.spectrum .spectrum-Icon--DataAdd:before {
-  content: '\ea90';
+.spectrum .spectrum-Icon--LayersBringToFront::before {
+  content: "\ea90";
 }
 
-.spectrum .spectrum-Icon--DataAdobe:before {
-  content: '\ea91';
+.spectrum .spectrum-Icon--LayersForward::before {
+  content: "\ea91";
 }
 
-.spectrum .spectrum-Icon--DataBook:before {
-  content: '\ea92';
+.spectrum .spectrum-Icon--LayersSendToBack::before {
+  content: "\ea92";
 }
 
-.spectrum .spectrum-Icon--DataCheck:before {
-  content: '\ea93';
+.spectrum .spectrum-Icon--Light::before {
+  content: "\ea93";
 }
 
-.spectrum .spectrum-Icon--DataCorrelated:before {
-  content: '\ea94';
+.spectrum .spectrum-Icon--Lightroom::before {
+  content: "\ea94";
 }
 
-.spectrum .spectrum-Icon--DataDownload:before {
-  content: '\ea95';
+.spectrum .spectrum-Icon--Line::before {
+  content: "\ea95";
 }
 
-.spectrum .spectrum-Icon--DataEdit:before {
-  content: '\ea96';
+.spectrum .spectrum-Icon--Link::before {
+  content: "\ea96";
 }
 
-.spectrum .spectrum-Icon--DataRefresh:before {
-  content: '\ea97';
+.spectrum .spectrum-Icon--LinkOut::before {
+  content: "\ea97";
 }
 
-.spectrum .spectrum-Icon--DataRemove:before {
-  content: '\ea98';
+.spectrum .spectrum-Icon--LinkedIn::before {
+  content: "\ea98";
 }
 
-.spectrum .spectrum-Icon--DataUnavailable:before {
-  content: '\ea99';
+.spectrum .spectrum-Icon--Location::before {
+  content: "\ea99";
 }
 
-.spectrum .spectrum-Icon--DataUpload:before {
-  content: '\ea9a';
+.spectrum .spectrum-Icon--LockClosed::before {
+  content: "\ea9a";
 }
 
-.spectrum .spectrum-Icon--DataUser:before {
-  content: '\ea9b';
+.spectrum .spectrum-Icon--LockOpen::before {
+  content: "\ea9b";
 }
 
-.spectrum .spectrum-Icon--Date:before {
-  content: '\ea9c';
+.spectrum .spectrum-Icon--LogOut::before {
+  content: "\ea9c";
 }
 
-.spectrum .spectrum-Icon--Deduplication:before {
-  content: '\ea9d';
+.spectrum .spectrum-Icon--Looks::before {
+  content: "\ea9d";
 }
 
-.spectrum .spectrum-Icon--Delegate:before {
-  content: '\ea9e';
+.spectrum .spectrum-Icon--LoupeView::before {
+  content: "\ea9e";
 }
 
-.spectrum .spectrum-Icon--Delete:before {
-  content: '\ea9f';
+.spectrum .spectrum-Icon--MagicWand::before {
+  content: "\ea9f";
 }
 
-.spectrum .spectrum-Icon--DeleteOutline:before {
-  content: '\eaa0';
+.spectrum .spectrum-Icon--Mailbox::before {
+  content: "\eaa0";
 }
 
-.spectrum .spectrum-Icon--DeliveryFusion:before {
-  content: '\eaa1';
+.spectrum .spectrum-Icon--MapView::before {
+  content: "\eaa1";
 }
 
-.spectrum .spectrum-Icon--Demographic:before {
-  content: '\eaa2';
+.spectrum .spectrum-Icon--Maximize::before {
+  content: "\eaa2";
 }
 
-.spectrum .spectrum-Icon--DeviceDesktop:before {
-  content: '\eaa3';
+.spectrum .spectrum-Icon--Measure::before {
+  content: "\eaa3";
 }
 
-.spectrum .spectrum-Icon--DeviceLaptop:before {
-  content: '\eaa4';
+.spectrum .spectrum-Icon--Merge::before {
+  content: "\eaa4";
 }
 
-.spectrum .spectrum-Icon--DevicePhone:before {
-  content: '\eaa5';
+.spectrum .spectrum-Icon--MergeLayers::before {
+  content: "\eaa5";
 }
 
-.spectrum .spectrum-Icon--DevicePhoneRefresh:before {
-  content: '\eaa6';
+.spectrum .spectrum-Icon--Minimize::before {
+  content: "\eaa6";
 }
 
-.spectrum .spectrum-Icon--DevicePreview:before {
-  content: '\eaa7';
+.spectrum .spectrum-Icon--MobileServices::before {
+  content: "\eaa7";
 }
 
-.spectrum .spectrum-Icon--DeviceRotateLandscape:before {
-  content: '\eaa8';
+.spectrum .spectrum-Icon--ModernGridView::before {
+  content: "\eaa8";
 }
 
-.spectrum .spectrum-Icon--DeviceRotatePortrait:before {
-  content: '\eaa9';
+.spectrum .spectrum-Icon--More::before {
+  content: "\eaa9";
 }
 
-.spectrum .spectrum-Icon--DeviceTV:before {
-  content: '\eaaa';
+.spectrum .spectrum-Icon--Move::before {
+  content: "\eaaa";
 }
 
-.spectrum .spectrum-Icon--DeviceTablet:before {
-  content: '\eaab';
+.spectrum .spectrum-Icon--MoveTo::before {
+  content: "\eaab";
 }
 
-.spectrum .spectrum-Icon--Devices:before {
-  content: '\eaac';
+.spectrum .spectrum-Icon--Muse::before {
+  content: "\eaac";
 }
 
-.spectrum .spectrum-Icon--Dimension:before {
-  content: '\eaad';
+.spectrum .spectrum-Icon--NamingOrder::before {
+  content: "\eaad";
 }
 
-.spectrum .spectrum-Icon--Disqus:before {
-  content: '\eaae';
+.spectrum .spectrum-Icon--NoEdit::before {
+  content: "\eaae";
 }
 
-.spectrum .spectrum-Icon--Divide:before {
-  content: '\eaaf';
+.spectrum .spectrum-Icon--Note::before {
+  content: "\eaaf";
 }
 
-.spectrum .spectrum-Icon--DocumentFragment:before {
-  content: '\eab0';
+.spectrum .spectrum-Icon--OpenRecent::before {
+  content: "\eab0";
 }
 
-.spectrum .spectrum-Icon--DocumentFragmentGroup:before {
-  content: '\eab1';
+.spectrum .spectrum-Icon--Orbit::before {
+  content: "\eab1";
 }
 
-.spectrum .spectrum-Icon--Dolly:before {
-  content: '\eab2';
+.spectrum .spectrum-Icon--OutlinePath::before {
+  content: "\eab2";
 }
 
-.spectrum .spectrum-Icon--Download:before {
-  content: '\eab3';
+.spectrum .spectrum-Icon--PageBreak::before {
+  content: "\eab3";
 }
 
-.spectrum .spectrum-Icon--Draft:before {
-  content: '\eab4';
+.spectrum .spectrum-Icon--Pan::before {
+  content: "\eab4";
 }
 
-.spectrum .spectrum-Icon--DragHandle:before {
-  content: '\eab5';
+.spectrum .spectrum-Icon--Paste::before {
+  content: "\eab5";
 }
 
-.spectrum .spectrum-Icon--Dropdown:before {
-  content: '\eab6';
+.spectrum .spectrum-Icon--Pause::before {
+  content: "\eab6";
 }
 
-.spectrum .spectrum-Icon--Duplicate:before {
-  content: '\eab7';
+.spectrum .spectrum-Icon--PauseCircle::before {
+  content: "\eab7";
 }
 
-.spectrum .spectrum-Icon--Edit-Circle:before {
-  content: '\eab8';
+.spectrum .spectrum-Icon--Pending::before {
+  content: "\eab8";
 }
 
-.spectrum .spectrum-Icon--Edit:before {
-  content: '\eab9';
+.spectrum .spectrum-Icon--Perspective::before {
+  content: "\eab9";
 }
 
-.spectrum .spectrum-Icon--EditExclude:before {
-  content: '\eaba';
+.spectrum .spectrum-Icon--PhoneGap::before {
+  content: "\eaba";
 }
 
-.spectrum .spectrum-Icon--Education:before {
-  content: '\eabb';
+.spectrum .spectrum-Icon--PhoneGapBuilder::before {
+  content: "\eabb";
 }
 
-.spectrum .spectrum-Icon--Effects:before {
-  content: '\eabc';
+.spectrum .spectrum-Icon--Photoshop::before {
+  content: "\eabc";
 }
 
-.spectrum .spectrum-Icon--Efficient:before {
-  content: '\eabd';
+.spectrum .spectrum-Icon--PinOff::before {
+  content: "\eabd";
 }
 
-.spectrum .spectrum-Icon--Email:before {
-  content: '\eabe';
+.spectrum .spectrum-Icon--PinOn::before {
+  content: "\eabe";
 }
 
-.spectrum .spectrum-Icon--EmailAlert:before {
-  content: '\eabf';
+.spectrum .spectrum-Icon--Pinterest::before {
+  content: "\eabf";
 }
 
-.spectrum .spectrum-Icon--EmailCancel:before {
-  content: '\eac0';
+.spectrum .spectrum-Icon--Play::before {
+  content: "\eac0";
 }
 
-.spectrum .spectrum-Icon--EmailCheck:before {
-  content: '\eac1';
+.spectrum .spectrum-Icon--PlayCircle::before {
+  content: "\eac1";
 }
 
-.spectrum .spectrum-Icon--EmailExclude:before {
-  content: '\eac2';
+.spectrum .spectrum-Icon--Polygon::before {
+  content: "\eac2";
 }
 
-.spectrum .spectrum-Icon--EmailGear:before {
-  content: '\eac3';
+.spectrum .spectrum-Icon--Portrait::before {
+  content: "\eac3";
 }
 
-.spectrum .spectrum-Icon--EmailKey:before {
-  content: '\eac4';
+.spectrum .spectrum-Icon--Print::before {
+  content: "\eac4";
 }
 
-.spectrum .spectrum-Icon--EmailLightning:before {
-  content: '\eac5';
+.spectrum .spectrum-Icon--ProjectEdit::before {
+  content: "\eac5";
 }
 
-.spectrum .spectrum-Icon--EmailRefresh:before {
-  content: '\eac6';
+.spectrum .spectrum-Icon--ProjectNameEdit::before {
+  content: "\eac6";
 }
 
-.spectrum .spectrum-Icon--EmailSchedule:before {
-  content: '\eac7';
+.spectrum .spectrum-Icon--Promote::before {
+  content: "\eac7";
 }
 
-.spectrum .spectrum-Icon--Engagement:before {
-  content: '\eac8';
+.spectrum .spectrum-Icon--Properties::before {
+  content: "\eac8";
 }
 
-.spectrum .spectrum-Icon--Event:before {
-  content: '\eac9';
+.spectrum .spectrum-Icon--PropertiesCopy::before {
+  content: "\eac9";
 }
 
-.spectrum .spectrum-Icon--EventExclude:before {
-  content: '\eaca';
+.spectrum .spectrum-Icon--Public::before {
+  content: "\eaca";
 }
 
-.spectrum .spectrum-Icon--EventShare:before {
-  content: '\eacb';
+.spectrum .spectrum-Icon--RectSelect::before {
+  content: "\eacb";
 }
 
-.spectrum .spectrum-Icon--Exclude:before {
-  content: '\eacc';
+.spectrum .spectrum-Icon--Rectangle::before {
+  content: "\eacc";
 }
 
-.spectrum .spectrum-Icon--Experience:before {
-  content: '\eacd';
+.spectrum .spectrum-Icon--Redo::before {
+  content: "\eacd";
 }
 
-.spectrum .spectrum-Icon--ExperienceAdd:before {
-  content: '\eace';
+.spectrum .spectrum-Icon--Refresh::before {
+  content: "\eace";
 }
 
-.spectrum .spectrum-Icon--ExperienceAddTo:before {
-  content: '\eacf';
+.spectrum .spectrum-Icon--RegionSelect::before {
+  content: "\eacf";
 }
 
-.spectrum .spectrum-Icon--ExperienceExport:before {
-  content: '\ead0';
+.spectrum .spectrum-Icon--Remove::before {
+  content: "\ead0";
 }
 
-.spectrum .spectrum-Icon--ExperienceImport:before {
-  content: '\ead1';
+.spectrum .spectrum-Icon--RemoveCircle::before {
+  content: "\ead1";
 }
 
-.spectrum .spectrum-Icon--Extension:before {
-  content: '\ead2';
+.spectrum .spectrum-Icon--Rename::before {
+  content: "\ead2";
 }
 
-.spectrum .spectrum-Icon--Eyedropper:before {
-  content: '\ead3';
+.spectrum .spectrum-Icon--Reorder::before {
+  content: "\ead3";
 }
 
-.spectrum .spectrum-Icon--Facebook:before {
-  content: '\ead4';
+.spectrum .spectrum-Icon--Replay::before {
+  content: "\ead4";
 }
 
-.spectrum .spectrum-Icon--FacebookCoverImage:before {
-  content: '\ead5';
+.spectrum .spectrum-Icon--Replies::before {
+  content: "\ead5";
 }
 
-.spectrum .spectrum-Icon--Fast:before {
-  content: '\ead6';
+.spectrum .spectrum-Icon--Reply::before {
+  content: "\ead6";
 }
 
-.spectrum .spectrum-Icon--FastForward:before {
-  content: '\ead7';
+.spectrum .spectrum-Icon--Revert::before {
+  content: "\ead7";
 }
 
-.spectrum .spectrum-Icon--FastForwardCircle:before {
-  content: '\ead8';
+.spectrum .spectrum-Icon--RotateCCW::before {
+  content: "\ead8";
 }
 
-.spectrum .spectrum-Icon--Feed:before {
-  content: '\ead9';
+.spectrum .spectrum-Icon--RotateCW::before {
+  content: "\ead9";
 }
 
-.spectrum .spectrum-Icon--FeedAdd:before {
-  content: '\eada';
+.spectrum .spectrum-Icon--RotateLeft::before {
+  content: "\eadb";
 }
 
-.spectrum .spectrum-Icon--FeedManagement:before {
-  content: '\eadb';
+.spectrum .spectrum-Icon--RotateRight::before {
+  content: "\eadc";
 }
 
-.spectrum .spectrum-Icon--File:before {
-  content: '\eadc';
+.spectrum .spectrum-Icon--Sampler::before {
+  content: "\eada";
 }
 
-.spectrum .spectrum-Icon--FileAdd:before {
-  content: '\eadd';
+.spectrum .spectrum-Icon--SaveFloppy::before {
+  content: "\eadd";
 }
 
-.spectrum .spectrum-Icon--FileCSV:before {
-  content: '\eade';
+.spectrum .spectrum-Icon--SaveTo::before {
+  content: "\eade";
 }
 
-.spectrum .spectrum-Icon--FileChart:before {
-  content: '\eadf';
+.spectrum .spectrum-Icon--Search::before {
+  content: "\eadf";
 }
 
-.spectrum .spectrum-Icon--FileCode:before {
-  content: '\eae0';
+.spectrum .spectrum-Icon--Select::before {
+  content: "\eae0";
 }
 
-.spectrum .spectrum-Icon--FileExcel:before {
-  content: '\eae1';
+.spectrum .spectrum-Icon--Send::before {
+  content: "\eae1";
 }
 
-.spectrum .spectrum-Icon--FileGlobe:before {
-  content: '\eae2';
+.spectrum .spectrum-Icon--SentimentNegative::before {
+  content: "\eae2";
 }
 
-.spectrum .spectrum-Icon--FileHTML:before {
-  content: '\eae3';
+.spectrum .spectrum-Icon--SentimentNeutral::before {
+  content: "\eae3";
 }
 
-.spectrum .spectrum-Icon--FileImportant:before {
-  content: '\eae4';
+.spectrum .spectrum-Icon--SentimentPositive::before {
+  content: "\eae4";
 }
 
-.spectrum .spectrum-Icon--FileKey:before {
-  content: '\eae5';
+.spectrum .spectrum-Icon--Settings::before {
+  content: "\eae5";
 }
 
-.spectrum .spectrum-Icon--FileMobile:before {
-  content: '\eae6';
+.spectrum .spectrum-Icon--Shapes::before {
+  content: "\eae6";
 }
 
-.spectrum .spectrum-Icon--FilePDF:before {
-  content: '\eae7';
+.spectrum .spectrum-Icon--Share::before {
+  content: "\eae7";
 }
 
-.spectrum .spectrum-Icon--FileSingleWebPage:before {
-  content: '\eae8';
+.spectrum .spectrum-Icon--ShareAndroid::before {
+  content: "\eae8";
 }
 
-.spectrum .spectrum-Icon--FileTemplate:before {
-  content: '\eae9';
+.spectrum .spectrum-Icon--ShareWindows::before {
+  content: "\eae9";
 }
 
-.spectrum .spectrum-Icon--FileTxt:before {
-  content: '\eaea';
+.spectrum .spectrum-Icon--Sharpen::before {
+  content: "\eaea";
 }
 
-.spectrum .spectrum-Icon--FileWord:before {
-  content: '\eaeb';
+.spectrum .spectrum-Icon--ShoppingCart::before {
+  content: "\eaeb";
 }
 
-.spectrum .spectrum-Icon--FileXML:before {
-  content: '\eaec';
+.spectrum .spectrum-Icon--ShowAllLayers::before {
+  content: "\eaec";
 }
 
-.spectrum .spectrum-Icon--FileZip:before {
-  content: '\eaed';
+.spectrum .spectrum-Icon--ShowOneLayer::before {
+  content: "\eaed";
 }
 
-.spectrum .spectrum-Icon--FilingCabinet:before {
-  content: '\eaee';
+.spectrum .spectrum-Icon--Shuffle::before {
+  content: "\eaee";
 }
 
-.spectrum .spectrum-Icon--Film:before {
-  content: '\eaef';
+.spectrum .spectrum-Icon--Slice::before {
+  content: "\eaef";
 }
 
-.spectrum .spectrum-Icon--Filter:before {
-  content: '\eaf0';
+.spectrum .spectrum-Icon--SplitView::before {
+  content: "\eaf0";
 }
 
-.spectrum .spectrum-Icon--FilterAdd:before {
-  content: '\eaf1';
+.spectrum .spectrum-Icon--Star::before {
+  content: "\eaf1";
 }
 
-.spectrum .spectrum-Icon--FilterCheck:before {
-  content: '\eaf2';
+.spectrum .spectrum-Icon--StarOutline::before {
+  content: "\eaf2";
 }
 
-.spectrum .spectrum-Icon--FilterDelete:before {
-  content: '\eaf3';
+.spectrum .spectrum-Icon--StepBackward::before {
+  content: "\eaf3";
 }
 
-.spectrum .spectrum-Icon--FilterEdit:before {
-  content: '\eaf4';
+.spectrum .spectrum-Icon--StepBackwardCircle::before {
+  content: "\eaf4";
 }
 
-.spectrum .spectrum-Icon--FilterHeart:before {
-  content: '\eaf5';
+.spectrum .spectrum-Icon--StepForward::before {
+  content: "\eaf5";
 }
 
-.spectrum .spectrum-Icon--FilterRemove:before {
-  content: '\eaf6';
+.spectrum .spectrum-Icon--StepForwardCircle::before {
+  content: "\eaf6";
 }
 
-.spectrum .spectrum-Icon--FilterStar:before {
-  content: '\eaf7';
+.spectrum .spectrum-Icon--Stock::before {
+  content: "\eaf7";
 }
 
-.spectrum .spectrum-Icon--FindAndReplace:before {
-  content: '\eaf8';
+.spectrum .spectrum-Icon--Stop::before {
+  content: "\eaf8";
 }
 
-.spectrum .spectrum-Icon--Firefox:before {
-  content: '\eaf9';
+.spectrum .spectrum-Icon--StopCircle::before {
+  content: "\eaf9";
 }
 
-.spectrum .spectrum-Icon--Flag:before {
-  content: '\eafa';
+.spectrum .spectrum-Icon--Stopwatch::before {
+  content: "\eafa";
 }
 
-.spectrum .spectrum-Icon--FlagExclude:before {
-  content: '\eafb';
+.spectrum .spectrum-Icon--Subscribe::before {
+  content: "\eafb";
 }
 
-.spectrum .spectrum-Icon--Flash:before {
-  content: '\eafc';
+.spectrum .spectrum-Icon--SubstractBackPath::before {
+  content: "\eafc";
 }
 
-.spectrum .spectrum-Icon--Flashlight:before {
-  content: '\eafd';
+.spectrum .spectrum-Icon--SubtractFrontPath::before {
+  content: "\eafd";
 }
 
-.spectrum .spectrum-Icon--Flickr:before {
-  content: '\eafe';
+.spectrum .spectrum-Icon--Sync::before {
+  content: "\eafe";
 }
 
-.spectrum .spectrum-Icon--Folder:before {
-  content: '\eaff';
+.spectrum .spectrum-Icon--Target::before {
+  content: "\eaff";
 }
 
-.spectrum .spectrum-Icon--FolderAdd:before {
-  content: '\eb00';
+.spectrum .spectrum-Icon--Targeted::before {
+  content: "\eb00";
 }
 
-.spectrum .spectrum-Icon--FolderAddTo:before {
-  content: '\eb01';
+.spectrum .spectrum-Icon--Temperature::before {
+  content: "\eb01";
 }
 
-.spectrum .spectrum-Icon--FolderAdobe:before {
-  content: '\eb02';
+.spectrum .spectrum-Icon--Text::before {
+  content: "\eb02";
 }
 
-.spectrum .spectrum-Icon--FolderArchive:before {
-  content: '\eb03';
+.spectrum .spectrum-Icon--TextAdd::before {
+  content: "\eb03";
 }
 
-.spectrum .spectrum-Icon--FolderDelete:before {
-  content: '\eb04';
+.spectrum .spectrum-Icon--TextAlignCenter::before {
+  content: "\eb04";
 }
 
-.spectrum .spectrum-Icon--FolderGear:before {
-  content: '\eb05';
+.spectrum .spectrum-Icon--TextAlignJustify::before {
+  content: "\eb05";
 }
 
-.spectrum .spectrum-Icon--FolderLocked:before {
-  content: '\eb06';
+.spectrum .spectrum-Icon--TextAlignLeft::before {
+  content: "\eb06";
 }
 
-.spectrum .spectrum-Icon--FolderLockedAdobe:before {
-  content: '\eb07';
+.spectrum .spectrum-Icon--TextAlignRight::before {
+  content: "\eb07";
 }
 
-.spectrum .spectrum-Icon--FolderOutline:before {
-  content: '\eb08';
+.spectrum .spectrum-Icon--TextBold::before {
+  content: "\eb08";
 }
 
-.spectrum .spectrum-Icon--FolderRemove:before {
-  content: '\eb09';
+.spectrum .spectrum-Icon--TextBulleted::before {
+  content: "\eb09";
 }
 
-.spectrum .spectrum-Icon--FolderSearch:before {
-  content: '\eb0a';
+.spectrum .spectrum-Icon--TextBulletedHierarchy::before {
+  content: "\eb0a";
 }
 
-.spectrum .spectrum-Icon--Follow:before {
-  content: '\eb0b';
+.spectrum .spectrum-Icon--TextBulletedHierarchyExclude::before {
+  content: "\eb0b";
 }
 
-.spectrum .spectrum-Icon--FollowOff:before {
-  content: '\eb0c';
+.spectrum .spectrum-Icon--TextColor::before {
+  content: "\eb0c";
 }
 
-.spectrum .spectrum-Icon--ForPlacementOnly:before {
-  content: '\eb0d';
+.spectrum .spectrum-Icon--TextDecrease::before {
+  content: "\eb0d";
 }
 
-.spectrum .spectrum-Icon--Forecast:before {
-  content: '\eb0e';
+.spectrum .spectrum-Icon--TextEdit::before {
+  content: "\eb0e";
 }
 
-.spectrum .spectrum-Icon--Form:before {
-  content: '\eb0f';
+.spectrum .spectrum-Icon--TextExclude::before {
+  content: "\eb0f";
 }
 
-.spectrum .spectrum-Icon--Forward:before {
-  content: '\eb10';
+.spectrum .spectrum-Icon--TextIncrease::before {
+  content: "\eb10";
 }
 
-.spectrum .spectrum-Icon--FullScreen:before {
-  content: '\eb11';
+.spectrum .spectrum-Icon--TextItalic::before {
+  content: "\eb11";
 }
 
-.spectrum .spectrum-Icon--FullScreenExit:before {
-  content: '\eb12';
+.spectrum .spectrum-Icon--TextKerning::before {
+  content: "\eb13";
 }
 
-.spectrum .spectrum-Icon--Game:before {
-  content: '\eb13';
+.spectrum .spectrum-Icon--TextLetteredLowerCase::before {
+  content: "\eb12";
 }
 
-.spectrum .spectrum-Icon--Gauge1:before {
-  content: '\eb14';
+.spectrum .spectrum-Icon--TextLetteredUpperCase::before {
+  content: "\eb14";
 }
 
-.spectrum .spectrum-Icon--Gauge2:before {
-  content: '\eb15';
+.spectrum .spectrum-Icon--TextNumbered::before {
+  content: "\eb15";
 }
 
-.spectrum .spectrum-Icon--Gauge3:before {
-  content: '\eb16';
+.spectrum .spectrum-Icon--TextParagraph::before {
+  content: "\eb16";
 }
 
-.spectrum .spectrum-Icon--Gauge4:before {
-  content: '\eb17';
+.spectrum .spectrum-Icon--TextSize::before {
+  content: "\eb17";
 }
 
-.spectrum .spectrum-Icon--Gauge5:before {
-  content: '\eb18';
+.spectrum .spectrum-Icon--TextSizeAdd::before {
+  content: "\eb18";
 }
 
-.spectrum .spectrum-Icon--Gear:before {
-  content: '\eb19';
+.spectrum .spectrum-Icon--TextStyle::before {
+  content: "\eb19";
 }
 
-.spectrum .spectrum-Icon--Gears:before {
-  content: '\eb1a';
+.spectrum .spectrum-Icon--TextSubscript::before {
+  content: "\eb1a";
 }
 
-.spectrum .spectrum-Icon--GearsAdd:before {
-  content: '\eb1b';
+.spectrum .spectrum-Icon--TextSuperscript::before {
+  content: "\eb1b";
 }
 
-.spectrum .spectrum-Icon--GearsDelete:before {
-  content: '\eb1c';
+.spectrum .spectrum-Icon--TextUnderline::before {
+  content: "\eb1c";
 }
 
-.spectrum .spectrum-Icon--GearsEdit:before {
-  content: '\eb1d';
+.spectrum .spectrum-Icon--ThumbDown::before {
+  content: "\eb1d";
 }
 
-.spectrum .spectrum-Icon--GenderFemale:before {
-  content: '\eb1e';
+.spectrum .spectrum-Icon--ThumbDownOutline::before {
+  content: "\eb1e";
 }
 
-.spectrum .spectrum-Icon--GenderMale:before {
-  content: '\eb1f';
+.spectrum .spectrum-Icon--ThumbUp::before {
+  content: "\eb1f";
 }
 
-.spectrum .spectrum-Icon--Gift:before {
-  content: '\eb20';
+.spectrum .spectrum-Icon--ThumbUpOutline::before {
+  content: "\eb20";
 }
 
-.spectrum .spectrum-Icon--Globe:before {
-  content: '\eb21';
+.spectrum .spectrum-Icon--Transparency::before {
+  content: "\eb21";
 }
 
-.spectrum .spectrum-Icon--GlobeCheck:before {
-  content: '\eb22';
+.spectrum .spectrum-Icon--TrimPath::before {
+  content: "\eb22";
 }
 
-.spectrum .spectrum-Icon--GlobeClock:before {
-  content: '\eb23';
+.spectrum .spectrum-Icon--Trophy::before {
+  content: "\eb23";
 }
 
-.spectrum .spectrum-Icon--GlobeEnter:before {
-  content: '\eb24';
+.spectrum .spectrum-Icon--Tumblr::before {
+  content: "\eb24";
 }
 
-.spectrum .spectrum-Icon--GlobeExit:before {
-  content: '\eb25';
+.spectrum .spectrum-Icon--Twitter::before {
+  content: "\eb25";
 }
 
-.spectrum .spectrum-Icon--GlobeRemove:before {
-  content: '\eb26';
+.spectrum .spectrum-Icon--Undo::before {
+  content: "\eb26";
 }
 
-.spectrum .spectrum-Icon--GlobeSearch:before {
-  content: '\eb27';
+.spectrum .spectrum-Icon--Unlink::before {
+  content: "\eb27";
 }
 
-.spectrum .spectrum-Icon--GlobeStrike:before {
-  content: '\eb28';
+.spectrum .spectrum-Icon--Unmerge::before {
+  content: "\eb28";
 }
 
-.spectrum .spectrum-Icon--GlobeStrikeClock:before {
-  content: '\eb29';
+.spectrum .spectrum-Icon--UploadToCloud::before {
+  content: "\eb29";
 }
 
-.spectrum .spectrum-Icon--Google:before {
-  content: '\eb2a';
+.spectrum .spectrum-Icon--User::before {
+  content: "\eb2a";
 }
 
-.spectrum .spectrum-Icon--GoogleAnalytics:before {
-  content: '\eb2b';
+.spectrum .spectrum-Icon--UserGroup::before {
+  content: "\eb2b";
 }
 
-.spectrum .spectrum-Icon--GooglePlus:before {
-  content: '\eb2c';
+.spectrum .spectrum-Icon--VectorDraw::before {
+  content: "\eb2c";
 }
 
-.spectrum .spectrum-Icon--GooglePlus1:before {
-  content: '\eb2d';
+.spectrum .spectrum-Icon--Video::before {
+  content: "\eb2d";
 }
 
-.spectrum .spectrum-Icon--GraphArea:before {
-  content: '\eb2e';
+.spectrum .spectrum-Icon--VideoOutline::before {
+  content: "\eb2e";
 }
 
-.spectrum .spectrum-Icon--GraphAreaStacked:before {
-  content: '\eb2f';
+.spectrum .spectrum-Icon--ViewBiWeek::before {
+  content: "\eb2f";
 }
 
-.spectrum .spectrum-Icon--GraphBarHorizontal:before {
-  content: '\eb30';
+.spectrum .spectrum-Icon--ViewCard::before {
+  content: "\eb30";
 }
 
-.spectrum .spectrum-Icon--GraphBarHorizontalAdd:before {
-  content: '\eb31';
+.spectrum .spectrum-Icon--ViewColumn::before {
+  content: "\eb31";
 }
 
-.spectrum .spectrum-Icon--GraphBarHorizontalStacked:before {
-  content: '\eb32';
+.spectrum .spectrum-Icon--ViewDay::before {
+  content: "\eb32";
 }
 
-.spectrum .spectrum-Icon--GraphBarVertical:before {
-  content: '\eb33';
+.spectrum .spectrum-Icon--ViewGrid::before {
+  content: "\eb33";
 }
 
-.spectrum .spectrum-Icon--GraphBarVerticalAdd:before {
-  content: '\eb34';
+.spectrum .spectrum-Icon--ViewList::before {
+  content: "\eb34";
 }
 
-.spectrum .spectrum-Icon--GraphBarVerticalStacked:before {
-  content: '\eb35';
+.spectrum .spectrum-Icon--ViewRow::before {
+  content: "\eb35";
 }
 
-.spectrum .spectrum-Icon--GraphBubble:before {
-  content: '\eb36';
+.spectrum .spectrum-Icon--ViewWeek::before {
+  content: "\eb37";
 }
 
-.spectrum .spectrum-Icon--GraphBullet:before {
-  content: '\eb37';
+.spectrum .spectrum-Icon--Vignette::before {
+  content: "\eb36";
 }
 
-.spectrum .spectrum-Icon--GraphConfidenceBands:before {
-  content: '\eb38';
+.spectrum .spectrum-Icon--Visibility::before {
+  content: "\eb38";
 }
 
-.spectrum .spectrum-Icon--GraphDonut:before {
-  content: '\eb39';
+.spectrum .spectrum-Icon--VisibilityOff::before {
+  content: "\eb39";
 }
 
-.spectrum .spectrum-Icon--GraphDonutAdd:before {
-  content: '\eb3a';
+.spectrum .spectrum-Icon--VoiceOver::before {
+  content: "\eb3a";
 }
 
-.spectrum .spectrum-Icon--GraphGantt:before {
-  content: '\eb3b';
+.spectrum .spectrum-Icon--VolumeMute::before {
+  content: "\eb3b";
 }
 
-.spectrum .spectrum-Icon--GraphHistogram:before {
-  content: '\eb3c';
+.spectrum .spectrum-Icon--VolumeOne::before {
+  content: "\eb3c";
 }
 
-.spectrum .spectrum-Icon--GraphPathing:before {
-  content: '\eb3d';
+.spectrum .spectrum-Icon--VolumeThree::before {
+  content: "\eb3d";
 }
 
-.spectrum .spectrum-Icon--GraphPie:before {
-  content: '\eb3e';
+.spectrum .spectrum-Icon--VolumeTwo::before {
+  content: "\eb3f";
 }
 
-.spectrum .spectrum-Icon--GraphProfitCurve:before {
-  content: '\eb3f';
+.spectrum .spectrum-Icon--Watch::before {
+  content: "\eb3e";
 }
 
-.spectrum .spectrum-Icon--GraphScatter:before {
-  content: '\eb40';
+.spectrum .spectrum-Icon--WhatsApp::before {
+  content: "\eb40";
 }
 
-.spectrum .spectrum-Icon--GraphStream:before {
-  content: '\eb41';
+.spectrum .spectrum-Icon--YouTube::before {
+  content: "\eb41";
 }
 
-.spectrum .spectrum-Icon--GraphStreamRanked:before {
-  content: '\eb42';
+.spectrum .spectrum-Icon--ZoomIn::before {
+  content: "\eb42";
 }
 
-.spectrum .spectrum-Icon--GraphStreamRankedAdd:before {
-  content: '\eb43';
-}
-
-.spectrum .spectrum-Icon--GraphSunburst:before {
-  content: '\eb44';
-}
-
-.spectrum .spectrum-Icon--GraphTree:before {
-  content: '\eb45';
-}
-
-.spectrum .spectrum-Icon--GraphTrend:before {
-  content: '\eb46';
-}
-
-.spectrum .spectrum-Icon--GraphTrendAdd:before {
-  content: '\eb47';
-}
-
-.spectrum .spectrum-Icon--GraphTrendAlert:before {
-  content: '\eb48';
-}
-
-.spectrum .spectrum-Icon--Group:before {
-  content: '\eb49';
-}
-
-.spectrum .spectrum-Icon--HTML5:before {
-  content: '\eb4a';
-}
-
-.spectrum .spectrum-Icon--Hammer:before {
-  content: '\eb4b';
-}
-
-.spectrum .spectrum-Icon--Hand:before {
-  content: '\eb4c';
-}
-
-.spectrum .spectrum-Icon--Hand0:before {
-  content: '\eb4d';
-}
-
-.spectrum .spectrum-Icon--Hand1:before {
-  content: '\eb4e';
-}
-
-.spectrum .spectrum-Icon--Hand2:before {
-  content: '\eb4f';
-}
-
-.spectrum .spectrum-Icon--Hand3:before {
-  content: '\eb50';
-}
-
-.spectrum .spectrum-Icon--Hand4:before {
-  content: '\eb51';
-}
-
-.spectrum .spectrum-Icon--Heart:before {
-  content: '\eb52';
-}
-
-.spectrum .spectrum-Icon--Help-Circle:before {
-  content: '\eb53';
-}
-
-.spectrum .spectrum-Icon--Help:before {
-  content: '\eb54';
-}
-
-.spectrum .spectrum-Icon--History:before {
-  content: '\eb55';
-}
-
-.spectrum .spectrum-Icon--Home:before {
-  content: '\eb56';
-}
-
-.spectrum .spectrum-Icon--Image:before {
-  content: '\eb57';
-}
-
-.spectrum .spectrum-Icon--ImageAdd:before {
-  content: '\eb58';
-}
-
-.spectrum .spectrum-Icon--ImageAlbum:before {
-  content: '\eb59';
-}
-
-.spectrum .spectrum-Icon--ImageCarousel:before {
-  content: '\eb5a';
-}
-
-.spectrum .spectrum-Icon--ImageMapCircle:before {
-  content: '\eb5b';
-}
-
-.spectrum .spectrum-Icon--ImageMapPolygon:before {
-  content: '\eb5c';
-}
-
-.spectrum .spectrum-Icon--ImageMapRectangle:before {
-  content: '\eb5d';
-}
-
-.spectrum .spectrum-Icon--ImageNext:before {
-  content: '\eb5e';
-}
-
-.spectrum .spectrum-Icon--ImageProfile:before {
-  content: '\eb5f';
-}
-
-.spectrum .spectrum-Icon--ImageText:before {
-  content: '\eb60';
-}
-
-.spectrum .spectrum-Icon--Images:before {
-  content: '\eb61';
-}
-
-.spectrum .spectrum-Icon--Inbox:before {
-  content: '\eb62';
-}
-
-.spectrum .spectrum-Icon--Individual:before {
-  content: '\eb63';
-}
-
-.spectrum .spectrum-Icon--Info-Circle:before {
-  content: '\eb64';
-}
-
-.spectrum .spectrum-Icon--Info:before {
-  content: '\eb65';
-}
-
-.spectrum .spectrum-Icon--Instagram:before {
-  content: '\eb66';
-}
-
-.spectrum .spectrum-Icon--InternetExplorer:before {
-  content: '\eb67';
-}
-
-.spectrum .spectrum-Icon--JumpToTop:before {
-  content: '\eb68';
-}
-
-.spectrum .spectrum-Icon--Key:before {
-  content: '\eb69';
-}
-
-.spectrum .spectrum-Icon--Keyboard:before {
-  content: '\eb6a';
-}
-
-.spectrum .spectrum-Icon--Launch:before {
-  content: '\eb6b';
-}
-
-.spectrum .spectrum-Icon--Layers:before {
-  content: '\eb6c';
-}
-
-.spectrum .spectrum-Icon--LayersBackward:before {
-  content: '\eb6d';
-}
-
-.spectrum .spectrum-Icon--LayersBringToFront:before {
-  content: '\eb6e';
-}
-
-.spectrum .spectrum-Icon--LayersForward:before {
-  content: '\eb6f';
-}
-
-.spectrum .spectrum-Icon--LayersSendToBack:before {
-  content: '\eb70';
-}
-
-.spectrum .spectrum-Icon--Lightbulb:before {
-  content: '\eb71';
-}
-
-.spectrum .spectrum-Icon--Link:before {
-  content: '\eb72';
-}
-
-.spectrum .spectrum-Icon--LinkCheck:before {
-  content: '\eb73';
-}
-
-.spectrum .spectrum-Icon--LinkFacebook:before {
-  content: '\eb74';
-}
-
-.spectrum .spectrum-Icon--LinkGlobe:before {
-  content: '\eb75';
-}
-
-.spectrum .spectrum-Icon--LinkNav:before {
-  content: '\eb76';
-}
-
-.spectrum .spectrum-Icon--LinkOff:before {
-  content: '\eb77';
-}
-
-.spectrum .spectrum-Icon--LinkPage:before {
-  content: '\eb78';
-}
-
-.spectrum .spectrum-Icon--LinkUser:before {
-  content: '\eb79';
-}
-
-.spectrum .spectrum-Icon--LinkedIn:before {
-  content: '\eb7a';
-}
-
-.spectrum .spectrum-Icon--Linux:before {
-  content: '\eb7b';
-}
-
-.spectrum .spectrum-Icon--Location:before {
-  content: '\eb7c';
-}
-
-.spectrum .spectrum-Icon--LockOff:before {
-  content: '\eb7d';
-}
-
-.spectrum .spectrum-Icon--LockOn:before {
-  content: '\eb7e';
-}
-
-.spectrum .spectrum-Icon--Login:before {
-  content: '\eb7f';
-}
-
-.spectrum .spectrum-Icon--MBox:before {
-  content: '\eb80';
-}
-
-.spectrum .spectrum-Icon--Mailbox:before {
-  content: '\eb81';
-}
-
-.spectrum .spectrum-Icon--Menu:before {
-  content: '\eb82';
-}
-
-.spectrum .spectrum-Icon--Merge:before {
-  content: '\eb83';
-}
-
-.spectrum .spectrum-Icon--Minus-Circle:before {
-  content: '\eb84';
-}
-
-.spectrum .spectrum-Icon--Minus:before {
-  content: '\eb85';
-}
-
-.spectrum .spectrum-Icon--MobileServices:before {
-  content: '\eb86';
-}
-
-.spectrum .spectrum-Icon--Money:before {
-  content: '\eb87';
-}
-
-.spectrum .spectrum-Icon--Moon:before {
-  content: '\eb88';
-}
-
-.spectrum .spectrum-Icon--More:before {
-  content: '\eb89';
-}
-
-.spectrum .spectrum-Icon--MoreVertical:before {
-  content: '\eb8a';
-}
-
-.spectrum .spectrum-Icon--Move:before {
-  content: '\eb8b';
-}
-
-.spectrum .spectrum-Icon--MoveLeftRight:before {
-  content: '\eb8c';
-}
-
-.spectrum .spectrum-Icon--MoveUpDown:before {
-  content: '\eb8d';
-}
-
-.spectrum .spectrum-Icon--Multiple:before {
-  content: '\eb8e';
-}
-
-.spectrum .spectrum-Icon--MultipleAdd:before {
-  content: '\eb8f';
-}
-
-.spectrum .spectrum-Icon--MultipleCheck:before {
-  content: '\eb90';
-}
-
-.spectrum .spectrum-Icon--MultipleExclude:before {
-  content: '\eb91';
-}
-
-.spectrum .spectrum-Icon--News:before {
-  content: '\eb92';
-}
-
-.spectrum .spectrum-Icon--NewsAdd:before {
-  content: '\eb93';
-}
-
-.spectrum .spectrum-Icon--Newsgator:before {
-  content: '\eb94';
-}
-
-.spectrum .spectrum-Icon--Nielsen:before {
-  content: '\eb95';
-}
-
-.spectrum .spectrum-Icon--Note:before {
-  content: '\eb96';
-}
-
-.spectrum .spectrum-Icon--NoteAdd:before {
-  content: '\eb97';
-}
-
-.spectrum .spectrum-Icon--OS:before {
-  content: '\eb98';
-}
-
-.spectrum .spectrum-Icon--OneDrive:before {
-  content: '\eb99';
-}
-
-.spectrum .spectrum-Icon--Open:before {
-  content: '\eb9a';
-}
-
-.spectrum .spectrum-Icon--OpenRecent:before {
-  content: '\eb9b';
-}
-
-.spectrum .spectrum-Icon--Opera:before {
-  content: '\eb9c';
-}
-
-.spectrum .spectrum-Icon--Orbit:before {
-  content: '\eb9d';
-}
-
-.spectrum .spectrum-Icon--Organize:before {
-  content: '\eb9e';
-}
-
-.spectrum .spectrum-Icon--Page:before {
-  content: '\eb9f';
-}
-
-.spectrum .spectrum-Icon--PageBreak:before {
-  content: '\eba0';
-}
-
-.spectrum .spectrum-Icon--PageExclude:before {
-  content: '\eba1';
-}
-
-.spectrum .spectrum-Icon--PageRule:before {
-  content: '\eba2';
-}
-
-.spectrum .spectrum-Icon--PageShare:before {
-  content: '\eba3';
-}
-
-.spectrum .spectrum-Icon--PageTag:before {
-  content: '\eba4';
-}
-
-.spectrum .spectrum-Icon--Pages:before {
-  content: '\eba5';
-}
-
-.spectrum .spectrum-Icon--PagesExclude:before {
-  content: '\eba6';
-}
-
-.spectrum .spectrum-Icon--PaintBucket:before {
-  content: '\eba7';
-}
-
-.spectrum .spectrum-Icon--Panel:before {
-  content: '\eba8';
-}
-
-.spectrum .spectrum-Icon--Paste:before {
-  content: '\eba9';
-}
-
-.spectrum .spectrum-Icon--PasteHTML:before {
-  content: '\ebaa';
-}
-
-.spectrum .spectrum-Icon--PasteText:before {
-  content: '\ebab';
-}
-
-.spectrum .spectrum-Icon--Pause-Circle:before {
-  content: '\ebac';
-}
-
-.spectrum .spectrum-Icon--Pause:before {
-  content: '\ebad';
-}
-
-.spectrum .spectrum-Icon--PausePlay-Circle:before {
-  content: '\ebae';
-}
-
-.spectrum .spectrum-Icon--PausePlay:before {
-  content: '\ebaf';
-}
-
-.spectrum .spectrum-Icon--Pending:before {
-  content: '\ebb0';
-}
-
-.spectrum .spectrum-Icon--PersonalizationField:before {
-  content: '\ebb1';
-}
-
-.spectrum .spectrum-Icon--PhoneGap:before {
-  content: '\ebb2';
-}
-
-.spectrum .spectrum-Icon--PhoneGapBuilder:before {
-  content: '\ebb3';
-}
-
-.spectrum .spectrum-Icon--PinOff:before {
-  content: '\ebb4';
-}
-
-.spectrum .spectrum-Icon--PinOn:before {
-  content: '\ebb5';
-}
-
-.spectrum .spectrum-Icon--Pinterest:before {
-  content: '\ebb6';
-}
-
-.spectrum .spectrum-Icon--Pivot:before {
-  content: '\ebb7';
-}
-
-.spectrum .spectrum-Icon--Play-Circle:before {
-  content: '\ebb8';
-}
-
-.spectrum .spectrum-Icon--Play:before {
-  content: '\ebb9';
-}
-
-.spectrum .spectrum-Icon--Plug:before {
-  content: '\ebba';
-}
-
-.spectrum .spectrum-Icon--PopIn:before {
-  content: '\ebbb';
-}
-
-.spectrum .spectrum-Icon--PopOut:before {
-  content: '\ebbc';
-}
-
-.spectrum .spectrum-Icon--Preview:before {
-  content: '\ebbd';
-}
-
-.spectrum .spectrum-Icon--Print:before {
-  content: '\ebbe';
-}
-
-.spectrum .spectrum-Icon--PrintPreview:before {
-  content: '\ebbf';
-}
-
-.spectrum .spectrum-Icon--Project:before {
-  content: '\ebc0';
-}
-
-.spectrum .spectrum-Icon--ProjectAdd:before {
-  content: '\ebc1';
-}
-
-.spectrum .spectrum-Icon--Promote:before {
-  content: '\ebc2';
-}
-
-.spectrum .spectrum-Icon--Properties:before {
-  content: '\ebc3';
-}
-
-.spectrum .spectrum-Icon--Public:before {
-  content: '\ebc4';
-}
-
-.spectrum .spectrum-Icon--Publish:before {
-  content: '\ebc5';
-}
-
-.spectrum .spectrum-Icon--PublishCheck:before {
-  content: '\ebc6';
-}
-
-.spectrum .spectrum-Icon--PublishPending:before {
-  content: '\ebc7';
-}
-
-.spectrum .spectrum-Icon--PublishReject:before {
-  content: '\ebc8';
-}
-
-.spectrum .spectrum-Icon--PublishRemove:before {
-  content: '\ebc9';
-}
-
-.spectrum .spectrum-Icon--PublishSchedule:before {
-  content: '\ebca';
-}
-
-.spectrum .spectrum-Icon--PushNotification:before {
-  content: '\ebcb';
-}
-
-.spectrum .spectrum-Icon--Question:before {
-  content: '\ebcc';
-}
-
-.spectrum .spectrum-Icon--RSS:before {
-  content: '\ebcd';
-}
-
-.spectrum .spectrum-Icon--Rail:before {
-  content: '\ebce';
-}
-
-.spectrum .spectrum-Icon--RailBottom:before {
-  content: '\ebcf';
-}
-
-.spectrum .spectrum-Icon--RailLeft:before {
-  content: '\ebd0';
-}
-
-.spectrum .spectrum-Icon--RailRight:before {
-  content: '\ebd1';
-}
-
-.spectrum .spectrum-Icon--RailRightClose:before {
-  content: '\ebd2';
-}
-
-.spectrum .spectrum-Icon--RailRightOpen:before {
-  content: '\ebd3';
-}
-
-.spectrum .spectrum-Icon--Redo:before {
-  content: '\ebd4';
-}
-
-.spectrum .spectrum-Icon--ReflectHorizontal:before {
-  content: '\ebd5';
-}
-
-.spectrum .spectrum-Icon--ReflectVertical:before {
-  content: '\ebd6';
-}
-
-.spectrum .spectrum-Icon--Refresh:before {
-  content: '\ebd7';
-}
-
-.spectrum .spectrum-Icon--Reorder:before {
-  content: '\ebd8';
-}
-
-.spectrum .spectrum-Icon--Replies:before {
-  content: '\ebd9';
-}
-
-.spectrum .spectrum-Icon--Reply:before {
-  content: '\ebda';
-}
-
-.spectrum .spectrum-Icon--Report:before {
-  content: '\ebdb';
-}
-
-.spectrum .spectrum-Icon--ReportAdd:before {
-  content: '\ebdc';
-}
-
-.spectrum .spectrum-Icon--Resize:before {
-  content: '\ebdd';
-}
-
-.spectrum .spectrum-Icon--Retweet:before {
-  content: '\ebde';
-}
-
-.spectrum .spectrum-Icon--Revenue:before {
-  content: '\ebdf';
-}
-
-.spectrum .spectrum-Icon--Revert:before {
-  content: '\ebe0';
-}
-
-.spectrum .spectrum-Icon--Rewind-Circle:before {
-  content: '\ebe1';
-}
-
-.spectrum .spectrum-Icon--Rewind:before {
-  content: '\ebe2';
-}
-
-.spectrum .spectrum-Icon--Ribbon:before {
-  content: '\ebe3';
-}
-
-.spectrum .spectrum-Icon--RotateLeft:before {
-  content: '\ebe4';
-}
-
-.spectrum .spectrum-Icon--RotateRight:before {
-  content: '\ebe5';
-}
-
-.spectrum .spectrum-Icon--SMS:before {
-  content: '\ebe6';
-}
-
-.spectrum .spectrum-Icon--SMSKey:before {
-  content: '\ebe7';
-}
-
-.spectrum .spectrum-Icon--SMSLightning:before {
-  content: '\ebe8';
-}
-
-.spectrum .spectrum-Icon--SMSRefresh:before {
-  content: '\ebe9';
-}
-
-.spectrum .spectrum-Icon--Safari:before {
-  content: '\ebea';
-}
-
-.spectrum .spectrum-Icon--Save:before {
-  content: '\ebeb';
-}
-
-.spectrum .spectrum-Icon--SaveAs:before {
-  content: '\ebec';
-}
-
-.spectrum .spectrum-Icon--Scribble:before {
-  content: '\ebed';
-}
-
-.spectrum .spectrum-Icon--Search:before {
-  content: '\ebee';
-}
-
-.spectrum .spectrum-Icon--Seat:before {
-  content: '\ebef';
-}
-
-.spectrum .spectrum-Icon--SeatAdd:before {
-  content: '\ebf0';
-}
-
-.spectrum .spectrum-Icon--Select:before {
-  content: '\ebf1';
-}
-
-.spectrum .spectrum-Icon--SelectAll:before {
-  content: '\ebf2';
-}
-
-.spectrum .spectrum-Icon--SelectContainer:before {
-  content: '\ebf3';
-}
-
-.spectrum .spectrum-Icon--SelectGear:before {
-  content: '\ebf4';
-}
-
-.spectrum .spectrum-Icon--SentimentNegative:before {
-  content: '\ebf5';
-}
-
-.spectrum .spectrum-Icon--SentimentNeutral:before {
-  content: '\ebf6';
-}
-
-.spectrum .spectrum-Icon--SentimentPositive:before {
-  content: '\ebf7';
-}
-
-.spectrum .spectrum-Icon--Separator:before {
-  content: '\ebf8';
-}
-
-.spectrum .spectrum-Icon--Servers:before {
-  content: '\ebf9';
-}
-
-.spectrum .spectrum-Icon--Share:before {
-  content: '\ebfa';
-}
-
-.spectrum .spectrum-Icon--ShareCheck:before {
-  content: '\ebfb';
-}
-
-.spectrum .spectrum-Icon--Sharpen:before {
-  content: '\ebfc';
-}
-
-.spectrum .spectrum-Icon--Shield:before {
-  content: '\ebfd';
-}
-
-.spectrum .spectrum-Icon--ShoppingCart:before {
-  content: '\ebfe';
-}
-
-.spectrum .spectrum-Icon--Shuffle:before {
-  content: '\ebff';
-}
-
-.spectrum .spectrum-Icon--SinaWeibo:before {
-  content: '\ec00';
-}
-
-.spectrum .spectrum-Icon--Slow:before {
-  content: '\ec01';
-}
-
-.spectrum .spectrum-Icon--Spam:before {
-  content: '\ec02';
-}
-
-.spectrum .spectrum-Icon--Spellcheck:before {
-  content: '\ec03';
-}
-
-.spectrum .spectrum-Icon--Spin:before {
-  content: '\ec04';
-}
-
-.spectrum .spectrum-Icon--Stage:before {
-  content: '\ec05';
-}
-
-.spectrum .spectrum-Icon--Stamp:before {
-  content: '\ec06';
-}
-
-.spectrum .spectrum-Icon--StarFill:before {
-  content: '\ec07';
-}
-
-.spectrum .spectrum-Icon--StarStroke:before {
-  content: '\ec08';
-}
-
-.spectrum .spectrum-Icon--Starburst:before {
-  content: '\ec09';
-}
-
-.spectrum .spectrum-Icon--Stop-Circle:before {
-  content: '\ec0a';
-}
-
-.spectrum .spectrum-Icon--Stop:before {
-  content: '\ec0b';
-}
-
-.spectrum .spectrum-Icon--Stopwatch:before {
-  content: '\ec0c';
-}
-
-.spectrum .spectrum-Icon--StrokeWidth:before {
-  content: '\ec0d';
-}
-
-.spectrum .spectrum-Icon--Subscribe:before {
-  content: '\ec0e';
-}
-
-.spectrum .spectrum-Icon--SuccessMetric:before {
-  content: '\ec0f';
-}
-
-.spectrum .spectrum-Icon--Switch:before {
-  content: '\ec10';
-}
-
-.spectrum .spectrum-Icon--Sync:before {
-  content: '\ec11';
-}
-
-.spectrum .spectrum-Icon--SyncRemove:before {
-  content: '\ec12';
-}
-
-.spectrum .spectrum-Icon--Table:before {
-  content: '\ec13';
-}
-
-.spectrum .spectrum-Icon--TableAndChart:before {
-  content: '\ec14';
-}
-
-.spectrum .spectrum-Icon--TableColumnAddLeft:before {
-  content: '\ec15';
-}
-
-.spectrum .spectrum-Icon--TableColumnAddRight:before {
-  content: '\ec16';
-}
-
-.spectrum .spectrum-Icon--TableColumnMerge:before {
-  content: '\ec17';
-}
-
-.spectrum .spectrum-Icon--TableColumnRemoveCenter:before {
-  content: '\ec18';
-}
-
-.spectrum .spectrum-Icon--TableColumnSplit:before {
-  content: '\ec19';
-}
-
-.spectrum .spectrum-Icon--TableEdit:before {
-  content: '\ec1a';
-}
-
-.spectrum .spectrum-Icon--TableHistogram:before {
-  content: '\ec1b';
-}
-
-.spectrum .spectrum-Icon--TableMergeCells:before {
-  content: '\ec1c';
-}
-
-.spectrum .spectrum-Icon--TableRowAddBottom:before {
-  content: '\ec1d';
-}
-
-.spectrum .spectrum-Icon--TableRowAddTop:before {
-  content: '\ec1e';
-}
-
-.spectrum .spectrum-Icon--TableRowMerge:before {
-  content: '\ec1f';
-}
-
-.spectrum .spectrum-Icon--TableRowRemoveCenter:before {
-  content: '\ec20';
-}
-
-.spectrum .spectrum-Icon--TableRowSplit:before {
-  content: '\ec21';
-}
-
-.spectrum .spectrum-Icon--TableSelectColumn:before {
-  content: '\ec22';
-}
-
-.spectrum .spectrum-Icon--TableSelectRow:before {
-  content: '\ec23';
-}
-
-.spectrum .spectrum-Icon--Tableau:before {
-  content: '\ec24';
-}
-
-.spectrum .spectrum-Icon--Tag:before {
-  content: '\ec25';
-}
-
-.spectrum .spectrum-Icon--TagExclude:before {
-  content: '\ec26';
-}
-
-.spectrum .spectrum-Icon--Tags:before {
-  content: '\ec27';
-}
-
-.spectrum .spectrum-Icon--Target:before {
-  content: '\ec28';
-}
-
-.spectrum .spectrum-Icon--Targeted:before {
-  content: '\ec29';
-}
-
-.spectrum .spectrum-Icon--Teapot:before {
-  content: '\ec2a';
-}
-
-.spectrum .spectrum-Icon--TestAB:before {
-  content: '\ec2b';
-}
-
-.spectrum .spectrum-Icon--TestABEdit:before {
-  content: '\ec2c';
-}
-
-.spectrum .spectrum-Icon--TestABGear:before {
-  content: '\ec2d';
-}
-
-.spectrum .spectrum-Icon--TestABRemove:before {
-  content: '\ec2e';
-}
-
-.spectrum .spectrum-Icon--TestProfile:before {
-  content: '\ec2f';
-}
-
-.spectrum .spectrum-Icon--Text:before {
-  content: '\ec30';
-}
-
-.spectrum .spectrum-Icon--TextAdd:before {
-  content: '\ec31';
-}
-
-.spectrum .spectrum-Icon--TextBold:before {
-  content: '\ec32';
-}
-
-.spectrum .spectrum-Icon--TextBulleted:before {
-  content: '\ec33';
-}
-
-.spectrum .spectrum-Icon--TextBulletedHierarchy:before {
-  content: '\ec34';
-}
-
-.spectrum .spectrum-Icon--TextBulletedHierarchyExclude:before {
-  content: '\ec35';
-}
-
-.spectrum .spectrum-Icon--TextCenter:before {
-  content: '\ec36';
-}
-
-.spectrum .spectrum-Icon--TextColor:before {
-  content: '\ec37';
-}
-
-.spectrum .spectrum-Icon--TextDecrease:before {
-  content: '\ec38';
-}
-
-.spectrum .spectrum-Icon--TextEdit:before {
-  content: '\ec39';
-}
-
-.spectrum .spectrum-Icon--TextExclude:before {
-  content: '\ec3a';
-}
-
-.spectrum .spectrum-Icon--TextIncrease:before {
-  content: '\ec3b';
-}
-
-.spectrum .spectrum-Icon--TextIndentDecrease:before {
-  content: '\ec3c';
-}
-
-.spectrum .spectrum-Icon--TextIndentIncrease:before {
-  content: '\ec3d';
-}
-
-.spectrum .spectrum-Icon--TextItalic:before {
-  content: '\ec3e';
-}
-
-.spectrum .spectrum-Icon--TextJustified:before {
-  content: '\ec3f';
-}
-
-.spectrum .spectrum-Icon--TextKerning:before {
-  content: '\ec40';
-}
-
-.spectrum .spectrum-Icon--TextLeft:before {
-  content: '\ec41';
-}
-
-.spectrum .spectrum-Icon--TextLetteredLowercase:before {
-  content: '\ec42';
-}
-
-.spectrum .spectrum-Icon--TextLetteredUppercase:before {
-  content: '\ec43';
-}
-
-.spectrum .spectrum-Icon--TextNumbered:before {
-  content: '\ec44';
-}
-
-.spectrum .spectrum-Icon--TextParagraph:before {
-  content: '\ec45';
-}
-
-.spectrum .spectrum-Icon--TextRight:before {
-  content: '\ec46';
-}
-
-.spectrum .spectrum-Icon--TextRomanLowercase:before {
-  content: '\ec47';
-}
-
-.spectrum .spectrum-Icon--TextRomanUppercase:before {
-  content: '\ec48';
-}
-
-.spectrum .spectrum-Icon--TextSize:before {
-  content: '\ec49';
-}
-
-.spectrum .spectrum-Icon--TextSizeAdd:before {
-  content: '\ec4a';
-}
-
-.spectrum .spectrum-Icon--TextSpaceAfter:before {
-  content: '\ec4b';
-}
-
-.spectrum .spectrum-Icon--TextSpaceBefore:before {
-  content: '\ec4c';
-}
-
-.spectrum .spectrum-Icon--TextStyle:before {
-  content: '\ec4d';
-}
-
-.spectrum .spectrum-Icon--TextSubscript:before {
-  content: '\ec4e';
-}
-
-.spectrum .spectrum-Icon--TextSuperscript:before {
-  content: '\ec4f';
-}
-
-.spectrum .spectrum-Icon--TextUnderline:before {
-  content: '\ec50';
-}
-
-.spectrum .spectrum-Icon--ThumbDown:before {
-  content: '\ec51';
-}
-
-.spectrum .spectrum-Icon--ThumbUp:before {
-  content: '\ec52';
-}
-
-.spectrum .spectrum-Icon--Transparency:before {
-  content: '\ec53';
-}
-
-.spectrum .spectrum-Icon--Trap:before {
-  content: '\ec54';
-}
-
-.spectrum .spectrum-Icon--TreeCollapse:before {
-  content: '\ec55';
-}
-
-.spectrum .spectrum-Icon--TreeCollapseAll:before {
-  content: '\ec56';
-}
-
-.spectrum .spectrum-Icon--TreeExpand:before {
-  content: '\ec57';
-}
-
-.spectrum .spectrum-Icon--TreeExpandAll:before {
-  content: '\ec58';
-}
-
-.spectrum .spectrum-Icon--TrendInspect:before {
-  content: '\ec59';
-}
-
-.spectrum .spectrum-Icon--TriangleDown:before {
-  content: '\ec5a';
-}
-
-.spectrum .spectrum-Icon--TriangleRight:before {
-  content: '\ec5b';
-}
-
-.spectrum .spectrum-Icon--Trophy:before {
-  content: '\ec5c';
-}
-
-.spectrum .spectrum-Icon--Tumblr:before {
-  content: '\ec5d';
-}
-
-.spectrum .spectrum-Icon--Twitter:before {
-  content: '\ec5e';
-}
-
-.spectrum .spectrum-Icon--Type:before {
-  content: '\ec5f';
-}
-
-.spectrum .spectrum-Icon--USA:before {
-  content: '\ec60';
-}
-
-.spectrum .spectrum-Icon--Undo:before {
-  content: '\ec61';
-}
-
-.spectrum .spectrum-Icon--Ungroup:before {
-  content: '\ec62';
-}
-
-.spectrum .spectrum-Icon--Unmerge:before {
-  content: '\ec63';
-}
-
-.spectrum .spectrum-Icon--Upload:before {
-  content: '\ec64';
-}
-
-.spectrum .spectrum-Icon--User:before {
-  content: '\ec65';
-}
-
-.spectrum .spectrum-Icon--UserAdd:before {
-  content: '\ec66';
-}
-
-.spectrum .spectrum-Icon--UserArrow:before {
-  content: '\ec67';
-}
-
-.spectrum .spectrum-Icon--UserEdit:before {
-  content: '\ec68';
-}
-
-.spectrum .spectrum-Icon--UserExclude:before {
-  content: '\ec69';
-}
-
-.spectrum .spectrum-Icon--UserLock:before {
-  content: '\ec6a';
-}
-
-.spectrum .spectrum-Icon--UserShare:before {
-  content: '\ec6b';
-}
-
-.spectrum .spectrum-Icon--Users:before {
-  content: '\ec6c';
-}
-
-.spectrum .spectrum-Icon--UsersAdd:before {
-  content: '\ec6d';
-}
-
-.spectrum .spectrum-Icon--UsersExclude:before {
-  content: '\ec6e';
-}
-
-.spectrum .spectrum-Icon--UsersLock:before {
-  content: '\ec6f';
-}
-
-.spectrum .spectrum-Icon--UsersShare:before {
-  content: '\ec70';
-}
-
-.spectrum .spectrum-Icon--VK:before {
-  content: '\ec71';
-}
-
-.spectrum .spectrum-Icon--ViewAllTags:before {
-  content: '\ec72';
-}
-
-.spectrum .spectrum-Icon--ViewBiWeek:before {
-  content: '\ec73';
-}
-
-.spectrum .spectrum-Icon--ViewCard:before {
-  content: '\ec74';
-}
-
-.spectrum .spectrum-Icon--ViewColumn:before {
-  content: '\ec75';
-}
-
-.spectrum .spectrum-Icon--ViewDay:before {
-  content: '\ec76';
-}
-
-.spectrum .spectrum-Icon--ViewDetail:before {
-  content: '\ec77';
-}
-
-.spectrum .spectrum-Icon--ViewGrid:before {
-  content: '\ec78';
-}
-
-.spectrum .spectrum-Icon--ViewList:before {
-  content: '\ec79';
-}
-
-.spectrum .spectrum-Icon--ViewOff:before {
-  content: '\ec7a';
-}
-
-.spectrum .spectrum-Icon--ViewOn:before {
-  content: '\ec7b';
-}
-
-.spectrum .spectrum-Icon--ViewRow:before {
-  content: '\ec7c';
-}
-
-.spectrum .spectrum-Icon--ViewSingle:before {
-  content: '\ec7d';
-}
-
-.spectrum .spectrum-Icon--ViewStack:before {
-  content: '\ec7e';
-}
-
-.spectrum .spectrum-Icon--ViewWeek:before {
-  content: '\ec7f';
-}
-
-.spectrum .spectrum-Icon--ViewedMarkAs:before {
-  content: '\ec80';
-}
-
-.spectrum .spectrum-Icon--Visit:before {
-  content: '\ec81';
-}
-
-.spectrum .spectrum-Icon--VisitShare:before {
-  content: '\ec82';
-}
-
-.spectrum .spectrum-Icon--VolumeMute:before {
-  content: '\ec83';
-}
-
-.spectrum .spectrum-Icon--VolumeOne:before {
-  content: '\ec84';
-}
-
-.spectrum .spectrum-Icon--VolumeThree:before {
-  content: '\ec85';
-}
-
-.spectrum .spectrum-Icon--VolumeTwo:before {
-  content: '\ec86';
-}
-
-.spectrum .spectrum-Icon--Wand:before {
-  content: '\ec87';
-}
-
-.spectrum .spectrum-Icon--Watch:before {
-  content: '\ec88';
-}
-
-.spectrum .spectrum-Icon--Windows7:before {
-  content: '\ec89';
-}
-
-.spectrum .spectrum-Icon--Windows8:before {
-  content: '\ec8a';
-}
-
-.spectrum .spectrum-Icon--Wordpress:before {
-  content: '\ec8b';
-}
-
-.spectrum .spectrum-Icon--Workflow:before {
-  content: '\ec8c';
-}
-
-.spectrum .spectrum-Icon--WorkflowAdd:before {
-  content: '\ec8d';
-}
-
-.spectrum .spectrum-Icon--Wrench:before {
-  content: '\ec8e';
-}
-
-.spectrum .spectrum-Icon--YouTube:before {
-  content: '\ec8f';
-}
-
-.spectrum .spectrum-Icon--ZoomIn:before {
-  content: '\ec90';
-}
-
-.spectrum .spectrum-Icon--ZoomOut:before {
-  content: '\ec91';
+.spectrum .spectrum-Icon--ZoomOut::before {
+  content: "\eb43";
 }
 
 /* topdoc
@@ -2757,7 +1421,7 @@
   description: The Spectrum alert 'success'
   markup: |
       <div class="spectrum-Alert spectrum-Alert--success">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Alert-typeIcon" role="img" aria-label="check circle"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--CheckmarkCircle spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
         <div class="spectrum-Alert-header">Successful Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
       </div>
@@ -2773,7 +1437,7 @@
   description: The Spectrum alert 'info'
   markup: |
       <div class="spectrum-Alert spectrum-Alert--info">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Alert-typeIcon" role="img" aria-label="info circle"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Info spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
         <div class="spectrum-Alert-header">Infomation Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
       </div>
@@ -2789,7 +1453,7 @@
   description: The Spectrum alert 'warning'
   markup: |
       <div class="spectrum-Alert spectrum-Alert--warning">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
         <div class="spectrum-Alert-header">Warning Alert Header</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
       </div>
@@ -2805,7 +1469,7 @@
   description: The Spectrum alert 'error'
   markup: |
       <div class="spectrum-Alert spectrum-Alert--error">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
         <div class="spectrum-Alert-header">Error Alert - Oh no</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
       </div>
@@ -2821,7 +1485,7 @@
   description: The Spectrum alert 'discloseable'. It has a close button in the footer. Combine this with other variants.
   markup: |
       <div class="spectrum-Alert spectrum-Alert--error">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
         <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
         <div class="spectrum-Alert-content">This is an alert.</div>
         <div class="spectrum-Alert-footer">
@@ -2842,21 +1506,18 @@
   width: 24rem;
   min-height: 2.375rem;
   margin: 0.5rem 0;
-  padding: 0.75rem 0.9375rem;
+  padding: 1rem 1.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  border-radius: 0.1875rem;
+  border-radius: 0.25rem;
 }
 
 .spectrum .spectrum-Alert-typeIcon {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 1rem;
+  right: 1.25rem;
   text-align: right;
-  font-family: AdobeSpectrumIcons18 !important;
-  font-size: 1.125rem !important;
-  line-height: 1.125rem !important;
-  opacity: 1 !important;
+  font-size: 1.125rem;
 }
 
 .spectrum .spectrum-Alert-header {
@@ -2874,7 +1535,7 @@
 
 .spectrum .spectrum-Alert-content {
   display: block;
-  margin: 1.375rem 0 0 0;
+  margin: 0.75rem 0 0 0;
   padding: 0;
   font-size: 0.875rem;
   word-wrap: break-word;
