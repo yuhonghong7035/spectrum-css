@@ -1710,23 +1710,21 @@
 .spectrum .spectrum-Button {
   display: inline-block;
   box-sizing: border-box;
-  height: 2rem;
-  padding: 0 0.75rem 0.0625rem ;
-  margin-right: 0.75rem;
-  background: transparent;
-  border-width: 0.125rem;
+  border-width: 2px;
   border-style: solid;
-  border-radius: 1rem;
-  border-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  font-size: 0.875rem;
-  font-weight: bold;
+  border-radius: 16px;
+  height: 32px;
+  margin-right: 0.75rem;
+  padding: 0 14px 0.0625rem ;
   font-family: inherit;
-  line-height: 1.75rem;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: bold;
   text-decoration: none;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
   transition: background 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
   cursor: pointer;
-  vertical-align: top;
 }
 
 .spectrum .spectrum-Button:focus {
@@ -1752,21 +1750,45 @@
 
 .spectrum .spectrum-Button .spectrum-Icon {
   vertical-align: top;
-  margin-right: 0.3125rem;
 }
 
-.spectrum .spectrum-Button--square .spectrum-Icon {
-  margin-right: 0;
+.spectrum .spectrum-Button {
+  display: inline-block;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 16px;
+  height: 32px;
+  margin-right: 0.75rem;
+  padding: 0 14px 0.0625rem ;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  transition: background 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
+  cursor: pointer;
 }
 
 .spectrum .spectrum-Button:focus {
-  box-shadow: 0 0 0 0.0625rem #0e59b9;
+  outline: none;
 }
 
-.spectrum .spectrum-Button:hover {
-  box-shadow: none;
+.spectrum .spectrum-Button:disabled,
+.spectrum .spectrum-Button[disabled] {
+  cursor: default;
 }
 
+.spectrum .spectrum-Button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.spectrum .spectrum-Button:hover,
 .spectrum .spectrum-Button:active {
   box-shadow: none;
 }
@@ -2100,7 +2122,6 @@
 
 .spectrum .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
   border-color: #0f66d0;
-  box-shadow-color: #0f66d0;
 }
 
 .spectrum .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -3200,7 +3221,7 @@
 
 .spectrum .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
   border-color: #0f66d0;
-  box-shadow: 0 0 0 0.0625rem #0f66d0;
+  box-shadow: none;
 }
 
 .spectrum .spectrum-Radio-input:disabled {
@@ -3717,7 +3738,7 @@
 
 .spectrum .spectrum-Textfield:hover {
   border-color: #c2c2c2;
-  box-shadow: 0 0 0 0.0625rem #c2c2c2;
+  box-shadow: none;
 }
 
 .spectrum .spectrum-Textfield:hover::-webkit-input-placeholder {
@@ -3734,7 +3755,7 @@
 
 .spectrum .spectrum-Textfield:focus {
   border-color: #0f66d0;
-  box-shadow: 0 0 0 0.0625rem #0f66d0;
+  box-shadow: none;
 }
 
 .spectrum .spectrum-Textfield[disabled] {
@@ -3759,11 +3780,6 @@
 
 .spectrum .spectrum-Textfield:invalid {
   border-color: #d83742;
-}
-
-.spectrum .spectrum-Textfield:invalid:focus {
-  /* might break things due to pre-defined focus */
-  box-shadow: 0 0 0 0.0625rem #d83742;
 }
 
 .spectrum .spectrum-Textfield--quiet {
