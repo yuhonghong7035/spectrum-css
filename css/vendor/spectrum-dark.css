@@ -3,6 +3,34 @@
   color: #cdcdcd;
 }
 
+/* topdoc
+  name: Typography - Headings
+  description: Spectrum Headings
+  markup: |
+    <h1 class="spectrum-Heading--display">Display</h1>
+    <h1 class="spectrum-Heading--page-title">Page Title</h2>
+    <h2 class="spectrum-Heading--subtitle1">Subtitle 1</h2>
+    <h3 class="spectrum-Heading--subtitle2">Subtitle 2</h3>
+    <h4 class="spectrum-Heading--subtitle3">Subtitle 3</h4>
+  tags:
+    - desktop
+    - light
+*/
+
+/* topdoc
+  name: Typography - Body Text
+  description: Spectrum body text
+  markup: |
+    <p class="spectrum-Body--large">Large Body Text</p>
+    <p class="spectrum-Body">Default Body Text</p>
+    <p class="spectrum-Body--italic"> Body Text Italic</p>
+    <p class="spectrum-Body--small">Small Body Text</p>
+    <p class="spectrum-Body--secondary">Secondary Body Text</p>
+  tags:
+    - desktop
+    - light
+*/
+
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -22,6 +50,118 @@
 
 .spectrum:lang(ja) {
   font-family: adobe-clean-han-japanese, adobe-clean, Helvetica, Arial, sans-serif;
+}
+
+.spectrum {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.spectrum .spectrum-Body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.spectrum .spectrum-Body--italic {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-style: italic;
+}
+
+.spectrum .spectrum-Body--large {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.spectrum .spectrum-Body--small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.spectrum .spectrum-Body--secondary {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.spectrum .spectrum-Heading--display {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.spectrum .spectrum-Heading--page-title {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.spectrum .spectrum-Heading--subtitle1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.spectrum .spectrum-Heading--subtitle2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.spectrum .spectrum-Heading--subtitle3 {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.spectrum {
+  color: #cdcdcd;
+}
+
+.spectrum .spectrum-Body {
+  color: #cdcdcd;
+}
+
+.spectrum .spectrum-Body--italic {
+  font-style: italic;
+}
+
+.spectrum .spectrum-Body--large {
+  color: #cdcdcd;
+}
+
+.spectrum .spectrum-Body--small {
+  color: #cdcdcd;
+}
+
+.spectrum .spectrum-Body--secondary {
+  color: #999;
+}
+
+.spectrum .spectrum-Heading--display {
+  color: #fff;
+}
+
+.spectrum .spectrum-Heading--page-title {
+  color: #fff;
+}
+
+.spectrum .spectrum-Heading--subtitle1 {
+  color: #fff;
+}
+
+.spectrum .spectrum-Heading--subtitle2 {
+  color: #fff;
+}
+
+.spectrum .spectrum-Heading--subtitle3 {
+  color: #999;
 }
 
 @font-face {
@@ -1752,43 +1892,14 @@
   vertical-align: top;
 }
 
-.spectrum .spectrum-Button {
-  display: inline-block;
-  box-sizing: border-box;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 16px;
-  height: 32px;
-  margin-right: 0.75rem;
-  padding: 0 14px 0.0625rem ;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 28px;
-  font-weight: bold;
-  text-decoration: none;
-  vertical-align: top;
-  -webkit-font-smoothing: antialiased;
-  transition: background 150ms ease-out, border-color 150ms ease-out, color 150ms ease-out, box-shadow 150ms ease-out;
-  cursor: pointer;
-}
-
 .spectrum .spectrum-Button:focus {
-  outline: none;
+  box-shadow: 0 0 0 2px #26b5ff;
 }
 
-.spectrum .spectrum-Button:disabled,
-.spectrum .spectrum-Button[disabled] {
-  cursor: default;
+.spectrum .spectrum-Button:hover {
+  box-shadow: none;
 }
 
-.spectrum .spectrum-Button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
-
-.spectrum .spectrum-Button:hover,
 .spectrum .spectrum-Button:active {
   box-shadow: none;
 }
@@ -2122,10 +2233,12 @@
 
 .spectrum .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
   border-color: #1d94f3;
+  box-shadow: 0 0 0 0.0625rem #1d94f3;
 }
 
 .spectrum .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
   border-color: #cdcdcd;
+  box-shadow: none;
 }
 
 .spectrum .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
@@ -2304,7 +2417,7 @@
     <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
       <div class="spectrum-Dialog-wrapper" style="width: 400px;">
         <div class="spectrum-Dialog-header">
-          <h2 class="spectrum-Dialog-title">Defaul Dialog - Modal</h2>
+          <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
         </div>
         <div class="spectrum-Dialog-content">
           <p>This Dialog is not centered.</p>
@@ -2510,6 +2623,653 @@
 
 .spectrum .spectrum-Dialog--modal {
   background: rgba(0,0,0,0.6);
+}
+
+/* topdoc
+  name: Dropdown - Default
+  description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <h4>Closed - default</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Closed - focus</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder spectrum-Dropdown-trigger--focus" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Closed - hover</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--hover" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Disabled</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown is-disabled" style="width: 185px;" tabindex="-1">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Error</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown has-error" style="width: 185px;" tabindex="-1">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - default</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - hover</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option spectrum-Dropdown-option--hover" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - selected</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - focus</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option spectrum-Dropdown-option--focus" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+/* topdoc
+  name: Dropdown - Quiet
+  description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <h4>Closed - default</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Closed - focus</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder spectrum-Dropdown-trigger--focus" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Closed - hover</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder spectrum-Dropdown-trigger--hover" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Disabled</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled" tabindex="-1">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Error</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet has-error" tabindex="-1">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - default</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - hover</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option spectrum-Dropdown-option--hover" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - selected</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+    <h4>Open - focus</h4>
+    <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+      <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-open-icon"></span>
+        <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      </button>
+      <div class="spectrum-Dropdown-menu">
+        <hr class="spectrum-Dropdown-divider">
+        <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+          <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United Arab Emirates</li>
+          <li class="spectrum-Dropdown-option spectrum-Dropdown-option--focus" role="menuitem" tabindex="-1">United Kingdom</li>
+          <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+        </ul>
+      </div>
+    </div>
+
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+.spectrum .spectrum-Dropdown {
+  border-radius: 0.25rem;
+  border-width: 0.0625rem;
+  border-style: solid;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.spectrum .spectrum-Dropdown.is-disabled {
+  border-width: 0;
+}
+
+.spectrum .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
+  border-width: 0;
+  cursor: default;
+}
+
+.spectrum .spectrum-Dropdown.is-open .spectrum-Dropdown-menu {
+  display: block;
+}
+
+.spectrum .spectrum-Dropdown.has-error .spectrum-Dropdown-open-icon::after {
+  right: 2rem;
+}
+
+.spectrum .spectrum-Dropdown.has-error .spectrum-Dropdown-error-icon {
+  display: inline;
+}
+
+.spectrum .spectrum-Dropdown.has-error .spectrum-Dropdown-trigger {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.spectrum .spectrum-Dropdown.has-error .spectrum-Dropdown-trigger-label {
+  position: absolute;
+  left: 0.625rem;
+}
+
+.spectrum .spectrum-Dropdown-trigger {
+  width: 100%;
+  height: 2rem;
+  border-width: 0;
+  border-radius: 0.25rem;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 0 0.625rem;
+  font-family: inherit;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spectrum .spectrum-Dropdown-trigger--placeholder {
+  font-style: italic;
+}
+
+.spectrum .spectrum-Dropdown-menu {
+  display: none;
+}
+
+.spectrum .spectrum-Dropdown-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum .spectrum-Dropdown-option {
+  padding: 0 0.625rem;
+  height: 2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spectrum .spectrum-Dropdown-option.is-selected::after {
+  position: absolute;
+  width: 0.625rem;
+  height: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: 0.625rem 0.5rem;
+  background-position: right 0.625rem center;
+  transform: scale(1);
+  opacity: 1;
+  content: '';
+}
+
+.spectrum .spectrum-Dropdown-divider {
+  height: 0.0625rem;
+  width: calc(100% - 1.25rem);
+  margin: 0;
+  margin-left: 0.625rem;
+  border: none;
+}
+
+.spectrum .spectrum-Dropdown-error-icon {
+  margin-left: 0.5rem;
+  display: none;
+}
+
+.spectrum .spectrum-Dropdown-open-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: 0.25rem;
+}
+
+.spectrum .spectrum-Dropdown-open-icon::after {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.875rem;
+  width: 0.75rem;
+  height: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(1);
+  opacity: 1;
+  content: '';
+}
+
+.spectrum .spectrum-Dropdown--quiet {
+  border: none;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus {
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: 0.125rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-option {
+  padding-right: 2rem;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-open {
+  box-shadow: none;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-menu {
+  border-radius: 0.25rem;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-divider {
+  display: none;
+}
+
+.spectrum .spectrum-Dropdown--quiet.has-error .spectrum-Dropdown-trigger-label {
+  position: static;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger--focus {
+  border-width: 0;
+  border-style: solid;
+  border-bottom-width: 0.125rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.spectrum .spectrum-Dropdown {
+  background-color: #282828;
+  border-color: #3e3e3e;
+}
+
+.spectrum .spectrum-Dropdown:hover {
+  border-color: #5a5a5a;
+}
+
+.spectrum .spectrum-Dropdown-trigger {
+  color: #cdcdcd;
+  background-color: #2d2d2d;
+}
+
+.spectrum .spectrum-Dropdown-trigger:focus {
+  box-shadow: 0 0 0 0.125rem #1884ec;
+}
+
+.spectrum .spectrum-Dropdown-option {
+  color: #cdcdcd;
+}
+
+.spectrum .spectrum-Dropdown-option:hover {
+  background-color: rgba(255,255,255,0.04);
+}
+
+.spectrum .spectrum-Dropdown-option:focus {
+  background-image: linear-gradient(to right, #1884ec 0%, #1884ec 2px, rgba(255,255,255,0.04) 2px, rgba(255,255,255,0.04) 100%);
+}
+
+.spectrum .spectrum-Dropdown-option.is-selected {
+  color: #1d94f3;
+}
+
+.spectrum .spectrum-Dropdown-option.is-selected::after {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0zLjgsNy40QzMuNSw3LjQsMy4yLDcuMywzLDcuMUwwLjgsNC44Yy0wLjQtMC40LTAuNC0xLDAtMS40czEtMC40LDEuNCwwTDMuOCw1bDQtNGMwLjQtMC40LDEtMC40LDEuNCwwIHMwLjQsMSwwLDEuNEw0LjUsNy4xQzQuMyw3LjMsNCw3LjQsMy44LDcuNHoiIGZpbGw9IiMxZDk0ZjMiLz4KPC9zdmc+');
+}
+
+.spectrum .spectrum-Dropdown-divider {
+  background-color: #393939;
+}
+
+.spectrum .spectrum-Dropdown-error-icon {
+  color: #e44853;
+}
+
+.spectrum .spectrum-Dropdown-open-icon::after {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCI+CjxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIxMCIgaGVpZ2h0PSI2IiBzdHlsZT0iZmlsbDojZmYxM2RjO29wYWNpdHk6MCIvPgo8cGF0aCBkPSJNMTEgMmExIDEgMCAwIDAtMS43LTAuN0w2IDQuNiAyLjcgMS4zQTEgMSAwIDEgMCAxLjMgMi43bDQgNGExIDEgMCAwIDAgMS40IDBsNC00QTEgMSAwIDAgMCAxMSAyWiIgZmlsbD0iI2NkY2RjZCIvPgo8L3N2Zz4=');
+}
+
+.spectrum .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
+  background-color: #282828;
+}
+
+.spectrum .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.spectrum .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
+  background-color: #393939;
+  color: #5a5a5a;
+}
+
+.spectrum .spectrum-Dropdown.has-error {
+  border-color: #e44853;
+}
+
+.spectrum .spectrum-Dropdown--quiet {
+  background-color: transparent;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
+  background-color: transparent;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:hover {
+  color: #fff;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus {
+  border-color: #1884ec;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger {
+  background-color: transparent;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger {
+  background-color: transparent;
+  color: #fff;
+}
+
+.spectrum .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-menu {
+  background-color: #282828;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.1);
+}
+
+.spectrum .spectrum-Dropdown-trigger--focus {
+  box-shadow: 0 0 0 0.125rem #1884ec;
+}
+
+.spectrum .spectrum-Dropdown--hover {
+  border-color: #5a5a5a;
+}
+
+.spectrum .spectrum-Dropdown-option--hover {
+  background-color: rgba(255,255,255,0.04);
+}
+
+.spectrum .spectrum-Dropdown-option--focus {
+  background-image: linear-gradient(to right, #1884ec 0%, #1884ec 2px, rgba(255,255,255,0.04) 2px, rgba(255,255,255,0.04) 100%);
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger--hover {
+  color: #fff;
+}
+
+.spectrum .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger--focus {
+  border-color: #1884ec;
 }
 
 /* topdoc
@@ -3221,7 +3981,7 @@
 
 .spectrum .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
   border-color: #1d94f3;
-  box-shadow: none;
+  box-shadow: 0 0 0 0.0625rem #1d94f3;
 }
 
 .spectrum .spectrum-Radio-input:disabled {
@@ -3755,7 +4515,7 @@
 
 .spectrum .spectrum-Textfield:focus {
   border-color: #1d94f3;
-  box-shadow: none;
+  box-shadow: 0 0 0 0.0625rem #1d94f3;
 }
 
 .spectrum .spectrum-Textfield[disabled] {
@@ -3780,6 +4540,11 @@
 
 .spectrum .spectrum-Textfield:invalid {
   border-color: #ee5a66;
+}
+
+.spectrum .spectrum-Textfield:invalid:focus {
+  /* might break things due to pre-defined focus */
+  box-shadow: 0 0 0 0.0625rem #ee5a66;
 }
 
 .spectrum .spectrum-Textfield--quiet {
