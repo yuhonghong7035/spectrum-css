@@ -1,0 +1,98 @@
+.spectrum-Button {
+  display: inline-block;
+  box-sizing: border-box;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 16px;
+
+  height: 32px;
+  margin-right: 12px;
+  padding: 0 14px 1px; /* 1px to push up text, sits kind of low */
+
+  font-family: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  /* Adjacent buttons should be aligned correctly */
+  vertical-align: top;
+
+  transition: background 150ms ease-out,
+              border-color 150ms ease-out,
+              color 150ms ease-out,
+              box-shadow 150ms ease-out;
+
+  cursor: pointer;
+}
+
+.spectrum-Button:focus {
+    outline: none;
+  }
+
+.spectrum-Button:disabled,
+  .spectrum-Button[disabled] {
+    cursor: default;
+  }
+
+/* Fix Firefox */
+
+.spectrum-Button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top: -2PX;
+    margin-bottom: -2PX;
+  }
+
+.spectrum-Button:hover,
+  .spectrum-Button:active {
+    box-shadow: none;
+  }
+
+.spectrum-Button .spectrum-Icon {
+    vertical-align: top;
+  }
+
+.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
+    margin-left: 8px;
+  }
+
+.spectrum-Button--action {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 12px;
+}
+
+.spectrum-Button--action--icon-only {
+  padding: 0 8px;
+}
+
+.spectrum-Button--quiet--action {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.spectrum-Button--quiet--action--icon-only {
+  padding: 0 8px;
+}
+
+.spectrum-Button--and,
+.spectrum-Button--or {
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.spectrum-Button--block {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

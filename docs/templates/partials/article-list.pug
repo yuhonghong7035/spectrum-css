@@ -1,0 +1,10 @@
+.sdldocs-main-content.row
+  .sdldocs-components.col-xs-12.col-sm-8
+    each article in collections.articles
+      article.sdldocs-component.box
+        h1.spectrum-Heading.spectrum-Heading--pagetitle
+          a.sdldocs-link.sdldocs-article-title-link(href='../' + article.path)= article.pageTitle
+        if article.teaser
+          h2.spectrum-Heading.spectrum-Heading--subtitle.sdldocs-article-link-teaser= article.teaser
+        small.summary-date.article-date
+          time(datetime=date)= moment(article.date).format('D MMMM YYYY')

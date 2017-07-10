@@ -1,0 +1,28 @@
+.spectrum--darkest,
+.spectrum--darkest .spectrum-Body {
+  color: rgb(180, 180, 180);
+}
+.spectrum--darkest .spectrum-Body--large {
+  color: rgb(180, 180, 180);
+}
+.spectrum--darkest .spectrum-Body--small {
+  color: rgb(180, 180, 180);
+}
+.spectrum--darkest .spectrum-Body--secondary {
+  color: rgb(133, 133, 133);
+}
+.spectrum--darkest .spectrum-Heading--display {
+  color: rgb(226, 226, 226);
+}
+.spectrum--darkest .spectrum-Heading--page-title {
+  color: rgb(226, 226, 226);
+}
+.spectrum--darkest .spectrum-Heading--subtitle1 {
+  color: rgb(226, 226, 226);
+}
+.spectrum--darkest .spectrum-Heading--subtitle2 {
+  color: rgb(226, 226, 226);
+}
+.spectrum--darkest .spectrum-Heading--subtitle3 {
+  color: rgb(133, 133, 133);
+}

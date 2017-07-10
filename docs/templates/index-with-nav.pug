@@ -1,0 +1,17 @@
+extends default-layout
+
+block append vars
+  - var navKey = 'home'
+
+block content
+  .sdldocs-main-content.row
+
+    block left-nav
+      include partials/leftnav-default.pug
+
+    .sdldocs-components.col-xs-12.col-sm-8
+      each contentItem in collections.pageitems
+        article.sdldocs-component.box(id=contentItem.link)
+          h2.spectrum-Heading.spectrum-Heading--pagetitle= contentItem.name
+          .sdldocs-component-description= contentItem.description
+          .sdldocs-component-content!=  contentItem.contents

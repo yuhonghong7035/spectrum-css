@@ -1,0 +1,128 @@
+.spectrum--lightest .spectrum-Radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+
+  cursor: pointer;
+}
+.spectrum--lightest .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+    border-color: rgb(118, 118, 118);
+  }
+.spectrum--lightest .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    }
+.spectrum--lightest .spectrum-Radio-input:focus ~ .spectrum-Radio-label {
+      color: rgb(13, 102, 208);
+    }
+/* topdoc
+---
+name: Radio - Default
+description: The Spectrum radio thingy
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+  </div>
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
+  </div>
+
+*/
+.spectrum--lightest .spectrum-Radio .spectrum-Radio-label {
+    color: rgb(80, 80, 80);
+  }
+.spectrum--lightest .spectrum-Radio .spectrum-Radio-checkmark {
+    border-color: rgb(149, 149, 149);
+  }
+.spectrum--lightest .spectrum-Radio:hover .spectrum-Radio-checkmark {
+      border-color: rgb(50, 50, 50);
+      box-shadow: none;
+    }
+.spectrum--lightest .spectrum-Radio:hover .spectrum-Radio-label {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-Radio:active .spectrum-Radio-checkmark {
+      border-color: rgb(118, 118, 118);
+    }
+.spectrum--lightest .spectrum-Radio:active .spectrum-Radio-label {
+      color: rgb(80, 80, 80);
+    }
+/* topdoc
+---
+name: Radio - Disabled
+description: The 'disabled' Spectrum radio
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-disable-0">Kittens</label>
+  </div>
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-1" disabled checked>
+    <span class="spectrum-Radio-checkmark"></span>
+    <label class="spectrum-Radio-label" for="radio-disable-0">Puppies</label>
+  </div>
+
+*/
+.spectrum--lightest .spectrum-Radio-input:disabled + .spectrum-Radio-checkmark {
+    border-color: rgb(211, 211, 211);
+  }
+.spectrum--lightest .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
+    color: rgb(188, 188, 188);
+  }
+.spectrum--lightest .spectrum-Radio-input:invalid + .spectrum-Radio-checkmark {
+      border-color: rgb(227, 72, 80);
+    }
+.spectrum--lightest .spectrum-Radio-input:invalid ~ .spectrum-Radio-label {
+      color: rgb(227, 72, 80);
+    }
+/* topdoc
+---
+name: Radio - Required
+description: The 'required' Spectrum radio
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
+markup: |
+  <form>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form>
+*/
+.spectrum--lightest .spectrum-Radio-input:invalid:hover + .spectrum-Radio-checkmark {
+      border-color: rgb(215, 55, 63);
+    }
+.spectrum--lightest .spectrum-Radio-input:invalid:hover ~ .spectrum-Radio-label {
+      color: rgb(215, 55, 63);
+    }
+.spectrum--lightest .spectrum-Radio-input:invalid:active + .spectrum-Radio-checkmark {
+      border-color: rgb(201, 37, 45);
+    }
+.spectrum--lightest .spectrum-Radio-input:invalid:active ~ .spectrum-Radio-label {
+      color: rgb(201, 37, 45);
+    }

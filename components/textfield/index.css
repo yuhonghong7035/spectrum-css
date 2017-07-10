@@ -1,0 +1,122 @@
+.spectrum-Textfield {
+  /* box */
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0;
+  min-width: 110px;
+  height: 32px;
+  width: 192px;
+
+  vertical-align: top; /* used to align them correctly in forms. */
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-indent: 12px;
+
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+  outline: none;
+
+  /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
+  /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+
+  /* Remove the native clear button in IE */
+
+  /* removes the native spin buttons */
+}
+
+.spectrum-Textfield::-webkit-input-placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield:-ms-input-placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield::placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield:hover::-webkit-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:hover:-ms-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:hover::placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled {
+    /* The opacity must be set to 1 */
+    -webkit-opacity: 1;
+  }
+
+.spectrum-Textfield:disabled::-webkit-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled:-ms-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled::placeholder {
+      font-weight: normal;
+    }
+
+/* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
+
+.spectrum-Textfield::-ms-clear {
+    width: 0;
+    height: 0;
+  }
+
+/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+
+.spectrum-Textfield::-webkit-inner-spin-button,
+  .spectrum-Textfield::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+/* removes the red border that appears in Firefox */
+
+.spectrum-Textfield:-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+.spectrum-Textfield--quiet {
+  border-radius: 0;
+  text-indent: 0;
+
+  border: none;
+  border-bottom: 1px solid;
+
+  /* removes the side padding to align the text properly */
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.spectrum-Textfield--multiline {
+  height: auto;
+  padding: 4px 8px;
+  text-indent: 0;
+}
+
+.spectrum-Textfield--quiet.spectrum-Textfield--multiline {
+  resize: none;
+  overflow-y: hidden;
+}

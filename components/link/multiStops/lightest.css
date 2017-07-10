@@ -1,0 +1,27 @@
+.spectrum--lightest .spectrum-Link {
+  color: rgb(20, 115, 230);
+}
+.spectrum--lightest .spectrum-Link:hover {
+    color: rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link:active {
+    color: rgb(13, 102, 208);
+  }
+.spectrum--lightest .spectrum-Link:focus {
+    color: rgb(20, 115, 230);
+    box-shadow: 0 1px 0 rgb(20, 115, 230);
+  }
+.spectrum--lightest .spectrum-Link--subtle {
+  color: inherit;
+}
+.spectrum--lightest .spectrum-Link--subtle:hover {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--subtle:active {
+    color: inherit;
+  }
+.spectrum--lightest .spectrum-Link--subtle:focus {
+    color: inherit;
+    /* focus box-shadow color vale should be inherited like the color, too */
+    box-shadow: 0 1px 0 rgb(80, 80, 80);
+  }

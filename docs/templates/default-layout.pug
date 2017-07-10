@@ -1,0 +1,22 @@
+doctype html
+
+block vars
+  - var relativePath = './'
+  - var bodyclass = 'sdldocs-body'
+  - var colorStop = 'light'
+  - var navKey = 'home'
+
+html(lang='en')
+
+  include partials/head-default.pug
+
+  body.u-sdldocs-clearfix(class=`spectrum--${colorStop} ${bodyclass}`)
+
+    block header
+      include partials/header-default.pug
+
+    block presentation
+      include partials/presentation-default.pug
+
+    block content
+

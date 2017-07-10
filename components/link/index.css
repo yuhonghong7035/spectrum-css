@@ -1,0 +1,32 @@
+/* topdoc
+---
+name: Link - Default
+description: A link
+markup: |
+  <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
+
+*/
+
+.spectrum-Link {
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+  outline: none;
+}
+
+.spectrum-Link[disabled] {
+    opacity: 0.15;
+  }
+
+/* topdoc
+---
+name: Link - Subtle
+description: A subtle link
+markup: |
+  <p> This uses <a href="#" class="spectrum-Link
+  spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
+
+*/
+
+.spectrum-Link--subtle {
+  text-decoration: underline;
+}

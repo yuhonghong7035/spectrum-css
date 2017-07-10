@@ -1,0 +1,72 @@
+/* topdoc
+---
+  name: Tab - Default
+  description: The default Spectrum Tab element
+  markup: |
+    <!-- TODO: add markup here -->
+
+*/
+.spectrum-Tab .spectrum-Tab-label {
+    color: rgb(133, 133, 133)
+  }
+.spectrum-Tab:hover .spectrum-Tab-label {
+      color: rgb(226, 226, 226)
+    }
+.spectrum-Tab:focus .spectrum-Tab-label {
+      color: rgb(226, 226, 226)
+    }
+.spectrum-Tab.is-selected .spectrum-Tab-label {
+      color: rgb(226, 226, 226)
+    }
+.spectrum-Tab[disabled] .spectrum-Tab-label {
+      color: rgb(73, 73, 73)
+    }
+.spectrum-TabList--anchored::before {
+    background-color: rgb(38, 38, 38);
+  }
+.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label {
+      color: rgb(133, 133, 133);
+    }
+.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label::after {
+        background-color: rgb(38, 38, 38);
+      }
+.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label {
+      color: rgb(226, 226, 226);
+    }
+.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label::after {
+        background-color: transparent;
+      }
+.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label,
+    .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label {
+      color: rgb(226, 226, 226);
+    }
+.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label::after, .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label::after {
+        background-color: rgb(226, 226, 226);
+      }
+.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label {
+      color: rgb(55, 142, 240);
+    }
+.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label::after {
+        background-color: rgb(20, 115, 230);
+      }
+.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label {
+        color: rgb(73, 73, 73);
+      }
+.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label::after {
+          background-color: transparent;
+        }
+/*
+Todo: Determine if unused mixins are required
+
+spectrum-tab-line-default() {
+  border-color: var(--spectrum-tab-border-color-default)
+}
+
+spectrum-tab-line-focus() {
+  border-color: var(--spectrum-tab-border-color-focus)
+}
+
+spectrum-tab-line-disabled() {
+  border-color: var(--spectrum-tab-border-color-disabled)
+}
+*/

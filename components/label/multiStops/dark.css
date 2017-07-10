@@ -1,0 +1,31 @@
+.spectrum--dark .spectrum-Label {
+  color: rgb(255, 255, 255);
+}
+/* topdoc
+---
+name: Label - Special
+description: A special label
+markup: |
+  <span class="spectrum-Label spectrum-Label--and">And</span>
+  <span class="spectrum-Label spectrum-Label--or">Or</span>
+  <br>
+  <span class="spectrum-Label spectrum-Label--active">Active</span>
+  <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
+
+*/
+.spectrum--dark .spectrum-Label--inactive,
+.spectrum--dark .spectrum-Label--grey {
+  background-color: rgb(112, 112, 112);
+}
+.spectrum--dark .spectrum-Label--green {
+  background-color: rgb(45, 157, 120);
+}
+.spectrum--dark .spectrum-Label--blue, .spectrum--dark .spectrum-Label--active, .spectrum--dark .spectrum-Label--and  {
+  background-color: rgb(38, 128, 235);
+}
+.spectrum--dark .spectrum-Label--red {
+  background-color: rgb(227, 72, 80);
+}
+.spectrum--dark .spectrum-Label--orange, .spectrum--dark .spectrum-Label--or {
+  background-color: rgb(230, 134, 25);
+}

@@ -1,0 +1,75 @@
+.spectrum--dark {
+
+/*
+Todo: Determine if unused mixins are required
+
+spectrum-tab-line-default() {
+  border-color: var(--spectrum-tab-border-color-default)
+}
+
+spectrum-tab-line-focus() {
+  border-color: var(--spectrum-tab-border-color-focus)
+}
+
+spectrum-tab-line-disabled() {
+  border-color: var(--spectrum-tab-border-color-disabled)
+}
+*/
+}
+/* topdoc
+---
+  name: Tab - Default
+  description: The default Spectrum Tab element
+  markup: |
+    <!-- TODO: add markup here -->
+
+*/
+.spectrum--dark .spectrum-Tab .spectrum-Tab-label {
+    color: rgb(153, 153, 153)
+  }
+.spectrum--dark .spectrum-Tab:hover .spectrum-Tab-label {
+      color: rgb(255, 255, 255)
+    }
+.spectrum--dark .spectrum-Tab:focus .spectrum-Tab-label {
+      color: rgb(255, 255, 255)
+    }
+.spectrum--dark .spectrum-Tab.is-selected .spectrum-Tab-label {
+      color: rgb(255, 255, 255)
+    }
+.spectrum--dark .spectrum-Tab[disabled] .spectrum-Tab-label {
+      color: rgb(92, 92, 92)
+    }
+.spectrum--dark .spectrum-TabList--anchored::before {
+    background-color: rgb(57, 57, 57);
+  }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label {
+      color: rgb(153, 153, 153);
+    }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label::after {
+        background-color: rgb(57, 57, 57);
+      }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label::after {
+        background-color: transparent;
+      }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label,
+    .spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label::after, .spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label::after {
+        background-color: rgb(255, 255, 255);
+      }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label {
+      color: rgb(75, 156, 245);
+    }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label::after {
+        background-color: rgb(38, 128, 235);
+      }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label {
+        color: rgb(92, 92, 92);
+      }
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label::after {
+          background-color: transparent;
+        }

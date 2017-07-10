@@ -1,0 +1,140 @@
+.spectrum-Tooltip {
+  padding: 8px 10px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+
+.spectrum-Tooltip-content {
+  display: inline-block;
+  position: relative;
+
+  width: auto;
+
+  padding: 6px 9px;
+
+  border-radius: 4px;
+
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+
+.spectrum-Tooltip-content .spectrum-Link {
+    pointer-events: all;
+  }
+
+.spectrum-Tooltip--large {
+  padding: 10px 14px;
+}
+
+.spectrum-Tooltip-typeIcon {
+  font-size: 0.875rem;
+  line-height: 0;
+}
+
+.spectrum-Tooltip-typeIcon:before {
+    vertical-align: sub;
+  }
+
+.spectrum-Tooltip--is-open {
+  opacity: 1;
+}
+
+.spectrum-Tooltip--top {
+  transform: translate(-50%, 8px) scale(.94);
+  top: -100%;
+  left: 50%;
+
+  // this moves the tooltip up, above the hovered component. this should be calculated by JS
+  margin-top: -26px;
+}
+
+.spectrum-Tooltip--right {
+  transform: translate(-8px, -50%) scale(.94);
+  top: 50%;
+  left: 100%;
+}
+
+.spectrum-Tooltip--right .spectrum-Tooltip-tip {
+    bottom: 50%;
+    left: -2px;
+    margin-bottom: -2px;
+    transform: rotate(90deg);
+  }
+
+.spectrum-Tooltip--left {
+  transform: translate(calc(-100% + 8px), -50%) scale(.94);
+  top: 50%;
+  left: 0;
+}
+
+.spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    bottom: 50%;
+    left: auto;
+    margin-bottom: -3px;
+    right: -6px;
+    transform: rotate(-90deg);
+  }
+
+.spectrum-Tooltip--bottom {
+  transform: translate(-50%, -8px) scale(.94);
+  bottom: -100%;
+  left: 50%;
+  margin-bottom: -28px;
+}
+
+.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
+    bottom: auto;
+    top: -4px;
+    transform: rotate(180deg);
+  }
+
+.spectrum-Tooltip-hover {
+  display: inline-block;
+  position: relative;
+}
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    transform: translate(-50%, 8px) scale(.94);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    transform: translate(-50%, -8px) scale(.94);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+    transform: translate(-100%, -50%) scale(1);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-tip {
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.spectrum-Tooltip-tip::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    bottom: 1px;
+    left: 1px;
+    position: absolute;
+    transform: rotate(45deg);
+  }

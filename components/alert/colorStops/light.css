@@ -1,0 +1,83 @@
+.spectrum-Alert {
+  background-color: rgb(255, 255, 255);
+  /* default color set to body color, header element overwrites this */
+  color: rgb(112, 112, 112);
+}
+.spectrum-Alert-header {
+  color: rgb(44, 44, 44);
+}
+.spectrum-Alert-content {
+  color: rgb(112, 112, 112);
+}
+/* topdoc
+---
+name: Alert - Info
+description: The Spectrum alert 'info'
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--info">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Info spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
+    <div class="spectrum-Alert-header">Infomation Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+.spectrum-Alert--info {
+  border-color: rgb(20, 115, 230);
+}
+.spectrum-Alert--info .spectrum-Alert--typeIcon {
+    color: rgb(20, 115, 230);
+  }
+/* topdoc
+---
+name: Alert - Error
+description: The Spectrum alert 'error'
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Alert-header">Error Alert - Oh no</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+.spectrum-Alert--error {
+  border-color: rgb(215, 55, 63);
+}
+.spectrum-Alert--error .spectrum-Alert--typeIcon {
+    color: rgb(215, 55, 63);
+  }
+/* topdoc
+---
+name: Alert - Success
+description: The Spectrum alert 'success'
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--success">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--CheckmarkCircle spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
+    <div class="spectrum-Alert-header">Successful Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+.spectrum-Alert--success {
+  border-color: rgb(38, 142, 108);
+}
+.spectrum-Alert--success .spectrum-Alert--typeIcon {
+    color: rgb(38, 142, 108);
+  }
+/* topdoc
+---
+name: Alert - Warning
+description: The Spectrum alert 'warning'
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--warning">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Alert-header">Warning Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+.spectrum-Alert--warning {
+  border-color: rgb(218, 123, 17);
+}
+.spectrum-Alert--warning .spectrum-Alert--typeIcon {
+    color: rgb(218, 123, 17);
+  }

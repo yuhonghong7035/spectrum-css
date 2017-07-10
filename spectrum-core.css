@@ -1,0 +1,2959 @@
+.spectrum {
+  font-family: adobe-clean, Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.spectrum:lang(zh-Hans) {
+    font-family: adobe-clean-han-simplified-c, adobe-clean, Helvetica, Arial, sans-serif;
+  }
+
+.spectrum:lang(zh) {
+    font-family: adobe-clean-han-traditional, adobe-clean, Helvetica, Arial, sans-serif;
+  }
+
+.spectrum:lang(ko) {
+    font-family: adobe-clean-han-korean, adobe-clean, Helvetica, Arial, sans-serif;
+  }
+
+.spectrum:lang(ja) {
+    font-family: adobe-clean-han-japanese,  adobe-clean, Helvetica, Arial, sans-serif;
+  }
+
+/* topdoc
+---
+  name: Typography - Default
+  description: The default Spectrum Typography elements
+  markup: |
+    <h1 class="spectrum-Heading--display">Display (h1)</h1>
+    <h1 class="spectrum-Heading--page-title">Page Title (h2)</h2>
+    <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
+    <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
+    <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
+
+    <p class="spectrum-Body--small">Small Body Text</p>
+    <p class="spectrum-Body">Default Body Text</p>
+    <p class="spectrum-Body--secondary">Secondary Body Text</p>
+    <p class="spectrum-Body--italic"> Body Text Italic</p>
+    <p class="spectrum-Body--large">Large Body Text</p>
+
+*/
+
+.spectrum,
+.spectrum-Body {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.spectrum-Body--italic {
+  font-style: italic;
+}
+
+.spectrum-Body--large {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.spectrum-Body--small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.spectrum-Body--secondary {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.spectrum-Heading--display {
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.spectrum-Heading--page-title {
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+.spectrum-Heading--subtitle1 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.spectrum-Heading--subtitle2 {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.spectrum-Heading--subtitle3 {
+  font-weight: 700;
+  font-size: 0.65625rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* topdoc
+---
+name: Link - Default
+description: A link
+markup: |
+  <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
+
+*/
+
+.spectrum-Link {
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+  outline: none;
+}
+
+.spectrum-Link[disabled] {
+    opacity: 0.15;
+  }
+
+/* topdoc
+---
+name: Link - Subtle
+description: A subtle link
+markup: |
+  <p> This uses <a href="#" class="spectrum-Link
+  spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
+
+*/
+
+.spectrum-Link--subtle {
+  text-decoration: underline;
+}
+
+.spectrum-Button {
+  display: inline-block;
+  box-sizing: border-box;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 16px;
+
+  height: 32px;
+  margin-right: 12px;
+  padding: 0 14px 1px; /* 1px to push up text, sits kind of low */
+
+  font-family: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+
+  /* Adjacent buttons should be aligned correctly */
+  vertical-align: top;
+
+  transition: background 150ms ease-out,
+              border-color 150ms ease-out,
+              color 150ms ease-out,
+              box-shadow 150ms ease-out;
+
+  cursor: pointer;
+}
+
+.spectrum-Button:focus {
+    outline: none;
+  }
+
+.spectrum-Button:disabled,
+  .spectrum-Button[disabled] {
+    cursor: default;
+  }
+
+/* Fix Firefox */
+
+.spectrum-Button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top: -2PX;
+    margin-bottom: -2PX;
+  }
+
+.spectrum-Button:hover,
+  .spectrum-Button:active {
+    box-shadow: none;
+  }
+
+.spectrum-Button .spectrum-Icon {
+    vertical-align: top;
+  }
+
+.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
+    margin-left: 8px;
+  }
+
+.spectrum-Button--action {
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0 12px;
+}
+
+.spectrum-Button--action--icon-only {
+  padding: 0 8px;
+}
+
+.spectrum-Button--quiet--action {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.spectrum-Button--quiet--action--icon-only {
+  padding: 0 8px;
+}
+
+.spectrum-Button--and,
+.spectrum-Button--or {
+  border-width: 2px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.spectrum-Button--block {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spectrum-Alert {
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 384px;
+  min-height: 38px;
+  margin: 8px 0;
+  padding: 16px 20px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.spectrum-Alert-typeIcon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  text-align: right;
+  font-size: 1.125rem;
+}
+
+.spectrum-Alert-header {
+  display: inline-block;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.875rem;
+  text-transform: none;
+}
+
+.spectrum-Alert-content {
+  display: block;
+  margin: 12px 0 0 0;
+  padding: 0;
+
+  font-size: 0.875rem;
+  word-wrap: break-word;
+}
+
+.spectrum-Alert-footer {
+  display: block;
+
+  text-align: right;
+
+  padding-top: 0.5rem;
+}
+
+.spectrum-Alert-footer:empty {
+    display: none;
+  }
+
+.spectrum-Alert-footer .spectrum-Button {
+    margin-right: 0;
+
+    /* Spacing between buttons */
+    margin-left: 0.75rem;
+  }
+
+.spectrum-Checkbox {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  height: 32px;
+  line-height: 2rem;
+}
+
+.spectrum-Checkbox-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+  z-index: 1;
+}
+
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+    border-width: 6px;
+  }
+
+.spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark {
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+}
+
+.spectrum-Checkbox-label {
+  margin: 0 8px;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  transition: color 150ms ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+
+  border-radius: 2px;
+  border-width: 2px;
+  border-style: solid;
+
+  vertical-align: middle;
+
+  transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.spectrum-Checkbox-checkmark::after {
+    position: absolute;
+    top: 11px;
+    left: 1px;
+    width: 10px;
+    height: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(0);
+
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+
+    content: '';
+  }
+
+/* topdoc
+---
+name: Label - Default
+description: A Spectrum label
+markup: |
+  <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
+
+  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
+
+  <span class="spectrum-Label spectrum-Label--blue">Blue Label</span>
+
+  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
+
+  <span class="spectrum-Label spectrum-Label--orange">Orange Label</span>
+
+
+*/
+
+.spectrum-Label {
+  display: inline-block;
+  position: relative;
+
+  width: auto;
+
+  padding: 6px 9px;
+
+  border-radius: 4px;
+
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+
+.spectrum-Label-typeIcon {
+  font-size: 0.875rem;
+  line-height: 0;
+}
+
+.spectrum-Label-typeIcon:before {
+    vertical-align: sub;
+  }
+
+/* topdoc
+---
+name: Label - Large
+description: A large Spectrum label
+markup: |
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
+  style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
+  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
+  style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
+  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
+  style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
+
+*/
+
+.spectrum-Label--large {
+  padding: 10px 14px;
+}
+
+@keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+.spectrum-Progress {
+  position: relative;
+  display: inline-block;
+  
+  min-width: 182px;
+  height: 6px;
+
+  vertical-align: top;
+}
+
+.spectrum-Progress-bar {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* rightLabel is the default style */
+  right: 40px;
+
+  height: 6px;
+}
+
+.spectrum-Progress-status {
+  height: 6px;
+
+  transition: width 1s;
+}
+
+.spectrum-Progress-label {
+  position: absolute;
+  top: 0;
+
+  height: 14px;
+  width: 30px;
+
+  font-size: 0.75rem;
+
+  right: 0;
+  padding-left: 10px;
+
+  text-align: left;
+}
+
+.spectrum-Progress--indeterminate .spectrum-Progress-status {
+    display: none;
+  }
+
+.spectrum-Progress--indeterminate .spectrum-Progress-bar {
+    transform: translateZ(0);
+  }
+
+.spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(-110%);
+
+      animation: spectrum-progress-indeterminate 934ms cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite forwards;
+    }
+
+.spectrum-Progress--leftLabel .spectrum-Progress-label {
+    left: 0;
+    padding-right: 10px;
+
+    /* resets the default rightLabel style */
+    padding-left: 0;
+
+    text-align: right;
+  }
+
+.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+    left: 40px;
+    right: 0;
+  }
+
+.spectrum-Progress--bottomLabel {
+  height: 20px;
+}
+
+.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+    top: 8px;
+    left: 0;
+    right: 0;
+    width: auto;
+
+    /* resets the default rightLabel style */
+    padding-left: 0;
+
+    /* text-align: center // Alan said to inherit */
+
+    line-height: inherit;
+  }
+
+.spectrum-Progress--bottomLabel .spectrum-Progress-bar {
+    /* resets the default rightLabel style */
+    right: 0;
+  }
+
+.spectrum-Progress--noLabel spectrum-progress--noLabel()
+
+  .spectrum-Progress-label {
+    display: none;
+  }
+
+.spectrum-Progress--noLabel .spectrum-Progress-bar {
+    right: 0;
+  }
+
+/* topdoc
+---
+name: Progress - Small
+description: A Spectrum 'small' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--small {
+  height: 4px;
+  min-width: 148px;
+}
+
+.spectrum-Progress--small .spectrum-Progress-label {
+    height: 13px;
+    width: 28px;
+
+    font-size: 0.6875rem;
+  }
+
+.spectrum-Progress--small .spectrum-Progress-status {
+    height: 4px;
+  }
+
+.spectrum-Progress--small .spectrum-Progress-bar {
+    height: 4px;
+    border-radius: 2px;
+  }
+
+.spectrum-Progress--small.spectrum-Progress--bottomLabel {
+    height: 17px;
+  }
+
+.spectrum-Progress--small.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+      top: 6px;
+      width: auto;
+
+      line-height: inherit;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 13px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 4.5px;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.8125rem;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 13px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 4.5px;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.8125rem;
+    }
+
+/* topdoc
+---
+name: Progress - Medium
+description: A Spectrum 'medium' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--medium .spectrum-Progress-bar {
+    border-radius: 4px;
+  }
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 14px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 4px;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.875rem;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 14px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 4px;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.875rem;
+    }
+
+/* topdoc
+---
+name: Progress - Large
+description: A Spectrum 'large' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--large {
+  height: 8px;
+  min-width: 272px;
+}
+
+.spectrum-Progress--large .spectrum-Progress-label {
+    height: 15px;
+    width: 32px;
+
+    font-size: 0.8125rem;
+  }
+
+.spectrum-Progress--large .spectrum-Progress-status {
+    height: 8px;
+  }
+
+.spectrum-Progress--large .spectrum-Progress-bar {
+    height: 8px;
+    border-radius: 6px;
+  }
+
+.spectrum-Progress--large.spectrum-Progress--bottomLabel {
+    height: 23px;
+  }
+
+.spectrum-Progress--large.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+      top: 10px;
+      width: auto;
+
+      line-height: inherit;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 15px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 3.5px;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.9375rem;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 15px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 3.5px;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.9375rem;
+    }
+
+.spectrum-Radio {
+  display: inline-block;
+  position: relative;
+
+  padding: 7px 0;
+
+  font-size: 0;
+}
+
+.spectrum-Radio-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: .0001;
+
+  cursor: pointer;
+}
+
+.spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+    border-width: 6px;
+  }
+
+.spectrum-Radio-label {
+  margin: 0 8px;
+
+  font-size: 0.875rem;
+
+  vertical-align: middle;
+
+  transition: color 150ms ease-in-out;
+}
+
+.spectrum-Radio-checkmark {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+
+  vertical-align: middle;
+
+  transition: border 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.spectrum-Textfield {
+  /* box */
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 0;
+  min-width: 110px;
+  height: 32px;
+  width: 192px;
+
+  vertical-align: top; /* used to align them correctly in forms. */
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-indent: 12px;
+
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+  outline: none;
+
+  /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
+  /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+
+  /* Remove the native clear button in IE */
+
+  /* removes the native spin buttons */
+}
+
+.spectrum-Textfield::-webkit-input-placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield:-ms-input-placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield::placeholder {
+    font-weight: normal;
+    font-style: italic;
+    transition: color 150ms ease-in-out;
+  }
+
+.spectrum-Textfield:hover::-webkit-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:hover:-ms-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:hover::placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled {
+    /* The opacity must be set to 1 */
+    -webkit-opacity: 1;
+  }
+
+.spectrum-Textfield:disabled::-webkit-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled:-ms-input-placeholder {
+      font-weight: normal;
+    }
+
+.spectrum-Textfield:disabled::placeholder {
+      font-weight: normal;
+    }
+
+/* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
+
+.spectrum-Textfield::-ms-clear {
+    width: 0;
+    height: 0;
+  }
+
+/* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
+
+.spectrum-Textfield::-webkit-inner-spin-button,
+  .spectrum-Textfield::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+/* removes the red border that appears in Firefox */
+
+.spectrum-Textfield:-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+.spectrum-Textfield--quiet {
+  border-radius: 0;
+  text-indent: 0;
+
+  border: none;
+  border-bottom: 1px solid;
+
+  /* removes the side padding to align the text properly */
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.spectrum-Textfield--multiline {
+  height: auto;
+  padding: 4px 8px;
+  text-indent: 0;
+}
+
+.spectrum-Textfield--quiet.spectrum-Textfield--multiline {
+  resize: none;
+  overflow-y: hidden;
+}
+
+.spectrum-Tooltip {
+  padding: 8px 10px;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+
+.spectrum-Tooltip-content {
+  display: inline-block;
+  position: relative;
+
+  width: auto;
+
+  padding: 6px 9px;
+
+  border-radius: 4px;
+
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+
+.spectrum-Tooltip-content .spectrum-Link {
+    pointer-events: all;
+  }
+
+.spectrum-Tooltip--large {
+  padding: 10px 14px;
+}
+
+.spectrum-Tooltip-typeIcon {
+  font-size: 0.875rem;
+  line-height: 0;
+}
+
+.spectrum-Tooltip-typeIcon:before {
+    vertical-align: sub;
+  }
+
+.spectrum-Tooltip--is-open {
+  opacity: 1;
+}
+
+.spectrum-Tooltip--top {
+  transform: translate(-50%, 8px) scale(.94);
+  top: -100%;
+  left: 50%;
+
+  // this moves the tooltip up, above the hovered component. this should be calculated by JS
+  margin-top: -26px;
+}
+
+.spectrum-Tooltip--right {
+  transform: translate(-8px, -50%) scale(.94);
+  top: 50%;
+  left: 100%;
+}
+
+.spectrum-Tooltip--right .spectrum-Tooltip-tip {
+    bottom: 50%;
+    left: -2px;
+    margin-bottom: -2px;
+    transform: rotate(90deg);
+  }
+
+.spectrum-Tooltip--left {
+  transform: translate(calc(-100% + 8px), -50%) scale(.94);
+  top: 50%;
+  left: 0;
+}
+
+.spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    bottom: 50%;
+    left: auto;
+    margin-bottom: -3px;
+    right: -6px;
+    transform: rotate(-90deg);
+  }
+
+.spectrum-Tooltip--bottom {
+  transform: translate(-50%, -8px) scale(.94);
+  bottom: -100%;
+  left: 50%;
+  margin-bottom: -28px;
+}
+
+.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
+    bottom: auto;
+    top: -4px;
+    transform: rotate(180deg);
+  }
+
+.spectrum-Tooltip-hover {
+  display: inline-block;
+  position: relative;
+}
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    transform: translate(-50%, 8px) scale(.94);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    transform: translate(-50%, -8px) scale(.94);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+    transform: translate(-100%, -50%) scale(1);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+    transform: translate(0, -50%) scale(1);
+    opacity: 1;
+  }
+
+.spectrum-Tooltip-tip {
+  position: absolute;
+  width: 8px;
+  height: 4px;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.spectrum-Tooltip-tip::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    bottom: 1px;
+    left: 1px;
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+@keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -1920px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -3840px center;
+  }
+}
+
+/* dots wait (three dots) */
+
+@keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1280px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -2560px center;
+  }
+}
+
+/* topdoc
+---
+name: Wait - Default (Radial) - Small
+description: A Spectrum Wait of default type (radial) in default size (small)
+markup: |
+  <span class="spectrum-Wait"></span>
+
+*/
+
+.spectrum-Wait {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+
+  width: 16px;
+  height: 16px;
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+---
+name: Wait - Default (Radial) - Medium
+description: A Spectrum Wait of default type (radial) in medium size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--medium"></span>
+
+*/
+
+.spectrum-Wait--medium {
+  width: 32px;
+  height: 32px;
+
+  animation-name: spectrum-wait-spinner-medium-animation;
+}
+
+/* topdoc
+---
+name: Wait - Default (Radial) - Large
+description: A Spectrum Wait of default type (radial) in large size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--large"></span>
+
+*/
+
+.spectrum-Wait--large {
+  width: 64px;
+  height: 64px;
+
+  animation-name: spectrum-wait-spinner-large-animation;
+}
+
+.spectrum-Wait--centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.spectrum-Wait--centered.spectrum-Wait--medium {
+    margin-top: -16px;
+    margin-left: -16px;
+  }
+
+.spectrum-Wait--centered.spectrum-Wait--large {
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+
+/* topdoc
+---
+name: Wait - Dots - Small
+description: A Spectrum wait of 'dots' type in the default (small) size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots"></span>
+
+*/
+
+.spectrum-Wait--dots {
+  background-repeat: no-repeat;
+
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(40);
+
+  width: 24px;
+  height: 9px;
+
+  background-size: auto 9px;
+
+  animation-name: spectrum-wait-dots-small-animation;
+}
+
+.spectrum-Wait--dots.spectrum-Wait--centered {
+    margin-top: -4.5px;
+    margin-left: -12px;
+  }
+
+/* topdoc
+---
+name: Wait - Dots - Medium
+description:  A Spectrum wait of 'dots' type in the medium size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
+
+*/
+
+.spectrum-Wait--dots.spectrum-Wait--medium {
+    width: 32px;
+    height: 12px;
+
+    background-size: auto 12px;
+
+    animation-name: spectrum-wait-dots-medium-animation;
+  }
+
+.spectrum-Wait--dots.spectrum-Wait--medium.spectrum-Wait--centered {
+      margin-top: -6px;
+      margin-left: -16px;
+    }
+
+/* topdoc
+---
+name: Wait - Dots - Large
+description: A Spectrum wait of 'dots' type in the ;arge size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
+
+*/
+
+.spectrum-Wait--dots.spectrum-Wait--large {
+    width: 64px;
+    height: 24px;
+
+    background-size: auto 24px;
+
+    animation-name: spectrum-wait-dots-large-animation;
+  }
+
+.spectrum-Wait--dots.spectrum-Wait--large.spectrum-Wait--centered {
+      margin-top: -12px;
+      margin-left: -32px;
+    }
+
+/* topdoc
+name: Dropdown - Default
+description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+markup: |
+  <h4>Closed - default</h4>
+  <div id="default-dropdown" class="spectrum-Dropdown" style="width: 185px;">
+    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-open-icon"></span>
+      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <div class="spectrum-Dropdown-menu">
+      <hr class="spectrum-Dropdown-divider">
+      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Open - default</h4>
+  <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
+    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-open-icon"></span>
+      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <div class="spectrum-Dropdown-menu">
+      <hr class="spectrum-Dropdown-divider">
+      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+*/
+
+.spectrum-Dropdown {
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.spectrum-Dropdown.is-disabled {
+    border-width: 0;
+  }
+
+.spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
+      border-width: 0;
+      cursor: default;
+    }
+
+/*
+    Todo: Determine if missing mixin is required?
+    spectrum-dropdown--open()
+    */
+
+.spectrum-Dropdown.is-open .spectrum-Dropdown-menu {
+      /*
+        Note: No position information included for this demo.
+        The implementation of Spectrum must calculate the fixed position of the dropdown relative to its trigger.
+      */
+      display: block;
+    }
+
+.spectrum-Dropdown.has-error .spectrum-Dropdown-open-icon::after {
+        /* make room for the alert icon */
+        right: 32px
+      }
+
+.spectrum-Dropdown.has-error .spectrum-Dropdown-error-icon {
+      display: inline;
+    }
+
+.spectrum-Dropdown.has-error .spectrum-Dropdown-trigger {
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+    }
+
+.spectrum-Dropdown.has-error .spectrum-Dropdown-trigger-label {
+      position: absolute;
+      left: 10px;
+    }
+
+.spectrum-Dropdown-trigger {
+  width: 100%;
+  height: 32px;
+  border-width: 0;
+  border-radius: 4px;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: inherit;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spectrum-Dropdown-trigger--placeholder {
+  font-style: italic;
+}
+
+.spectrum-Dropdown-menu {
+  display: none;
+}
+
+.spectrum-Dropdown-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum-Dropdown-option {
+  position: relative;
+
+  padding: 0 10px;
+  height: 32px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spectrum-Dropdown-option.is-selected::after {
+      position: absolute;
+      right: 10px;
+      top: 11px;
+
+      width: 12px;
+      height: 12px;
+
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+
+      transform: scale(1);
+      opacity: 1;
+
+      content: '';
+    }
+
+.spectrum-Dropdown-divider {
+  height: 1px;
+  width: calc(100% - 20px);
+  margin: 0;
+  margin-left: 10px;
+  border: none;
+}
+
+.spectrum-Dropdown-error-icon {
+  margin-left: 8px;
+  display: none;
+}
+
+.spectrum-Dropdown-open-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+}
+
+/* to create a gap between label and icon in quiet mode */
+
+.spectrum-Dropdown-open-icon::after {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 8px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: var(--spectrum-dropdown-chevron-icon-width) var(--spectrum-dropdown-chevron-icon-height); */
+
+    transform: scale(1);
+    opacity: 1;
+
+    content: '';
+  }
+
+/* topdoc
+name: Dropdown - Quiet
+description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+markup: |
+
+  <h4>Closed - Quiet</h4>
+  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
+    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-open-icon"></span>
+      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <div class="spectrum-Dropdown-menu">
+      <hr class="spectrum-Dropdown-divider">
+      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Open - Quiet</h4>
+  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-open-icon"></span>
+      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <div class="spectrum-Dropdown-menu">
+      <hr class="spectrum-Dropdown-divider">
+      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
+        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
+        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Dropdown--quiet {
+  border: none;
+}
+
+.spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
+    padding: 0;
+    margin: 0;
+
+    border-width: 0 0 2px 0;
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    -ms-flex-pack: start;
+
+        justify-content: flex-start;
+  }
+
+.spectrum-Dropdown--quiet .spectrum-Dropdown-option {
+    padding-right: 32px;
+  }
+
+.spectrum-Dropdown--quiet.is-open {
+    box-shadow: none;
+  }
+
+.spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-menu {
+      border-radius: 4px;
+    }
+
+.spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-divider {
+      display: none;
+    }
+
+.spectrum-Dropdown--quiet.has-error .spectrum-Dropdown-trigger-label {
+      position: static;
+    }
+
+/*
+.spectrum-Dropdown-trigger--focus {
+  spectrum-dropdown-trigger--focus()
+}
+
+.spectrum-Dropdown-option--focus {
+  spectrum-dropdown-option--focus()
+}
+
+.spectrum-Dropdown--quiet {
+  .spectrum-Dropdown-trigger--focus {
+    spectrum-dropdown-trigger--quiet--focus()
+  }
+}
+*/
+
+/* topdoc
+---
+name: Dialog - Default
+description: A Spectrum 'default' dialog (which is also the default style)
+markup: |
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
+  <div class="spectrum-Dialog" id="defaultDialog">
+    <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        <p>This Dialog is not centered.</p>
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
+        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+      </div>
+    </div>
+  </div>
+
+*/
+
+/*
+The full screen container in which the dialog resides
+Because of this contain, clicks will never fall though when a dialog is visible
+*/
+
+.spectrum-Dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Scroll vertically only */
+  display: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* Match the fade time of the backdrop */
+  transition: opacity 150ms;
+
+  opacity: 0;
+}
+
+.spectrum-Dialog.is-open {
+  display: block;
+
+  opacity: 1;
+}
+
+.spectrum-Dialog-header {
+  display: block;
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+
+  border-radius: 4px 4px 0 0;
+  outline: none;
+}
+
+/* Hide focus outline around header */
+
+.spectrum-Dialog-header::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    content: '';
+  }
+
+.spectrum-Dialog-content {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+
+  /* Stop right there! The dialog's body should NOT scroll */
+
+  outline: none; /* Hide focus outline */
+}
+
+.spectrum-Dialog-footer {
+  border-radius: 0 0 4px 4px;
+
+  text-align: right; /* right align buttons */
+
+  outline: none;
+}
+
+/* Hide focus outline */
+
+.spectrum-Dialog-footer:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+.spectrum-Dialog-footer .spectrum-Button {
+    margin: 16px 12px 0 0;
+  }
+
+.spectrum-Dialog-footer .spectrum-Button:last-child {
+      margin-right: 0;
+    }
+
+.spectrum-Dialog-wrapper {
+  display: block;
+
+  min-width: 320px;
+  max-width: 90%;
+  margin: 40px;
+  padding: 25px;
+
+  border-radius: 4px;
+  outline: none; /* Firefox shows outline */
+}
+
+.spectrum-Dialog-title {
+  font-size: 1.125rem;
+  line-height: 100%;
+
+  overflow: visible;
+
+  padding-left: 0;
+  padding-right: 15px;
+
+  margin: 0 !important; /* Undo margin from heading rules */
+
+  outline: none; /* Hide focus outline */
+}
+
+.spectrum-Dialog-typeIcon {
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+
+.spectrum-Dialog-closeButton {
+  line-height: 1.125rem;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: none;
+
+  width: 18px;
+  height: 18px;
+}
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-wrapper {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 100%; /* Fit vertically */
+    min-width: 100%; /* Fit vertically */
+    max-width: none;
+    height: auto; /* Variable height */
+    min-height: 100%; /* Full screen height */
+    max-height: none;
+    margin: 0;
+
+    border: none; /* Remove border */
+  }
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-header {
+    position: fixed; /* Fixed so the header stays top even it scrolls. */
+    top: 0;
+    right: 25px;
+    left: 25px;
+
+    box-sizing: content-box;
+    width: auto;
+    padding-top: 25px;
+  }
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-typeIcon {
+    top: 23px;
+  }
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-footer,
+  .spectrum-Dialog--fullscreen .spectrum-Dialog-header {
+    /* Fix a relatively nasty Chrome bug involving nested position: fixed elements */
+    /* https://code.google.com/p/chromium/issues/detail?id=178651 */
+    transform: translate3d(0, 0, 0);
+
+    position: fixed; /* Fixed so the footer stays bottom even it scrolls. */
+    right: 25px;
+    bottom: 0;
+    left: 25px;
+
+    padding-top: 12.5px;
+    padding-bottom: 12.5px; /* looks better with half padding. */
+  }
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-content {
+    padding-top: 30px;
+  }
+
+:root {
+
+  /* Todo: Remove hardcoded values */
+}
+
+.spectrum-Slider {
+  position: relative;
+  display: block;
+  min-height: 32px;
+  width: 240px;
+}
+
+.spectrum-Slider--disabled {
+  cursor: default;
+}
+
+.spectrum-Slider--disabled .spectrum-Slider-handle {
+  cursor: default;
+}
+
+.spectrum-Slider-controls {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  z-index: auto;
+  margin: 0 8px 1px;
+  width: calc(100% - 16px); /* Todo: Client-side calc? */
+  height: 32px;
+}
+
+.spectrum-Slider-track {
+  border-radius: 4px;
+  pointer-events: none;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0 16px 0 0;
+
+  position: absolute;
+  width: 100%;
+  margin-left: -8px;
+}
+
+.spectrum-Slider-track--fill {
+  width: 0;
+  position: relative;
+  margin-left: 0;
+}
+
+.spectrum-Slider-track--buffer {
+  position: absolute;
+  margin-bottom: -2px;
+  margin-left: 0;
+}
+
+.spectrum-Slider-track--ramp {
+  height: 16px;
+  position: absolute;
+  top: -7px;
+}
+
+.spectrum-Slider--disabled .spectrum-Slider-track {
+  margin-left: -8px;
+}
+
+.spectrum-Slider-handle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  z-index: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  transition: border 150ms ease-in-out;
+}
+
+.spectrum-Slider-input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: .000001;
+  cursor: default;
+  -webkit-appearance: none;
+  border: 0;
+  pointer-events: none;
+}
+
+.spectrum-Slider-Label {
+  display: block;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  display:inline-block;
+  position:relative;
+  padding: 6px 9px;
+  line-height: 0.75rem;
+  width:auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+
+.spectrum-Slider-Label--Name {
+  padding-left: 0;
+}
+
+.spectrum-Slider-Label--Value {
+  float: right;
+  padding-right: 0;
+}
+
+.spectrum-Slider-Label--Tick {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 16px 0 0 0;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/*
+Todo: Determine if missing mixin is required
+.spectrum-Slider--tick {
+  spectrum-slider-tick()
+}
+*/
+
+.spectrum-Slider-ticks {
+  position: absolute;
+  margin-left: -8px;
+  margin-right: -8px;
+  top: 11px;
+  left: 0;
+  right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  z-index: 0;
+}
+
+.spectrum-Slider--tick--labelled {
+  margin-bottom: 16px;
+}
+
+.spectrum-Slider-tick-mark {
+  position: relative;
+  width: 2px;
+  height: 10px;
+}
+
+.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-Label--Tick {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+
+.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-Label--Tick {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+
+.spectrum-Slider--color .spectrum-Slider-track {
+    height: 24px;
+    top: 8px;
+  }
+
+.spectrum-Slider--color .spectrum-Slider-handle {
+    left: 40%;
+    top: 60%;
+  }
+
+.spectrum-Slider.spectrum-Slider--round {
+  display: inline-block;
+  width: 48px;
+  height: auto;
+}
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    display: inline-block;
+    margin-right: 24px;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+    transition: all 150ms ease-in-out;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before,
+    .spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+      content: '';
+      width: 4px;
+      height: 2px;
+      border-radius: 1px;
+      position: absolute;
+      bottom: 0;
+    }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before {
+      left: auto;
+      right: -2px;
+      transform: rotate(45deg);
+    }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+      left: -2px;
+      transform: rotate(-45deg);
+    }
+
+.spectrum-Slider.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
+      width: 24px;
+      height: 24px;
+    }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle {
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+    box-shadow: none;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 16px;
+  }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle:focus {
+      border-width: 2px;
+    }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -2px;
+      width: 12px;
+      height: 2px;
+      border-radius: 1px;
+      transform: translateY(-50%);
+      transition: background-color 150ms ease-in-out;
+    }
+
+.spectrum-TabList {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0;
+}
+
+.spectrum-TabList * { outline: none; }
+
+.spectrum-TabList .spectrum-Tab {
+    cursor: pointer;
+  }
+
+.spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
+      position: relative;
+      vertical-align: middle;
+      font-size: 1.125rem;
+    }
+
+.spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
+      position: relative;
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.0625rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+.spectrum-TabList .spectrum-Tab.is-disabled {
+      cursor: default;
+    }
+
+/* topdoc
+---
+  name: TabList - Horizontal - Label
+  description: The Spectrum tab list with labels in horizontal mode 
+  modifiers:
+    ':disabled': Disabled state
+    ':hover': Hover state
+    ':focus': Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal">
+      <div class="spectrum-Tab is-selected">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+    </div>
+
+
+*/
+
+/* topdoc
+---
+  name: TabList - Horizontal - Icon
+  description: The Spectrum tab list with icons in horizontal mode 
+  modifiers:
+    ':disabled': Disabled state
+    ':hover': Hover state
+    ':focus': Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal">
+      <div class="spectrum-Tab is-selected">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+    </div> 
+*/
+
+.spectrum-TabList--horizontal,
+.spectrum-TabList--anchored {
+  display: block;
+}
+
+.spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
+    position: relative;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    margin: 0 15px 0 0;
+    padding: 0px 8px;
+    line-height: 2rem;
+  }
+
+.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon {
+      margin-right: 5px;
+    }
+
+.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon:last-child, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon:last-child {
+        margin-right: 0px;
+      }
+
+.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-label, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
+      padding: 6px 0;
+    }
+
+/* Horizontal Active Tab Line */
+
+.spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
+      .spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-icon:after,
+      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
+      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        border-bottom: 2px solid;
+      }
+
+/* topdoc
+---
+  name: TabList - Vertical - Label
+  description: The Spectrum tab list with labels in vertical mode
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical">
+      <div class="spectrum-Tab is-selected">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+    </div>
+*/
+
+/* topdoc
+---
+  name: TabList - Vertical - Icon
+  description: The Spectrum tab list with icons in vertical mode
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical">
+      <div class="spectrum-Tab is-selected">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+    </div>
+*/
+
+.spectrum-TabList--vertical {
+  display: inline-block;
+}
+
+.spectrum-TabList--vertical .spectrum-Tab {
+    display: block;
+    overflow: visible; /* overflow: ellipsis; */
+    min-width: 0;
+    margin: 0 0 4px 0;
+    float: none;
+
+    text-align: left;
+  }
+
+.spectrum-TabList--vertical .spectrum-Tab:last-child {
+      margin-bottom: 0;
+    }
+
+.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-icon {
+      padding: 4px 7px;
+      height: 24px;
+      line-height: 1.5rem;
+      vertical-align: middle;
+    }
+
+.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-label {
+      padding: 4px 7px;
+      height: 16px;
+      line-height: 1rem;
+      vertical-align: middle;
+    }
+
+/* Vertical Active Tab Line */
+
+.spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
+      .spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        bottom: 4px;
+        /* top = bottom = label vertical padding | is hackfix making the left active bar
+          as tall as the (label.height - label.vertical-padding) / 2 */
+
+        display: block;
+        width: 2px;
+        height: auto;
+
+        border: none; /* reset border */
+        border-left: 2px solid;
+      }
+
+/* topdoc
+---
+  name: TabList - Anchored
+  description: The Spectrum anchored tab list.
+  markup: |
+    <ul class="spectrum-TabList spectrum-TabList--anchored">
+      <li class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Monday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="1">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="2">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </li>
+      <li class="spectrum-Tab" tabindex="3">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </li>
+      <li class="spectrum-Tab is-disabled" tabindex="4">
+        <label class="spectrum-Tab-label">Friday</label>
+      </li>
+    </ul>
+
+*/
+
+.spectrum-TabList--anchored {
+  list-style-type: none;
+  height: 32px;
+}
+
+.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
+      cursor: pointer;
+      text-transform: none;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+
+.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label::after,
+  .spectrum-TabList--anchored::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+  }
+
+/* Large Tab (Bigger font and no uppercase) */
+
+.spectrum-TabList--large .spectrum-Tab {
+  margin: 0 17px 0 0;
+  padding: 10px 8px;
+
+  text-transform: none;
+  font-size: 0.875rem;
+}
+
+:root {
+  /* The width of a step */
+
+  /* The diameter of the marker */
+
+  /* The width of the hit area */
+
+  /* The height of the line */
+
+  /* This gives enough space for one line of text */
+
+  /* This gives enough space for the longest possible label */
+
+  /* Offset from the BOTTOM of the steplist */
+
+  /* Font size of the label */
+}
+
+/* topdoc
+---
+name: Steplist - Plain
+description: A steplist w/o labels or tooltips
+markup: |
+  <div class="spectrum-Steplist spectrum-Steplist--small">
+    <div class="spectrum-Steplist-step is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+    <div class="spectrum-Steplist-step is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step is-selected">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Steplist-segment"></span>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Steplist {
+  display: block;
+  vertical-align: top;
+  margin: 0;
+  padding-top: 22px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0; /* To remove html whitespace between inline elements */
+  line-height: 1rem; /* in case the container changes it */
+}
+
+.spectrum-Steplist--interactive .spectrum-Steplist-label,
+  .spectrum-Steplist--interactive .spectrum-Steplist-markerContainer {
+    /* Show cursor on hit zone when clickable */
+    cursor: pointer;
+  }
+
+/* Small (w/o label or tooltip) */
+
+.spectrum-Steplist--small {
+  padding: 11px 0;
+}
+
+.spectrum-Steplist--small .spectrum-Steplist-step {
+    padding: 0 40px 0 0;
+    width: 80px;
+  }
+
+/* Disable Label */
+
+.spectrum-Steplist--small .spectrum-Steplist-step .spectrum-Steplist-label {
+      display: none;
+    }
+
+.spectrum-Steplist--small .spectrum-Steplist-step:first-child, .spectrum-Steplist--small .spectrum-Steplist-step:last-child {
+      width: 20px;
+    }
+
+/* Disable first line */
+
+.spectrum-Steplist--small .spectrum-Steplist-step:first-child .spectrum-Steplist-markerContainer {
+        margin-left: -10px;
+      }
+
+.spectrum-Steplist--small .spectrum-Steplist-step:last-child .spectrum-Steplist-markerContainer {
+        margin-right: -10px;
+      }
+
+.spectrum-Steplist-step {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+  width: 80px;
+  padding: 0 40px 0 0;
+}
+
+/* Completed State */
+
+.spectrum-Steplist-step.is-complete .spectrum-Steplist-marker {
+      border: none;
+    }
+
+/* The next step's line should be solid */
+
+.spectrum-Steplist-step.is-complete + .spectrum-Steplist-step .spectrum-Steplist-segment {
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+
+/* Selected state */
+
+/* Focus */
+
+.spectrum-Steplist-step.is-selected:focus {
+      outline: none;
+    }
+
+.spectrum-Steplist-step.is-selected .spectrum-Steplist-marker {
+      border: none;
+    }
+
+/* topdoc
+---
+name: Steplist - With Label
+description: A steplist with labels
+markup: |
+  <div class="spectrum-Steplist">
+    <div class="spectrum-Steplist-step is-complete">
+        <span class="spectrum-Steplist-label">Step 1</span>
+        <span class="spectrum-Steplist-markerContainer">
+          <span class="spectrum-Steplist-marker"></span>
+        </span>
+        <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step is-complete">
+        <span class="spectrum-Steplist-label">Step 2</span>
+        <span class="spectrum-Steplist-markerContainer">
+          <span class="spectrum-Steplist-marker"></span>
+        </span>
+        <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step is-selected">
+        <span class="spectrum-Steplist-label">Step 3</span>
+        <span class="spectrum-Steplist-markerContainer">
+          <span class="spectrum-Steplist-marker"></span>
+        </span>
+        <span class="spectrum-Steplist-segment"></span>
+    </div>
+    <div class="spectrum-Steplist-step">
+        <span class="spectrum-Steplist-label">Step 4</span>
+        <span class="spectrum-Steplist-markerContainer">
+          <span class="spectrum-Steplist-marker"></span>
+        </span>
+        <span class="spectrum-Steplist-segment"></span>
+    </div>
+  <div>
+
+*/
+
+.spectrum-Steplist-label {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+
+  display: block;
+  width: 120px;
+
+  font-size: 0.75rem;
+  white-space: normal;
+
+  transform: translateX(-50%);
+}
+
+.spectrum-Steplist-markerContainer {
+  display: block;
+
+  z-index: 2;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  margin-left: -10px;
+}
+
+/* Circle step marker */
+
+.spectrum-Steplist-marker {
+  box-sizing: border-box; /* So we can stroke nicely */
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -4px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 8px;
+
+  border: 2px solid;
+  border-color: transparent;
+  background: transparent;
+}
+
+/* Step line */
+
+.spectrum-Steplist-segment {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 68px;
+  width: 104px;
+  bottom: -1px;
+
+  /* Default is dashed */
+  border-bottom-width: 2px;
+  border-bottom-style: dashed;
+}
+
+/* First step overrides */
+
+.spectrum-Steplist-step:first-child .spectrum-Steplist-markerContainer {
+    left: 0;
+  }
+
+.spectrum-Steplist-step:first-child .spectrum-Steplist-label {
+    left: 0;
+  }
+
+.spectrum-Steplist-step:first-child .spectrum-Steplist-segment {
+    /* Not visible for first step */
+    display: none;
+  }
+
+.spectrum-Steplist-step:first-child .spectrum-Steplist-tooltip {
+    left: 0 !important;
+  }
+
+/* Last step overrides */
+
+.spectrum-Steplist-step:last-child .spectrum-Steplist-label {
+    left: auto;
+    right: 0;
+
+    transform: translateX(50%);
+  }
+
+.spectrum-Steplist-step:last-child .spectrum-Steplist-markerContainer {
+    left: auto;
+    right: 0;
+
+    margin-left: 0;
+    margin-right: -10px;
+  }
+
+.spectrum-Steplist-step:last-child .spectrum-Steplist-segment {
+    right: 8px;
+    left: auto;
+  }
+
+.spectrum-Steplist-step:last-child .spectrum-Steplist-tooltip {
+    left: auto;
+    right: 0;
+    transform: translate(50%, -10px) !important;
+  }
+
+.spectrum-Steplist-step:first-child,
+.spectrum-Steplist-step:last-child {
+  width: 20px;
+}
+
+/* Single step */
+
+.spectrum-Steplist-step:only-child .spectrum-Steplist-label {
+    /* Be centered */
+    left: 50%;
+
+    /* Override last-child bits */
+    transform: translate(-50%);
+  }
+
+.spectrum-Steplist-step:only-child .spectrum-Steplist-markerContainer {
+    /* Be centered */
+    left: 50%;
+
+    /* Override last-child bits */
+    margin-right: 0;
+    margin-left: -10px;
+  }
+
+/* topdoc
+---
+name: Steplist - With Tooltip
+description: A steplist with tooltips
+markup: |
+  <div class="spectrum-Steplist">
+    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+        <span class="spectrum-Tooltip-content">Step 1<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+        <span class="spectrum-Tooltip-content">Step 2<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-selected">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+        <span class="spectrum-Tooltip-content">Step 3<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+    <div class="spectrum-Steplist-step spectrum-Tooltip-hover">
+      <span class="spectrum-Steplist-markerContainer">
+        <span class="spectrum-Steplist-marker"></span>
+      </span>
+      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+        <span class="spectrum-Tooltip-content">Step 4<div class="spectrum-Tooltip-tip"></div></span>
+      </span>
+      <span class="spectrum-Steplist-segment">
+      </span>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Steplist-tooltip {
+  /* adjust the tooltip position */
+  margin-top: -40px !important;
+}
+
+/* topdoc
+---
+name: Toggle Switch - On/Off
+description: The Spectrum toggle on/off
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-0">Toggle Off</label>
+  </div>
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-1" checked>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-1">Toggle On</label>
+  </div>
+
+
+*/
+
+.spectrum-ToggleSwitch {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  height: 32px;
+  line-height: 2rem;
+}
+
+.spectrum-ToggleSwitch-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: .0001;
+  z-index: 1;
+
+  cursor: pointer;
+}
+
+.spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::after {
+      transform: translateX(12px);
+    }
+
+/* topdoc
+---
+name: Toggle Switch - On/Off - Disabled
+description: The Spectrum toggle on/off - disabled
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle Off</label>
+  </div>
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle On</label>
+  </div>
+
+
+*/
+
+.spectrum-ToggleSwitch-input:disabled,
+  .spectrum-ToggleSwitch-input[disabled] {
+    cursor: default;
+  }
+
+.spectrum-ToggleSwitch-label {
+  margin: 0 8px;
+  font-size: 0.875rem;
+  vertical-align: middle;
+  transition: color 150ms ease-in-out;
+}
+
+.spectrum-ToggleSwitch-content {
+  display: inline-block;
+  /* positions the pseudo elements relative to this one */
+  position: relative;
+
+  height: 14px;
+  width: 26px;
+
+  vertical-align: middle;
+}
+
+.spectrum-ToggleSwitch-content::before,
+  .spectrum-ToggleSwitch-content::after {
+    display: block;
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+  }
+
+/* ::before is used for the track of the switch */
+
+.spectrum-ToggleSwitch-content::before {
+    transition: background 150ms ease-in-out, border 150ms ease-in-out;
+
+    height: 14px;
+
+    left: 0;
+    right: 0;
+
+    border-radius: 7px;
+  }
+
+/* ::after is used for the handle of the switch */
+
+.spectrum-ToggleSwitch-content::after {
+    transition: background 150ms ease-in-out, border 150ms ease-in-out, transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+    width: 14px;
+    height: 14px;
+
+    top: 0;
+    left: 0;
+
+    border-width: 2px;
+    border-radius: 7px;
+    border-style: solid;
+  }
+
+.spectrum-Flyout {
+  position: relative;
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  min-width: 192px;
+  min-height: 32px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+.spectrum-Flyout-option {
+  cursor: pointer;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  padding: 0 34px 0 12px;
+  margin: 0;
+
+  height: 32px;
+  line-height: 2rem;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spectrum-Flyout-option:focus {
+    outline: none;
+  }
+
+.spectrum-Flyout-option.is-selected::after {
+      position: absolute;
+      right: 0;
+
+      width: 22px;
+      height: 32px;
+
+      background-repeat: no-repeat;
+      background-size: 10px 8px;
+      background-position: right 12px center;
+
+      transform: scale(1);
+      opacity: 1;
+
+      content: '';
+    }
+
+.spectrum-Flyout-divider {
+  height: 1px;
+  margin: 8px 0;
+  padding: 0 0;
+  border: none;
+}

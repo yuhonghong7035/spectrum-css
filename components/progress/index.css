@@ -1,0 +1,359 @@
+@keyframes spectrum-progress-indeterminate {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+.spectrum-Progress {
+  position: relative;
+  display: inline-block;
+  
+  min-width: 182px;
+  height: 6px;
+
+  vertical-align: top;
+}
+
+.spectrum-Progress-bar {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* rightLabel is the default style */
+  right: 40px;
+
+  height: 6px;
+}
+
+.spectrum-Progress-status {
+  height: 6px;
+
+  transition: width 1s;
+}
+
+.spectrum-Progress-label {
+  position: absolute;
+  top: 0;
+
+  height: 14px;
+  width: 30px;
+
+  font-size: 0.75rem;
+
+  right: 0;
+  padding-left: 10px;
+
+  text-align: left;
+}
+
+.spectrum-Progress--indeterminate .spectrum-Progress-status {
+    display: none;
+  }
+
+.spectrum-Progress--indeterminate .spectrum-Progress-bar {
+    transform: translateZ(0);
+  }
+
+.spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: translateX(-110%);
+
+      animation: spectrum-progress-indeterminate 934ms cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite forwards;
+    }
+
+.spectrum-Progress--leftLabel .spectrum-Progress-label {
+    left: 0;
+    padding-right: 10px;
+
+    /* resets the default rightLabel style */
+    padding-left: 0;
+
+    text-align: right;
+  }
+
+.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+    left: 40px;
+    right: 0;
+  }
+
+.spectrum-Progress--bottomLabel {
+  height: 20px;
+}
+
+.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+    top: 8px;
+    left: 0;
+    right: 0;
+    width: auto;
+
+    /* resets the default rightLabel style */
+    padding-left: 0;
+
+    /* text-align: center // Alan said to inherit */
+
+    line-height: inherit;
+  }
+
+.spectrum-Progress--bottomLabel .spectrum-Progress-bar {
+    /* resets the default rightLabel style */
+    right: 0;
+  }
+
+.spectrum-Progress--noLabel spectrum-progress--noLabel()
+
+  .spectrum-Progress-label {
+    display: none;
+  }
+
+.spectrum-Progress--noLabel .spectrum-Progress-bar {
+    right: 0;
+  }
+
+/* topdoc
+---
+name: Progress - Small
+description: A Spectrum 'small' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--small {
+  height: 4px;
+  min-width: 148px;
+}
+
+.spectrum-Progress--small .spectrum-Progress-label {
+    height: 13px;
+    width: 28px;
+
+    font-size: 0.6875rem;
+  }
+
+.spectrum-Progress--small .spectrum-Progress-status {
+    height: 4px;
+  }
+
+.spectrum-Progress--small .spectrum-Progress-bar {
+    height: 4px;
+    border-radius: 2px;
+  }
+
+.spectrum-Progress--small.spectrum-Progress--bottomLabel {
+    height: 17px;
+  }
+
+.spectrum-Progress--small.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+      top: 6px;
+      width: auto;
+
+      line-height: inherit;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 13px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 4.5px;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.8125rem;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 13px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 4.5px;
+    }
+
+.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.8125rem;
+    }
+
+/* topdoc
+---
+name: Progress - Medium
+description: A Spectrum 'medium' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--medium .spectrum-Progress-bar {
+    border-radius: 4px;
+  }
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 14px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 4px;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.875rem;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 14px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 4px;
+    }
+
+.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.875rem;
+    }
+
+/* topdoc
+---
+name: Progress - Large
+description: A Spectrum 'large' progress (normal & indeterminate)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Progress-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Progress-bar">
+        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
+      </div>
+      <div class="spectrum-Progress-label">indeterminate</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Progress--large {
+  height: 8px;
+  min-width: 272px;
+}
+
+.spectrum-Progress--large .spectrum-Progress-label {
+    height: 15px;
+    width: 32px;
+
+    font-size: 0.8125rem;
+  }
+
+.spectrum-Progress--large .spectrum-Progress-status {
+    height: 8px;
+  }
+
+.spectrum-Progress--large .spectrum-Progress-bar {
+    height: 8px;
+    border-radius: 6px;
+  }
+
+.spectrum-Progress--large.spectrum-Progress--bottomLabel {
+    height: 23px;
+  }
+
+.spectrum-Progress--large.spectrum-Progress--bottomLabel .spectrum-Progress-label {
+      top: 10px;
+      width: auto;
+
+      line-height: inherit;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel {
+    /* Be the same height as the label */
+    height: 15px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-bar {
+      top: 3.5px;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-label {
+      line-height: 0.9375rem;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel {
+    /* Be the same height as the label */
+    height: 15px;
+  }
+
+/* Move the bar to the vertical center */
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-bar {
+      top: 3.5px;
+    }
+
+.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-label {
+      line-height: 0.9375rem;
+    }

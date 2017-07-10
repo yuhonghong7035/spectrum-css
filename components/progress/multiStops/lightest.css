@@ -1,0 +1,7 @@
+.spectrum--lightest .spectrum-Progress-bar {
+  background-color: rgb(234, 234, 234);
+}
+.spectrum--lightest .spectrum-Progress-status,
+.spectrum--lightest .spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
+  background: rgb(55, 142, 240);
+}

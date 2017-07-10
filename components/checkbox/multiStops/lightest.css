@@ -1,0 +1,81 @@
+.spectrum--lightest .spectrum-Checkbox-label {
+  color: rgb(80, 80, 80);
+}
+.spectrum--lightest .spectrum-Checkbox-checkmark {
+  border-color: rgb(149, 149, 149);
+}
+.spectrum--lightest .spectrum-Checkbox-checkmark::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 8' enable-background='new 0 0 10 8' xml:space='preserve'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M3.8%2C7.4C3.5%2C7.4%2C3.2%2C7.3%2C3%2C7.1L0.8%2C4.8c-0.4-0.4-0.4-1%2C0-1.4s1-0.4%2C1.4%2C0L3.8%2C5l4-4c0.4-0.4%2C1-0.4%2C1.4%2C0 s0.4%2C1%2C0%2C1.4L4.5%2C7.1C4.3%2C7.3%2C4%2C7.4%2C3.8%2C7.4z'/%3E%3C/svg%3E");
+  }
+.spectrum--lightest .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+    border-color: rgb(149, 149, 149);
+  }
+.spectrum--lightest .spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+  }
+/* topdoc
+---
+name: Checkbox - Default
+description: The Spectrum checkbox
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+  </div>
+
+*/
+.spectrum--lightest .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
+      border-color: rgb(50, 50, 50);
+      box-shadow: none;
+    }
+.spectrum--lightest .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
+      border-color: rgb(118, 118, 118);
+    }
+/* topdoc
+---
+name: Checkbox - Disabled
+description: The 'disabled' Spectrum checkbox
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-disabled is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
+  </div>
+
+*/
+.spectrum--lightest .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-checkmark {
+    border-color: rgb(211, 211, 211);
+  }
+.spectrum--lightest .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
+    color: rgb(188, 188, 188);
+  }

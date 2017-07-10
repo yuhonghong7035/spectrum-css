@@ -1,0 +1,40 @@
+extends default-layout
+
+block append vars
+  - var relativePath = '../../../../'
+  - var bodyclass = 'article'
+  - var fullUrl = site.url + '/' + path
+  - var navKey = 'articles'
+
+block prepend title
+  | #{pageTitle + " • "}
+
+block append head
+  link(rel='canonical', href=fullUrl)
+
+block presentation
+  section.sdldocs-home-presentation.row.center-xs
+    .sdldocs-home-content.col-xs
+      .box
+        h1.spectrum-Heading.spectrum-Heading--display=pageTitle
+        if teaser
+          p.spectrum-Text.spectrum-Text--large.sdldocs-home-presentation-pitch= teaser
+
+block content
+  .sdldocs-main-content.row
+    .sdldocs-components.col-xs-12.col-sm-8
+      article.sdldocs-article.box
+        != contents
+
+      footer.sdldocs-article-footer
+        .row
+          .sdldocs-components.col-xs-12
+            .slddocs-article-author=author
+            small.article-date
+              time(datetime=date)= moment(date).format('D MMMM YYYY')
+        .row
+          .sdldocs-components.col-xs-12
+            .sdldocs-article-back
+              a.sdldocs-link(href='../../../../articles') back to article list
+
+

@@ -1,0 +1,56 @@
+/* topdoc
+---
+name: Flyout
+description: Spectrum Flyouts
+markup: |
+      <h4>Flyout - Default</h4>
+      <ul class="spectrum-Flyout" role="menu" tabindex="0">
+        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-Flyout-divider">
+        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+
+*/
+.spectrum--dark .spectrum-Flyout {
+  background-color: rgb(37, 37, 37);
+  border-color: rgb(77, 77, 77);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.spectrum--dark .spectrum-Flyout-option {
+  background-color: transparent;
+  color: rgb(205, 205, 205);
+}
+.spectrum--dark .spectrum-Flyout-option:focus {
+    background-color: rgba(rgb(255, 255, 255), .04);
+    color: rgb(205, 205, 205);
+    background-image: linear-gradient(to right, rgb(38, 128, 235) 0%, rgb(38, 128, 235) 2px, transparent 2px, transparent 100%);
+  }
+.spectrum--dark .spectrum-Flyout-option:focus.is-selected {
+      background-color: rgba(rgb(255, 255, 255), .04);
+      color: rgb(75, 156, 245);
+      background-image: linear-gradient(to right, rgb(38, 128, 235) 0%, rgb(38, 128, 235) 2px, transparent 2px, transparent 100%);
+    }
+.spectrum--dark .spectrum-Flyout-option:hover {
+    background-color: rgba(rgb(255, 255, 255), .04);
+    color: rgb(205, 205, 205);
+  }
+.spectrum--dark .spectrum-Flyout-option:hover.is-selected {
+      background-color: rgba(rgb(255, 255, 255), .04);
+      color: rgb(75, 156, 245);
+    }
+.spectrum--dark .spectrum-Flyout-option.is-selected {
+    background-color: transparent;
+    color: rgb(75, 156, 245);
+  }
+.spectrum--dark .spectrum-Flyout-option.is-selected::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 8' enable-background='new 0 0 10 8' xml:space='preserve'%3E%3Cpath style='fill:rgb%2838%2C 128%2C 235%29' d='M3.8%2C7.4C3.5%2C7.4%2C3.2%2C7.3%2C3%2C7.1L0.8%2C4.8c-0.4-0.4-0.4-1%2C0-1.4s1-0.4%2C1.4%2C0L3.8%2C5l4-4c0.4-0.4%2C1-0.4%2C1.4%2C0 s0.4%2C1%2C0%2C1.4L4.5%2C7.1C4.3%2C7.3%2C4%2C7.4%2C3.8%2C7.4z'/%3E%3C/svg%3E");
+    }
+.spectrum--dark .spectrum-Flyout-option.is-disabled {
+    background-color: transparent;
+    color: rgb(92, 92, 92);
+  }
+.spectrum--dark .spectrum-Flyout-divider {
+  background-color: rgb(57, 57, 57);
+}
