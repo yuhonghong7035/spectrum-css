@@ -1,12 +1,15 @@
+.spectrum--dark .spectrum-Button .spectrum-Icon {
+    color: rgb(153, 153, 153);
+  }
 .spectrum--dark .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(75, 156, 245);
   }
-.spectrum--dark .spectrum-Button:hover {
-    box-shadow: none;
-  }
-.spectrum--dark .spectrum-Button:active {
-    box-shadow: none;
-  }
+.spectrum--dark .spectrum-Button:hover .spectrum-Icon {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-Button:active .spectrum-Icon {
+      color: rgb(205, 205, 205);
+    }
 .spectrum--dark .spectrum-Button.is-selected .spectrum-Icon {
     color: rgb(205, 205, 205);
   }
@@ -295,6 +298,7 @@ markup: |
 .spectrum--dark .spectrum-Button--action:focus {
     background-color: rgb(37, 37, 37);
     border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 2px rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
 .spectrum--dark .spectrum-Button--action:hover {
@@ -349,6 +353,7 @@ markup: |
 .spectrum--dark .spectrum-Button--quiet--action:focus {
     background-color: transparent;
     border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 2px rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
 .spectrum--dark .spectrum-Button--quiet--action:hover {
