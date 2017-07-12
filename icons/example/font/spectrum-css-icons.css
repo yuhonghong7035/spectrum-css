@@ -1,0 +1,1070 @@
+
+
+@font-face {
+  font-family: 'spectrum-css-icons-18';
+  src: url('./spectrum-css-icons-18.eot'); /* IE9 Compat Modes */
+  src: url('./spectrum-css-icons-18.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./spectrum-css-icons-18.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./spectrum-css-icons-18.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./spectrum-css-icons-18.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./spectrum-css-icons-18.svg#./spectrum-css-icons-18') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'spectrum-css-icons-24';
+  src: url('./spectrum-css-icons-24.eot'); /* IE9 Compat Modes */
+  src: url('./spectrum-css-icons-24.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./spectrum-css-icons-24.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./spectrum-css-icons-24.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./spectrum-css-icons-24.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./spectrum-css-icons-24.svg#./spectrum-css-icons-24') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.spectrum-Icon {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.spectrum-Icon--sizeXXS {
+  font-family: spectrum-css-icons-18;
+  font-size: 9px;
+  &::before {
+    height: 9px;
+    width: 9px;
+  }
+}
+
+.spectrum-Icon--sizeXS {
+  font-family: spectrum-css-icons-24;
+  font-size: 12px;
+  &::before {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.spectrum-Icon--sizeS {
+  font-family: spectrum-css-icons-18;
+  font-size: 18px;
+  &::before {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.spectrum-Icon--sizeM {
+  font-family: spectrum-css-icons-24;
+  font-size: 24px;
+  &::before {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.spectrum-Icon--sizeL {
+  font-family: spectrum-css-icons-18;
+  font-size: 36px;
+  &::before {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+.spectrum-Icon--sizeXL {
+  font-family: spectrum-css-icons-24;
+  font-size: 48px;
+  &::before {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.spectrum-Icon--sizeXXL {
+  font-family: spectrum-css-icons-18;
+  font-size: 72px;
+  &::before {
+    height: 72px;
+    width: 72px;
+  }
+}
+
+
+.spectrum-Icon--Add::before {
+    content: "\ea01";
+}
+.spectrum-Icon--AddCircle::before {
+    content: "\ea02";
+}
+.spectrum-Icon--AddTo::before {
+    content: "\ea03";
+}
+.spectrum-Icon--AdobeDocumentCloud::before {
+    content: "\ea04";
+}
+.spectrum-Icon--AdobeLogo::before {
+    content: "\ea05";
+}
+.spectrum-Icon--AdobeSendNow::before {
+    content: "\ea06";
+}
+.spectrum-Icon--Alert::before {
+    content: "\ea07";
+}
+.spectrum-Icon--Alias::before {
+    content: "\ea08";
+}
+.spectrum-Icon--AlignBottom::before {
+    content: "\ea09";
+}
+.spectrum-Icon--AlignCenter::before {
+    content: "\ea0a";
+}
+.spectrum-Icon--AlignLeft::before {
+    content: "\ea0b";
+}
+.spectrum-Icon--AlignMiddle::before {
+    content: "\ea0c";
+}
+.spectrum-Icon--AlignRight::before {
+    content: "\ea0d";
+}
+.spectrum-Icon--AlignTop::before {
+    content: "\ea0e";
+}
+.spectrum-Icon--Anchor::before {
+    content: "\ea0f";
+}
+.spectrum-Icon--AnchorSelect::before {
+    content: "\ea10";
+}
+.spectrum-Icon--Android::before {
+    content: "\ea11";
+}
+.spectrum-Icon--Annotate::before {
+    content: "\ea12";
+}
+.spectrum-Icon--Apple::before {
+    content: "\ea13";
+}
+.spectrum-Icon--Archive::before {
+    content: "\ea14";
+}
+.spectrum-Icon--Artboard::before {
+    content: "\ea15";
+}
+.spectrum-Icon--Asset::before {
+    content: "\ea16";
+}
+.spectrum-Icon--Asterisk::before {
+    content: "\ea17";
+}
+.spectrum-Icon--At::before {
+    content: "\ea18";
+}
+.spectrum-Icon--Attach::before {
+    content: "\ea19";
+}
+.spectrum-Icon--Audio::before {
+    content: "\ea1a";
+}
+.spectrum-Icon--Back30Sekonds::before {
+    content: "\ea1b";
+}
+.spectrum-Icon--Behance::before {
+    content: "\ea1c";
+}
+.spectrum-Icon--Bell::before {
+    content: "\ea1e";
+}
+.spectrum-Icon--Blog::before {
+    content: "\ea1d";
+}
+.spectrum-Icon--Blower::before {
+    content: "\ea1f";
+}
+.spectrum-Icon--Blur::before {
+    content: "\ea20";
+}
+.spectrum-Icon--Bookmark::before {
+    content: "\ea21";
+}
+.spectrum-Icon--Box::before {
+    content: "\ea22";
+}
+.spectrum-Icon--Brush::before {
+    content: "\ea23";
+}
+.spectrum-Icon--Building::before {
+    content: "\ea24";
+}
+.spectrum-Icon--Calendar::before {
+    content: "\ea25";
+}
+.spectrum-Icon--CalendarLocked::before {
+    content: "\ea26";
+}
+.spectrum-Icon--CalendarUnlocked::before {
+    content: "\ea27";
+}
+.spectrum-Icon--Camera::before {
+    content: "\ea28";
+}
+.spectrum-Icon--Cancel::before {
+    content: "\ea29";
+}
+.spectrum-Icon--Captcha::before {
+    content: "\ea2a";
+}
+.spectrum-Icon--Chat::before {
+    content: "\ea2b";
+}
+.spectrum-Icon--Checkmark::before {
+    content: "\ea2c";
+}
+.spectrum-Icon--CheckmarkCircle::before {
+    content: "\ea2d";
+}
+.spectrum-Icon--ClassicGridView::before {
+    content: "\ea2e";
+}
+.spectrum-Icon--Clock::before {
+    content: "\ea2f";
+}
+.spectrum-Icon--CloneStamp::before {
+    content: "\ea30";
+}
+.spectrum-Icon--Close::before {
+    content: "\ea31";
+}
+.spectrum-Icon--CloseCaptions::before {
+    content: "\ea32";
+}
+.spectrum-Icon--CloseCircle::before {
+    content: "\ea33";
+}
+.spectrum-Icon--Code::before {
+    content: "\ea34";
+}
+.spectrum-Icon--ColorFill::before {
+    content: "\ea35";
+}
+.spectrum-Icon--ColorPalette::before {
+    content: "\ea36";
+}
+.spectrum-Icon--ColorWheel::before {
+    content: "\ea37";
+}
+.spectrum-Icon--Comment::before {
+    content: "\ea38";
+}
+.spectrum-Icon--Contrast::before {
+    content: "\ea39";
+}
+.spectrum-Icon--Copy::before {
+    content: "\ea3a";
+}
+.spectrum-Icon--CreativeCloud::before {
+    content: "\ea3b";
+}
+.spectrum-Icon--CreditCard::before {
+    content: "\ea3c";
+}
+.spectrum-Icon--Crop::before {
+    content: "\ea3d";
+}
+.spectrum-Icon--Curate::before {
+    content: "\ea3e";
+}
+.spectrum-Icon--Cut::before {
+    content: "\ea3f";
+}
+.spectrum-Icon--Dashboard::before {
+    content: "\ea40";
+}
+.spectrum-Icon--Data::before {
+    content: "\ea41";
+}
+.spectrum-Icon--Date::before {
+    content: "\ea42";
+}
+.spectrum-Icon--Delete::before {
+    content: "\ea43";
+}
+.spectrum-Icon--DeleteOutline::before {
+    content: "\ea44";
+}
+.spectrum-Icon--DesktopAndMobile::before {
+    content: "\ea45";
+}
+.spectrum-Icon--DeviceDesktop::before {
+    content: "\ea46";
+}
+.spectrum-Icon--DeviceLaptop::before {
+    content: "\ea47";
+}
+.spectrum-Icon--DevicePhone::before {
+    content: "\ea48";
+}
+.spectrum-Icon--DevicePhoneRefresh::before {
+    content: "\ea49";
+}
+.spectrum-Icon--DevicePreview::before {
+    content: "\ea4a";
+}
+.spectrum-Icon--DeviceRotateLandscape::before {
+    content: "\ea4b";
+}
+.spectrum-Icon--DeviceRotatePortrait::before {
+    content: "\ea4c";
+}
+.spectrum-Icon--DeviceTV::before {
+    content: "\ea4e";
+}
+.spectrum-Icon--DeviceTablet::before {
+    content: "\ea4f";
+}
+.spectrum-Icon--Devices::before {
+    content: "\ea4d";
+}
+.spectrum-Icon--DistributeHorizontalCenter::before {
+    content: "\ea50";
+}
+.spectrum-Icon--DistributeLeftEdge::before {
+    content: "\ea51";
+}
+.spectrum-Icon--DistributeRightEdge::before {
+    content: "\ea52";
+}
+.spectrum-Icon--DistributeSpaceHoriz::before {
+    content: "\ea53";
+}
+.spectrum-Icon--DistributeSpaceVert::before {
+    content: "\ea54";
+}
+.spectrum-Icon--DividePath::before {
+    content: "\ea55";
+}
+.spectrum-Icon--Document::before {
+    content: "\ea56";
+}
+.spectrum-Icon--DocumentOutline::before {
+    content: "\ea57";
+}
+.spectrum-Icon--Download::before {
+    content: "\ea58";
+}
+.spectrum-Icon--DownloadFromCloud::before {
+    content: "\ea59";
+}
+.spectrum-Icon--Draw::before {
+    content: "\ea5a";
+}
+.spectrum-Icon--Edit::before {
+    content: "\ea5b";
+}
+.spectrum-Icon--Education::before {
+    content: "\ea5c";
+}
+.spectrum-Icon--Effects::before {
+    content: "\ea5d";
+}
+.spectrum-Icon--Ellipse::before {
+    content: "\ea5e";
+}
+.spectrum-Icon--Email::before {
+    content: "\ea5f";
+}
+.spectrum-Icon--Engagement::before {
+    content: "\ea60";
+}
+.spectrum-Icon--Erase::before {
+    content: "\ea61";
+}
+.spectrum-Icon--ExcludeOverlap::before {
+    content: "\ea62";
+}
+.spectrum-Icon--Exposure::before {
+    content: "\ea63";
+}
+.spectrum-Icon--Facebook::before {
+    content: "\ea64";
+}
+.spectrum-Icon--Filter::before {
+    content: "\ea65";
+}
+.spectrum-Icon--Firefox::before {
+    content: "\ea66";
+}
+.spectrum-Icon--Flag::before {
+    content: "\ea67";
+}
+.spectrum-Icon--Flash::before {
+    content: "\ea68";
+}
+.spectrum-Icon--FlashAuto::before {
+    content: "\ea69";
+}
+.spectrum-Icon--FlashOff::before {
+    content: "\ea6a";
+}
+.spectrum-Icon--FlashOn::before {
+    content: "\ea6b";
+}
+.spectrum-Icon--Flickr::before {
+    content: "\ea6c";
+}
+.spectrum-Icon--FlipHorizontal::before {
+    content: "\ea6d";
+}
+.spectrum-Icon--FlipVertical::before {
+    content: "\ea6e";
+}
+.spectrum-Icon--Folder::before {
+    content: "\ea6f";
+}
+.spectrum-Icon--FolderOpen::before {
+    content: "\ea70";
+}
+.spectrum-Icon--FullScreen::before {
+    content: "\ea71";
+}
+.spectrum-Icon--FullScreenExit::before {
+    content: "\ea72";
+}
+.spectrum-Icon--Globe::before {
+    content: "\ea73";
+}
+.spectrum-Icon--GlobeOutline::before {
+    content: "\ea74";
+}
+.spectrum-Icon--GooglePlus::before {
+    content: "\ea75";
+}
+.spectrum-Icon--Gradient::before {
+    content: "\ea76";
+}
+.spectrum-Icon--Graphic::before {
+    content: "\ea77";
+}
+.spectrum-Icon--Heal::before {
+    content: "\ea78";
+}
+.spectrum-Icon--Heart::before {
+    content: "\ea79";
+}
+.spectrum-Icon--Help::before {
+    content: "\ea7a";
+}
+.spectrum-Icon--HelpOutline::before {
+    content: "\ea7b";
+}
+.spectrum-Icon--History::before {
+    content: "\ea7c";
+}
+.spectrum-Icon--Home::before {
+    content: "\ea7d";
+}
+.spectrum-Icon--Illustrator::before {
+    content: "\ea7e";
+}
+.spectrum-Icon--Image::before {
+    content: "\ea7f";
+}
+.spectrum-Icon--ImageAlbum::before {
+    content: "\ea80";
+}
+.spectrum-Icon--ImageCarousel::before {
+    content: "\ea81";
+}
+.spectrum-Icon--ImageText::before {
+    content: "\ea82";
+}
+.spectrum-Icon--Images::before {
+    content: "\ea83";
+}
+.spectrum-Icon--InDesign::before {
+    content: "\ea84";
+}
+.spectrum-Icon--Inbox::before {
+    content: "\ea85";
+}
+.spectrum-Icon--Info::before {
+    content: "\ea86";
+}
+.spectrum-Icon--InfoOutline::before {
+    content: "\ea87";
+}
+.spectrum-Icon--Instagram::before {
+    content: "\ea88";
+}
+.spectrum-Icon--InternetExplorer::before {
+    content: "\ea89";
+}
+.spectrum-Icon--IntersectOverlap::before {
+    content: "\ea8a";
+}
+.spectrum-Icon--InvertAdj::before {
+    content: "\ea8b";
+}
+.spectrum-Icon--Label::before {
+    content: "\ea8c";
+}
+.spectrum-Icon--Landscape::before {
+    content: "\ea8d";
+}
+.spectrum-Icon--Layers::before {
+    content: "\ea8e";
+}
+.spectrum-Icon--LayersBackward::before {
+    content: "\ea8f";
+}
+.spectrum-Icon--LayersBringToFront::before {
+    content: "\ea90";
+}
+.spectrum-Icon--LayersForward::before {
+    content: "\ea91";
+}
+.spectrum-Icon--LayersSendToBack::before {
+    content: "\ea92";
+}
+.spectrum-Icon--Light::before {
+    content: "\ea93";
+}
+.spectrum-Icon--Lightroom::before {
+    content: "\ea94";
+}
+.spectrum-Icon--Line::before {
+    content: "\ea95";
+}
+.spectrum-Icon--Link::before {
+    content: "\ea96";
+}
+.spectrum-Icon--LinkOut::before {
+    content: "\ea97";
+}
+.spectrum-Icon--LinkedIn::before {
+    content: "\ea98";
+}
+.spectrum-Icon--Location::before {
+    content: "\ea99";
+}
+.spectrum-Icon--LockClosed::before {
+    content: "\ea9a";
+}
+.spectrum-Icon--LockOpen::before {
+    content: "\ea9b";
+}
+.spectrum-Icon--LogOut::before {
+    content: "\ea9c";
+}
+.spectrum-Icon--Looks::before {
+    content: "\ea9d";
+}
+.spectrum-Icon--LoupeView::before {
+    content: "\ea9e";
+}
+.spectrum-Icon--MagicWand::before {
+    content: "\ea9f";
+}
+.spectrum-Icon--Mailbox::before {
+    content: "\eaa0";
+}
+.spectrum-Icon--MapView::before {
+    content: "\eaa1";
+}
+.spectrum-Icon--Maximize::before {
+    content: "\eaa2";
+}
+.spectrum-Icon--Measure::before {
+    content: "\eaa3";
+}
+.spectrum-Icon--Merge::before {
+    content: "\eaa4";
+}
+.spectrum-Icon--MergeLayers::before {
+    content: "\eaa5";
+}
+.spectrum-Icon--Minimize::before {
+    content: "\eaa6";
+}
+.spectrum-Icon--MobileServices::before {
+    content: "\eaa7";
+}
+.spectrum-Icon--ModernGridView::before {
+    content: "\eaa8";
+}
+.spectrum-Icon--More::before {
+    content: "\eaa9";
+}
+.spectrum-Icon--Move::before {
+    content: "\eaaa";
+}
+.spectrum-Icon--MoveTo::before {
+    content: "\eaab";
+}
+.spectrum-Icon--Muse::before {
+    content: "\eaac";
+}
+.spectrum-Icon--NamingOrder::before {
+    content: "\eaad";
+}
+.spectrum-Icon--NoEdit::before {
+    content: "\eaae";
+}
+.spectrum-Icon--Note::before {
+    content: "\eaaf";
+}
+.spectrum-Icon--OpenRecent::before {
+    content: "\eab0";
+}
+.spectrum-Icon--Orbit::before {
+    content: "\eab1";
+}
+.spectrum-Icon--OutlinePath::before {
+    content: "\eab2";
+}
+.spectrum-Icon--PageBreak::before {
+    content: "\eab3";
+}
+.spectrum-Icon--Pan::before {
+    content: "\eab4";
+}
+.spectrum-Icon--Paste::before {
+    content: "\eab5";
+}
+.spectrum-Icon--Pause::before {
+    content: "\eab6";
+}
+.spectrum-Icon--PauseCircle::before {
+    content: "\eab7";
+}
+.spectrum-Icon--Pending::before {
+    content: "\eab8";
+}
+.spectrum-Icon--Perspective::before {
+    content: "\eab9";
+}
+.spectrum-Icon--PhoneGap::before {
+    content: "\eaba";
+}
+.spectrum-Icon--PhoneGapBuilder::before {
+    content: "\eabb";
+}
+.spectrum-Icon--Photoshop::before {
+    content: "\eabc";
+}
+.spectrum-Icon--PinOff::before {
+    content: "\eabd";
+}
+.spectrum-Icon--PinOn::before {
+    content: "\eabe";
+}
+.spectrum-Icon--Pinterest::before {
+    content: "\eabf";
+}
+.spectrum-Icon--Play::before {
+    content: "\eac0";
+}
+.spectrum-Icon--PlayCircle::before {
+    content: "\eac1";
+}
+.spectrum-Icon--Polygon::before {
+    content: "\eac2";
+}
+.spectrum-Icon--Portrait::before {
+    content: "\eac3";
+}
+.spectrum-Icon--Print::before {
+    content: "\eac4";
+}
+.spectrum-Icon--ProjectEdit::before {
+    content: "\eac5";
+}
+.spectrum-Icon--ProjectNameEdit::before {
+    content: "\eac6";
+}
+.spectrum-Icon--Promote::before {
+    content: "\eac7";
+}
+.spectrum-Icon--Properties::before {
+    content: "\eac8";
+}
+.spectrum-Icon--PropertiesCopy::before {
+    content: "\eac9";
+}
+.spectrum-Icon--Public::before {
+    content: "\eaca";
+}
+.spectrum-Icon--RectSelect::before {
+    content: "\eacb";
+}
+.spectrum-Icon--Rectangle::before {
+    content: "\eacc";
+}
+.spectrum-Icon--Redo::before {
+    content: "\eacd";
+}
+.spectrum-Icon--Refresh::before {
+    content: "\eace";
+}
+.spectrum-Icon--RegionSelect::before {
+    content: "\eacf";
+}
+.spectrum-Icon--Remove::before {
+    content: "\ead0";
+}
+.spectrum-Icon--RemoveCircle::before {
+    content: "\ead1";
+}
+.spectrum-Icon--Rename::before {
+    content: "\ead2";
+}
+.spectrum-Icon--Reorder::before {
+    content: "\ead3";
+}
+.spectrum-Icon--Replay::before {
+    content: "\ead4";
+}
+.spectrum-Icon--Replies::before {
+    content: "\ead5";
+}
+.spectrum-Icon--Reply::before {
+    content: "\ead6";
+}
+.spectrum-Icon--Revert::before {
+    content: "\ead7";
+}
+.spectrum-Icon--RotateCCW::before {
+    content: "\ead8";
+}
+.spectrum-Icon--RotateCW::before {
+    content: "\ead9";
+}
+.spectrum-Icon--RotateLeft::before {
+    content: "\eada";
+}
+.spectrum-Icon--RotateRight::before {
+    content: "\eadb";
+}
+.spectrum-Icon--Sampler::before {
+    content: "\eadc";
+}
+.spectrum-Icon--SaveFloppy::before {
+    content: "\eadd";
+}
+.spectrum-Icon--SaveTo::before {
+    content: "\eade";
+}
+.spectrum-Icon--Search::before {
+    content: "\eadf";
+}
+.spectrum-Icon--Select::before {
+    content: "\eae0";
+}
+.spectrum-Icon--Send::before {
+    content: "\eae1";
+}
+.spectrum-Icon--SentimentNegative::before {
+    content: "\eae2";
+}
+.spectrum-Icon--SentimentNeutral::before {
+    content: "\eae3";
+}
+.spectrum-Icon--SentimentPositive::before {
+    content: "\eae4";
+}
+.spectrum-Icon--Settings::before {
+    content: "\eae5";
+}
+.spectrum-Icon--Shapes::before {
+    content: "\eae6";
+}
+.spectrum-Icon--Share::before {
+    content: "\eae7";
+}
+.spectrum-Icon--ShareAndroid::before {
+    content: "\eae8";
+}
+.spectrum-Icon--ShareWindows::before {
+    content: "\eae9";
+}
+.spectrum-Icon--Sharpen::before {
+    content: "\eaea";
+}
+.spectrum-Icon--ShoppingCart::before {
+    content: "\eaeb";
+}
+.spectrum-Icon--ShowAllLayers::before {
+    content: "\eaec";
+}
+.spectrum-Icon--ShowOneLayer::before {
+    content: "\eaed";
+}
+.spectrum-Icon--Shuffle::before {
+    content: "\eaee";
+}
+.spectrum-Icon--Slice::before {
+    content: "\eaef";
+}
+.spectrum-Icon--SplitView::before {
+    content: "\eaf0";
+}
+.spectrum-Icon--Star::before {
+    content: "\eaf1";
+}
+.spectrum-Icon--StarOutline::before {
+    content: "\eaf2";
+}
+.spectrum-Icon--StepBackward::before {
+    content: "\eaf3";
+}
+.spectrum-Icon--StepBackwardCircle::before {
+    content: "\eaf4";
+}
+.spectrum-Icon--StepForward::before {
+    content: "\eaf5";
+}
+.spectrum-Icon--StepForwardCircle::before {
+    content: "\eaf6";
+}
+.spectrum-Icon--Stock::before {
+    content: "\eaf7";
+}
+.spectrum-Icon--Stop::before {
+    content: "\eaf8";
+}
+.spectrum-Icon--StopCircle::before {
+    content: "\eaf9";
+}
+.spectrum-Icon--Stopwatch::before {
+    content: "\eafb";
+}
+.spectrum-Icon--Subscribe::before {
+    content: "\eafa";
+}
+.spectrum-Icon--SubstractBackPath::before {
+    content: "\eafc";
+}
+.spectrum-Icon--SubtractFrontPath::before {
+    content: "\eafd";
+}
+.spectrum-Icon--Sync::before {
+    content: "\eafe";
+}
+.spectrum-Icon--Target::before {
+    content: "\eaff";
+}
+.spectrum-Icon--Targeted::before {
+    content: "\eb00";
+}
+.spectrum-Icon--Temperature::before {
+    content: "\eb01";
+}
+.spectrum-Icon--Text::before {
+    content: "\eb02";
+}
+.spectrum-Icon--TextAdd::before {
+    content: "\eb03";
+}
+.spectrum-Icon--TextAlignCenter::before {
+    content: "\eb04";
+}
+.spectrum-Icon--TextAlignJustify::before {
+    content: "\eb05";
+}
+.spectrum-Icon--TextAlignLeft::before {
+    content: "\eb06";
+}
+.spectrum-Icon--TextAlignRight::before {
+    content: "\eb07";
+}
+.spectrum-Icon--TextBold::before {
+    content: "\eb08";
+}
+.spectrum-Icon--TextBulleted::before {
+    content: "\eb09";
+}
+.spectrum-Icon--TextBulletedHierarchy::before {
+    content: "\eb0a";
+}
+.spectrum-Icon--TextBulletedHierarchyExclude::before {
+    content: "\eb0b";
+}
+.spectrum-Icon--TextColor::before {
+    content: "\eb0c";
+}
+.spectrum-Icon--TextDecrease::before {
+    content: "\eb0d";
+}
+.spectrum-Icon--TextEdit::before {
+    content: "\eb0e";
+}
+.spectrum-Icon--TextExclude::before {
+    content: "\eb0f";
+}
+.spectrum-Icon--TextIncrease::before {
+    content: "\eb10";
+}
+.spectrum-Icon--TextItalic::before {
+    content: "\eb11";
+}
+.spectrum-Icon--TextKerning::before {
+    content: "\eb12";
+}
+.spectrum-Icon--TextLetteredLowerCase::before {
+    content: "\eb13";
+}
+.spectrum-Icon--TextLetteredUpperCase::before {
+    content: "\eb14";
+}
+.spectrum-Icon--TextNumbered::before {
+    content: "\eb15";
+}
+.spectrum-Icon--TextParagraph::before {
+    content: "\eb16";
+}
+.spectrum-Icon--TextSize::before {
+    content: "\eb17";
+}
+.spectrum-Icon--TextSizeAdd::before {
+    content: "\eb18";
+}
+.spectrum-Icon--TextStyle::before {
+    content: "\eb19";
+}
+.spectrum-Icon--TextSubscript::before {
+    content: "\eb1a";
+}
+.spectrum-Icon--TextSuperscript::before {
+    content: "\eb1b";
+}
+.spectrum-Icon--TextUnderline::before {
+    content: "\eb1c";
+}
+.spectrum-Icon--ThumbDown::before {
+    content: "\eb1d";
+}
+.spectrum-Icon--ThumbDownOutline::before {
+    content: "\eb1e";
+}
+.spectrum-Icon--ThumbUp::before {
+    content: "\eb1f";
+}
+.spectrum-Icon--ThumbUpOutline::before {
+    content: "\eb20";
+}
+.spectrum-Icon--Transparency::before {
+    content: "\eb21";
+}
+.spectrum-Icon--TrimPath::before {
+    content: "\eb22";
+}
+.spectrum-Icon--Trophy::before {
+    content: "\eb23";
+}
+.spectrum-Icon--Tumblr::before {
+    content: "\eb24";
+}
+.spectrum-Icon--Twitter::before {
+    content: "\eb25";
+}
+.spectrum-Icon--Undo::before {
+    content: "\eb26";
+}
+.spectrum-Icon--Unlink::before {
+    content: "\eb27";
+}
+.spectrum-Icon--Unmerge::before {
+    content: "\eb28";
+}
+.spectrum-Icon--UploadToCloud::before {
+    content: "\eb29";
+}
+.spectrum-Icon--User::before {
+    content: "\eb2a";
+}
+.spectrum-Icon--UserGroup::before {
+    content: "\eb2b";
+}
+.spectrum-Icon--VectorDraw::before {
+    content: "\eb2c";
+}
+.spectrum-Icon--Video::before {
+    content: "\eb2d";
+}
+.spectrum-Icon--VideoOutline::before {
+    content: "\eb2f";
+}
+.spectrum-Icon--ViewBiWeek::before {
+    content: "\eb2e";
+}
+.spectrum-Icon--ViewCard::before {
+    content: "\eb30";
+}
+.spectrum-Icon--ViewColumn::before {
+    content: "\eb31";
+}
+.spectrum-Icon--ViewDay::before {
+    content: "\eb32";
+}
+.spectrum-Icon--ViewGrid::before {
+    content: "\eb33";
+}
+.spectrum-Icon--ViewList::before {
+    content: "\eb34";
+}
+.spectrum-Icon--ViewRow::before {
+    content: "\eb36";
+}
+.spectrum-Icon--ViewWeek::before {
+    content: "\eb35";
+}
+.spectrum-Icon--Vignette::before {
+    content: "\eb37";
+}
+.spectrum-Icon--Visibility::before {
+    content: "\eb38";
+}
+.spectrum-Icon--VisibilityOff::before {
+    content: "\eb39";
+}
+.spectrum-Icon--VoiceOver::before {
+    content: "\eb3a";
+}
+.spectrum-Icon--VolumeMute::before {
+    content: "\eb3b";
+}
+.spectrum-Icon--VolumeOne::before {
+    content: "\eb3c";
+}
+.spectrum-Icon--VolumeThree::before {
+    content: "\eb3d";
+}
+.spectrum-Icon--VolumeTwo::before {
+    content: "\eb3e";
+}
+.spectrum-Icon--Watch::before {
+    content: "\eb3f";
+}
+.spectrum-Icon--WhatsApp::before {
+    content: "\eb40";
+}
+.spectrum-Icon--YouTube::before {
+    content: "\eb41";
+}
+.spectrum-Icon--ZoomIn::before {
+    content: "\eb42";
+}
+.spectrum-Icon--ZoomOut::before {
+    content: "\eb43";
+}
+
