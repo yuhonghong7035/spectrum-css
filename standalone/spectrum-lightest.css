@@ -1891,6 +1891,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 .spectrum-Slider-track--fill {
   width: 0;
+  height: 2px;
   position: relative;
   margin-left: 0;
 }
@@ -2112,6 +2113,10 @@ Todo: Determine if missing mixin is required
       transition: background-color 150ms ease-in-out;
     }
 
+:root {
+  /* The size of the icons in tabs */
+}
+
 .spectrum-TabList {
   position: relative;
   z-index: 1;
@@ -2123,17 +2128,26 @@ Todo: Determine if missing mixin is required
 .spectrum-TabList * { outline: none; }
 
 .spectrum-TabList .spectrum-Tab {
+    position: relative;
     cursor: pointer;
   }
 
 .spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
-      position: relative;
+      /* Ensure the label doesn't drop down */
+      display: inline-block;
+
       vertical-align: middle;
+
+      /* Support SVG icons */
+      width: 18px;
+      height: 18px;
+
+      /* Support font icons */
       font-size: 1.125rem;
+      line-height: 1.125rem;
     }
 
 .spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
-      position: relative;
       font-size: 0.625rem;
       font-weight: 700;
       letter-spacing: 0.0625rem;
@@ -2180,7 +2194,7 @@ Todo: Determine if missing mixin is required
 /* topdoc
 ---
   name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode 
+  description: The Spectrum tab list with icons in horizontal mode
   modifiers:
     ':disabled': Disabled state
     ':hover': Hover state
@@ -2189,6 +2203,7 @@ Todo: Determine if missing mixin is required
     <div class="spectrum-TabList spectrum-TabList--horizontal">
       <div class="spectrum-Tab is-selected">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -2199,7 +2214,7 @@ Todo: Determine if missing mixin is required
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
       </div>
-    </div> 
+    </div>
 */
 
 .spectrum-TabList--horizontal,
@@ -2208,7 +2223,6 @@ Todo: Determine if missing mixin is required
 }
 
 .spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
-    position: relative;
     float: left;
     display: block;
     box-sizing: border-box;
@@ -2233,10 +2247,7 @@ Todo: Determine if missing mixin is required
 
 /* Horizontal Active Tab Line */
 
-.spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-icon:after,
-      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+.spectrum-TabList--horizontal .spectrum-Tab.is-selected:after, .spectrum-TabList--anchored .spectrum-Tab.is-selected:after {
         content: "";
         position: absolute;
         display: block;
@@ -2287,6 +2298,7 @@ Todo: Determine if missing mixin is required
     <div class="spectrum-TabList spectrum-TabList--vertical">
       <div class="spectrum-Tab is-selected">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -2334,8 +2346,7 @@ Todo: Determine if missing mixin is required
 
 /* Vertical Active Tab Line */
 
-.spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+.spectrum-TabList--vertical .spectrum-Tab.is-selected:after {
         content: '';
         position: absolute;
         left: 0;
@@ -2351,6 +2362,11 @@ Todo: Determine if missing mixin is required
         border: none; /* reset border */
         border-left: 2px solid;
       }
+
+.spectrum-Tab-label:empty {
+  /* Hide the tab label if it's not being used */
+  display: none;
+}
 
 /* topdoc
 ---
@@ -2389,7 +2405,7 @@ Todo: Determine if missing mixin is required
       font-weight: 400;
     }
 
-.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label::after,
+.spectrum-TabList--anchored .spectrum-Tab::after,
   .spectrum-TabList--anchored::before {
     content: "";
     position: absolute;

@@ -1,3 +1,7 @@
+:root {
+  /* The size of the icons in tabs */
+}
+
 .spectrum-TabList {
   position: relative;
   z-index: 1;
@@ -9,17 +13,26 @@
 .spectrum-TabList * { outline: none; }
 
 .spectrum-TabList .spectrum-Tab {
+    position: relative;
     cursor: pointer;
   }
 
 .spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
-      position: relative;
+      /* Ensure the label doesn't drop down */
+      display: inline-block;
+
       vertical-align: middle;
+
+      /* Support SVG icons */
+      width: 18px;
+      height: 18px;
+
+      /* Support font icons */
       font-size: 1.125rem;
+      line-height: 1.125rem;
     }
 
 .spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
-      position: relative;
       font-size: 0.625rem;
       font-weight: 700;
       letter-spacing: 0.0625rem;
@@ -66,7 +79,7 @@
 /* topdoc
 ---
   name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode 
+  description: The Spectrum tab list with icons in horizontal mode
   modifiers:
     ':disabled': Disabled state
     ':hover': Hover state
@@ -75,6 +88,7 @@
     <div class="spectrum-TabList spectrum-TabList--horizontal">
       <div class="spectrum-Tab is-selected">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -85,7 +99,7 @@
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
       </div>
-    </div> 
+    </div>
 */
 
 .spectrum-TabList--horizontal,
@@ -94,7 +108,6 @@
 }
 
 .spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
-    position: relative;
     float: left;
     display: block;
     box-sizing: border-box;
@@ -119,10 +132,7 @@
 
 /* Horizontal Active Tab Line */
 
-.spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--horizontal .spectrum-Tab.is-selected > .spectrum-Tab-icon:after,
-      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--anchored .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+.spectrum-TabList--horizontal .spectrum-Tab.is-selected:after, .spectrum-TabList--anchored .spectrum-Tab.is-selected:after {
         content: "";
         position: absolute;
         display: block;
@@ -173,6 +183,7 @@
     <div class="spectrum-TabList spectrum-TabList--vertical">
       <div class="spectrum-Tab is-selected">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -220,8 +231,7 @@
 
 /* Vertical Active Tab Line */
 
-.spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-label:after,
-      .spectrum-TabList--vertical .spectrum-Tab.is-selected > .spectrum-Tab-icon:after {
+.spectrum-TabList--vertical .spectrum-Tab.is-selected:after {
         content: '';
         position: absolute;
         left: 0;
@@ -237,6 +247,11 @@
         border: none; /* reset border */
         border-left: 2px solid;
       }
+
+.spectrum-Tab-label:empty {
+  /* Hide the tab label if it's not being used */
+  display: none;
+}
 
 /* topdoc
 ---
@@ -275,7 +290,7 @@
       font-weight: 400;
     }
 
-.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label::after,
+.spectrum-TabList--anchored .spectrum-Tab::after,
   .spectrum-TabList--anchored::before {
     content: "";
     position: absolute;

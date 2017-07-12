@@ -47,6 +47,7 @@
 
 .spectrum-Slider-track--fill {
   width: 0;
+  height: 2px;
   position: relative;
   margin-left: 0;
 }
