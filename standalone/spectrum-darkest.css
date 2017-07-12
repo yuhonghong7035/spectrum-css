@@ -3057,21 +3057,9 @@ description: |
     box-shadow: 0 1px 0 rgb(180, 180, 180);
   }
 
-.spectrum-Button .spectrum-Icon {
-    color: rgb(133, 133, 133);
-  }
-
 .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(55, 142, 240);
   }
-
-.spectrum-Button:hover .spectrum-Icon {
-      color: rgb(226, 226, 226);
-    }
-
-.spectrum-Button:active .spectrum-Icon {
-      color: rgb(180, 180, 180);
-    }
 
 .spectrum-Button.is-selected .spectrum-Icon {
     color: rgb(180, 180, 180);

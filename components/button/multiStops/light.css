@@ -1,15 +1,6 @@
-.spectrum--light .spectrum-Button .spectrum-Icon {
-    color: rgb(112, 112, 112);
-  }
 .spectrum--light .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(13, 102, 208);
   }
-.spectrum--light .spectrum-Button:hover .spectrum-Icon {
-      color: rgb(44, 44, 44);
-    }
-.spectrum--light .spectrum-Button:active .spectrum-Icon {
-      color: rgb(75, 75, 75);
-    }
 .spectrum--light .spectrum-Button.is-selected .spectrum-Icon {
     color: rgb(75, 75, 75);
   }
