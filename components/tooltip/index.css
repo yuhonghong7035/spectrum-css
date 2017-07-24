@@ -4,7 +4,8 @@
   pointer-events: none;
   z-index: 100;
   opacity: 0;
-  transition: all 100ms ease-in-out;
+  visibility: hidden;
+  transition: all 100ms ease-in-out, visibility 0ms linear 100ms;
 }
 
 .spectrum-Tooltip-content {
@@ -13,7 +14,7 @@
 
   width: auto;
 
-  padding: 6px 9px;
+  padding: 4px 8px;
 
   border-radius: 4px;
 
@@ -29,36 +30,78 @@
     pointer-events: all;
   }
 
-.spectrum-Tooltip--large {
-  padding: 10px 14px;
-}
+/* topdoc
+---
+name: Tooltip - Large
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
+    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  </span>
+
+*/
+
+.spectrum-Tooltip--large .spectrum-Tooltip-content{
+    padding: 8px 16px;
+  }
+
+/* topdoc
+---
+name: Tooltip - Icons
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--success
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--info
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--error
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+*/
 
 .spectrum-Tooltip-typeIcon {
   font-size: 0.875rem;
-  line-height: 0;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-.spectrum-Tooltip-typeIcon:before {
-    vertical-align: sub;
-  }
+.spectrum-Tooltip-label {
+  vertical-align: middle;
+}
 
-.spectrum-Tooltip--is-open {
+.spectrum-Tooltip.is-open {
   opacity: 1;
-}
-
-.spectrum-Tooltip--top {
-  transform: translate(-50%, 8px) scale(.94);
-  top: -100%;
-  left: 50%;
-
-  // this moves the tooltip up, above the hovered component. this should be calculated by JS
-  margin-top: -26px;
-}
-
-.spectrum-Tooltip--right {
-  transform: translate(-8px, -50%) scale(.94);
-  top: 50%;
-  left: 100%;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
@@ -68,12 +111,6 @@
     transform: rotate(90deg);
   }
 
-.spectrum-Tooltip--left {
-  transform: translate(calc(-100% + 8px), -50%) scale(.94);
-  top: 50%;
-  left: 0;
-}
-
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
     bottom: 50%;
     left: auto;
@@ -82,42 +119,68 @@
     transform: rotate(-90deg);
   }
 
-.spectrum-Tooltip--bottom {
-  transform: translate(-50%, -8px) scale(.94);
-  bottom: -100%;
-  left: 50%;
-  margin-bottom: -28px;
-}
-
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
     bottom: auto;
     top: -4px;
     transform: rotate(180deg);
   }
 
-.spectrum-Tooltip-hover {
+.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
 }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+.u-tooltip-showOnHover .spectrum-Tooltip {
+    /* Required for animations to work */
+    visibility: visible;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--top {
     transform: translate(-50%, 8px) scale(.94);
-    opacity: 1;
+    top: -100%;
+    left: 50%;
+
+    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
+    margin-top: -26px;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+.u-tooltip-showOnHover .spectrum-Tooltip--right {
+    transform: translate(-8px, -50%) scale(.94);
+    top: 50%;
+    left: 100%;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--left {
+    transform: translate(calc(-100% + 8px), -50%) scale(.94);
+    top: 50%;
+    left: 0;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--bottom {
     transform: translate(-50%, -8px) scale(.94);
+    bottom: -100%;
+    left: 50%;
+    margin-bottom: -28px;
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip {
     opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    transform: translate(-50%, 8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    transform: translate(-50%, -8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%) scale(1);
-    opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
     transform: translate(0, -50%) scale(1);
-    opacity: 1;
   }
 
 .spectrum-Tooltip-tip {

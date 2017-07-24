@@ -1,6 +1,12 @@
 .spectrum--light .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(13, 102, 208);
   }
+.spectrum--light .spectrum-Button:hover {
+    box-shadow: none;
+  }
+.spectrum--light .spectrum-Button:active {
+    box-shadow: none;
+  }
 .spectrum--light .spectrum-Button.is-selected .spectrum-Icon {
     color: rgb(75, 75, 75);
   }
@@ -38,7 +44,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--cta:disabled,
-  .spectrum--light .spectrum-Button--cta[disabled] {
+  .spectrum--light .spectrum-Button--cta.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -79,7 +85,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--primary:disabled,
-  .spectrum--light .spectrum-Button--primary[disabled] {
+  .spectrum--light .spectrum-Button--primary.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -120,7 +126,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--secondary:disabled,
-  .spectrum--light .spectrum-Button--secondary[disabled] {
+  .spectrum--light .spectrum-Button--secondary.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -161,7 +167,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--warning:disabled,
-  .spectrum--light .spectrum-Button--warning[disabled] {
+  .spectrum--light .spectrum-Button--warning.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -203,7 +209,7 @@ markup: |
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--primary:disabled,
-  .spectrum--light .spectrum-Button--quiet--primary[disabled] {
+  .spectrum--light .spectrum-Button--quiet--primary.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(197, 197, 197);
@@ -245,7 +251,7 @@ markup: |
     color: rgb(75, 75, 75);
   }
 .spectrum--light .spectrum-Button--quiet--secondary:disabled,
-  .spectrum--light .spectrum-Button--quiet--secondary[disabled] {
+  .spectrum--light .spectrum-Button--quiet--secondary.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(197, 197, 197);
@@ -294,16 +300,18 @@ markup: |
   }
 .spectrum--light .spectrum-Button--action:hover {
     background-color: rgb(255, 255, 255);
-    border-color: rgb(197, 197, 197);
+    border-color: rgb(202, 202, 202);
+    box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--action:active {
     background-color: rgb(234, 234, 234);
-    border-color: rgb(197, 197, 197);
+    border-color: rgb(202, 202, 202);
+    box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--action:disabled,
-  .spectrum--light .spectrum-Button--action[disabled] {
+  .spectrum--light .spectrum-Button--action.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -350,18 +358,103 @@ markup: |
 .spectrum--light .spectrum-Button--quiet--action:hover {
     background-color: transparent;
     border-color: transparent;
+    box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--action:active {
-    background-color: rgb(234, 234, 234);
+    background-color: rgb(225, 225, 225);
     border-color: transparent;
+    box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--action:disabled,
   .spectrum--light .spectrum-Button--quiet--action[disabled] {
-    display: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(197, 197, 197);
   }
 /* topdoc
+---
+name: Button - Toggle
+description: A Spectrum 'toggle' button, used in toolbar
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+  '.is-selected': Selected state
+markup: |
+  <button class="spectrum-Button spectrum-Button--toggle">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle is-selected">
+    Selected Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>
+*/
+.spectrum--light .spectrum-Button--toggle {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 4px;
+  color: rgb(75, 75, 75);
+
+}
+.spectrum--light .spectrum-Button--toggle:focus {
+    background-color: transparent;
+    border-color: rgb(38, 128, 235);
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle:active {
+    background-color: rgb(225, 225, 225);
+    border-color: transparent;
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle:disabled,
+  .spectrum--light .spectrum-Button--toggle.is-disabled {
+    display: none;
+  }
+.spectrum--light .spectrum-Button--toggle.is-selected {
+    background-color: rgb(225, 225, 225);
+    border-color: transparent;
+    color: rgb(75, 75, 75);
+  }
+.spectrum--light .spectrum-Button--toggle.is-selected:focus {
+    background-color: rgb(225, 225, 225);
+    border-color: rgb(38, 128, 235);
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle.is-selected:hover {
+    background-color: rgb(225, 225, 225);
+    border-color: transparent;
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle.is-selected:active {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Button--toggle.is-selected:disabled,
+  .spectrum--light .spectrum-Button--toggle.is-selected.is-disabled {
+    background-color: rgb(225, 225, 225);
+    border-color: transparent;
+    color: rgb(197, 197, 197);
+  }
+/*! topdoc
 ---
 name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
@@ -398,7 +491,7 @@ markup: |
     color: rgb(201, 37, 45);
   }
 .spectrum--light .spectrum-Button--quiet--warning:disabled,
-  .spectrum--light .spectrum-Button--quiet--warning[disabled] {
+  .spectrum--light .spectrum-Button--quiet--warning.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(197, 197, 197);
@@ -432,7 +525,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--and:disabled,
-  .spectrum--light .spectrum-Button--and[disabled] {
+  .spectrum--light .spectrum-Button--and.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);
@@ -466,7 +559,7 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Button--or:disabled,
-  .spectrum--light .spectrum-Button--or[disabled] {
+  .spectrum--light .spectrum-Button--or.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
     color: rgb(197, 197, 197);

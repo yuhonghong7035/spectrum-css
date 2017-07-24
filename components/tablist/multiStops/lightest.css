@@ -3,16 +3,16 @@
 /*
 Todo: Determine if unused mixins are required
 
-spectrum-tab-line-default() {
-  border-color: var(--spectrum-tab-border-color-default)
+spectrum-tablist-line-default() {
+  border-color: var(--spectrum-tablist-border-color-default)
 }
 
-spectrum-tab-line-focus() {
-  border-color: var(--spectrum-tab-border-color-focus)
+spectrum-tablist-line-focus() {
+  border-color: var(--spectrum-tablist-border-color-focus)
 }
 
-spectrum-tab-line-disabled() {
-  border-color: var(--spectrum-tab-border-color-disabled)
+spectrum-tablist-line-disabled() {
+  border-color: var(--spectrum-tablist-border-color-disabled)
 }
 */
 }
@@ -39,37 +39,54 @@ spectrum-tab-line-disabled() {
 .spectrum--lightest .spectrum-Tab[disabled] .spectrum-Tab-label {
       color: rgb(188, 188, 188)
     }
+.spectrum--lightest .spectrum-TabList--anchored {
+/*
+  .spectrum-Tab {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-default);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-default);
+      }
+    }
+
+    &:hover .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-hover);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-hover);
+      }
+    }
+
+    &:active .spectrum-Tab-label,
+    &.is-selected .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-active);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-active);
+      }
+    }
+
+    &:focus .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-focus);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-focus);
+      }
+    }
+
+    &.is-disabled {
+      .spectrum-Tab-label {
+        color: var(--spectrum-tablist-anchored-label-color-disabled);
+
+        &::after {
+          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
+        }
+      }
+    }
+  }
+*/
+}
 .spectrum--lightest .spectrum-TabList--anchored::before {
     background-color: rgb(244, 244, 244);
   }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label {
-      color: rgb(118, 118, 118);
-    }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label::after {
-        background-color: rgb(244, 244, 244);
-      }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(50, 50, 50);
-    }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label::after {
-        background-color: transparent;
-      }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label,
-    .spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(50, 50, 50);
-    }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label::after, .spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label::after {
-        background-color: rgb(50, 50, 50);
-      }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(20, 115, 230);
-    }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label::after {
-        background-color: rgb(55, 142, 240);
-      }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label {
-        color: rgb(188, 188, 188);
-      }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label::after {
-          background-color: transparent;
-        }

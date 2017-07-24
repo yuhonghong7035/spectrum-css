@@ -21,52 +21,69 @@
 .spectrum-Tab[disabled] .spectrum-Tab-label {
       color: rgb(197, 197, 197)
     }
+.spectrum-TabList--anchored {
+/*
+  .spectrum-Tab {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-default);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-default);
+      }
+    }
+
+    &:hover .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-hover);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-hover);
+      }
+    }
+
+    &:active .spectrum-Tab-label,
+    &.is-selected .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-active);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-active);
+      }
+    }
+
+    &:focus .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-focus);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-focus);
+      }
+    }
+
+    &.is-disabled {
+      .spectrum-Tab-label {
+        color: var(--spectrum-tablist-anchored-label-color-disabled);
+
+        &::after {
+          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
+        }
+      }
+    }
+  }
+*/
+}
 .spectrum-TabList--anchored::before {
     background-color: rgb(234, 234, 234);
   }
-.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label {
-      color: rgb(112, 112, 112);
-    }
-.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label::after {
-        background-color: rgb(234, 234, 234);
-      }
-.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(44, 44, 44);
-    }
-.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label::after {
-        background-color: transparent;
-      }
-.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label,
-    .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(44, 44, 44);
-    }
-.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label::after, .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label::after {
-        background-color: rgb(44, 44, 44);
-      }
-.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(13, 102, 208);
-    }
-.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label::after {
-        background-color: rgb(38, 128, 235);
-      }
-.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label {
-        color: rgb(197, 197, 197);
-      }
-.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label::after {
-          background-color: transparent;
-        }
 /*
 Todo: Determine if unused mixins are required
 
-spectrum-tab-line-default() {
-  border-color: var(--spectrum-tab-border-color-default)
+spectrum-tablist-line-default() {
+  border-color: var(--spectrum-tablist-border-color-default)
 }
 
-spectrum-tab-line-focus() {
-  border-color: var(--spectrum-tab-border-color-focus)
+spectrum-tablist-line-focus() {
+  border-color: var(--spectrum-tablist-border-color-focus)
 }
 
-spectrum-tab-line-disabled() {
-  border-color: var(--spectrum-tab-border-color-disabled)
+spectrum-tablist-line-disabled() {
+  border-color: var(--spectrum-tablist-border-color-disabled)
 }
 */

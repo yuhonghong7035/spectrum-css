@@ -9,9 +9,9 @@
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider spectrum-Slider--ramp">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -25,10 +25,10 @@
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--ramp spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider spectrum-Slider--ramp is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -50,48 +50,67 @@
 }
 /* topdoc
 ---
-  name: Slider - Tick
-  description: Spectrum tick slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
+  name: Slider - Tick with Labels
+  description: Spectrum tick slider with labels
   markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--tick">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
         <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">0</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">20</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">40</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">60</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">80</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">100</label>
+          </div>
         </div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
           <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--tick spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
         <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">0</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">20</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">40</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">60</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">80</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">100</label>
+          </div>
         </div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
           <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
@@ -104,40 +123,50 @@
 }
 /* topdoc
 ---
-  name: Slider - Video Player
-  description: Spectrum slider for video players, which display a buffer.
+  name: Slider - Tick
+  description: Spectrum tick slider
   modifiers:
     :disabled: Disabled state
     :hover: Hover state
     :focus: Focused state
     :active: Active state
   markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">3:48</label>
+    <formfield class="spectrum-Slider spectrum-Slider--tick">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
+        <div class="spectrum-Slider-track"></div>
+        <div class="spectrum-Slider-ticks">
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
         </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
           <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">3:48</label>
+    <formfield class="spectrum-Slider spectrum-Slider--tick is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
+        <div class="spectrum-Slider-track"></div>
+        <div class="spectrum-Slider-ticks">
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
+          <div class="spectrum-Slider-tick-mark"></div>
         </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
           <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
         </div>
       </div>
@@ -157,6 +186,50 @@ spectrum-slider-track-disabled(){
 }
 /* topdoc
 ---
+  name: Slider - Video Player
+  description: Spectrum slider for video players, which display a buffer.
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused state
+    :active: Active state
+  markup: |
+    <formfield class="spectrum-Slider">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">3:48</label>
+      </div>
+      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track">
+          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
+          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">3:48</label>
+      </div>
+      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track">
+          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
+          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+*/
+.spectrum--darkest .spectrum-Slider-track--buffer {
+  background: rgb(73, 73, 73);
+}
+/* topdoc
+---
   name: Slider - Double Handle
   description: Spectrum slider with double handle, also known as ranged slider.
   modifiers:
@@ -166,9 +239,9 @@ spectrum-slider-track-disabled(){
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14 - 48</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14 - 48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -182,10 +255,10 @@ spectrum-slider-track-disabled(){
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14 - 48</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14 - 48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -200,18 +273,18 @@ spectrum-slider-track-disabled(){
       </div>
     </formfield>
 */
-.spectrum--darkest .spectrum-Slider-track--buffer {
-  background: rgb(73, 73, 73);
-}
+.spectrum--darkest .spectrum-Slider-track--ramp path {
+    fill: rgb(45, 45, 45);
+  }
 /* topdoc
 ---
   name: Slider - Filled
   description: Spectrum slider with fill
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -222,10 +295,10 @@ spectrum-slider-track-disabled(){
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -237,8 +310,21 @@ spectrum-slider-track-disabled(){
       </div>
     </formfield>
 */
-.spectrum--darkest .spectrum-Slider-track--ramp path {
-    fill: rgb(45, 45, 45);
+.spectrum--darkest .spectrum-Slider-handle {
+  border-color: rgb(133, 133, 133);
+  background: rgb(30, 30, 30);
+  box-shadow: 0 0 0 2px rgb(30, 30, 30);
+}
+.spectrum--darkest .spectrum-Slider-handle:hover {
+    border-color: rgb(180, 180, 180);
+  }
+.spectrum--darkest .spectrum-Slider-handle:focus {
+    border-color: rgb(20, 115, 230);
+    background: rgb(20, 115, 230);
+  }
+.spectrum--darkest .spectrum-Slider-handle:active {
+    border-color: rgb(180, 180, 180);
+    background: rgb(180, 180, 180);
   }
 /* topdoc
 ---
@@ -246,9 +332,9 @@ spectrum-slider-track-disabled(){
   description: The default Spectrum Slider element
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -257,10 +343,10 @@ spectrum-slider-track-disabled(){
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -270,28 +356,24 @@ spectrum-slider-track-disabled(){
       </div>
     </formfield>
 */
-.spectrum--darkest .spectrum-Slider-handle {
-  border-color: rgb(133, 133, 133);
-  border-width: 2px;
-  border-style: solid;
-  background: rgb(30, 30, 30);
-  box-shadow: 0 0 0 2px rgb(30, 30, 30);
-  transition: all 150ms ease-in-out;
+.spectrum--darkest .spectrum-Slider-input {
+  background: transparent;
 }
-.spectrum--darkest .spectrum-Slider-handle:hover {
-    border-color: rgb(180, 180, 180);
-    transition: all 150ms ease-in-out;
+/*
+Todo: Determine if missing mixin is required
+.spectrum-Slider-ticks {
+  spectrum-slider-ticks()
+}
+*/
+.spectrum--darkest .spectrum-Slider-tick-mark:after {
+    background-color: rgb(45, 45, 45);
+    border-radius: 1px;
   }
-.spectrum--darkest .spectrum-Slider-handle:focus {
-    border-color: rgb(20, 115, 230);
-    background: rgb(20, 115, 230);
-    border-width: 8px;
-    transition: all 150ms ease-in-out;
-  }
-.spectrum--darkest .spectrum-Slider-handle:active {
+/*
+Todo: Determine if these are supposed to be pseudo classes
+*/
+.spectrum--darkest .spectrum-Slider-controls--hover .spectrum-Slider-handle {
     border-color: rgb(180, 180, 180);
-    background: rgb(180, 180, 180);
-    border-width: 8px;
     transition: all 150ms ease-in-out;
   }
 /* topdoc
@@ -307,7 +389,7 @@ spectrum-slider-track-disabled(){
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
+    <formfield class="spectrum-Slider is-disabled">
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
@@ -322,23 +404,6 @@ spectrum-slider-track-disabled(){
 
 
 */
-.spectrum--darkest .spectrum-Slider-input {
-  background: transparent;
-}
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider-ticks {
-  spectrum-slider-ticks()
-}
-*/
-.spectrum--darkest .spectrum-Slider-tick-mark {
-  background-color: rgb(45, 45, 45);
-  border-radius: 1px;
-}
-.spectrum--darkest .spectrum-Slider-controls--hover .spectrum-Slider-handle {
-    border-color: rgb(180, 180, 180);
-    transition: all 150ms ease-in-out;
-  }
 .spectrum--darkest .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(20, 115, 230);
     background: rgb(20, 115, 230);
@@ -351,46 +416,41 @@ Todo: Determine if missing mixin is required
     border-width: 8px;
     transition: all 150ms ease-in-out;
   }
-.spectrum--darkest .spectrum-Slider--disabled spectrum-slider-disabled()
-
-  .spectrum-Slider-Label,
-  .spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-Label--Name,
-  .spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-Label--Value,
-  .spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-Label--Tick {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-label {
     color: rgb(73, 73, 73);
   }
-.spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-handle {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle {
     border-color: rgb(60, 60, 60);
     background: rgb(30, 30, 30);
   }
-.spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-handle:hover,
-    .spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-handle:focus,
-    .spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-handle:active {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle:hover,
+    .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle:focus,
+    .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle:active {
       border-color: rgb(60, 60, 60);
       border-width: 2px;
       background: rgb(30, 30, 30);
     }
-.spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-track--fill {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
     background: rgb(45, 45, 45);
   }
-.spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-track--buffer {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--buffer {
     background: rgb(45, 45, 45);
   }
-.spectrum--darkest .spectrum-Slider--disabled .spectrum-Slider-track--ramp path {
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--ramp path {
       fill: rgb(38, 38, 38);
     }
-.spectrum--darkest .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-track {
+.spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-track {
       background: rgb(38, 38, 38);
       box-shadow: none;
     }
-.spectrum--darkest .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle {
+.spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle {
       background: transparent;
       box-shadow: none;
       border-color: rgb(60, 60, 60);
     }
-.spectrum--darkest .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
-      .spectrum--darkest .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:focus,
-      .spectrum--darkest .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
+.spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
+      .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:focus,
+      .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
         border-width: 2px;
         background: transparent;
         box-shadow: none;
@@ -402,9 +462,9 @@ Todo: Determine if missing mixin is required
   description: Spectrum Color slider
   markup: |
     <formfield class="spectrum-Slider spectrum-Slider--color">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">#2680eb</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">#2680eb</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -413,10 +473,10 @@ Todo: Determine if missing mixin is required
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--color spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">#2680eb</label>
+    <formfield class="spectrum-Slider spectrum-Slider--color is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">#2680eb</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>

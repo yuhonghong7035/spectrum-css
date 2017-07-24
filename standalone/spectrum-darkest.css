@@ -132,6 +132,38 @@ markup: |
   text-decoration: underline;
 }
 
+.spectrum-Breadcrumb {
+  cursor: pointer;
+  position: relative;
+  margin-right: 24px;
+  font-size: 1rem;
+}
+
+.spectrum-Breadcrumb::after {
+    position: absolute;
+    top: 8px;
+    right: -16px;
+    width: 5px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform:scale(1);
+    opacity:1;
+    content:'';
+  }
+
+.spectrum-Breadcrumb:last-of-type::after {
+      display: none;
+    }
+
+.spectrum-Breadcrumb-title .spectrum-Breadcrumb:last-of-type {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 0.3em 0;
+  }
+
 .spectrum-Button {
   display: inline-block;
   box-sizing: border-box;
@@ -167,7 +199,7 @@ markup: |
   }
 
 .spectrum-Button:disabled,
-  .spectrum-Button[disabled] {
+  .spectrum-Button.is-disabled {
     cursor: default;
   }
 
@@ -210,6 +242,11 @@ markup: |
 
 .spectrum-Button--quiet--action--icon-only {
   padding: 0 8px;
+}
+
+.spectrum-Button--toggle {
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .spectrum-Button--and,
@@ -993,7 +1030,8 @@ markup: |
   pointer-events: none;
   z-index: 100;
   opacity: 0;
-  transition: all 100ms ease-in-out;
+  visibility: hidden;
+  transition: all 100ms ease-in-out, visibility 0ms linear 100ms;
 }
 
 .spectrum-Tooltip-content {
@@ -1002,7 +1040,7 @@ markup: |
 
   width: auto;
 
-  padding: 6px 9px;
+  padding: 4px 8px;
 
   border-radius: 4px;
 
@@ -1018,36 +1056,78 @@ markup: |
     pointer-events: all;
   }
 
-.spectrum-Tooltip--large {
-  padding: 10px 14px;
-}
+/* topdoc
+---
+name: Tooltip - Large
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
+    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  </span>
+
+*/
+
+.spectrum-Tooltip--large .spectrum-Tooltip-content{
+    padding: 8px 16px;
+  }
+
+/* topdoc
+---
+name: Tooltip - Icons
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--success
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--info
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--error
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+*/
 
 .spectrum-Tooltip-typeIcon {
   font-size: 0.875rem;
-  line-height: 0;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-.spectrum-Tooltip-typeIcon:before {
-    vertical-align: sub;
-  }
+.spectrum-Tooltip-label {
+  vertical-align: middle;
+}
 
-.spectrum-Tooltip--is-open {
+.spectrum-Tooltip.is-open {
   opacity: 1;
-}
-
-.spectrum-Tooltip--top {
-  transform: translate(-50%, 8px) scale(.94);
-  top: -100%;
-  left: 50%;
-
-  // this moves the tooltip up, above the hovered component. this should be calculated by JS
-  margin-top: -26px;
-}
-
-.spectrum-Tooltip--right {
-  transform: translate(-8px, -50%) scale(.94);
-  top: 50%;
-  left: 100%;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
@@ -1057,12 +1137,6 @@ markup: |
     transform: rotate(90deg);
   }
 
-.spectrum-Tooltip--left {
-  transform: translate(calc(-100% + 8px), -50%) scale(.94);
-  top: 50%;
-  left: 0;
-}
-
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
     bottom: 50%;
     left: auto;
@@ -1071,42 +1145,68 @@ markup: |
     transform: rotate(-90deg);
   }
 
-.spectrum-Tooltip--bottom {
-  transform: translate(-50%, -8px) scale(.94);
-  bottom: -100%;
-  left: 50%;
-  margin-bottom: -28px;
-}
-
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
     bottom: auto;
     top: -4px;
     transform: rotate(180deg);
   }
 
-.spectrum-Tooltip-hover {
+.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
 }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+.u-tooltip-showOnHover .spectrum-Tooltip {
+    /* Required for animations to work */
+    visibility: visible;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--top {
     transform: translate(-50%, 8px) scale(.94);
-    opacity: 1;
+    top: -100%;
+    left: 50%;
+
+    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
+    margin-top: -26px;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+.u-tooltip-showOnHover .spectrum-Tooltip--right {
+    transform: translate(-8px, -50%) scale(.94);
+    top: 50%;
+    left: 100%;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--left {
+    transform: translate(calc(-100% + 8px), -50%) scale(.94);
+    top: 50%;
+    left: 0;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--bottom {
     transform: translate(-50%, -8px) scale(.94);
+    bottom: -100%;
+    left: 50%;
+    margin-bottom: -28px;
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip {
     opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    transform: translate(-50%, 8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    transform: translate(-50%, -8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%) scale(1);
-    opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
     transform: translate(0, -50%) scale(1);
-    opacity: 1;
   }
 
 .spectrum-Tooltip-tip {
@@ -1844,6 +1944,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 :root {
 
+  /* This must be fixed to prevent problems with different width labels */
+
   /* Todo: Remove hardcoded values */
 }
 
@@ -1854,38 +1956,32 @@ Because of this contain, clicks will never fall though when a dialog is visible
   width: 240px;
 }
 
-.spectrum-Slider--disabled {
-  cursor: default;
-}
-
-.spectrum-Slider--disabled .spectrum-Slider-handle {
-  cursor: default;
-}
-
 .spectrum-Slider-controls {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   vertical-align: top;
   z-index: auto;
-  margin: 0 8px 1px;
-  width: calc(100% - 16px); /* Todo: Client-side calc? */
-  height: 32px;
+  width: 100%;
+  min-height: 32px;
 }
 
 .spectrum-Slider-track {
   border-radius: 4px;
   pointer-events: none;
   height: 2px;
-  top: 50%;
-  left: 0;
+
+  top: 16px;
+
+  left: 8px;
   margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
   padding: 0 16px 0 0;
 
   position: absolute;
-  width: 100%;
+
+  width: calc(100% - 16px);
   margin-left: -8px;
 }
 
@@ -1908,14 +2004,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
   top: -7px;
 }
 
-.spectrum-Slider--disabled .spectrum-Slider-track {
-  margin-left: -8px;
-}
-
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
-  top: 50%;
+
+  top: 16px;
   display: inline-block;
   box-sizing: border-box;
   outline: none;
@@ -1928,8 +2021,19 @@ Because of this contain, clicks will never fall though when a dialog is visible
   margin-left: -8px;
   width: 16px;
   height: 16px;
-  transition: border 150ms ease-in-out;
+
+  border-width: 2px;
+  border-style: solid;
+  transition: all 150ms ease-in-out;
 }
+
+.spectrum-Slider-handle:focus {
+    border-width: 8px;
+  }
+
+.spectrum-Slider-handle:active {
+    border-width: 8px;
+  }
 
 .spectrum-Slider-input {
   width: 100%;
@@ -1946,52 +2050,34 @@ Because of this contain, clicks will never fall though when a dialog is visible
   pointer-events: none;
 }
 
-.spectrum-Slider-Label {
+.spectrum-Slider-label {
   display: block;
-  font-size: 0.75rem;
+  position: relative;
+
+  width: auto;
+
   border-radius: 4px;
-  display:inline-block;
-  position:relative;
-  padding: 6px 9px;
+
+  font-size: 0.75rem;
   line-height: 0.75rem;
-  width:auto;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Slider-Label--Name {
+.spectrum-Slider-label-name {
   padding-left: 0;
 }
 
-.spectrum-Slider-Label--Value {
+.spectrum-Slider-label-value {
   float: right;
   padding-right: 0;
 }
 
-.spectrum-Slider-Label--Tick {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 16px 0 0 0;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider--tick {
-  spectrum-slider-tick()
-}
-*/
-
 .spectrum-Slider-ticks {
-  position: absolute;
   margin-left: -8px;
   margin-right: -8px;
-  top: 11px;
-  left: 0;
-  right: 0;
+  margin-top: 11px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1999,45 +2085,72 @@ Todo: Determine if missing mixin is required
   z-index: 0;
 }
 
-.spectrum-Slider--tick--labelled {
-  margin-bottom: 16px;
-}
-
 .spectrum-Slider-tick-mark {
   position: relative;
-  width: 2px;
-  height: 10px;
+
+  width: 16px;
 }
 
-.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-Label--Tick {
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+.spectrum-Slider-tick-mark:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    content: '';
+    width: 2px;
+    height: 10px;
   }
 
-.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-Label--Tick {
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+.spectrum-Slider-tick-mark .spectrum-Slider-label {
+    position: relative;
+    margin: 16px 0 0 0;
+    text-align: center;
+  }
+
+.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-label {
+      /* Move over so we're left justified */
+      text-align: left;
+      left: 6px;
+    }
+
+.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-label {
+      /* Move over so we're right justified */
+      left: -6px;
+      text-align: right;
+    }
+
+.spectrum-Slider--color .spectrum-Slider-controls {
+    margin-top: 8px;
+  }
+
+.spectrum-Slider--color .spectrum-Slider-controls,
+  .spectrum-Slider--color .spectrum-Slider-track {
+    min-height: auto;
+    height: 24px;
   }
 
 .spectrum-Slider--color .spectrum-Slider-track {
-    height: 24px;
-    top: 8px;
+    top: 0;
+    margin-top: 0;
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle {
     left: 40%;
-    top: 60%;
+    top: 50%;
   }
 
-.spectrum-Slider.spectrum-Slider--round {
+.spectrum-Slider--round {
   display: inline-block;
   width: 48px;
   height: auto;
+  min-height: 0;
 }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls {
+.spectrum-Slider--round .spectrum-Slider-controls {
     width: 32px;
     height: 32px;
+    min-height: 0;
+
     border-radius: 16px;
     position: relative;
     display: inline-block;
@@ -2050,8 +2163,8 @@ Todo: Determine if missing mixin is required
     outline: none;
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before,
-    .spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+.spectrum-Slider--round .spectrum-Slider-controls::before,
+    .spectrum-Slider--round .spectrum-Slider-controls::after {
       content: '';
       width: 4px;
       height: 2px;
@@ -2060,23 +2173,23 @@ Todo: Determine if missing mixin is required
       bottom: 0;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before {
+.spectrum-Slider--round .spectrum-Slider-controls::before {
       left: auto;
       right: -2px;
       transform: rotate(45deg);
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+.spectrum-Slider--round .spectrum-Slider-controls::after {
       left: -2px;
       transform: rotate(-45deg);
     }
 
-.spectrum-Slider.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
+.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
       width: 24px;
       height: 24px;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle {
+.spectrum-Slider--round .spectrum-Slider-handle {
     width: 100%;
     height: 100%;
     border-width: 2px;
@@ -2089,11 +2202,11 @@ Todo: Determine if missing mixin is required
     border-radius: 16px;
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle:focus {
+.spectrum-Slider--round .spectrum-Slider-handle:focus {
       border-width: 2px;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input {
+.spectrum-Slider--round .spectrum-Slider-input {
     width: 100%;
     height: 100%;
     overflow: visible;
@@ -2101,7 +2214,7 @@ Todo: Determine if missing mixin is required
     transform: rotate(-45deg);
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input::after {
+.spectrum-Slider--round .spectrum-Slider-input::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -2112,6 +2225,14 @@ Todo: Determine if missing mixin is required
       transform: translateY(-50%);
       transition: background-color 150ms ease-in-out;
     }
+
+.spectrum-Slider.is-disabled {
+  cursor: default;
+}
+
+.spectrum-Slider.is-disabled .spectrum-Slider-handle {
+    cursor: default;
+  }
 
 :root {
   /* The size of the icons in tabs */
@@ -2401,8 +2522,8 @@ Todo: Determine if missing mixin is required
 .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
       cursor: pointer;
       text-transform: none;
-      font-size: 0.875rem;
-      font-weight: 400;
+/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
+      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
     }
 
 .spectrum-TabList--anchored .spectrum-Tab::after,
@@ -2413,6 +2534,7 @@ Todo: Determine if missing mixin is required
     left: 0;
     right: 0;
     bottom: 0;
+    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
     height: 2px;
   }
 
@@ -2745,7 +2867,7 @@ name: Steplist - With Tooltip
 description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2755,7 +2877,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2765,7 +2887,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-selected">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2775,7 +2897,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -3077,6 +3199,14 @@ description: |
     box-shadow: 0 0 0 2px rgb(55, 142, 240);
   }
 
+.spectrum-Button:hover {
+    box-shadow: none;
+  }
+
+.spectrum-Button:active {
+    box-shadow: none;
+  }
+
 .spectrum-Button.is-selected .spectrum-Icon {
     color: rgb(180, 180, 180);
   }
@@ -3120,7 +3250,7 @@ markup: |
   }
 
 .spectrum-Button--cta:disabled,
-  .spectrum-Button--cta[disabled] {
+  .spectrum-Button--cta.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3167,7 +3297,7 @@ markup: |
   }
 
 .spectrum-Button--primary:disabled,
-  .spectrum-Button--primary[disabled] {
+  .spectrum-Button--primary.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3214,7 +3344,7 @@ markup: |
   }
 
 .spectrum-Button--secondary:disabled,
-  .spectrum-Button--secondary[disabled] {
+  .spectrum-Button--secondary.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3261,7 +3391,7 @@ markup: |
   }
 
 .spectrum-Button--warning:disabled,
-  .spectrum-Button--warning[disabled] {
+  .spectrum-Button--warning.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3309,7 +3439,7 @@ markup: |
   }
 
 .spectrum-Button--quiet--primary:disabled,
-  .spectrum-Button--quiet--primary[disabled] {
+  .spectrum-Button--quiet--primary.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(73, 73, 73);
@@ -3357,7 +3487,7 @@ markup: |
   }
 
 .spectrum-Button--quiet--secondary:disabled,
-  .spectrum-Button--quiet--secondary[disabled] {
+  .spectrum-Button--quiet--secondary.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(73, 73, 73);
@@ -3410,18 +3540,20 @@ markup: |
 
 .spectrum-Button--action:hover {
     background-color: rgb(8, 8, 8);
-    border-color: rgb(73, 73, 73);
+    border-color: rgb(60, 60, 60);
+    box-shadow: none;
     color: rgb(226, 226, 226);
   }
 
 .spectrum-Button--action:active {
     background-color: rgb(38, 38, 38);
-    border-color: rgb(73, 73, 73);
+    border-color: rgb(60, 60, 60);
+    box-shadow: none;
     color: rgb(226, 226, 226);
   }
 
 .spectrum-Button--action:disabled,
-  .spectrum-Button--action[disabled] {
+  .spectrum-Button--action.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3472,21 +3604,117 @@ markup: |
 .spectrum-Button--quiet--action:hover {
     background-color: transparent;
     border-color: transparent;
+    box-shadow: none;
     color: rgb(226, 226, 226);
   }
 
 .spectrum-Button--quiet--action:active {
-    background-color: rgb(38, 38, 38);
+    background-color: rgb(45, 45, 45);
     border-color: transparent;
+    box-shadow: none;
     color: rgb(226, 226, 226);
   }
 
 .spectrum-Button--quiet--action:disabled,
   .spectrum-Button--quiet--action[disabled] {
-    display: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(73, 73, 73);
   }
 
 /* topdoc
+---
+name: Button - Toggle
+description: A Spectrum 'toggle' button, used in toolbar
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+  '.is-selected': Selected state
+markup: |
+  <button class="spectrum-Button spectrum-Button--toggle">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+    Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle is-selected">
+    Selected Button
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only">
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>
+  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only" disabled>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
+  </button>
+*/
+
+.spectrum-Button--toggle {
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 1px;
+  border-radius: 4px;
+  color: rgb(180, 180, 180);
+
+}
+
+.spectrum-Button--toggle:focus {
+    background-color: transparent;
+    border-color: rgb(20, 115, 230);
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle:active {
+    background-color: rgb(45, 45, 45);
+    border-color: transparent;
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle:disabled,
+  .spectrum-Button--toggle.is-disabled {
+    display: none;
+  }
+
+.spectrum-Button--toggle.is-selected {
+    background-color: rgb(45, 45, 45);
+    border-color: transparent;
+    color: rgb(180, 180, 180);
+  }
+
+.spectrum-Button--toggle.is-selected:focus {
+    background-color: rgb(45, 45, 45);
+    border-color: rgb(20, 115, 230);
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle.is-selected:hover {
+    background-color: rgb(45, 45, 45);
+    border-color: transparent;
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle.is-selected:active {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Button--toggle.is-selected:disabled,
+  .spectrum-Button--toggle.is-selected.is-disabled {
+    background-color: rgb(45, 45, 45);
+    border-color: transparent;
+    color: rgb(73, 73, 73);
+  }
+
+/*! topdoc
 ---
 name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
@@ -3528,7 +3756,7 @@ markup: |
   }
 
 .spectrum-Button--quiet--warning:disabled,
-  .spectrum-Button--quiet--warning[disabled] {
+  .spectrum-Button--quiet--warning.is-disabled {
     background-color: transparent;
     border-color: transparent;
     color: rgb(73, 73, 73);
@@ -3567,7 +3795,7 @@ markup: |
   }
 
 .spectrum-Button--and:disabled,
-  .spectrum-Button--and[disabled] {
+  .spectrum-Button--and.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -3606,11 +3834,69 @@ markup: |
   }
 
 .spectrum-Button--or:disabled,
-  .spectrum-Button--or[disabled] {
+  .spectrum-Button--or.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
   }
+
+.spectrum-Breadcrumb {
+	color: rgb(133, 133, 133);
+}
+
+.spectrum-Breadcrumb:hover {
+    color: rgb(226, 226, 226);
+  }
+
+.spectrum-Breadcrumb:focus {
+    color: rgb(55, 142, 240);
+  	outline: 0;
+  	border-bottom: 2px solid rgb(55, 142, 240);
+  }
+
+.spectrum-Breadcrumb:active {
+  	color: rgb(226, 226, 226);
+  }
+
+.spectrum-Breadcrumb::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath style='fill:rgb%28133%2C 133%2C 133%29' d='M4%2C3.5a.4982.4982%2C0%2C0%2C0-.1468-.3538L.8538.1468A.5.5%2C0%2C1%2C0%2C.1465.8535L2.793%2C3.5.1467%2C6.1463a.5.5%2C0%2C1%2C0%2C.707.707l3-3A.4983.4983%2C0%2C0%2C0%2C4%2C3.5Z'/%3E%3C/svg%3E");
+  }
+
+.spectrum-Breadcrumb:last-of-type {
+    color: rgb(226, 226, 226);
+  }
+
+/* topdoc
+---
+name: Breadcrumb - Default
+description: The default Spectrum breadcrumb
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <div class="spectrum-Breadcrumb">
+    <span class="spectrum-Breadcrumb">Nike</span>
+    <span class="spectrum-Breadcrumb">Mens</span>
+    <span class="spectrum-Breadcrumb">Summer 2016</span>
+  </div>
+*/
+
+/* topdoc
+---
+name: Breadcrumb - Title
+description: A Spectrum 'page title' breadcrumb
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <div class="spectrum-Breadcrumb-title">
+    <span class="spectrum-Breadcrumb">Nike</span>
+    <span class="spectrum-Breadcrumb">Mens</span>
+    <span class="spectrum-Breadcrumb">Summer 2016</span>
+  </div>
+*/
 
 .spectrum-Alert {
   background-color: rgb(8, 8, 8);
@@ -3735,6 +4021,10 @@ markup: |
     box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
 
+.spectrum-Checkbox-input:focus ~ .spectrum-Checkbox-label {
+    color: rgb(75, 156, 245);
+  }
+
 /* topdoc
 ---
 name: Checkbox - Default
@@ -3767,8 +4057,16 @@ markup: |
       box-shadow: none;
     }
 
+.spectrum-Checkbox:hover .spectrum-Checkbox-label {
+      color: rgb(226, 226, 226);
+    }
+
 .spectrum-Checkbox:active .spectrum-Checkbox-checkmark {
       border-color: rgb(133, 133, 133);
+    }
+
+.spectrum-Checkbox:active .spectrum-Checkbox-label {
+      color: rgb(180, 180, 180);
     }
 
 /* topdoc
@@ -3804,6 +4102,64 @@ markup: |
 
 .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
     color: rgb(73, 73, 73);
+  }
+
+.spectrum-Checkbox-input:invalid + .spectrum-Checkbox-checkmark {
+      border-color: rgb(227, 72, 80);
+    }
+
+.spectrum-Checkbox-input:invalid ~ .spectrum-Checkbox-label {
+      color: rgb(227, 72, 80);
+    }
+
+.spectrum-Checkbox-input:invalid:hover + .spectrum-Checkbox-checkmark {
+      border-color: rgb(236, 91, 98);
+    }
+
+.spectrum-Checkbox-input:invalid:hover ~ .spectrum-Checkbox-label {
+      color: rgb(236, 91, 98);
+    }
+
+.spectrum-Checkbox-input:invalid:active + .spectrum-Checkbox-checkmark {
+      border-color: rgb(247, 109, 116);
+    }
+
+.spectrum-Checkbox-input:invalid:active ~ .spectrum-Checkbox-label {
+      color: rgb(247, 109, 116);
+    }
+
+/* topdoc
+---
+name: Checkbox - Error
+description: The Spectrum checkbox
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+  </div>
+*/
+
+.spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
+    border-color: rgb(227, 72, 80);
+  }
+
+.spectrum-Checkbox-input:error ~ .spectrum-Checkbox-label {
+    color: rgb(236, 91, 98);
   }
 
 .spectrum-Label {
@@ -4179,7 +4535,7 @@ markup: |
 name: Tooltip - Default
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip is-open">
     <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>
 
@@ -4196,7 +4552,7 @@ markup: |
 name: Tooltip - Error
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--error spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-content">Error Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>
 
@@ -4212,7 +4568,7 @@ markup: |
 name: Tooltip - Info
 description: A Spectrum info tooltip is the same as default :)
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--info spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--info is-open">
     <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>
 
@@ -4228,7 +4584,7 @@ markup: |
 name: Tooltip - Success
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--success spectrum-Tooltip--is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-content">Success Tooltip<div class="spectrum-Tooltip-tip"></div></span>
   </span>
 
@@ -4590,7 +4946,7 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
+    <formfield class="spectrum-Slider is-disabled">
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
         <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
@@ -4612,9 +4968,9 @@ markup: |
   description: The default Spectrum Slider element
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -4623,10 +4979,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -4643,9 +4999,9 @@ markup: |
   description: Spectrum slider with fill
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4656,10 +5012,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4683,9 +5039,9 @@ markup: |
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14 - 48</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14 - 48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4699,10 +5055,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14 - 48</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14 - 48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4729,9 +5085,9 @@ markup: |
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">3:48</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">3:48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4743,10 +5099,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">3:48</label>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">3:48</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4771,9 +5127,9 @@ markup: |
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider spectrum-Slider--tick">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -4790,10 +5146,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--tick spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider spectrum-Slider--tick is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -4814,6 +5170,77 @@ markup: |
 
 /* topdoc
 ---
+  name: Slider - Tick with Labels
+  description: Spectrum tick slider with labels
+  markup: |
+    <formfield class="spectrum-Slider">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label</label>
+        <label class="spectrum-Slider-label-value">14</label>
+      </div>
+      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track"></div>
+        <div class="spectrum-Slider-ticks">
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">0</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">20</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">40</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">60</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">80</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">100</label>
+          </div>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+    <formfield class="spectrum-Slider is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
+      </div>
+      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
+        <div class="spectrum-Slider-track"></div>
+        <div class="spectrum-Slider-ticks">
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">0</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">20</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">40</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">60</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">80</label>
+          </div>
+          <div class="spectrum-Slider-tick-mark">
+            <label class="spectrum-Slider-label">100</label>
+          </div>
+        </div>
+        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
+          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
+        </div>
+      </div>
+    </formfield>
+*/
+
+/* topdoc
+---
   name: Slider - Ramp
   description: Spectrum ramp slider
   modifiers:
@@ -4823,9 +5250,9 @@ markup: |
     :active: Active state
   markup: |
     <formfield class="spectrum-Slider spectrum-Slider--ramp">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4839,10 +5266,10 @@ markup: |
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--ramp spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">14</label>
+    <formfield class="spectrum-Slider spectrum-Slider--ramp is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">14</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track">
@@ -4893,30 +5320,22 @@ spectrum-slider-track-disabled(){
 
 .spectrum-Slider-handle {
   border-color: rgb(133, 133, 133);
-  border-width: 2px;
-  border-style: solid;
   background: rgb(30, 30, 30);
   box-shadow: 0 0 0 2px rgb(30, 30, 30);
-  transition: all 150ms ease-in-out;
 }
 
 .spectrum-Slider-handle:hover {
     border-color: rgb(180, 180, 180);
-    transition: all 150ms ease-in-out;
   }
 
 .spectrum-Slider-handle:focus {
     border-color: rgb(20, 115, 230);
     background: rgb(20, 115, 230);
-    border-width: 8px;
-    transition: all 150ms ease-in-out;
   }
 
 .spectrum-Slider-handle:active {
     border-color: rgb(180, 180, 180);
     background: rgb(180, 180, 180);
-    border-width: 8px;
-    transition: all 150ms ease-in-out;
   }
 
 .spectrum-Slider-input {
@@ -4930,10 +5349,14 @@ Todo: Determine if missing mixin is required
 }
 */
 
-.spectrum-Slider-tick-mark {
-  background-color: rgb(45, 45, 45);
-  border-radius: 1px;
-}
+.spectrum-Slider-tick-mark:after {
+    background-color: rgb(45, 45, 45);
+    border-radius: 1px;
+  }
+
+/*
+Todo: Determine if these are supposed to be pseudo classes
+*/
 
 .spectrum-Slider-controls--hover .spectrum-Slider-handle {
     border-color: rgb(180, 180, 180);
@@ -4954,54 +5377,49 @@ Todo: Determine if missing mixin is required
     transition: all 150ms ease-in-out;
   }
 
-.spectrum-Slider--disabled spectrum-slider-disabled()
-
-  .spectrum-Slider-Label,
-  .spectrum-Slider--disabled .spectrum-Slider-Label--Name,
-  .spectrum-Slider--disabled .spectrum-Slider-Label--Value,
-  .spectrum-Slider--disabled .spectrum-Slider-Label--Tick {
+.spectrum-Slider.is-disabled .spectrum-Slider-label {
     color: rgb(73, 73, 73);
   }
 
-.spectrum-Slider--disabled .spectrum-Slider-handle {
+.spectrum-Slider.is-disabled .spectrum-Slider-handle {
     border-color: rgb(60, 60, 60);
     background: rgb(30, 30, 30);
   }
 
-.spectrum-Slider--disabled .spectrum-Slider-handle:hover,
-    .spectrum-Slider--disabled .spectrum-Slider-handle:focus,
-    .spectrum-Slider--disabled .spectrum-Slider-handle:active {
+.spectrum-Slider.is-disabled .spectrum-Slider-handle:hover,
+    .spectrum-Slider.is-disabled .spectrum-Slider-handle:focus,
+    .spectrum-Slider.is-disabled .spectrum-Slider-handle:active {
       border-color: rgb(60, 60, 60);
       border-width: 2px;
       background: rgb(30, 30, 30);
     }
 
-.spectrum-Slider--disabled .spectrum-Slider-track--fill {
+.spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
     background: rgb(45, 45, 45);
   }
 
-.spectrum-Slider--disabled .spectrum-Slider-track--buffer {
+.spectrum-Slider.is-disabled .spectrum-Slider-track--buffer {
     background: rgb(45, 45, 45);
   }
 
-.spectrum-Slider--disabled .spectrum-Slider-track--ramp path {
+.spectrum-Slider.is-disabled .spectrum-Slider-track--ramp path {
       fill: rgb(38, 38, 38);
     }
 
-.spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-track {
+.spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-track {
       background: rgb(38, 38, 38);
       box-shadow: none;
     }
 
-.spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle {
+.spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle {
       background: transparent;
       box-shadow: none;
       border-color: rgb(60, 60, 60);
     }
 
-.spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
-      .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:focus,
-      .spectrum-Slider--disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
+.spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
+      .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:focus,
+      .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
         border-width: 2px;
         background: transparent;
         box-shadow: none;
@@ -5014,9 +5432,9 @@ Todo: Determine if missing mixin is required
   description: Spectrum Color slider
   markup: |
     <formfield class="spectrum-Slider spectrum-Slider--color">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Default</label>
-        <label class="spectrum-Slider-Label--Value">#2680eb</label>
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
+        <label class="spectrum-Slider-label-value">#2680eb</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -5025,10 +5443,10 @@ Todo: Determine if missing mixin is required
         </div>
       </div>
     </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--color spectrum-Slider--disabled">
-      <div class="spectrum-Slider-Label">
-        <label class="spectrum-Slider-Label--Name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-Label--Value">#2680eb</label>
+    <formfield class="spectrum-Slider spectrum-Slider--color is-disabled">
+      <div class="spectrum-Slider-label">
+        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
+        <label class="spectrum-Slider-label-value">#2680eb</label>
       </div>
       <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
         <div class="spectrum-Slider-track"></div>
@@ -5128,64 +5546,72 @@ Todo: Determine if missing mixin is required
       color: rgb(73, 73, 73)
     }
 
+.spectrum-TabList--anchored {
+/*
+  .spectrum-Tab {
+    .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-default);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-default);
+      }
+    }
+
+    &:hover .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-hover);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-hover);
+      }
+    }
+
+    &:active .spectrum-Tab-label,
+    &.is-selected .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-active);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-active);
+      }
+    }
+
+    &:focus .spectrum-Tab-label {
+      color: var(--spectrum-tablist-anchored-label-color-focus);
+
+      &::after {
+        background-color: var(--spectrum-tablist-anchored-border-color-focus);
+      }
+    }
+
+    &.is-disabled {
+      .spectrum-Tab-label {
+        color: var(--spectrum-tablist-anchored-label-color-disabled);
+
+        &::after {
+          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
+        }
+      }
+    }
+  }
+*/
+}
+
 .spectrum-TabList--anchored::before {
     background-color: rgb(38, 38, 38);
   }
 
-.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label {
-      color: rgb(133, 133, 133);
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab .spectrum-Tab-label::after {
-        background-color: rgb(38, 38, 38);
-      }
-
-.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(226, 226, 226);
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab:hover .spectrum-Tab-label::after {
-        background-color: transparent;
-      }
-
-.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label,
-    .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(226, 226, 226);
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab:active .spectrum-Tab-label::after, .spectrum-TabList--anchored .spectrum-Tab.is-selected .spectrum-Tab-label::after {
-        background-color: rgb(226, 226, 226);
-      }
-
-.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(55, 142, 240);
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab:focus .spectrum-Tab-label::after {
-        background-color: rgb(20, 115, 230);
-      }
-
-.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label {
-        color: rgb(73, 73, 73);
-      }
-
-.spectrum-TabList--anchored .spectrum-Tab.is-disabled .spectrum-Tab-label::after {
-          background-color: transparent;
-        }
-
 /*
 Todo: Determine if unused mixins are required
 
-spectrum-tab-line-default() {
-  border-color: var(--spectrum-tab-border-color-default)
+spectrum-tablist-line-default() {
+  border-color: var(--spectrum-tablist-border-color-default)
 }
 
-spectrum-tab-line-focus() {
-  border-color: var(--spectrum-tab-border-color-focus)
+spectrum-tablist-line-focus() {
+  border-color: var(--spectrum-tablist-border-color-focus)
 }
 
-spectrum-tab-line-disabled() {
-  border-color: var(--spectrum-tab-border-color-disabled)
+spectrum-tablist-line-disabled() {
+  border-color: var(--spectrum-tablist-border-color-disabled)
 }
 */
 

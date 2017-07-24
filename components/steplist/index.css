@@ -317,7 +317,7 @@ name: Steplist - With Tooltip
 description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -327,7 +327,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -337,7 +337,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-selected">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -347,7 +347,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>

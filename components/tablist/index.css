@@ -286,8 +286,8 @@
 .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
       cursor: pointer;
       text-transform: none;
-      font-size: 0.875rem;
-      font-weight: 400;
+/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
+      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
     }
 
 .spectrum-TabList--anchored .spectrum-Tab::after,
@@ -298,6 +298,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
     height: 2px;
   }
 

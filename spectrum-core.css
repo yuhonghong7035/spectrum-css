@@ -132,6 +132,38 @@ markup: |
   text-decoration: underline;
 }
 
+.spectrum-Breadcrumb {
+  cursor: pointer;
+  position: relative;
+  margin-right: 24px;
+  font-size: 1rem;
+}
+
+.spectrum-Breadcrumb::after {
+    position: absolute;
+    top: 8px;
+    right: -16px;
+    width: 5px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform:scale(1);
+    opacity:1;
+    content:'';
+  }
+
+.spectrum-Breadcrumb:last-of-type::after {
+      display: none;
+    }
+
+.spectrum-Breadcrumb-title .spectrum-Breadcrumb:last-of-type {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 0.3em 0;
+  }
+
 .spectrum-Button {
   display: inline-block;
   box-sizing: border-box;
@@ -167,7 +199,7 @@ markup: |
   }
 
 .spectrum-Button:disabled,
-  .spectrum-Button[disabled] {
+  .spectrum-Button.is-disabled {
     cursor: default;
   }
 
@@ -210,6 +242,11 @@ markup: |
 
 .spectrum-Button--quiet--action--icon-only {
   padding: 0 8px;
+}
+
+.spectrum-Button--toggle {
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .spectrum-Button--and,
@@ -993,7 +1030,8 @@ markup: |
   pointer-events: none;
   z-index: 100;
   opacity: 0;
-  transition: all 100ms ease-in-out;
+  visibility: hidden;
+  transition: all 100ms ease-in-out, visibility 0ms linear 100ms;
 }
 
 .spectrum-Tooltip-content {
@@ -1002,7 +1040,7 @@ markup: |
 
   width: auto;
 
-  padding: 6px 9px;
+  padding: 4px 8px;
 
   border-radius: 4px;
 
@@ -1018,36 +1056,78 @@ markup: |
     pointer-events: all;
   }
 
-.spectrum-Tooltip--large {
-  padding: 10px 14px;
-}
+/* topdoc
+---
+name: Tooltip - Large
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
+    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
+  </span>
+
+*/
+
+.spectrum-Tooltip--large .spectrum-Tooltip-content{
+    padding: 8px 16px;
+  }
+
+/* topdoc
+---
+name: Tooltip - Icons
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--success
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--info
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+  <br>
+  <br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--error
+  is-open">
+    <span class="spectrum-Tooltip-content">
+      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
+    </span>
+  </span>
+
+*/
 
 .spectrum-Tooltip-typeIcon {
   font-size: 0.875rem;
-  line-height: 0;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-.spectrum-Tooltip-typeIcon:before {
-    vertical-align: sub;
-  }
+.spectrum-Tooltip-label {
+  vertical-align: middle;
+}
 
-.spectrum-Tooltip--is-open {
+.spectrum-Tooltip.is-open {
   opacity: 1;
-}
-
-.spectrum-Tooltip--top {
-  transform: translate(-50%, 8px) scale(.94);
-  top: -100%;
-  left: 50%;
-
-  // this moves the tooltip up, above the hovered component. this should be calculated by JS
-  margin-top: -26px;
-}
-
-.spectrum-Tooltip--right {
-  transform: translate(-8px, -50%) scale(.94);
-  top: 50%;
-  left: 100%;
+  visibility: visible;
+  transition-delay: 0ms;
 }
 
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
@@ -1057,12 +1137,6 @@ markup: |
     transform: rotate(90deg);
   }
 
-.spectrum-Tooltip--left {
-  transform: translate(calc(-100% + 8px), -50%) scale(.94);
-  top: 50%;
-  left: 0;
-}
-
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
     bottom: 50%;
     left: auto;
@@ -1071,42 +1145,68 @@ markup: |
     transform: rotate(-90deg);
   }
 
-.spectrum-Tooltip--bottom {
-  transform: translate(-50%, -8px) scale(.94);
-  bottom: -100%;
-  left: 50%;
-  margin-bottom: -28px;
-}
-
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
     bottom: auto;
     top: -4px;
     transform: rotate(180deg);
   }
 
-.spectrum-Tooltip-hover {
+.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
 }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+.u-tooltip-showOnHover .spectrum-Tooltip {
+    /* Required for animations to work */
+    visibility: visible;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--top {
     transform: translate(-50%, 8px) scale(.94);
-    opacity: 1;
+    top: -100%;
+    left: 50%;
+
+    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
+    margin-top: -26px;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+.u-tooltip-showOnHover .spectrum-Tooltip--right {
+    transform: translate(-8px, -50%) scale(.94);
+    top: 50%;
+    left: 100%;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--left {
+    transform: translate(calc(-100% + 8px), -50%) scale(.94);
+    top: 50%;
+    left: 0;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--bottom {
     transform: translate(-50%, -8px) scale(.94);
+    bottom: -100%;
+    left: 50%;
+    margin-bottom: -28px;
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip {
     opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
+    transform: translate(-50%, 8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
+    transform: translate(-50%, -8px) scale(.94);
+  }
+
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%) scale(1);
-    opacity: 1;
   }
 
-.spectrum-Tooltip-hover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
+.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
     transform: translate(0, -50%) scale(1);
-    opacity: 1;
   }
 
 .spectrum-Tooltip-tip {
@@ -1844,6 +1944,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
 :root {
 
+  /* This must be fixed to prevent problems with different width labels */
+
   /* Todo: Remove hardcoded values */
 }
 
@@ -1854,38 +1956,32 @@ Because of this contain, clicks will never fall though when a dialog is visible
   width: 240px;
 }
 
-.spectrum-Slider--disabled {
-  cursor: default;
-}
-
-.spectrum-Slider--disabled .spectrum-Slider-handle {
-  cursor: default;
-}
-
 .spectrum-Slider-controls {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   vertical-align: top;
   z-index: auto;
-  margin: 0 8px 1px;
-  width: calc(100% - 16px); /* Todo: Client-side calc? */
-  height: 32px;
+  width: 100%;
+  min-height: 32px;
 }
 
 .spectrum-Slider-track {
   border-radius: 4px;
   pointer-events: none;
   height: 2px;
-  top: 50%;
-  left: 0;
+
+  top: 16px;
+
+  left: 8px;
   margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
   padding: 0 16px 0 0;
 
   position: absolute;
-  width: 100%;
+
+  width: calc(100% - 16px);
   margin-left: -8px;
 }
 
@@ -1908,14 +2004,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
   top: -7px;
 }
 
-.spectrum-Slider--disabled .spectrum-Slider-track {
-  margin-left: -8px;
-}
-
 .spectrum-Slider-handle {
   position: absolute;
   left: 0;
-  top: 50%;
+
+  top: 16px;
   display: inline-block;
   box-sizing: border-box;
   outline: none;
@@ -1928,8 +2021,19 @@ Because of this contain, clicks will never fall though when a dialog is visible
   margin-left: -8px;
   width: 16px;
   height: 16px;
-  transition: border 150ms ease-in-out;
+
+  border-width: 2px;
+  border-style: solid;
+  transition: all 150ms ease-in-out;
 }
+
+.spectrum-Slider-handle:focus {
+    border-width: 8px;
+  }
+
+.spectrum-Slider-handle:active {
+    border-width: 8px;
+  }
 
 .spectrum-Slider-input {
   width: 100%;
@@ -1946,52 +2050,34 @@ Because of this contain, clicks will never fall though when a dialog is visible
   pointer-events: none;
 }
 
-.spectrum-Slider-Label {
+.spectrum-Slider-label {
   display: block;
-  font-size: 0.75rem;
+  position: relative;
+
+  width: auto;
+
   border-radius: 4px;
-  display:inline-block;
-  position:relative;
-  padding: 6px 9px;
+
+  font-size: 0.75rem;
   line-height: 0.75rem;
-  width:auto;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Slider-Label--Name {
+.spectrum-Slider-label-name {
   padding-left: 0;
 }
 
-.spectrum-Slider-Label--Value {
+.spectrum-Slider-label-value {
   float: right;
   padding-right: 0;
 }
 
-.spectrum-Slider-Label--Tick {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 16px 0 0 0;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider--tick {
-  spectrum-slider-tick()
-}
-*/
-
 .spectrum-Slider-ticks {
-  position: absolute;
   margin-left: -8px;
   margin-right: -8px;
-  top: 11px;
-  left: 0;
-  right: 0;
+  margin-top: 11px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1999,45 +2085,72 @@ Todo: Determine if missing mixin is required
   z-index: 0;
 }
 
-.spectrum-Slider--tick--labelled {
-  margin-bottom: 16px;
-}
-
 .spectrum-Slider-tick-mark {
   position: relative;
-  width: 2px;
-  height: 10px;
+
+  width: 16px;
 }
 
-.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-Label--Tick {
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+.spectrum-Slider-tick-mark:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    content: '';
+    width: 2px;
+    height: 10px;
   }
 
-.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-Label--Tick {
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+.spectrum-Slider-tick-mark .spectrum-Slider-label {
+    position: relative;
+    margin: 16px 0 0 0;
+    text-align: center;
+  }
+
+.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-label {
+      /* Move over so we're left justified */
+      text-align: left;
+      left: 6px;
+    }
+
+.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-label {
+      /* Move over so we're right justified */
+      left: -6px;
+      text-align: right;
+    }
+
+.spectrum-Slider--color .spectrum-Slider-controls {
+    margin-top: 8px;
+  }
+
+.spectrum-Slider--color .spectrum-Slider-controls,
+  .spectrum-Slider--color .spectrum-Slider-track {
+    min-height: auto;
+    height: 24px;
   }
 
 .spectrum-Slider--color .spectrum-Slider-track {
-    height: 24px;
-    top: 8px;
+    top: 0;
+    margin-top: 0;
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle {
     left: 40%;
-    top: 60%;
+    top: 50%;
   }
 
-.spectrum-Slider.spectrum-Slider--round {
+.spectrum-Slider--round {
   display: inline-block;
   width: 48px;
   height: auto;
+  min-height: 0;
 }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls {
+.spectrum-Slider--round .spectrum-Slider-controls {
     width: 32px;
     height: 32px;
+    min-height: 0;
+
     border-radius: 16px;
     position: relative;
     display: inline-block;
@@ -2050,8 +2163,8 @@ Todo: Determine if missing mixin is required
     outline: none;
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before,
-    .spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+.spectrum-Slider--round .spectrum-Slider-controls::before,
+    .spectrum-Slider--round .spectrum-Slider-controls::after {
       content: '';
       width: 4px;
       height: 2px;
@@ -2060,23 +2173,23 @@ Todo: Determine if missing mixin is required
       bottom: 0;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::before {
+.spectrum-Slider--round .spectrum-Slider-controls::before {
       left: auto;
       right: -2px;
       transform: rotate(45deg);
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-controls::after {
+.spectrum-Slider--round .spectrum-Slider-controls::after {
       left: -2px;
       transform: rotate(-45deg);
     }
 
-.spectrum-Slider.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
+.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
       width: 24px;
       height: 24px;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle {
+.spectrum-Slider--round .spectrum-Slider-handle {
     width: 100%;
     height: 100%;
     border-width: 2px;
@@ -2089,11 +2202,11 @@ Todo: Determine if missing mixin is required
     border-radius: 16px;
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-handle:focus {
+.spectrum-Slider--round .spectrum-Slider-handle:focus {
       border-width: 2px;
     }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input {
+.spectrum-Slider--round .spectrum-Slider-input {
     width: 100%;
     height: 100%;
     overflow: visible;
@@ -2101,7 +2214,7 @@ Todo: Determine if missing mixin is required
     transform: rotate(-45deg);
   }
 
-.spectrum-Slider.spectrum-Slider--round .spectrum-Slider-input::after {
+.spectrum-Slider--round .spectrum-Slider-input::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -2112,6 +2225,14 @@ Todo: Determine if missing mixin is required
       transform: translateY(-50%);
       transition: background-color 150ms ease-in-out;
     }
+
+.spectrum-Slider.is-disabled {
+  cursor: default;
+}
+
+.spectrum-Slider.is-disabled .spectrum-Slider-handle {
+    cursor: default;
+  }
 
 :root {
   /* The size of the icons in tabs */
@@ -2401,8 +2522,8 @@ Todo: Determine if missing mixin is required
 .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
       cursor: pointer;
       text-transform: none;
-      font-size: 0.875rem;
-      font-weight: 400;
+/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
+      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
     }
 
 .spectrum-TabList--anchored .spectrum-Tab::after,
@@ -2413,6 +2534,7 @@ Todo: Determine if missing mixin is required
     left: 0;
     right: 0;
     bottom: 0;
+    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
     height: 2px;
   }
 
@@ -2745,7 +2867,7 @@ name: Steplist - With Tooltip
 description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2755,7 +2877,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-complete">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2765,7 +2887,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover is-selected">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -2775,7 +2897,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step spectrum-Tooltip-hover">
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
