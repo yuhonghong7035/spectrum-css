@@ -24,21 +24,20 @@ spectrum-tablist-line-disabled() {
     <!-- TODO: add markup here -->
 
 */
-.spectrum--dark .spectrum-Tab .spectrum-Tab-label {
-    color: rgb(153, 153, 153)
+color: var(--spectrum-tablist-text-color-default)
+
+  .spectrum--dark .spectrum-Tab:hover {
+    color: rgb(255, 255, 255)
   }
-.spectrum--dark .spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum--dark .spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum--dark .spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum--dark .spectrum-Tab[disabled] .spectrum-Tab-label {
-      color: rgb(92, 92, 92)
-    }
+.spectrum--dark .spectrum-Tab:focus {
+    color: rgb(255, 255, 255)
+  }
+.spectrum--dark .spectrum-Tab.is-selected {
+    color: rgb(255, 255, 255)
+  }
+.spectrum--dark .spectrum-Tab.is-disabled {
+    color: rgb(92, 92, 92)
+  }
 .spectrum--dark .spectrum-TabList--anchored {
 /*
   .spectrum-Tab {

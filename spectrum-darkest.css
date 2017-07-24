@@ -50,6 +50,9 @@ description: |
     color: rgb(55, 142, 240);
     box-shadow: 0 1px 0 rgb(55, 142, 240);
   }
+.spectrum--darkest .spectrum-Link.is-disabled {
+    color: rgb(73, 73, 73);
+  }
 .spectrum--darkest .spectrum-Link--subtle {
   color: inherit;
 }
@@ -877,8 +880,8 @@ markup: |
     }
 /* topdoc
 ---
-name: Checkbox - Error
-description: The Spectrum checkbox
+name: Checkbox - Required
+description: A checkbox that must be checked
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -943,17 +946,6 @@ markup: |
 .spectrum--darkest .spectrum-Progress-status,
 .spectrum--darkest .spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
   background: rgb(20, 115, 230);
-}
-.spectrum--darkest .spectrum-Radio-input {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  opacity: .0001;
-
-  cursor: pointer;
 }
 .spectrum--darkest .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
     border-color: rgb(133, 133, 133);
@@ -1171,10 +1163,11 @@ markup: |
 .spectrum--darkest .spectrum-Textfield[disabled]::placeholder {
       color: rgb(45, 45, 45);
     }
-.spectrum--darkest .spectrum-Textfield:invalid {
+.spectrum--darkest .spectrum-Textfield .is-invalid,
+  .spectrum--darkest .spectrum-Textfield:invalid {
     border-color: rgb(215, 55, 63);
   }
-.spectrum--darkest .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
+.spectrum--darkest .spectrum-Textfield .is-invalid:focus, .spectrum--darkest .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
 /* topdoc
@@ -1209,10 +1202,11 @@ markup: |
     background-color: transparent;
     border-color:  rgb(45, 45, 45);
   }
-.spectrum--darkest .spectrum-Textfield--quiet:invalid {
+.spectrum--darkest .spectrum-Textfield--quiet .is-invalid,
+  .spectrum--darkest .spectrum-Textfield--quiet:invalid {
     border-color: rgb(215, 55, 63);
   }
-.spectrum--darkest .spectrum-Textfield--quiet:invalid:focus {
+.spectrum--darkest .spectrum-Textfield--quiet .is-invalid:focus, .spectrum--darkest .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(215, 55, 63);
     }
 /* topdoc
@@ -2108,21 +2102,20 @@ Todo: Determine if these are supposed to be pseudo classes
     <!-- TODO: add markup here -->
 
 */
-.spectrum--darkest .spectrum-Tab .spectrum-Tab-label {
-    color: rgb(133, 133, 133)
+.spectrum--darkest color: var(--spectrum-tablist-text-color-default)
+
+  .spectrum-Tab:hover {
+    color: rgb(226, 226, 226)
   }
-.spectrum--darkest .spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(226, 226, 226)
-    }
-.spectrum--darkest .spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(226, 226, 226)
-    }
-.spectrum--darkest .spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(226, 226, 226)
-    }
-.spectrum--darkest .spectrum-Tab[disabled] .spectrum-Tab-label {
-      color: rgb(73, 73, 73)
-    }
+.spectrum--darkest .spectrum-Tab:focus {
+    color: rgb(226, 226, 226)
+  }
+.spectrum--darkest .spectrum-Tab.is-selected {
+    color: rgb(226, 226, 226)
+  }
+.spectrum--darkest .spectrum-Tab.is-disabled {
+    color: rgb(73, 73, 73)
+  }
 .spectrum--darkest .spectrum-TabList--anchored {
 /*
   .spectrum-Tab {

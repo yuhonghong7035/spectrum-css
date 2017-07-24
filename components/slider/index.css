@@ -80,7 +80,9 @@
 
   border-width: 2px;
   border-style: solid;
-  transition: all 150ms ease-in-out;
+
+  /* Transition the border for focus animations */
+  transition: border 150ms ease-in-out;
 }
 
 .spectrum-Slider-handle:focus {
@@ -214,7 +216,10 @@
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
+
+    /* Why? */
     transition: all 150ms ease-in-out;
+
     box-sizing: border-box;
     outline: none;
   }

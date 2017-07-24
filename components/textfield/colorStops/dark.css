@@ -97,10 +97,11 @@ markup: |
 .spectrum-Textfield[disabled]::placeholder {
       color: rgb(62, 62, 62);
     }
-.spectrum-Textfield:invalid {
+.spectrum-Textfield .is-invalid,
+  .spectrum-Textfield:invalid {
     border-color: rgb(227, 72, 80);
   }
-.spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
+.spectrum-Textfield .is-invalid:focus, .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
       box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 /* topdoc
@@ -135,9 +136,10 @@ markup: |
     background-color: transparent;
     border-color:  rgb(62, 62, 62);
   }
-.spectrum-Textfield--quiet:invalid {
+.spectrum-Textfield--quiet .is-invalid,
+  .spectrum-Textfield--quiet:invalid {
     border-color: rgb(227, 72, 80);
   }
-.spectrum-Textfield--quiet:invalid:focus {
+.spectrum-Textfield--quiet .is-invalid:focus, .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(227, 72, 80);
     }

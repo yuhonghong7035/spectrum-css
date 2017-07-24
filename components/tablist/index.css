@@ -107,6 +107,12 @@
   display: block;
 }
 
+.spectrum-TabList--horizontal::after, .spectrum-TabList--anchored::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
 .spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
     float: left;
     display: block;

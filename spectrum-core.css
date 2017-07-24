@@ -114,8 +114,17 @@ markup: |
   outline: none;
 }
 
-.spectrum-Link[disabled] {
-    opacity: 0.15;
+/* topdoc
+---
+name: Link - Disabled
+description: A disabled link
+markup: |
+  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+
+*/
+
+.spectrum-Link.is-disabled {
+  	cursor: default;
   }
 
 /* topdoc
@@ -268,6 +277,24 @@ markup: |
   white-space: nowrap;
 }
 
+/* topdoc
+---
+name: Alert - Closable
+description: >-
+  The closable Spectrum alert. It has a close button in the footer.
+  Combine this strategy with any variant.
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+    <div class="spectrum-Alert-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
+    </div>
+  </div>
+
+*/
+
 .spectrum-Alert {
   position: relative;
 
@@ -364,7 +391,13 @@ markup: |
 
   opacity: .0001;
   z-index: 1;
+
+  cursor: pointer;
 }
+
+.spectrum-Checkbox-input:disabled {
+    cursor: default;
+  }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
     border-width: 6px;
@@ -876,6 +909,10 @@ markup: |
     border-width: 6px;
   }
 
+.spectrum-Radio-input:disabled {
+    cursor: default;
+  }
+
 .spectrum-Radio-label {
   margin: 0 8px;
 
@@ -1025,7 +1062,6 @@ markup: |
 }
 
 .spectrum-Tooltip {
-  padding: 8px 10px;
   position: absolute;
   pointer-events: none;
   z-index: 100;
@@ -2024,7 +2060,9 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
   border-width: 2px;
   border-style: solid;
-  transition: all 150ms ease-in-out;
+
+  /* Transition the border for focus animations */
+  transition: border 150ms ease-in-out;
 }
 
 .spectrum-Slider-handle:focus {
@@ -2158,7 +2196,10 @@ Because of this contain, clicks will never fall though when a dialog is visible
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
+
+    /* Why? */
     transition: all 150ms ease-in-out;
+
     box-sizing: border-box;
     outline: none;
   }
@@ -2342,6 +2383,12 @@ Because of this contain, clicks will never fall though when a dialog is visible
 .spectrum-TabList--anchored {
   display: block;
 }
+
+.spectrum-TabList--horizontal::after, .spectrum-TabList--anchored::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
 
 .spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
     float: left;

@@ -67,7 +67,13 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---default">Link - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---disabled">Link - Disabled</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---subtle">Link - Subtle</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#alert---closable">Alert - Closable</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#label---default">Label - Default</a></div>
@@ -208,7 +214,7 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#checkbox---disabled">Checkbox - Disabled</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#checkbox---error">Checkbox - Error</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#checkbox---required">Checkbox - Required</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#label---special">Label - Special</a></div>
@@ -377,6 +383,34 @@
           </section>
         </article>
         <article class="sdldocs-component box">
+          <header class="row" id="link---disabled">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Link - Disabled</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A disabled link</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;p&gt; This uses &lt;a href=&quot;#&quot; class=&quot;spectrum-Link is-disabled&quot;&gt;is-disabled&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
           <header class="row" id="link---subtle">
             <div class="col-xs">
               <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Link - Subtle</h2>
@@ -401,6 +435,48 @@ spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
                 <pre class="html"><code data-language="html">&lt;p&gt; This uses &lt;a href=&quot;#&quot; class=&quot;spectrum-Link
 spectrum-Link--subtle&quot;&gt;spectrum-Link--subtle&lt;/a&gt;.&lt;/p&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box">
+          <header class="row" id="alert---closable">
+            <div class="col-xs">
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Alert - Closable</h2>
+            </div>
+          </header>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The closable Spectrum alert. It has a close button in the footer. Combine this strategy with any variant.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-Alert spectrum-Alert--error">
+  <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+  <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
+  <div class="spectrum-Alert-content">This is an alert.</div>
+  <div class="spectrum-Alert-footer">
+    <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Alert spectrum-Alert--error&quot;&gt;
+  &lt;div class=&quot;spectrum-Alert-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;alert&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-header&quot;&gt;Incorrect Payment Information - Error&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-content&quot;&gt;This is an alert.&lt;/div&gt;
+  &lt;div class=&quot;spectrum-Alert-footer&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot;&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
             </div>
@@ -2683,14 +2759,14 @@ disabled&gt;Button&lt;/button&gt;
           </section>
         </article>
         <article class="sdldocs-component box">
-          <header class="row" id="checkbox---error">
+          <header class="row" id="checkbox---required">
             <div class="col-xs">
-              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Checkbox - Error</h2>
+              <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Checkbox - Required</h2>
             </div>
           </header>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>The Spectrum checkbox</p>
+              <p>A checkbox that must be checked</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">

@@ -15,7 +15,13 @@
 
   opacity: .0001;
   z-index: 1;
+
+  cursor: pointer;
 }
+
+.spectrum-Checkbox-input:disabled {
+    cursor: default;
+  }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
     border-width: 6px;

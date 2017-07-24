@@ -108,8 +108,8 @@ markup: |
     }
 /* topdoc
 ---
-name: Checkbox - Error
-description: The Spectrum checkbox
+name: Checkbox - Required
+description: A checkbox that must be checked
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

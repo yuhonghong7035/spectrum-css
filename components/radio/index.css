@@ -23,6 +23,10 @@
     border-width: 6px;
   }
 
+.spectrum-Radio-input:disabled {
+    cursor: default;
+  }
+
 .spectrum-Radio-label {
   margin: 0 8px;
 

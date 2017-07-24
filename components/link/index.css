@@ -13,8 +13,17 @@ markup: |
   outline: none;
 }
 
-.spectrum-Link[disabled] {
-    opacity: 0.15;
+/* topdoc
+---
+name: Link - Disabled
+description: A disabled link
+markup: |
+  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+
+*/
+
+.spectrum-Link.is-disabled {
+  	cursor: default;
   }
 
 /* topdoc

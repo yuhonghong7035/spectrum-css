@@ -11,6 +11,9 @@
     color: rgb(13, 102, 208);
     box-shadow: 0 1px 0 rgb(13, 102, 208);
   }
+.spectrum--light .spectrum-Link.is-disabled {
+    color: rgb(197, 197, 197);
+  }
 .spectrum--light .spectrum-Link--subtle {
   color: inherit;
 }

@@ -6,21 +6,20 @@
     <!-- TODO: add markup here -->
 
 */
-.spectrum-Tab .spectrum-Tab-label {
-    color: rgb(153, 153, 153)
+color: var(--spectrum-tablist-text-color-default)
+
+  .spectrum-Tab:hover {
+    color: rgb(255, 255, 255)
   }
-.spectrum-Tab:hover .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum-Tab:focus .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum-Tab.is-selected .spectrum-Tab-label {
-      color: rgb(255, 255, 255)
-    }
-.spectrum-Tab[disabled] .spectrum-Tab-label {
-      color: rgb(92, 92, 92)
-    }
+.spectrum-Tab:focus {
+    color: rgb(255, 255, 255)
+  }
+.spectrum-Tab.is-selected {
+    color: rgb(255, 255, 255)
+  }
+.spectrum-Tab.is-disabled {
+    color: rgb(92, 92, 92)
+  }
 .spectrum-TabList--anchored {
 /*
   .spectrum-Tab {
