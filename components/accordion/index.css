@@ -1,0 +1,105 @@
+/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+
+/* topdoc
+---
+name: Accordion - Default
+description: The default spectrum accordion
+markup: |
+  <div class="spectrum-Accordion">
+    <div class="spectrum-Accordion-item is-open">
+      <div class="spectrum-Accordion-header">Header 1</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item is-disabled">
+      <div class="spectrum-Accordion-header">Header 2</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item">
+      <div class="spectrum-Accordion-header">Header 2</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Accordion {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum-Accordion-item {
+  z-index: inherit;
+  position: relative;
+
+  display: list-item;
+  margin: 0;
+
+  border-bottom: 1px solid transparent;
+}
+
+.spectrum-Accordion-item:first-of-type {
+    border-top: 1px solid transparent;
+  }
+
+.spectrum-Accordion-header {
+  position: relative;
+
+  box-sizing: border-box;
+  /* left padding takes into account the icon's size */
+  padding: 0 16px 0 32px;
+  margin: 0;
+
+  /* Subtract the size of the border since it's on the item itself */
+  height: 38px;
+
+  /* For focus state */
+  border-left: 2px solid transparent;
+
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+
+  overflow: ellipsis;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.spectrum-Accordion-header:focus {
+    outline: none;
+  }
+
+.spectrum-Accordion-header::before {
+    display: block;
+    content: '';
+    width: 6px;
+    height: 10px;
+
+    /* Support SVG icons */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    left: 16px;
+    top: 15px;
+
+    transition: transform ease 150ms;
+  }
+
+.spectrum-Accordion-content {
+  padding: 0 16px 16px 16px;
+  display: none;
+}
+
+.spectrum-Accordion-item.is-open .spectrum-Accordion-header::before {
+      transform: rotate(90deg);
+    }
+
+.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
+      display: block;
+    }
+
+.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {
+      cursor: default;
+    }
