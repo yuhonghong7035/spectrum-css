@@ -55,7 +55,12 @@
 }
 
 /* topdoc
-{{ wait/wait-small.yml }}
+---
+name: Wait - Default (Radial) - Small
+description: A Spectrum Wait of default type (radial) in default size (small)
+markup: |
+  <span class="spectrum-Wait"></span>
+
 */
 
 .spectrum-Wait {
@@ -76,7 +81,12 @@
 }
 
 /* topdoc
-{{ wait/wait-medium.yml }}
+---
+name: Wait - Default (Radial) - Medium
+description: A Spectrum Wait of default type (radial) in medium size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--medium"></span>
+
 */
 
 .spectrum-Wait--medium {
@@ -87,7 +97,12 @@
 }
 
 /* topdoc
-{{ wait/wait-large.yml }}
+---
+name: Wait - Default (Radial) - Large
+description: A Spectrum Wait of default type (radial) in large size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--large"></span>
+
 */
 
 .spectrum-Wait--large {
@@ -117,7 +132,12 @@
   }
 
 /* topdoc
-{{ wait/wait-dotssmall.yml }}
+---
+name: Wait - Dots - Small
+description: A Spectrum wait of 'dots' type in the default (small) size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots"></span>
+
 */
 
 .spectrum-Wait--dots {
@@ -142,7 +162,12 @@
   }
 
 /* topdoc
-{{ wait/wait-dotsmedium.yml }}
+---
+name: Wait - Dots - Medium
+description:  A Spectrum wait of 'dots' type in the medium size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
+
 */
 
 .spectrum-Wait--dots.spectrum-Wait--medium {
@@ -160,7 +185,12 @@
     }
 
 /* topdoc
-{{ wait/wait-dotslarge.yml }}
+---
+name: Wait - Dots - Large
+description: A Spectrum wait of 'dots' type in the ;arge size
+markup: |
+  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
+
 */
 
 .spectrum-Wait--dots.spectrum-Wait--large {

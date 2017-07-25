@@ -18,7 +18,30 @@
     color: rgb(13, 102, 208);
   }
 /* topdoc
-{{ checkbox/checkbox-default.yml }}
+---
+name: Checkbox - Default
+description: The Spectrum checkbox
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+  </div>
+
 */
 .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
       border-color: rgb(50, 50, 50);
@@ -34,7 +57,30 @@
       color: rgb(80, 80, 80);
     }
 /* topdoc
-{{ checkbox/checkbox-disabled.yml }}
+---
+name: Checkbox - Disabled
+description: The 'disabled' Spectrum checkbox
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-disabled is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
+  </div>
+
 */
 .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-checkmark {
     border-color: rgb(211, 211, 211);
@@ -61,7 +107,29 @@
       color: rgb(201, 37, 45);
     }
 /* topdoc
-{{ checkbox/checkbox-error.yml }}
+---
+name: Checkbox - Required
+description: A checkbox that must be checked
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
+  </div>
+  <div class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
+    <span class="spectrum-Checkbox-checkmark"></span>
+    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
+  </div>
 */
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
     border-color: rgb(227, 72, 80);

@@ -3,15 +3,52 @@
 /* It's a little wonky, right? */
 
 /* topdoc
-{{ textfield/textarea-default.yml }}
+---
+name: Text Area - Default
+description: A Spectrum text area - (a multiline text field)
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline">
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+  </textarea>
+
 */
 
 /* topdoc
-{{ textfield/textarea-quiet.yml }}
+---
+name: Text Area - Quiet
+description: A Spectrum text area - quiet
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  </textarea>
+
 */
 }
 /* topdoc
-{{ textfield/textfield-default.yml }}
+---
+name: Text Field - Default
+description: A Spectrum text field
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+
 */
 .spectrum--darkest .spectrum-Textfield {
   background-color: rgb(8, 8, 8);
@@ -72,7 +109,18 @@
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
 /* topdoc
-{{ textfield/textfield-quiet.yml }}
+---
+name: Text Field - Quiet
+description: A Spectrum text field - quiet
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
+
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+
 */
 .spectrum--darkest .spectrum-Textfield--quiet {
   background-color: transparent;
