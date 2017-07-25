@@ -38,9 +38,12 @@ markup: |
 .spectrum-Toast-content {
   display: block;
 
-  padding-left: 24px;
   padding-right: 24px;
 }
+
+.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
+    padding-left: 24px;
+  }
 
 .spectrum-Toast-closeButton {
   position: absolute;
