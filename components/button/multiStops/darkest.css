@@ -11,17 +11,7 @@
     color: rgb(180, 180, 180);
   }
 /* topdoc
----
-name: Button - CTA
-description: A Spectrum 'call-to-action' button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--cta">Button</button>
-  <button class="spectrum-Button spectrum-Button--cta" disabled>Button</button>
-
+{{ button/button-cta.yml }}
 */
 .spectrum--darkest .spectrum-Button--cta {
   background-color: rgb(38, 128, 235);
@@ -50,19 +40,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Primary
-description: A Spectrum 'primary' button (which is also the default style)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--primary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--primary"
-  disabled>Button</button>
-
+{{ button/button-primary.yml }}
 */
 .spectrum--darkest .spectrum-Button--primary {
   background-color: transparent;
@@ -91,19 +69,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Secondary
-description: A Spectrum 'secondary' style button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--secondary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--secondary"
-  disabled>Button</button>
-
+{{ button/button-secondary.yml }}
 */
 .spectrum--darkest .spectrum-Button--secondary {
   background-color: transparent;
@@ -132,19 +98,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Warning
-description: A Spectrum button in 'warning' style
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--warning">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--warning"
-  disabled>Button</button>
-
+{{ button/button-warning.yml }}
 */
 .spectrum--darkest .spectrum-Button--warning {
   background-color: transparent;
@@ -173,20 +127,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Quiet Primary
-description: A 'quiet primary' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--primary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--primary"
-  disabled>Button</button>
-
+{{ button/button-quiet-primary.yml }}
 */
 .spectrum--darkest .spectrum-Button--quiet--primary {
   background-color: transparent;
@@ -215,20 +156,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Quiet Secondary
-description: A 'quiet secondary' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--secondary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--secondary"
-  disabled>Button</button>
-
+{{ button/button-quiet-secondary.yml }}
 */
 .spectrum--darkest .spectrum-Button--quiet--secondary {
   background-color: transparent;
@@ -257,33 +185,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Action
-description: A Spectrum 'action' button, used in the action bar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--action">Button</button>
-  <button class="spectrum-Button spectrum-Button--action" disabled>Button</button>
-
-  <button class="spectrum-Button spectrum-Button--action">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--action" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-
+{{ button/button-action.yml }}
 */
 .spectrum--darkest .spectrum-Button--action {
   background-color: rgb(24, 24, 24);
@@ -317,30 +219,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Quiet Action
-description: A Spectrum 'action' button, used in the action bar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--quiet--action">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-
+{{ button/button-quietaction.yml }}
 */
 .spectrum--darkest .spectrum-Button--quiet--action {
   background-color: transparent;
@@ -374,32 +253,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Button - Toggle
-description: A Spectrum 'toggle' button, used in toolbar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-  '.is-selected': Selected state
-markup: |
-  <button class="spectrum-Button spectrum-Button--toggle">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle is-selected">
-    Selected Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
+{{ button/button-toggle.yml }}
 */
 .spectrum--darkest .spectrum-Button--toggle {
   background-color: transparent;
@@ -455,20 +309,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /*! topdoc
----
-name: Button - Quiet Warning
-description: A 'quiet warning' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--warning">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--warning"
-  disabled>Button</button>
-
+{{ button/button-quiet-warning.yml }}
 */
 .spectrum--darkest .spectrum-Button--quiet--warning {
   background-color: transparent;
@@ -497,17 +338,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Logic Button AND
-description: The Spectrum logical AND button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--and">And</button>
-  <button class="spectrum-Button spectrum-Button--and" disabled>And</button>
-
+{{ button/logicbutton-and.yml }}
 */
 .spectrum--darkest .spectrum-Button--and {
   background-color: rgb(38, 128, 235);
@@ -531,17 +362,7 @@ markup: |
     color: rgb(73, 73, 73);
   }
 /* topdoc
----
-name: Logic Button OR
-description: The Spectrum logical OR button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--or">Or</button>
-  <button class="spectrum-Button spectrum-Button--or" disabled>Or</button>
-
+{{ button/logicbutton-or.yml }}
 */
 .spectrum--darkest .spectrum-Button--or {
   background-color: rgb(216, 55, 144);

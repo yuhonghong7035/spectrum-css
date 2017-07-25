@@ -17,12 +17,7 @@ spectrum-tablist-line-disabled() {
 */
 }
 /* topdoc
----
-  name: Tab - Default
-  description: The default Spectrum Tab element
-  markup: |
-    <!-- TODO: add markup here -->
-
+{{ tablist/tab-default.yml }}
 */
 color: var(--spectrum-tablist-text-color-default)
 

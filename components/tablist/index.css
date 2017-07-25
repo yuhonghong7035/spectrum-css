@@ -47,59 +47,11 @@
     }
 
 /* topdoc
----
-  name: TabList - Horizontal - Label
-  description: The Spectrum tab list with labels in horizontal mode 
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
-
-
+{{ tablist/tablist-horizontallabel.yml }}
 */
 
 /* topdoc
----
-  name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
+{{ tablist/tablist-horizontalicon.yml }}
 */
 
 .spectrum-TabList--horizontal,
@@ -150,57 +102,11 @@
       }
 
 /* topdoc
----
-  name: TabList - Vertical - Label
-  description: The Spectrum tab list with labels in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
+{{ tablist/tablist-verticallabel.yml }}
 */
 
 /* topdoc
----
-  name: TabList - Vertical - Icon
-  description: The Spectrum tab list with icons in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
+{{ tablist/tablist-verticalicon.yml }}
 */
 
 .spectrum-TabList--vertical {
@@ -260,28 +166,7 @@
 }
 
 /* topdoc
----
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <ul class="spectrum-TabList spectrum-TabList--anchored">
-      <li class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="1">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="2">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="3">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </li>
-      <li class="spectrum-Tab is-disabled" tabindex="4">
-        <label class="spectrum-Tab-label">Friday</label>
-      </li>
-    </ul>
-
+{{ tablist/tablist-anchoredlabel.yml }}
 */
 
 .spectrum-TabList--anchored {

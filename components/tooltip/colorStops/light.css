@@ -1,12 +1,5 @@
 /* topdoc
----
-name: Tooltip - Default
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-default.yml }}
 */
 .spectrum-Tooltip .spectrum-Tooltip-content,
   .spectrum-Tooltip .spectrum-Tooltip-tip::after {
@@ -14,42 +7,21 @@ markup: |
     color: rgb(255, 255, 255);
   }
 /* topdoc
----
-name: Tooltip - Error
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-content">Error Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-error.yml }}
 */
 .spectrum-Tooltip--error .spectrum-Tooltip-content,
   .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
     background-color: rgb(215, 55, 63);
   }
 /* topdoc
----
-name: Tooltip - Info
-description: A Spectrum info tooltip is the same as default :)
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--info is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-info.yml }}
 */
 .spectrum-Tooltip--info .spectrum-Tooltip-content,
   .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
     background-color: rgb(20, 115, 230);
   }
 /* topdoc
----
-name: Tooltip - Success
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-content">Success Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-success.yml }}
 */
 .spectrum-Tooltip--success .spectrum-Tooltip-content,
   .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {

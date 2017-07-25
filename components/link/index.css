@@ -1,10 +1,5 @@
 /* topdoc
----
-name: Link - Default
-description: A link
-markup: |
-  <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
-
+{{ link/link-default.yml }}
 */
 
 .spectrum-Link {
@@ -14,12 +9,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Link - Disabled
-description: A disabled link
-markup: |
-  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
-
+{{ link/link-disabled.yml }}
 */
 
 .spectrum-Link.is-disabled {
@@ -27,13 +17,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Link - Subtle
-description: A subtle link
-markup: |
-  <p> This uses <a href="#" class="spectrum-Link
-  spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
-
+{{ link/link-subtle.yml }}
 */
 
 .spectrum-Link--subtle {

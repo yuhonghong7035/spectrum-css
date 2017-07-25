@@ -20,22 +20,7 @@
   }
 
 /* topdoc
----
-  name: Typography - Default
-  description: The default Spectrum Typography elements
-  markup: |
-    <h1 class="spectrum-Heading--display">Display (h1)</h1>
-    <h1 class="spectrum-Heading--page-title">Page Title (h2)</h2>
-    <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
-    <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
-    <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
-
-    <p class="spectrum-Body--small">Small Body Text</p>
-    <p class="spectrum-Body">Default Body Text</p>
-    <p class="spectrum-Body--secondary">Secondary Body Text</p>
-    <p class="spectrum-Body--italic"> Body Text Italic</p>
-    <p class="spectrum-Body--large">Large Body Text</p>
-
+{{ typography/typography-default.yml }}
 */
 
 .spectrum,
@@ -100,12 +85,7 @@
 }
 
 /* topdoc
----
-name: Link - Default
-description: A link
-markup: |
-  <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
-
+{{ link/link-default.yml }}
 */
 
 .spectrum-Link {
@@ -115,12 +95,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Link - Disabled
-description: A disabled link
-markup: |
-  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
-
+{{ link/link-disabled.yml }}
 */
 
 .spectrum-Link.is-disabled {
@@ -128,13 +103,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Link - Subtle
-description: A subtle link
-markup: |
-  <p> This uses <a href="#" class="spectrum-Link
-  spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
-
+{{ link/link-subtle.yml }}
 */
 
 .spectrum-Link--subtle {
@@ -159,6 +128,10 @@ markup: |
     transform:scale(1);
     opacity:1;
     content:'';
+  }
+
+.spectrum-Breadcrumb:last-of-type {
+    cursor: default;
   }
 
 .spectrum-Breadcrumb:last-of-type::after {
@@ -278,21 +251,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Alert - Closable
-description: >-
-  The closable Spectrum alert. It has a close button in the footer.
-  Combine this strategy with any variant.
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-    <div class="spectrum-Alert-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
-    </div>
-  </div>
-
+{{ alert/alert-closeable.yml }}
 */
 
 .spectrum-Alert {
@@ -300,7 +259,7 @@ markup: |
 
   display: inline-block;
   box-sizing: border-box;
-  width: 384px;
+  min-width: 384px;
   min-height: 38px;
   margin: 8px 0;
   padding: 16px 20px;
@@ -338,6 +297,9 @@ markup: |
   min-height: 0;
   margin: 0;
   padding: 0;
+
+  /* Leave room for the icon */
+  padding-right: 30px;
 
   font-size: 0.875rem;
   font-weight: 700;
@@ -454,21 +416,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Label - Default
-description: A Spectrum label
-markup: |
-  <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
-
-  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
-
-  <span class="spectrum-Label spectrum-Label--blue">Blue Label</span>
-
-  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
-
-  <span class="spectrum-Label spectrum-Label--orange">Orange Label</span>
-
-
+{{ label/label-default.yml }}
 */
 
 .spectrum-Label {
@@ -499,25 +447,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Label - Large
-description: A large Spectrum label
-markup: |
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
-  style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
-  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
-  style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
-  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
-  style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
-
+{{ label/label-large.yml }}
 */
 
 .spectrum-Label--large {
@@ -643,31 +573,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Progress - Small
-description: A Spectrum 'small' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
+{{ progress/progress-small.yml }}
 */
 
 .spectrum-Progress--small {
@@ -733,31 +639,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Progress - Medium
-description: A Spectrum 'medium' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
+{{ progress/progress-medium.yml }}
 */
 
 .spectrum-Progress--medium .spectrum-Progress-bar {
@@ -795,31 +677,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Progress - Large
-description: A Spectrum 'large' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
+{{ progress/progress-large.yml }}
 */
 
 .spectrum-Progress--large {
@@ -1093,14 +951,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Tooltip - Large
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-large.yml }}
 */
 
 .spectrum-Tooltip--large .spectrum-Tooltip-content{
@@ -1108,46 +959,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Tooltip - Icons
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
-    </span>
-  </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--success
-  is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
-    </span>
-  </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--info
-  is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
-  </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--error
-  is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
-  </span>
-
+{{ tooltip/tooltip-icons.yml }}
 */
 
 .spectrum-Tooltip-typeIcon {
@@ -1321,12 +1133,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Wait - Default (Radial) - Small
-description: A Spectrum Wait of default type (radial) in default size (small)
-markup: |
-  <span class="spectrum-Wait"></span>
-
+{{ wait/wait-small.yml }}
 */
 
 .spectrum-Wait {
@@ -1347,12 +1154,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Wait - Default (Radial) - Medium
-description: A Spectrum Wait of default type (radial) in medium size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--medium"></span>
-
+{{ wait/wait-medium.yml }}
 */
 
 .spectrum-Wait--medium {
@@ -1363,12 +1165,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Wait - Default (Radial) - Large
-description: A Spectrum Wait of default type (radial) in large size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--large"></span>
-
+{{ wait/wait-large.yml }}
 */
 
 .spectrum-Wait--large {
@@ -1398,12 +1195,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Wait - Dots - Small
-description: A Spectrum wait of 'dots' type in the default (small) size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots"></span>
-
+{{ wait/wait-dotssmall.yml }}
 */
 
 .spectrum-Wait--dots {
@@ -1428,12 +1220,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Wait - Dots - Medium
-description:  A Spectrum wait of 'dots' type in the medium size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
-
+{{ wait/wait-dotsmedium.yml }}
 */
 
 .spectrum-Wait--dots.spectrum-Wait--medium {
@@ -1451,12 +1238,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Wait - Dots - Large
-description: A Spectrum wait of 'dots' type in the ;arge size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
-
+{{ wait/wait-dotslarge.yml }}
 */
 
 .spectrum-Wait--dots.spectrum-Wait--large {
@@ -1474,50 +1256,7 @@ markup: |
     }
 
 /* topdoc
-name: Dropdown - Default
-description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
-markup: |
-  <h4>Closed - default</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown" style="width: 185px;">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
-  <h4>Open - default</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
-
-
-
-
-
+{{ dropdown/dropdown-default.yml }}
 */
 
 .spectrum-Dropdown {
@@ -1671,46 +1410,7 @@ markup: |
   }
 
 /* topdoc
-name: Dropdown - Quiet
-description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
-markup: |
-
-  <h4>Closed - Quiet</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
-  <h4>Open - Quiet</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
+{{ dropdown/dropdown-quiet.yml }}
 */
 
 .spectrum-Dropdown--quiet {
@@ -1768,26 +1468,7 @@ markup: |
 */
 
 /* topdoc
----
-name: Dialog - Default
-description: A Spectrum 'default' dialog (which is also the default style)
-markup: |
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
-  <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This Dialog is not centered.</p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
+{{ dialog/dialog-default.yml }}
 */
 
 /*
@@ -2324,59 +2005,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
     }
 
 /* topdoc
----
-  name: TabList - Horizontal - Label
-  description: The Spectrum tab list with labels in horizontal mode 
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
-
-
+{{ tablist/tablist-horizontallabel.yml }}
 */
 
 /* topdoc
----
-  name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
+{{ tablist/tablist-horizontalicon.yml }}
 */
 
 .spectrum-TabList--horizontal,
@@ -2427,57 +2060,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
       }
 
 /* topdoc
----
-  name: TabList - Vertical - Label
-  description: The Spectrum tab list with labels in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
+{{ tablist/tablist-verticallabel.yml }}
 */
 
 /* topdoc
----
-  name: TabList - Vertical - Icon
-  description: The Spectrum tab list with icons in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
+{{ tablist/tablist-verticalicon.yml }}
 */
 
 .spectrum-TabList--vertical {
@@ -2537,28 +2124,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 /* topdoc
----
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <ul class="spectrum-TabList spectrum-TabList--anchored">
-      <li class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="1">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="2">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="3">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </li>
-      <li class="spectrum-Tab is-disabled" tabindex="4">
-        <label class="spectrum-Tab-label">Friday</label>
-      </li>
-    </ul>
-
+{{ tablist/tablist-anchoredlabel.yml }}
 */
 
 .spectrum-TabList--anchored {
@@ -2614,38 +2180,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 /* topdoc
----
-name: Steplist - Plain
-description: A steplist w/o labels or tooltips
-markup: |
-  <div class="spectrum-Steplist spectrum-Steplist--small">
-    <div class="spectrum-Steplist-step is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-selected">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-  </div>
-
+{{ steplist/steplist-default.yml }}
 */
 
 .spectrum-Steplist {
@@ -2735,41 +2270,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Steplist - With Label
-description: A steplist with labels
-markup: |
-  <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step is-complete">
-        <span class="spectrum-Steplist-label">Step 1</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-complete">
-        <span class="spectrum-Steplist-label">Step 2</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-selected">
-        <span class="spectrum-Steplist-label">Step 3</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step">
-        <span class="spectrum-Steplist-label">Step 4</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-  <div>
-
+{{ steplist/steplist-label.yml }}
 */
 
 .spectrum-Steplist-label {
@@ -2909,53 +2410,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Steplist - With Tooltip
-description: A steplist with tooltips
-markup: |
-  <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 1<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 2<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 3<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 4<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-  </div>
-
+{{ steplist/steplist-tooltip.yml }}
 */
 
 .spectrum-Steplist-tooltip {
@@ -2964,26 +2419,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Toggle Switch - On/Off
-description: The Spectrum toggle on/off
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-0">Toggle Off</label>
-  </div>
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-1" checked>
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-1">Toggle On</label>
-  </div>
-
-
+{{ toggle/toggle-onoffdefault.yml }}
 */
 
 .spectrum-ToggleSwitch {
@@ -3011,26 +2447,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Toggle Switch - On/Off - Disabled
-description: The Spectrum toggle on/off - disabled
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle Off</label>
-  </div>
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle On</label>
-  </div>
-
-
+{{ toggle/toggle-onoffdisabled.yml }}
 */
 
 .spectrum-ToggleSwitch-input:disabled,
@@ -3158,12 +2575,81 @@ markup: |
 }
 
 /* topdoc
----
-name: Page
-description: |
-  The outer page container. The `<body>` tag should only have the `.spectrum` class if using a standalone CSS file.
-  If using multistops, the `<body>` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
+{{ toast/toast-default.yml }}
+*/
 
+.spectrum-Toast {
+  position: relative;
+  padding: 12px 18px;
+
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.spectrum-Toast-typeIcon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
+  margin-right: 4px;
+
+  /* Support font icons */
+  font-size: 1.125rem;
+
+  /* Support SVG icons */
+  background-size: contain;
+}
+
+.spectrum-Toast-content {
+  display: block;
+
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.spectrum-Toast-closeButton {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 18px;
+
+  background-color: transparent;
+
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:white' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
+
+  background-size: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  transition: background-color 150ms ease-in-out;
+
+  cursor: pointer;
+}
+
+.spectrum-Toast-closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+.spectrum-Toast-closeButton:active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+.spectrum-Toast-closeButton:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
+  }
+
+/* topdoc
+{{ page/page.yml }}
 */
 
 .spectrum {
@@ -3263,17 +2749,7 @@ description: |
   }
 
 /* topdoc
----
-name: Button - CTA
-description: A Spectrum 'call-to-action' button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--cta">Button</button>
-  <button class="spectrum-Button spectrum-Button--cta" disabled>Button</button>
-
+{{ button/button-cta.yml }}
 */
 
 .spectrum-Button--cta {
@@ -3308,19 +2784,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Primary
-description: A Spectrum 'primary' button (which is also the default style)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--primary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--primary"
-  disabled>Button</button>
-
+{{ button/button-primary.yml }}
 */
 
 .spectrum-Button--primary {
@@ -3355,19 +2819,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Secondary
-description: A Spectrum 'secondary' style button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--secondary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--secondary"
-  disabled>Button</button>
-
+{{ button/button-secondary.yml }}
 */
 
 .spectrum-Button--secondary {
@@ -3402,19 +2854,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Warning
-description: A Spectrum button in 'warning' style
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--warning">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--warning"
-  disabled>Button</button>
-
+{{ button/button-warning.yml }}
 */
 
 .spectrum-Button--warning {
@@ -3449,20 +2889,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Quiet Primary
-description: A 'quiet primary' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--primary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--primary"
-  disabled>Button</button>
-
+{{ button/button-quiet-primary.yml }}
 */
 
 .spectrum-Button--quiet--primary {
@@ -3497,20 +2924,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Quiet Secondary
-description: A 'quiet secondary' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--secondary">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--secondary"
-  disabled>Button</button>
-
+{{ button/button-quiet-secondary.yml }}
 */
 
 .spectrum-Button--quiet--secondary {
@@ -3545,33 +2959,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Action
-description: A Spectrum 'action' button, used in the action bar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--action">Button</button>
-  <button class="spectrum-Button spectrum-Button--action" disabled>Button</button>
-
-  <button class="spectrum-Button spectrum-Button--action">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--action" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--action spectrum-Button--action--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-
+{{ button/button-action.yml }}
 */
 
 .spectrum-Button--action {
@@ -3611,30 +2999,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Quiet Action
-description: A Spectrum 'action' button, used in the action bar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--quiet--action">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Button--quiet--action--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-
+{{ button/button-quietaction.yml }}
 */
 
 .spectrum-Button--quiet--action {
@@ -3674,32 +3039,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Button - Toggle
-description: A Spectrum 'toggle' button, used in toolbar
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-  '.is-selected': Selected state
-markup: |
-  <button class="spectrum-Button spectrum-Button--toggle">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-    Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle is-selected">
-    Selected Button
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
-  <button class="spectrum-Button spectrum-Button--toggle spectrum-Button--toggle--icon-only" disabled>
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete" role="img" aria-label="info"></div>
-  </button>
+{{ button/button-toggle.yml }}
 */
 
 .spectrum-Button--toggle {
@@ -3766,20 +3106,7 @@ markup: |
   }
 
 /*! topdoc
----
-name: Button - Quiet Warning
-description: A 'quiet warning' Spectrum button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button
-  spectrum-Button--quiet--warning">Button</button>
-
-  <button class="spectrum-Button spectrum-Button--quiet--warning"
-  disabled>Button</button>
-
+{{ button/button-quiet-warning.yml }}
 */
 
 .spectrum-Button--quiet--warning {
@@ -3814,17 +3141,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Logic Button AND
-description: The Spectrum logical AND button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--and">And</button>
-  <button class="spectrum-Button spectrum-Button--and" disabled>And</button>
-
+{{ button/logicbutton-and.yml }}
 */
 
 .spectrum-Button--and {
@@ -3853,17 +3170,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Logic Button OR
-description: The Spectrum logical OR button
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <button class="spectrum-Button spectrum-Button--or">Or</button>
-  <button class="spectrum-Button spectrum-Button--or" disabled>Or</button>
-
+{{ button/logicbutton-or.yml }}
 */
 
 .spectrum-Button--or {
@@ -3918,35 +3225,11 @@ markup: |
   }
 
 /* topdoc
----
-name: Breadcrumb - Default
-description: The default Spectrum breadcrumb
-modifiers:
-  ':hover': Hover state
-  ':focus': Focused
-  ':active': Active state
-markup: |
-  <div class="spectrum-Breadcrumb">
-    <span class="spectrum-Breadcrumb">Nike</span>
-    <span class="spectrum-Breadcrumb">Mens</span>
-    <span class="spectrum-Breadcrumb">Summer 2016</span>
-  </div>
+{{ breadcrumb/breadcrumb-default.yml }}
 */
 
 /* topdoc
----
-name: Breadcrumb - Title
-description: A Spectrum 'page title' breadcrumb
-modifiers:
-  ':hover': Hover state
-  ':focus': Focused
-  ':active': Active state
-markup: |
-  <div class="spectrum-Breadcrumb-title">
-    <span class="spectrum-Breadcrumb">Nike</span>
-    <span class="spectrum-Breadcrumb">Mens</span>
-    <span class="spectrum-Breadcrumb">Summer 2016</span>
-  </div>
+{{ breadcrumb/breadcrumb-title.yml }}
 */
 
 .spectrum-Alert {
@@ -3964,16 +3247,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Alert - Info
-description: The Spectrum alert 'info'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--info">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
-    <div class="spectrum-Alert-header">Infomation Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-info.yml }}
 */
 
 .spectrum-Alert--info {
@@ -3986,16 +3260,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Alert - Error
-description: The Spectrum alert 'error'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Error Alert - Oh no</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-error.yml }}
 */
 
 .spectrum-Alert--error {
@@ -4008,16 +3273,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Alert - Success
-description: The Spectrum alert 'success'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--success">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
-    <div class="spectrum-Alert-header">Successful Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-success.yml }}
 */
 
 .spectrum-Alert--success {
@@ -4030,16 +3286,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Alert - Warning
-description: The Spectrum alert 'warning'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--warning">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Warning Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-warning.yml }}
 */
 
 .spectrum-Alert--warning {
@@ -4077,30 +3324,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Checkbox - Default
-description: The Spectrum checkbox
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
-
+{{ checkbox/checkbox-default.yml }}
 */
 
 .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -4121,30 +3345,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Checkbox - Disabled
-description: The 'disabled' Spectrum checkbox
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Checkbox is-disabled">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
-  </div>
-
+{{ checkbox/checkbox-disabled.yml }}
 */
 
 .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-checkmark {
@@ -4180,29 +3381,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Checkbox - Required
-description: A checkbox that must be checked
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
-    <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+{{ checkbox/checkbox-error.yml }}
 */
 
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
@@ -4218,16 +3397,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Label - Special
-description: A special label
-markup: |
-  <span class="spectrum-Label spectrum-Label--and">And</span>
-  <span class="spectrum-Label spectrum-Label--or">Or</span>
-  <br>
-  <span class="spectrum-Label spectrum-Label--active">Active</span>
-  <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
-
+{{ label/label-special.yml }}
 */
 
 .spectrum-Label--inactive,
@@ -4274,25 +3444,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Radio - Default
-description: The Spectrum radio thingy
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-  </div>
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
-  </div>
-
+{{ radio/radio-default.yml }}
 */
 
 .spectrum-Radio .spectrum-Radio-label {
@@ -4321,25 +3473,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Radio - Disabled
-description: The 'disabled' Spectrum radio
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-disable-0">Kittens</label>
-  </div>
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-1" disabled checked>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-disable-0">Puppies</label>
-  </div>
-
+{{ radio/radio-disabled.yml }}
 */
 
 .spectrum-Radio-input:disabled + .spectrum-Radio-checkmark {
@@ -4359,26 +3493,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Radio - Required
-description: The 'required' Spectrum radio
-modifiers:
-  ':hover': Hover state
-  ':active': Active state
-  ':focus': Focused
-markup: |
-  <form>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-    </div>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-    </div>
-  </form>
+{{ radio/radio-required.yml }}
 */
 
 .spectrum-Radio-input:invalid:hover + .spectrum-Radio-checkmark {
@@ -4402,52 +3517,15 @@ markup: |
 /* It's a little wonky, right? */
 
 /* topdoc
----
-name: Text Area - Default
-description: A Spectrum text area - (a multiline text field)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline">
-  </textarea>
-
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
-  </textarea>
-
+{{ textfield/textarea-default.yml }}
 */
 
 /* topdoc
----
-name: Text Area - Quiet
-description: A Spectrum text area - quiet
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
-  </textarea>
-
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
-  </textarea>
-
+{{ textfield/textarea-quiet.yml }}
 */
 
 /* topdoc
----
-name: Text Field - Default
-description: A Spectrum text field
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
-
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
-
+{{ textfield/textfield-default.yml }}
 */
 
 .spectrum-Textfield {
@@ -4525,18 +3603,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Text Field - Quiet
-description: A Spectrum text field - quiet
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
-
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
-
+{{ textfield/textfield-quiet.yml }}
 */
 
 .spectrum-Textfield--quiet {
@@ -4572,14 +3639,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Tooltip - Default
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-default.yml }}
 */
 
 .spectrum-Tooltip .spectrum-Tooltip-content,
@@ -4589,14 +3649,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Tooltip - Error
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-content">Error Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-error.yml }}
 */
 
 .spectrum-Tooltip--error .spectrum-Tooltip-content,
@@ -4605,14 +3658,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Tooltip - Info
-description: A Spectrum info tooltip is the same as default :)
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--info is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-info.yml }}
 */
 
 .spectrum-Tooltip--info .spectrum-Tooltip-content,
@@ -4621,14 +3667,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Tooltip - Success
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-content">Success Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
-
+{{ tooltip/tooltip-success.yml }}
 */
 
 .spectrum-Tooltip--success .spectrum-Tooltip-content,
@@ -4819,27 +3858,7 @@ markup: |
 }
 
 /* topdoc
----
-name: Dialog - Success
-description: A Spectrum 'success' dialog
-markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button>
-  <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Check-Circle spectrum-Dialog-typeIcon"></div>
-        <h2 class="spectrum-Dialog-title">Success Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. </p>
-        <p>This dialog is not centered. </p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
+{{ dialog/dialog-success.yml }}
 */
 
 .spectrum-Dialog--success .spectrum-Dialog-title {
@@ -4851,27 +3870,7 @@ markup:
   }
 
 /* topdoc
----
-name: Dialog - Info
-description: A Spectrum 'info' dialog
-markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button>
-  <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Info-Circle"></div>
-        <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. </p>
-        <p>This dialog is not centered. </p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
+{{ dialog/dialog-info.yml }}
 */
 
 .spectrum-Dialog--help .spectrum-Dialog-title, .spectrum-Dialog--info .spectrum-Dialog-title {
@@ -4883,27 +3882,7 @@ markup:
   }
 
 /* topdoc
----
-name: Dialog - Warning
-description: A Spectrum 'warning' dialog
-markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button>
-  <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
-        <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. This Dialog is not centered.</p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
-
+{{ dialog/dialog-warning.yml }}
 */
 
 .spectrum-Dialog--warning .spectrum-Dialog-title {
@@ -4915,27 +3894,7 @@ markup:
   }
 
 /* topdoc
----
-name: Dialog - Error
-description: A Spectrum 'error' dialog
-markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button>
-  <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Icon spectrum-Dialog-typeIcon spectrum-Icon--sizeS spectrum-Icon--Alert"></div>
-        <h2 class="spectrum-Dialog-title">Error Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. This Dialog is not centered.</p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
-
+{{ dialog/dialog-error.yml }}
 */
 
 .spectrum-Dialog--error .spectrum-Dialog-title {
@@ -4947,27 +3906,7 @@ markup:
   }
 
 /* topdoc
----
-name: Dialog - Modal
-description: A Spectrum 'modal' dialog
-markup: |
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This Dialog is not centered.</p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
-
+{{ dialog/dialog-modal.yml }}
 */
 
 .spectrum-Dialog--modal {
@@ -4975,358 +3914,35 @@ markup: |
 }
 
 /* topdoc
----
-  name: Slider - Default
-  description: The default Spectrum Slider element
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-
-
-
-
-
-
+{{ slider/slider-default.yml }}
 */
 
 /* topdoc
----
-  name: Slider - With Label
-  description: The default Spectrum Slider element
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-label.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Filled
-  description: Spectrum slider with fill
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="width: 40%"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="width: 100%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-filled.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Double Handle
-  description: Spectrum slider with double handle, also known as ranged slider.
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">14 - 48</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 60%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14 - 48</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 60%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-double.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Video Player
-  description: Spectrum slider for video players, which display a buffer.
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">3:48</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">3:48</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-video.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Tick
-  description: Spectrum tick slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--tick">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--tick is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-tick.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Tick with Labels
-  description: Spectrum tick slider with labels
-  markup: |
-    <formfield class="spectrum-Slider">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">0</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">20</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">40</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">60</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">80</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">100</label>
-          </div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">0</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">20</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">40</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">60</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">80</label>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <label class="spectrum-Slider-label">100</label>
-          </div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-tick-label.yml }}
 */
 
 /* topdoc
----
-  name: Slider - Ramp
-  description: Spectrum ramp slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--ramp">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              xml:space="preserve">
-          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"/>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--ramp is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">14</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              xml:space="preserve">
-          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"/>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-
-
-
+{{ slider/slider-ramp.yml }}
 */
 
 .spectrum-Slider {
@@ -5468,36 +4084,7 @@ Todo: Determine if these are supposed to be pseudo classes
       }
 
 /* topdoc
----
-  name: Slider - Color
-  description: Spectrum Color slider
-  markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--color">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Default</label>
-        <label class="spectrum-Slider-label-value">#2680eb</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--color is-disabled">
-      <div class="spectrum-Slider-label">
-        <label class="spectrum-Slider-label-name">Slider Label - Disabled</label>
-        <label class="spectrum-Slider-label-value">#2680eb</label>
-      </div>
-      <div class="spectrum-Slider-controls" value="14" min="10" max="20" step="2" role="presentation" aria-valuemin="10" aria-orientation="horizontal" aria-invalid="false" aria-readonly="false" aria-required="false">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 40%;">
-          <input handle="leftInput" type="range" class="spectrum-Slider-input" aria-valuenow="14" aria-valuetext="14" value="14" step="2" aria-valuestep="2" min="10" aria-valuemin="10" max="20" aria-valuemax="20" aria-orientation="horizontal">
-        </div>
-      </div>
-    </formfield>
-
-
+{{ slider/slider-colored.yml }}
 */
 
 .spectrum-Slider--color .spectrum-Slider-track {
@@ -5516,29 +4103,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
 /* topdoc
----
-  name: Slider - Round
-  description: Spectrum round slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <formfield class="spectrum-Slider spectrum-Slider--round">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle" tabindex="0">
-          <div class="spectrum-Slider-input"></div>
-        </div>
-      </div>
-    </formfield>
-    <formfield class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle" tabindex="0">
-          <div class="spectrum-Slider-input"></div>
-        </div>
-      </div>
-    </formfield>
+{{ slider/slider-round.yml }}
 */
 
 .spectrum-Slider--round .spectrum-Slider-handle:hover .spectrum-Slider-input::after {
@@ -5559,12 +4124,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
 /* topdoc
----
-  name: Tab - Default
-  description: The default Spectrum Tab element
-  markup: |
-    <!-- TODO: add markup here -->
-
+{{ tablist/tab-default.yml }}
 */
 
 color: var(--spectrum-tablist-text-color-default)
@@ -5776,19 +4336,7 @@ spectrum-tablist-line-disabled() {
       }
 
 /* topdoc
----
-name: Flyout
-description: Spectrum Flyouts
-markup: |
-      <h4>Flyout - Default</h4>
-      <ul class="spectrum-Flyout" role="menu" tabindex="0">
-        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-        <hr class="spectrum-Flyout-divider">
-        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-
+{{ flyout/flyout-default.yml }}
 */
 
 .spectrum-Flyout {
@@ -5841,3 +4389,56 @@ markup: |
 .spectrum-Flyout-divider {
   background-color: rgb(38, 38, 38);
 }
+
+.spectrum-Toast {
+  background-color: rgb(112, 112, 112);
+  color: rgb(255, 255, 255);
+}
+
+/* topdoc
+{{ toast/toast-warning.yml }}
+*/
+
+.spectrum-Toast--warning {
+  background-color: rgb(230, 134, 25);
+}
+
+/* topdoc
+{{ toast/toast-error.yml }}
+*/
+
+.spectrum-Toast--error {
+  background-color: rgb(227, 72, 80);
+}
+
+/* topdoc
+{{ toast/toast-warning.yml }}
+*/
+
+.spectrum-Toast--warning .spectrum-Toast-typeIcon, .spectrum-Toast--error .spectrum-Toast-typeIcon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:white' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
+  }
+
+/* topdoc
+{{ toast/toast-info.yml }}
+*/
+
+.spectrum-Toast--info {
+  background-color: rgb(38, 128, 235);
+}
+
+.spectrum-Toast--info .spectrum-Toast-typeIcon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:white' d='M18%2C2A16%2C16%2C0%2C1%2C0%2C34%2C18%2C16%2C16%2C0%2C0%2C0%2C18%2C2Zm-.3%2C4.3a2.718%2C2.718%2C0%2C0%2C1%2C2.864%2C2.824A2.665%2C2.665%2C0%2C0%2C1%2C17.7%2C11.987a2.706%2C2.706%2C0%2C0%2C1-2.864-2.864A2.717%2C2.717%2C0%2C0%2C1%2C17.7%2C6.3ZM22%2C27a1%2C1%2C0%2C0%2C1-1%2C1H15a1%2C1%2C0%2C0%2C1-1-1V25a1%2C1%2C0%2C0%2C1%2C1-1h1V18H15a1%2C1%2C0%2C0%2C1-1-1V15a1%2C1%2C0%2C0%2C1%2C1-1h4a1%2C1%2C0%2C0%2C1%2C1%2C1v9h1a1%2C1%2C0%2C0%2C1%2C1%2C1Z'/%3E%3C/svg%3E");
+  }
+
+/* topdoc
+{{ toast/toast-success.yml }}
+*/
+
+.spectrum-Toast--success {
+  background-color: rgb(45, 157, 120);
+}
+
+.spectrum-Toast--success .spectrum-Toast-typeIcon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:white' d='M16%2C2A16%2C16%2C0%2C1%2C0%2C32%2C18%2C16%2C16%2C0%2C0%2C0%2C16%2C2Zm10.666%2C9.08h0L14.018%2C27.341a1.208%2C1.208%2C0%2C0%2C1-.875.461c-.023%2C0-.049%2C0-.072%2C0a1.2%2C1.2%2C0%2C0%2C1-.85-.352L4.436%2C19.657a1.2%2C1.2%2C0%2C0%2C1%2C0-1.7l1.326-1.325a1.2%2C1.2%2C0%2C0%2C1%2C1.7%2C0L12.8%2C21.981%2C23.315%2C8.473A1.2%2C1.2%2C0%2C0%2C1%2C25%2C8.263L26.455%2C9.4A1.2%2C1.2%2C0%2C0%2C1%2C26.666%2C11.08Z'/%3E%3C/svg%3E");
+  }

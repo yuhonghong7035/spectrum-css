@@ -9,25 +9,7 @@
       color: rgb(9, 90, 186);
     }
 /* topdoc
----
-name: Radio - Default
-description: The Spectrum radio thingy
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-  </div>
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
-  </div>
-
+{{ radio/radio-default.yml }}
 */
 .spectrum--light .spectrum-Radio .spectrum-Radio-label {
     color: rgb(75, 75, 75);
@@ -49,25 +31,7 @@ markup: |
       color: rgb(75, 75, 75);
     }
 /* topdoc
----
-name: Radio - Disabled
-description: The 'disabled' Spectrum radio
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-disable-0">Kittens</label>
-  </div>
-  <div class="spectrum-Radio">
-    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-1" disabled checked>
-    <span class="spectrum-Radio-checkmark"></span>
-    <label class="spectrum-Radio-label" for="radio-disable-0">Puppies</label>
-  </div>
-
+{{ radio/radio-disabled.yml }}
 */
 .spectrum--light .spectrum-Radio-input:disabled + .spectrum-Radio-checkmark {
     border-color: rgb(202, 202, 202);
@@ -82,26 +46,7 @@ markup: |
       color: rgb(215, 55, 63);
     }
 /* topdoc
----
-name: Radio - Required
-description: The 'required' Spectrum radio
-modifiers:
-  ':hover': Hover state
-  ':active': Active state
-  ':focus': Focused
-markup: |
-  <form>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-    </div>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-    </div>
-  </form>
+{{ radio/radio-required.yml }}
 */
 .spectrum--light .spectrum-Radio-input:invalid:hover + .spectrum-Radio-checkmark {
       border-color: rgb(201, 37, 45);

@@ -17,38 +17,7 @@
 }
 
 /* topdoc
----
-name: Steplist - Plain
-description: A steplist w/o labels or tooltips
-markup: |
-  <div class="spectrum-Steplist spectrum-Steplist--small">
-    <div class="spectrum-Steplist-step is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-selected">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Steplist-segment"></span>
-    </div>
-  </div>
-
+{{ steplist/steplist-default.yml }}
 */
 
 .spectrum-Steplist {
@@ -138,41 +107,7 @@ markup: |
     }
 
 /* topdoc
----
-name: Steplist - With Label
-description: A steplist with labels
-markup: |
-  <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step is-complete">
-        <span class="spectrum-Steplist-label">Step 1</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-complete">
-        <span class="spectrum-Steplist-label">Step 2</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step is-selected">
-        <span class="spectrum-Steplist-label">Step 3</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-    <div class="spectrum-Steplist-step">
-        <span class="spectrum-Steplist-label">Step 4</span>
-        <span class="spectrum-Steplist-markerContainer">
-          <span class="spectrum-Steplist-marker"></span>
-        </span>
-        <span class="spectrum-Steplist-segment"></span>
-    </div>
-  <div>
-
+{{ steplist/steplist-label.yml }}
 */
 
 .spectrum-Steplist-label {
@@ -312,53 +247,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Steplist - With Tooltip
-description: A steplist with tooltips
-markup: |
-  <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 1<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 2<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 3<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 4<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-  </div>
-
+{{ steplist/steplist-tooltip.yml }}
 */
 
 .spectrum-Steplist-tooltip {

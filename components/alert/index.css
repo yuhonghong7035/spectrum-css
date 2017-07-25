@@ -1,19 +1,5 @@
 /* topdoc
----
-name: Alert - Closable
-description: >-
-  The closable Spectrum alert. It has a close button in the footer.
-  Combine this strategy with any variant.
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-    <div class="spectrum-Alert-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--primary">Close</button>
-    </div>
-  </div>
-
+{{ alert/alert-closeable.yml }}
 */
 
 .spectrum-Alert {
@@ -21,7 +7,7 @@ markup: |
 
   display: inline-block;
   box-sizing: border-box;
-  width: 384px;
+  min-width: 384px;
   min-height: 38px;
   margin: 8px 0;
   padding: 16px 20px;
@@ -59,6 +45,9 @@ markup: |
   min-height: 0;
   margin: 0;
   padding: 0;
+
+  /* Leave room for the icon */
+  padding-right: 30px;
 
   font-size: 0.875rem;
   font-weight: 700;

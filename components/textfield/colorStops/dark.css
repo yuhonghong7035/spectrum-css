@@ -1,50 +1,13 @@
 /* TODO: is it wonky that textarea shares the selector? */
 /* It's a little wonky, right? */
 /* topdoc
----
-name: Text Area - Default
-description: A Spectrum text area - (a multiline text field)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline">
-  </textarea>
-
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
-  </textarea>
-
+{{ textfield/textarea-default.yml }}
 */
 /* topdoc
----
-name: Text Area - Quiet
-description: A Spectrum text area - quiet
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
-  </textarea>
-
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
-  </textarea>
-
+{{ textfield/textarea-quiet.yml }}
 */
 /* topdoc
----
-name: Text Field - Default
-description: A Spectrum text field
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
-
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
-
+{{ textfield/textfield-default.yml }}
 */
 .spectrum-Textfield {
   background-color: rgb(37, 37, 37);
@@ -105,18 +68,7 @@ markup: |
       box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 /* topdoc
----
-name: Text Field - Quiet
-description: A Spectrum text field - quiet
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
-
-  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
-
+{{ textfield/textfield-quiet.yml }}
 */
 .spectrum-Textfield--quiet {
   background-color: transparent;

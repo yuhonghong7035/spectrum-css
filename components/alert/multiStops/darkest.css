@@ -10,16 +10,7 @@
   color: rgb(133, 133, 133);
 }
 /* topdoc
----
-name: Alert - Info
-description: The Spectrum alert 'info'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--info">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="info"></div>
-    <div class="spectrum-Alert-header">Infomation Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-info.yml }}
 */
 .spectrum--darkest .spectrum-Alert--info {
   border-color: rgb(38, 128, 235);
@@ -29,16 +20,7 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2838%2C 128%2C 235%29' d='M18%2C2A16%2C16%2C0%2C1%2C0%2C34%2C18%2C16%2C16%2C0%2C0%2C0%2C18%2C2Zm-.3%2C4.3a2.718%2C2.718%2C0%2C0%2C1%2C2.864%2C2.824A2.665%2C2.665%2C0%2C0%2C1%2C17.7%2C11.987a2.706%2C2.706%2C0%2C0%2C1-2.864-2.864A2.717%2C2.717%2C0%2C0%2C1%2C17.7%2C6.3ZM22%2C27a1%2C1%2C0%2C0%2C1-1%2C1H15a1%2C1%2C0%2C0%2C1-1-1V25a1%2C1%2C0%2C0%2C1%2C1-1h1V18H15a1%2C1%2C0%2C0%2C1-1-1V15a1%2C1%2C0%2C0%2C1%2C1-1h4a1%2C1%2C0%2C0%2C1%2C1%2C1v9h1a1%2C1%2C0%2C0%2C1%2C1%2C1Z'/%3E%3C/svg%3E");
   }
 /* topdoc
----
-name: Alert - Error
-description: The Spectrum alert 'error'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Error Alert - Oh no</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-error.yml }}
 */
 .spectrum--darkest .spectrum-Alert--error {
   border-color: rgb(227, 72, 80);
@@ -48,16 +30,7 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
   }
 /* topdoc
----
-name: Alert - Success
-description: The Spectrum alert 'success'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--success">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="check"></div>
-    <div class="spectrum-Alert-header">Successful Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-success.yml }}
 */
 .spectrum--darkest .spectrum-Alert--success {
   border-color: rgb(45, 157, 120);
@@ -67,16 +40,7 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2845%2C 157%2C 120%29' d='M16%2C2A16%2C16%2C0%2C1%2C0%2C32%2C18%2C16%2C16%2C0%2C0%2C0%2C16%2C2Zm10.666%2C9.08h0L14.018%2C27.341a1.208%2C1.208%2C0%2C0%2C1-.875.461c-.023%2C0-.049%2C0-.072%2C0a1.2%2C1.2%2C0%2C0%2C1-.85-.352L4.436%2C19.657a1.2%2C1.2%2C0%2C0%2C1%2C0-1.7l1.326-1.325a1.2%2C1.2%2C0%2C0%2C1%2C1.7%2C0L12.8%2C21.981%2C23.315%2C8.473A1.2%2C1.2%2C0%2C0%2C1%2C25%2C8.263L26.455%2C9.4A1.2%2C1.2%2C0%2C0%2C1%2C26.666%2C11.08Z'/%3E%3C/svg%3E");
   }
 /* topdoc
----
-name: Alert - Warning
-description: The Spectrum alert 'warning'
-markup: |
-  <div class="spectrum-Alert spectrum-Alert--warning">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
-    <div class="spectrum-Alert-header">Warning Alert Header</div>
-    <div class="spectrum-Alert-content">This is an alert.</div>
-  </div>
-
+{{ alert/alert-warning.yml }}
 */
 .spectrum--darkest .spectrum-Alert--warning {
   border-color: rgb(230, 134, 25);

@@ -1,19 +1,5 @@
 /* topdoc
----
-name: Label - Default
-description: A Spectrum label
-markup: |
-  <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
-
-  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
-
-  <span class="spectrum-Label spectrum-Label--blue">Blue Label</span>
-
-  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
-
-  <span class="spectrum-Label spectrum-Label--orange">Orange Label</span>
-
-
+{{ label/label-default.yml }}
 */
 
 .spectrum-Label {
@@ -44,25 +30,7 @@ markup: |
   }
 
 /* topdoc
----
-name: Label - Large
-description: A large Spectrum label
-markup: |
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
-  style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
-  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
-  style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
-  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
-
-  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
-  style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
-
+{{ label/label-large.yml }}
 */
 
 .spectrum-Label--large {
