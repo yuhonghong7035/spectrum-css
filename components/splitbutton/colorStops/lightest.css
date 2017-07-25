@@ -1,0 +1,93 @@
+.spectrum-SplitButton-trigger::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+  }
+/* topdoc
+---
+name: SplitButton - CTA
+description: A CTA split button.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger"></button>
+  </div>
+
+*/
+.spectrum-SplitButton-trigger.spectrum-Button--cta::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:focus::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:active::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:disabled::after, .spectrum-SplitButton-trigger.is-disabled::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+/* topdoc
+---
+name: SplitButton - Primary
+description: A primary split button.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger"></button>
+  </div>
+
+*/
+.spectrum-SplitButton-trigger.spectrum-Button--primary::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:focus::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:active::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:disabled::after, .spectrum-SplitButton-trigger.is-disabled::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+/* topdoc
+---
+name: SplitButton - Secondary
+description: A secondary split button.
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger"></button>
+  </div>
+
+*/
+.spectrum-SplitButton-trigger.spectrum-Button--secondary::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28149%2C 149%2C 149%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:focus::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:active::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28255%2C 255%2C 255%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }
+.spectrum-SplitButton-trigger:disabled::after, .spectrum-SplitButton-trigger.is-disabled::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
+    }

@@ -1,0 +1,50 @@
+.spectrum-Breadcrumb {
+	color: rgb(112, 112, 112);
+}
+.spectrum-Breadcrumb:hover {
+    color: rgb(44, 44, 44);
+  }
+.spectrum-Breadcrumb:focus {
+    color: rgb(13, 102, 208);
+  	outline: 0;
+  	border-bottom: 2px solid rgb(13, 102, 208);
+  }
+.spectrum-Breadcrumb:active {
+  	color: rgb(44, 44, 44);
+  }
+.spectrum-Breadcrumb::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M4%2C3.5a.4982.4982%2C0%2C0%2C0-.1468-.3538L.8538.1468A.5.5%2C0%2C1%2C0%2C.1465.8535L2.793%2C3.5.1467%2C6.1463a.5.5%2C0%2C1%2C0%2C.707.707l3-3A.4983.4983%2C0%2C0%2C0%2C4%2C3.5Z'/%3E%3C/svg%3E");
+  }
+.spectrum-Breadcrumb:last-of-type {
+    color: rgb(44, 44, 44);
+  }
+/* topdoc
+---
+name: Breadcrumb - Default
+description: The default Spectrum breadcrumb
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <div class="spectrum-Breadcrumb">
+    <span class="spectrum-Breadcrumb">Nike</span>
+    <span class="spectrum-Breadcrumb">Mens</span>
+    <span class="spectrum-Breadcrumb">Summer 2016</span>
+  </div>
+*/
+/* topdoc
+---
+name: Breadcrumb - Title
+description: A Spectrum 'page title' breadcrumb
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <div class="spectrum-Breadcrumb-title">
+    <span class="spectrum-Breadcrumb">Nike</span>
+    <span class="spectrum-Breadcrumb">Mens</span>
+    <span class="spectrum-Breadcrumb">Summer 2016</span>
+  </div>
+*/

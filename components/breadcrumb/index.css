@@ -1,0 +1,35 @@
+.spectrum-Breadcrumb {
+  cursor: pointer;
+  position: relative;
+  margin-right: 24px;
+  font-size: 1rem;
+}
+
+.spectrum-Breadcrumb::after {
+    position: absolute;
+    top: 8px;
+    right: -16px;
+    width: 5px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform:scale(1);
+    opacity:1;
+    content:'';
+  }
+
+.spectrum-Breadcrumb:last-of-type {
+    cursor: default;
+  }
+
+.spectrum-Breadcrumb:last-of-type::after {
+      display: none;
+    }
+
+.spectrum-Breadcrumb-title .spectrum-Breadcrumb:last-of-type {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 2rem;
+    margin: 0.3em 0;
+  }
