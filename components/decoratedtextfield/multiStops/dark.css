@@ -1,0 +1,10 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum--dark .spectrum-DecoratedTextfield-icon {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-DecoratedTextfield-input:disabled ~ .spectrum-DecoratedTextfield-icon {
+      color: rgb(92, 92, 92);
+    }

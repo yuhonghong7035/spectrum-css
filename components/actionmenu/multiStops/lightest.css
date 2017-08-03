@@ -1,0 +1,20 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum--lightest .spectrum-ActionMenu-button::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%2880%2C 80%2C 80%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2880%2C 80%2C 80%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2880%2C 80%2C 80%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+  }
+.spectrum--lightest .spectrum-ActionMenu-button::before:focus {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-ActionMenu-button::before:hover {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-ActionMenu-button::before:active {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2850%2C 50%2C 50%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-ActionMenu-button::before:disabled,
+    .spectrum--lightest .spectrum-ActionMenu-button::before.is-disabled {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28188%2C 188%2C 188%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28188%2C 188%2C 188%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28188%2C 188%2C 188%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+    }

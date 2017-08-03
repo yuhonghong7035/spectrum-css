@@ -1,0 +1,57 @@
+/* topdoc
+---
+name: Action Menu
+description: An action button with a flyout menu.
+markup: |
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
+
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
+
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
+*/
+.spectrum-ActionMenu {
+
+}
+.spectrum-ActionMenu-button {
+  display: block;
+
+  padding: 0 8px;
+}
+.spectrum-ActionMenu-button::before {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: -4px;
+    margin-right: 6px;
+  }
+.spectrum-ActionMenu-button:empty {
+  padding: 0 6px;
+}
+.spectrum-ActionMenu-button:empty::before {
+    margin-right: 0;
+  }
+.spectrum-ActionMenu-flyout {
+  margin-top: 8px;
+}

@@ -1,0 +1,22 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+/* topdoc
+---
+name: Well
+description: A Spectrum well
+markup: |
+  <span class="spectrum-Well">
+  <em>Well done is better than well said.</em>
+  <br>
+  <strong>Benjamin Franklin</strong>
+  <br><br>
+  Well said Ben!
+  </span>
+
+*/
+.spectrum-Well {
+  background-color: rgba(50, 50, 50, .02);
+  border-color: rgba(50, 50, 50, .05);
+}

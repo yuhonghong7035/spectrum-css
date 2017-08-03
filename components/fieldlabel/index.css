@@ -1,0 +1,41 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
+/* topdoc
+---
+name: Field Label
+description: >-
+  Field label for use with form inputs.
+markup: |
+  <label for="lifestory" class="spectrum-FieldLabel">Life Story *</label>
+  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" required>
+  </textarea>
+
+*/
+
+.spectrum-FieldLabel {
+  display: block;
+
+  margin: 0 0 5px;
+
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}

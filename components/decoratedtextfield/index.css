@@ -1,0 +1,65 @@
+/* topdoc
+---
+name: Decorated Textfield
+description: A textfield with an icon
+markup: |
+  <div class="spectrum-DecoratedTextfield">
+    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
+  </div>
+
+  <div class="spectrum-DecoratedTextfield">
+    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
+  </div>
+
+
+*/
+.spectrum-DecoratedTextfield {
+  display: inline-block;
+  position: relative;
+}
+.spectrum-DecoratedTextfield-input {
+  display: block;
+  text-indent: 36px;
+}
+/* topdoc
+---
+name: Decorated Textfield - Quiet
+description: A quiet textfield with an icon
+markup: |
+  <div class="spectrum-DecoratedTextfield">
+    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
+  </div>
+
+  <div class="spectrum-DecoratedTextfield">
+    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
+  </div>
+
+
+*/
+/* Since quiet button has no left padding, push the icon all the way to the left */
+.spectrum-DecoratedTextfield-input.spectrum-Textfield--quiet ~ .spectrum-DecoratedTextfield-icon {
+      left: 0;
+    }
+.spectrum-DecoratedTextfield-icon {
+  display: block;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+
+  /* Support font icons */
+  text-align: center;
+  line-height: 2rem;
+
+  /* Support SVG icons */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}

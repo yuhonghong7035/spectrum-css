@@ -1,0 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum--lightest .spectrum-FieldLabel {
+  color: rgb(118, 118, 118);
+}

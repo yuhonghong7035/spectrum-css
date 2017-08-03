@@ -1,0 +1,199 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.spectrum-Popover {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  transition: left 150ms ease-in-out, opacity 150ms ease-in-out, top 150ms ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+}
+
+.spectrum-Popover.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.spectrum-Popover .spectrum-Dialog-wrapper {
+    margin: 0;
+    min-width: 270px;
+    padding-bottom: 20px;
+  }
+
+.spectrum-Popover-tip {
+  position: absolute;
+  /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
+  overflow: hidden;
+  width: 24px;
+  height: 13px;
+}
+
+.spectrum-Popover-tip::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -18px;
+    left: -1px;
+  }
+
+/* topdoc
+---
+name: Popover - Default - Left Placement
+description: A Spectrum 'default' popover with left placement
+markup: |
+  <div class="spectrum-Popover spectrum-Popover--left is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Dialog-typeIcon"></div>
+        <div class="spectrum-Dialog-title">Popover Title</div>
+      </div>
+      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+*/
+
+.spectrum-Popover--left {
+  margin-right: 13px;
+}
+
+.spectrum-Popover--left.is-open {
+    left:  -4px;
+  }
+
+.spectrum-Popover--left .spectrum-Popover-tip {
+    right: -18px;
+    transform: rotate(-90deg);
+  }
+
+/* topdoc
+---
+name: Popover - Default - Right Placement
+description: A Spectrum 'default' popover with right placement
+markup: |
+  <div class="spectrum-Popover spectrum-Popover--right is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Dialog-typeIcon"></div>
+        <div class="spectrum-Dialog-title">Popover Title</div>
+      </div>
+      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+*/
+
+.spectrum-Popover--right {
+  margin-left: 13px;
+}
+
+.spectrum-Popover--right.is-open {
+    left: 4px;
+  }
+
+.spectrum-Popover--right .spectrum-Popover-tip {
+    left: -18px;
+    transform: rotate(90deg);
+  }
+
+/* Center the tip by default */
+
+.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
+    top: 50%;
+    margin-top: -6px;
+  }
+
+/* topdoc
+---
+name: Popover - Default - Bottom Placement
+description: A Spectrum 'default' popover with bottom placement
+markup: |
+  <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Dialog-typeIcon"></div>
+        <div class="spectrum-Dialog-title">Popover Title</div>
+      </div>
+      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+*/
+
+.spectrum-Popover--bottom {
+  margin-top: 13px;
+}
+
+.spectrum-Popover--bottom.is-open {
+    top: 4px;
+  }
+
+.spectrum-Popover--bottom .spectrum-Popover-tip {
+    top: -13px;
+    transform: rotate(180deg);
+  }
+
+/* topdoc
+---
+name: Popover - Default - Top Placement
+description: A Spectrum 'default' popover with top placement
+markup: |
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--default is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <div class="spectrum-Dialog-typeIcon"></div>
+        <div class="spectrum-Dialog-title">Popover Title</div>
+      </div>
+      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+*/
+
+.spectrum-Popover--top{
+  margin-bottom: 13px;
+}
+
+.spectrum-Popover--top.is-open {
+    top: -4px;
+  }
+
+.spectrum-Popover--top .spectrum-Popover-tip {
+    bottom: -13px;
+  }
+
+/* Center the tip by default */
+
+.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
+    left: 50%;
+    margin-left: -12px;
+  }

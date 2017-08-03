@@ -1,0 +1,111 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.spectrum-Stepper {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+
+  width: 192px;
+  line-height: 0;
+  border-radius: 4px;
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.spectrum-Stepper .spectrum-Stepper-buttons {
+    -ms-flex: 1;
+        flex: 1;
+  }
+
+.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Button {
+      position: relative;
+      margin: 0;
+      border-width: 1px;
+      border-right-width: 0;
+      border-radius: 4px 0 0 4px;
+    }
+
+.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepUp {
+      border-bottom: none;
+      border-bottom-left-radius: 0;
+    }
+
+.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
+      float: left;
+      border-top: none;
+      border-top-left-radius: 0;
+    }
+
+.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown:focus {
+        border-top: none;
+      }
+
+.spectrum-Stepper-input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  width: 100%;
+}
+
+.spectrum-Stepper-stepUp,
+.spectrum-Stepper-stepDown {
+  height: 16px;
+  width: 24px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.spectrum-Stepper-stepUpIcon,
+.spectrum-Stepper-stepDownIcon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.spectrum-Stepper-stepUpIcon::after, .spectrum-Stepper-stepDownIcon::after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    content: '';
+  }
+
+.spectrum-Stepper-stepUpIcon::after {
+  /* Off by 1px otherwise */
+  top: 5px;
+}
+
+.spectrum-Stepper--quiet {
+  border-radius: 0;
+}
+
+.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-Button--quiet--action {
+      border-top: none;
+      border-left: none;
+    }
+
+.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
+      border-radius: 0;
+    }

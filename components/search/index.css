@@ -1,0 +1,68 @@
+/* topdoc
+---
+name: Search
+description: The searchy, cleary field.
+markup: |
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </form>
+
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+  </form>
+
+
+*/
+/* topdoc
+---
+name: Search - Quiet
+description: The quiet searchy, cleary field.
+markup: |
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </form>
+
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+  </form>
+
+*/
+/* topdoc
+---
+name: Search - Custom icon
+description: A searchy, cleary field with a custom icon
+markup: |
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input">
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </form>
+
+  <form class="spectrum-Search spectrum-DecoratedTextfield">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
+    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+  </form>
+
+
+*/
+.spectrum-Search-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* Since quiet button has no right padding, push the icon all the way to the right */
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
+      right: 0;
+    }
+.spectrum-Search-clear:disabled {
+  cursor: default;
+}
