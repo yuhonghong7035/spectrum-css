@@ -1,3 +1,21 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;

@@ -1,47 +1,123 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
 .spectrum-Tooltip {
-  position: absolute;
+  position: relative;
   pointer-events: none;
-  z-index: 100;
   opacity: 0;
   visibility: hidden;
-  transition: all 100ms ease-in-out, visibility 0ms linear 100ms;
-}
-
-.spectrum-Tooltip-content {
+  transition: left 150ms ease-in-out, opacity 150ms ease-in-out, top 150ms ease-in-out;
   display: inline-block;
   position: relative;
-
   width: auto;
-
-  padding: 4px 8px;
-
+  padding: 2px 8px;
   border-radius: 4px;
-
   font-size: 0.75rem;
   line-height: 0.75rem;
-
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  font-smoothing: subpixel-antialiased;
+  left: 0px;
+  top: 0px;
 }
 
-.spectrum-Tooltip-content .spectrum-Link {
+.spectrum-Tooltip.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+.spectrum-Tooltip .spectrum-Link {
     pointer-events: all;
   }
 
-/* topdoc
----
-name: Tooltip - Large
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--large is-open">
-    <span class="spectrum-Tooltip-content">Normal Tooltip<div class="spectrum-Tooltip-tip"></div></span>
-  </span>
+.spectrum-Tooltip-tip {
+  position: absolute;
+  overflow: hidden;
+  width: 8px;
+  height: 4px;
+}
 
-*/
+.spectrum-Tooltip-tip::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    top: -4px;
+    left: 1px;
+    position: absolute;
+    transform: rotate(45deg);
+  }
 
-.spectrum-Tooltip--large .spectrum-Tooltip-content{
-    padding: 8px 16px;
+.spectrum-Tooltip--right {
+  margin-left: 3px;
+}
+
+.spectrum-Tooltip--right.is-open {
+    left: 4px;
+  }
+
+.spectrum-Tooltip--right .spectrum-Tooltip-tip {
+    left: -6px;
+    transform: rotate(90deg);
+  }
+
+.spectrum-Tooltip--left {
+  margin-right: 3px;
+}
+
+.spectrum-Tooltip--left.is-open {
+    left:  -4px;
+  }
+
+.spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    right: -6px;
+    transform: rotate(-90deg);
+  }
+
+.spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    top: 50%;
+    margin-top: -2px;
+  }
+
+.spectrum-Tooltip--bottom {
+  margin-top: 3px;
+}
+
+.spectrum-Tooltip--bottom.is-open {
+    top: 4px;
+  }
+
+.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
+    top: -4px;
+    transform: rotate(180deg);
+  }
+
+.spectrum-Tooltip--top {
+  margin-bottom: 3px;
+}
+
+.spectrum-Tooltip--top.is-open {
+    top: -4px;
+  }
+
+.spectrum-Tooltip--top .spectrum-Tooltip-tip {
+    bottom: -4px;
+  }
+
+.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+    left: 50%;
+    margin-left: -2px;
   }
 
 /* topdoc
@@ -49,80 +125,52 @@ markup: |
 name: Tooltip - Icons
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span><span class="spectrum-Tooltip-label">Normal</span><div class="spectrum-Tooltip-tip"></div>
-    </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--success
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Check-Circle spectrum-Tooltip-typeIcon"></span>Success<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--info
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info-Circle spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info spectrum-Tooltip-typeIcon"></span>Info</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
   <br>
   <br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--error
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error
   is-open">
-    <span class="spectrum-Tooltip-content">
-      <span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Info<div class="spectrum-Tooltip-tip"></div>
-    </span>
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
+    <div class="spectrum-Tooltip-tip"></div>
   </span>
 
 */
 
 .spectrum-Tooltip-typeIcon {
-  font-size: 0.875rem;
-  vertical-align: middle;
   margin-right: 8px;
+
+  /* Fix font icon alignment in Chrome on Windows, works for Mac too */
+  vertical-align: -2px;
+  line-height: 0.875rem;
 }
 
 .spectrum-Tooltip-label {
-  vertical-align: middle;
+  /* Make sure line height is correct to prevent problems in Windows */
+  line-height: 1.25rem;
 }
-
-.spectrum-Tooltip.is-open {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0ms;
-}
-
-.spectrum-Tooltip--right .spectrum-Tooltip-tip {
-    bottom: 50%;
-    left: -2px;
-    margin-bottom: -2px;
-    transform: rotate(90deg);
-  }
-
-.spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    bottom: 50%;
-    left: auto;
-    margin-bottom: -3px;
-    right: -6px;
-    transform: rotate(-90deg);
-  }
-
-.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
-    bottom: auto;
-    top: -4px;
-    transform: rotate(180deg);
-  }
 
 .u-tooltip-showOnHover {
   display: inline-block;
@@ -135,7 +183,7 @@ markup: |
   }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--top {
-    transform: translate(-50%, 8px) scale(.94);
+    transform: translate(-50%, 8px);
     top: -100%;
     left: 50%;
 
@@ -144,19 +192,19 @@ markup: |
   }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--right {
-    transform: translate(-8px, -50%) scale(.94);
+    transform: translate(-8px, -50%);
     top: 50%;
     left: 100%;
   }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--left {
-    transform: translate(calc(-100% + 8px), -50%) scale(.94);
+    transform: translate(calc(-100% + 8px), -50%);
     top: 50%;
     left: 0;
   }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--bottom {
-    transform: translate(-50%, -8px) scale(.94);
+    transform: translate(-50%, -8px);
     bottom: -100%;
     left: 50%;
     margin-bottom: -28px;
@@ -167,36 +215,33 @@ markup: |
   }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, 8px) scale(.94);
+    transform: translate(-50%, 8px);
   }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, -8px) scale(.94);
+    transform: translate(-50%, -8px);
   }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(-100%, -50%) scale(1);
+    transform: translate(-100%, -50%);
   }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(0, -50%) scale(1);
+    transform: translate(0, -50%);
   }
 
-.spectrum-Tooltip-tip {
-  position: absolute;
-  width: 8px;
-  height: 4px;
-  bottom: -4px;
-  left: 50%;
-  margin-left: -4px;
+/* topdoc
+---
+name: Tooltip - Large
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--large is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <div class="spectrum-Tooltip-tip"></div>
+  </span>
+
+*/
+
+.spectrum-Tooltip--large {
+  padding: 8px 16px;
 }
-
-.spectrum-Tooltip-tip::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    bottom: 1px;
-    left: 1px;
-    position: absolute;
-    transform: rotate(45deg);
-  }

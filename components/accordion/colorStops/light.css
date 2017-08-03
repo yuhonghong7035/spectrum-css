@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum-Accordion-item {
   border-color: rgb(225, 225, 225); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
 }
@@ -22,7 +26,7 @@
 .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header,
     .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:hover,
     .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:focus {
-      color: rgb(197, 197, 197);
+      color: rgb(179, 179, 179);
       background-color: transparent;
     }
 .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header::before {

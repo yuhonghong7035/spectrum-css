@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
     border-color: rgb(133, 133, 133);
   }

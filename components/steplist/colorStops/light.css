@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* Default Label Style is 'incomplete' */
 .spectrum-Steplist .spectrum-Steplist-label {
     color: rgb(142, 142, 142)
@@ -25,7 +29,7 @@
         background-color: rgb(75, 75, 75)
       }
 .spectrum-Steplist .spectrum-Steplist-step.is-complete .spectrum-Steplist-segment, .spectrum-Steplist .spectrum-Steplist-step.is-selected .spectrum-Steplist-segment {
-        border-bottom-color: rgb(197, 197, 197)
+        border-bottom-color: rgb(179, 179, 179)
       }
 /* Interactivity Styles */
 /* Step Focused */

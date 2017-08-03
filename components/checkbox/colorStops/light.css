@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum-Checkbox-label {
   color: rgb(75, 75, 75);
 }
@@ -86,7 +90,7 @@ markup: |
     border-color: rgb(202, 202, 202);
   }
 .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 .spectrum-Checkbox-input:invalid + .spectrum-Checkbox-checkmark {
       border-color: rgb(215, 55, 63);

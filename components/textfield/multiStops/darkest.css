@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum--darkest {
 /* TODO: is it wonky that textarea shares the selector? */
 /* It's a little wonky, right? */
@@ -11,10 +15,13 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline">
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline">
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-invalid" required>
   </textarea>
 
 */
@@ -28,10 +35,13 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
   </textarea>
 
 */
@@ -48,6 +58,8 @@ markup: |
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
 
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+
+  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield" pattern="[\d]+" required>
 
 */
 .spectrum--darkest .spectrum-Textfield {
@@ -101,11 +113,12 @@ markup: |
 .spectrum--darkest .spectrum-Textfield[disabled]::placeholder {
       color: rgb(45, 45, 45);
     }
-.spectrum--darkest .spectrum-Textfield .is-invalid,
+.spectrum--darkest .spectrum-Textfield.is-invalid,
   .spectrum--darkest .spectrum-Textfield:invalid {
     border-color: rgb(215, 55, 63);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
   }
-.spectrum--darkest .spectrum-Textfield .is-invalid:focus, .spectrum--darkest .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
+.spectrum--darkest .spectrum-Textfield.is-invalid:focus, .spectrum--darkest .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
 /* topdoc
@@ -120,6 +133,8 @@ markup: |
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
 
   <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+
+  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet" pattern="[\d]+" required>
 
 */
 .spectrum--darkest .spectrum-Textfield--quiet {
@@ -140,10 +155,10 @@ markup: |
     background-color: transparent;
     border-color:  rgb(45, 45, 45);
   }
-.spectrum--darkest .spectrum-Textfield--quiet .is-invalid,
+.spectrum--darkest .spectrum-Textfield--quiet.is-invalid,
   .spectrum--darkest .spectrum-Textfield--quiet:invalid {
     border-color: rgb(215, 55, 63);
   }
-.spectrum--darkest .spectrum-Textfield--quiet .is-invalid:focus, .spectrum--darkest .spectrum-Textfield--quiet:invalid:focus {
+.spectrum--darkest .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--darkest .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(215, 55, 63);
     }

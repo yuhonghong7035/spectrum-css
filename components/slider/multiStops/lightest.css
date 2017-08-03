@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* topdoc
 ---
   name: Slider - Ramp
@@ -374,7 +378,7 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum--lightest .spectrum-Slider-controls--hover .spectrum-Slider-handle {
     border-color: rgb(80, 80, 80);
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 /* topdoc
 ---
@@ -408,13 +412,13 @@ Todo: Determine if these are supposed to be pseudo classes
     border-color: rgb(55, 142, 240);
     background: rgb(55, 142, 240);
     border-width: 8px;
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 .spectrum--lightest .spectrum-Slider-controls--active .spectrum-Slider-handle {
     border-color: rgb(80, 80, 80);
     background: rgb(80, 80, 80);
     border-width: 8px;
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 .spectrum--lightest .spectrum-Slider.is-disabled .spectrum-Slider-label {
     color: rgb(188, 188, 188);

@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* topdoc
 ---
   name: Tab - Default
@@ -6,9 +10,10 @@
     <!-- TODO: add markup here -->
 
 */
-color: var(--spectrum-tablist-text-color-default)
-
-  .spectrum-Tab:hover {
+.spectrum-Tab {
+  color: rgb(118, 118, 118);
+}
+.spectrum-Tab:hover {
     color: rgb(50, 50, 50)
   }
 .spectrum-Tab:focus {

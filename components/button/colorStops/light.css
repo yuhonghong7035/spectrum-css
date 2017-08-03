@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(13, 102, 208);
   }
@@ -47,7 +51,7 @@ markup: |
   .spectrum-Button--cta.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -88,7 +92,7 @@ markup: |
   .spectrum-Button--primary.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -129,7 +133,7 @@ markup: |
   .spectrum-Button--secondary.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -170,7 +174,7 @@ markup: |
   .spectrum-Button--warning.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -212,7 +216,7 @@ markup: |
   .spectrum-Button--quiet--primary.is-disabled {
     background-color: transparent;
     border-color: transparent;
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -254,7 +258,7 @@ markup: |
   .spectrum-Button--quiet--secondary.is-disabled {
     background-color: transparent;
     border-color: transparent;
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -286,7 +290,7 @@ markup: |
 
 */
 .spectrum-Button--action {
-  background-color: rgb(251, 251, 251);
+  background-color: rgb(252, 252, 252);
   border-color: rgb(225, 225, 225);
   border-width: 1px;
   border-radius: 4px;
@@ -314,7 +318,7 @@ markup: |
   .spectrum-Button--action.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -371,7 +375,7 @@ markup: |
   .spectrum-Button--quiet--action[disabled] {
     background-color: transparent;
     border-color: transparent;
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -426,7 +430,9 @@ markup: |
   }
 .spectrum-Button--toggle:disabled,
   .spectrum-Button--toggle.is-disabled {
-    display: none;
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(179, 179, 179);
   }
 .spectrum-Button--toggle.is-selected {
     background-color: rgb(225, 225, 225);
@@ -452,7 +458,7 @@ markup: |
   .spectrum-Button--toggle.is-selected.is-disabled {
     background-color: rgb(225, 225, 225);
     border-color: transparent;
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /*! topdoc
 ---
@@ -494,7 +500,7 @@ markup: |
   .spectrum-Button--quiet--warning.is-disabled {
     background-color: transparent;
     border-color: transparent;
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -528,7 +534,7 @@ markup: |
   .spectrum-Button--and.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 /* topdoc
 ---
@@ -562,5 +568,36 @@ markup: |
   .spectrum-Button--or.is-disabled {
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
+  }
+/* topdoc
+---
+name: Button - Icon
+description: A Spectrum icon-only button
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--icon"><div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Close" role="img" aria-label="info"></div></button>
+  <button class="spectrum-Button spectrum-Button--icon" disabled><div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Close" role="img" aria-label="info"></div></button>
+
+*/
+.spectrum-Button--icon {
+  color: rgb(112, 112, 112);
+}
+.spectrum-Button--icon:focus {
+    color: rgb(75, 75, 75);
+  }
+.spectrum-Button--icon:hover {
+    color: rgb(44, 44, 44);
+  }
+.spectrum-Button--icon:active {
+    color: rgb(75, 75, 75);
+  }
+.spectrum-Button--icon:active::before {
+      background-color: rgb(234, 234, 234);
+    }
+.spectrum-Button--icon:disabled {
+    color: rgb(202, 202, 202);
   }

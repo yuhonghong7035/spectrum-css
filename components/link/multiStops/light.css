@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum--light .spectrum-Link {
   color: rgb(13, 102, 208);
 }
@@ -12,7 +16,7 @@
     box-shadow: 0 1px 0 rgb(13, 102, 208);
   }
 .spectrum--light .spectrum-Link.is-disabled {
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 .spectrum--light .spectrum-Link--subtle {
   color: inherit;

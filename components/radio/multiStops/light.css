@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum--light .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
     border-color: rgb(112, 112, 112);
   }
@@ -73,7 +77,7 @@ markup: |
     border-color: rgb(202, 202, 202);
   }
 .spectrum--light .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 .spectrum--light .spectrum-Radio-input:invalid + .spectrum-Radio-checkmark {
       border-color: rgb(215, 55, 63);

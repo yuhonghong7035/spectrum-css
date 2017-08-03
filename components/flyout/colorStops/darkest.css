@@ -1,16 +1,22 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* topdoc
 ---
 name: Flyout
 description: Spectrum Flyouts
 markup: |
-      <h4>Flyout - Default</h4>
-      <ul class="spectrum-Flyout" role="menu" tabindex="0">
-        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-        <hr class="spectrum-Flyout-divider">
-        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
+
+  <ul class="spectrum-Flyout" role="menu">
+    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Fremont</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Greenwood</li>
+    <hr class="spectrum-Flyout-divider">
+    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+  </ul>
+
+  <div class="dummy-spacing"></div>
 
 */
 .spectrum-Flyout {
@@ -23,21 +29,21 @@ markup: |
   color: rgb(180, 180, 180);
 }
 .spectrum-Flyout-option:focus {
-    background-color: rgba(rgb(226, 226, 226), .04);
+    background-color: rgba(226, 226, 226, .04);
     color: rgb(180, 180, 180);
     background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, transparent 2px, transparent 100%);
   }
 .spectrum-Flyout-option:focus.is-selected {
-      background-color: rgba(rgb(226, 226, 226), .04);
+      background-color: rgba(226, 226, 226, .04);
       color: rgb(55, 142, 240);
       background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, transparent 2px, transparent 100%);
     }
 .spectrum-Flyout-option:hover {
-    background-color: rgba(rgb(226, 226, 226), .04);
+    background-color: rgba(226, 226, 226, .04);
     color: rgb(180, 180, 180);
   }
 .spectrum-Flyout-option:hover.is-selected {
-      background-color: rgba(rgb(226, 226, 226), .04);
+      background-color: rgba(226, 226, 226, .04);
       color: rgb(55, 142, 240);
     }
 .spectrum-Flyout-option.is-selected {

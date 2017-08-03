@@ -1,3 +1,21 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
 .spectrum-Textfield {
   /* box */
   box-sizing: border-box;
@@ -25,8 +43,6 @@
   -webkit-appearance: none;
 
   /* Remove the native clear button in IE */
-
-  /* removes the native spin buttons */
 }
 
 .spectrum-Textfield::-webkit-input-placeholder {
@@ -61,7 +77,7 @@
 
 .spectrum-Textfield:disabled {
     /* The opacity must be set to 1 */
-    -webkit-opacity: 1;
+    opacity: 1;
   }
 
 .spectrum-Textfield:disabled::-webkit-input-placeholder {
@@ -97,6 +113,16 @@
     box-shadow: none;
   }
 
+/* removes the native spin buttons */
+
+.spectrum-Textfield.is-invalid,
+  .spectrum-Textfield:invalid {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) 50%;
+    padding-right: 30px;
+  }
+
 .spectrum-Textfield--quiet {
   border-radius: 0;
   text-indent: 0;
@@ -115,6 +141,14 @@
   padding: 4px 8px;
   text-indent: 0;
 }
+
+.spectrum-Textfield--multiline.is-invalid,
+  .spectrum-Textfield--multiline:invalid {
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) calc(100% - 7px);
+    padding-right: 30px;
+  }
 
 .spectrum-Textfield--quiet.spectrum-Textfield--multiline {
   resize: none;

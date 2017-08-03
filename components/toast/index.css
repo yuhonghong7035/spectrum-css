@@ -1,3 +1,21 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
 /* topdoc
 ---
 name: Toast - Default
@@ -13,6 +31,7 @@ markup: |
 .spectrum-Toast {
   position: relative;
   padding: 12px 18px;
+  line-height: 1.5rem;
 
   border-radius: 4px;
   font-size: 0.875rem;
@@ -38,7 +57,7 @@ markup: |
 .spectrum-Toast-content {
   display: block;
 
-  padding-right: 24px;
+  padding-right: 32px;
 }
 
 .spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {

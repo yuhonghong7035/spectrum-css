@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum--dark {
 
 /*
@@ -24,9 +28,10 @@ spectrum-tablist-line-disabled() {
     <!-- TODO: add markup here -->
 
 */
-color: var(--spectrum-tablist-text-color-default)
-
-  .spectrum--dark .spectrum-Tab:hover {
+.spectrum--dark .spectrum-Tab {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Tab:hover {
     color: rgb(255, 255, 255)
   }
 .spectrum--dark .spectrum-Tab:focus {

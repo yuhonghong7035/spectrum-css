@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* topdoc
 ---
   name: Slider - Default
@@ -363,7 +367,7 @@ spectrum-slider-track-disabled(){
   background: rgb(112, 112, 112);
 }
 .spectrum-Slider-track--buffer {
-  background: rgb(197, 197, 197);
+  background: rgb(179, 179, 179);
 }
 .spectrum-Slider-track--ramp path {
     fill: rgb(225, 225, 225);
@@ -402,22 +406,22 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum-Slider-controls--hover .spectrum-Slider-handle {
     border-color: rgb(75, 75, 75);
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(38, 128, 235);
     background: rgb(38, 128, 235);
     border-width: 8px;
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 .spectrum-Slider-controls--active .spectrum-Slider-handle {
     border-color: rgb(75, 75, 75);
     background: rgb(75, 75, 75);
     border-width: 8px;
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 .spectrum-Slider.is-disabled .spectrum-Slider-label {
-    color: rgb(197, 197, 197);
+    color: rgb(179, 179, 179);
   }
 .spectrum-Slider.is-disabled .spectrum-Slider-handle {
     border-color: rgb(202, 202, 202);

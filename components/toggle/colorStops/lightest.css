@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* :before is used for the track of the switch */
 .spectrum-ToggleSwitch-content::before {
     background-color: rgb(234, 234, 234);

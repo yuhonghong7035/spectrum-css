@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 /* Default Label Style is 'incomplete' */
 .spectrum--dark .spectrum-Steplist .spectrum-Steplist-label {
     color: rgb(123, 123, 123)

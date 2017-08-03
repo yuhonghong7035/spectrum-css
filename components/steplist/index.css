@@ -1,3 +1,21 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
+.spectrum-Fieldlabel--left {
+	font-size: 0.75rem;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.spectrum-Fieldlabel--top {
+	font-size: 0.75rem;
+	display: block;
+	margin-bottom: 2px;
+}
+
 :root {
   /* The width of a step */
 
@@ -107,6 +125,9 @@ markup: |
   position: relative;
   display: inline-block;
   margin: 0;
+
+  /* Don't let tooltips mess up alignment */
+  vertical-align: bottom;
 
   width: 80px;
   padding: 0 40px 0 0;
@@ -255,10 +276,6 @@ markup: |
     display: none;
   }
 
-.spectrum-Steplist-step:first-child .spectrum-Steplist-tooltip {
-    left: 0 !important;
-  }
-
 /* Last step overrides */
 
 .spectrum-Steplist-step:last-child .spectrum-Steplist-label {
@@ -279,12 +296,6 @@ markup: |
 .spectrum-Steplist-step:last-child .spectrum-Steplist-segment {
     right: 8px;
     left: auto;
-  }
-
-.spectrum-Steplist-step:last-child .spectrum-Steplist-tooltip {
-    left: auto;
-    right: 0;
-    transform: translate(50%, -10px) !important;
   }
 
 .spectrum-Steplist-step:first-child,
@@ -318,42 +329,54 @@ description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 1<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
+      <div class="spectrum-Steplist-markerContainer">
+        <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+          <span class="spectrum-Tooltip-label">Step 1</span>
+          <div class="spectrum-Tooltip-tip"></div>
+        </div>
+        <div class="spectrum-Steplist-marker">
+        </div>
+      </div>
+
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
     <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 2<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
-      <span class="spectrum-Steplist-segment">
-      </span>
-    </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-selected">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
-      </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 3<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
+      <div class="spectrum-Steplist-markerContainer">
+        <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+          <span class="spectrum-Tooltip-label">Step 2</span>
+          <div class="spectrum-Tooltip-tip"></div>
+        </div>
+        <div class="spectrum-Steplist-marker">
+        </div>
+      </div>
+
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
     <div class="spectrum-Steplist-step u-tooltip-showOnHover">
-      <span class="spectrum-Steplist-markerContainer">
-        <span class="spectrum-Steplist-marker"></span>
+      <div class="spectrum-Steplist-markerContainer">
+        <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+          <span class="spectrum-Tooltip-label">Step 3</span>
+          <div class="spectrum-Tooltip-tip"></div>
+        </div>
+        <div class="spectrum-Steplist-marker">
+        </div>
+      </div>
+
+      <span class="spectrum-Steplist-segment">
       </span>
-      <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
-        <span class="spectrum-Tooltip-content">Step 4<div class="spectrum-Tooltip-tip"></div></span>
-      </span>
+    </div>
+    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
+      <div class="spectrum-Steplist-markerContainer">
+        <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
+          <span class="spectrum-Tooltip-label">Step 4</span>
+          <div class="spectrum-Tooltip-tip"></div>
+        </div>
+        <div class="spectrum-Steplist-marker">
+        </div>
+      </div>
+
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
