@@ -101,6 +101,8 @@
   --spectrum-dialog-content-font-weight-default: 400;
   --spectrum-dialog-header-font-size-default: 18px;
   --spectrum-dialog-header-font-weight-default: 700;
+  --spectrum-dropdown-quiet-background-color-default: transparent;
+  --spectrum-dropdown-quiet-trigger-background-color-disabled: transparent;
   --spectrum-flyout-border-corner-radius-default: 4px;
   --spectrum-flyout-border-size-default: 1px;
   --spectrum-flyout-divider-padding-default: 8px;
@@ -146,12 +148,10 @@
   --spectrum-popover-border-corner-radius-default: 4px;
   --spectrum-popover-border-size-default: 1px;
   --spectrum-popover-tip-width-default: 24px;
-  --spectrum-select-font-size-default: 14px;
-  --spectrum-select-margin-default: 2px;
   --spectrum-select-quiet-background-color-default: transparent;
-  --spectrum-select-quiet-trigger-background-color-disabled: transparent;
+  --spectrum-select-quiet-background-color-disabled: transparent;
   --spectrum-slider-animation-ease-default: ease-in-out;
-  --spectrum-slider-animation-transition-time-default: 125ms;
+  --spectrum-slider-animation-transition-time-default: 150ms;
   --spectrum-slider-border-width-active: 8px;
   --spectrum-slider-border-width-focus: 8px;
   --spectrum-slider-color-handle-color-default: transparent;

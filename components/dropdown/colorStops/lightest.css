@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum-Dropdown {
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
@@ -16,10 +20,10 @@
   color: rgb(80, 80, 80);
 }
 .spectrum-Dropdown-option:hover {
-    background-color: rgba(rgb(50, 50, 50), .04);
+    background-color: rgba(50, 50, 50, .04);
   }
 .spectrum-Dropdown-option:focus {
-    background-image: linear-gradient(to right, rgb(55, 142, 240) 0%, rgb(55, 142, 240) 2px, rgba(rgb(50, 50, 50), .04) 2px, rgba(rgb(50, 50, 50), .04) 100%);
+    background-image: linear-gradient(to right, rgb(55, 142, 240) 0%, rgb(55, 142, 240) 2px, rgba(50, 50, 50, .04) 2px, rgba(50, 50, 50, .04) 100%);
   }
 .spectrum-Dropdown-option.is-selected {
     color: rgb(55, 142, 240);

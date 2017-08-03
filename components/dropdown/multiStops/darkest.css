@@ -1,3 +1,7 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
 .spectrum--darkest {
 
 /*
@@ -46,10 +50,10 @@
   color: rgb(180, 180, 180);
 }
 .spectrum--darkest .spectrum-Dropdown-option:hover {
-    background-color: rgba(rgb(226, 226, 226), .04);
+    background-color: rgba(226, 226, 226, .04);
   }
 .spectrum--darkest .spectrum-Dropdown-option:focus {
-    background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, rgba(rgb(226, 226, 226), .04) 2px, rgba(rgb(226, 226, 226), .04) 100%);
+    background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, rgba(226, 226, 226, .04) 2px, rgba(226, 226, 226, .04) 100%);
   }
 .spectrum--darkest .spectrum-Dropdown-option.is-selected {
     color: rgb(20, 115, 230);

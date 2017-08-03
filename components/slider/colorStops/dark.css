@@ -406,19 +406,19 @@ Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum-Slider-controls--hover .spectrum-Slider-handle {
     border-color: rgb(205, 205, 205);
-    transition: all 125ms ease-in-out;
+    transition: all 150ms ease-in-out;
   }
 .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(38, 128, 235);
     background: rgb(38, 128, 235);
     border-width: 8px;
-    transition: all 125ms ease-in-out;
+    transition: all 150ms ease-in-out;
   }
 .spectrum-Slider-controls--active .spectrum-Slider-handle {
     border-color: rgb(205, 205, 205);
     background: rgb(205, 205, 205);
     border-width: 8px;
-    transition: all 125ms ease-in-out;
+    transition: all 150ms ease-in-out;
   }
 .spectrum-Slider.is-disabled .spectrum-Slider-label {
     color: rgb(92, 92, 92);

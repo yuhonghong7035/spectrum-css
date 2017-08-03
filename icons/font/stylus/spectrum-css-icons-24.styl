@@ -24,7 +24,14 @@ spectrum-fontIcon() {
   -moz-osx-font-smoothing: grayscale
 }
 
-
+spectrum-fontIcon--sizeXXS() {
+  font-family: spectrum-css-icons-24;
+  font-size: 9px;
+  &::before {
+    height: 9px;
+    width: 9px;
+  }
+}
 spectrum-fontIcon--sizeXS() {
   font-family: spectrum-css-icons-24;
   font-size: 12px;
@@ -33,7 +40,14 @@ spectrum-fontIcon--sizeXS() {
     width: 12px;
   }
 }
-
+spectrum-fontIcon--sizeS() {
+  font-family: spectrum-css-icons-24;
+  font-size: 18px;
+  &::before {
+    height: 18px;
+    width: 18px;
+  }
+}
 spectrum-fontIcon--sizeM() {
   font-family: spectrum-css-icons-24;
   font-size: 24px;
@@ -42,7 +56,14 @@ spectrum-fontIcon--sizeM() {
     width: 24px;
   }
 }
-
+spectrum-fontIcon--sizeL() {
+  font-family: spectrum-css-icons-24;
+  font-size: 36px;
+  &::before {
+    height: 36px;
+    width: 36px;
+  }
+}
 spectrum-fontIcon--sizeXL() {
   font-family: spectrum-css-icons-24;
   font-size: 48px;
@@ -51,977 +72,2130 @@ spectrum-fontIcon--sizeXL() {
     width: 48px;
   }
 }
-
+spectrum-fontIcon--sizeXXL() {
+  font-family: spectrum-css-icons-24;
+  font-size: 72px;
+  &::before {
+    height: 72px;
+    width: 72px;
+  }
+}
 
 spectrum-fontIcon-iconclasses(prefix) {
   
-  {prefix}--Add::before {
+  {prefix}--123::before {
     content: "\ea01";
   }
-  {prefix}--AddCircle::before {
-    content: "\ea02";
-  }
-  {prefix}--AddTo::before {
+  {prefix}--ABC::before {
     content: "\ea03";
   }
-  {prefix}--AdobeDocumentCloud::before {
+  {prefix}--Actions::before {
+    content: "\ea02";
+  }
+  {prefix}--Add::before {
     content: "\ea04";
   }
-  {prefix}--AdobeLogo::before {
+  {prefix}--AddCircle::before {
     content: "\ea05";
   }
-  {prefix}--AdobeSendNow::before {
+  {prefix}--Adjust::before {
     content: "\ea06";
   }
-  {prefix}--Alert::before {
+  {prefix}--Adobe::before {
     content: "\ea07";
   }
-  {prefix}--Alias::before {
+  {prefix}--AdobeAnalytics::before {
     content: "\ea08";
   }
-  {prefix}--AlignBottom::before {
+  {prefix}--AdobeAudienceManager::before {
     content: "\ea09";
   }
-  {prefix}--AlignCenter::before {
+  {prefix}--AdobeCampaign::before {
     content: "\ea0a";
   }
-  {prefix}--AlignLeft::before {
+  {prefix}--AdobeConnect::before {
     content: "\ea0b";
   }
-  {prefix}--AlignMiddle::before {
+  {prefix}--AdobeDocumentCloud::before {
     content: "\ea0c";
   }
-  {prefix}--AlignRight::before {
+  {prefix}--AdobeExperienceManager::before {
     content: "\ea0d";
   }
-  {prefix}--AlignTop::before {
+  {prefix}--AdobeMarketingCloud::before {
     content: "\ea0e";
   }
-  {prefix}--Anchor::before {
+  {prefix}--AdobeMediaOptimizer::before {
     content: "\ea0f";
   }
-  {prefix}--AnchorSelect::before {
+  {prefix}--AdobePrimetime::before {
     content: "\ea10";
   }
-  {prefix}--Android::before {
+  {prefix}--AdobeSendNow::before {
     content: "\ea11";
   }
-  {prefix}--Annotate::before {
+  {prefix}--AdobeSocial::before {
     content: "\ea12";
   }
-  {prefix}--Apple::before {
+  {prefix}--AdobeTarget::before {
     content: "\ea13";
   }
-  {prefix}--Archive::before {
+  {prefix}--Alert::before {
     content: "\ea14";
   }
-  {prefix}--Artboard::before {
+  {prefix}--AlertAdd::before {
     content: "\ea15";
   }
-  {prefix}--Asset::before {
+  {prefix}--AlertCheck::before {
     content: "\ea16";
   }
-  {prefix}--Asterisk::before {
+  {prefix}--Alias::before {
     content: "\ea17";
   }
-  {prefix}--At::before {
+  {prefix}--AmazonWebServices::before {
     content: "\ea18";
   }
-  {prefix}--Attach::before {
+  {prefix}--Anchor::before {
     content: "\ea19";
   }
-  {prefix}--Audio::before {
+  {prefix}--Android::before {
     content: "\ea1a";
   }
-  {prefix}--Back30Sekonds::before {
+  {prefix}--Annotate::before {
     content: "\ea1b";
   }
-  {prefix}--Behance::before {
+  {prefix}--Answer::before {
     content: "\ea1c";
   }
-  {prefix}--Bell::before {
+  {prefix}--AnswerFavorite::before {
     content: "\ea1d";
   }
-  {prefix}--Blog::before {
+  {prefix}--App::before {
     content: "\ea1e";
   }
-  {prefix}--Blower::before {
+  {prefix}--Apple::before {
     content: "\ea1f";
   }
-  {prefix}--Blur::before {
+  {prefix}--ApproveReject::before {
     content: "\ea20";
   }
-  {prefix}--Bookmark::before {
+  {prefix}--Apps::before {
     content: "\ea21";
   }
-  {prefix}--Box::before {
+  {prefix}--Archive::before {
     content: "\ea22";
   }
-  {prefix}--Brush::before {
+  {prefix}--ArchiveRemove::before {
     content: "\ea23";
   }
-  {prefix}--Building::before {
+  {prefix}--ArrowDown::before {
     content: "\ea24";
   }
-  {prefix}--Calendar::before {
+  {prefix}--ArrowLeft::before {
     content: "\ea25";
   }
-  {prefix}--CalendarLocked::before {
+  {prefix}--ArrowRight::before {
     content: "\ea26";
   }
-  {prefix}--CalendarUnlocked::before {
+  {prefix}--ArrowUp::before {
     content: "\ea27";
   }
-  {prefix}--Camera::before {
+  {prefix}--Asset::before {
     content: "\ea28";
   }
-  {prefix}--Cancel::before {
+  {prefix}--AssetCheck::before {
     content: "\ea29";
   }
-  {prefix}--Captcha::before {
+  {prefix}--Assets::before {
     content: "\ea2a";
   }
-  {prefix}--Chat::before {
+  {prefix}--Asterisk::before {
     content: "\ea2b";
   }
-  {prefix}--Checkmark::before {
+  {prefix}--At::before {
     content: "\ea2c";
   }
-  {prefix}--CheckmarkCircle::before {
+  {prefix}--Attach::before {
     content: "\ea2d";
   }
-  {prefix}--ClassicGridView::before {
+  {prefix}--AttachmentExclude::before {
     content: "\ea2e";
   }
-  {prefix}--Clock::before {
+  {prefix}--Back::before {
     content: "\ea2f";
   }
-  {prefix}--CloneStamp::before {
+  {prefix}--Back30Seconds::before {
     content: "\ea30";
   }
-  {prefix}--Close::before {
+  {prefix}--Beaker::before {
     content: "\ea31";
   }
-  {prefix}--CloseCaptions::before {
+  {prefix}--BeakerCheck::before {
     content: "\ea32";
   }
-  {prefix}--CloseCircle::before {
+  {prefix}--BeakerShare::before {
     content: "\ea33";
   }
-  {prefix}--Code::before {
+  {prefix}--Behance::before {
     content: "\ea34";
   }
-  {prefix}--ColorFill::before {
+  {prefix}--Bell::before {
     content: "\ea35";
   }
-  {prefix}--ColorPalette::before {
+  {prefix}--BidRule::before {
     content: "\ea36";
   }
-  {prefix}--ColorWheel::before {
+  {prefix}--BidRuleAdd::before {
     content: "\ea37";
   }
-  {prefix}--Comment::before {
+  {prefix}--Bitly::before {
     content: "\ea38";
   }
-  {prefix}--Contrast::before {
+  {prefix}--Blackberry::before {
     content: "\ea39";
   }
-  {prefix}--Copy::before {
+  {prefix}--Blog::before {
     content: "\ea3a";
   }
-  {prefix}--CreativeCloud::before {
+  {prefix}--Blur::before {
     content: "\ea3b";
   }
-  {prefix}--CreditCard::before {
+  {prefix}--Book::before {
     content: "\ea3c";
   }
-  {prefix}--Crop::before {
+  {prefix}--Bookmark::before {
     content: "\ea3d";
   }
-  {prefix}--Curate::before {
+  {prefix}--Boolean::before {
     content: "\ea3e";
   }
-  {prefix}--Cut::before {
+  {prefix}--Box::before {
     content: "\ea3f";
   }
-  {prefix}--Dashboard::before {
+  {prefix}--BoxAdd::before {
     content: "\ea40";
   }
-  {prefix}--Data::before {
+  {prefix}--BoxExport::before {
     content: "\ea41";
   }
-  {prefix}--Date::before {
-    content: "\ea42";
-  }
-  {prefix}--Delete::before {
+  {prefix}--BoxImport::before {
     content: "\ea43";
   }
-  {prefix}--DeleteOutline::before {
+  {prefix}--Brackets::before {
+    content: "\ea42";
+  }
+  {prefix}--BracketsSquare::before {
     content: "\ea44";
   }
-  {prefix}--DesktopAndMobile::before {
+  {prefix}--Branch1::before {
     content: "\ea45";
   }
-  {prefix}--DeviceDesktop::before {
+  {prefix}--Branch2::before {
     content: "\ea46";
   }
-  {prefix}--DeviceLaptop::before {
+  {prefix}--Branch3::before {
     content: "\ea47";
   }
-  {prefix}--DevicePhone::before {
+  {prefix}--BranchCircle::before {
     content: "\ea48";
   }
-  {prefix}--DevicePhoneRefresh::before {
+  {prefix}--Breakdown::before {
     content: "\ea49";
   }
-  {prefix}--DevicePreview::before {
+  {prefix}--BreakdownAdd::before {
     content: "\ea4a";
   }
-  {prefix}--DeviceRotateLandscape::before {
+  {prefix}--Briefcase::before {
     content: "\ea4b";
   }
-  {prefix}--DeviceRotatePortrait::before {
+  {prefix}--Browse::before {
     content: "\ea4c";
   }
-  {prefix}--DeviceTV::before {
+  {prefix}--Brush::before {
     content: "\ea4d";
   }
-  {prefix}--DeviceTablet::before {
+  {prefix}--Bug::before {
     content: "\ea4e";
   }
-  {prefix}--Devices::before {
+  {prefix}--Building::before {
     content: "\ea4f";
   }
-  {prefix}--DistributeHorizontalCenter::before {
+  {prefix}--BulkEditUsers::before {
     content: "\ea50";
   }
-  {prefix}--DistributeLeftEdge::before {
+  {prefix}--Button::before {
     content: "\ea51";
   }
-  {prefix}--DistributeRightEdge::before {
+  {prefix}--Calculator::before {
     content: "\ea52";
   }
-  {prefix}--DistributeSpaceHoriz::before {
+  {prefix}--Calendar::before {
     content: "\ea53";
   }
-  {prefix}--DistributeSpaceVert::before {
+  {prefix}--CalendarAdd::before {
     content: "\ea54";
   }
-  {prefix}--DividePath::before {
+  {prefix}--CalendarLocked::before {
     content: "\ea55";
   }
-  {prefix}--Document::before {
+  {prefix}--CalendarUnlocked::before {
     content: "\ea56";
   }
-  {prefix}--DocumentOutline::before {
+  {prefix}--CallCenter::before {
     content: "\ea57";
   }
-  {prefix}--Download::before {
+  {prefix}--Camera::before {
     content: "\ea58";
   }
-  {prefix}--DownloadFromCloud::before {
+  {prefix}--CameraRefresh::before {
     content: "\ea59";
   }
-  {prefix}--Draw::before {
+  {prefix}--Campaign::before {
     content: "\ea5a";
   }
-  {prefix}--Edit::before {
-    content: "\ea5c";
-  }
-  {prefix}--Education::before {
+  {prefix}--CampaignAdd::before {
     content: "\ea5b";
   }
-  {prefix}--Effects::before {
+  {prefix}--CampaignClose::before {
+    content: "\ea5c";
+  }
+  {prefix}--CampaignDelete::before {
     content: "\ea5d";
   }
-  {prefix}--Ellipse::before {
+  {prefix}--CampaignEdit::before {
     content: "\ea5e";
   }
-  {prefix}--Email::before {
+  {prefix}--Captcha::before {
     content: "\ea60";
   }
-  {prefix}--Engagement::before {
+  {prefix}--Card::before {
     content: "\ea5f";
   }
-  {prefix}--Erase::before {
+  {prefix}--Channel::before {
     content: "\ea61";
   }
-  {prefix}--ExcludeOverlap::before {
+  {prefix}--Check::before {
     content: "\ea62";
   }
-  {prefix}--Exposure::before {
+  {prefix}--CheckCircle::before {
     content: "\ea63";
   }
-  {prefix}--Facebook::before {
+  {prefix}--CheckPause::before {
     content: "\ea64";
   }
-  {prefix}--Filter::before {
+  {prefix}--CheckmarkCircle::before {
     content: "\ea65";
   }
-  {prefix}--Firefox::before {
+  {prefix}--ChevronDoubleLeft::before {
     content: "\ea66";
   }
-  {prefix}--Flag::before {
+  {prefix}--ChevronDoubleRight::before {
     content: "\ea67";
   }
-  {prefix}--Flash::before {
+  {prefix}--ChevronDown::before {
     content: "\ea68";
   }
-  {prefix}--FlashAuto::before {
+  {prefix}--ChevronLeft::before {
     content: "\ea69";
   }
-  {prefix}--FlashOff::before {
+  {prefix}--ChevronRight::before {
     content: "\ea6a";
   }
-  {prefix}--FlashOn::before {
+  {prefix}--ChevronUp::before {
     content: "\ea6b";
   }
-  {prefix}--Flickr::before {
+  {prefix}--ChevronUpDown::before {
     content: "\ea6c";
   }
-  {prefix}--FlipHorizontal::before {
+  {prefix}--Chrome::before {
     content: "\ea6d";
   }
-  {prefix}--FlipVertical::before {
+  {prefix}--Circle::before {
     content: "\ea6e";
   }
-  {prefix}--Folder::before {
+  {prefix}--Clock::before {
     content: "\ea6f";
   }
-  {prefix}--FolderOpen::before {
+  {prefix}--ClockCheck::before {
     content: "\ea70";
   }
-  {prefix}--FullScreen::before {
+  {prefix}--Close::before {
     content: "\ea71";
   }
-  {prefix}--FullScreenExit::before {
+  {prefix}--CloseCircle::before {
     content: "\ea72";
   }
-  {prefix}--Globe::before {
+  {prefix}--ClosedCaptions::before {
     content: "\ea73";
   }
-  {prefix}--GlobeOutline::before {
+  {prefix}--Cloud::before {
     content: "\ea74";
   }
-  {prefix}--GooglePlus::before {
+  {prefix}--Code::before {
     content: "\ea75";
   }
-  {prefix}--Gradient::before {
+  {prefix}--Collection::before {
     content: "\ea76";
   }
-  {prefix}--Graphic::before {
+  {prefix}--CollectionAdd::before {
     content: "\ea77";
   }
-  {prefix}--Heal::before {
+  {prefix}--CollectionAddTo::before {
     content: "\ea78";
   }
-  {prefix}--Heart::before {
+  {prefix}--CollectionCheck::before {
     content: "\ea79";
   }
-  {prefix}--Help::before {
+  {prefix}--CollectionEdit::before {
     content: "\ea7a";
   }
-  {prefix}--HelpOutline::before {
+  {prefix}--CollectionExclude::before {
     content: "\ea7b";
   }
-  {prefix}--History::before {
+  {prefix}--CollectionLink::before {
     content: "\ea7c";
   }
-  {prefix}--Home::before {
+  {prefix}--ColorPalette::before {
     content: "\ea7d";
   }
-  {prefix}--Illustrator::before {
+  {prefix}--ColumnSettings::before {
     content: "\ea7e";
   }
-  {prefix}--Image::before {
+  {prefix}--ColumnTwoA::before {
     content: "\ea7f";
   }
-  {prefix}--ImageAlbum::before {
+  {prefix}--ColumnTwoB::before {
     content: "\ea80";
   }
-  {prefix}--ImageCarousel::before {
+  {prefix}--ColumnTwoC::before {
     content: "\ea81";
   }
-  {prefix}--ImageText::before {
+  {prefix}--Comment::before {
     content: "\ea82";
   }
-  {prefix}--Images::before {
+  {prefix}--CommentAdd::before {
     content: "\ea83";
   }
-  {prefix}--InDesign::before {
+  {prefix}--Compare::before {
     content: "\ea84";
   }
-  {prefix}--Inbox::before {
+  {prefix}--Compass::before {
     content: "\ea85";
   }
-  {prefix}--Info::before {
+  {prefix}--ConfidenceFour::before {
     content: "\ea86";
   }
-  {prefix}--InfoOutline::before {
+  {prefix}--ConfidenceOne::before {
     content: "\ea87";
   }
-  {prefix}--Instagram::before {
+  {prefix}--ConfidenceThree::before {
     content: "\ea88";
   }
-  {prefix}--InternetExplorer::before {
+  {prefix}--ConfidenceTwo::before {
     content: "\ea89";
   }
-  {prefix}--IntersectOverlap::before {
+  {prefix}--ConversionFunnel::before {
     content: "\ea8a";
   }
-  {prefix}--InvertAdj::before {
+  {prefix}--Copy::before {
     content: "\ea8b";
   }
-  {prefix}--Label::before {
+  {prefix}--CoverImage::before {
     content: "\ea8c";
   }
-  {prefix}--Landscape::before {
+  {prefix}--CreativeCloud::before {
     content: "\ea8d";
   }
-  {prefix}--Layers::before {
+  {prefix}--CreditCard::before {
     content: "\ea8e";
   }
-  {prefix}--LayersBackward::before {
+  {prefix}--Crop::before {
     content: "\ea8f";
   }
-  {prefix}--LayersBringToFront::before {
+  {prefix}--Crosshairs::before {
     content: "\ea90";
   }
-  {prefix}--LayersForward::before {
+  {prefix}--Curate::before {
     content: "\ea91";
   }
-  {prefix}--LayersSendToBack::before {
+  {prefix}--CursorArrow::before {
     content: "\ea92";
   }
-  {prefix}--Light::before {
+  {prefix}--Cut::before {
     content: "\ea93";
   }
-  {prefix}--Lightroom::before {
+  {prefix}--DPS::before {
     content: "\ea94";
   }
-  {prefix}--Line::before {
+  {prefix}--Dashboard::before {
     content: "\ea95";
   }
-  {prefix}--Link::before {
+  {prefix}--Data::before {
     content: "\ea96";
   }
-  {prefix}--LinkOut::before {
+  {prefix}--DataAdd::before {
     content: "\ea97";
   }
-  {prefix}--LinkedIn::before {
+  {prefix}--DataAdobe::before {
     content: "\ea98";
   }
-  {prefix}--Location::before {
+  {prefix}--DataBook::before {
     content: "\ea99";
   }
-  {prefix}--LockClosed::before {
+  {prefix}--DataCheck::before {
     content: "\ea9a";
   }
-  {prefix}--LockOpen::before {
+  {prefix}--DataCorrelated::before {
     content: "\ea9b";
   }
-  {prefix}--LogOut::before {
+  {prefix}--DataDownload::before {
     content: "\ea9c";
   }
-  {prefix}--Looks::before {
+  {prefix}--DataEdit::before {
     content: "\ea9d";
   }
-  {prefix}--LoupeView::before {
+  {prefix}--DataRefresh::before {
     content: "\ea9e";
   }
-  {prefix}--MagicWand::before {
+  {prefix}--DataRemove::before {
     content: "\ea9f";
   }
-  {prefix}--Mailbox::before {
+  {prefix}--DataUnavailable::before {
     content: "\eaa0";
   }
-  {prefix}--MapView::before {
+  {prefix}--DataUpload::before {
     content: "\eaa1";
   }
-  {prefix}--Maximize::before {
+  {prefix}--DataUser::before {
     content: "\eaa2";
   }
-  {prefix}--Measure::before {
+  {prefix}--Date::before {
     content: "\eaa3";
   }
-  {prefix}--Merge::before {
+  {prefix}--DateInput::before {
     content: "\eaa4";
   }
-  {prefix}--MergeLayers::before {
+  {prefix}--Deduplication::before {
     content: "\eaa5";
   }
-  {prefix}--Minimize::before {
+  {prefix}--Delegate::before {
     content: "\eaa6";
   }
-  {prefix}--MobileServices::before {
+  {prefix}--Delete::before {
     content: "\eaa7";
   }
-  {prefix}--ModernGridView::before {
+  {prefix}--DeleteOutline::before {
     content: "\eaa8";
   }
-  {prefix}--More::before {
+  {prefix}--DeliveryFusion::before {
     content: "\eaa9";
   }
-  {prefix}--Move::before {
+  {prefix}--Demographic::before {
     content: "\eaaa";
   }
-  {prefix}--MoveTo::before {
+  {prefix}--DeviceDesktop::before {
     content: "\eaab";
   }
-  {prefix}--Muse::before {
+  {prefix}--DeviceLaptop::before {
     content: "\eaac";
   }
-  {prefix}--NamingOrder::before {
+  {prefix}--DevicePhone::before {
     content: "\eaad";
   }
-  {prefix}--NoEdit::before {
+  {prefix}--DevicePhoneRefresh::before {
     content: "\eaae";
   }
-  {prefix}--Note::before {
+  {prefix}--DevicePreview::before {
     content: "\eaaf";
   }
-  {prefix}--OpenRecent::before {
+  {prefix}--DeviceRotateLandscape::before {
     content: "\eab0";
   }
-  {prefix}--Orbit::before {
+  {prefix}--DeviceRotatePortrait::before {
     content: "\eab1";
   }
-  {prefix}--OutlinePath::before {
+  {prefix}--DeviceTV::before {
     content: "\eab2";
   }
-  {prefix}--PageBreak::before {
+  {prefix}--DeviceTablet::before {
     content: "\eab3";
   }
-  {prefix}--Pan::before {
+  {prefix}--Devices::before {
     content: "\eab4";
   }
-  {prefix}--Paste::before {
+  {prefix}--Dimension::before {
     content: "\eab5";
   }
-  {prefix}--Pause::before {
+  {prefix}--Disqus::before {
     content: "\eab6";
   }
-  {prefix}--PauseCircle::before {
+  {prefix}--Divide::before {
     content: "\eab7";
   }
-  {prefix}--Pending::before {
+  {prefix}--DocumentFragment::before {
     content: "\eab8";
   }
-  {prefix}--Perspective::before {
+  {prefix}--DocumentFragmentGroup::before {
     content: "\eab9";
   }
-  {prefix}--PhoneGap::before {
+  {prefix}--Dolly::before {
     content: "\eaba";
   }
-  {prefix}--PhoneGapBuilder::before {
+  {prefix}--Download::before {
     content: "\eabb";
   }
-  {prefix}--Photoshop::before {
+  {prefix}--DownloadFromCloud::before {
     content: "\eabc";
   }
-  {prefix}--PinOff::before {
+  {prefix}--Downloaded::before {
     content: "\eabd";
   }
-  {prefix}--PinOn::before {
+  {prefix}--Draft::before {
     content: "\eabe";
   }
-  {prefix}--Pinterest::before {
+  {prefix}--DragHandle::before {
     content: "\eabf";
   }
-  {prefix}--Play::before {
+  {prefix}--Dropdown::before {
     content: "\eac0";
   }
-  {prefix}--PlayCircle::before {
+  {prefix}--Duplicate::before {
     content: "\eac1";
   }
-  {prefix}--Polygon::before {
+  {prefix}--Edit::before {
     content: "\eac2";
   }
-  {prefix}--Portrait::before {
+  {prefix}--EditCircle::before {
     content: "\eac3";
   }
-  {prefix}--Print::before {
+  {prefix}--EditExclude::before {
     content: "\eac4";
   }
-  {prefix}--ProjectEdit::before {
+  {prefix}--Education::before {
     content: "\eac5";
   }
-  {prefix}--ProjectNameEdit::before {
+  {prefix}--Effects::before {
     content: "\eac6";
   }
-  {prefix}--Promote::before {
+  {prefix}--Efficient::before {
     content: "\eac7";
   }
-  {prefix}--Properties::before {
+  {prefix}--Email::before {
     content: "\eac8";
   }
-  {prefix}--PropertiesCopy::before {
+  {prefix}--EmailAlert::before {
     content: "\eac9";
   }
-  {prefix}--Public::before {
+  {prefix}--EmailCancel::before {
     content: "\eaca";
   }
-  {prefix}--RectSelect::before {
+  {prefix}--EmailCheck::before {
     content: "\eacb";
   }
-  {prefix}--Rectangle::before {
+  {prefix}--EmailExclude::before {
     content: "\eacc";
   }
-  {prefix}--Redo::before {
+  {prefix}--EmailGear::before {
     content: "\eacd";
   }
-  {prefix}--Refresh::before {
+  {prefix}--EmailKey::before {
     content: "\eace";
   }
-  {prefix}--RegionSelect::before {
+  {prefix}--EmailLightning::before {
     content: "\eacf";
   }
-  {prefix}--Remove::before {
+  {prefix}--EmailNotification::before {
     content: "\ead0";
   }
-  {prefix}--RemoveCircle::before {
+  {prefix}--EmailRefresh::before {
     content: "\ead1";
   }
-  {prefix}--Rename::before {
+  {prefix}--EmailSchedule::before {
     content: "\ead2";
   }
-  {prefix}--Reorder::before {
+  {prefix}--Engagement::before {
     content: "\ead3";
   }
-  {prefix}--Replay::before {
+  {prefix}--Event::before {
     content: "\ead4";
   }
-  {prefix}--Replies::before {
-    content: "\ead5";
-  }
-  {prefix}--Reply::before {
+  {prefix}--EventExclude::before {
     content: "\ead6";
   }
-  {prefix}--Revert::before {
-    content: "\ead7";
+  {prefix}--EventShare::before {
+    content: "\ead5";
   }
-  {prefix}--RotateCCW::before {
+  {prefix}--Exclude::before {
     content: "\ead8";
   }
-  {prefix}--RotateCW::before {
+  {prefix}--Experience::before {
+    content: "\ead7";
+  }
+  {prefix}--ExperienceAdd::before {
     content: "\ead9";
   }
-  {prefix}--RotateLeft::before {
-    content: "\eadb";
-  }
-  {prefix}--RotateRight::before {
-    content: "\eadc";
-  }
-  {prefix}--Sampler::before {
+  {prefix}--ExperienceAddTo::before {
     content: "\eada";
   }
-  {prefix}--SaveFloppy::before {
+  {prefix}--ExperienceExport::before {
+    content: "\eadb";
+  }
+  {prefix}--ExperienceImport::before {
+    content: "\eadc";
+  }
+  {prefix}--Expired::before {
     content: "\eadd";
   }
-  {prefix}--SaveTo::before {
+  {prefix}--Extension::before {
     content: "\eade";
   }
-  {prefix}--Search::before {
+  {prefix}--Eyedropper::before {
     content: "\eadf";
   }
-  {prefix}--Select::before {
+  {prefix}--Facebook::before {
     content: "\eae0";
   }
-  {prefix}--Send::before {
+  {prefix}--FacebookCoverImage::before {
     content: "\eae1";
   }
-  {prefix}--SentimentNegative::before {
+  {prefix}--Fast::before {
     content: "\eae2";
   }
-  {prefix}--SentimentNeutral::before {
+  {prefix}--FastForward::before {
     content: "\eae3";
   }
-  {prefix}--SentimentPositive::before {
+  {prefix}--FastForwardCircle::before {
     content: "\eae4";
   }
-  {prefix}--Settings::before {
+  {prefix}--Feed::before {
     content: "\eae5";
   }
-  {prefix}--Shapes::before {
+  {prefix}--FeedAdd::before {
     content: "\eae6";
   }
-  {prefix}--Share::before {
+  {prefix}--FeedManagement::before {
     content: "\eae7";
   }
-  {prefix}--ShareAndroid::before {
+  {prefix}--File::before {
     content: "\eae8";
   }
-  {prefix}--ShareWindows::before {
+  {prefix}--FileAdd::before {
     content: "\eae9";
   }
-  {prefix}--Sharpen::before {
+  {prefix}--FileCSV::before {
     content: "\eaea";
   }
-  {prefix}--ShoppingCart::before {
+  {prefix}--FileCampaign::before {
     content: "\eaeb";
   }
-  {prefix}--ShowAllLayers::before {
+  {prefix}--FileChart::before {
     content: "\eaec";
   }
-  {prefix}--ShowOneLayer::before {
+  {prefix}--FileCode::before {
     content: "\eaed";
   }
-  {prefix}--Shuffle::before {
+  {prefix}--FileData::before {
     content: "\eaee";
   }
-  {prefix}--Slice::before {
+  {prefix}--FileEmail::before {
     content: "\eaef";
   }
-  {prefix}--SplitView::before {
+  {prefix}--FileExcel::before {
     content: "\eaf0";
   }
-  {prefix}--Star::before {
+  {prefix}--FileFolder::before {
     content: "\eaf1";
   }
-  {prefix}--StarOutline::before {
+  {prefix}--FileGear::before {
     content: "\eaf2";
   }
-  {prefix}--StepBackward::before {
+  {prefix}--FileGlobe::before {
     content: "\eaf3";
   }
-  {prefix}--StepBackwardCircle::before {
+  {prefix}--FileGlobe2::before {
     content: "\eaf4";
   }
-  {prefix}--StepForward::before {
+  {prefix}--FileHTML::before {
     content: "\eaf5";
   }
-  {prefix}--StepForwardCircle::before {
+  {prefix}--FileImportant::before {
     content: "\eaf6";
   }
-  {prefix}--Stock::before {
+  {prefix}--FileKey::before {
     content: "\eaf7";
   }
-  {prefix}--Stop::before {
+  {prefix}--FileMobile::before {
     content: "\eaf8";
   }
-  {prefix}--StopCircle::before {
+  {prefix}--FilePDF::before {
     content: "\eaf9";
   }
-  {prefix}--Stopwatch::before {
+  {prefix}--FileShare::before {
     content: "\eafa";
   }
-  {prefix}--Subscribe::before {
+  {prefix}--FileSingleWebPage::before {
     content: "\eafb";
   }
-  {prefix}--SubstractBackPath::before {
+  {prefix}--FileSpace::before {
     content: "\eafc";
   }
-  {prefix}--SubtractFrontPath::before {
+  {prefix}--FileTemplate::before {
     content: "\eafd";
   }
-  {prefix}--Sync::before {
+  {prefix}--FileTxt::before {
     content: "\eafe";
   }
-  {prefix}--Target::before {
+  {prefix}--FileUser::before {
     content: "\eaff";
   }
-  {prefix}--Targeted::before {
+  {prefix}--FileWord::before {
     content: "\eb00";
   }
-  {prefix}--Temperature::before {
+  {prefix}--FileWorkflow::before {
     content: "\eb01";
   }
-  {prefix}--Text::before {
+  {prefix}--FileXML::before {
     content: "\eb02";
   }
-  {prefix}--TextAdd::before {
+  {prefix}--FileZip::before {
     content: "\eb03";
   }
-  {prefix}--TextAlignCenter::before {
+  {prefix}--FilingCabinet::before {
     content: "\eb04";
   }
-  {prefix}--TextAlignJustify::before {
+  {prefix}--Film::before {
     content: "\eb05";
   }
-  {prefix}--TextAlignLeft::before {
+  {prefix}--Filter::before {
     content: "\eb06";
   }
-  {prefix}--TextAlignRight::before {
+  {prefix}--FilterAdd::before {
     content: "\eb07";
   }
-  {prefix}--TextBold::before {
+  {prefix}--FilterCheck::before {
     content: "\eb08";
   }
-  {prefix}--TextBulleted::before {
+  {prefix}--FilterDelete::before {
     content: "\eb09";
   }
-  {prefix}--TextBulletedHierarchy::before {
+  {prefix}--FilterEdit::before {
     content: "\eb0a";
   }
-  {prefix}--TextBulletedHierarchyExclude::before {
-    content: "\eb0b";
-  }
-  {prefix}--TextColor::before {
+  {prefix}--FilterHeart::before {
     content: "\eb0c";
   }
-  {prefix}--TextDecrease::before {
+  {prefix}--FilterRemove::before {
+    content: "\eb0b";
+  }
+  {prefix}--FilterStar::before {
     content: "\eb0d";
   }
-  {prefix}--TextEdit::before {
+  {prefix}--FindAndReplace::before {
     content: "\eb0e";
   }
-  {prefix}--TextExclude::before {
+  {prefix}--Firefox::before {
     content: "\eb0f";
   }
-  {prefix}--TextIncrease::before {
+  {prefix}--Flag::before {
     content: "\eb10";
   }
-  {prefix}--TextItalic::before {
-    content: "\eb11";
-  }
-  {prefix}--TextKerning::before {
-    content: "\eb13";
-  }
-  {prefix}--TextLetteredLowerCase::before {
+  {prefix}--FlagExclude::before {
     content: "\eb12";
   }
-  {prefix}--TextLetteredUpperCase::before {
+  {prefix}--Flash::before {
+    content: "\eb11";
+  }
+  {prefix}--Flashlight::before {
+    content: "\eb13";
+  }
+  {prefix}--Flickr::before {
     content: "\eb14";
   }
-  {prefix}--TextNumbered::before {
+  {prefix}--Folder::before {
     content: "\eb15";
   }
-  {prefix}--TextParagraph::before {
+  {prefix}--FolderAdd::before {
     content: "\eb16";
   }
-  {prefix}--TextSize::before {
+  {prefix}--FolderAddTo::before {
     content: "\eb17";
   }
-  {prefix}--TextSizeAdd::before {
+  {prefix}--FolderAdobe::before {
     content: "\eb18";
   }
-  {prefix}--TextStyle::before {
+  {prefix}--FolderArchive::before {
     content: "\eb19";
   }
-  {prefix}--TextSubscript::before {
+  {prefix}--FolderDelete::before {
     content: "\eb1a";
   }
-  {prefix}--TextSuperscript::before {
+  {prefix}--FolderGear::before {
     content: "\eb1b";
   }
-  {prefix}--TextUnderline::before {
+  {prefix}--FolderLocked::before {
     content: "\eb1c";
   }
-  {prefix}--ThumbDown::before {
+  {prefix}--FolderLockedAdobe::before {
     content: "\eb1d";
   }
-  {prefix}--ThumbDownOutline::before {
+  {prefix}--FolderOutline::before {
     content: "\eb1e";
   }
-  {prefix}--ThumbUp::before {
+  {prefix}--FolderRemove::before {
     content: "\eb1f";
   }
-  {prefix}--ThumbUpOutline::before {
+  {prefix}--FolderSearch::before {
     content: "\eb20";
   }
-  {prefix}--Transparency::before {
-    content: "\eb21";
-  }
-  {prefix}--TrimPath::before {
+  {prefix}--FolderUser::before {
     content: "\eb22";
   }
-  {prefix}--Trophy::before {
+  {prefix}--Follow::before {
+    content: "\eb21";
+  }
+  {prefix}--FollowOff::before {
     content: "\eb23";
   }
-  {prefix}--Tumblr::before {
+  {prefix}--ForPlacementOnly::before {
     content: "\eb24";
   }
-  {prefix}--Twitter::before {
+  {prefix}--Forecast::before {
     content: "\eb25";
   }
-  {prefix}--Undo::before {
+  {prefix}--Form::before {
     content: "\eb26";
   }
-  {prefix}--Unlink::before {
+  {prefix}--Forward::before {
     content: "\eb27";
   }
-  {prefix}--Unmerge::before {
+  {prefix}--FullScreen::before {
     content: "\eb28";
   }
-  {prefix}--UploadToCloud::before {
+  {prefix}--FullScreenExit::before {
     content: "\eb29";
   }
-  {prefix}--User::before {
+  {prefix}--Game::before {
     content: "\eb2a";
   }
-  {prefix}--UserGroup::before {
+  {prefix}--Gauge1::before {
     content: "\eb2b";
   }
-  {prefix}--VectorDraw::before {
+  {prefix}--Gauge2::before {
     content: "\eb2c";
   }
-  {prefix}--Video::before {
+  {prefix}--Gauge3::before {
     content: "\eb2d";
   }
-  {prefix}--VideoOutline::before {
+  {prefix}--Gauge4::before {
     content: "\eb2e";
   }
-  {prefix}--ViewBiWeek::before {
+  {prefix}--Gauge5::before {
     content: "\eb2f";
   }
-  {prefix}--ViewCard::before {
+  {prefix}--Gear::before {
     content: "\eb30";
   }
-  {prefix}--ViewColumn::before {
+  {prefix}--Gears::before {
     content: "\eb31";
   }
-  {prefix}--ViewDay::before {
+  {prefix}--GearsAdd::before {
     content: "\eb32";
   }
-  {prefix}--ViewGrid::before {
+  {prefix}--GearsDelete::before {
     content: "\eb33";
   }
-  {prefix}--ViewList::before {
+  {prefix}--GearsEdit::before {
     content: "\eb34";
   }
-  {prefix}--ViewRow::before {
+  {prefix}--GenderFemale::before {
     content: "\eb35";
   }
-  {prefix}--ViewWeek::before {
-    content: "\eb37";
-  }
-  {prefix}--Vignette::before {
+  {prefix}--GenderMale::before {
     content: "\eb36";
   }
-  {prefix}--Visibility::before {
+  {prefix}--Gift::before {
+    content: "\eb37";
+  }
+  {prefix}--Globe::before {
     content: "\eb38";
   }
-  {prefix}--VisibilityOff::before {
-    content: "\eb39";
-  }
-  {prefix}--VoiceOver::before {
+  {prefix}--GlobeCheck::before {
     content: "\eb3a";
   }
-  {prefix}--VolumeMute::before {
+  {prefix}--GlobeClock::before {
+    content: "\eb39";
+  }
+  {prefix}--GlobeEnter::before {
     content: "\eb3b";
   }
-  {prefix}--VolumeOne::before {
+  {prefix}--GlobeExit::before {
     content: "\eb3c";
   }
-  {prefix}--VolumeThree::before {
+  {prefix}--GlobeGrid::before {
     content: "\eb3d";
   }
-  {prefix}--VolumeTwo::before {
-    content: "\eb3f";
-  }
-  {prefix}--Watch::before {
+  {prefix}--GlobeRemove::before {
     content: "\eb3e";
   }
-  {prefix}--WhatsApp::before {
+  {prefix}--GlobeSearch::before {
+    content: "\eb3f";
+  }
+  {prefix}--GlobeStrike::before {
     content: "\eb40";
   }
-  {prefix}--YouTube::before {
+  {prefix}--GlobeStrikeClock::before {
     content: "\eb41";
   }
-  {prefix}--ZoomIn::before {
+  {prefix}--Google::before {
     content: "\eb42";
   }
-  {prefix}--ZoomOut::before {
+  {prefix}--GoogleAnalytics::before {
     content: "\eb43";
+  }
+  {prefix}--GooglePlayStore::before {
+    content: "\eb44";
+  }
+  {prefix}--GooglePlus::before {
+    content: "\eb46";
+  }
+  {prefix}--GooglePlus1::before {
+    content: "\eb45";
+  }
+  {prefix}--GraphArea::before {
+    content: "\eb47";
+  }
+  {prefix}--GraphAreaStacked::before {
+    content: "\eb48";
+  }
+  {prefix}--GraphBarHorizontal::before {
+    content: "\eb49";
+  }
+  {prefix}--GraphBarHorizontalAdd::before {
+    content: "\eb4a";
+  }
+  {prefix}--GraphBarHorizontalStacked::before {
+    content: "\eb4b";
+  }
+  {prefix}--GraphBarVertical::before {
+    content: "\eb4c";
+  }
+  {prefix}--GraphBarVerticalAdd::before {
+    content: "\eb4d";
+  }
+  {prefix}--GraphBarVerticalStacked::before {
+    content: "\eb4e";
+  }
+  {prefix}--GraphBubble::before {
+    content: "\eb4f";
+  }
+  {prefix}--GraphBullet::before {
+    content: "\eb50";
+  }
+  {prefix}--GraphConfidenceBands::before {
+    content: "\eb51";
+  }
+  {prefix}--GraphDonut::before {
+    content: "\eb52";
+  }
+  {prefix}--GraphDonutAdd::before {
+    content: "\eb53";
+  }
+  {prefix}--GraphGantt::before {
+    content: "\eb54";
+  }
+  {prefix}--GraphHistogram::before {
+    content: "\eb55";
+  }
+  {prefix}--GraphPathing::before {
+    content: "\eb56";
+  }
+  {prefix}--GraphPie::before {
+    content: "\eb57";
+  }
+  {prefix}--GraphProfitCurve::before {
+    content: "\eb58";
+  }
+  {prefix}--GraphScatter::before {
+    content: "\eb59";
+  }
+  {prefix}--GraphStream::before {
+    content: "\eb5a";
+  }
+  {prefix}--GraphStreamRanked::before {
+    content: "\eb5b";
+  }
+  {prefix}--GraphStreamRankedAdd::before {
+    content: "\eb5c";
+  }
+  {prefix}--GraphSunburst::before {
+    content: "\eb5d";
+  }
+  {prefix}--GraphTree::before {
+    content: "\eb5e";
+  }
+  {prefix}--GraphTrend::before {
+    content: "\eb5f";
+  }
+  {prefix}--GraphTrendAdd::before {
+    content: "\eb60";
+  }
+  {prefix}--GraphTrendAlert::before {
+    content: "\eb61";
+  }
+  {prefix}--Group::before {
+    content: "\eb62";
+  }
+  {prefix}--HTML5::before {
+    content: "\eb63";
+  }
+  {prefix}--Hammer::before {
+    content: "\eb64";
+  }
+  {prefix}--Hand::before {
+    content: "\eb65";
+  }
+  {prefix}--Hand0::before {
+    content: "\eb66";
+  }
+  {prefix}--Hand1::before {
+    content: "\eb67";
+  }
+  {prefix}--Hand2::before {
+    content: "\eb68";
+  }
+  {prefix}--Hand3::before {
+    content: "\eb69";
+  }
+  {prefix}--Hand4::before {
+    content: "\eb6a";
+  }
+  {prefix}--Heart::before {
+    content: "\eb6b";
+  }
+  {prefix}--Help::before {
+    content: "\eb6c";
+  }
+  {prefix}--HelpCircle::before {
+    content: "\eb6d";
+  }
+  {prefix}--History::before {
+    content: "\eb6e";
+  }
+  {prefix}--Home::before {
+    content: "\eb6f";
+  }
+  {prefix}--Image::before {
+    content: "\eb70";
+  }
+  {prefix}--ImageAdd::before {
+    content: "\eb71";
+  }
+  {prefix}--ImageAlbum::before {
+    content: "\eb72";
+  }
+  {prefix}--ImageCarousel::before {
+    content: "\eb73";
+  }
+  {prefix}--ImageCheck::before {
+    content: "\eb74";
+  }
+  {prefix}--ImageMapCircle::before {
+    content: "\eb75";
+  }
+  {prefix}--ImageMapPolygon::before {
+    content: "\eb76";
+  }
+  {prefix}--ImageMapRectangle::before {
+    content: "\eb77";
+  }
+  {prefix}--ImageNext::before {
+    content: "\eb78";
+  }
+  {prefix}--ImageProfile::before {
+    content: "\eb79";
+  }
+  {prefix}--ImageText::before {
+    content: "\eb7a";
+  }
+  {prefix}--Images::before {
+    content: "\eb7b";
+  }
+  {prefix}--Inbox::before {
+    content: "\eb7c";
+  }
+  {prefix}--Individual::before {
+    content: "\eb7d";
+  }
+  {prefix}--Info::before {
+    content: "\eb7e";
+  }
+  {prefix}--InfoCircle::before {
+    content: "\eb7f";
+  }
+  {prefix}--Instagram::before {
+    content: "\eb80";
+  }
+  {prefix}--InternetExplorer::before {
+    content: "\eb81";
+  }
+  {prefix}--JumpToTop::before {
+    content: "\eb82";
+  }
+  {prefix}--Key::before {
+    content: "\eb83";
+  }
+  {prefix}--KeyClock::before {
+    content: "\eb84";
+  }
+  {prefix}--KeyExclude::before {
+    content: "\eb85";
+  }
+  {prefix}--Keyboard::before {
+    content: "\eb86";
+  }
+  {prefix}--Launch::before {
+    content: "\eb87";
+  }
+  {prefix}--Layers::before {
+    content: "\eb88";
+  }
+  {prefix}--LayersBackward::before {
+    content: "\eb89";
+  }
+  {prefix}--LayersBringToFront::before {
+    content: "\eb8a";
+  }
+  {prefix}--LayersForward::before {
+    content: "\eb8b";
+  }
+  {prefix}--LayersSendToBack::before {
+    content: "\eb8c";
+  }
+  {prefix}--Lightbulb::before {
+    content: "\eb8d";
+  }
+  {prefix}--Link::before {
+    content: "\eb8e";
+  }
+  {prefix}--LinkCheck::before {
+    content: "\eb8f";
+  }
+  {prefix}--LinkFacebook::before {
+    content: "\eb90";
+  }
+  {prefix}--LinkGlobe::before {
+    content: "\eb91";
+  }
+  {prefix}--LinkNav::before {
+    content: "\eb92";
+  }
+  {prefix}--LinkOff::before {
+    content: "\eb93";
+  }
+  {prefix}--LinkPage::before {
+    content: "\eb94";
+  }
+  {prefix}--LinkUser::before {
+    content: "\eb95";
+  }
+  {prefix}--LinkedIn::before {
+    content: "\eb96";
+  }
+  {prefix}--Linux::before {
+    content: "\eb97";
+  }
+  {prefix}--Location::before {
+    content: "\eb98";
+  }
+  {prefix}--LocationContribution::before {
+    content: "\eb99";
+  }
+  {prefix}--LockOff::before {
+    content: "\eb9a";
+  }
+  {prefix}--LockOn::before {
+    content: "\eb9b";
+  }
+  {prefix}--Login::before {
+    content: "\eb9c";
+  }
+  {prefix}--MBox::before {
+    content: "\eb9d";
+  }
+  {prefix}--Mailbox::before {
+    content: "\eb9e";
+  }
+  {prefix}--MarketingActivites::before {
+    content: "\eb9f";
+  }
+  {prefix}--Menu::before {
+    content: "\eba0";
+  }
+  {prefix}--Merge::before {
+    content: "\eba1";
+  }
+  {prefix}--Minus::before {
+    content: "\eba2";
+  }
+  {prefix}--MinusCircle::before {
+    content: "\eba3";
+  }
+  {prefix}--MobileServices::before {
+    content: "\eba4";
+  }
+  {prefix}--Modified::before {
+    content: "\eba5";
+  }
+  {prefix}--Money::before {
+    content: "\eba6";
+  }
+  {prefix}--Moon::before {
+    content: "\eba7";
+  }
+  {prefix}--More::before {
+    content: "\eba8";
+  }
+  {prefix}--MoreVertical::before {
+    content: "\eba9";
+  }
+  {prefix}--Move::before {
+    content: "\ebaa";
+  }
+  {prefix}--MoveLeftRight::before {
+    content: "\ebab";
+  }
+  {prefix}--MoveUpDown::before {
+    content: "\ebac";
+  }
+  {prefix}--Multiple::before {
+    content: "\ebad";
+  }
+  {prefix}--MultipleAdd::before {
+    content: "\ebae";
+  }
+  {prefix}--MultipleCheck::before {
+    content: "\ebaf";
+  }
+  {prefix}--MultipleExclude::before {
+    content: "\ebb0";
+  }
+  {prefix}--News::before {
+    content: "\ebb1";
+  }
+  {prefix}--NewsAdd::before {
+    content: "\ebb2";
+  }
+  {prefix}--Newsgator::before {
+    content: "\ebb3";
+  }
+  {prefix}--Nielsen::before {
+    content: "\ebb4";
+  }
+  {prefix}--Note::before {
+    content: "\ebb5";
+  }
+  {prefix}--NoteAdd::before {
+    content: "\ebb6";
+  }
+  {prefix}--OS::before {
+    content: "\ebb7";
+  }
+  {prefix}--Offer::before {
+    content: "\ebb8";
+  }
+  {prefix}--OfferDelete::before {
+    content: "\ebb9";
+  }
+  {prefix}--OnAir::before {
+    content: "\ebba";
+  }
+  {prefix}--OneDrive::before {
+    content: "\ebbb";
+  }
+  {prefix}--Open::before {
+    content: "\ebbc";
+  }
+  {prefix}--OpenRecent::before {
+    content: "\ebbd";
+  }
+  {prefix}--Opera::before {
+    content: "\ebbe";
+  }
+  {prefix}--Orbit::before {
+    content: "\ebbf";
+  }
+  {prefix}--Organisations::before {
+    content: "\ebc0";
+  }
+  {prefix}--Organize::before {
+    content: "\ebc1";
+  }
+  {prefix}--Page::before {
+    content: "\ebc2";
+  }
+  {prefix}--PageBreak::before {
+    content: "\ebc3";
+  }
+  {prefix}--PageExclude::before {
+    content: "\ebc4";
+  }
+  {prefix}--PageGear::before {
+    content: "\ebc5";
+  }
+  {prefix}--PageRule::before {
+    content: "\ebc6";
+  }
+  {prefix}--PageShare::before {
+    content: "\ebc7";
+  }
+  {prefix}--PageTag::before {
+    content: "\ebc8";
+  }
+  {prefix}--Pages::before {
+    content: "\ebc9";
+  }
+  {prefix}--PagesExclude::before {
+    content: "\ebca";
+  }
+  {prefix}--PaintBucket::before {
+    content: "\ebcb";
+  }
+  {prefix}--Panel::before {
+    content: "\ebcc";
+  }
+  {prefix}--Paste::before {
+    content: "\ebcd";
+  }
+  {prefix}--PasteHTML::before {
+    content: "\ebce";
+  }
+  {prefix}--PasteList::before {
+    content: "\ebcf";
+  }
+  {prefix}--PasteText::before {
+    content: "\ebd0";
+  }
+  {prefix}--Pause::before {
+    content: "\ebd1";
+  }
+  {prefix}--PauseCircle::before {
+    content: "\ebd2";
+  }
+  {prefix}--PausePlay::before {
+    content: "\ebd3";
+  }
+  {prefix}--PausePlayCircle::before {
+    content: "\ebd4";
+  }
+  {prefix}--Pawn::before {
+    content: "\ebd5";
+  }
+  {prefix}--Pending::before {
+    content: "\ebd6";
+  }
+  {prefix}--PeopleGroup::before {
+    content: "\ebd7";
+  }
+  {prefix}--PersonalizationField::before {
+    content: "\ebd8";
+  }
+  {prefix}--PhoneGap::before {
+    content: "\ebd9";
+  }
+  {prefix}--PhoneGapBuilder::before {
+    content: "\ebda";
+  }
+  {prefix}--PinOff::before {
+    content: "\ebdb";
+  }
+  {prefix}--PinOn::before {
+    content: "\ebdc";
+  }
+  {prefix}--Pinterest::before {
+    content: "\ebdd";
+  }
+  {prefix}--Pivot::before {
+    content: "\ebde";
+  }
+  {prefix}--Play::before {
+    content: "\ebdf";
+  }
+  {prefix}--PlayCircle::before {
+    content: "\ebe0";
+  }
+  {prefix}--Plug::before {
+    content: "\ebe1";
+  }
+  {prefix}--PopIn::before {
+    content: "\ebe2";
+  }
+  {prefix}--PopOut::before {
+    content: "\ebe3";
+  }
+  {prefix}--Preview::before {
+    content: "\ebe4";
+  }
+  {prefix}--Print::before {
+    content: "\ebe5";
+  }
+  {prefix}--PrintPreview::before {
+    content: "\ebe6";
+  }
+  {prefix}--Project::before {
+    content: "\ebe7";
+  }
+  {prefix}--ProjectAdd::before {
+    content: "\ebe8";
+  }
+  {prefix}--Promote::before {
+    content: "\ebe9";
+  }
+  {prefix}--Properties::before {
+    content: "\ebea";
+  }
+  {prefix}--Public::before {
+    content: "\ebec";
+  }
+  {prefix}--Publish::before {
+    content: "\ebeb";
+  }
+  {prefix}--PublishCheck::before {
+    content: "\ebed";
+  }
+  {prefix}--PublishPending::before {
+    content: "\ebee";
+  }
+  {prefix}--PublishReject::before {
+    content: "\ebef";
+  }
+  {prefix}--PublishRemove::before {
+    content: "\ebf0";
+  }
+  {prefix}--PublishSchedule::before {
+    content: "\ebf1";
+  }
+  {prefix}--Published::before {
+    content: "\ebf2";
+  }
+  {prefix}--PushNotification::before {
+    content: "\ebf3";
+  }
+  {prefix}--Question::before {
+    content: "\ebf4";
+  }
+  {prefix}--RSS::before {
+    content: "\ebf5";
+  }
+  {prefix}--Rail::before {
+    content: "\ebf6";
+  }
+  {prefix}--RailBottom::before {
+    content: "\ebf7";
+  }
+  {prefix}--RailLeft::before {
+    content: "\ebf8";
+  }
+  {prefix}--RailRight::before {
+    content: "\ebf9";
+  }
+  {prefix}--RailRightClose::before {
+    content: "\ebfa";
+  }
+  {prefix}--RailRightOpen::before {
+    content: "\ebfb";
+  }
+  {prefix}--RailTop::before {
+    content: "\ebfc";
+  }
+  {prefix}--Redo::before {
+    content: "\ebfd";
+  }
+  {prefix}--ReflectHorizontal::before {
+    content: "\ebfe";
+  }
+  {prefix}--ReflectVertical::before {
+    content: "\ebff";
+  }
+  {prefix}--Refresh::before {
+    content: "\ec00";
+  }
+  {prefix}--Reorder::before {
+    content: "\ec01";
+  }
+  {prefix}--Replies::before {
+    content: "\ec02";
+  }
+  {prefix}--Reply::before {
+    content: "\ec03";
+  }
+  {prefix}--Report::before {
+    content: "\ec04";
+  }
+  {prefix}--ReportAdd::before {
+    content: "\ec05";
+  }
+  {prefix}--Resize::before {
+    content: "\ec06";
+  }
+  {prefix}--Retweet::before {
+    content: "\ec07";
+  }
+  {prefix}--Revenue::before {
+    content: "\ec08";
+  }
+  {prefix}--Revert::before {
+    content: "\ec09";
+  }
+  {prefix}--Rewind::before {
+    content: "\ec0a";
+  }
+  {prefix}--RewindCircle::before {
+    content: "\ec0b";
+  }
+  {prefix}--Ribbon::before {
+    content: "\ec0c";
+  }
+  {prefix}--RotateLeft::before {
+    content: "\ec0d";
+  }
+  {prefix}--RotateRight::before {
+    content: "\ec0e";
+  }
+  {prefix}--SMS::before {
+    content: "\ec0f";
+  }
+  {prefix}--SMSKey::before {
+    content: "\ec10";
+  }
+  {prefix}--SMSLightning::before {
+    content: "\ec11";
+  }
+  {prefix}--SMSRefresh::before {
+    content: "\ec12";
+  }
+  {prefix}--Safari::before {
+    content: "\ec13";
+  }
+  {prefix}--Save::before {
+    content: "\ec14";
+  }
+  {prefix}--SaveAs::before {
+    content: "\ec15";
+  }
+  {prefix}--SaveTo::before {
+    content: "\ec16";
+  }
+  {prefix}--Scribble::before {
+    content: "\ec17";
+  }
+  {prefix}--Search::before {
+    content: "\ec18";
+  }
+  {prefix}--Seat::before {
+    content: "\ec19";
+  }
+  {prefix}--SeatAdd::before {
+    content: "\ec1a";
+  }
+  {prefix}--Select::before {
+    content: "\ec1b";
+  }
+  {prefix}--SelectAll::before {
+    content: "\ec1c";
+  }
+  {prefix}--SelectContainer::before {
+    content: "\ec1d";
+  }
+  {prefix}--SelectGear::before {
+    content: "\ec1e";
+  }
+  {prefix}--SendForSignature::before {
+    content: "\ec1f";
+  }
+  {prefix}--SentimentNegative::before {
+    content: "\ec20";
+  }
+  {prefix}--SentimentNeutral::before {
+    content: "\ec21";
+  }
+  {prefix}--SentimentPositive::before {
+    content: "\ec22";
+  }
+  {prefix}--Separator::before {
+    content: "\ec23";
+  }
+  {prefix}--Servers::before {
+    content: "\ec24";
+  }
+  {prefix}--Share::before {
+    content: "\ec25";
+  }
+  {prefix}--ShareCheck::before {
+    content: "\ec26";
+  }
+  {prefix}--Sharpen::before {
+    content: "\ec27";
+  }
+  {prefix}--Shield::before {
+    content: "\ec28";
+  }
+  {prefix}--ShoppingCart::before {
+    content: "\ec29";
+  }
+  {prefix}--Shuffle::before {
+    content: "\ec2a";
+  }
+  {prefix}--SinaWeibo::before {
+    content: "\ec2b";
+  }
+  {prefix}--Slow::before {
+    content: "\ec2c";
+  }
+  {prefix}--Spam::before {
+    content: "\ec2d";
+  }
+  {prefix}--Spellcheck::before {
+    content: "\ec2e";
+  }
+  {prefix}--Spin::before {
+    content: "\ec2f";
+  }
+  {prefix}--Stage::before {
+    content: "\ec30";
+  }
+  {prefix}--Stamp::before {
+    content: "\ec31";
+  }
+  {prefix}--StarFill::before {
+    content: "\ec32";
+  }
+  {prefix}--StarStroke::before {
+    content: "\ec33";
+  }
+  {prefix}--Starburst::before {
+    content: "\ec34";
+  }
+  {prefix}--Stop::before {
+    content: "\ec35";
+  }
+  {prefix}--StopCircle::before {
+    content: "\ec36";
+  }
+  {prefix}--Stopwatch::before {
+    content: "\ec37";
+  }
+  {prefix}--StrokeWidth::before {
+    content: "\ec38";
+  }
+  {prefix}--Subscribe::before {
+    content: "\ec39";
+  }
+  {prefix}--SuccessMetric::before {
+    content: "\ec3a";
+  }
+  {prefix}--Summarize::before {
+    content: "\ec3b";
+  }
+  {prefix}--Switch::before {
+    content: "\ec3c";
+  }
+  {prefix}--Sync::before {
+    content: "\ec3d";
+  }
+  {prefix}--SyncRemove::before {
+    content: "\ec3e";
+  }
+  {prefix}--Table::before {
+    content: "\ec3f";
+  }
+  {prefix}--TableAdd::before {
+    content: "\ec40";
+  }
+  {prefix}--TableAndChart::before {
+    content: "\ec41";
+  }
+  {prefix}--TableColumnAddLeft::before {
+    content: "\ec42";
+  }
+  {prefix}--TableColumnAddRight::before {
+    content: "\ec43";
+  }
+  {prefix}--TableColumnMerge::before {
+    content: "\ec44";
+  }
+  {prefix}--TableColumnRemoveCenter::before {
+    content: "\ec45";
+  }
+  {prefix}--TableColumnSplit::before {
+    content: "\ec46";
+  }
+  {prefix}--TableEdit::before {
+    content: "\ec47";
+  }
+  {prefix}--TableHistogram::before {
+    content: "\ec48";
+  }
+  {prefix}--TableMergeCells::before {
+    content: "\ec49";
+  }
+  {prefix}--TableRowAddBottom::before {
+    content: "\ec4a";
+  }
+  {prefix}--TableRowAddTop::before {
+    content: "\ec4b";
+  }
+  {prefix}--TableRowMerge::before {
+    content: "\ec4c";
+  }
+  {prefix}--TableRowRemoveCenter::before {
+    content: "\ec4d";
+  }
+  {prefix}--TableRowSplit::before {
+    content: "\ec4e";
+  }
+  {prefix}--TableSelectColumn::before {
+    content: "\ec4f";
+  }
+  {prefix}--TableSelectRow::before {
+    content: "\ec50";
+  }
+  {prefix}--Tableau::before {
+    content: "\ec51";
+  }
+  {prefix}--Tag::before {
+    content: "\ec52";
+  }
+  {prefix}--TagExclude::before {
+    content: "\ec53";
+  }
+  {prefix}--Tags::before {
+    content: "\ec54";
+  }
+  {prefix}--Target::before {
+    content: "\ec55";
+  }
+  {prefix}--Targeted::before {
+    content: "\ec56";
+  }
+  {prefix}--Teapot::before {
+    content: "\ec57";
+  }
+  {prefix}--TestAB::before {
+    content: "\ec58";
+  }
+  {prefix}--TestABEdit::before {
+    content: "\ec59";
+  }
+  {prefix}--TestABGear::before {
+    content: "\ec5a";
+  }
+  {prefix}--TestABRemove::before {
+    content: "\ec5b";
+  }
+  {prefix}--TestProfile::before {
+    content: "\ec5c";
+  }
+  {prefix}--Text::before {
+    content: "\ec5d";
+  }
+  {prefix}--TextAdd::before {
+    content: "\ec5e";
+  }
+  {prefix}--TextBold::before {
+    content: "\ec5f";
+  }
+  {prefix}--TextBulleted::before {
+    content: "\ec60";
+  }
+  {prefix}--TextBulletedAttach::before {
+    content: "\ec61";
+  }
+  {prefix}--TextBulletedHierarchy::before {
+    content: "\ec62";
+  }
+  {prefix}--TextBulletedHierarchyExclude::before {
+    content: "\ec63";
+  }
+  {prefix}--TextCenter::before {
+    content: "\ec64";
+  }
+  {prefix}--TextColor::before {
+    content: "\ec65";
+  }
+  {prefix}--TextDecrease::before {
+    content: "\ec66";
+  }
+  {prefix}--TextEdit::before {
+    content: "\ec67";
+  }
+  {prefix}--TextExclude::before {
+    content: "\ec68";
+  }
+  {prefix}--TextIncrease::before {
+    content: "\ec69";
+  }
+  {prefix}--TextIndentDecrease::before {
+    content: "\ec6a";
+  }
+  {prefix}--TextIndentIncrease::before {
+    content: "\ec6b";
+  }
+  {prefix}--TextItalic::before {
+    content: "\ec6c";
+  }
+  {prefix}--TextJustified::before {
+    content: "\ec6d";
+  }
+  {prefix}--TextKerning::before {
+    content: "\ec6e";
+  }
+  {prefix}--TextLeft::before {
+    content: "\ec6f";
+  }
+  {prefix}--TextLetteredLowercase::before {
+    content: "\ec70";
+  }
+  {prefix}--TextLetteredUppercase::before {
+    content: "\ec71";
+  }
+  {prefix}--TextNumbered::before {
+    content: "\ec72";
+  }
+  {prefix}--TextParagraph::before {
+    content: "\ec73";
+  }
+  {prefix}--TextRight::before {
+    content: "\ec74";
+  }
+  {prefix}--TextRomanLowercase::before {
+    content: "\ec75";
+  }
+  {prefix}--TextRomanUppercase::before {
+    content: "\ec76";
+  }
+  {prefix}--TextSize::before {
+    content: "\ec77";
+  }
+  {prefix}--TextSizeAdd::before {
+    content: "\ec78";
+  }
+  {prefix}--TextSpaceAfter::before {
+    content: "\ec79";
+  }
+  {prefix}--TextSpaceBefore::before {
+    content: "\ec7a";
+  }
+  {prefix}--TextStyle::before {
+    content: "\ec7c";
+  }
+  {prefix}--TextSubscript::before {
+    content: "\ec7b";
+  }
+  {prefix}--TextSuperscript::before {
+    content: "\ec7d";
+  }
+  {prefix}--TextUnderline::before {
+    content: "\ec7e";
+  }
+  {prefix}--ThumbDown::before {
+    content: "\ec7f";
+  }
+  {prefix}--ThumbUp::before {
+    content: "\ec80";
+  }
+  {prefix}--Transparency::before {
+    content: "\ec81";
+  }
+  {prefix}--Trap::before {
+    content: "\ec82";
+  }
+  {prefix}--TreeCollapse::before {
+    content: "\ec83";
+  }
+  {prefix}--TreeCollapseAll::before {
+    content: "\ec84";
+  }
+  {prefix}--TreeExpand::before {
+    content: "\ec85";
+  }
+  {prefix}--TreeExpandAll::before {
+    content: "\ec86";
+  }
+  {prefix}--TrendInspect::before {
+    content: "\ec87";
+  }
+  {prefix}--TriangleDown::before {
+    content: "\ec88";
+  }
+  {prefix}--TriangleRight::before {
+    content: "\ec89";
+  }
+  {prefix}--Trophy::before {
+    content: "\ec8a";
+  }
+  {prefix}--Tumblr::before {
+    content: "\ec8b";
+  }
+  {prefix}--Twitter::before {
+    content: "\ec8c";
+  }
+  {prefix}--Type::before {
+    content: "\ec8d";
+  }
+  {prefix}--USA::before {
+    content: "\ec8e";
+  }
+  {prefix}--Undo::before {
+    content: "\ec8f";
+  }
+  {prefix}--Ungroup::before {
+    content: "\ec90";
+  }
+  {prefix}--Unmerge::before {
+    content: "\ec91";
+  }
+  {prefix}--Upload::before {
+    content: "\ec92";
+  }
+  {prefix}--User::before {
+    content: "\ec93";
+  }
+  {prefix}--UserActivity::before {
+    content: "\ec94";
+  }
+  {prefix}--UserAdd::before {
+    content: "\ec95";
+  }
+  {prefix}--UserAdmin::before {
+    content: "\ec96";
+  }
+  {prefix}--UserArrow::before {
+    content: "\ec97";
+  }
+  {prefix}--UserEdit::before {
+    content: "\ec98";
+  }
+  {prefix}--UserExclude::before {
+    content: "\ec99";
+  }
+  {prefix}--UserLock::before {
+    content: "\ec9a";
+  }
+  {prefix}--UserShare::before {
+    content: "\ec9b";
+  }
+  {prefix}--Users::before {
+    content: "\ec9c";
+  }
+  {prefix}--UsersAdd::before {
+    content: "\ec9d";
+  }
+  {prefix}--UsersExclude::before {
+    content: "\ec9e";
+  }
+  {prefix}--UsersLock::before {
+    content: "\ec9f";
+  }
+  {prefix}--UsersShare::before {
+    content: "\eca0";
+  }
+  {prefix}--VK::before {
+    content: "\eca1";
+  }
+  {prefix}--ViewAllTags::before {
+    content: "\eca2";
+  }
+  {prefix}--ViewBiWeek::before {
+    content: "\eca3";
+  }
+  {prefix}--ViewCard::before {
+    content: "\eca4";
+  }
+  {prefix}--ViewColumn::before {
+    content: "\eca5";
+  }
+  {prefix}--ViewDay::before {
+    content: "\eca6";
+  }
+  {prefix}--ViewDetail::before {
+    content: "\eca7";
+  }
+  {prefix}--ViewGrid::before {
+    content: "\eca8";
+  }
+  {prefix}--ViewList::before {
+    content: "\eca9";
+  }
+  {prefix}--ViewOff::before {
+    content: "\ecaa";
+  }
+  {prefix}--ViewOn::before {
+    content: "\ecab";
+  }
+  {prefix}--ViewRow::before {
+    content: "\ecac";
+  }
+  {prefix}--ViewSingle::before {
+    content: "\ecad";
+  }
+  {prefix}--ViewStack::before {
+    content: "\ecae";
+  }
+  {prefix}--ViewWeek::before {
+    content: "\ecaf";
+  }
+  {prefix}--ViewedMarkAs::before {
+    content: "\ecb0";
+  }
+  {prefix}--Visit::before {
+    content: "\ecb1";
+  }
+  {prefix}--VisitShare::before {
+    content: "\ecb2";
+  }
+  {prefix}--VolumeMute::before {
+    content: "\ecb3";
+  }
+  {prefix}--VolumeOne::before {
+    content: "\ecb4";
+  }
+  {prefix}--VolumeThree::before {
+    content: "\ecb5";
+  }
+  {prefix}--VolumeTwo::before {
+    content: "\ecb6";
+  }
+  {prefix}--Wand::before {
+    content: "\ecb7";
+  }
+  {prefix}--Watch::before {
+    content: "\ecb8";
+  }
+  {prefix}--Windows7::before {
+    content: "\ecb9";
+  }
+  {prefix}--Windows8::before {
+    content: "\ecba";
+  }
+  {prefix}--Wordpress::before {
+    content: "\ecbb";
+  }
+  {prefix}--Workflow::before {
+    content: "\ecbc";
+  }
+  {prefix}--WorkflowAdd::before {
+    content: "\ecbd";
+  }
+  {prefix}--Wrench::before {
+    content: "\ecbe";
+  }
+  {prefix}--YouTube::before {
+    content: "\ecbf";
+  }
+  {prefix}--ZoomIn::before {
+    content: "\ecc0";
+  }
+  {prefix}--ZoomOut::before {
+    content: "\ecc1";
   }
 }
