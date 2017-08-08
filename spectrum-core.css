@@ -1,3 +1,9 @@
+/* For documentation beautification only - DO NOT COPY */
+
+.dummy-spacing {
+  height: 160px;
+}
+
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -1688,298 +1694,90 @@ markup: |
     }
 
 /* topdoc
-name: Dropdown - Default
-description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
+---
+name: Toast - Default
+description: The default toast.
 markup: |
-  <h4>Closed - default</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown" style="width: 185px;">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
+  <div class="spectrum-Toast">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton"></button>  
   </div>
-
-  <h4>Open - default</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown is-open" style="width: 185px;">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
-
-
-
-
 
 */
 
-.spectrum-Dropdown {
+.spectrum-Toast {
+  position: relative;
+  padding: 12px 18px;
+  line-height: 1.5rem;
+
   border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
   font-size: 0.875rem;
-  cursor: pointer;
-  display: inline-block;
 }
 
-.spectrum-Dropdown.is-disabled {
-    border-width: 0;
-  }
+.spectrum-Toast-typeIcon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
 
-.spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
-      border-width: 0;
-      cursor: default;
-    }
-
-/*
-    Todo: Determine if missing mixin is required?
-    spectrum-dropdown--open()
-    */
-
-.spectrum-Dropdown.is-open .spectrum-Dropdown-menu {
-      /*
-        Note: No position information included for this demo.
-        The implementation of Spectrum must calculate the fixed position of the dropdown relative to its trigger.
-      */
-      display: block;
-    }
-
-.spectrum-Dropdown.has-error .spectrum-Dropdown-open-icon::after {
-        /* make room for the alert icon */
-        right: 32px
-      }
-
-.spectrum-Dropdown.has-error .spectrum-Dropdown-error-icon {
-      display: inline;
-    }
-
-.spectrum-Dropdown.has-error .spectrum-Dropdown-trigger {
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-    }
-
-.spectrum-Dropdown.has-error .spectrum-Dropdown-trigger-label {
-      position: absolute;
-      left: 10px;
-    }
-
-.spectrum-Dropdown-trigger {
-  width: 100%;
-  height: 32px;
-  border-width: 0;
-  border-radius: 4px;
-  outline: none;
-  margin: 0;
-  cursor: pointer;
-  padding: 0 10px;
-  font-family: inherit;
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.spectrum-Dropdown-trigger--placeholder {
-  font-style: italic;
-}
-
-.spectrum-Dropdown-menu {
-  display: none;
-}
-
-.spectrum-Dropdown-options {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.spectrum-Dropdown-option {
-  position: relative;
-
-  padding: 0 10px;
-  height: 32px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.spectrum-Dropdown-option.is-selected::after {
-      position: absolute;
-      right: 10px;
-      top: 11px;
-
-      width: 12px;
-      height: 12px;
-
-      background-repeat: no-repeat;
-      background-size: 12px 12px;
-
-      transform: scale(1);
-      opacity: 1;
-
-      content: '';
-    }
-
-.spectrum-Dropdown-divider {
-  height: 1px;
-  width: calc(100% - 20px);
-  margin: 0;
-  margin-left: 10px;
-  border: none;
-}
-
-.spectrum-Dropdown-error-icon {
-  margin-left: 8px;
-  display: none;
-}
-
-.spectrum-Dropdown-open-icon {
-  position: relative;
   width: 18px;
   height: 18px;
-  margin-left: 4px;
+  vertical-align: -4px;
+  margin-right: 4px;
+
+  /* Support font icons */
+  font-size: 1.125rem;
+
+  /* Support SVG icons */
+  background-size: contain;
 }
 
-/* to create a gap between label and icon in quiet mode */
+.spectrum-Toast-content {
+  display: block;
 
-.spectrum-Dropdown-open-icon::after {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 12px;
-    height: 8px;
+  padding-right: 32px;
+}
 
-    background-repeat: no-repeat;
-    background-position: center;
-    /* background-size: var(--spectrum-dropdown-chevron-icon-width) var(--spectrum-dropdown-chevron-icon-height); */
-
-    transform: scale(1);
-    opacity: 1;
-
-    content: '';
+.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
+    padding-left: 24px;
   }
 
-/* topdoc
-name: Dropdown - Quiet
-description: A Spectrum 'default' dropdown (which is also the default style). If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
-markup: |
+.spectrum-Toast-closeButton {
+  position: absolute;
+  right: 8px;
+  top: 8px;
 
-  <h4>Closed - Quiet</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
+  width: 32px;
+  height: 32px;
 
-  <h4>Open - Quiet</h4>
-  <div id="default-dropdown" class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-    <button id="spectrum-Dropdown-trigger" class="spectrum-Dropdown-trigger spectrum-Dropdown-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-      <span class="spectrum-Dropdown-open-icon"></span>
-      <span class="spectrum-Dropdown-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <div class="spectrum-Dropdown-menu">
-      <hr class="spectrum-Dropdown-divider">
-      <ul class="spectrum-Dropdown-options" role="menu" aria-labelledby="spectrum-Dropdown-trigger" tabindex="0">
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">Tanzania</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Arab Emirates</li>
-        <li class="spectrum-Dropdown-option" role="menuitem" tabindex="-1">United Kingdom</li>
-        <li class="spectrum-Dropdown-option is-selected" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
-    </div>
-  </div>
-
-*/
-
-.spectrum-Dropdown--quiet {
   border: none;
+  border-radius: 18px;
+
+  background-color: transparent;
+
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:white' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
+
+  background-size: 8px;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  transition: background-color 150ms ease-in-out;
+
+  cursor: pointer;
 }
 
-.spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
-    padding: 0;
-    margin: 0;
-
-    border-width: 0 0 2px 0;
-    border-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
-
-    -ms-flex-pack: start;
-
-        justify-content: flex-start;
+.spectrum-Toast-closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
-.spectrum-Dropdown--quiet .spectrum-Dropdown-option {
-    padding-right: 32px;
+.spectrum-Toast-closeButton:active {
+    background-color: rgba(255, 255, 255, 0.15);
   }
 
-.spectrum-Dropdown--quiet.is-open {
-    box-shadow: none;
+.spectrum-Toast-closeButton:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }
-
-.spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-menu {
-      border-radius: 4px;
-    }
-
-.spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-divider {
-      display: none;
-    }
-
-.spectrum-Dropdown--quiet.has-error .spectrum-Dropdown-trigger-label {
-      position: static;
-    }
-
-/*
-.spectrum-Dropdown-trigger--focus {
-  spectrum-dropdown-trigger--focus()
-}
-
-.spectrum-Dropdown-option--focus {
-  spectrum-dropdown-option--focus()
-}
-
-.spectrum-Dropdown--quiet {
-  .spectrum-Dropdown-trigger--focus {
-    spectrum-dropdown-trigger--quiet--focus()
-  }
-}
-*/
 
 /* topdoc
 ---
@@ -2290,7 +2088,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
   border-style: solid;
 
   /* Transition the border for focus animations */
-  transition: border 150ms ease-in-out;
+  transition: border 125ms ease-in-out;
 }
 
 .spectrum-Slider-handle:focus {
@@ -2426,7 +2224,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
     cursor: grab;
 
     /* Why? */
-    transition: all 150ms ease-in-out;
+    transition: all 125ms ease-in-out;
 
     box-sizing: border-box;
     outline: none;
@@ -2492,7 +2290,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
       height: 2px;
       border-radius: 1px;
       transform: translateY(-50%);
-      transition: background-color 150ms ease-in-out;
+      transition: background-color 125ms ease-in-out;
     }
 
 .spectrum-Slider.is-disabled {
@@ -3327,13 +3125,14 @@ markup: |
   }
 
 .spectrum-Flyout {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  white-space: nowrap;
 
   box-sizing: border-box;
 
   list-style-type: none;
-  padding: 0;
+  padding: 3px 0;
   margin: 0;
 
   min-width: 192px;
@@ -3385,96 +3184,174 @@ markup: |
 
 .spectrum-Flyout-divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 8px auto;
   padding: 0 0;
   border: none;
+  width: 90%;
 }
 
 /* topdoc
----
-name: Toast - Default
-description: The default toast.
+name: Select - Default
+description: A Spectrum 'default' dropdown with a flyout. If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
 markup: |
-  <div class="spectrum-Toast">
-    <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>  
+  <h4>Closed - Default</h4>
+  <div class="spectrum-Select" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
   </div>
 
+  <h4>Open - Default</h4>
+  <div class="spectrum-Select is-open" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
 */
 
-.spectrum-Toast {
+.spectrum-Select {
   position: relative;
-  padding: 12px 18px;
-  line-height: 1.5rem;
-
+  box-sizing: border-box;
+  transition: border-color 150ms;
   border-radius: 4px;
   font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.spectrum-Toast-typeIcon {
-  position: absolute;
-  left: 15px;
-  top: 15px;
+.spectrum-Select .spectrum-Flyout {
+    opacity: 0;
+    pointer-events: none;
+    margin-top:2px;
+    transition: opacity 150ms, transform 150ms;
+  }
 
+.spectrum-Select.is-disabled {
+    border-width: 0;
+  }
+
+.spectrum-Select.is-disabled .spectrum-Select-trigger {
+      border-width: 0;
+      cursor: default;
+    }
+
+.spectrum-Select.is-open {
+    transition: border-color 150ms;
+  }
+
+.spectrum-Select.is-open .spectrum-Select-trigger {
+      transition: background-color 150ms;
+      border: 1px solid;
+    }
+
+.spectrum-Select.is-open .spectrum-Flyout {
+      opacity: 1;
+      transform: translateY(4px); /*needed for the proper spectrum transition*/
+      pointer-events: all;
+      position: absolute;
+    }
+
+.spectrum-Select-trigger {
+  width: 100%;
+  font-style: italic;
+  height: 32px;
+  border: 1px solid;
+  border-radius: 4px;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: inherit;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  transition: background-color 150ms;
+}
+
+.spectrum-Select-open-icon {
+  position: relative;
   width: 18px;
   height: 18px;
-  vertical-align: -4px;
-  margin-right: 4px;
-
-  /* Support font icons */
-  font-size: 1.125rem;
-
-  /* Support SVG icons */
-  background-size: contain;
+  margin-left: 4px; /* to create a gap between label and icon in quiet mode */
+  margin-right: 8px;
 }
 
-.spectrum-Toast-content {
-  display: block;
+/* to create a gap between icons */
 
-  padding-right: 32px;
-}
-
-.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
-    padding-left: 24px;
+.spectrum-Select-open-icon::after {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    content: '';
   }
 
-.spectrum-Toast-closeButton {
-  position: absolute;
-  right: 8px;
-  top: 8px;
+/* topdoc
+name: Select - Quiet
+description: Default dropdown with labels
+markup: |
+  <h4>Closed - Quiet</h4>
+  <div class="spectrum-Select spectrum-Select--quiet" style="width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
 
-  width: 32px;
-  height: 32px;
+  <h4>Open - Quiet</h4>
+  <div class="spectrum-Select spectrum-Select--quiet is-open" style=" width: 192px;">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
+      <span class="spectrum-Select-trigger-label">Select a Country</span>
+      <span class="spectrum-Select-open-icon"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+    </button>
+    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+  <div class="dummy-spacing"></div>
 
-  border: none;
-  border-radius: 18px;
-
-  background-color: transparent;
-
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:white' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
-
-  background-size: 8px;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  transition: background-color 150ms ease-in-out;
-
-  cursor: pointer;
-}
-
-.spectrum-Toast-closeButton:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-.spectrum-Toast-closeButton:active {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-
-.spectrum-Toast-closeButton:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 1);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
-  }
+*/
 
 .spectrum-Popover {
   position: relative;
@@ -3826,6 +3703,9 @@ markup: |
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
+
+  <div class="dummy-spacing"></div>
+
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
@@ -3835,6 +3715,8 @@ markup: |
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
+
+  <div class="dummy-spacing"></div>
 */
 
 .spectrum-ActionMenu {

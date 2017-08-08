@@ -4,28 +4,16 @@
   height: 160px;
 }
 
-.spectrum-Fieldlabel--left {
-	font-size: 0.75rem;
-	display: inline-block;
-	margin-right: 2px;
-}
-
-.spectrum-Fieldlabel--top {
-	font-size: 0.75rem;
-	display: block;
-	margin-bottom: 2px;
-}
-
 /* topdoc
 name: Select - Default
 description: A Spectrum 'default' dropdown with a flyout. If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
 markup: |
   <h4>Closed - Default</h4>
   <div class="spectrum-Select" style="width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
       <span class="spectrum-Select-trigger-label">Select a Country</span>
       <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
     </button>
     <ul class="spectrum-Flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -38,10 +26,10 @@ markup: |
 
   <h4>Open - Default</h4>
   <div class="spectrum-Select is-open" style="width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
       <span class="spectrum-Select-trigger-label">Select a Country</span>
       <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
     </button>
     <ul class="spectrum-Flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -58,7 +46,7 @@ markup: |
 .spectrum-Select {
   position: relative;
   box-sizing: border-box;
-  transition: border-color 125ms ease-in-out;
+  transition: border-color 150ms;
   border-radius: 4px;
   font-size: 0.875rem;
   cursor: pointer;
@@ -69,7 +57,7 @@ markup: |
     opacity: 0;
     pointer-events: none;
     margin-top:2px;
-    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+    transition: opacity 150ms, transform 150ms;
   }
 
 .spectrum-Select.is-disabled {
@@ -82,42 +70,24 @@ markup: |
     }
 
 .spectrum-Select.is-open {
-    transition: border-color 125ms ease-in-out;
+    transition: border-color 150ms;
   }
 
 .spectrum-Select.is-open .spectrum-Select-trigger {
-      transition: background-color 125ms ease-in-out;
+      transition: background-color 150ms;
       border: 1px solid;
     }
 
 .spectrum-Select.is-open .spectrum-Flyout {
       opacity: 1;
-      transform: translateY(4px);
+      transform: translateY(4px); /*needed for the proper spectrum transition*/
       pointer-events: all;
       position: absolute;
     }
 
-.spectrum-Select.has-error .spectrum-Select-open-icon::after {
-        /* make room for the alert icon */
-        right: 32px
-      }
-
-.spectrum-Select.has-error .spectrum-Select-error-icon {
-      display: inline;
-    }
-
-.spectrum-Select.has-error .spectrum-Select-trigger {
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-    }
-
-.spectrum-Select.has-error .spectrum-Select-trigger-label {
-      position: absolute;
-      left: 10px;
-    }
-
 .spectrum-Select-trigger {
   width: 100%;
+  font-style: italic;
   height: 32px;
   border: 1px solid;
   border-radius: 4px;
@@ -133,60 +103,18 @@ markup: |
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  transition: background-color 125ms ease-in-out;
-}
-
-.spectrum-Select-trigger--placeholder {
-  font-style: italic;
-}
-
-.spectrum-Select-options {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.spectrum-Select-option {
-  position: relative;
-
-  padding: 0 10px;
-  height: 32px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-}
-
-.spectrum-Select-option.is-selected::after {
-      position: absolute;
-      right: 10px;
-      top: 11px;
-
-      width: 12px;
-      height: 12px;
-
-      background-repeat: no-repeat;
-      background-size: 12px 12px;
-
-      transform: scale(1);
-      opacity: 1;
-
-      content: '';
-    }
-
-.spectrum-Select-error-icon {
-  margin-left: 8px;
-  display: none;
+  transition: background-color 150ms;
 }
 
 .spectrum-Select-open-icon {
   position: relative;
   width: 18px;
   height: 18px;
-  margin-left: 4px;
+  margin-left: 4px; /* to create a gap between label and icon in quiet mode */
+  margin-right: 8px;
 }
 
-/* to create a gap between label and icon in quiet mode */
+/* to create a gap between icons */
 
 .spectrum-Select-open-icon::after {
     position: absolute;
@@ -194,54 +122,11 @@ markup: |
     left: 6px;
     width: 12px;
     height: 8px;
-
     background-repeat: no-repeat;
     background-position: center;
-
-    transform: scale(1);
     opacity: 1;
-
     content: '';
   }
-
-/* topdoc
-name: Select - With Label
-description: A Spectrum 'quiet' dropdown. If you are using in a web form, this should proxy to hidden <select> element for form serialization purposes.
-markup: |
-  <h4>Closed - Top Label</h4>
-  <div class="spectrum-Fieldlabel--top">Field Label</div>
-  <div class="spectrum-Select" style="width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Select-trigger-label">Select a Country</span>
-      <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-
-  <h4>Closed - Left Label</h4>
-  <div class="spectrum-Fieldlabel--left">Field Label</div>
-  <div class="spectrum-Select" style="width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
-      <span class="spectrum-Select-trigger-label">Select a Country</span>
-      <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-    </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-*/
 
 /* topdoc
 name: Select - Quiet
@@ -249,10 +134,10 @@ description: Default dropdown with labels
 markup: |
   <h4>Closed - Quiet</h4>
   <div class="spectrum-Select spectrum-Select--quiet" style="width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
       <span class="spectrum-Select-trigger-label">Select a Country</span>
       <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
     </button>
     <ul class="spectrum-Flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -265,10 +150,10 @@ markup: |
 
   <h4>Open - Quiet</h4>
   <div class="spectrum-Select spectrum-Select--quiet is-open" style=" width: 192px;">
-    <button class="spectrum-Select-trigger spectrum-Select-trigger--placeholder" aria-haspopup="true">
+    <button class="spectrum-Select-trigger" aria-haspopup="true">
       <span class="spectrum-Select-trigger-label">Select a Country</span>
       <span class="spectrum-Select-open-icon"></span>
-      <span class="spectrum-Select-error-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+      <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
     </button>
     <ul class="spectrum-Flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -281,11 +166,3 @@ markup: |
   <div class="dummy-spacing"></div>
 
 */
-
-.spectrum-Select--quiet .spectrum-Select-option {
-    padding-right: 32px;
-  }
-
-.spectrum-Select--quiet.has-error .spectrum-Select-trigger-label {
-      position: static;
-    }
