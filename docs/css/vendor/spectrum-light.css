@@ -1914,6 +1914,9 @@ Because of this contain, clicks will never fall though when a dialog is visible
   font-size: 1.125rem;
   font-weight: 700;
 
+  /* Get correct height on the heading */
+  margin: -4px 0 0 0;
+
   /* Truncate text when it's too long to fit */
   box-sizing: border-box;
   width: 100%;
