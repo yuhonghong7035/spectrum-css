@@ -1915,10 +1915,12 @@ Because of this contain, clicks will never fall though when a dialog is visible
   font-weight: 700;
   line-height: 100%;
 
-  overflow: visible;
-
-  padding-left: 0;
-  padding-right: 15px;
+  /* Truncate text when it's too long to fit */
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   margin: 0 !important; /* Undo margin from heading rules */
 
@@ -1936,6 +1938,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
     width: 18px;
     height: 18px;
     background-size: contain;
+  }
+
+.spectrum-Dialog-typeIcon + .spectrum-Dialog-title {
+    /* Give more room for the icon when the title is long */
+    padding-right: 22px;
   }
 
 .spectrum-Dialog-closeButton {
@@ -3401,13 +3408,12 @@ markup: |
 /* topdoc
 ---
 name: Popover - Default - Left Placement
-description: A Spectrum 'default' popover with left placement
+description: A Spectrum 'default' popover with left placement. Note that the icon is not present, so the text is able to fill the full width of the title.
 markup: |
   <div class="spectrum-Popover spectrum-Popover--left is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
-        <div class="spectrum-Dialog-title">Popover Title</div>
+        <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     </div>
@@ -3437,7 +3443,6 @@ markup: |
   <div class="spectrum-Popover spectrum-Popover--right is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <div class="spectrum-Dialog-title">Popover Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
@@ -3475,7 +3480,6 @@ markup: |
   <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <div class="spectrum-Dialog-title">Popover Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
@@ -3506,7 +3510,6 @@ markup: |
   <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--default is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <div class="spectrum-Dialog-title">Popover Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
@@ -3770,8 +3773,8 @@ description: >-
   Field label for use with form inputs.
 markup: |
   <label for="lifestory" class="spectrum-FieldLabel">Life Story *</label>
-  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" required>
-  </textarea>
+
+  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 
 */
 
@@ -3785,6 +3788,24 @@ markup: |
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
+}
+
+/* topdoc
+---
+name: Field Label - Left
+description: >-
+  Field label for use with form inputs; left variation.
+markup: |
+  <div>
+    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
+    <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+  </div>
+
+*/
+
+.spectrum-FieldLabel--left {
+  display: inline-block;
+  margin-right: 8px;
 }
 
 /* topdoc

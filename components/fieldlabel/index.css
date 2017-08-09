@@ -11,8 +11,8 @@ description: >-
   Field label for use with form inputs.
 markup: |
   <label for="lifestory" class="spectrum-FieldLabel">Life Story *</label>
-  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline" required>
-  </textarea>
+
+  <textarea id="lifestory" placeholder="Enter your life story" name="field" value="" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 
 */
 
@@ -26,4 +26,22 @@ markup: |
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
+}
+
+/* topdoc
+---
+name: Field Label - Left
+description: >-
+  Field label for use with form inputs; left variation.
+markup: |
+  <div>
+    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
+    <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+  </div>
+
+*/
+
+.spectrum-FieldLabel--left {
+  display: inline-block;
+  margin-right: 8px;
 }

@@ -2483,13 +2483,13 @@ markup: |
 /* topdoc
 ---
 name: Popover - Info/Help
-description: A Spectrum 'info/help' popover
+description: A Spectrum 'info/help' popover. When the icon element is present (preceeding the title element), padding will be added so text doesn't overlap the icon.
 markup: |
   <div class="spectrum-Popover spectrum-Dialog--help is-open" style="max-width:320px">
     <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
         <div class="spectrum-Dialog-typeIcon"></div>
-        <div class="spectrum-Dialog-title">Info / Help Popover</div>
+        <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
       </div>
       <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
       <div class="spectrum-Dialog-footer">
@@ -2602,7 +2602,7 @@ markup: |
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%2873%2C 73%2C 73%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");
     }
 .spectrum--darkest .spectrum-Accordion-item {
-  border-color: rgb(45, 45, 45); /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
+  border-color: rgb(45, 45, 45);
 }
 .spectrum--darkest .spectrum-Accordion-header {
   color: rgb(133, 133, 133);
@@ -2615,7 +2615,6 @@ markup: |
     color: rgb(226, 226, 226);
     background-color: rgb(38, 38, 38);
   }
-/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
 .spectrum--darkest .spectrum-Accordion-header:focus::before, .spectrum--darkest .spectrum-Accordion-header:hover::before {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath style='fill:rgb%28180%2C 180%2C 180%29' d='M6%2C5a.99422.99422%2C0%2C0%2C0-.29272-.70561L1.71586.30456A.99781.99781%2C0%2C0%2C0%2C.28015%2C1.69066l.02453.02452L3.59071%2C5%2C.30468%2C8.28483A.9978.9978%2C0%2C1%2C0%2C1.69135%2C9.72l.02451-.0245L5.70728%2C5.70561A.99412.99412%2C0%2C0%2C0%2C6%2C5Z'/%3E%3C/svg%3E");
     }
@@ -2629,7 +2628,6 @@ markup: |
       background-color: transparent;
     }
 .spectrum--darkest .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header::before {
-      /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath style='fill:rgb%2860%2C 60%2C 60%29' d='M6%2C5a.99422.99422%2C0%2C0%2C0-.29272-.70561L1.71586.30456A.99781.99781%2C0%2C0%2C0%2C.28015%2C1.69066l.02453.02452L3.59071%2C5%2C.30468%2C8.28483A.9978.9978%2C0%2C1%2C0%2C1.69135%2C9.72l.02451-.0245L5.70728%2C5.70561A.99412.99412%2C0%2C0%2C0%2C6%2C5Z'/%3E%3C/svg%3E");
     }
 .spectrum--darkest .spectrum-ActionMenu-button::before {
