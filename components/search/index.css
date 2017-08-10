@@ -59,6 +59,10 @@ markup: |
   right: 0;
   top: 0;
 }
+.spectrum-Search-input {
+  /* Don't let long strings overlap the close icon */
+  padding-right: 28px;
+}
 /* Since quiet button has no right padding, push the icon all the way to the right */
 .spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
       right: 0;

@@ -21,7 +21,10 @@ markup: |
 }
 .spectrum-DecoratedTextfield-input {
   display: block;
-  text-indent: 36px;
+
+  /* Use padding instead of text-indent so long strings don't overlap the icon */
+  padding-left: 36px;
+  text-indent: 0;
 }
 /* topdoc
 ---
@@ -40,6 +43,9 @@ markup: |
 
 
 */
+.spectrum-DecoratedTextfield-input.spectrum-Textfield--quiet {
+    padding-left: 32px;
+  }
 /* Since quiet button has no left padding, push the icon all the way to the left */
 .spectrum-DecoratedTextfield-input.spectrum-Textfield--quiet ~ .spectrum-DecoratedTextfield-icon {
       left: 0;
