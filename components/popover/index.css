@@ -16,7 +16,11 @@
   opacity: 0;
   left: 0px;
   top: 0px;
+
+  outline: none;
 }
+
+/* Hide focus outline */
 
 .spectrum-Popover.is-open {
     visibility: visible;

@@ -19,7 +19,10 @@
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  text-indent: 12px;
+
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  padding-left: 12px;
+  text-indent: 0;
 
   transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 
