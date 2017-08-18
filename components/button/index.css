@@ -30,10 +30,10 @@
   /* Adjacent buttons should be aligned correctly */
   vertical-align: top;
 
-  transition: background 150ms ease-out,
-              border-color 150ms ease-out,
-              color 150ms ease-out,
-              box-shadow 150ms ease-out;
+  transition: background 125ms ease-out,
+              border-color 125ms ease-out,
+              color 125ms ease-out,
+              box-shadow 125ms ease-out;
 
   cursor: pointer;
 }

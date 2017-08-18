@@ -24,7 +24,7 @@
   padding-left: 12px;
   text-indent: 0;
 
-  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
   outline: none;
 
@@ -39,19 +39,19 @@
 .spectrum-Textfield::-webkit-input-placeholder {
     font-weight: normal;
     font-style: italic;
-    transition: color 150ms ease-in-out;
+    transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield:-ms-input-placeholder {
     font-weight: normal;
     font-style: italic;
-    transition: color 150ms ease-in-out;
+    transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield::placeholder {
     font-weight: normal;
     font-style: italic;
-    transition: color 150ms ease-in-out;
+    transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield:hover::-webkit-input-placeholder {

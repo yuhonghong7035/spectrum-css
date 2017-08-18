@@ -15,7 +15,7 @@ markup: |
 
 .spectrum-Link {
   text-decoration: none;
-  transition: color 150ms ease-in-out;
+  transition: color 125ms ease-in-out;
   outline: none;
 }
 

@@ -167,10 +167,13 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#toggle-switch---onoff---disabled">Toggle Switch - On/Off - Disabled</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#select---default">Select - Default</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dropdown---default">Dropdown - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#select---quiet">Select - Quiet</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dropdown---quiet">Dropdown - Quiet</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dropdown---invalid">Dropdown - Invalid</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#popover---default---left-placement">Popover - Default - Left Placement</a></div>
@@ -2081,25 +2084,28 @@ is-open&quot;&gt;
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#select---default">
-            <header class="row" id="select---default">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dropdown---default">
+            <header class="row" id="dropdown---default">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Select - Default</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dropdown - Default</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>A Spectrum 'default' dropdown with a flyout. If you are using in a web form, this should proxy to hidden &lt;select&gt; element for form serialization purposes.</p>
+              <p>A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><h4>Closed - Default</h4>
-<div class="spectrum-Select" style="width: 192px;">
-  <button class="spectrum-Select-trigger" aria-haspopup="true">
-    <span class="spectrum-Select-trigger-label">Select a Country</span>
-    <span class="spectrum-Select-open-icon"></span>
-    <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+              <div class="box"><h4>Closed</h4>
+<div class="spectrum-Dropdown" style="width: 195px;">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
   </button>
   <ul class="spectrum-Flyout" role="menu" tabindex="0">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -2110,12 +2116,15 @@ is-open&quot;&gt;
   </ul>
 </div>
 
-<h4>Open - Default</h4>
-<div class="spectrum-Select is-open" style="width: 192px;">
-  <button class="spectrum-Select-trigger" aria-haspopup="true">
-    <span class="spectrum-Select-trigger-label">Select a Country</span>
-    <span class="spectrum-Select-open-icon"></span>
-    <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+<h4>Open</h4>
+<div class="spectrum-Dropdown is-open" style="width: 195px;">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
   </button>
   <ul class="spectrum-Flyout" role="menu" tabindex="0">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -2135,12 +2144,15 @@ is-open&quot;&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;h4&gt;Closed - Default&lt;/h4&gt;
-&lt;div class=&quot;spectrum-Select&quot; style=&quot;width: 192px;&quot;&gt;
-  &lt;button class=&quot;spectrum-Select-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
-    &lt;span class=&quot;spectrum-Select-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-open-icon&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;h4&gt;Closed&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown&quot; style=&quot;width: 195px;&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
     &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
@@ -2151,12 +2163,15 @@ is-open&quot;&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;h4&gt;Open - Default&lt;/h4&gt;
-&lt;div class=&quot;spectrum-Select is-open&quot; style=&quot;width: 192px;&quot;&gt;
-  &lt;button class=&quot;spectrum-Select-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
-    &lt;span class=&quot;spectrum-Select-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-open-icon&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+&lt;h4&gt;Open&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown is-open&quot; style=&quot;width: 195px;&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
     &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
@@ -2173,25 +2188,28 @@ is-open&quot;&gt;
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#select---quiet">
-            <header class="row" id="select---quiet">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dropdown---quiet">
+            <header class="row" id="dropdown---quiet">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Select - Quiet</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dropdown - Quiet</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>Default dropdown with labels</p>
+              <p>A Spectrum 'quiet' dropdown.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><h4>Closed - Quiet</h4>
-<div class="spectrum-Select spectrum-Select--quiet" style="width: 192px;">
-  <button class="spectrum-Select-trigger" aria-haspopup="true">
-    <span class="spectrum-Select-trigger-label">Select a Country</span>
-    <span class="spectrum-Select-open-icon"></span>
-    <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+              <div class="box"><h4>Closed</h4>
+<div class="spectrum-Dropdown spectrum-Dropdown--quiet">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
   </button>
   <ul class="spectrum-Flyout" role="menu" tabindex="0">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -2202,12 +2220,15 @@ is-open&quot;&gt;
   </ul>
 </div>
 
-<h4>Open - Quiet</h4>
-<div class="spectrum-Select spectrum-Select--quiet is-open" style=" width: 192px;">
-  <button class="spectrum-Select-trigger" aria-haspopup="true">
-    <span class="spectrum-Select-trigger-label">Select a Country</span>
-    <span class="spectrum-Select-open-icon"></span>
-    <span class="spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+<h4>Open</h4>
+<div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
   </button>
   <ul class="spectrum-Flyout" role="menu" tabindex="0">
     <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
@@ -2226,12 +2247,15 @@ is-open&quot;&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;h4&gt;Closed - Quiet&lt;/h4&gt;
-&lt;div class=&quot;spectrum-Select spectrum-Select--quiet&quot; style=&quot;width: 192px;&quot;&gt;
-  &lt;button class=&quot;spectrum-Select-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
-    &lt;span class=&quot;spectrum-Select-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-open-icon&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;h4&gt;Closed&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown spectrum-Dropdown--quiet&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
     &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
@@ -2242,12 +2266,15 @@ is-open&quot;&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;h4&gt;Open - Quiet&lt;/h4&gt;
-&lt;div class=&quot;spectrum-Select spectrum-Select--quiet is-open&quot; style=&quot; width: 192px;&quot;&gt;
-  &lt;button class=&quot;spectrum-Select-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
-    &lt;span class=&quot;spectrum-Select-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-open-icon&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;spectrum-Select-invalid-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+&lt;h4&gt;Open&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown spectrum-Dropdown--quiet is-open&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
     &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
@@ -2257,6 +2284,198 @@ is-open&quot;&gt;
     &lt;li class=&quot;spectrum-Flyout-option is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;United States of America&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div class=&quot;dummy-spacing&quot;&gt;&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dropdown---invalid">
+            <header class="row" id="dropdown---invalid">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dropdown - Invalid</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>A Spectrum 'invalid' dropdown element. This is also a good example of how to use a custom icon.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><h4>Closed</h4>
+<div class="spectrum-Dropdown is-invalid">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
+  </button>
+  <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+    <hr class="spectrum-Flyout-divider">
+    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+  </ul>
+</div>
+
+<h4>Open</h4>
+<div class="spectrum-Dropdown is-open is-invalid">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
+  </button>
+  <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+    <hr class="spectrum-Flyout-divider">
+    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+  </ul>
+</div>
+
+<div class="dummy-spacing"></div>
+
+  <h4>Closed</h4>
+<div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
+  </button>
+  <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+    <hr class="spectrum-Flyout-divider">
+    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+  </ul>
+</div>
+
+<h4>Open</h4>
+<div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open is-invalid">
+  <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-trigger-container">
+      <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+      <span class="spectrum-Dropdown-icon-container">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+        <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+      </span>
+    </span>
+  </button>
+  <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+    <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+    <hr class="spectrum-Flyout-divider">
+    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+  </ul>
+</div>
+
+<div class="dummy-spacing"></div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;h4&gt;Closed&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown is-invalid&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Fremont&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Greenwood&lt;/li&gt;
+    &lt;hr class=&quot;spectrum-Flyout-divider&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;United States of America&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Open&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown is-open is-invalid&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Fremont&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Greenwood&lt;/li&gt;
+    &lt;hr class=&quot;spectrum-Flyout-divider&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;United States of America&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dummy-spacing&quot;&gt;&lt;/div&gt;
+
+  &lt;h4&gt;Closed&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown spectrum-Dropdown--quiet is-invalid&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Fremont&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Greenwood&lt;/li&gt;
+    &lt;hr class=&quot;spectrum-Flyout-divider&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;United States of America&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Open&lt;/h4&gt;
+&lt;div class=&quot;spectrum-Dropdown spectrum-Dropdown--quiet is-open is-invalid&quot;&gt;
+  &lt;button class=&quot;spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Select a Country&lt;/span&gt;
+      &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class=&quot;spectrum-Flyout&quot; role=&quot;menu&quot; tabindex=&quot;0&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Ballard&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Fremont&lt;/li&gt;
+    &lt;li class=&quot;spectrum-Flyout-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Greenwood&lt;/li&gt;
+    &lt;hr class=&quot;spectrum-Flyout-divider&quot;&gt;
+    &lt;li class=&quot;spectrum-Flyout-option is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;United States of America&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;dummy-spacing&quot;&gt;&lt;/div&gt;
 </code></pre>
               </div>

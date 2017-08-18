@@ -48,7 +48,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
   overflow-y: auto;
 
   /* Match the fade time of the backdrop */
-  transition: opacity 150ms;
+  transition: opacity 125ms;
 
   opacity: 0;
 

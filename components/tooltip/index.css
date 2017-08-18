@@ -9,7 +9,7 @@
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: left 150ms ease-in-out, opacity 150ms ease-in-out, top 150ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
   display: inline-block;
   position: relative;
   width: auto;
@@ -24,6 +24,7 @@
 .spectrum-Tooltip.is-open {
     opacity: 1;
     visibility: visible;
+    transition-delay: 0ms;
   }
 
 .spectrum-Tooltip .spectrum-Link {
@@ -168,34 +169,44 @@ markup: |
 .u-tooltip-showOnHover .spectrum-Tooltip {
     /* Required for animations to work */
     visibility: visible;
-  }
-
-.u-tooltip-showOnHover .spectrum-Tooltip--top {
-    transform: translate(-50%, 8px);
+    transition: transform 125ms ease-in-out;
     top: -100%;
-    left: 50%;
-
-    /* this moves the tooltip up, above the hovered component. this should be calculated by JS */
-    margin-top: -26px;
   }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--right,
+  .u-tooltip-showOnHover .spectrum-Tooltip--left {
+    top:50%;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--right .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+      top: 50%;
+      margin-top: -4px;
+    }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--right {
     transform: translate(-8px, -50%);
-    top: 50%;
-    left: 100%;
   }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--left {
     transform: translate(calc(-100% + 8px), -50%);
-    top: 50%;
-    left: 0;
   }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--bottom,
+  .u-tooltip-showOnHover .spectrum-Tooltip--top {
+    left:50%;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+      left: 50%;
+      margin-left: -4px;
+    }
 
 .u-tooltip-showOnHover .spectrum-Tooltip--bottom {
     transform: translate(-50%, -8px);
-    bottom: -100%;
-    left: 50%;
-    margin-bottom: -28px;
+  }
+
+.u-tooltip-showOnHover .spectrum-Tooltip--top {
+    transform: translate(-50%, 8px);
   }
 
 .u-tooltip-showOnHover:hover .spectrum-Tooltip {

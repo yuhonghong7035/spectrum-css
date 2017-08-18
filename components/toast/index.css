@@ -71,7 +71,7 @@ markup: |
   background-position: center center;
   background-repeat: no-repeat;
 
-  transition: background-color 150ms ease-in-out;
+  transition: background-color 125ms ease-in-out;
 
   cursor: pointer;
 }

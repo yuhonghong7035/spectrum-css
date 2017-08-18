@@ -2267,56 +2267,79 @@ markup: |
 .spectrum--lightest .spectrum-Flyout-divider {
   background-color: rgb(244, 244, 244);
 }
-.spectrum--lightest .spectrum-Select:hover {
-    border-color: rgb(211, 211, 211);
-  }
-.spectrum--lightest .spectrum-Select.is-open .spectrum-Select-trigger {
+.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
       background-color: rgb(244, 244, 244);
       border-color: rgb(211, 211, 211);
     }
-.spectrum--lightest .spectrum-Select.is-invalid .spectrum-Select-trigger {
+.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus {
+        box-shadow: none;
+      }
+.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
+          box-shadow: none;
+        }
+.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Icon {
+      color: rgb(236, 91, 98);
+    }
+.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger {
       border-color: rgb(236, 91, 98);
     }
-.spectrum--lightest .spectrum-Select.is-disabled .spectrum-Select-open-icon::after {
+.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger:focus {
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
+      }
+.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-open-icon::after {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
       }
-.spectrum--lightest .spectrum-Select.is-disabled .spectrum-Select-trigger {
+.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
       background-color: rgb(244, 244, 244);
       color: rgb(188, 188, 188);
     }
-.spectrum--lightest .spectrum-Select-trigger {
+.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus {
+        box-shadow: none;
+      }
+.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
+          box-shadow: none;
+        }
+.spectrum--lightest .spectrum-Dropdown-trigger {
   color: rgb(80, 80, 80);
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
 }
-.spectrum--lightest .spectrum-Select-trigger:hover {
+.spectrum--lightest .spectrum-Dropdown-trigger:hover {
     color: rgb(50, 50, 50);
     background-color: rgb(255, 255, 255);
+    border-color: rgb(211, 211, 211);
   }
-.spectrum--lightest .spectrum-Select-trigger:focus {
+.spectrum--lightest .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2850%2C 50%2C 50%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-Dropdown-trigger:focus {
     box-shadow: 0 0 0 2px rgb(55, 142, 240);
   }
-.spectrum--lightest .spectrum-Select-invalid-icon {
-  color: rgb(236, 91, 98);
+.spectrum--lightest .spectrum-Dropdown-open-icon::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
 }
-.spectrum--lightest .spectrum-Select-open-icon::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
+.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
+    border-color: transparent !important;
+    background-color: transparent !important;
   }
-.spectrum--lightest .spectrum-Select--quiet .spectrum-Select-trigger {
-    border-color: transparent;
-    background: transparent;
-  }
-.spectrum--lightest .spectrum-Select--quiet .spectrum-Select-trigger:focus {
-      border-color: rgb(55, 142, 240);
+.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus {
       box-shadow: none;
     }
-.spectrum--lightest .spectrum-Select--quiet.is-disabled .spectrum-Select-trigger {
-      background-color: transparent;
+.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
+        box-shadow: 0 2px 0 0 rgb(55, 142, 240);
+      }
+.spectrum--lightest .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus {
+    box-shadow: none;
+  }
+.spectrum--lightest .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
+      box-shadow: 0 2px 0 0 rgb(236, 91, 98);
     }
-.spectrum--lightest .spectrum-Select--quiet.is-open .spectrum-Select-trigger {
-      border-color: transparent;
-      background: transparent;
+.spectrum--lightest .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus, .spectrum--lightest .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus {
+      box-shadow: none;
     }
+.spectrum--lightest .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container, .spectrum--lightest .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
+        box-shadow: none;
+      }
 .spectrum--lightest .spectrum-Toast {
   background-color: rgb(112, 112, 112);
   color: rgb(255, 255, 255);

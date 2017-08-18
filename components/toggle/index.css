@@ -108,7 +108,7 @@ markup: |
 /* ::before is used for the track of the switch */
 
 .spectrum-ToggleSwitch-content::before {
-    transition: background 150ms ease-in-out, border 150ms ease-in-out;
+    transition: background 125ms ease-in-out, border 125ms ease-in-out;
 
     height: 14px;
 
@@ -121,7 +121,7 @@ markup: |
 /* ::after is used for the handle of the switch */
 
 .spectrum-ToggleSwitch-content::after {
-    transition: background 150ms ease-in-out, border 150ms ease-in-out, transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    transition: background 125ms ease-in-out, border 125ms ease-in-out, transform 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
     width: 14px;
     height: 14px;

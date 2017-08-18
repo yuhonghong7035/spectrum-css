@@ -11,7 +11,7 @@
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
-  transition: left 150ms ease-in-out, opacity 150ms ease-in-out, top 150ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
   visibility: hidden;
   opacity: 0;
   left: 0px;
@@ -25,6 +25,7 @@
 .spectrum-Popover.is-open {
     visibility: visible;
     opacity: 1;
+    transition-delay: 0ms;
   }
 
 .spectrum-Popover .spectrum-Dialog-wrapper {

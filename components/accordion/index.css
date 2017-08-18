@@ -90,7 +90,7 @@ markup: |
     left: 16px;
     top: 15px;
 
-    transition: transform ease 150ms;
+    transition: transform ease 125ms;
   }
 
 .spectrum-Accordion-content {
