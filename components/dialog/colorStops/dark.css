@@ -2,6 +2,32 @@
 :root {
   /* Icon Button*/
 }
+/* topdoc
+---
+name: Dialog - Modal
+description: The Spectrum 'modal' dialog
+markup: |
+  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Modal Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--centered" id="defaultModalDialog">
+    <div class="spectrum-Dialog-wrapper">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        This Dialog is centered.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
+      </div>
+    </div>
+  </div>
+
+
+*/
+.spectrum-Dialog--modal {
+  background: rgba(0, 0, 0, 0.6);
+}
 .spectrum-Dialog-wrapper {
   background: rgb(45, 45, 45);
 }
@@ -27,19 +53,18 @@
 name: Dialog - Success
 description: A Spectrum 'success' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Success Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Success Dialog</h2>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. </p>
-        <p>This dialog is not centered. </p>
+        This is a success dialog.
       </div>
       <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
       </div>
     </div>
   </div>
@@ -54,21 +79,20 @@ markup:
 /* topdoc
 ---
 name: Dialog - Info
-description: A Spectrum 'info' dialog
+description: The Spectrum 'info' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. </p>
-        <p>This dialog is not centered. </p>
+        This is an info dialog.
       </div>
       <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
       </div>
     </div>
   </div>
@@ -86,18 +110,18 @@ markup:
 name: Dialog - Warning
 description: A Spectrum 'warning' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Warning Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. This Dialog is not centered.</p>
+        This is a warning dialog.
       </div>
       <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
       </div>
     </div>
   </div>
@@ -113,20 +137,20 @@ markup:
 /* topdoc
 ---
 name: Dialog - Error
-description: A Spectrum 'error' dialog
+description: The Spectrum 'error' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Error Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog">
-    <div class="spectrum-Dialog-wrapper" style="width:400px;">
+    <div class="spectrum-Dialog-wrapper">
       <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-typeIcon"></div>
         <h2 class="spectrum-Dialog-title">Error Dialog</h2>
+        <div class="spectrum-Dialog-typeIcon"></div>
       </div>
       <div class="spectrum-Dialog-content">
-        <p>This dialog was created from markup. This Dialog is not centered.</p>
+        This is an error dialog.
       </div>
       <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
       </div>
     </div>
   </div>
@@ -139,29 +163,3 @@ markup:
     color: rgb(236, 91, 98);
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28236%2C 91%2C 98%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
   }
-/* topdoc
----
-name: Dialog - Modal
-description: A Spectrum 'modal' dialog
-markup: |
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <p>This Dialog is not centered.</p>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
-        <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
-      </div>
-    </div>
-  </div>
-
-
-*/
-.spectrum-Dialog--modal {
-  background: rgba(0, 0, 0, 0.6);
-}

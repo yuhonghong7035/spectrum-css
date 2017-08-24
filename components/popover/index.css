@@ -29,9 +29,8 @@
   }
 
 .spectrum-Popover .spectrum-Dialog-wrapper {
-    margin: 0;
     min-width: 270px;
-    padding-bottom: 20px;
+    padding: 30px;
   }
 
 .spectrum-Popover-tip {
@@ -76,7 +75,7 @@ markup: |
 }
 
 .spectrum-Popover--left.is-open {
-    left:  -4px;
+    left: -4px;
   }
 
 .spectrum-Popover--left .spectrum-Popover-tip {

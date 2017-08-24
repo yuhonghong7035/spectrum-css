@@ -137,6 +137,12 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---default">Dialog - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---fullscreen">Dialog - Fullscreen</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---fullscreen-takeover">Dialog - Fullscreen Takeover</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tablist---horizontal---label">TabList - Horizontal - Label</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
@@ -317,6 +323,9 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tooltip---success">Tooltip - Success</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---modal">Dialog - Modal</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---success">Dialog - Success</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
@@ -327,9 +336,6 @@
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---error">Dialog - Error</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#dialog---modal">Dialog - Modal</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#slider---default">Slider - Default</a></div>
@@ -1352,23 +1358,23 @@ is-open&quot;&gt;
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>A Spectrum 'default' dialog (which is also the default style)</p>
+              <p>The Spectrum Dialog.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultDialog').classList.add('is-open')">Open Dialog - Default</button>
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Dialog</button>
 <div class="spectrum-Dialog" id="defaultDialog">
-  <div class="spectrum-Dialog-wrapper" style="width: 400px;">
+  <div class="spectrum-Dialog-wrapper">
     <div class="spectrum-Dialog-header">
       <h2 class="spectrum-Dialog-title">Default Dialog</h2>
     </div>
     <div class="spectrum-Dialog-content">
-      <p>This Dialog is not centered.</p>
+      This is a dialog.
     </div>
     <div class="spectrum-Dialog-footer">
-      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Cancel</button>
-      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultDialog').classList.remove('is-open')">Ok</button>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
     </div>
   </div>
 </div>
@@ -1380,18 +1386,130 @@ is-open&quot;&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.add('is-open')&quot;&gt;Open Dialog - Default&lt;/button&gt;
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Dialog&lt;/button&gt;
 &lt;div class=&quot;spectrum-Dialog&quot; id=&quot;defaultDialog&quot;&gt;
-  &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width: 400px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
     &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
       &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Default Dialog&lt;/h2&gt;
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
-      &lt;p&gt;This Dialog is not centered.&lt;/p&gt;
+      This is a dialog.
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
-      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
-      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot; onclick=&quot;document.getElementById('defaultDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dialog---fullscreen">
+            <header class="row" id="dialog---fullscreen">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Fullscreen</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum 'fullscreen' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('fullscreenDialog').classList.add('is-open')">Open Fullscreen Dialog</button>
+<div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--fullscreen" id="fullscreenDialog">
+  <div class="spectrum-Dialog-wrapper">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('fullscreenDialog').classList.add('is-open')&quot;&gt;Open Fullscreen Dialog&lt;/button&gt;
+&lt;div class=&quot;spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--fullscreen&quot; id=&quot;fullscreenDialog&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
+    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
+      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Default Dialog - Fullscreen&lt;/h2&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
+      This is a fullscreen dialog.
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dialog---fullscreen-takeover">
+            <header class="row" id="dialog---fullscreen-takeover">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Fullscreen Takeover</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum 'fullscreen takeover' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Fullscreen Takeover</button>
+<div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" id="fullscreenTakeoverDialog">
+  <div class="spectrum-Dialog-wrapper">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen takeover dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Fullscreen Takeover&lt;/button&gt;
+&lt;div class=&quot;spectrum-Dialog spectrum-Dialog--fullscreenTakeover&quot; id=&quot;fullscreenTakeoverDialog&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
+    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
+      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Fullscreen Takeover&lt;/h2&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
+      This is a fullscreen takeover dialog.
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1475,7 +1593,7 @@ is-open&quot;&gt;
             <div class="col-xs-offset-1 col-xs">
               <div class="box"><div class="spectrum-TabList spectrum-TabList--horizontal">
   <div class="spectrum-Tab is-selected">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
     <label class="spectrum-Tab-label">With a Label</label>
   </div>
   <div class="spectrum-Tab">
@@ -1498,7 +1616,7 @@ is-open&quot;&gt;
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TabList spectrum-TabList--horizontal&quot;&gt;
   &lt;div class=&quot;spectrum-Tab is-selected&quot;&gt;
-    &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon&quot;&gt;&lt;/div&gt;
     &lt;label class=&quot;spectrum-Tab-label&quot;&gt;With a Label&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;spectrum-Tab&quot;&gt;
@@ -1591,7 +1709,7 @@ is-open&quot;&gt;
             <div class="col-xs-offset-1 col-xs">
               <div class="box"><div class="spectrum-TabList spectrum-TabList--vertical">
   <div class="spectrum-Tab is-selected">
-    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+    <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
     <label class="spectrum-Tab-label">With a Label</label>
   </div>
   <div class="spectrum-Tab">
@@ -1614,7 +1732,7 @@ is-open&quot;&gt;
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TabList spectrum-TabList--vertical&quot;&gt;
   &lt;div class=&quot;spectrum-Tab is-selected&quot;&gt;
-    &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon&quot;&gt;&lt;/div&gt;
     &lt;label class=&quot;spectrum-Tab-label&quot;&gt;With a Label&lt;/label&gt;
   &lt;/div&gt;
   &lt;div class=&quot;spectrum-Tab&quot;&gt;
@@ -4436,6 +4554,62 @@ disabled&gt;Button&lt;/button&gt;
             </div>
           </section>
         </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dialog---modal">
+            <header class="row" id="dialog---modal">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Modal</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum 'modal' dialog</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Modal Dialog</button>
+<div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--centered" id="defaultModalDialog">
+  <div class="spectrum-Dialog-wrapper">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This Dialog is centered.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
+    </div>
+  </div>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Modal Dialog&lt;/button&gt;
+&lt;div class=&quot;spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--centered&quot; id=&quot;defaultModalDialog&quot;&gt;
+  &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
+    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
+      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Default Dialog - Modal&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
+      This Dialog is centered.
+    &lt;/div&gt;
+    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--secondary&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Save&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
         <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dialog---success">
             <header class="row" id="dialog---success">
               <div class="col-xs">
@@ -4449,7 +4623,7 @@ disabled&gt;Button&lt;/button&gt;
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('successDialog').classList.add('is-open')">Open Dialog - Success</button> <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Dialog-typeIcon"></div> <h2 class="spectrum-Dialog-title">Success Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. </p> <p>This dialog is not centered. </p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('successDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Success Dialog</button> <div class="spectrum-Dialog spectrum-Dialog--success" id="successDialog"> <div class="spectrum-Dialog-wrapper"> <div class="spectrum-Dialog-header"> <h2 class="spectrum-Dialog-title">Success Dialog</h2> <div class="spectrum-Dialog-typeIcon"></div> </div> <div class="spectrum-Dialog-content"> This is a success dialog. </div> <div class="spectrum-Dialog-footer"> <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
             </div>
           </section>
           <section class="sdldocs-component-example col-xs-12">
@@ -4457,7 +4631,7 @@ disabled&gt;Button&lt;/button&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('successDialog').classList.add('is-open')&quot;&gt;Open Dialog - Success&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--success&quot; id=&quot;successDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Success Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. &lt;/p&gt; &lt;p&gt;This dialog is not centered. &lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('successDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Success Dialog&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--success&quot; id=&quot;successDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Success Dialog&lt;/h2&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; This is a success dialog. &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
               </div>
             </div>
           </section>
@@ -4470,12 +4644,12 @@ disabled&gt;Button&lt;/button&gt;
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>A Spectrum 'info' dialog</p>
+              <p>The Spectrum 'info' dialog</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('infoDialog').classList.add('is-open')">Open Dialog - Info</button> <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Dialog-typeIcon"></div> <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. </p> <p>This dialog is not centered. </p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('infoDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button> <div class="spectrum-Dialog spectrum-Dialog--info" id="infoDialog"> <div class="spectrum-Dialog-wrapper"> <div class="spectrum-Dialog-header"> <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2> <div class="spectrum-Dialog-typeIcon"></div> </div> <div class="spectrum-Dialog-content"> This is an info dialog. </div> <div class="spectrum-Dialog-footer"> <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
             </div>
           </section>
           <section class="sdldocs-component-example col-xs-12">
@@ -4483,7 +4657,7 @@ disabled&gt;Button&lt;/button&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('infoDialog').classList.add('is-open')&quot;&gt;Open Dialog - Info&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--info&quot; id=&quot;infoDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Info / Help Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. &lt;/p&gt; &lt;p&gt;This dialog is not centered. &lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('infoDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Info Dialog&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--info&quot; id=&quot;infoDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Info / Help Dialog&lt;/h2&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; This is an info dialog. &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
               </div>
             </div>
           </section>
@@ -4501,7 +4675,7 @@ disabled&gt;Button&lt;/button&gt;
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('warningDialog').classList.add('is-open')">Open Dialog - Warning</button> <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Dialog-typeIcon"></div> <h2 class="spectrum-Dialog-title">Warning Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. This Dialog is not centered.</p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('warningDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Warning Dialog</button> <div class="spectrum-Dialog spectrum-Dialog--warning" id="warningDialog"> <div class="spectrum-Dialog-wrapper"> <div class="spectrum-Dialog-header"> <h2 class="spectrum-Dialog-title">Warning Dialog</h2> <div class="spectrum-Dialog-typeIcon"></div> </div> <div class="spectrum-Dialog-content"> This is a warning dialog. </div> <div class="spectrum-Dialog-footer"> <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
             </div>
           </section>
           <section class="sdldocs-component-example col-xs-12">
@@ -4509,7 +4683,7 @@ disabled&gt;Button&lt;/button&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('warningDialog').classList.add('is-open')&quot;&gt;Open Dialog - Warning&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--warning&quot; id=&quot;warningDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Warning Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. This Dialog is not centered.&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('warningDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Warning Dialog&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--warning&quot; id=&quot;warningDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Warning Dialog&lt;/h2&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; This is a warning dialog. &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
               </div>
             </div>
           </section>
@@ -4522,12 +4696,12 @@ disabled&gt;Button&lt;/button&gt;
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
-              <p>A Spectrum 'error' dialog</p>
+              <p>The Spectrum 'error' dialog</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('errorDialog').classList.add('is-open')">Open Dialog - Error</button> <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog"> <div class="spectrum-Dialog-wrapper" style="width:400px;"> <div class="spectrum-Dialog-header"> <div class="spectrum-Dialog-typeIcon"></div> <h2 class="spectrum-Dialog-title">Error Dialog</h2> </div> <div class="spectrum-Dialog-content"> <p>This dialog was created from markup. This Dialog is not centered.</p> </div> <div class="spectrum-Dialog-footer"> <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('errorDialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
+              <div class="box"><button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Error Dialog</button> <div class="spectrum-Dialog spectrum-Dialog--error" id="errorDialog"> <div class="spectrum-Dialog-wrapper"> <div class="spectrum-Dialog-header"> <h2 class="spectrum-Dialog-title">Error Dialog</h2> <div class="spectrum-Dialog-typeIcon"></div> </div> <div class="spectrum-Dialog-content"> This is an error dialog. </div> <div class="spectrum-Dialog-footer"> <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button> </div> </div> </div></div>
             </div>
           </section>
           <section class="sdldocs-component-example col-xs-12">
@@ -4535,63 +4709,7 @@ disabled&gt;Button&lt;/button&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('errorDialog').classList.add('is-open')&quot;&gt;Open Dialog - Error&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--error&quot; id=&quot;errorDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width:400px;&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Error Dialog&lt;/h2&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; &lt;p&gt;This dialog was created from markup. This Dialog is not centered.&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('errorDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#dialog---modal">
-            <header class="row" id="dialog---modal">
-              <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Dialog - Modal</h2>
-              </div>
-            </header></a>
-          <section class="sdldocs-component-description row">
-            <div class="col-xs">
-              <p>A Spectrum 'modal' dialog</p>
-            </div>
-          </section>
-          <section class="sdldocs-component-markup row">
-            <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('defaultModalDialog').classList.add('is-open')">Open Dialog - Modal</button>
-<div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-  <div class="spectrum-Dialog-wrapper" style="width: 400px;">
-    <div class="spectrum-Dialog-header">
-      <h2 class="spectrum-Dialog-title">Default Dialog - Modal</h2>
-    </div>
-    <div class="spectrum-Dialog-content">
-      <p>This Dialog is not centered.</p>
-    </div>
-    <div class="spectrum-Dialog-footer">
-      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--secondary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Cancel</button>
-      <button variant="primary" class="spectrum-Button spectrum-Button--quiet--primary" onclick="document.getElementById('defaultModalDialog').classList.remove('is-open')">Ok</button>
-    </div>
-  </div>
-</div>
-</div>
-            </div>
-          </section>
-          <section class="sdldocs-component-example col-xs-12">
-            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
-            <div class="row">
-              <div class="sdldocs-code-example box">
-                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.add('is-open')&quot;&gt;Open Dialog - Modal&lt;/button&gt;
-&lt;div class=&quot;spectrum-Dialog spectrum-Dialog--modal&quot; id=&quot;defaultModalDialog&quot;&gt;
-  &lt;div class=&quot;spectrum-Dialog-wrapper&quot; style=&quot;width: 400px;&quot;&gt;
-    &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
-      &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Default Dialog - Modal&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;
-      &lt;p&gt;This Dialog is not centered.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
-      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--secondary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.remove('is-open')&quot;&gt;Cancel&lt;/button&gt;
-      &lt;button variant=&quot;primary&quot; class=&quot;spectrum-Button spectrum-Button--quiet--primary&quot; onclick=&quot;document.getElementById('defaultModalDialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--primary&quot; onclick=&quot;this.nextElementSibling.classList.add('is-open')&quot;&gt;Open Error Dialog&lt;/button&gt; &lt;div class=&quot;spectrum-Dialog spectrum-Dialog--error&quot; id=&quot;errorDialog&quot;&gt; &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt; &lt;div class=&quot;spectrum-Dialog-header&quot;&gt; &lt;h2 class=&quot;spectrum-Dialog-title&quot;&gt;Error Dialog&lt;/h2&gt; &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-content&quot;&gt; This is an error dialog. &lt;/div&gt; &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt; &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot; onclick=&quot;this.closest('.spectrum-Dialog').classList.remove('is-open')&quot;&gt;Ok&lt;/button&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;</code></pre>
               </div>
             </div>
           </section>
@@ -5706,8 +5824,8 @@ disabled&gt;Button&lt;/button&gt;
               <div class="box"><div class="spectrum-Popover spectrum-Dialog--help is-open" style="max-width:320px">
   <div class="spectrum-Dialog-wrapper">
     <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-typeIcon"></div>
       <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
     </div>
     <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Dialog-footer">
@@ -5732,8 +5850,8 @@ disabled&gt;Button&lt;/button&gt;
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Popover spectrum-Dialog--help is-open&quot; style=&quot;max-width:320px&quot;&gt;
   &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
     &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
-      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;spectrum-Dialog-title&quot;&gt;Info / Help Popover With a Long Title&lt;/div&gt;
+      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah&lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
@@ -5768,8 +5886,8 @@ disabled&gt;Button&lt;/button&gt;
               <div class="box"><div class="spectrum-Popover spectrum-Dialog--success is-open" style="max-width:320px">
   <div class="spectrum-Dialog-wrapper">
     <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-typeIcon"></div>
       <div class="spectrum-Dialog-title">Success Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
     </div>
     <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Dialog-footer">
@@ -5794,8 +5912,8 @@ disabled&gt;Button&lt;/button&gt;
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Popover spectrum-Dialog--success is-open&quot; style=&quot;max-width:320px&quot;&gt;
   &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
     &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
-      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;spectrum-Dialog-title&quot;&gt;Success Popover&lt;/div&gt;
+      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah&lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
@@ -5830,8 +5948,8 @@ disabled&gt;Button&lt;/button&gt;
               <div class="box"><div class="spectrum-Popover spectrum-Dialog--error is-open" style="max-width:320px">
   <div class="spectrum-Dialog-wrapper">
     <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-typeIcon"></div>
       <div class="spectrum-Dialog-title">Error Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
     </div>
     <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Dialog-footer">
@@ -5856,8 +5974,8 @@ disabled&gt;Button&lt;/button&gt;
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Popover spectrum-Dialog--error is-open&quot; style=&quot;max-width:320px&quot;&gt;
   &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
     &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
-      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;spectrum-Dialog-title&quot;&gt;Error Popover&lt;/div&gt;
+      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah&lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;
@@ -5892,8 +6010,8 @@ disabled&gt;Button&lt;/button&gt;
               <div class="box"><div class="spectrum-Popover spectrum-Dialog--warning is-open" style="max-width:320px">
   <div class="spectrum-Dialog-wrapper">
     <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-typeIcon"></div>
       <div class="spectrum-Dialog-title">Warning Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
     </div>
     <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Dialog-footer">
@@ -5918,8 +6036,8 @@ disabled&gt;Button&lt;/button&gt;
                 <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Popover spectrum-Dialog--warning is-open&quot; style=&quot;max-width:320px&quot;&gt;
   &lt;div class=&quot;spectrum-Dialog-wrapper&quot;&gt;
     &lt;div class=&quot;spectrum-Dialog-header&quot;&gt;
-      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;spectrum-Dialog-title&quot;&gt;Warning Popover&lt;/div&gt;
+      &lt;div class=&quot;spectrum-Dialog-typeIcon&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-content&quot;&gt;Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah&lt;/div&gt;
     &lt;div class=&quot;spectrum-Dialog-footer&quot;&gt;

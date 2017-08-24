@@ -17,7 +17,6 @@
   border-radius: 16px;
 
   height: 32px;
-  margin-right: 12px;
   padding: 0 14px 1px; /* 1px to push up text, sits kind of low */
 
   font-family: inherit;
@@ -69,6 +68,12 @@
     margin-left: 8px;
   }
 
+/* Space out buttons when placed next to eachother */
+
+.spectrum-Button + .spectrum-Button {
+    margin-left: 12px;
+  }
+
 .spectrum-Button--action {
   font-size: 0.875rem;
   font-weight: 400;
@@ -114,6 +119,9 @@
 
 .spectrum-Button--icon {
   position: relative;
+
+  /* Contain child elements with z-index */
+  z-index: 0;
 
   box-sizing: border-box;
 

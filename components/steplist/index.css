@@ -58,6 +58,10 @@ markup: |
 */
 
 .spectrum-Steplist {
+  /* Contain child elements with positive z-index */
+  z-index: 0;
+  position: relative;
+
   display: block;
   vertical-align: top;
   margin: 0;

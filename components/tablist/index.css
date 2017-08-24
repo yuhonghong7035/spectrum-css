@@ -10,7 +10,6 @@
 
 .spectrum-TabList {
   position: relative;
-  z-index: 1;
 
   margin: 0;
   padding: 0;
@@ -93,7 +92,7 @@
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal">
       <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
         <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
@@ -194,7 +193,7 @@
   markup: |
     <div class="spectrum-TabList spectrum-TabList--vertical">
       <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--FlashOn spectrum-Tab-icon"></div>
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
         <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab">
