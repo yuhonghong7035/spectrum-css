@@ -68,7 +68,7 @@ markup: |
     transition: opacity 125ms, transform 125ms;
     min-width: 100%;
     max-height: 280px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
 .spectrum-Dropdown.is-disabled {

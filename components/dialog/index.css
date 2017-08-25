@@ -58,8 +58,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
 }
 
 .spectrum-Dialog.is-open {
-  /* Size according to content */
-  display: inline-block;
+  display: block;
 
   opacity: 1;
 }
@@ -141,7 +140,8 @@ Because of this contain, clicks will never fall though when a dialog is visible
     }
 
 .spectrum-Dialog-wrapper {
-  display: block;
+  /* Size according to content */
+  display: inline-block;
 
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
@@ -152,6 +152,11 @@ Because of this contain, clicks will never fall though when a dialog is visible
 
   border-radius: 4px;
   outline: none; /* Firefox shows outline */
+
+  /* Horizontal centering */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .spectrum-Dialog-title {
@@ -195,9 +200,10 @@ Because of this contain, clicks will never fall though when a dialog is visible
   }
 
 .spectrum-Dialog--centered .spectrum-Dialog-wrapper {
+    /* Vertical centering */
+    position: absolute;
     left: 50%;
     top: 50%;
-    position: absolute;
     transform: translate(-50%, -50%);
   }
 
@@ -215,9 +221,109 @@ markup: |
         <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
       </div>
       <div class="spectrum-Dialog-content">
-        This is a fullscreen dialog.
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
+        This is a fullscreen dialog.<br>
       </div>
       <div class="spectrum-Dialog-footer">
+        Anything in the footer is sticky and aligned right.
       </div>
     </div>
   </div>
@@ -270,9 +376,134 @@ markup: |
         <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
       </div>
       <div class="spectrum-Dialog-content">
-        This is a fullscreen takeover dialog.
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
+        This is a fullscreen takeover dialog.<br>
       </div>
       <div class="spectrum-Dialog-footer">
+        Anything in the footer is sticky and aligned right.
       </div>
     </div>
   </div>
