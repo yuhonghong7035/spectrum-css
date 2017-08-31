@@ -1,0 +1,73 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum--dark .spectrum-Calendar-prevMonth::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Cpath style='fill:rgb%28153%2C 153%2C 153%29' d='M.5%2C7.99871a1.24041%2C1.24041%2C0%2C0%2C0%2C.3856.89671l-.0028.003%2C7%2C6.74783.0025-.0031a1.2457%2C1.2457%2C0%2C1%2C0%2C1.7459-1.77732l-.0165-.01591.003-.0031L3.55%2C7.99871%2C9.6177%2C2.15l-.0027-.0027A1.24569%2C1.24569%2C0%2C1%2C0%2C7.89626.34371L7.885.35457%2C7.8823.35187%2C7.8666.367l-.0009.0008L.8828%2C7.099l.0027.0029A1.24041%2C1.24041%2C0%2C0%2C0%2C.5%2C7.99871Z'/%3E%3C/svg%3E");
+}
+.spectrum--dark .spectrum-Calendar-nextMonth::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Cpath style='fill:rgb%28153%2C 153%2C 153%29' d='M11.5%2C8.00129a1.24041%2C1.24041%2C0%2C0%2C0-.3856-.89671l.0028-.003-7-6.74783-.0025.0031A1.2457%2C1.2457%2C0%2C1%2C0%2C2.3688%2C2.13416l.0165.01591-.003.0031L8.45%2C8.00129%2C2.3823%2C13.85l.0027.0027a1.24569%2C1.24569%2C0%2C1%2C0%2C1.71874%2C1.80358l.01126-.01086.0027.0027.0157-.01509.0009-.0008L11.1172%2C8.901l-.0027-.0029A1.24041%2C1.24041%2C0%2C0%2C0%2C11.5%2C8.00129Z'/%3E%3C/svg%3E");
+}
+.spectrum--dark .spectrum-Calendar-dayOfWeek {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Calendar-date {
+  color: rgb(205, 205, 205);
+  background: transparent;
+}
+.spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection) {
+    color: rgb(205, 205, 205);
+    background: rgb(57, 57, 57);
+  }
+.spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection):active,
+    .spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection).is-selected {
+      color: white;
+      background: rgb(75, 156, 245);
+    }
+.spectrum--dark .spectrum-Calendar-date:active,
+  .spectrum--dark .spectrum-Calendar-date.is-selected {
+    color: white;
+    background: rgb(55, 142, 240);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-today {
+    color: white;
+    background: rgb(205, 205, 205);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-today:hover {
+      color: white;
+      background: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-today:hover:active,
+      .spectrum--dark .spectrum-Calendar-date.is-today:hover.is-selected {
+        color: white;
+        background: rgb(75, 156, 245);
+        border-color: rgb(75, 156, 245);
+      }
+.spectrum--dark .spectrum-Calendar-date.is-today:active,
+    .spectrum--dark .spectrum-Calendar-date.is-today.is-selected {
+      color: white;
+      background: rgb(55, 142, 240);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-today.is-disabled {
+      color: rgb(92, 92, 92);
+      background: rgb(57, 57, 57);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection) {
+    background: rgb(62, 62, 62);
+    border-color: rgb(38, 128, 235);
+    color: rgb(205, 205, 205);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-today {
+      background: rgb(255, 255, 255);
+      border-color: rgb(38, 128, 235);
+      color: white;
+    }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection):active,
+    .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-selected {
+      color: white;
+      background: rgb(55, 142, 240);
+      border-color: rgb(55, 142, 240);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-disabled {
+    color: rgb(92, 92, 92);
+  }
