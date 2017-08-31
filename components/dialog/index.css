@@ -3,7 +3,11 @@
 
   opacity: 0;
 
-  transition: opacity 125ms, visibility 0ms linear 125ms;
+  transition: transform 125ms ease-in-out,
+              opacity 125ms ease-in-out,
+              visibility 0ms linear;
+
+  pointer-events: none;
 }
 
 .spectrum-Dialog.is-open {
@@ -12,6 +16,8 @@
   opacity: 1;
 
   transition-delay: 0ms;
+
+  pointer-events: auto;
 }
 
 /* topdoc
@@ -49,29 +55,27 @@ markup: |
   top: 50%;
   transform: translate(-50%, calc(-50% + 8px));
 
-  /* Appear above overlay */
+  /* Appear above underlay */
   z-index: 2;
 
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
 
-  max-height: calc(100% - 64px);
   min-width: 320px;
 
   padding: 40px;
   padding-top: 48px;
 
   border-radius: 4px;
-  outline: none; /* Firefox shows outline */
-
-  transition: transform 125ms ease-in;
+  outline: none;
 }
+
+/* Firefox shows outline */
 
 .spectrum-Dialog.is-open {
 
-  transform: translate(-50%, -50%);
-  transition-timing-function: ease-out;
-}
+    transform: translate(-50%, -50%);
+  }
 
 .spectrum-Dialog-header {
   display: -ms-flexbox;
@@ -314,8 +318,8 @@ markup: |
 }
 
 .spectrum-Dialog--fullscreen.is-open {
-  transform: translate(0, 0);
-}
+    transform: translate(0, 0);
+  }
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
@@ -480,10 +484,19 @@ markup: |
 */
 
 .spectrum-Dialog--fullscreenTakeover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
   box-sizing: border-box;
-  width: 100%; /* Fit vertically */
-  height: 100%; /* Variable height */
 
   /* Remove the border since we've taken over */
   border: none;
 }
+
+.spectrum-Dialog--fullscreenTakeover,
+  .spectrum-Dialog--fullscreenTakeover.is-open {
+    transform: none;
+  }

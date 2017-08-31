@@ -1264,27 +1264,55 @@ markup: |
   overflow-y: hidden;
 }
 
-.spectrum-Tooltip {
-  position: relative;
-  pointer-events: none;
-  opacity: 0;
+.spectrum-Tooltip,
+.spectrum-Underlay,
+.spectrum-Dialog,
+.spectrum-Flyout,
+.spectrum-Popover {
   visibility: hidden;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
-  display: inline-block;
-  position: relative;
-  width: auto;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  left: 0px;
-  top: 0px;
+
+  opacity: 0;
+
+  transition: transform 125ms ease-in-out,
+              opacity 125ms ease-in-out,
+              visibility 0ms linear;
+
+  pointer-events: none;
 }
 
-.spectrum-Tooltip.is-open {
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0ms;
+.spectrum-Tooltip.is-open,
+.spectrum-Underlay.is-open,
+.spectrum-Dialog.is-open,
+.spectrum-Flyout.is-open,
+.spectrum-Popover.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+
+  pointer-events: auto;
+}
+
+.spectrum-Tooltip {
+
+  position: relative;
+  left: 0px;
+  top: 0px;
+
+  display: inline-block;
+
+  width: auto;
+  padding: 2px 8px;
+
+  border-radius: 4px;
+
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+.spectrum-Tooltip, .spectrum-Tooltip.is-open {
+    pointer-events: none;
   }
 
 .spectrum-Tooltip .spectrum-Link {
@@ -1800,24 +1828,6 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }
 
-.spectrum-Underlay,
-.spectrum-Dialog {
-  visibility: hidden;
-
-  opacity: 0;
-
-  transition: opacity 125ms, visibility 0ms linear 125ms;
-}
-
-.spectrum-Underlay.is-open,
-.spectrum-Dialog.is-open {
-  visibility: visible;
-
-  opacity: 1;
-
-  transition-delay: 0ms;
-}
-
 .spectrum-Underlay {
 
   position: fixed;
@@ -1867,29 +1877,27 @@ markup: |
   top: 50%;
   transform: translate(-50%, calc(-50% + 8px));
 
-  /* Appear above overlay */
+  /* Appear above underlay */
   z-index: 2;
 
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
 
-  max-height: calc(100% - 64px);
   min-width: 320px;
 
   padding: 40px;
   padding-top: 48px;
 
   border-radius: 4px;
-  outline: none; /* Firefox shows outline */
-
-  transition: transform 125ms ease-in;
+  outline: none;
 }
+
+/* Firefox shows outline */
 
 .spectrum-Dialog.is-open {
 
-  transform: translate(-50%, -50%);
-  transition-timing-function: ease-out;
-}
+    transform: translate(-50%, -50%);
+  }
 
 .spectrum-Dialog-header {
   display: -ms-flexbox;
@@ -2132,8 +2140,8 @@ markup: |
 }
 
 .spectrum-Dialog--fullscreen.is-open {
-  transform: translate(0, 0);
-}
+    transform: translate(0, 0);
+  }
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
@@ -2298,13 +2306,22 @@ markup: |
 */
 
 .spectrum-Dialog--fullscreenTakeover {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
   box-sizing: border-box;
-  width: 100%; /* Fit vertically */
-  height: 100%; /* Variable height */
 
   /* Remove the border since we've taken over */
   border: none;
 }
+
+.spectrum-Dialog--fullscreenTakeover,
+  .spectrum-Dialog--fullscreenTakeover.is-open {
+    transform: none;
+  }
 
 :root {
 
@@ -3274,6 +3291,7 @@ markup: |
   }
 
 .spectrum-Flyout {
+
   position: absolute;
   display: inline-block;
   white-space: nowrap;
@@ -3353,7 +3371,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3372,7 +3390,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3396,17 +3414,6 @@ markup: |
   outline: none;
 }
 
-.spectrum-Dropdown .spectrum-Flyout {
-    opacity: 0;
-    pointer-events: none;
-    margin-top:2px;
-    transition: opacity 125ms, transform 125ms, visibility 0ms linear 125ms;
-    visibility: hidden;
-    min-width: 100%;
-    max-height: 280px;
-    overflow-y: auto;
-  }
-
 .spectrum-Dropdown.is-disabled {
     border-width: 0;
   }
@@ -3420,28 +3427,39 @@ markup: |
       border: 1px solid;
     }
 
-.spectrum-Dropdown.is-open .spectrum-Flyout {
-      opacity: 1;
-      transform: translateY(4px); /*needed for the proper spectrum transition*/
-      pointer-events: all;
-      position: absolute;
-      transition-delay: 0ms;
-      visibility: visible;
-    }
+.spectrum-Dropdown-flyout {
+  min-width: 100%;
+  max-height: 280px;
+
+  margin-top: 2px;
+
+  overflow-y: auto;
+}
+
+.spectrum-Dropdown-flyout.is-open {
+    /* Animate downward */
+    transform: translateY(4px);
+  }
 
 .spectrum-Dropdown-trigger {
+  position: relative;
+
   width: 100%;
-  font-style: italic;
   height: 32px;
+
+  margin: 0;
+  padding: 0 12px;
+
   border: 1px solid;
   border-radius: 4px;
-  outline: none;
-  margin: 0;
-  cursor: pointer;
-  padding: 0 12px;
-  font-family: inherit;
-  position: relative;
+
   transition: background-color 125ms;
+
+  font-family: inherit;
+  font-style: italic;
+
+  cursor: pointer;
+  outline: none;
 }
 
 .spectrum-Dropdown-trigger .spectrum-Dropdown-trigger-container {
@@ -3475,11 +3493,15 @@ markup: |
       position: absolute;
       top: 6px;
       left: 0;
+
       width: 12px;
       height: 8px;
+
       background-repeat: no-repeat;
       background-position: center;
+
       opacity: 1;
+
       content: '';
     }
 
@@ -3497,7 +3519,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3516,7 +3538,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3543,7 +3565,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3563,7 +3585,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3574,7 +3596,7 @@ markup: |
 
   <div class="dummy-spacing"></div>
 
-    <h4>Closed</h4>
+  <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
     <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
@@ -3605,7 +3627,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3619,35 +3641,25 @@ markup: |
 */
 
 .spectrum-Popover {
+
+  min-width: 270px;
+  padding: 30px;
+
   position: relative;
-  pointer-events: none;
+  left: 0px;
+  top: 0px;
+
   display: inline-block;
   box-sizing: border-box;
+
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
-  visibility: hidden;
-  opacity: 0;
-  left: 0px;
-  top: 0px;
 
   outline: none;
 }
 
 /* Hide focus outline */
-
-.spectrum-Popover.is-open {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0ms;
-    pointer-events: all;
-  }
-
-.spectrum-Popover .spectrum-Dialog-wrapper {
-    min-width: 270px;
-    padding: 30px;
-  }
 
 .spectrum-Popover-tip {
   position: absolute;
@@ -3675,12 +3687,10 @@ name: Popover - Default - Left Placement
 description: A Spectrum 'default' popover with left placement. Note that the icon is not present, so the text is able to fill the full width of the title.
 markup: |
   <div class="spectrum-Popover spectrum-Popover--left is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
-      </div>
-      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
     </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Popover-tip"></div>
   </div>
 
@@ -3705,12 +3715,10 @@ name: Popover - Default - Right Placement
 description: A Spectrum 'default' popover with right placement
 markup: |
   <div class="spectrum-Popover spectrum-Popover--right is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-title">Popover Title</div>
-      </div>
-      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Popover Title</div>
     </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Popover-tip"></div>
   </div>
 
@@ -3742,12 +3750,10 @@ name: Popover - Default - Bottom Placement
 description: A Spectrum 'default' popover with bottom placement
 markup: |
   <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-title">Popover Title</div>
-      </div>
-      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Popover Title</div>
     </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Popover-tip"></div>
   </div>
 
@@ -3772,12 +3778,10 @@ name: Popover - Default - Top Placement
 description: A Spectrum 'default' popover with top placement
 markup: |
   <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--default is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <div class="spectrum-Dialog-title">Popover Title</div>
-      </div>
-      <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Popover Title</div>
     </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
     <div class="spectrum-Popover-tip"></div>
   </div>
 
@@ -3964,7 +3968,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
@@ -3976,7 +3980,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout" role="menu">
+    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
@@ -4017,8 +4021,13 @@ markup: |
   }
 
 .spectrum-ActionMenu-flyout {
-  margin-top: 8px;
+  margin-top: 4px;
 }
+
+.spectrum-ActionMenu-flyout.is-open {
+    /* Animate downward when opened */
+    transform: translateY(4px);
+  }
 
 .spectrum-Well {
   display: block;
