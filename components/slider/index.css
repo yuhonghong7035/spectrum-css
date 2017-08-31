@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 :root {
 
   /* This must be fixed to prevent problems with different width labels */

@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 .spectrum-Checkbox {
   display: inline-block;
   position: relative;
@@ -44,6 +38,7 @@
 }
 
 .spectrum-Checkbox-label {
+  display: inline-block;
   margin: 0 8px;
   font-size: 0.875rem;
   vertical-align: middle;

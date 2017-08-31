@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -257,6 +251,8 @@ markup: |
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0 12px;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 .spectrum-Button--action--icon-only {
@@ -266,6 +262,8 @@ markup: |
 .spectrum-Button--quiet--action {
   font-size: 0.875rem;
   font-weight: 400;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 .spectrum-Button--quiet--action--icon-only {
@@ -510,6 +508,7 @@ markup: |
 }
 
 .spectrum-Checkbox-label {
+  display: inline-block;
   margin: 0 8px;
   font-size: 0.875rem;
   vertical-align: middle;
@@ -1270,7 +1269,7 @@ markup: |
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
   display: inline-block;
   position: relative;
   width: auto;
@@ -1801,35 +1800,26 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }
 
-/* topdoc
----
-name: Dialog - Default
-description: The Spectrum Dialog.
-markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Dialog</button>
-  <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-    </div>
-  </div>
-
-*/
-
-/*
-The full screen container in which the dialog resides
-Because of this contain, clicks will never fall though when a dialog is visible
-*/
-
+.spectrum-Underlay,
 .spectrum-Dialog {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: opacity 125ms, visibility 0ms linear 125ms;
+}
+
+.spectrum-Underlay.is-open,
+.spectrum-Dialog.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+}
+
+.spectrum-Underlay {
+
   position: fixed;
   top: 0;
   right: 0;
@@ -1839,25 +1829,66 @@ Because of this contain, clicks will never fall though when a dialog is visible
   /* Float above things by default */
   z-index: 1;
 
-  /* Use padding to limit the overall width of the dialog */
-  padding: 32px;
+  overflow: hidden;
+}
 
-  /* Scroll vertically only */
-  display: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+/* topdoc
+---
+name: Dialog - Default
+description: The Spectrum Dialog.
+markup: |
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+  <div class="spectrum-Dialog" id="defaultDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+  </div>
 
-  /* Match the fade time of the backdrop */
-  transition: opacity 125ms;
+*/
 
-  opacity: 0;
-  outline: none; /* Hide focus outline */
+.spectrum-Dialog {
+
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  /* Centered by default */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 8px));
+
+  /* Appear above overlay */
+  z-index: 2;
+
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
+
+  max-height: calc(100% - 64px);
+  min-width: 320px;
+
+  padding: 40px;
+  padding-top: 48px;
+
+  border-radius: 4px;
+  outline: none; /* Firefox shows outline */
+
+  transition: transform 125ms ease-in;
 }
 
 .spectrum-Dialog.is-open {
-  display: block;
 
-  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
 }
 
 .spectrum-Dialog-header {
@@ -1866,7 +1897,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
   position: relative;
 
   width: 100%;
-  height: 34px;
+  min-height: 34px;
 
   border-radius: 4px 4px 0 0;
   outline: none;
@@ -1899,15 +1930,20 @@ Because of this contain, clicks will never fall though when a dialog is visible
   }
 
 .spectrum-Dialog-content {
-  font-size: 0.875rem;
-  font-weight: 400;
   display: block;
   box-sizing: border-box;
   padding-top: 20px;
 
-  /* Stop right there! The dialog's body should NOT scroll */
+  overflow-y: auto;
 
   outline: none; /* Hide focus outline */
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .spectrum-Dialog-footer {
@@ -1935,26 +1971,6 @@ Because of this contain, clicks will never fall though when a dialog is visible
 .spectrum-Dialog-footer .spectrum-Button:last-child {
       margin-right: 0;
     }
-
-.spectrum-Dialog-wrapper {
-  /* Size according to content */
-  display: inline-block;
-
-  /* Allow 100% width, taking into account padding */
-  box-sizing: border-box;
-
-  min-width: 320px;
-  padding: 40px;
-  padding-top: 48px;
-
-  border-radius: 4px;
-  outline: none; /* Firefox shows outline */
-
-  /* Horizontal centering */
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
 
 .spectrum-Dialog-title {
   font-size: 1.125rem;
@@ -1984,163 +2000,145 @@ Because of this contain, clicks will never fall though when a dialog is visible
   height: 18px;
 }
 
-.spectrum-Dialog-buttons {
-  float: right;
-}
-
-.spectrum-Dialog-buttons:after {
-    content: " "; /* Older browser do not support empty content */
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-
-.spectrum-Dialog--centered .spectrum-Dialog-wrapper {
-    /* Vertical centering */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
 /* topdoc
 ---
 name: Dialog - Fullscreen
 description: The Spectrum 'fullscreen' dialog
 markup: |
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('fullscreenDialog').classList.add('is-open')">Open Fullscreen Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--fullscreen" id="fullscreenDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        Anything in the footer is sticky and aligned right.
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      Anything in the footer is sticky and aligned right.
     </div>
   </div>
 
 
 */
 
-.spectrum-Dialog--fullscreen .spectrum-Dialog-wrapper, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-wrapper {
-    /* Be a flexbox to allow a full sized content area that scrolls */
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+.spectrum-Dialog--fullscreen {
+  left: 32px;
+  top: 32px;
+  right: 32px;
+  bottom: 32px;
 
-    box-sizing: border-box;
-    width: 100%; /* Fit vertically */
-    height: 100%; /* Variable height */
+  transform: translate(0, 8px);
+}
 
-    padding-top: 40px;
-  }
+.spectrum-Dialog--fullscreen.is-open {
+  transform: translate(0, 0);
+}
+
+.spectrum-Dialog--fullscreen,
+.spectrum-Dialog--fullscreenTakeover {
+  padding-top: 40px;
+}
 
 .spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
     padding-bottom: 24px;
@@ -2152,156 +2150,147 @@ markup: |
     line-height: 2.25rem;
   }
 
-.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
-    -ms-flex: 1;
-        flex: 1;
-
-    overflow-y: auto;
-  }
-
 /* topdoc
 ---
 name: Dialog - Fullscreen Takeover
 description: The Spectrum 'fullscreen takeover' dialog
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Fullscreen Takeover</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" id="fullscreenTakeoverDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        Anything in the footer is sticky and aligned right.
-      </div>
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      Anything in the footer is sticky and aligned right.
     </div>
   </div>
 
@@ -2309,14 +2298,13 @@ markup: |
 */
 
 .spectrum-Dialog--fullscreenTakeover {
-  /* Fill the entire window */
-  padding: 0;
-}
+  box-sizing: border-box;
+  width: 100%; /* Fit vertically */
+  height: 100%; /* Variable height */
 
-.spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-wrapper {
-    /* Remove the border since we've taken over */
-    border: none;
-  }
+  /* Remove the border since we've taken over */
+  border: none;
+}
 
 :root {
 
@@ -2621,317 +2609,161 @@ markup: |
 
 .spectrum-TabList {
   position: relative;
+  z-index: 0;
 
   margin: 0;
   padding: 0;
 }
 
-.spectrum-TabList * { outline: none; }
+.spectrum-Tab {
+  position: relative;
 
-.spectrum-TabList .spectrum-Tab {
-    position: relative;
-    cursor: pointer;
+  /* Float above the tab line */
+  z-index: 1;
+
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: color 125ms ease-out;
+  height: 32px;
+  line-height: 2rem;
+}
+
+.spectrum-Tab.is-disabled {
+    cursor: default;
   }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
-      /* Ensure the label doesn't drop down */
-      display: inline-block;
+.spectrum-Tab-label {
+  cursor: pointer;
+}
 
-      vertical-align: middle;
+.spectrum-Tab-line {
+  position: absolute;
 
-      /* Support SVG icons */
-      width: 18px;
-      height: 18px;
+  /* Be below the tab */
+  z-index: 0;
 
-      /* Support font icons */
-      font-size: 1.125rem;
-      line-height: 1.125rem;
+  transition: transform 125ms ease-in-out;
+  left: 0;
+  transform-origin: top left;
+}
+
+.spectrum-TabList--page .spectrum-Tab, .spectrum-TabList--panel .spectrum-Tab {
+    margin-bottom: 2px;
+  }
+
+.spectrum-TabList--page .spectrum-Tab:focus, .spectrum-TabList--panel .spectrum-Tab:focus {
+      border-radius: 4px;
     }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
-      font-size: 0.625rem;
-      font-weight: 700;
-      letter-spacing: 0.0625rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      white-space: nowrap;
-    }
+.spectrum-TabList--panel .spectrum-Tab-label {
+    font-size: 0.65625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-.spectrum-TabList .spectrum-Tab.is-disabled {
-      cursor: default;
-    }
+.spectrum-TabList--panel .spectrum-Tab-icon {
+    /* Ensure the label doesn't drop down */
+    display: inline-block;
+    vertical-align: middle;
 
-/* topdoc
----
-  name: TabList - Horizontal - Label
-  description: The Spectrum tab list with labels in horizontal mode 
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
+    /* Support SVG icons */
+    width: 18px;
+    height: 18px;
 
+    /* Support font icons */
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
 
-*/
-
-/* topdoc
----
-  name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
-
-.spectrum-TabList--horizontal,
-.spectrum-TabList--anchored {
+.spectrum-TabList--horizontal {
   display: block;
 }
 
-.spectrum-TabList--horizontal::after, .spectrum-TabList--anchored::after {
-    content: '';
-    clear: both;
-    display: block;
+.spectrum-TabList--horizontal .spectrum-Tab {
+    display: inline-block;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
-    float: left;
-    display: block;
-    box-sizing: border-box;
+.spectrum-TabList--horizontal .spectrum-Tab-label {
     text-overflow: ellipsis;
-    max-width: 250px;
-    margin: 0 15px 0 0;
-    padding: 0px 8px;
-    line-height: 2rem;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon {
-      margin-right: 5px;
+.spectrum-TabList--horizontal .spectrum-Tab-line {
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 2px;
+  }
+
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab {
+      padding: 0 8px;
+      margin-right: 8px;
     }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon:last-child, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon:last-child {
-        margin-right: 0px;
-      }
-
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-label, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      padding: 6px 0;
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab-label {
+      text-transform: capitalize;
     }
 
-/* Horizontal Active Tab Line */
+.spectrum-TabList--horizontal.spectrum-TabList--anchored {
+    display: inline-block;
+    border-bottom: 2px solid;
+  }
 
-.spectrum-TabList--horizontal .spectrum-Tab.is-selected:after, .spectrum-TabList--anchored .spectrum-Tab.is-selected:after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 2px;
-        border-bottom: 2px solid;
-      }
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab {
+      margin: 0px 16px;
+      padding-bottom: 8px;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Label
-  description: The Spectrum tab list with labels in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-label {
+      text-transform: capitalize;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Icon
-  description: The Spectrum tab list with icons in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-line {
+      bottom: -2px;
+    }
+
+.spectrum-TabList--horizontal.spectrum-TabList--panel .spectrum-Tab {
+      margin-right: 8px;
+      height: 24px;
+    }
+
+.spectrum-TabList--panel .spectrum-Tab {
+    line-height: normal;
+
+    padding: 1px 6px 5px 6px;
+  }
 
 .spectrum-TabList--vertical {
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
 }
 
 .spectrum-TabList--vertical .spectrum-Tab {
     display: block;
-    overflow: visible; /* overflow: ellipsis; */
-    min-width: 0;
-    margin: 0 0 4px 0;
-    float: none;
-
-    text-align: left;
+    margin-left: 2px;
   }
 
-.spectrum-TabList--vertical .spectrum-Tab:last-child {
-      margin-bottom: 0;
-    }
+.spectrum-TabList--vertical .spectrum-Tab-label {
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
 
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-icon {
-      padding: 4px 7px;
+.spectrum-TabList--vertical .spectrum-Tab-line {
+    top: 2px;
+    left: 0;
+    width: 2px;
+    height: 20px;
+    border-radius:  1px;
+  }
+
+.spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
-      line-height: 1.5rem;
-      vertical-align: middle;
     }
-
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-label {
-      padding: 4px 7px;
-      height: 16px;
-      line-height: 1rem;
-      vertical-align: middle;
-    }
-
-/* Vertical Active Tab Line */
-
-.spectrum-TabList--vertical .spectrum-Tab.is-selected:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 4px;
-        bottom: 4px;
-        /* top = bottom = label vertical padding | is hackfix making the left active bar
-          as tall as the (label.height - label.vertical-padding) / 2 */
-
-        display: block;
-        width: 2px;
-        height: auto;
-
-        border: none; /* reset border */
-        border-left: 2px solid;
-      }
 
 .spectrum-Tab-label:empty {
   /* Hide the tab label if it's not being used */
   display: none;
-}
-
-/* topdoc
----
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <ul class="spectrum-TabList spectrum-TabList--anchored">
-      <li class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="1">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="2">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="3">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </li>
-      <li class="spectrum-Tab is-disabled" tabindex="4">
-        <label class="spectrum-Tab-label">Friday</label>
-      </li>
-    </ul>
-
-*/
-
-.spectrum-TabList--anchored {
-  list-style-type: none;
-  height: 32px;
-}
-
-.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      cursor: pointer;
-      text-transform: none;
-/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
-      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab::after,
-  .spectrum-TabList--anchored::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
-    height: 2px;
-  }
-
-/* Large Tab (Bigger font and no uppercase) */
-
-.spectrum-TabList--large .spectrum-Tab {
-  margin: 0 17px 0 0;
-  padding: 10px 8px;
-
-  text-transform: none;
-  font-size: 0.875rem;
 }
 
 :root {
@@ -3568,7 +3400,8 @@ markup: |
     opacity: 0;
     pointer-events: none;
     margin-top:2px;
-    transition: opacity 125ms, transform 125ms;
+    transition: opacity 125ms, transform 125ms, visibility 0ms linear 125ms;
+    visibility: hidden;
     min-width: 100%;
     max-height: 280px;
     overflow-y: auto;
@@ -3592,6 +3425,8 @@ markup: |
       transform: translateY(4px); /*needed for the proper spectrum transition*/
       pointer-events: all;
       position: absolute;
+      transition-delay: 0ms;
+      visibility: visible;
     }
 
 .spectrum-Dropdown-trigger {
@@ -3785,12 +3620,13 @@ markup: |
 
 .spectrum-Popover {
   position: relative;
+  pointer-events: none;
   display: inline-block;
   box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
   visibility: hidden;
   opacity: 0;
   left: 0px;
@@ -3805,6 +3641,7 @@ markup: |
     visibility: visible;
     opacity: 1;
     transition-delay: 0ms;
+    pointer-events: all;
   }
 
 .spectrum-Popover .spectrum-Dialog-wrapper {
@@ -4408,47 +4245,51 @@ markup: |
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }
 
-.spectrum-Stepper .spectrum-Stepper-buttons {
-    -ms-flex: 1;
-        flex: 1;
-  }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Button {
-      position: relative;
-      margin: 0;
-      border-width: 1px;
-      border-right-width: 0;
-      border-radius: 4px 0 0 4px;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepUp {
-      border-bottom: none;
-      border-bottom-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
-      float: left;
-      border-top: none;
-      border-top-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown:focus {
-        border-top: none;
-      }
-
-.spectrum-Stepper-input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  position: relative;
-  width: 100%;
+.spectrum-Stepper-buttons {
+  display: block;
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
+  display: block;
+
   height: 16px;
   width: 24px;
+
   padding-left: 6px;
   padding-right: 6px;
+
+  /* Avoid margin added by adjacent buttons */
+  margin: 0 !important;
+
+  border-width: 1px;
+  border-right-width: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.spectrum-Stepper-stepUp {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown {
+  border-top: none;
+  border-top-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown:focus {
+    border-top: none;
+  }
+
+.spectrum-Stepper-input {
+  position: relative;
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .spectrum-Stepper-stepUpIcon,
@@ -4914,8 +4755,6 @@ markup: |
 .spectrum-Button--action {
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(80, 80, 80);
 }
 
@@ -4977,8 +4816,6 @@ markup: |
 .spectrum-Button--quiet--action {
   background-color: transparent;
   border-color: transparent;
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(80, 80, 80);
 }
 
@@ -5462,21 +5299,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 
@@ -5506,21 +5343,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox is-disabled">
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 
@@ -5565,21 +5402,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 */
 
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
@@ -6044,98 +5881,94 @@ markup: |
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='12' viewBox='0 0 1280 12'%3E%3Cdefs%3E%3Cstyle%3E.a%2C .aa%2C .ab%2C .ac%2C .ad%2C .ae%2C .af%2C .ag%2C .ah%2C .ai%2C .aj%2C .ak%2C .al%2C .am%2C .an%2C .ao%2C .ap%2C .b%2C .c%2C .d%2C .e%2C .f%2C .g%2C .h%2C .i%2C .j%2C .k%2C .l%2C .m%2C .n%2C .o%2C .p%2C .q%2C .r%2C .s%2C .t%2C .u%2C .v%2C .w%2C .x%2C .y%2C .z %7B fill: %23000%3B %7D .a %7B fill-opacity: 0.53%3B %7D .b %7B fill-opacity: 0.36%3B %7D .c %7B fill-opacity: 0.23%3B %7D .d %7B fill-opacity: 0.52%3B %7D .e %7B fill-opacity: 0.35%3B %7D .f %7B fill-opacity: 0.24%3B %7D .g %7B fill-opacity: 0.5%3B %7D .h %7B fill-opacity: 0.33%3B %7D .i %7B fill-opacity: 0.26%3B %7D .j %7B fill-opacity: 0.48%3B %7D .k %7B fill-opacity: 0.31%3B %7D .l %7B fill-opacity: 0.28%3B %7D .m %7B fill-opacity: 0.46%3B %7D .n %7B fill-opacity: 0.29%3B %7D .o %7B fill-opacity: 0.3%3B %7D .p %7B fill-opacity: 0.45%3B %7D .q %7B fill-opacity: 0.28%3B %7D .r %7B fill-opacity: 0.31%3B %7D .s %7B fill-opacity: 0.43%3B %7D .t %7B fill-opacity: 0.26%3B %7D .u %7B fill-opacity: 0.33%3B %7D .v %7B fill-opacity: 0.41%3B %7D .w %7B fill-opacity: 0.24%3B %7D .x %7B fill-opacity: 0.35%3B %7D .y %7B fill-opacity: 0.4%3B %7D .z %7B fill-opacity: 0.23%3B %7D .aa %7B fill-opacity: 0.36%3B %7D .ab %7B fill-opacity: 0.38%3B %7D .ac %7B fill-opacity: 0.21%3B %7D .ad %7B fill-opacity: 0.55%3B %7D .ae %7B fill-opacity: 0.53%3B %7D .af %7B fill-opacity: 0.52%3B %7D .ag %7B fill-opacity: 0.5%3B %7D .ah %7B fill-opacity: 0.48%3B %7D .ai %7B fill-opacity: 0.47%3B %7D .aj %7B fill-opacity: 0.45%3B %7D .ak %7B fill-opacity: 0.43%3B %7D .al %7B fill-opacity: 0.41%3B %7D .am %7B fill-opacity: 0.4%3B %7D .an %7B fill-opacity: 0.55%3B %7D .ao %7B fill-opacity: 0.38%3B %7D .ap %7B fill-opacity: 0.21%3B %7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='a' d='M25.76%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C25.76%2C1.48Z'/%3E%3Cpath class='b' d='M15.56%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C19.2%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C15.56%2C2.24Z'/%3E%3Cpath class='c' d='M5.36%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C5.36%2C2.85Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='d' d='M57.76%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C57.76%2C1.55Z'/%3E%3Cpath class='e' d='M47.56%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C47.56%2C2.31Z'/%3E%3Cpath class='f' d='M37.36%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C37.36%2C2.77Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='g' d='M89.76%2C1.63A4.25%2C4.25%2C0%2C1%2C0%2C94%2C5.88%2C4.25%2C4.25%2C0%2C0%2C0%2C89.76%2C1.63Z'/%3E%3Cpath class='h' d='M79.56%2C2.39A3.49%2C3.49%2C0%2C1%2C0%2C83%2C5.88%2C3.49%2C3.49%2C0%2C0%2C0%2C79.56%2C2.39Z'/%3E%3Cpath class='i' d='M69.36%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C69.36%2C2.69Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='j' d='M121.76%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C121.76%2C1.7Z'/%3E%3Cpath class='k' d='M111.56%2C2.47A3.41%2C3.41%2C0%2C1%2C0%2C115%2C5.88%2C3.41%2C3.41%2C0%2C0%2C0%2C111.56%2C2.47Z'/%3E%3Cpath class='l' d='M101.36%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C101.36%2C2.62Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='m' d='M153.76%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C153.76%2C1.78Z'/%3E%3Cpath class='n' d='M143.56%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C143.56%2C2.54Z'/%3E%3Cpath class='o' d='M133.36%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C133.36%2C2.54Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='p' d='M185.76%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C185.76%2C1.86Z'/%3E%3Cpath class='q' d='M175.56%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C175.56%2C2.62Z'/%3E%3Cpath class='r' d='M165.36%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C165.36%2C2.46Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='s' d='M217.76%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C217.76%2C1.93Z'/%3E%3Cpath class='t' d='M207.56%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C207.56%2C2.69Z'/%3E%3Cpath class='u' d='M197.36%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C197.36%2C2.39Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='v' d='M249.76%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C249.76%2C2Z'/%3E%3Cpath class='w' d='M239.56%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C239.56%2C2.77Z'/%3E%3Cpath class='x' d='M229.36%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C229.36%2C2.31Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='y' d='M281.76%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C281.76%2C2.08Z'/%3E%3Cpath class='z' d='M271.56%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C271.56%2C2.85Z'/%3E%3Cpath class='aa' d='M261.36%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C265%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C261.36%2C2.24Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ab' d='M313.76%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C313.76%2C2.16Z'/%3E%3Cpath class='ac' d='M303.56%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C303.56%2C2.92Z'/%3E%3Cpath class='ab' d='M293.36%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C293.36%2C2.16Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='aa' d='M345.76%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C345.76%2C2.24Z'/%3E%3Cpath class='c' d='M335.56%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C335.56%2C2.85Z'/%3E%3Cpath class='y' d='M325.36%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C325.36%2C2.08Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='x' d='M377.76%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C377.76%2C2.31Z'/%3E%3Cpath class='f' d='M367.56%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C367.56%2C2.77Z'/%3E%3Cpath class='v' d='M357.36%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C357.36%2C2Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='u' d='M409.76%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C409.76%2C2.39Z'/%3E%3Cpath class='i' d='M399.56%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C399.56%2C2.69Z'/%3E%3Cpath class='s' d='M389.36%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C389.36%2C1.93Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='r' d='M441.76%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C441.76%2C2.46Z'/%3E%3Cpath class='l' d='M431.56%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C431.56%2C2.62Z'/%3E%3Cpath class='p' d='M421.36%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C421.36%2C1.86Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='o' d='M473.76%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C473.76%2C2.54Z'/%3E%3Cpath class='o' d='M463.56%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C463.56%2C2.54Z'/%3E%3Cpath class='m' d='M453.36%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C453.36%2C1.78Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='l' d='M505.76%2C2.62A3.26%2C3.26%2C0%2C1%2C0%2C509%2C5.88%2C3.26%2C3.26%2C0%2C0%2C0%2C505.76%2C2.62Z'/%3E%3Cpath class='r' d='M495.56%2C2.46A3.41%2C3.41%2C0%2C1%2C0%2C499%2C5.88%2C3.41%2C3.41%2C0%2C0%2C0%2C495.56%2C2.46Z'/%3E%3Cpath class='j' d='M485.36%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C485.36%2C1.7Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='i' d='M537.76%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C537.76%2C2.69Z'/%3E%3Cpath class='u' d='M527.56%2C2.39A3.49%2C3.49%2C0%2C1%2C0%2C531%2C5.88%2C3.49%2C3.49%2C0%2C0%2C0%2C527.56%2C2.39Z'/%3E%3Cpath class='g' d='M517.36%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C517.36%2C1.63Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='f' d='M569.76%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C569.76%2C2.77Z'/%3E%3Cpath class='x' d='M559.56%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C559.56%2C2.31Z'/%3E%3Cpath class='d' d='M549.36%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C549.36%2C1.55Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='c' d='M601.76%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C601.76%2C2.85Z'/%3E%3Cpath class='aa' d='M591.56%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C591.56%2C2.24Z'/%3E%3Cpath class='a' d='M581.36%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C581.36%2C1.48Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ac' d='M633.76%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C633.76%2C2.92Z'/%3E%3Cpath class='ab' d='M623.56%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C623.56%2C2.16Z'/%3E%3Cpath class='ad' d='M613.36%2C1.4a4.48%2C4.48%2C0%2C1%2C0%2C4.48%2C4.48A4.48%2C4.48%2C0%2C0%2C0%2C613.36%2C1.4Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='c' d='M665.76%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C665.76%2C2.85Z'/%3E%3Cpath class='y' d='M655.56%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C655.56%2C2.08Z'/%3E%3Cpath class='a' d='M645.36%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C645.36%2C1.48Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='f' d='M697.76%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C697.76%2C2.77Z'/%3E%3Cpath class='v' d='M687.56%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C687.56%2C2Z'/%3E%3Cpath class='d' d='M677.36%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C677.36%2C1.55Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='i' d='M729.76%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C729.76%2C2.69Z'/%3E%3Cpath class='s' d='M719.56%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C719.56%2C1.93Z'/%3E%3Cpath class='g' d='M709.36%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C709.36%2C1.63Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='l' d='M761.76%2C2.62A3.26%2C3.26%2C0%2C1%2C0%2C765%2C5.88%2C3.26%2C3.26%2C0%2C0%2C0%2C761.76%2C2.62Z'/%3E%3Cpath class='p' d='M751.56%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C751.56%2C1.86Z'/%3E%3Cpath class='j' d='M741.36%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C741.36%2C1.7Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='o' d='M793.76%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C793.76%2C2.54Z'/%3E%3Cpath class='m' d='M783.56%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C783.56%2C1.78Z'/%3E%3Cpath class='m' d='M773.36%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C773.36%2C1.78Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='r' d='M825.76%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C825.76%2C2.46Z'/%3E%3Cpath class='j' d='M815.56%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C815.56%2C1.7Z'/%3E%3Cpath class='p' d='M805.36%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C805.36%2C1.86Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='u' d='M857.76%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C857.76%2C2.39Z'/%3E%3Cpath class='g' d='M847.56%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C847.56%2C1.63Z'/%3E%3Cpath class='s' d='M837.36%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C837.36%2C1.93Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='x' d='M889.76%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C889.76%2C2.31Z'/%3E%3Cpath class='d' d='M879.56%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C879.56%2C1.55Z'/%3E%3Cpath class='v' d='M869.36%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C869.36%2C2Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='aa' d='M921.76%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C921.76%2C2.24Z'/%3E%3Cpath class='a' d='M911.56%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C911.56%2C1.48Z'/%3E%3Cpath class='y' d='M901.36%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C901.36%2C2.08Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ab' d='M953.76%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C953.76%2C2.16Z'/%3E%3Cpath class='ad' d='M943.56%2C1.4A4.48%2C4.48%2C0%2C1%2C0%2C948%2C5.88%2C4.48%2C4.48%2C0%2C0%2C0%2C943.56%2C1.4Z'/%3E%3Cpath class='ab' d='M933.36%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C933.36%2C2.16Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='y' d='M985.76%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C985.76%2C2.08Z'/%3E%3Cpath class='ae' d='M975.56%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C975.56%2C1.48Z'/%3E%3Cpath class='aa' d='M965.36%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C969%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C965.36%2C2.24Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='v' d='M1017.76%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C1017.76%2C2Z'/%3E%3Cpath class='af' d='M1007.56%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C1007.56%2C1.55Z'/%3E%3Cpath class='x' d='M997.36%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C997.36%2C2.31Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='s' d='M1049.76%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C1049.76%2C1.93Z'/%3E%3Cpath class='ag' d='M1039.56%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C1039.56%2C1.63Z'/%3E%3Cpath class='u' d='M1029.36%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C1029.36%2C2.39Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='p' d='M1081.76%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C1081.76%2C1.86Z'/%3E%3Cpath class='ah' d='M1071.56%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C1071.56%2C1.7Z'/%3E%3Cpath class='r' d='M1061.36%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C1061.36%2C2.46Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='m' d='M1113.76%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C1113.76%2C1.78Z'/%3E%3Cpath class='ai' d='M1103.56%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C1103.56%2C1.78Z'/%3E%3Cpath class='o' d='M1093.36%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C1093.36%2C2.54Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='j' d='M1145.76%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C1145.76%2C1.7Z'/%3E%3Cpath class='aj' d='M1135.56%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C1135.56%2C1.86Z'/%3E%3Cpath class='l' d='M1125.36%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C1125.36%2C2.62Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='g' d='M1177.76%2C1.63A4.25%2C4.25%2C0%2C1%2C0%2C1182%2C5.88%2C4.25%2C4.25%2C0%2C0%2C0%2C1177.76%2C1.63Z'/%3E%3Cpath class='ak' d='M1167.56%2C1.93a3.95%2C3.95%2C0%2C1%2C0%2C3.95%2C3.95A3.95%2C3.95%2C0%2C0%2C0%2C1167.56%2C1.93Z'/%3E%3Cpath class='i' d='M1157.36%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C1157.36%2C2.69Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='d' d='M1209.76%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C1209.76%2C1.55Z'/%3E%3Cpath class='al' d='M1199.56%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C1199.56%2C2Z'/%3E%3Cpath class='f' d='M1189.36%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C1189.36%2C2.77Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='a' d='M1241.76%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C1241.76%2C1.48Z'/%3E%3Cpath class='am' d='M1231.56%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C1231.56%2C2.08Z'/%3E%3Cpath class='c' d='M1221.36%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C1221.36%2C2.85Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='an' d='M1273.82%2C1.4a4.48%2C4.48%2C0%2C1%2C0%2C4.48%2C4.48A4.48%2C4.48%2C0%2C0%2C0%2C1273.82%2C1.4Z'/%3E%3Cpath class='ao' d='M1263.62%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C1263.62%2C2.16Z'/%3E%3Cpath class='ap' d='M1253.42%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C1253.42%2C2.92Z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.spectrum-Underlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
 /* topdoc
 ---
 name: Dialog - Modal
 description: The Spectrum 'modal' dialog
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Centered Modal Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--centered" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Modal Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a centered modal dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Centered Modal Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--centered" id="defaultModalDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Modal Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a centered modal dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
     </div>
   </div>
 
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Scrolling Modal Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Scrolling Modal Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Scrolling Modal Dialog</button>
+  <div class="spectrum-Dialog" id="defaultModalDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Scrolling Modal Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
     </div>
   </div>
 
 
 */
 
-.spectrum-Dialog--modal {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.spectrum-Dialog-wrapper {
+.spectrum-Dialog {
   background: rgb(255, 255, 255);
 }
 
@@ -6166,19 +5999,17 @@ markup: |
 name: Dialog - Success
 description: A Spectrum 'success' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Success Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--success spectrum-Dialog--modal spectrum-Dialog--centered" id="successDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Success Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a success dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Success Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--success spectrum-Dialog--centered" id="successDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Success Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a success dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -6197,19 +6028,17 @@ markup:
 name: Dialog - Info
 description: The Spectrum 'info' dialog
 markup:
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--modal spectrum-Dialog--centered" id="infoDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is an info dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Info Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--centered" id="infoDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is an info dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -6229,19 +6058,17 @@ markup:
 name: Dialog - Warning
 description: A Spectrum 'warning' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Warning Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--warning spectrum-Dialog--modal spectrum-Dialog--centered" id="warningDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a warning dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Warning Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--warning spectrum-Dialog--centered" id="warningDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a warning dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -6261,19 +6088,17 @@ markup:
 name: Dialog - Error
 description: The Spectrum 'error' dialog
 markup:
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Error Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--modal spectrum-Dialog--centered" id="errorDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Error Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is an error dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Error Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is an error dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -6874,11 +6699,108 @@ Todo: Determine if these are supposed to be pseudo classes
 
 /* topdoc
 ---
-  name: Tab - Default
-  description: The default Spectrum Tab element
+  name: TabList - Anchored
+  description: The Spectrum anchored tab list.
   markup: |
-    <!-- TODO: add markup here -->
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab is-disabled" tabindex="0">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+      <!-- Apply .is-focused to element below when corresponding tab is in focus -->
+      <div class="spectrum-Tab-line" style="width:62px; left: 15px;"></div>
+    </div>
 
+*/
+
+/* topdoc
+---
+  name: TabList - Page
+  description: The Spectrum tab list with page variant
+  modifiers:
+    ':disabled': Disabled state
+    ':hover': Hover state
+    ':focus': Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 1</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 2</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 3</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 4</label>
+      </div>
+      <div class="spectrum-Tab-line" style="width:36px; left: 8px;"></div>
+    </div>
+*/
+
+/* topdoc
+---
+  name: TabList - Panel
+  description: The Spectrum tab list with panel variant
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab-line" style="width:86px; left: 8px;"></div>
+    </div>
+*/
+
+/* topdoc
+---
+  name: TabList - Panel - Vertical
+  description: The Spectrum tab list with panel variant and vertical orientation
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab-line" style="height:21px; top: 5px;"></div>
+    </div>
 */
 
 .spectrum-Tab {
@@ -6886,89 +6808,40 @@ Todo: Determine if these are supposed to be pseudo classes
 }
 
 .spectrum-Tab:hover {
-    color: rgb(50, 50, 50)
-  }
-
-.spectrum-Tab:focus {
-    color: rgb(50, 50, 50)
+    color: rgb(50, 50, 50);
   }
 
 .spectrum-Tab.is-selected {
-    color: rgb(50, 50, 50)
+    color: rgb(50, 50, 50);
+  }
+
+.spectrum-Tab:focus {
+    color: rgb(50, 50, 50);
+    box-shadow: 0 0 0 2px rgb(55, 142, 240);
   }
 
 .spectrum-Tab.is-disabled {
-    color: rgb(188, 188, 188)
+    color: rgb(188, 188, 188);
   }
 
 .spectrum-TabList--anchored {
-/*
-  .spectrum-Tab {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-default);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-default);
-      }
-    }
-
-    &:hover .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-hover);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-hover);
-      }
-    }
-
-    &:active .spectrum-Tab-label,
-    &.is-selected .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-active);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-active);
-      }
-    }
-
-    &:focus .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-focus);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-focus);
-      }
-    }
-
-    &.is-disabled {
-      .spectrum-Tab-label {
-        color: var(--spectrum-tablist-anchored-label-color-disabled);
-
-        &::after {
-          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
-        }
-      }
-    }
-  }
-*/
+  border-color: rgb(244, 244, 244);
 }
 
-.spectrum-TabList--anchored::before {
-    background-color: rgb(244, 244, 244);
-  }
+.spectrum-TabList--anchored .spectrum-Tab:focus {
+      color: rgb(55, 142, 240);
+      box-shadow: initial;
+    }
 
-/*
-Todo: Determine if unused mixins are required
+/* The focus line should become blue only for anchored tabs */
 
-spectrum-tablist-line-default() {
-  border-color: var(--spectrum-tablist-border-color-default)
+.spectrum-TabList--anchored .spectrum-Tab:focus ~ .spectrum-Tab-line {
+          background-color:  rgb(55, 142, 240);
+      }
+
+.spectrum-Tab-line {
+  background-color: rgb(50, 50, 50);
 }
-
-spectrum-tablist-line-focus() {
-  border-color: var(--spectrum-tablist-border-color-focus)
-}
-
-spectrum-tablist-line-disabled() {
-  border-color: var(--spectrum-tablist-border-color-disabled)
-}
-*/
 
 /* Default Label Style is 'incomplete' */
 

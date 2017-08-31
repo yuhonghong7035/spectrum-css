@@ -30,21 +30,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -69,21 +69,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox is-disabled">
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-checkmark {
@@ -119,21 +119,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 */
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
     border-color: rgb(215, 55, 63);

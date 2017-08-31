@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 @keyframes spectrum-wait-spinner-small-animation {
   from {
     background-position: 0 center;

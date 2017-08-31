@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -257,6 +251,8 @@ markup: |
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0 12px;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 .spectrum-Button--action--icon-only {
@@ -266,6 +262,8 @@ markup: |
 .spectrum-Button--quiet--action {
   font-size: 0.875rem;
   font-weight: 400;
+  border-width: 1px;
+  border-radius: 4px;
 }
 
 .spectrum-Button--quiet--action--icon-only {
@@ -510,6 +508,7 @@ markup: |
 }
 
 .spectrum-Checkbox-label {
+  display: inline-block;
   margin: 0 8px;
   font-size: 0.875rem;
   vertical-align: middle;
@@ -1270,7 +1269,7 @@ markup: |
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
   display: inline-block;
   position: relative;
   width: auto;
@@ -1801,35 +1800,26 @@ markup: |
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }
 
-/* topdoc
----
-name: Dialog - Default
-description: The Spectrum Dialog.
-markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Dialog</button>
-  <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-    </div>
-  </div>
-
-*/
-
-/*
-The full screen container in which the dialog resides
-Because of this contain, clicks will never fall though when a dialog is visible
-*/
-
+.spectrum-Underlay,
 .spectrum-Dialog {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: opacity 125ms, visibility 0ms linear 125ms;
+}
+
+.spectrum-Underlay.is-open,
+.spectrum-Dialog.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+}
+
+.spectrum-Underlay {
+
   position: fixed;
   top: 0;
   right: 0;
@@ -1839,25 +1829,66 @@ Because of this contain, clicks will never fall though when a dialog is visible
   /* Float above things by default */
   z-index: 1;
 
-  /* Use padding to limit the overall width of the dialog */
-  padding: 32px;
+  overflow: hidden;
+}
 
-  /* Scroll vertically only */
-  display: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+/* topdoc
+---
+name: Dialog - Default
+description: The Spectrum Dialog.
+markup: |
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+  <div class="spectrum-Dialog" id="defaultDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+  </div>
 
-  /* Match the fade time of the backdrop */
-  transition: opacity 125ms;
+*/
 
-  opacity: 0;
-  outline: none; /* Hide focus outline */
+.spectrum-Dialog {
+
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  /* Centered by default */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 8px));
+
+  /* Appear above overlay */
+  z-index: 2;
+
+  /* Allow 100% width, taking into account padding */
+  box-sizing: border-box;
+
+  max-height: calc(100% - 64px);
+  min-width: 320px;
+
+  padding: 40px;
+  padding-top: 48px;
+
+  border-radius: 4px;
+  outline: none; /* Firefox shows outline */
+
+  transition: transform 125ms ease-in;
 }
 
 .spectrum-Dialog.is-open {
-  display: block;
 
-  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition-timing-function: ease-out;
 }
 
 .spectrum-Dialog-header {
@@ -1866,7 +1897,7 @@ Because of this contain, clicks will never fall though when a dialog is visible
   position: relative;
 
   width: 100%;
-  height: 34px;
+  min-height: 34px;
 
   border-radius: 4px 4px 0 0;
   outline: none;
@@ -1899,15 +1930,20 @@ Because of this contain, clicks will never fall though when a dialog is visible
   }
 
 .spectrum-Dialog-content {
-  font-size: 0.875rem;
-  font-weight: 400;
   display: block;
   box-sizing: border-box;
   padding-top: 20px;
 
-  /* Stop right there! The dialog's body should NOT scroll */
+  overflow-y: auto;
 
   outline: none; /* Hide focus outline */
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 .spectrum-Dialog-footer {
@@ -1935,26 +1971,6 @@ Because of this contain, clicks will never fall though when a dialog is visible
 .spectrum-Dialog-footer .spectrum-Button:last-child {
       margin-right: 0;
     }
-
-.spectrum-Dialog-wrapper {
-  /* Size according to content */
-  display: inline-block;
-
-  /* Allow 100% width, taking into account padding */
-  box-sizing: border-box;
-
-  min-width: 320px;
-  padding: 40px;
-  padding-top: 48px;
-
-  border-radius: 4px;
-  outline: none; /* Firefox shows outline */
-
-  /* Horizontal centering */
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
 
 .spectrum-Dialog-title {
   font-size: 1.125rem;
@@ -1984,163 +2000,145 @@ Because of this contain, clicks will never fall though when a dialog is visible
   height: 18px;
 }
 
-.spectrum-Dialog-buttons {
-  float: right;
-}
-
-.spectrum-Dialog-buttons:after {
-    content: " "; /* Older browser do not support empty content */
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-
-.spectrum-Dialog--centered .spectrum-Dialog-wrapper {
-    /* Vertical centering */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
 /* topdoc
 ---
 name: Dialog - Fullscreen
 description: The Spectrum 'fullscreen' dialog
 markup: |
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="document.getElementById('fullscreenDialog').classList.add('is-open')">Open Fullscreen Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--fullscreen" id="fullscreenDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-        This is a fullscreen dialog.<br>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        Anything in the footer is sticky and aligned right.
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Default Dialog - Fullscreen</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+      This is a fullscreen dialog.<br>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      Anything in the footer is sticky and aligned right.
     </div>
   </div>
 
 
 */
 
-.spectrum-Dialog--fullscreen .spectrum-Dialog-wrapper, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-wrapper {
-    /* Be a flexbox to allow a full sized content area that scrolls */
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+.spectrum-Dialog--fullscreen {
+  left: 32px;
+  top: 32px;
+  right: 32px;
+  bottom: 32px;
 
-    box-sizing: border-box;
-    width: 100%; /* Fit vertically */
-    height: 100%; /* Variable height */
+  transform: translate(0, 8px);
+}
 
-    padding-top: 40px;
-  }
+.spectrum-Dialog--fullscreen.is-open {
+  transform: translate(0, 0);
+}
+
+.spectrum-Dialog--fullscreen,
+.spectrum-Dialog--fullscreenTakeover {
+  padding-top: 40px;
+}
 
 .spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
     padding-bottom: 24px;
@@ -2152,156 +2150,147 @@ markup: |
     line-height: 2.25rem;
   }
 
-.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
-    -ms-flex: 1;
-        flex: 1;
-
-    overflow-y: auto;
-  }
-
 /* topdoc
 ---
 name: Dialog - Fullscreen Takeover
 description: The Spectrum 'fullscreen takeover' dialog
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Fullscreen Takeover</button>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" id="fullscreenTakeoverDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-        This is a fullscreen takeover dialog.<br>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        Anything in the footer is sticky and aligned right.
-      </div>
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Fullscreen Takeover</h2>
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+      This is a fullscreen takeover dialog.<br>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      Anything in the footer is sticky and aligned right.
     </div>
   </div>
 
@@ -2309,14 +2298,13 @@ markup: |
 */
 
 .spectrum-Dialog--fullscreenTakeover {
-  /* Fill the entire window */
-  padding: 0;
-}
+  box-sizing: border-box;
+  width: 100%; /* Fit vertically */
+  height: 100%; /* Variable height */
 
-.spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-wrapper {
-    /* Remove the border since we've taken over */
-    border: none;
-  }
+  /* Remove the border since we've taken over */
+  border: none;
+}
 
 :root {
 
@@ -2621,317 +2609,161 @@ markup: |
 
 .spectrum-TabList {
   position: relative;
+  z-index: 0;
 
   margin: 0;
   padding: 0;
 }
 
-.spectrum-TabList * { outline: none; }
+.spectrum-Tab {
+  position: relative;
 
-.spectrum-TabList .spectrum-Tab {
-    position: relative;
-    cursor: pointer;
+  /* Float above the tab line */
+  z-index: 1;
+
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: color 125ms ease-out;
+  height: 32px;
+  line-height: 2rem;
+}
+
+.spectrum-Tab.is-disabled {
+    cursor: default;
   }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
-      /* Ensure the label doesn't drop down */
-      display: inline-block;
+.spectrum-Tab-label {
+  cursor: pointer;
+}
 
-      vertical-align: middle;
+.spectrum-Tab-line {
+  position: absolute;
 
-      /* Support SVG icons */
-      width: 18px;
-      height: 18px;
+  /* Be below the tab */
+  z-index: 0;
 
-      /* Support font icons */
-      font-size: 1.125rem;
-      line-height: 1.125rem;
+  transition: transform 125ms ease-in-out;
+  left: 0;
+  transform-origin: top left;
+}
+
+.spectrum-TabList--page .spectrum-Tab, .spectrum-TabList--panel .spectrum-Tab {
+    margin-bottom: 2px;
+  }
+
+.spectrum-TabList--page .spectrum-Tab:focus, .spectrum-TabList--panel .spectrum-Tab:focus {
+      border-radius: 4px;
     }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
-      font-size: 0.625rem;
-      font-weight: 700;
-      letter-spacing: 0.0625rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      white-space: nowrap;
-    }
+.spectrum-TabList--panel .spectrum-Tab-label {
+    font-size: 0.65625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-.spectrum-TabList .spectrum-Tab.is-disabled {
-      cursor: default;
-    }
+.spectrum-TabList--panel .spectrum-Tab-icon {
+    /* Ensure the label doesn't drop down */
+    display: inline-block;
+    vertical-align: middle;
 
-/* topdoc
----
-  name: TabList - Horizontal - Label
-  description: The Spectrum tab list with labels in horizontal mode 
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
+    /* Support SVG icons */
+    width: 18px;
+    height: 18px;
 
+    /* Support font icons */
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
 
-*/
-
-/* topdoc
----
-  name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
-
-.spectrum-TabList--horizontal,
-.spectrum-TabList--anchored {
+.spectrum-TabList--horizontal {
   display: block;
 }
 
-.spectrum-TabList--horizontal::after, .spectrum-TabList--anchored::after {
-    content: '';
-    clear: both;
-    display: block;
+.spectrum-TabList--horizontal .spectrum-Tab {
+    display: inline-block;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
-    float: left;
-    display: block;
-    box-sizing: border-box;
+.spectrum-TabList--horizontal .spectrum-Tab-label {
     text-overflow: ellipsis;
-    max-width: 250px;
-    margin: 0 15px 0 0;
-    padding: 0px 8px;
-    line-height: 2rem;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon {
-      margin-right: 5px;
+.spectrum-TabList--horizontal .spectrum-Tab-line {
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 2px;
+  }
+
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab {
+      padding: 0 8px;
+      margin-right: 8px;
     }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon:last-child, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon:last-child {
-        margin-right: 0px;
-      }
-
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-label, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      padding: 6px 0;
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab-label {
+      text-transform: capitalize;
     }
 
-/* Horizontal Active Tab Line */
+.spectrum-TabList--horizontal.spectrum-TabList--anchored {
+    display: inline-block;
+    border-bottom: 2px solid;
+  }
 
-.spectrum-TabList--horizontal .spectrum-Tab.is-selected:after, .spectrum-TabList--anchored .spectrum-Tab.is-selected:after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 2px;
-        border-bottom: 2px solid;
-      }
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab {
+      margin: 0px 16px;
+      padding-bottom: 8px;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Label
-  description: The Spectrum tab list with labels in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-label {
+      text-transform: capitalize;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Icon
-  description: The Spectrum tab list with icons in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-line {
+      bottom: -2px;
+    }
+
+.spectrum-TabList--horizontal.spectrum-TabList--panel .spectrum-Tab {
+      margin-right: 8px;
+      height: 24px;
+    }
+
+.spectrum-TabList--panel .spectrum-Tab {
+    line-height: normal;
+
+    padding: 1px 6px 5px 6px;
+  }
 
 .spectrum-TabList--vertical {
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
 }
 
 .spectrum-TabList--vertical .spectrum-Tab {
     display: block;
-    overflow: visible; /* overflow: ellipsis; */
-    min-width: 0;
-    margin: 0 0 4px 0;
-    float: none;
-
-    text-align: left;
+    margin-left: 2px;
   }
 
-.spectrum-TabList--vertical .spectrum-Tab:last-child {
-      margin-bottom: 0;
-    }
+.spectrum-TabList--vertical .spectrum-Tab-label {
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
 
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-icon {
-      padding: 4px 7px;
+.spectrum-TabList--vertical .spectrum-Tab-line {
+    top: 2px;
+    left: 0;
+    width: 2px;
+    height: 20px;
+    border-radius:  1px;
+  }
+
+.spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
-      line-height: 1.5rem;
-      vertical-align: middle;
     }
-
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-label {
-      padding: 4px 7px;
-      height: 16px;
-      line-height: 1rem;
-      vertical-align: middle;
-    }
-
-/* Vertical Active Tab Line */
-
-.spectrum-TabList--vertical .spectrum-Tab.is-selected:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 4px;
-        bottom: 4px;
-        /* top = bottom = label vertical padding | is hackfix making the left active bar
-          as tall as the (label.height - label.vertical-padding) / 2 */
-
-        display: block;
-        width: 2px;
-        height: auto;
-
-        border: none; /* reset border */
-        border-left: 2px solid;
-      }
 
 .spectrum-Tab-label:empty {
   /* Hide the tab label if it's not being used */
   display: none;
-}
-
-/* topdoc
----
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <ul class="spectrum-TabList spectrum-TabList--anchored">
-      <li class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="1">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="2">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="3">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </li>
-      <li class="spectrum-Tab is-disabled" tabindex="4">
-        <label class="spectrum-Tab-label">Friday</label>
-      </li>
-    </ul>
-
-*/
-
-.spectrum-TabList--anchored {
-  list-style-type: none;
-  height: 32px;
-}
-
-.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      cursor: pointer;
-      text-transform: none;
-/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
-      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab::after,
-  .spectrum-TabList--anchored::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
-    height: 2px;
-  }
-
-/* Large Tab (Bigger font and no uppercase) */
-
-.spectrum-TabList--large .spectrum-Tab {
-  margin: 0 17px 0 0;
-  padding: 10px 8px;
-
-  text-transform: none;
-  font-size: 0.875rem;
 }
 
 :root {
@@ -3568,7 +3400,8 @@ markup: |
     opacity: 0;
     pointer-events: none;
     margin-top:2px;
-    transition: opacity 125ms, transform 125ms;
+    transition: opacity 125ms, transform 125ms, visibility 0ms linear 125ms;
+    visibility: hidden;
     min-width: 100%;
     max-height: 280px;
     overflow-y: auto;
@@ -3592,6 +3425,8 @@ markup: |
       transform: translateY(4px); /*needed for the proper spectrum transition*/
       pointer-events: all;
       position: absolute;
+      transition-delay: 0ms;
+      visibility: visible;
     }
 
 .spectrum-Dropdown-trigger {
@@ -3785,12 +3620,13 @@ markup: |
 
 .spectrum-Popover {
   position: relative;
+  pointer-events: none;
   display: inline-block;
   box-sizing: border-box;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
-  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out;
+  transition: left 125ms ease-in-out, opacity 125ms ease-in-out, top 125ms ease-in-out, visibility 0ms linear 125ms;
   visibility: hidden;
   opacity: 0;
   left: 0px;
@@ -3805,6 +3641,7 @@ markup: |
     visibility: visible;
     opacity: 1;
     transition-delay: 0ms;
+    pointer-events: all;
   }
 
 .spectrum-Popover .spectrum-Dialog-wrapper {
@@ -4408,47 +4245,51 @@ markup: |
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }
 
-.spectrum-Stepper .spectrum-Stepper-buttons {
-    -ms-flex: 1;
-        flex: 1;
-  }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Button {
-      position: relative;
-      margin: 0;
-      border-width: 1px;
-      border-right-width: 0;
-      border-radius: 4px 0 0 4px;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepUp {
-      border-bottom: none;
-      border-bottom-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
-      float: left;
-      border-top: none;
-      border-top-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown:focus {
-        border-top: none;
-      }
-
-.spectrum-Stepper-input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  position: relative;
-  width: 100%;
+.spectrum-Stepper-buttons {
+  display: block;
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
+  display: block;
+
   height: 16px;
   width: 24px;
+
   padding-left: 6px;
   padding-right: 6px;
+
+  /* Avoid margin added by adjacent buttons */
+  margin: 0 !important;
+
+  border-width: 1px;
+  border-right-width: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.spectrum-Stepper-stepUp {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown {
+  border-top: none;
+  border-top-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown:focus {
+    border-top: none;
+  }
+
+.spectrum-Stepper-input {
+  position: relative;
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .spectrum-Stepper-stepUpIcon,

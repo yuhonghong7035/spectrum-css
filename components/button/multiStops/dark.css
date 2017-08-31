@@ -292,8 +292,6 @@ markup: |
 .spectrum--dark .spectrum-Button--action {
   background-color: rgb(45, 45, 45);
   border-color: rgb(62, 62, 62);
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(205, 205, 205);
 }
 .spectrum--dark .spectrum-Button--action:focus {
@@ -349,8 +347,6 @@ markup: |
 .spectrum--dark .spectrum-Button--quiet--action {
   background-color: transparent;
   border-color: transparent;
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(205, 205, 205);
 }
 .spectrum--dark .spectrum-Button--quiet--action:focus {

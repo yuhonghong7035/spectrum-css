@@ -1,9 +1,3 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 .spectrum-Stepper {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -18,47 +12,51 @@
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }
 
-.spectrum-Stepper .spectrum-Stepper-buttons {
-    -ms-flex: 1;
-        flex: 1;
-  }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Button {
-      position: relative;
-      margin: 0;
-      border-width: 1px;
-      border-right-width: 0;
-      border-radius: 4px 0 0 4px;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepUp {
-      border-bottom: none;
-      border-bottom-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
-      float: left;
-      border-top: none;
-      border-top-left-radius: 0;
-    }
-
-.spectrum-Stepper .spectrum-Stepper-buttons .spectrum-Stepper-stepDown:focus {
-        border-top: none;
-      }
-
-.spectrum-Stepper-input {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  position: relative;
-  width: 100%;
+.spectrum-Stepper-buttons {
+  display: block;
 }
 
 .spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
+  display: block;
+
   height: 16px;
   width: 24px;
+
   padding-left: 6px;
   padding-right: 6px;
+
+  /* Avoid margin added by adjacent buttons */
+  margin: 0 !important;
+
+  border-width: 1px;
+  border-right-width: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.spectrum-Stepper-stepUp {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown {
+  border-top: none;
+  border-top-left-radius: 0;
+}
+
+.spectrum-Stepper-stepDown:focus {
+    border-top: none;
+  }
+
+.spectrum-Stepper-input {
+  position: relative;
+
+  -ms-flex: 1;
+
+      flex: 1;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .spectrum-Stepper-stepUpIcon,

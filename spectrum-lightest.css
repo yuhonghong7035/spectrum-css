@@ -361,8 +361,6 @@ markup: |
 .spectrum--lightest .spectrum-Button--action {
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(80, 80, 80);
 }
 .spectrum--lightest .spectrum-Button--action:focus {
@@ -418,8 +416,6 @@ markup: |
 .spectrum--lightest .spectrum-Button--quiet--action {
   background-color: transparent;
   border-color: transparent;
-  border-width: 1px;
-  border-radius: 4px;
   color: rgb(80, 80, 80);
 }
 .spectrum--lightest .spectrum-Button--quiet--action:focus {
@@ -835,21 +831,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 .spectrum--lightest .spectrum-Checkbox:hover .spectrum-Checkbox-checkmark {
@@ -874,21 +870,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox is-disabled">
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-3">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-4">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-disabled is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-5">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 
 */
 .spectrum--lightest .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-checkmark {
@@ -924,21 +920,21 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <div class="spectrum-Checkbox">
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-0">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-1">Checkbox</label>
-  </div>
-  <div class="spectrum-Checkbox is-indeterminate">
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
     <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
     <span class="spectrum-Checkbox-checkmark"></span>
-    <label class="spectrum-Checkbox-label" for="checkbox-2">Checkbox</label>
-  </div>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
 */
 .spectrum--lightest .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
     border-color: rgb(227, 72, 80);
@@ -1330,96 +1326,92 @@ markup: |
 .spectrum--lightest .spectrum-Wait--dots {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='12' viewBox='0 0 1280 12'%3E%3Cdefs%3E%3Cstyle%3E.a%2C .aa%2C .ab%2C .ac%2C .ad%2C .ae%2C .af%2C .ag%2C .ah%2C .ai%2C .aj%2C .ak%2C .al%2C .am%2C .an%2C .ao%2C .ap%2C .b%2C .c%2C .d%2C .e%2C .f%2C .g%2C .h%2C .i%2C .j%2C .k%2C .l%2C .m%2C .n%2C .o%2C .p%2C .q%2C .r%2C .s%2C .t%2C .u%2C .v%2C .w%2C .x%2C .y%2C .z %7B fill: %23000%3B %7D .a %7B fill-opacity: 0.53%3B %7D .b %7B fill-opacity: 0.36%3B %7D .c %7B fill-opacity: 0.23%3B %7D .d %7B fill-opacity: 0.52%3B %7D .e %7B fill-opacity: 0.35%3B %7D .f %7B fill-opacity: 0.24%3B %7D .g %7B fill-opacity: 0.5%3B %7D .h %7B fill-opacity: 0.33%3B %7D .i %7B fill-opacity: 0.26%3B %7D .j %7B fill-opacity: 0.48%3B %7D .k %7B fill-opacity: 0.31%3B %7D .l %7B fill-opacity: 0.28%3B %7D .m %7B fill-opacity: 0.46%3B %7D .n %7B fill-opacity: 0.29%3B %7D .o %7B fill-opacity: 0.3%3B %7D .p %7B fill-opacity: 0.45%3B %7D .q %7B fill-opacity: 0.28%3B %7D .r %7B fill-opacity: 0.31%3B %7D .s %7B fill-opacity: 0.43%3B %7D .t %7B fill-opacity: 0.26%3B %7D .u %7B fill-opacity: 0.33%3B %7D .v %7B fill-opacity: 0.41%3B %7D .w %7B fill-opacity: 0.24%3B %7D .x %7B fill-opacity: 0.35%3B %7D .y %7B fill-opacity: 0.4%3B %7D .z %7B fill-opacity: 0.23%3B %7D .aa %7B fill-opacity: 0.36%3B %7D .ab %7B fill-opacity: 0.38%3B %7D .ac %7B fill-opacity: 0.21%3B %7D .ad %7B fill-opacity: 0.55%3B %7D .ae %7B fill-opacity: 0.53%3B %7D .af %7B fill-opacity: 0.52%3B %7D .ag %7B fill-opacity: 0.5%3B %7D .ah %7B fill-opacity: 0.48%3B %7D .ai %7B fill-opacity: 0.47%3B %7D .aj %7B fill-opacity: 0.45%3B %7D .ak %7B fill-opacity: 0.43%3B %7D .al %7B fill-opacity: 0.41%3B %7D .am %7B fill-opacity: 0.4%3B %7D .an %7B fill-opacity: 0.55%3B %7D .ao %7B fill-opacity: 0.38%3B %7D .ap %7B fill-opacity: 0.21%3B %7D%3C/style%3E%3C/defs%3E%3Cg%3E%3Cpath class='a' d='M25.76%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C25.76%2C1.48Z'/%3E%3Cpath class='b' d='M15.56%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C19.2%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C15.56%2C2.24Z'/%3E%3Cpath class='c' d='M5.36%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C5.36%2C2.85Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='d' d='M57.76%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C57.76%2C1.55Z'/%3E%3Cpath class='e' d='M47.56%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C47.56%2C2.31Z'/%3E%3Cpath class='f' d='M37.36%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C37.36%2C2.77Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='g' d='M89.76%2C1.63A4.25%2C4.25%2C0%2C1%2C0%2C94%2C5.88%2C4.25%2C4.25%2C0%2C0%2C0%2C89.76%2C1.63Z'/%3E%3Cpath class='h' d='M79.56%2C2.39A3.49%2C3.49%2C0%2C1%2C0%2C83%2C5.88%2C3.49%2C3.49%2C0%2C0%2C0%2C79.56%2C2.39Z'/%3E%3Cpath class='i' d='M69.36%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C69.36%2C2.69Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='j' d='M121.76%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C121.76%2C1.7Z'/%3E%3Cpath class='k' d='M111.56%2C2.47A3.41%2C3.41%2C0%2C1%2C0%2C115%2C5.88%2C3.41%2C3.41%2C0%2C0%2C0%2C111.56%2C2.47Z'/%3E%3Cpath class='l' d='M101.36%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C101.36%2C2.62Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='m' d='M153.76%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C153.76%2C1.78Z'/%3E%3Cpath class='n' d='M143.56%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C143.56%2C2.54Z'/%3E%3Cpath class='o' d='M133.36%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C133.36%2C2.54Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='p' d='M185.76%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C185.76%2C1.86Z'/%3E%3Cpath class='q' d='M175.56%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C175.56%2C2.62Z'/%3E%3Cpath class='r' d='M165.36%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C165.36%2C2.46Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='s' d='M217.76%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C217.76%2C1.93Z'/%3E%3Cpath class='t' d='M207.56%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C207.56%2C2.69Z'/%3E%3Cpath class='u' d='M197.36%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C197.36%2C2.39Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='v' d='M249.76%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C249.76%2C2Z'/%3E%3Cpath class='w' d='M239.56%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C239.56%2C2.77Z'/%3E%3Cpath class='x' d='M229.36%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C229.36%2C2.31Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='y' d='M281.76%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C281.76%2C2.08Z'/%3E%3Cpath class='z' d='M271.56%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C271.56%2C2.85Z'/%3E%3Cpath class='aa' d='M261.36%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C265%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C261.36%2C2.24Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ab' d='M313.76%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C313.76%2C2.16Z'/%3E%3Cpath class='ac' d='M303.56%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C303.56%2C2.92Z'/%3E%3Cpath class='ab' d='M293.36%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C293.36%2C2.16Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='aa' d='M345.76%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C345.76%2C2.24Z'/%3E%3Cpath class='c' d='M335.56%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C335.56%2C2.85Z'/%3E%3Cpath class='y' d='M325.36%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C325.36%2C2.08Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='x' d='M377.76%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C377.76%2C2.31Z'/%3E%3Cpath class='f' d='M367.56%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C367.56%2C2.77Z'/%3E%3Cpath class='v' d='M357.36%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C357.36%2C2Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='u' d='M409.76%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C409.76%2C2.39Z'/%3E%3Cpath class='i' d='M399.56%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C399.56%2C2.69Z'/%3E%3Cpath class='s' d='M389.36%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C389.36%2C1.93Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='r' d='M441.76%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C441.76%2C2.46Z'/%3E%3Cpath class='l' d='M431.56%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C431.56%2C2.62Z'/%3E%3Cpath class='p' d='M421.36%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C421.36%2C1.86Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='o' d='M473.76%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C473.76%2C2.54Z'/%3E%3Cpath class='o' d='M463.56%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C463.56%2C2.54Z'/%3E%3Cpath class='m' d='M453.36%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C453.36%2C1.78Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='l' d='M505.76%2C2.62A3.26%2C3.26%2C0%2C1%2C0%2C509%2C5.88%2C3.26%2C3.26%2C0%2C0%2C0%2C505.76%2C2.62Z'/%3E%3Cpath class='r' d='M495.56%2C2.46A3.41%2C3.41%2C0%2C1%2C0%2C499%2C5.88%2C3.41%2C3.41%2C0%2C0%2C0%2C495.56%2C2.46Z'/%3E%3Cpath class='j' d='M485.36%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C485.36%2C1.7Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='i' d='M537.76%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C537.76%2C2.69Z'/%3E%3Cpath class='u' d='M527.56%2C2.39A3.49%2C3.49%2C0%2C1%2C0%2C531%2C5.88%2C3.49%2C3.49%2C0%2C0%2C0%2C527.56%2C2.39Z'/%3E%3Cpath class='g' d='M517.36%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C517.36%2C1.63Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='f' d='M569.76%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C569.76%2C2.77Z'/%3E%3Cpath class='x' d='M559.56%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C559.56%2C2.31Z'/%3E%3Cpath class='d' d='M549.36%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C549.36%2C1.55Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='c' d='M601.76%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C601.76%2C2.85Z'/%3E%3Cpath class='aa' d='M591.56%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C591.56%2C2.24Z'/%3E%3Cpath class='a' d='M581.36%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C581.36%2C1.48Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ac' d='M633.76%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C633.76%2C2.92Z'/%3E%3Cpath class='ab' d='M623.56%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C623.56%2C2.16Z'/%3E%3Cpath class='ad' d='M613.36%2C1.4a4.48%2C4.48%2C0%2C1%2C0%2C4.48%2C4.48A4.48%2C4.48%2C0%2C0%2C0%2C613.36%2C1.4Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='c' d='M665.76%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C665.76%2C2.85Z'/%3E%3Cpath class='y' d='M655.56%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C655.56%2C2.08Z'/%3E%3Cpath class='a' d='M645.36%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C645.36%2C1.48Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='f' d='M697.76%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C697.76%2C2.77Z'/%3E%3Cpath class='v' d='M687.56%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C687.56%2C2Z'/%3E%3Cpath class='d' d='M677.36%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C677.36%2C1.55Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='i' d='M729.76%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C729.76%2C2.69Z'/%3E%3Cpath class='s' d='M719.56%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C719.56%2C1.93Z'/%3E%3Cpath class='g' d='M709.36%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C709.36%2C1.63Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='l' d='M761.76%2C2.62A3.26%2C3.26%2C0%2C1%2C0%2C765%2C5.88%2C3.26%2C3.26%2C0%2C0%2C0%2C761.76%2C2.62Z'/%3E%3Cpath class='p' d='M751.56%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C751.56%2C1.86Z'/%3E%3Cpath class='j' d='M741.36%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C741.36%2C1.7Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='o' d='M793.76%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C793.76%2C2.54Z'/%3E%3Cpath class='m' d='M783.56%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C783.56%2C1.78Z'/%3E%3Cpath class='m' d='M773.36%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C773.36%2C1.78Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='r' d='M825.76%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C825.76%2C2.46Z'/%3E%3Cpath class='j' d='M815.56%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C815.56%2C1.7Z'/%3E%3Cpath class='p' d='M805.36%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C805.36%2C1.86Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='u' d='M857.76%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C857.76%2C2.39Z'/%3E%3Cpath class='g' d='M847.56%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C847.56%2C1.63Z'/%3E%3Cpath class='s' d='M837.36%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C837.36%2C1.93Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='x' d='M889.76%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C889.76%2C2.31Z'/%3E%3Cpath class='d' d='M879.56%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C879.56%2C1.55Z'/%3E%3Cpath class='v' d='M869.36%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C869.36%2C2Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='aa' d='M921.76%2C2.24a3.64%2C3.64%2C0%2C1%2C0%2C3.64%2C3.64A3.64%2C3.64%2C0%2C0%2C0%2C921.76%2C2.24Z'/%3E%3Cpath class='a' d='M911.56%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C911.56%2C1.48Z'/%3E%3Cpath class='y' d='M901.36%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C901.36%2C2.08Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='ab' d='M953.76%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C953.76%2C2.16Z'/%3E%3Cpath class='ad' d='M943.56%2C1.4A4.48%2C4.48%2C0%2C1%2C0%2C948%2C5.88%2C4.48%2C4.48%2C0%2C0%2C0%2C943.56%2C1.4Z'/%3E%3Cpath class='ab' d='M933.36%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C933.36%2C2.16Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='y' d='M985.76%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C985.76%2C2.08Z'/%3E%3Cpath class='ae' d='M975.56%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C975.56%2C1.48Z'/%3E%3Cpath class='aa' d='M965.36%2C2.24A3.64%2C3.64%2C0%2C1%2C0%2C969%2C5.88%2C3.64%2C3.64%2C0%2C0%2C0%2C965.36%2C2.24Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='v' d='M1017.76%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C1017.76%2C2Z'/%3E%3Cpath class='af' d='M1007.56%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C1007.56%2C1.55Z'/%3E%3Cpath class='x' d='M997.36%2C2.31a3.56%2C3.56%2C0%2C1%2C0%2C3.56%2C3.56A3.56%2C3.56%2C0%2C0%2C0%2C997.36%2C2.31Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='s' d='M1049.76%2C1.93a3.94%2C3.94%2C0%2C1%2C0%2C3.94%2C3.94A3.94%2C3.94%2C0%2C0%2C0%2C1049.76%2C1.93Z'/%3E%3Cpath class='ag' d='M1039.56%2C1.63a4.25%2C4.25%2C0%2C1%2C0%2C4.25%2C4.25A4.25%2C4.25%2C0%2C0%2C0%2C1039.56%2C1.63Z'/%3E%3Cpath class='u' d='M1029.36%2C2.39a3.49%2C3.49%2C0%2C1%2C0%2C3.49%2C3.49A3.49%2C3.49%2C0%2C0%2C0%2C1029.36%2C2.39Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='p' d='M1081.76%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C1081.76%2C1.86Z'/%3E%3Cpath class='ah' d='M1071.56%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C1071.56%2C1.7Z'/%3E%3Cpath class='r' d='M1061.36%2C2.46a3.41%2C3.41%2C0%2C1%2C0%2C3.41%2C3.41A3.41%2C3.41%2C0%2C0%2C0%2C1061.36%2C2.46Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='m' d='M1113.76%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C1113.76%2C1.78Z'/%3E%3Cpath class='ai' d='M1103.56%2C1.78a4.1%2C4.1%2C0%2C1%2C0%2C4.1%2C4.1A4.1%2C4.1%2C0%2C0%2C0%2C1103.56%2C1.78Z'/%3E%3Cpath class='o' d='M1093.36%2C2.54a3.34%2C3.34%2C0%2C1%2C0%2C3.34%2C3.34A3.34%2C3.34%2C0%2C0%2C0%2C1093.36%2C2.54Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='j' d='M1145.76%2C1.7a4.17%2C4.17%2C0%2C1%2C0%2C4.17%2C4.17A4.17%2C4.17%2C0%2C0%2C0%2C1145.76%2C1.7Z'/%3E%3Cpath class='aj' d='M1135.56%2C1.86a4%2C4%2C0%2C1%2C0%2C4%2C4A4%2C4%2C0%2C0%2C0%2C1135.56%2C1.86Z'/%3E%3Cpath class='l' d='M1125.36%2C2.62a3.26%2C3.26%2C0%2C1%2C0%2C3.26%2C3.26A3.26%2C3.26%2C0%2C0%2C0%2C1125.36%2C2.62Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='g' d='M1177.76%2C1.63A4.25%2C4.25%2C0%2C1%2C0%2C1182%2C5.88%2C4.25%2C4.25%2C0%2C0%2C0%2C1177.76%2C1.63Z'/%3E%3Cpath class='ak' d='M1167.56%2C1.93a3.95%2C3.95%2C0%2C1%2C0%2C3.95%2C3.95A3.95%2C3.95%2C0%2C0%2C0%2C1167.56%2C1.93Z'/%3E%3Cpath class='i' d='M1157.36%2C2.69a3.18%2C3.18%2C0%2C1%2C0%2C3.18%2C3.18A3.18%2C3.18%2C0%2C0%2C0%2C1157.36%2C2.69Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='d' d='M1209.76%2C1.55a4.33%2C4.33%2C0%2C1%2C0%2C4.33%2C4.33A4.33%2C4.33%2C0%2C0%2C0%2C1209.76%2C1.55Z'/%3E%3Cpath class='al' d='M1199.56%2C2a3.87%2C3.87%2C0%2C1%2C0%2C3.87%2C3.87A3.87%2C3.87%2C0%2C0%2C0%2C1199.56%2C2Z'/%3E%3Cpath class='f' d='M1189.36%2C2.77a3.11%2C3.11%2C0%2C1%2C0%2C3.11%2C3.11A3.11%2C3.11%2C0%2C0%2C0%2C1189.36%2C2.77Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='a' d='M1241.76%2C1.48a4.4%2C4.4%2C0%2C1%2C0%2C4.4%2C4.4A4.4%2C4.4%2C0%2C0%2C0%2C1241.76%2C1.48Z'/%3E%3Cpath class='am' d='M1231.56%2C2.08a3.79%2C3.79%2C0%2C1%2C0%2C3.79%2C3.79A3.79%2C3.79%2C0%2C0%2C0%2C1231.56%2C2.08Z'/%3E%3Cpath class='c' d='M1221.36%2C2.85a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C1221.36%2C2.85Z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='an' d='M1273.82%2C1.4a4.48%2C4.48%2C0%2C1%2C0%2C4.48%2C4.48A4.48%2C4.48%2C0%2C0%2C0%2C1273.82%2C1.4Z'/%3E%3Cpath class='ao' d='M1263.62%2C2.16a3.72%2C3.72%2C0%2C1%2C0%2C3.72%2C3.72A3.72%2C3.72%2C0%2C0%2C0%2C1263.62%2C2.16Z'/%3E%3Cpath class='ap' d='M1253.42%2C2.92a3%2C3%2C0%2C1%2C0%2C3%2C3A3%2C3%2C0%2C0%2C0%2C1253.42%2C2.92Z'/%3E%3C/g%3E%3C/svg%3E");
 }
+.spectrum--lightest .spectrum-Underlay {
+  background: rgba(0, 0, 0, 0.6);
+}
 /* topdoc
 ---
 name: Dialog - Modal
 description: The Spectrum 'modal' dialog
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Centered Modal Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal spectrum-Dialog--centered" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Modal Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a centered modal dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Centered Modal Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--centered" id="defaultModalDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Modal Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a centered modal dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
     </div>
   </div>
 
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Scrolling Modal Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--modal" id="defaultModalDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Scrolling Modal Dialog</h2>
-      </div>
-      <div class="spectrum-Dialog-content">
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-        <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Cancel</button>
-        <button class="spectrum-Button spectrum-Button--cta" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Save</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Scrolling Modal Dialog</button>
+  <div class="spectrum-Dialog" id="defaultModalDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Scrolling Modal Dialog</h2>
+    </div>
+    <div class="spectrum-Dialog-content">
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+      <div>This is a scrolling modal dialog with lots and lots of content that's also pretty wide.</div>
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
     </div>
   </div>
 
 
 */
-.spectrum--lightest .spectrum-Dialog--modal {
-  background: rgba(0, 0, 0, 0.6);
-}
-.spectrum--lightest .spectrum-Dialog-wrapper {
+.spectrum--lightest .spectrum-Dialog {
   background: rgb(255, 255, 255);
 }
 .spectrum--lightest .spectrum-Dialog-header {
@@ -1444,19 +1436,17 @@ markup: |
 name: Dialog - Success
 description: A Spectrum 'success' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Success Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--success spectrum-Dialog--modal spectrum-Dialog--centered" id="successDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Success Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a success dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Success Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--success spectrum-Dialog--centered" id="successDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Success Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a success dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -1472,19 +1462,17 @@ markup:
 name: Dialog - Info
 description: The Spectrum 'info' dialog
 markup:
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Info Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--modal spectrum-Dialog--centered" id="infoDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is an info dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Info Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--info spectrum-Dialog--centered" id="infoDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Info / Help Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is an info dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -1501,19 +1489,17 @@ markup:
 name: Dialog - Warning
 description: A Spectrum 'warning' dialog
 markup:
-  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Warning Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--warning spectrum-Dialog--modal spectrum-Dialog--centered" id="warningDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is a warning dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Warning Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--warning spectrum-Dialog--centered" id="warningDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Warning Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is a warning dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -1530,19 +1516,17 @@ markup:
 name: Dialog - Error
 description: The Spectrum 'error' dialog
 markup:
-  <button class="spectrum-Button spectrum-Button--primary" onclick="this.nextElementSibling.classList.add('is-open')">Open Error Dialog</button>
-  <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--modal spectrum-Dialog--centered" id="errorDialog">
-    <div class="spectrum-Dialog-wrapper">
-      <div class="spectrum-Dialog-header">
-        <h2 class="spectrum-Dialog-title">Error Dialog</h2>
-        <div class="spectrum-Dialog-typeIcon"></div>
-      </div>
-      <div class="spectrum-Dialog-content">
-        This is an error dialog.
-      </div>
-      <div class="spectrum-Dialog-footer">
-        <button class="spectrum-Button spectrum-Button--secondary" onclick="this.closest('.spectrum-Dialog').classList.remove('is-open')">Ok</button>
-      </div>
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Error Dialog</h2>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">
+      This is an error dialog.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
     </div>
   </div>
 
@@ -2096,78 +2080,136 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 /* topdoc
 ---
-  name: Tab - Default
-  description: The default Spectrum Tab element
+  name: TabList - Panel - Vertical
+  description: The Spectrum tab list with panel variant and vertical orientation
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
   markup: |
-    <!-- TODO: add markup here -->
-
+    <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab-line" style="height:21px; top: 5px;"></div>
+    </div>
 */
 .spectrum--lightest .spectrum-Tab {
   color: rgb(118, 118, 118);
 }
+/* topdoc
+---
+  name: TabList - Panel
+  description: The Spectrum tab list with panel variant
+  modifiers:
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      </div>
+      <div class="spectrum-Tab-line" style="width:86px; left: 8px;"></div>
+    </div>
+*/
 .spectrum--lightest .spectrum-Tab:hover {
-    color: rgb(50, 50, 50)
+    color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-Tab:focus {
-    color: rgb(50, 50, 50)
-  }
+/* topdoc
+---
+  name: TabList - Page
+  description: The Spectrum tab list with page variant
+  modifiers:
+    ':disabled': Disabled state
+    ':hover': Hover state
+    ':focus': Focused
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 1</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 2</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 3</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tab 4</label>
+      </div>
+      <div class="spectrum-Tab-line" style="width:36px; left: 8px;"></div>
+    </div>
+*/
 .spectrum--lightest .spectrum-Tab.is-selected {
-    color: rgb(50, 50, 50)
+    color: rgb(50, 50, 50);
+  }
+/* topdoc
+---
+  name: TabList - Anchored
+  description: The Spectrum anchored tab list.
+  markup: |
+    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
+      <div class="spectrum-Tab is-selected" tabindex="0">
+        <label class="spectrum-Tab-label">Monday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Tuesday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Wednesday</label>
+      </div>
+      <div class="spectrum-Tab" tabindex="0">
+        <label class="spectrum-Tab-label">Thursday</label>
+      </div>
+      <div class="spectrum-Tab is-disabled" tabindex="0">
+        <label class="spectrum-Tab-label">Friday</label>
+      </div>
+      <!-- Apply .is-focused to element below when corresponding tab is in focus -->
+      <div class="spectrum-Tab-line" style="width:62px; left: 15px;"></div>
+    </div>
+
+*/
+.spectrum--lightest .spectrum-Tab:focus {
+    color: rgb(50, 50, 50);
+    box-shadow: 0 0 0 2px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Tab.is-disabled {
-    color: rgb(188, 188, 188)
+    color: rgb(188, 188, 188);
   }
 .spectrum--lightest .spectrum-TabList--anchored {
-/*
-  .spectrum-Tab {
-    .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-default);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-default);
-      }
-    }
-
-    &:hover .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-hover);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-hover);
-      }
-    }
-
-    &:active .spectrum-Tab-label,
-    &.is-selected .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-active);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-active);
-      }
-    }
-
-    &:focus .spectrum-Tab-label {
-      color: var(--spectrum-tablist-anchored-label-color-focus);
-
-      &::after {
-        background-color: var(--spectrum-tablist-anchored-border-color-focus);
-      }
-    }
-
-    &.is-disabled {
-      .spectrum-Tab-label {
-        color: var(--spectrum-tablist-anchored-label-color-disabled);
-
-        &::after {
-          background-color: var(--spectrum-tablist-anchored-border-color-disabled);
-        }
-      }
-    }
-  }
-*/
+  border-color: rgb(244, 244, 244);
 }
-.spectrum--lightest .spectrum-TabList--anchored::before {
-    background-color: rgb(244, 244, 244);
-  }
+.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:focus {
+      color: rgb(55, 142, 240);
+      box-shadow: initial;
+    }
+/* The focus line should become blue only for anchored tabs */
+.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab:focus ~ .spectrum-Tab-line {
+          background-color:  rgb(55, 142, 240);
+      }
+.spectrum--lightest .spectrum-Tab-line {
+  background-color: rgb(50, 50, 50);
+}
 /* Default Label Style is 'incomplete' */
 .spectrum--lightest .spectrum-Steplist .spectrum-Steplist-label {
     color: rgb(149, 149, 149)
@@ -2184,21 +2226,6 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum--lightest .spectrum-Steplist .spectrum-Steplist-step.is-complete .spectrum-Steplist-label {
         color: rgb(118, 118, 118)
       }
-/*
-Todo: Determine if unused mixins are required
-
-spectrum-tablist-line-default() {
-  border-color: var(--spectrum-tablist-border-color-default)
-}
-
-spectrum-tablist-line-focus() {
-  border-color: var(--spectrum-tablist-border-color-focus)
-}
-
-spectrum-tablist-line-disabled() {
-  border-color: var(--spectrum-tablist-border-color-disabled)
-}
-*/
 .spectrum--lightest .spectrum-Steplist .spectrum-Steplist-step.is-complete .spectrum-Steplist-marker {
         background-color: rgb(149, 149, 149)
       }

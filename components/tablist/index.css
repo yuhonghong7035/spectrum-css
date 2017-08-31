@@ -1,324 +1,162 @@
-/* For documentation beautification only - DO NOT COPY */
-
-.dummy-spacing {
-  height: 160px;
-}
-
 :root {
   /* The size of the icons in tabs */
 }
 
 .spectrum-TabList {
   position: relative;
+  z-index: 0;
 
   margin: 0;
   padding: 0;
 }
 
-.spectrum-TabList * { outline: none; }
+.spectrum-Tab {
+  position: relative;
 
-.spectrum-TabList .spectrum-Tab {
-    position: relative;
-    cursor: pointer;
+  /* Float above the tab line */
+  z-index: 1;
+
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  transition: color 125ms ease-out;
+  height: 32px;
+  line-height: 2rem;
+}
+
+.spectrum-Tab.is-disabled {
+    cursor: default;
   }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-icon {
-      /* Ensure the label doesn't drop down */
-      display: inline-block;
+.spectrum-Tab-label {
+  cursor: pointer;
+}
 
-      vertical-align: middle;
+.spectrum-Tab-line {
+  position: absolute;
 
-      /* Support SVG icons */
-      width: 18px;
-      height: 18px;
+  /* Be below the tab */
+  z-index: 0;
 
-      /* Support font icons */
-      font-size: 1.125rem;
-      line-height: 1.125rem;
+  transition: transform 125ms ease-in-out;
+  left: 0;
+  transform-origin: top left;
+}
+
+.spectrum-TabList--page .spectrum-Tab, .spectrum-TabList--panel .spectrum-Tab {
+    margin-bottom: 2px;
+  }
+
+.spectrum-TabList--page .spectrum-Tab:focus, .spectrum-TabList--panel .spectrum-Tab:focus {
+      border-radius: 4px;
     }
 
-.spectrum-TabList .spectrum-Tab > .spectrum-Tab-label {
-      font-size: 0.625rem;
-      font-weight: 700;
-      letter-spacing: 0.0625rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      text-align: center;
-      white-space: nowrap;
-    }
+.spectrum-TabList--panel .spectrum-Tab-label {
+    font-size: 0.65625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-.spectrum-TabList .spectrum-Tab.is-disabled {
-      cursor: default;
-    }
+.spectrum-TabList--panel .spectrum-Tab-icon {
+    /* Ensure the label doesn't drop down */
+    display: inline-block;
+    vertical-align: middle;
 
-/* topdoc
----
-  name: TabList - Horizontal - Label
-  description: The Spectrum tab list with labels in horizontal mode 
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
+    /* Support SVG icons */
+    width: 18px;
+    height: 18px;
 
+    /* Support font icons */
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+  }
 
-*/
-
-/* topdoc
----
-  name: TabList - Horizontal - Icon
-  description: The Spectrum tab list with icons in horizontal mode
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
-
-.spectrum-TabList--horizontal,
-.spectrum-TabList--anchored {
+.spectrum-TabList--horizontal {
   display: block;
 }
 
-.spectrum-TabList--horizontal::after, .spectrum-TabList--anchored::after {
-    content: '';
-    clear: both;
-    display: block;
+.spectrum-TabList--horizontal .spectrum-Tab {
+    display: inline-block;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab, .spectrum-TabList--anchored .spectrum-Tab {
-    float: left;
-    display: block;
-    box-sizing: border-box;
+.spectrum-TabList--horizontal .spectrum-Tab-label {
     text-overflow: ellipsis;
-    max-width: 250px;
-    margin: 0 15px 0 0;
-    padding: 0px 8px;
-    line-height: 2rem;
   }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon {
-      margin-right: 5px;
+.spectrum-TabList--horizontal .spectrum-Tab-line {
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    height: 2px;
+  }
+
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab {
+      padding: 0 8px;
+      margin-right: 8px;
     }
 
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-icon:last-child, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-icon:last-child {
-        margin-right: 0px;
-      }
-
-.spectrum-TabList--horizontal .spectrum-Tab > .spectrum-Tab-label, .spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      padding: 6px 0;
+.spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab-label {
+      text-transform: capitalize;
     }
 
-/* Horizontal Active Tab Line */
+.spectrum-TabList--horizontal.spectrum-TabList--anchored {
+    display: inline-block;
+    border-bottom: 2px solid;
+  }
 
-.spectrum-TabList--horizontal .spectrum-Tab.is-selected:after, .spectrum-TabList--anchored .spectrum-Tab.is-selected:after {
-        content: "";
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 2px;
-        border-bottom: 2px solid;
-      }
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab {
+      margin: 0px 16px;
+      padding-bottom: 8px;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Label
-  description: The Spectrum tab list with labels in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <label class="spectrum-Tab-label">Monday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </div>
-      <div class="spectrum-Tab">
-        <label class="spectrum-Tab-label">Friday</label>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-label {
+      text-transform: capitalize;
+    }
 
-/* topdoc
----
-  name: TabList - Vertical - Icon
-  description: The Spectrum tab list with icons in vertical mode
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical">
-      <div class="spectrum-Tab is-selected">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">With a Label</label>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-      </div>
-      <div class="spectrum-Tab">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-      </div>
-    </div>
-*/
+.spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-line {
+      bottom: -2px;
+    }
+
+.spectrum-TabList--horizontal.spectrum-TabList--panel .spectrum-Tab {
+      margin-right: 8px;
+      height: 24px;
+    }
+
+.spectrum-TabList--panel .spectrum-Tab {
+    line-height: normal;
+
+    padding: 1px 6px 5px 6px;
+  }
 
 .spectrum-TabList--vertical {
   display: inline-block;
+  padding: 0px;
+  margin: 0px;
 }
 
 .spectrum-TabList--vertical .spectrum-Tab {
     display: block;
-    overflow: visible; /* overflow: ellipsis; */
-    min-width: 0;
-    margin: 0 0 4px 0;
-    float: none;
-
-    text-align: left;
+    margin-left: 2px;
   }
 
-.spectrum-TabList--vertical .spectrum-Tab:last-child {
-      margin-bottom: 0;
-    }
+.spectrum-TabList--vertical .spectrum-Tab-label {
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
 
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-icon {
-      padding: 4px 7px;
+.spectrum-TabList--vertical .spectrum-Tab-line {
+    top: 2px;
+    left: 0;
+    width: 2px;
+    height: 20px;
+    border-radius:  1px;
+  }
+
+.spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
-      line-height: 1.5rem;
-      vertical-align: middle;
     }
-
-.spectrum-TabList--vertical .spectrum-Tab > .spectrum-Tab-label {
-      padding: 4px 7px;
-      height: 16px;
-      line-height: 1rem;
-      vertical-align: middle;
-    }
-
-/* Vertical Active Tab Line */
-
-.spectrum-TabList--vertical .spectrum-Tab.is-selected:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 4px;
-        bottom: 4px;
-        /* top = bottom = label vertical padding | is hackfix making the left active bar
-          as tall as the (label.height - label.vertical-padding) / 2 */
-
-        display: block;
-        width: 2px;
-        height: auto;
-
-        border: none; /* reset border */
-        border-left: 2px solid;
-      }
 
 .spectrum-Tab-label:empty {
   /* Hide the tab label if it's not being used */
   display: none;
-}
-
-/* topdoc
----
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <ul class="spectrum-TabList spectrum-TabList--anchored">
-      <li class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="1">
-        <label class="spectrum-Tab-label">Tuesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="2">
-        <label class="spectrum-Tab-label">Wednesday</label>
-      </li>
-      <li class="spectrum-Tab" tabindex="3">
-        <label class="spectrum-Tab-label">Thursday</label>
-      </li>
-      <li class="spectrum-Tab is-disabled" tabindex="4">
-        <label class="spectrum-Tab-label">Friday</label>
-      </li>
-    </ul>
-
-*/
-
-.spectrum-TabList--anchored {
-  list-style-type: none;
-  height: 32px;
-}
-
-.spectrum-TabList--anchored .spectrum-Tab > .spectrum-Tab-label {
-      cursor: pointer;
-      text-transform: none;
-/*      font-size: var(--spectrum-tablist-anchored-label-size-default);
-      font-weight: var(--spectrum-tablist-anchored-label-weight-default);*/
-    }
-
-.spectrum-TabList--anchored .spectrum-Tab::after,
-  .spectrum-TabList--anchored::before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /*height: var(--spectrum-tablist-anchored-border-size-default);*/
-    height: 2px;
-  }
-
-/* Large Tab (Bigger font and no uppercase) */
-
-.spectrum-TabList--large .spectrum-Tab {
-  margin: 0 17px 0 0;
-  padding: 10px 8px;
-
-  text-transform: none;
-  font-size: 0.875rem;
 }
