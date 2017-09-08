@@ -1881,7 +1881,7 @@ markup: |
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, calc(-50% + 8px));
+  transform: translateX(-50%) translateY(-50%) translateY(8px);
 
   /* Appear above underlay */
   z-index: 2;
@@ -4836,6 +4836,9 @@ description: |
 
 .spectrum {
   background-color: rgb(30, 30, 30);
+
+  /* Prevent tap highlights */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .spectrum,

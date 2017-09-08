@@ -1127,7 +1127,10 @@ markup: |
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 4px;
+
+  /* Apply padding by default to center text, giving consistency between input and textfield */
   padding: 4px 0;
+
   min-width: 110px;
   height: 32px;
   width: 192px;
@@ -1259,6 +1262,8 @@ markup: |
     background-position: calc(100% - 7px) calc(100% - 7px);
     padding-right: 30px;
   }
+
+/* Treat all quiet inputs and textareas the same */
 
 .spectrum-Textfield--quiet {
   resize: none;
@@ -1876,7 +1881,7 @@ markup: |
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, calc(-50% + 8px));
+  transform: translateX(-50%) translateY(-50%) translateY(8px);
 
   /* Appear above underlay */
   z-index: 2;
@@ -4831,6 +4836,9 @@ description: |
 
 .spectrum {
   background-color: rgb(245, 245, 245);
+
+  /* Prevent tap highlights */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .spectrum,

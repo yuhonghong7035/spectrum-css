@@ -12,4 +12,7 @@ description: |
 */
 .spectrum--light {
   background-color: rgb(245, 245, 245);
+
+  /* Prevent tap highlights */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
