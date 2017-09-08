@@ -28,7 +28,7 @@ markup: |
   <div class="dummy-spacing"></div>
 */
 .spectrum-ActionMenu {
-
+  display: inline-block;
 }
 .spectrum-ActionMenu-button {
   display: block;

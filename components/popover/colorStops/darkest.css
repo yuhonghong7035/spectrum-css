@@ -7,7 +7,7 @@
 name: Popover - Info/Help
 description: A Spectrum 'info/help' popover. When the icon element is present (preceeding the title element), padding will be added so text doesn't overlap the icon.
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--help is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--help is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -30,7 +30,7 @@ markup: |
 name: Popover - Success
 description: A Spectrum 'success' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--success is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Success Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -53,7 +53,7 @@ markup: |
 name: Popover - Error
 description: A Spectrum 'error' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--error is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--error is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Error Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -76,7 +76,7 @@ markup: |
 name: Popover - Warning
 description: A Spectrum 'warning' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--warning is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--warning is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Warning Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>

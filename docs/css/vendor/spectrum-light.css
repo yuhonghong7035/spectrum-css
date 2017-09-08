@@ -1127,7 +1127,7 @@ markup: |
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 4px;
-  padding: 0;
+  padding: 4px 0;
   min-width: 110px;
   height: 32px;
   width: 192px;
@@ -1149,7 +1149,9 @@ markup: |
   /* removes the native spin buttons in firefox. -mox-appearance: none has no effect */
   /* http://stackoverflow.com/questions/23372903/hide-spinner-in-input-number-firefox-29 */
   -moz-appearance: textfield;
-  -webkit-appearance: none;
+
+  /* Normalize is adding a specific selector that resets this, so be important */
+  -webkit-appearance: none !important;
 
   /* Remove the native clear button in IE */
 }
@@ -1242,7 +1244,6 @@ markup: |
   /* removes the side padding to align the text properly */
   padding-left: 0;
   padding-right: 0;
-
 }
 
 .spectrum-Textfield--multiline {
@@ -1259,7 +1260,7 @@ markup: |
     padding-right: 30px;
   }
 
-.spectrum-Textfield--quiet.spectrum-Textfield--multiline {
+.spectrum-Textfield--quiet {
   resize: none;
   overflow-y: hidden;
 }
@@ -1275,7 +1276,7 @@ markup: |
 
   transition: transform 125ms ease-in-out,
               opacity 125ms ease-in-out,
-              visibility 0ms linear;
+              visibility 0ms linear 125ms;
 
   pointer-events: none;
 }
@@ -3991,7 +3992,7 @@ markup: |
 */
 
 .spectrum-ActionMenu {
-
+  display: inline-block;
 }
 
 .spectrum-ActionMenu-button {
@@ -6128,13 +6129,13 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet">
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet is-invalid" required>
   </textarea>
 
 */
@@ -7702,7 +7703,7 @@ markup: |
 name: Popover - Info/Help
 description: A Spectrum 'info/help' popover. When the icon element is present (preceeding the title element), padding will be added so text doesn't overlap the icon.
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--help is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--help is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -7726,7 +7727,7 @@ markup: |
 name: Popover - Success
 description: A Spectrum 'success' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--success is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Success Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -7750,7 +7751,7 @@ markup: |
 name: Popover - Error
 description: A Spectrum 'error' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--error is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--error is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Error Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
@@ -7774,7 +7775,7 @@ markup: |
 name: Popover - Warning
 description: A Spectrum 'warning' popover
 markup: |
-  <div class="spectrum-Popover spectrum-Dialog--warning is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--warning is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Warning Popover</div>
       <div class="spectrum-Dialog-typeIcon"></div>
