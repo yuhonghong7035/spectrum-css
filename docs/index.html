@@ -21,53 +21,37 @@
         color: inherit;
       }
       
-      /* For documentation beautification only - DO NOT COPY */
-      .dummy-spacing {
-        height: 160px;
-      }
-      
     </style>
     <script>function changeCSS(colorStop) {
   document.body.className = 'spectrum spectrum--'+colorStop;
 }
 
-function openDialog(dialog, withOverlay) {
-  if (withOverlay !== false) {
-    document.getElementById('spectrum-underlay').classList.add('is-open');
-  }
-
-  dialog.classList.add('is-open');
-}
-
-function closeDialog(dialog) {
-  document.getElementById('spectrum-underlay').classList.remove('is-open');
-  dialog.classList.remove('is-open');
-}
-
-document.addEventListener('DOMContentLoaded', function(event) {
-  changeCSS('light');
-});
-
-// Show and hide code samples
-function toggleMarkupVisibility(event) {
-  event.preventDefault();
-  var exampleMarkup = event.target.closest('.sdldocs-component').querySelector('.sdldocs-code-example');
-  var style = window.getComputedStyle(exampleMarkup);
-  var isHidden = style.getPropertyValue('display') === 'none';
-  event.target.innerHTML = isHidden ? 'hide markup' : 'show markup';
-  exampleMarkup.style.display = isHidden ? 'block' : 'none';
-}
-
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('sdldocs-code-link')) {
-    toggleMarkupVisibility(event);
-  }
-});
-
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        changeCSS('light');
+      });
+      
+      // Show and hide code samples
+      function toggleMarkupVisibility(event) {
+        event.preventDefault();
+        var exampleMarkup = event.target.closest('.sdldocs-component').querySelector('.sdldocs-code-example');
+        var style = window.getComputedStyle(exampleMarkup);
+        var isHidden = style.getPropertyValue('display') === 'none';
+        event.target.innerHTML = isHidden ? 'hide markup' : 'show markup';
+        exampleMarkup.style.display = isHidden ? 'block' : 'none';
+      }
+      
+      document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('sdldocs-code-link')) {
+          toggleMarkupVisibility(event);
+        }
+      });
+      
+      
     </script>
   </head>
   <body class="u-sdldocs-clearfix spectrum">
-    <div class="spectrum-Underlay" id="spectrum-underlay"></div>
     <header class="sdldocs-header row">
       <div class="col-xs-4 start-xs">
         <div class="box"><a class="sdldocs-header-link" href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a>
@@ -3551,6 +3535,26 @@ disabled&gt;Button&lt;/button&gt;
   <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
   <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
 </div>
+<div style="margin-top: 20px;">
+  <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+  <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your life story" id="spectrum-textinput-instance">
+</div>
+<div style="margin-top: 20px;">
+  <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+  <div class="spectrum-Stepper">
+    <span class="spectrum-Stepper-buttons">
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+        <div class="spectrum-Stepper-stepUpIcon">
+        </div>
+      </button>
+      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+        <div class="spectrum-Stepper-stepDownIcon">
+        </div>
+      </button>
+    </span>
+    <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5">
+  </div>
+</div>
 </div>
             </div>
           </section>
@@ -3562,6 +3566,26 @@ disabled&gt;Button&lt;/button&gt;
                 <pre class="html"><code data-language="html">&lt;div&gt;
   &lt;label for=&quot;lifestory&quot; class=&quot;spectrum-FieldLabel spectrum-FieldLabel--left&quot;&gt;Life Story *&lt;/label&gt;
   &lt;textarea id=&quot;lifestory&quot; placeholder=&quot;Enter your life story&quot; name=&quot;field&quot; class=&quot;spectrum-Textfield spectrum-Textfield--multiline&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin-top: 20px;&quot;&gt;
+  &lt;label class=&quot;spectrum-FieldLabel spectrum-FieldLabel--left&quot; for=&quot;spectrum-textinput-instance&quot;&gt;Life Story *&lt;/label&gt;
+  &lt;input class=&quot;spectrum-Textfield&quot; aria-invalid=&quot;false&quot; type=&quot;text&quot; placeholder=&quot;Enter your life story&quot; id=&quot;spectrum-textinput-instance&quot;&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin-top: 20px;&quot;&gt;
+  &lt;label class=&quot;spectrum-FieldLabel spectrum-FieldLabel--left&quot; for=&quot;spectrum-textinput-instance&quot;&gt;Life Story *&lt;/label&gt;
+  &lt;div class=&quot;spectrum-Stepper&quot;&gt;
+    &lt;span class=&quot;spectrum-Stepper-buttons&quot;&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp&quot; tabindex=&quot;-1&quot;&gt;
+        &lt;div class=&quot;spectrum-Stepper-stepUpIcon&quot;&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown&quot; tabindex=&quot;-1&quot;&gt;
+        &lt;div class=&quot;spectrum-Stepper-stepDownIcon&quot;&gt;
+        &lt;/div&gt;
+      &lt;/button&gt;
+    &lt;/span&gt;
+    &lt;input type=&quot;number&quot; class=&quot;spectrum-Textfield spectrum-Stepper-input&quot; placeholder=&quot;Enter a number&quot; min=&quot;-2&quot; max=&quot;2&quot; step=&quot;0.5&quot;&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
               </div>

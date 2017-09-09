@@ -12,6 +12,10 @@
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }
 
+.spectrum-Stepper::before {
+  content: '';
+}
+
 .spectrum-Stepper-buttons {
   display: block;
 }
