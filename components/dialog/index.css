@@ -61,6 +61,15 @@ markup: |
   /* Allow 100% width, taking into account padding */
   box-sizing: border-box;
 
+  /* Be large enough to fit content */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  /* Don't be bigger than the screen */
+  max-height: calc(100vh - 64px);
+  max-width: calc(100vw - 64px);
+
   min-width: 320px;
 
   padding: 40px;
@@ -83,7 +92,8 @@ markup: |
   position: relative;
 
   width: 100%;
-  min-height: 34px;
+  -ms-flex: 0 0 34px;
+      flex: 0 0 34px;
 
   border-radius: 4px 4px 0 0;
   outline: none;
@@ -103,8 +113,8 @@ markup: |
   }
 
 .spectrum-Dialog-title {
-  -ms-flex: 1;
-      flex: 1;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .spectrum-Dialog-typeIcon::after {
@@ -122,11 +132,14 @@ markup: |
 
   overflow-y: auto;
 
+  -ms-flex: 1 1 auto;
+
+      flex: 1 1 auto;
+
+  /* Temporary IE 11 fix */
+  max-height: 70vh;
+
   outline: none; /* Hide focus outline */
-
-  -ms-flex: 1;
-
-      flex: 1;
 
   font-size: 0.875rem;
   font-weight: 400;
@@ -136,6 +149,10 @@ markup: |
   border-radius: 0 0 4px 4px;
 
   text-align: right; /* right align buttons */
+
+  -ms-flex: 0 1 auto;
+
+      flex: 0 1 auto;
 
   outline: none;
 }
@@ -323,6 +340,10 @@ markup: |
 
 .spectrum-Dialog--fullscreen,
 .spectrum-Dialog--fullscreenTakeover {
+  width: auto;
+  max-height: none;
+  max-width: none;
+
   padding-top: 40px;
 }
 
@@ -334,6 +355,10 @@ markup: |
     font-size: 1.75rem;
     font-weight: 100;
     line-height: 2.25rem;
+  }
+
+.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
+    max-height: none;
   }
 
 /* topdoc

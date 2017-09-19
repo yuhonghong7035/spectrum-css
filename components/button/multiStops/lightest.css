@@ -306,7 +306,8 @@ markup: |
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-Button--action:active {
+.spectrum--lightest .spectrum-Button--action:active,
+  .spectrum--lightest .spectrum-Button--action.is-selected {
     background-color: rgb(244, 244, 244);
     border-color: rgb(211, 211, 211);
     box-shadow: none;
@@ -361,7 +362,8 @@ markup: |
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-Button--quiet--action:active {
+.spectrum--lightest .spectrum-Button--quiet--action:active,
+  .spectrum--lightest .spectrum-Button--quiet--action.is-selected {
     background-color: rgb(234, 234, 234);
     border-color: transparent;
     box-shadow: none;

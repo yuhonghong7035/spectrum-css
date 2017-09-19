@@ -5,16 +5,15 @@
 .spectrum--darkest .spectrum-ActionMenu-button::before {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
   }
-.spectrum--darkest .spectrum-ActionMenu-button::before:focus {
+.spectrum--darkest .spectrum-ActionMenu-button:focus::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+  }
+.spectrum--darkest .spectrum-ActionMenu-button:hover::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
+  }
+.spectrum--darkest .spectrum-ActionMenu-button:active::before, .spectrum--darkest .spectrum-ActionMenu-button.is-selected::before {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
     }
-.spectrum--darkest .spectrum-ActionMenu-button::before:hover {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
-    }
-.spectrum--darkest .spectrum-ActionMenu-button::before:active {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28226%2C 226%2C 226%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
-    }
-.spectrum--darkest .spectrum-ActionMenu-button::before:disabled,
-    .spectrum--darkest .spectrum-ActionMenu-button::before.is-disabled {
+.spectrum--darkest .spectrum-ActionMenu-button:disabled::before, .spectrum--darkest .spectrum-ActionMenu-button.is-disabled::before {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%2873%2C 73%2C 73%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2873%2C 73%2C 73%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%2873%2C 73%2C 73%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");
     }

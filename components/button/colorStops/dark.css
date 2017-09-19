@@ -306,7 +306,8 @@ markup: |
     box-shadow: none;
     color: rgb(255, 255, 255);
   }
-.spectrum-Button--action:active {
+.spectrum-Button--action:active,
+  .spectrum-Button--action.is-selected {
     background-color: rgb(57, 57, 57);
     border-color: rgb(77, 77, 77);
     box-shadow: none;
@@ -361,7 +362,8 @@ markup: |
     box-shadow: none;
     color: rgb(255, 255, 255);
   }
-.spectrum-Button--quiet--action:active {
+.spectrum-Button--quiet--action:active,
+  .spectrum-Button--quiet--action.is-selected {
     background-color: rgb(62, 62, 62);
     border-color: transparent;
     box-shadow: none;

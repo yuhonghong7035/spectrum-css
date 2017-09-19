@@ -22,6 +22,12 @@
 
 .spectrum-Popover {
 
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
   min-width: 270px;
   padding: 30px;
 
