@@ -2347,6 +2347,7 @@ markup: |
 
   /* Remove the border since we've taken over */
   border: none;
+  border-radius: 0;
 }
 
 .spectrum-Dialog--fullscreenTakeover,
@@ -3678,6 +3679,7 @@ markup: |
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  box-sizing: border-box;
 
   min-width: 270px;
   padding: 30px;
@@ -3685,9 +3687,6 @@ markup: |
   position: relative;
   left: 0px;
   top: 0px;
-
-  display: inline-block;
-  box-sizing: border-box;
 
   border-style: solid;
   border-width: 1px;

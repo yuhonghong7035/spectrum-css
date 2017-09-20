@@ -519,6 +519,7 @@ markup: |
 
   /* Remove the border since we've taken over */
   border: none;
+  border-radius: 0;
 }
 
 .spectrum-Dialog--fullscreenTakeover,
