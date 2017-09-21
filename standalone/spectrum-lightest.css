@@ -532,7 +532,7 @@ markup: |
 
 .spectrum-Checkbox-checkmark::after {
     position: absolute;
-    top: 11px;
+    top: calc(50% - 5px);
     left: 1px;
     width: 10px;
     height: 10px;
@@ -4876,6 +4876,500 @@ markup: |
         border-radius: 32px;
       }
 
+/* topdoc
+---
+name: Table - Standard
+description: The standard table
+markup: |
+  <table class="spectrum-Table">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>
+
+*/
+
+/* topdoc
+---
+name: Table - Divs
+description: The standard table with divs
+markup: |
+  <div class="spectrum-Table">
+    <div class="spectrum-Table-head" style="display: flex">
+      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell" style="flex: 1">Column Title</div>
+    </div>
+    <div class="spectrum-Table-body" style="height: 120px">
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+      </div>
+    </div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Table - Divs Quiet
+description: The standard table with divs
+markup: |
+  <div class="spectrum-Table spectrum-Table--quiet">
+    <div class="spectrum-Table-head" style="display: flex">
+      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell" style="flex: 1">Column Title</div>
+    </div>
+    <div class="spectrum-Table-body" style="height: 120px">
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Alpha</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Bravo</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Charlie</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Delta</div>
+      </div>
+      <div class="spectrum-Table-row" style="display: flex">
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+        <div class="spectrum-Table-cell" style="flex: 1">Row Item Echo</div>
+      </div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.spectrum-Table-headCell {
+  text-align: left;
+  font-size: 0.65625rem;
+  font-weight: 700;
+  line-height: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  transition: color 125ms ease-in-out;
+  cursor: default;
+}
+
+.spectrum-Table-headCell.is-sortable {
+    cursor: pointer;
+  }
+
+.spectrum-Table-headCell.is-sorted-asc::after, .spectrum-Table-headCell.is-sorted-desc::after {
+      content: '';
+      display: inline-block;
+      margin-left: 4px;
+      width: 10px;
+      height: 12px;
+      background-size: contain;
+      vertical-align: bottom;
+      transition: transform 125ms ease-in-out;
+    }
+
+.spectrum-Table-headCell.is-sorted-asc::after {
+      transform: rotateZ(180deg);
+    }
+
+.spectrum-Table-cell--alignCenter {
+  text-align: center;
+}
+
+.spectrum-Table-cell--alignRight {
+  text-align: right;
+}
+
+.spectrum-Table-body {
+  border-radius: 4px;
+  overflow: auto;
+}
+
+/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
+   by putting it on the individual cells instead. */
+
+.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body {
+    border: none;
+    border-radius: 0;
+  }
+
+.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
+      border-top-left-radius: 4px;
+    }
+
+.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
+      border-top-right-radius: 4px;
+    }
+
+.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
+      border-bottom-left-radius: 4px;
+    }
+
+.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
+      border-bottom-right-radius: 4px;
+    }
+
+.spectrum-Table-cell {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding: 12px 16px;
+}
+
+.spectrum-Table-row {
+  cursor: pointer;
+  transition: background-color 125ms ease-in-out;
+}
+
+/* topdoc
+---
+name: Table - Quiet
+description: The quiet table
+markup: |
+  <table class="spectrum-Table spectrum-Table--quiet">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>
+
+*/
+
+.spectrum-Table--quiet .spectrum-Table-body {
+    border-radius: 0;
+  }
+
+/* topdoc
+---
+name: Table - Standard Multi-Select
+description: The standard multi-select table
+markup: |
+  <table class="spectrum-Table">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Alpha
+        </td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row is-selected">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Bravo
+        </td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row is-selected">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Charlie
+        </td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Delta
+        </td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Echo
+        </td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>
+
+*/
+
+.spectrum-Table-checkboxCell {
+  padding-right: 0;
+}
+
+.spectrum-Table-checkbox {
+  vertical-align: super;
+  line-height: 0.75rem;
+  height: 12px;
+}
+
+/* topdoc
+---
+name: Table - Quiet Multi-Select
+description: The quiet multi-select table
+markup: |
+  <table class="spectrum-Table spectrum-Table--quiet">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Alpha
+        </td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row is-selected">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Bravo
+        </td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row is-selected">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Charlie
+        </td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Delta
+        </td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
+          <label class="spectrum-Checkbox spectrum-Table-checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+            <span class="spectrum-Checkbox-checkmark"></span>
+          </label>
+        </td>
+        <td class="spectrum-Table-cell">
+          Row Item Echo
+        </td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>
+
+*/
+
+/* topdoc
+---
+name: Table - Column Dividers
+description: The standard table with column dividers
+markup: |
+  <table class="spectrum-Table">
+    <thead class="spectrum-Table-head">
+      <tr>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell">Column Title</th>
+      </tr>
+    </thead>
+    <tbody class="spectrum-Table-body">
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+        <td class="spectrum-Table-cell">Row Item Alpha</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+        <td class="spectrum-Table-cell">Row Item Bravo</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+        <td class="spectrum-Table-cell">Row Item Charlie</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+        <td class="spectrum-Table-cell">Row Item Delta</td>
+      </tr>
+      <tr class="spectrum-Table-row">
+        <td class="spectrum-Table-cell spectrum-Table-cell--divider">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+        <td class="spectrum-Table-cell">Row Item Echo</td>
+      </tr>
+    </tbody>
+  </table>
+
+*/
+
 /* Temporary skin variables that need to be moved into origins */
 
 :root {
@@ -8426,3 +8920,119 @@ markup: |
 .spectrum-Calendar-date.is-disabled {
     color: rgb(188, 188, 188);
   }
+
+.spectrum-Table-headCell {
+  color: rgb(118, 118, 118);
+}
+
+.spectrum-Table-headCell.is-sortable:hover {
+      color: rgb(80, 80, 80);
+    }
+
+.spectrum-Table-headCell.is-sortable:active {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum-Table-headCell.is-sorted-asc::after, .spectrum-Table-headCell.is-sorted-desc::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28149%2C 149%2C 149%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+    }
+
+.spectrum-Table-headCell.is-sorted-asc:hover::after, .spectrum-Table-headCell.is-sorted-desc:hover::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+      }
+
+.spectrum-Table-headCell.is-sorted-asc:active::after, .spectrum-Table-headCell.is-sorted-desc:active::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+      }
+
+.spectrum-Table-body {
+  border: 1px solid rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+
+/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
+   by putting the border on the individual cells instead. */
+
+tbody.spectrum-Table-body {
+  border: none;
+}
+
+tbody.spectrum-Table-body .spectrum-Table-row {
+    border-top: none;
+  }
+
+tbody.spectrum-Table-body .spectrum-Table-cell {
+    border-top: 1px solid rgb(234, 234, 234);
+  }
+
+tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
+    border-left: 1px solid rgb(234, 234, 234);
+  }
+
+tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
+    border-right: 1px solid rgb(234, 234, 234);
+  }
+
+tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
+    border-bottom: 1px solid rgb(234, 234, 234);
+  }
+
+.spectrum-Table-row {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+
+.spectrum-Table-row:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+.spectrum-Table-row:active {
+    background-color: rgb(244, 244, 244);
+  }
+
+.spectrum-Table-row.is-selected {
+    background-color: rgb(255, 255, 255);
+  }
+
+.spectrum-Table-row.is-selected:hover {
+      background-color: rgb(244, 244, 244);
+    }
+
+.spectrum-Table-cell {
+  color: rgb(80, 80, 80);
+}
+
+.spectrum-Table-cell--divider {
+  border-right: 1px solid rgb(234, 234, 234);
+}
+
+.spectrum-Table--quiet .spectrum-Table-body {
+    border-width: 1px 0;
+    background-color: transparent;
+  }
+
+.spectrum-Table--quiet .spectrum-Table-row {
+    background-color: transparent;
+  }
+
+.spectrum-Table--quiet .spectrum-Table-row:hover {
+      background-color: rgb(244, 244, 244);
+    }
+
+.spectrum-Table--quiet .spectrum-Table-row:active {
+      background-color: rgb(234, 234, 234);
+    }
+
+.spectrum-Table--quiet .spectrum-Table-row.is-selected {
+      background-color: rgb(244, 244, 244);
+    }
+
+.spectrum-Table--quiet .spectrum-Table-row.is-selected:hover {
+        background-color: rgb(234, 234, 234);
+      }
+
+.spectrum-Table--quiet tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child,
+    .spectrum-Table--quiet tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
+      border-left: none;
+      border-right: none;
+    }

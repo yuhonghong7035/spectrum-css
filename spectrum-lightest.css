@@ -3076,3 +3076,91 @@ markup: |
 .spectrum--lightest .spectrum-Calendar-date.is-disabled {
     color: rgb(188, 188, 188);
   }
+.spectrum--lightest .spectrum-Table-headCell {
+  color: rgb(118, 118, 118);
+}
+.spectrum--lightest .spectrum-Table-headCell.is-sortable:hover {
+      color: rgb(80, 80, 80);
+    }
+.spectrum--lightest .spectrum-Table-headCell.is-sortable:active {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-Table-headCell.is-sorted-asc::after, .spectrum--lightest .spectrum-Table-headCell.is-sorted-desc::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28149%2C 149%2C 149%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-Table-headCell.is-sorted-asc:hover::after, .spectrum--lightest .spectrum-Table-headCell.is-sorted-desc:hover::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+      }
+.spectrum--lightest .spectrum-Table-headCell.is-sorted-asc:active::after, .spectrum--lightest .spectrum-Table-headCell.is-sorted-desc:active::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+      }
+.spectrum--lightest .spectrum-Table-body {
+  border: 1px solid rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
+   by putting the border on the individual cells instead. */
+.spectrum--lightest tbody.spectrum-Table-body {
+  border: none;
+}
+.spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row {
+    border-top: none;
+  }
+.spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-cell {
+    border-top: 1px solid rgb(234, 234, 234);
+  }
+.spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
+    border-left: 1px solid rgb(234, 234, 234);
+  }
+.spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
+    border-right: 1px solid rgb(234, 234, 234);
+  }
+.spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
+    border-bottom: 1px solid rgb(234, 234, 234);
+  }
+.spectrum--lightest .spectrum-Table-row {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+.spectrum--lightest .spectrum-Table-row:hover {
+    background-color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Table-row:active {
+    background-color: rgb(244, 244, 244);
+  }
+.spectrum--lightest .spectrum-Table-row.is-selected {
+    background-color: rgb(255, 255, 255);
+  }
+.spectrum--lightest .spectrum-Table-row.is-selected:hover {
+      background-color: rgb(244, 244, 244);
+    }
+.spectrum--lightest .spectrum-Table-cell {
+  color: rgb(80, 80, 80);
+}
+.spectrum--lightest .spectrum-Table-cell--divider {
+  border-right: 1px solid rgb(234, 234, 234);
+}
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-body {
+    border-width: 1px 0;
+    background-color: transparent;
+  }
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row {
+    background-color: transparent;
+  }
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row:hover {
+      background-color: rgb(244, 244, 244);
+    }
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row:active {
+      background-color: rgb(234, 234, 234);
+    }
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row.is-selected {
+      background-color: rgb(244, 244, 244);
+    }
+.spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row.is-selected:hover {
+        background-color: rgb(234, 234, 234);
+      }
+.spectrum--lightest .spectrum-Table--quiet tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child,
+    .spectrum--lightest .spectrum-Table--quiet tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
+      border-left: none;
+      border-right: none;
+    }

@@ -146,6 +146,10 @@
   --spectrum-calendar-header-font-size-default: 18px;
   --spectrum-calendar-header-height-default: 32px;
   --spectrum-calendar-width-default: 250px;
+  --spectrum-cyclebutton-button-background-color-default: transparent;
+  --spectrum-cyclebutton-button-border-radius-default: 4px;
+  --spectrum-cyclebutton-button-height-default: 32px;
+  --spectrum-cyclebutton-button-width-default: 32px;
   --spectrum-dialog-content-font-size-default: 14px;
   --spectrum-dialog-content-font-weight-default: 400;
   --spectrum-dialog-header-font-size-default: 18px;
@@ -214,6 +218,7 @@
   --spectrum-global-layout-size-10: 1px;
   --spectrum-global-layout-size-100: 8px;
   --spectrum-global-layout-size-150: 12px;
+  --spectrum-global-layout-size-1700: 136px;
   --spectrum-global-layout-size-200: 16px;
   --spectrum-global-layout-size-2400: 192px;
   --spectrum-global-layout-size-25: 2px;
@@ -312,6 +317,19 @@
   --spectrum-switch-toggle-height-default: 14px;
   --spectrum-switch-toggle-track-height-default: 14px;
   --spectrum-switch-toggle-width-default: 26px;
+  --spectrum-table-body-cell-font-size-default: 14px;
+  --spectrum-table-body-cell-line-height-default: 24px;
+  --spectrum-table-body-cell-padding-vertical-default: 12px;
+  --spectrum-table-cell-padding-default: 16px;
+  --spectrum-table-head-cell-font-size-default: 10.5px;
+  --spectrum-table-head-cell-font-weight-default: 700;
+  --spectrum-table-head-cell-height-default: 12px;
+  --spectrum-table-head-cell-letter-spacing-default: 0.06em;
+  --spectrum-table-head-cell-padding-vertical-default: 4px;
+  --spectrum-table-head-cell-sort-icon-height-default: 12px;
+  --spectrum-table-head-cell-sort-icon-margin-left-default: 4px;
+  --spectrum-table-head-cell-sort-icon-width-default: 10px;
+  --spectrum-table-quiet-body-cell-background-color-default: transparent;
   --spectrum-tablist-anchored-tab-item-border-width-default: 2px;
   --spectrum-tablist-border-color-hover: transparent;
   --spectrum-tablist-horizontal-tabline-height-default: 2px;

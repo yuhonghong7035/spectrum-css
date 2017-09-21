@@ -62,7 +62,7 @@
 
 .spectrum-Checkbox-checkmark::after {
     position: absolute;
-    top: 11px;
+    top: calc(50% - 5px);
     left: 1px;
     width: 10px;
     height: 10px;
