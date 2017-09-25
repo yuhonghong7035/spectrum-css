@@ -1,0 +1,23 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
+.spectrum-Rating {
+  cursor: pointer;
+}
+
+.spectrum-Rating .spectrum-Rating-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 18px;
+    float: left;
+  }
+
+.spectrum-Rating.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
