@@ -1,3 +1,10 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
 .spectrum-Popover {
   visibility: hidden;
 
@@ -18,6 +25,22 @@
   transition-delay: 0ms;
 
   pointer-events: auto;
+}
+
+.spectrum-Popover--bottom.is-open {
+  transform: translateY(4px);
+}
+
+.spectrum-Popover--top.is-open {
+  transform: translateY(-1 * 4px);
+}
+
+.spectrum-Popover--right.is-open {
+  transform: translateX(4px);
+}
+
+.spectrum-Popover--left.is-open {
+  transform: translateX(-1 * 4px);
 }
 
 .spectrum-Popover {
@@ -84,10 +107,6 @@ markup: |
   margin-right: 13px;
 }
 
-.spectrum-Popover--left.is-open {
-    left: -4px;
-  }
-
 .spectrum-Popover--left .spectrum-Popover-tip {
     right: -18px;
     transform: rotate(-90deg);
@@ -111,10 +130,6 @@ markup: |
 .spectrum-Popover--right {
   margin-left: 13px;
 }
-
-.spectrum-Popover--right.is-open {
-    left: 4px;
-  }
 
 .spectrum-Popover--right .spectrum-Popover-tip {
     left: -18px;
@@ -147,10 +162,6 @@ markup: |
   margin-top: 13px;
 }
 
-.spectrum-Popover--bottom.is-open {
-    top: 4px;
-  }
-
 .spectrum-Popover--bottom .spectrum-Popover-tip {
     top: -13px;
     transform: rotate(180deg);
@@ -171,13 +182,9 @@ markup: |
 
 */
 
-.spectrum-Popover--top{
+.spectrum-Popover--top {
   margin-bottom: 13px;
 }
-
-.spectrum-Popover--top.is-open {
-    top: -4px;
-  }
 
 .spectrum-Popover--top .spectrum-Popover-tip {
     bottom: -13px;

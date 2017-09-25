@@ -55,7 +55,6 @@ description: |
   }
 .spectrum--darkest .spectrum-Link:focus {
     color: rgb(55, 142, 240);
-    box-shadow: 0 1px 0 rgb(55, 142, 240);
   }
 .spectrum--darkest .spectrum-Link.is-disabled {
     color: rgb(73, 73, 73);
@@ -71,8 +70,6 @@ description: |
   }
 .spectrum--darkest .spectrum-Link--subtle:focus {
     color: inherit;
-    /* focus box-shadow color vale should be inherited like the color, too */
-    box-shadow: 0 1px 0 rgb(180, 180, 180);
   }
 .spectrum--darkest .spectrum-Button:focus {
     box-shadow: 0 0 0 2px rgb(55, 142, 240);
@@ -1035,6 +1032,46 @@ markup: |
 .spectrum--darkest .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(180, 180, 180);
     }
+.spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-checkmark {
+      border-color: rgb(227, 72, 80);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-label {
+      color: rgb(227, 72, 80);
+    }
+/* topdoc
+---
+name: Radio - Invalid
+description: The 'invalid' Spectrum radio
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
+markup: |
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form>
+*/
+.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-checkmark {
+      border-color: rgb(236, 91, 98);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
+      color: rgb(236, 91, 98);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-checkmark {
+      border-color: rgb(247, 109, 116);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
+      color: rgb(247, 109, 116);
+    }
 /* topdoc
 ---
 name: Radio - Disabled
@@ -1062,46 +1099,6 @@ markup: |
 .spectrum--darkest .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
     color: rgb(73, 73, 73);
   }
-.spectrum--darkest .spectrum-Radio-input:invalid + .spectrum-Radio-checkmark {
-      border-color: rgb(227, 72, 80);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid ~ .spectrum-Radio-label {
-      color: rgb(227, 72, 80);
-    }
-/* topdoc
----
-name: Radio - Required
-description: The 'required' Spectrum radio
-modifiers:
-  ':hover': Hover state
-  ':active': Active state
-  ':focus': Focused
-markup: |
-  <form>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-    </div>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-    </div>
-  </form>
-*/
-.spectrum--darkest .spectrum-Radio-input:invalid:hover + .spectrum-Radio-checkmark {
-      border-color: rgb(236, 91, 98);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:hover ~ .spectrum-Radio-label {
-      color: rgb(236, 91, 98);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:active + .spectrum-Radio-checkmark {
-      border-color: rgb(247, 109, 116);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:active ~ .spectrum-Radio-label {
-      color: rgb(247, 109, 116);
-    }
 /* topdoc
 ---
 name: Text Field - Default
@@ -2304,61 +2301,77 @@ Todo: Determine if these are supposed to be pseudo classes
       }
 /* topdoc
 ---
-name: Flyout
-description: Spectrum Flyouts
+name: List
+description: Spectrum Lists
 markup: |
 
-  <ul class="spectrum-Flyout is-open" role="menu">
-    <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="0">Ballard</li>
-    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Fremont</li>
-    <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Greenwood</li>
-    <hr class="spectrum-Flyout-divider">
-    <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+  <ul class="spectrum-List" role="listbox">
+    <li class="spectrum-List-option is-selected" role="option" tabindex="0">Ballard</li>
+    <li class="spectrum-List-option" role="option" tabindex="0">Fremont</li>
+    <li class="spectrum-List-option" role="option" tabindex="0">Greenwood</li>
+    <hr class="spectrum-List-divider">
+    <li class="spectrum-List-option is-disabled" role="option" tabindex="0">United States of America</li>
+  </ul>
+
+
+*/
+.spectrum--darkest .spectrum-List {
+  background-color: rgb(24, 24, 24);
+  border-color: rgb(60, 60, 60);
+}
+.spectrum--darkest .spectrum-List-option {
+  background-color: transparent;
+  color: rgb(180, 180, 180);
+}
+.spectrum--darkest .spectrum-List-option:focus,
+  .spectrum--darkest .spectrum-List-option.is-focused {
+    background-color: rgb(30, 30, 30);
+    color: rgb(180, 180, 180);
+    background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, transparent 2px, transparent 100%);
+  }
+.spectrum--darkest .spectrum-List-option:hover {
+    background-color: rgb(30, 30, 30);
+    color: rgb(180, 180, 180);
+  }
+.spectrum--darkest .spectrum-List-option.is-selected {
+    color: rgb(55, 142, 240);
+  }
+.spectrum--darkest .spectrum-List-option.is-selected::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 8' enable-background='new 0 0 10 8' xml:space='preserve'%3E%3Cpath style='fill:rgb%2820%2C 115%2C 230%29' d='M3.8%2C7.4C3.5%2C7.4%2C3.2%2C7.3%2C3%2C7.1L0.8%2C4.8c-0.4-0.4-0.4-1%2C0-1.4s1-0.4%2C1.4%2C0L3.8%2C5l4-4c0.4-0.4%2C1-0.4%2C1.4%2C0 s0.4%2C1%2C0%2C1.4L4.5%2C7.1C4.3%2C7.3%2C4%2C7.4%2C3.8%2C7.4z'/%3E%3C/svg%3E");
+    }
+.spectrum--darkest .spectrum-List-option:active {
+    background-color: rgb(38, 38, 38);
+  }
+.spectrum--darkest .spectrum-List-option.is-disabled {
+    background-color: transparent;
+    background-image: none;
+    color: rgb(73, 73, 73);
+    cursor: default;
+  }
+.spectrum--darkest .spectrum-List-divider {
+  background-color: rgb(38, 38, 38);
+}
+/* topdoc
+---
+name: Flyout
+description: Spectrum Flyouts (uses a List for content)
+markup: |
+
+
+  <ul class="spectrum-Flyout is-open spectrum-List" role="menu">
+    <li class="spectrum-List-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="0">Fremont</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="0">Greenwood</li>
+    <hr class="spectrum-List-divider">
+    <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
   </ul>
 
   <div class="dummy-spacing"></div>
 
 */
 .spectrum--darkest .spectrum-Flyout {
-  background-color: rgb(8, 8, 8);
   border-color: rgb(60, 60, 60);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-.spectrum--darkest .spectrum-Flyout-option {
-  background-color: transparent;
-  color: rgb(180, 180, 180);
-}
-.spectrum--darkest .spectrum-Flyout-option:focus {
-    background-color: rgba(226, 226, 226, .04);
-    color: rgb(180, 180, 180);
-    background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, transparent 2px, transparent 100%);
-  }
-.spectrum--darkest .spectrum-Flyout-option:focus.is-selected {
-      background-color: rgba(226, 226, 226, .04);
-      color: rgb(55, 142, 240);
-      background-image: linear-gradient(to right, rgb(20, 115, 230) 0%, rgb(20, 115, 230) 2px, transparent 2px, transparent 100%);
-    }
-.spectrum--darkest .spectrum-Flyout-option:hover {
-    background-color: rgba(226, 226, 226, .04);
-    color: rgb(180, 180, 180);
-  }
-.spectrum--darkest .spectrum-Flyout-option:hover.is-selected {
-      background-color: rgba(226, 226, 226, .04);
-      color: rgb(55, 142, 240);
-    }
-.spectrum--darkest .spectrum-Flyout-option.is-selected {
-    background-color: transparent;
-    color: rgb(55, 142, 240);
-  }
-.spectrum--darkest .spectrum-Flyout-option.is-selected::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 8' enable-background='new 0 0 10 8' xml:space='preserve'%3E%3Cpath style='fill:rgb%2820%2C 115%2C 230%29' d='M3.8%2C7.4C3.5%2C7.4%2C3.2%2C7.3%2C3%2C7.1L0.8%2C4.8c-0.4-0.4-0.4-1%2C0-1.4s1-0.4%2C1.4%2C0L3.8%2C5l4-4c0.4-0.4%2C1-0.4%2C1.4%2C0 s0.4%2C1%2C0%2C1.4L4.5%2C7.1C4.3%2C7.3%2C4%2C7.4%2C3.8%2C7.4z'/%3E%3C/svg%3E");
-    }
-.spectrum--darkest .spectrum-Flyout-option.is-disabled {
-    background-color: transparent;
-    color: rgb(73, 73, 73);
-  }
-.spectrum--darkest .spectrum-Flyout-divider {
-  background-color: rgb(38, 38, 38);
 }
 .spectrum--darkest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
       background-color: rgb(38, 38, 38);
@@ -3164,3 +3177,66 @@ markup: |
       border-left: none;
       border-right: none;
     }
+/* topdoc
+---
+name: Rating - Default
+description: The Spectrum Rating stars
+markup: |
+  <div class="spectrum-Rating">
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+  </div>
+
+*/
+.spectrum--darkest .spectrum-Rating-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28105%2C 105%2C 105%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
+}
+.spectrum--darkest .spectrum-Rating:not(:hover) .spectrum-Rating-icon:not(.is-active) {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28105%2C 105%2C 105%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
+  }
+.spectrum--darkest .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28105%2C 105%2C 105%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
+}
+/* topdoc
+---
+name: Rating - Active
+description: The 'active' Spectrum rating
+markup: |
+  <div class="spectrum-Rating">
+    <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon"></span>
+  </div>
+
+*/
+.spectrum--darkest .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28105%2C 105%2C 105%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
+}
+.spectrum--darkest .spectrum-Rating-icon.is-active {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28180%2C 180%2C 180%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
+  }
+/* topdoc
+---
+name: Rating - Disabled
+description: The 'disabled' Spectrum rating
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Rating is-disabled">
+    <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+  </div>
+
+*/
+.spectrum--darkest .spectrum-Rating.is-disabled .spectrum-Rating-icon {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2873%2C 73%2C 73%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
+    }
+.spectrum--darkest .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2873%2C 73%2C 73%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
+      }

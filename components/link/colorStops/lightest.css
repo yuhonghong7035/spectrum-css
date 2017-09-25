@@ -13,7 +13,6 @@
   }
 .spectrum-Link:focus {
     color: rgb(20, 115, 230);
-    box-shadow: 0 1px 0 rgb(20, 115, 230);
   }
 .spectrum-Link.is-disabled {
     color: rgb(188, 188, 188);
@@ -29,7 +28,5 @@
   }
 .spectrum-Link--subtle:focus {
     color: inherit;
-    /* focus box-shadow color vale should be inherited like the color, too */
-    box-shadow: 0 1px 0 rgb(80, 80, 80);
   }
 

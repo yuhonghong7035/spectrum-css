@@ -1,3 +1,10 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
 /* topdoc
 ---
 name: Link - Default
@@ -13,18 +20,34 @@ markup: |
   outline: none;
 }
 
+.spectrum-Link:hover {
+    text-decoration: underline;
+  }
+
+.spectrum-Link:focus {
+    text-decoration: underline;
+    -webkit-text-decoration-style: double;
+            text-decoration-style: double;
+  }
+
 /* topdoc
 ---
 name: Link - Disabled
 description: A disabled link
 markup: |
-  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+  <p> This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
 
 */
 
 .spectrum-Link.is-disabled {
   	cursor: default;
+    pointer-events: none;
   }
+
+.spectrum-Link.is-disabled:hover,
+    .spectrum-Link.is-disabled:focus {
+      text-decoration: none;
+    }
 
 /* topdoc
 ---

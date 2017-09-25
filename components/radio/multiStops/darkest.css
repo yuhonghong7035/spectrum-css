@@ -52,6 +52,46 @@ markup: |
 .spectrum--darkest .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(180, 180, 180);
     }
+.spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-checkmark {
+      border-color: rgb(227, 72, 80);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-label {
+      color: rgb(227, 72, 80);
+    }
+/* topdoc
+---
+name: Radio - Invalid
+description: The 'invalid' Spectrum radio
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
+markup: |
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <span class="spectrum-Radio-checkmark"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form>
+*/
+.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-checkmark {
+      border-color: rgb(236, 91, 98);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
+      color: rgb(236, 91, 98);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-checkmark {
+      border-color: rgb(247, 109, 116);
+    }
+.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
+      color: rgb(247, 109, 116);
+    }
 /* topdoc
 ---
 name: Radio - Disabled
@@ -79,43 +119,3 @@ markup: |
 .spectrum--darkest .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
     color: rgb(73, 73, 73);
   }
-.spectrum--darkest .spectrum-Radio-input:invalid + .spectrum-Radio-checkmark {
-      border-color: rgb(227, 72, 80);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid ~ .spectrum-Radio-label {
-      color: rgb(227, 72, 80);
-    }
-/* topdoc
----
-name: Radio - Required
-description: The 'required' Spectrum radio
-modifiers:
-  ':hover': Hover state
-  ':active': Active state
-  ':focus': Focused
-markup: |
-  <form>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0" required>
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
-    </div>
-    <div class="spectrum-Radio">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
-      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
-    </div>
-  </form>
-*/
-.spectrum--darkest .spectrum-Radio-input:invalid:hover + .spectrum-Radio-checkmark {
-      border-color: rgb(236, 91, 98);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:hover ~ .spectrum-Radio-label {
-      color: rgb(236, 91, 98);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:active + .spectrum-Radio-checkmark {
-      border-color: rgb(247, 109, 116);
-    }
-.spectrum--darkest .spectrum-Radio-input:invalid:active ~ .spectrum-Radio-label {
-      color: rgb(247, 109, 116);
-    }

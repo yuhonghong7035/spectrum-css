@@ -1,3 +1,10 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
 .spectrum {
   font-family: adobe-clean, Helvetica, Arial, sans-serif;
   font-size: 0.875rem;
@@ -114,18 +121,34 @@ markup: |
   outline: none;
 }
 
+.spectrum-Link:hover {
+    text-decoration: underline;
+  }
+
+.spectrum-Link:focus {
+    text-decoration: underline;
+    -webkit-text-decoration-style: double;
+            text-decoration-style: double;
+  }
+
 /* topdoc
 ---
 name: Link - Disabled
 description: A disabled link
 markup: |
-  <p> This uses <a href="#" class="spectrum-Link is-disabled">is-disabled</a>.</p>
+  <p> This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
 
 */
 
 .spectrum-Link.is-disabled {
   	cursor: default;
+    pointer-events: none;
   }
+
+.spectrum-Link.is-disabled:hover,
+    .spectrum-Link.is-disabled:focus {
+      text-decoration: none;
+    }
 
 /* topdoc
 ---
@@ -983,10 +1006,15 @@ markup: |
   display: inline-block;
   position: relative;
 
-  padding: 7px 0;
+  padding: 6px 8px;
+  margin-left: -8px;
 
   font-size: 0;
 }
+
+.spectrum-Radio + .spectrum-Radio {
+    margin-left: 0;
+  }
 
 .spectrum-Radio-input {
   position: absolute;
@@ -1009,13 +1037,13 @@ markup: |
   }
 
 .spectrum-Radio-label {
-  margin: 0 8px;
+  margin-left: 8px;
 
   font-size: 0.875rem;
 
   vertical-align: middle;
 
-  transition: color 150ms ease-in-out;
+  transition: color 125ms ease-in-out;
 }
 
 .spectrum-Radio-checkmark {
@@ -1035,10 +1063,10 @@ markup: |
 
 /* topdoc
 ---
-name: RadioGroup - Default
+name: FieldGroup - Default
 description: The Spectrum radio group 'default'
 markup: |
-  <div class="spectrum-RadioGroup">
+  <div class="spectrum-FieldGroup">
     <div class="spectrum-Radio">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
       <span class="spectrum-Radio-checkmark"></span>
@@ -1050,19 +1078,38 @@ markup: |
       <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
     </div>
   </div>
+  <div class="spectrum-FieldGroup">
+    <label class="spectrum-Checkbox">
+      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-label">Checkbox</span>
+    </label>
+    <label class="spectrum-Checkbox">
+      <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-label">Checkbox</span>
+    </label>
+  </div>
+
 
 */
 
-.spectrum-RadioGroup .spectrum-Radio {
+.spectrum-FieldGroup {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.spectrum-FieldGroup .spectrum-Radio,
+  .spectrum-FieldGroup .spectrum-Checkbox {
     margin-right: 12px;
   }
 
 /* topdoc
 ---
-name: RadioGroup - Vertical
+name: FieldGroup - Vertical
 description: The Spectrum radio group 'vertical'
 markup: |
-  <div class="spectrum-RadioGroup spectrum-RadioGroup--vertical">
+  <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">
       <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
       <span class="spectrum-Radio-checkmark"></span>
@@ -1077,17 +1124,28 @@ markup: |
 
 */
 
-.spectrum-RadioGroup--vertical .spectrum-Radio {
+.spectrum-FieldGroup--vertical .spectrum-Radio,
+  .spectrum-FieldGroup--vertical .spectrum-Checkbox {
     display: block;
-    margin: 0;
+    margin: 0 0 0 -8px;
   }
+
+.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
+    margin-left: 15px;
+  }
+
+.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Radio,
+    .spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Checkbox {
+      /* Prevent overlap due to negative margin */
+      margin: 0;
+    }
 
 /* topdoc
 ---
-name: RadioGroup - Labels Below
+name: FieldGroup - Labels Below
 description: The Spectrum radio group 'labelsBelow'
 markup: |
-  <div class="spectrum-RadioGroup spectrum-RadioGroup--labelsBelow">
+  <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">
     <div class="spectrum-Radio">
       <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-2">
       <span class="spectrum-Radio-checkmark"></span>
@@ -1107,16 +1165,16 @@ markup: |
 
 */
 
-.spectrum-RadioGroup--labelsBelow .spectrum-Radio {
+.spectrum-FieldGroup--labelsBelow .spectrum-Radio {
     height: 36px;
     margin: 0;
   }
 
-.spectrum-RadioGroup--labelsBelow .spectrum-Radio-checkmark {
+.spectrum-FieldGroup--labelsBelow .spectrum-Radio-checkmark {
     margin-bottom: 18px;
   }
 
-.spectrum-RadioGroup--labelsBelow .spectrum-Radio-label {
+.spectrum-FieldGroup--labelsBelow .spectrum-Radio-label {
     position: relative;
     top: 12px;
     left: -17px;
@@ -1298,6 +1356,26 @@ markup: |
   transition-delay: 0ms;
 
   pointer-events: auto;
+}
+
+.spectrum-Flyout--bottom.is-open,
+.spectrum-Popover--bottom.is-open {
+  transform: translateY(4px);
+}
+
+.spectrum-Flyout--top.is-open,
+.spectrum-Popover--top.is-open {
+  transform: translateY(-1 * 4px);
+}
+
+.spectrum-Flyout--right.is-open,
+.spectrum-Popover--right.is-open {
+  transform: translateX(4px);
+}
+
+.spectrum-Flyout--left.is-open,
+.spectrum-Popover--left.is-open {
+  transform: translateX(-1 * 4px);
 }
 
 .spectrum-Tooltip {
@@ -3322,31 +3400,26 @@ markup: |
     border-style: solid;
   }
 
-.spectrum-Flyout {
-
-  position: absolute;
+.spectrum-List {
   display: inline-block;
   white-space: nowrap;
 
   box-sizing: border-box;
 
   list-style-type: none;
-  padding: 3px 0;
   margin: 0;
-
-  min-width: 192px;
-  min-height: 32px;
+  padding: 3px 0;
 
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
+
 }
 
-.spectrum-Flyout-option {
+.spectrum-List-option {
   cursor: pointer;
-
+  position: relative;
   display: -ms-flexbox;
-
   display: flex;
 
   padding: 0 34px 0 12px;
@@ -3360,11 +3433,11 @@ markup: |
   font-style: normal;
 }
 
-.spectrum-Flyout-option:focus {
+.spectrum-List-option:focus {
     outline: none;
   }
 
-.spectrum-Flyout-option.is-selected::after {
+.spectrum-List-option.is-selected::after {
       position: absolute;
       right: 0;
 
@@ -3381,7 +3454,7 @@ markup: |
       content: '';
     }
 
-.spectrum-Flyout-divider {
+.spectrum-List-divider {
   height: 1px;
   margin: 8px auto;
   padding: 0 0;
@@ -3389,9 +3462,28 @@ markup: |
   width: 100%;
 }
 
+.spectrum-Flyout {
+
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  padding: 3px 0;
+  margin: 0;
+
+  min-width: 192px;
+  min-height: 32px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}
+
 /* topdoc
 name: Dropdown - Default
-description: A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user. 
+description: A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
@@ -3403,12 +3495,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3422,16 +3514,17 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
   <div class="dummy-spacing"></div>
+
 */
 
 .spectrum-Dropdown {
@@ -3459,7 +3552,7 @@ markup: |
       border: 1px solid;
     }
 
-.spectrum-Dropdown-flyout {
+.spectrum-List.spectrum-Dropdown-flyout {
   min-width: 100%;
   max-height: 280px;
 
@@ -3468,7 +3561,7 @@ markup: |
   overflow-y: auto;
 }
 
-.spectrum-Dropdown-flyout.is-open {
+.spectrum-List.spectrum-Dropdown-flyout.is-open {
     /* Animate downward */
     transform: translateY(4px);
   }
@@ -3551,12 +3644,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3570,12 +3663,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
   <div class="dummy-spacing"></div>
@@ -3597,12 +3690,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3617,12 +3710,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3639,12 +3732,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3659,12 +3752,12 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-divider">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
     </ul>
   </div>
 
@@ -3736,10 +3829,6 @@ markup: |
   margin-right: 13px;
 }
 
-.spectrum-Popover--left.is-open {
-    left: -4px;
-  }
-
 .spectrum-Popover--left .spectrum-Popover-tip {
     right: -18px;
     transform: rotate(-90deg);
@@ -3763,10 +3852,6 @@ markup: |
 .spectrum-Popover--right {
   margin-left: 13px;
 }
-
-.spectrum-Popover--right.is-open {
-    left: 4px;
-  }
 
 .spectrum-Popover--right .spectrum-Popover-tip {
     left: -18px;
@@ -3799,10 +3884,6 @@ markup: |
   margin-top: 13px;
 }
 
-.spectrum-Popover--bottom.is-open {
-    top: 4px;
-  }
-
 .spectrum-Popover--bottom .spectrum-Popover-tip {
     top: -13px;
     transform: rotate(180deg);
@@ -3823,13 +3904,9 @@ markup: |
 
 */
 
-.spectrum-Popover--top{
+.spectrum-Popover--top {
   margin-bottom: 13px;
 }
-
-.spectrum-Popover--top.is-open {
-    top: -4px;
-  }
 
 .spectrum-Popover--top .spectrum-Popover-tip {
     bottom: -13px;
@@ -4004,10 +4081,10 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-ActionMenu-flyout is-open " role="menu">
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
 
@@ -4016,14 +4093,15 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
-    <ul class="spectrum-Flyout spectrum-ActionMenu-flyout is-open" role="menu">
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="0">Action 3</li>
+    <ul class="spectrum-Flyout spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
     </ul>
   </div>
 
   <div class="dummy-spacing"></div>
+
 */
 
 .spectrum-ActionMenu {
@@ -4090,6 +4168,8 @@ markup: |
 .spectrum-FieldLabel {
   display: block;
 
+  min-width: 100px;
+
   margin: 0 0 5px;
 
   font-size: 0.75rem;
@@ -4109,15 +4189,65 @@ description: >-
   Field label for use with form inputs; left variation.
 markup: |
   <div>
-    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Life Story *</label>
+    <label for="lifestory" class="spectrum-FieldLabel spectrum-FieldLabel--left">Company Title</label>
     <textarea id="lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
   </div>
   <div style="margin-top: 20px;">
-    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Email Address</label>
     <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your life story" id="spectrum-textinput-instance">
   </div>
   <div style="margin-top: 20px;">
-    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Life Story *</label>
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
+    <div class="spectrum-Dropdown" style="width: 195px;">
+      <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+      <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
+        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-Flyout-divider">
+        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Interests</label>
+    <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+      <div class="spectrum-Radio">
+        <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-label" for="radio-5">Kittens</label>
+      </div>
+      <div class="spectrum-Radio">
+        <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-6">
+        <span class="spectrum-Radio-checkmark"></span>
+        <label class="spectrum-Radio-label" for="radio-6">Dogs</label>
+      </div>
+    </div>
+
+    <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <span class="spectrum-Checkbox-label">Checkbox</span>
+      </label>
+      <label class="spectrum-Checkbox">
+        <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+        <span class="spectrum-Checkbox-checkmark"></span>
+        <span class="spectrum-Checkbox-label">Checkbox</span>
+      </label>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Age</label>
     <div class="spectrum-Stepper">
       <span class="spectrum-Stepper-buttons">
         <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
@@ -5369,3 +5499,20 @@ markup: |
   </table>
 
 */
+
+.spectrum-Rating {
+  cursor: pointer;
+}
+
+.spectrum-Rating .spectrum-Rating-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 18px;
+    float: left;
+  }
+
+.spectrum-Rating.is-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
