@@ -1,0 +1,29 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+  }
+.spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+      border-color: rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    border-color: rgb(225, 225, 225);
+  }
+.spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button {
+      border-color: rgb(202, 202, 202);
+    }
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
+        border-color: rgb(227, 72, 80);
+      }
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+        border-color: rgb(38, 128, 235);
+        box-shadow: 0 1px 0 rgb(38, 128, 235);
+      }
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+          border-color: rgb(227, 72, 80);
+          box-shadow: 0 1px 0 rgb(227, 72, 80);
+        }

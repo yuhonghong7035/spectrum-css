@@ -1,0 +1,44 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+.spectrum-Tag {
+  color: rgb(118, 118, 118);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(149, 149, 149);
+}
+.spectrum-Tag:hover {
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(50, 50, 50);
+  }
+.spectrum-Tag.is-invalid {
+    color: rgb(227, 72, 80);
+    border-color: rgb(227, 72, 80);
+  }
+.spectrum-Tag.is-invalid:focus {
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum-Tag.is-disabled {
+    color: rgb(188, 188, 188);
+    background-color: rgb(244, 244, 244);
+    border-color: rgb(244, 244, 244);
+  }
+.spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum-Tag-removeButton:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%2850%2C 50%2C 50%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+    }
+.spectrum-Tag.is-disabled .spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum-Tag--quiet,
+  .spectrum-Tag--quiet:hover,
+  .spectrum-Tag--quiet:focus,
+  .spectrum-Tag--quiet.is-invalid,
+  .spectrum-Tag--quiet.is-disabled {
+    background-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }

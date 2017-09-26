@@ -1,0 +1,95 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
+/* topdoc
+name: Combo Box
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input" disabled>
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input is-invalid">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+*/
+
+/* topdoc
+name: Combo Box - Quiet
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" disabled>
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input is-invalid">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+*/
+
+.spectrum-InputGroup {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: 192px;
+}
+
+.spectrum-InputGroup-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.spectrum-InputGroup-button {
+  padding: 0;
+  width: 34px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    border-bottom: 1px solid;
+  }
