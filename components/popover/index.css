@@ -32,7 +32,7 @@
 }
 
 .spectrum-Popover--top.is-open {
-  transform: translateY(-1 * 4px);
+  transform: translateY(-4px);
 }
 
 .spectrum-Popover--right.is-open {
@@ -40,7 +40,7 @@
 }
 
 .spectrum-Popover--left.is-open {
-  transform: translateX(-1 * 4px);
+  transform: translateX(-4px);
 }
 
 .spectrum-Popover {

@@ -668,6 +668,67 @@ markup: |
 .spectrum--lightest .spectrum-Button--icon:disabled {
     color: rgb(211, 211, 211);
   }
+.spectrum--lightest .spectrum-Button--dropdown {
+  color: rgb(80, 80, 80);
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(234, 234, 234);
+}
+.spectrum--lightest .spectrum-Button--dropdown:hover {
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(211, 211, 211);
+  }
+.spectrum--lightest .spectrum-Button--dropdown:focus,
+  .spectrum--lightest .spectrum-Button--dropdown.is-focused {
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+  }
+.spectrum--lightest .spectrum-Button--dropdown:active,
+  .spectrum--lightest .spectrum-Button--dropdown.is-selected {
+    background-color: rgb(244, 244, 244);
+    border-color: rgb(211, 211, 211);
+  }
+.spectrum--lightest .spectrum-Button--dropdown:active:focus,
+    .spectrum--lightest .spectrum-Button--dropdown:active.is-focused,
+    .spectrum--lightest .spectrum-Button--dropdown.is-selected:focus,
+    .spectrum--lightest .spectrum-Button--dropdown.is-selected.is-focused {
+      box-shadow: none;
+    }
+.spectrum--lightest .spectrum-Button--dropdown.is-invalid {
+    border-color: rgb(236, 91, 98);
+  }
+.spectrum--lightest .spectrum-Button--dropdown.is-invalid:focus,
+    .spectrum--lightest .spectrum-Button--dropdown.is-invalid.is-focused {
+      border-color: rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
+    }
+.spectrum--lightest .spectrum-Button--dropdown:disabled,
+  .spectrum--lightest .spectrum-Button--dropdown.is-disabled {
+    background-color: rgb(244, 244, 244);
+    color: rgb(188, 188, 188);
+  }
+.spectrum--lightest .spectrum-Button--dropdown:disabled:focus, .spectrum--lightest .spectrum-Button--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }
+.spectrum--lightest .spectrum-Button--quiet--dropdown {
+  border-color: transparent;
+  background-color: transparent;
+}
+.spectrum--lightest .spectrum-Button--quiet--dropdown:focus,
+  .spectrum--lightest .spectrum-Button--quiet--dropdown.is-focused {
+    box-shadow: 0 2px 0 0 rgb(55, 142, 240);
+  }
+.spectrum--lightest .spectrum-Button--quiet--dropdown.is-invalid:focus,
+    .spectrum--lightest .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
+      box-shadow: 0 2px 0 0 rgb(236, 91, 98);
+    }
+.spectrum--lightest .spectrum-Button--quiet--dropdown:disabled,
+  .spectrum--lightest .spectrum-Button--quiet--dropdown.is-disabled {
+    color: rgb(188, 188, 188);
+  }
+.spectrum--lightest .spectrum-Button--quiet--dropdown:disabled:focus, .spectrum--lightest .spectrum-Button--quiet--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }
 .spectrum--lightest .spectrum-Breadcrumb {
 	color: rgb(118, 118, 118);
 }
@@ -1255,6 +1316,31 @@ markup: |
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--lightest .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(236, 91, 98);
     }
+.spectrum--lightest .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+  }
+.spectrum--lightest .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum--lightest .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+      border-color: rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
+    }
+.spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    border-color: rgb(234, 234, 234);
+  }
+.spectrum--lightest .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button {
+      border-color: rgb(211, 211, 211);
+    }
+.spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button, .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
+        border-color: rgb(236, 91, 98);
+      }
+.spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+        border-color: rgb(55, 142, 240);
+        box-shadow: 0 1px 0 rgb(55, 142, 240);
+      }
+.spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+          border-color: rgb(236, 91, 98);
+          box-shadow: 0 1px 0 rgb(236, 91, 98);
+        }
 /* topdoc
 ---
 name: Tooltip - Default
@@ -2373,79 +2459,21 @@ markup: |
   border-color: rgb(211, 211, 211);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
-.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
-      background-color: rgb(244, 244, 244);
-      border-color: rgb(211, 211, 211);
+.spectrum--lightest .spectrum-Dropdown .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2850%2C 50%2C 50%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
     }
-.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus {
-        box-shadow: none;
-      }
-.spectrum--lightest .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-          box-shadow: none;
-        }
 .spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Icon {
       color: rgb(236, 91, 98);
     }
-.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger {
-      border-color: rgb(236, 91, 98);
-    }
-.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger:focus {
-        box-shadow: 0 0 0 1px rgb(236, 91, 98);
+.spectrum--lightest .spectrum-Dropdown.is-invalid .spectrum-Dropdown-open-icon::after, .spectrum--lightest .spectrum-Dropdown.is-invalid:hover .spectrum-Dropdown-open-icon::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%28236%2C 91%2C 98%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
       }
-.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-open-icon::after {
+.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-open-icon::after, .spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
       }
-.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
-      background-color: rgb(244, 244, 244);
-      color: rgb(188, 188, 188);
-    }
-.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus {
-        box-shadow: none;
-      }
-.spectrum--lightest .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-          box-shadow: none;
-        }
-.spectrum--lightest .spectrum-Dropdown-trigger {
-  color: rgb(80, 80, 80);
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(234, 234, 234);
-}
-.spectrum--lightest .spectrum-Dropdown-trigger:hover {
-    color: rgb(50, 50, 50);
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(211, 211, 211);
-  }
-.spectrum--lightest .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2850%2C 50%2C 50%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
-    }
-.spectrum--lightest .spectrum-Dropdown-trigger:focus {
-    box-shadow: 0 0 0 2px rgb(55, 142, 240);
-  }
 .spectrum--lightest .spectrum-Dropdown-open-icon::after {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2880%2C 80%2C 80%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
 }
-.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
-    border-color: transparent !important;
-    background-color: transparent !important;
-  }
-.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus {
-      box-shadow: none;
-    }
-.spectrum--lightest .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-        box-shadow: 0 2px 0 0 rgb(55, 142, 240);
-      }
-.spectrum--lightest .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus {
-    box-shadow: none;
-  }
-.spectrum--lightest .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-      box-shadow: 0 2px 0 0 rgb(236, 91, 98);
-    }
-.spectrum--lightest .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus, .spectrum--lightest .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus {
-      box-shadow: none;
-    }
-.spectrum--lightest .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container, .spectrum--lightest .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-        box-shadow: none;
-      }
 .spectrum--lightest .spectrum-Toast {
   background-color: rgb(112, 112, 112);
   color: rgb(255, 255, 255);
@@ -3240,3 +3268,43 @@ markup: |
 .spectrum--lightest .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
       }
+.spectrum--lightest .spectrum-Tag {
+  color: rgb(118, 118, 118);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(149, 149, 149);
+}
+.spectrum--lightest .spectrum-Tag:hover {
+    color: rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(50, 50, 50);
+  }
+.spectrum--lightest .spectrum-Tag.is-invalid {
+    color: rgb(227, 72, 80);
+    border-color: rgb(227, 72, 80);
+  }
+.spectrum--lightest .spectrum-Tag.is-invalid:focus {
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum--lightest .spectrum-Tag.is-disabled {
+    color: rgb(188, 188, 188);
+    background-color: rgb(244, 244, 244);
+    border-color: rgb(244, 244, 244);
+  }
+.spectrum--lightest .spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum--lightest .spectrum-Tag-removeButton:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%2850%2C 50%2C 50%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+    }
+.spectrum--lightest .spectrum-Tag.is-disabled .spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28188%2C 188%2C 188%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum--lightest .spectrum-Tag--quiet,
+  .spectrum--lightest .spectrum-Tag--quiet:hover,
+  .spectrum--lightest .spectrum-Tag--quiet:focus,
+  .spectrum--lightest .spectrum-Tag--quiet.is-invalid,
+  .spectrum--lightest .spectrum-Tag--quiet.is-disabled {
+    background-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }

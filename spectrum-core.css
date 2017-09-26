@@ -391,6 +391,50 @@ markup: |
     z-index: 1;
   }
 
+.spectrum-Button--dropdown,
+.spectrum-Button--quiet--dropdown {
+  height: 32px;
+
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: normal;
+  -webkit-font-smoothing: initial;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.spectrum-Button--dropdown {
+  margin: 0;
+  padding: 0 12px;
+
+  border: 1px solid;
+  border-radius: 4px;
+
+  transition: background-color 125ms,
+    box-shadow 125ms,
+    border-color 125ms;
+}
+
+.spectrum-Button--dropdown:disabled,
+  .spectrum-Button--dropdown.is-disabled {
+    border-width: 0;
+    cursor: default;
+  }
+
+.spectrum-Button--dropdown.is-open {
+    border: 1px solid;
+  }
+
+.spectrum-Button--quiet--dropdown {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+}
+
 /* topdoc
 ---
 name: Alert - Closable
@@ -1328,6 +1372,95 @@ markup: |
   overflow-y: hidden;
 }
 
+/* topdoc
+name: Combo Box
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input" disabled>
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input is-invalid">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+*/
+
+/* topdoc
+name: Combo Box - Quiet
+description: A combo box uses the input group component to display a field with a button next to it
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" disabled>
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input is-invalid">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+    </button>
+  </div>
+
+*/
+
+.spectrum-InputGroup {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: 192px;
+}
+
+.spectrum-InputGroup-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+  -ms-flex: 1;
+      flex: 1;
+}
+
+.spectrum-InputGroup-button {
+  padding: 0;
+  width: 34px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    border-bottom: 1px solid;
+  }
+
 .spectrum-Tooltip,
 .spectrum-Underlay,
 .spectrum-Dialog,
@@ -1365,7 +1498,7 @@ markup: |
 
 .spectrum-Flyout--top.is-open,
 .spectrum-Popover--top.is-open {
-  transform: translateY(-1 * 4px);
+  transform: translateY(-4px);
 }
 
 .spectrum-Flyout--right.is-open,
@@ -1375,7 +1508,7 @@ markup: |
 
 .spectrum-Flyout--left.is-open,
 .spectrum-Popover--left.is-open {
-  transform: translateX(-1 * 4px);
+  transform: translateX(-4px);
 }
 
 .spectrum-Tooltip {
@@ -3487,11 +3620,11 @@ description: A Spectrum 'default' dropdown element with a flyout whose minimum w
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3506,11 +3639,11 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open" style="width: 195px;">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-trigger-label">Ballard</span>
         <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3525,39 +3658,37 @@ markup: |
 
   <div class="dummy-spacing"></div>
 
+  <h4>Disabled</h4>
+  <div class="spectrum-Dropdown is-disabled" style="width: 195px;">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon"></span>
+        </span>
+      </span>
+    </button>
+    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-List-option">
+      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
 */
 
 .spectrum-Dropdown {
   position: relative;
-  box-sizing: border-box;
-  transition: border-color 125ms;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  cursor: pointer;
   display: inline-block;
-  min-width: 64px;
-  outline: none;
+  min-width: 192px;
 }
-
-.spectrum-Dropdown.is-disabled {
-    border-width: 0;
-  }
-
-.spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
-      border-width: 0;
-      cursor: default;
-    }
-
-.spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
-      border: 1px solid;
-    }
 
 .spectrum-List.spectrum-Dropdown-flyout {
   min-width: 100%;
   max-height: 280px;
-
   margin-top: 2px;
-
   overflow-y: auto;
 }
 
@@ -3568,23 +3699,7 @@ markup: |
 
 .spectrum-Dropdown-trigger {
   position: relative;
-
   width: 100%;
-  height: 32px;
-
-  margin: 0;
-  padding: 0 12px;
-
-  border: 1px solid;
-  border-radius: 4px;
-
-  transition: background-color 125ms;
-
-  font-family: inherit;
-  font-style: italic;
-
-  cursor: pointer;
-  outline: none;
 }
 
 .spectrum-Dropdown-trigger .spectrum-Dropdown-trigger-container {
@@ -3604,14 +3719,20 @@ markup: |
     text-overflow: ellipsis;
   }
 
+.spectrum-Dropdown-trigger .spectrum-Dropdown-trigger-label.is-placeholder {
+      font-style: italic;
+    }
+
 .spectrum-Dropdown-icon-container .spectrum-Icon {
     margin-left: 8px;;
   }
 
 .spectrum-Dropdown-icon-container .spectrum-Dropdown-open-icon {
+    display: inline-block;
     position: relative;
     width: 12px;
     height: 18px;
+    vertical-align: top;
   }
 
 .spectrum-Dropdown-icon-container .spectrum-Dropdown-open-icon::after {
@@ -3636,11 +3757,11 @@ description: A Spectrum 'quiet' dropdown.
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3655,11 +3776,11 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+        <span class="spectrum-Dropdown-trigger-label">Ballard</span>
         <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3673,7 +3794,31 @@ markup: |
   </div>
   <div class="dummy-spacing"></div>
 
+  <h4>Disabled</h4>
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon"></span>
+        </span>
+      </span>
+    </button>
+    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
+      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
+      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
+      <hr class="spectrum-Flyout-divider">
+      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+    </ul>
+  </div>
+
 */
+
+.spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
+    margin: 0 12px;
+    width: calc(100% - 24px);
+  }
 
 /* topdoc
 name: Dropdown - Invalid
@@ -3681,12 +3826,12 @@ description: A Spectrum 'invalid' dropdown element. This is also a good example 
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
           <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3701,12 +3846,12 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown is-open is-invalid">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
           <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3723,12 +3868,12 @@ markup: |
 
   <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
           <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -3743,12 +3888,12 @@ markup: |
 
   <h4>Open</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open is-invalid">
-    <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
           <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
         </span>
       </span>
     </button>
@@ -5516,3 +5661,202 @@ markup: |
     cursor: default;
     pointer-events: none;
   }
+
+/* topdoc
+---
+  name: TagList - Default
+  description: A taglist with items that cannot be edited.
+  markup: |
+    <div class="spectrum-TagList" role="list" aria-label="list">
+      <div class="spectrum-Tag" role="listitem">
+        <span class="spectrum-Tag-label">Tag 1</span>
+      </div>
+      <div class="spectrum-Tag is-invalid" role="listitem">
+        <span class="spectrum-Tag-label">Tag 2</span>
+      </div>
+      <div class="spectrum-Tag is-disabled" role="listitem">
+        <span class="spectrum-Tag-label">Tag 2</span>
+      </div>
+    </div>
+
+*/
+
+/* topdoc
+---
+  name: TagList - Removable
+  description: An editable taglist.
+  markup: |
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag" role="listitem">
+        <span class="spectrum-Tag-label">Tag 1</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" role="listitem">
+        <span class="spectrum-Tag-label">Tag 2</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" role="listitem">
+        <span class="spectrum-Tag-label">Tag 2</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" disabled></button>
+      </div>
+    </div>
+
+*/
+
+/* topdoc
+---
+  name: TagList - Avatars
+  description: The Spectrum tag list with avatars
+  markup: |
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+      </div>
+    </div>
+
+*/
+
+/* topdoc
+---
+  name: TagList - Icons
+  description: The Spectrum tag list with icons
+  markup: |
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag" role="listitem">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag is-invalid" role="listitem">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag is-disabled" role="listitem">
+        <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+      </div>
+    </div>
+
+*/
+
+/* topdoc
+---
+  name: TagList - Quiet
+  description: The quiet Spectrum tag list. Should only be used with avatars or icons.
+  markup: |
+    <div class="spectrum-TagList" role="list" aria-label="Tags">
+      <div class="spectrum-Tag spectrum-Tag--quiet" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+      </div>
+      <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" role="listitem">
+        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <span class="spectrum-Tag-label">Shantanu</span>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+      </div>
+    </div>
+
+*/
+
+.spectrum-TagList {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.spectrum-TagList > .spectrum-Tag {
+    margin: 0 8px 8px 0;
+  }
+
+.spectrum-Tag {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: 4px;
+  outline: none;
+  padding: 4px 8px;
+  height: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  transition: border-color 125ms ease-in-out,
+    color 125ms ease-in-out,
+    box-shadow 125ms ease-in-out,
+    background-color 125ms ease-in-out;
+}
+
+.spectrum-Tag.is-disabled {
+    pointer-events: none;
+  }
+
+.spectrum-Tag-label {
+  -ms-flex: 1;
+      flex: 1;
+  font-size: 0.75rem;
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.spectrum-Tag-removeButton {
+  width: 24px;
+  height: 24px;
+  margin-right: -8px; /* Undo right padding on .spectrum-Tag */
+  cursor: pointer;
+}
+
+/* The fake background, inherited from .spectrum-Button--icon */
+
+.spectrum-Tag-removeButton::before {
+    top: 6px;
+    left: 6px;
+
+    width: 12px;
+    height: 12px;
+  }
+
+/* The actual icon */
+
+.spectrum-Tag-removeButton::after {
+    background-size: 12px 12px;
+  }
+
+.spectrum-Tag-avatar {
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  user-drag: none;
+}
+
+.spectrum-Tag-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+}

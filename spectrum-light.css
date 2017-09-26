@@ -668,6 +668,67 @@ markup: |
 .spectrum--light .spectrum-Button--icon:disabled {
     color: rgb(202, 202, 202);
   }
+.spectrum--light .spectrum-Button--dropdown {
+  color: rgb(75, 75, 75);
+  background-color: rgb(252, 252, 252);
+  border-color: rgb(225, 225, 225);
+}
+.spectrum--light .spectrum-Button--dropdown:hover {
+    color: rgb(44, 44, 44);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(202, 202, 202);
+  }
+.spectrum--light .spectrum-Button--dropdown:focus,
+  .spectrum--light .spectrum-Button--dropdown.is-focused {
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+  }
+.spectrum--light .spectrum-Button--dropdown:active,
+  .spectrum--light .spectrum-Button--dropdown.is-selected {
+    background-color: rgb(234, 234, 234);
+    border-color: rgb(202, 202, 202);
+  }
+.spectrum--light .spectrum-Button--dropdown:active:focus,
+    .spectrum--light .spectrum-Button--dropdown:active.is-focused,
+    .spectrum--light .spectrum-Button--dropdown.is-selected:focus,
+    .spectrum--light .spectrum-Button--dropdown.is-selected.is-focused {
+      box-shadow: none;
+    }
+.spectrum--light .spectrum-Button--dropdown.is-invalid {
+    border-color: rgb(227, 72, 80);
+  }
+.spectrum--light .spectrum-Button--dropdown.is-invalid:focus,
+    .spectrum--light .spectrum-Button--dropdown.is-invalid.is-focused {
+      border-color: rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum--light .spectrum-Button--dropdown:disabled,
+  .spectrum--light .spectrum-Button--dropdown.is-disabled {
+    background-color: rgb(234, 234, 234);
+    color: rgb(179, 179, 179);
+  }
+.spectrum--light .spectrum-Button--dropdown:disabled:focus, .spectrum--light .spectrum-Button--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }
+.spectrum--light .spectrum-Button--quiet--dropdown {
+  border-color: transparent;
+  background-color: transparent;
+}
+.spectrum--light .spectrum-Button--quiet--dropdown:focus,
+  .spectrum--light .spectrum-Button--quiet--dropdown.is-focused {
+    box-shadow: 0 2px 0 0 rgb(38, 128, 235);
+  }
+.spectrum--light .spectrum-Button--quiet--dropdown.is-invalid:focus,
+    .spectrum--light .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
+      box-shadow: 0 2px 0 0 rgb(227, 72, 80);
+    }
+.spectrum--light .spectrum-Button--quiet--dropdown:disabled,
+  .spectrum--light .spectrum-Button--quiet--dropdown.is-disabled {
+    color: rgb(179, 179, 179);
+  }
+.spectrum--light .spectrum-Button--quiet--dropdown:disabled:focus, .spectrum--light .spectrum-Button--quiet--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }
 .spectrum--light .spectrum-Breadcrumb {
 	color: rgb(112, 112, 112);
 }
@@ -1255,6 +1316,31 @@ markup: |
 .spectrum--light .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--light .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(227, 72, 80);
     }
+.spectrum--light .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+  }
+.spectrum--light .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum--light .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+      border-color: rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+    border-color: rgb(225, 225, 225);
+  }
+.spectrum--light .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button {
+      border-color: rgb(202, 202, 202);
+    }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button, .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
+        border-color: rgb(227, 72, 80);
+      }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+        border-color: rgb(38, 128, 235);
+        box-shadow: 0 1px 0 rgb(38, 128, 235);
+      }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+          border-color: rgb(227, 72, 80);
+          box-shadow: 0 1px 0 rgb(227, 72, 80);
+        }
 /* topdoc
 ---
 name: Tooltip - Default
@@ -2373,79 +2459,21 @@ markup: |
   border-color: rgb(202, 202, 202);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
-.spectrum--light .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger {
-      background-color: rgb(234, 234, 234);
-      border-color: rgb(202, 202, 202);
+.spectrum--light .spectrum-Dropdown .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2844%2C 44%2C 44%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
     }
-.spectrum--light .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus {
-        box-shadow: none;
-      }
-.spectrum--light .spectrum-Dropdown.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-          box-shadow: none;
-        }
 .spectrum--light .spectrum-Dropdown.is-invalid .spectrum-Icon {
       color: rgb(227, 72, 80);
     }
-.spectrum--light .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger {
-      border-color: rgb(227, 72, 80);
-    }
-.spectrum--light .spectrum-Dropdown.is-invalid .spectrum-Dropdown-trigger:focus {
-        box-shadow: 0 0 0 1px rgb(227, 72, 80);
+.spectrum--light .spectrum-Dropdown.is-invalid .spectrum-Dropdown-open-icon::after, .spectrum--light .spectrum-Dropdown.is-invalid:hover .spectrum-Dropdown-open-icon::after {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
       }
-.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-open-icon::after {
+.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-open-icon::after, .spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%28179%2C 179%2C 179%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
       }
-.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger {
-      background-color: rgb(234, 234, 234);
-      color: rgb(179, 179, 179);
-    }
-.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus {
-        box-shadow: none;
-      }
-.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-          box-shadow: none;
-        }
-.spectrum--light .spectrum-Dropdown-trigger {
-  color: rgb(75, 75, 75);
-  background-color: rgb(252, 252, 252);
-  border-color: rgb(225, 225, 225);
-}
-.spectrum--light .spectrum-Dropdown-trigger:hover {
-    color: rgb(44, 44, 44);
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(202, 202, 202);
-  }
-.spectrum--light .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-open-icon::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2844%2C 44%2C 44%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
-    }
-.spectrum--light .spectrum-Dropdown-trigger:focus {
-    box-shadow: 0 0 0 2px rgb(38, 128, 235);
-  }
 .spectrum--light .spectrum-Dropdown-open-icon::after {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Crect x='1' y='1' width='10' height='6' style='fill:%23ff13dc%3Bopacity:0'/%3E%3Cpath style='fill:rgb%2875%2C 75%2C 75%29' d='M11 2a1 1 0 0 0-1.7-0.7L6 4.6 2.7 1.3A1 1 0 1 0 1.3 2.7l4 4a1 1 0 0 0 1.4 0l4-4A1 1 0 0 0 11 2Z'/%3E%3C/svg%3E");
 }
-.spectrum--light .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
-    border-color: transparent !important;
-    background-color: transparent !important;
-  }
-.spectrum--light .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus {
-      box-shadow: none;
-    }
-.spectrum--light .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-        box-shadow: 0 2px 0 0 rgb(38, 128, 235);
-      }
-.spectrum--light .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus {
-    box-shadow: none;
-  }
-.spectrum--light .spectrum-Dropdown--quiet.is-invalid .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-      box-shadow: 0 2px 0 0 rgb(227, 72, 80);
-    }
-.spectrum--light .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus, .spectrum--light .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus {
-      box-shadow: none;
-    }
-.spectrum--light .spectrum-Dropdown--quiet.is-open .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container, .spectrum--light .spectrum-Dropdown--quiet.is-disabled .spectrum-Dropdown-trigger:focus .spectrum-Dropdown-trigger-container {
-        box-shadow: none;
-      }
 .spectrum--light .spectrum-Toast {
   background-color: rgb(112, 112, 112);
   color: rgb(255, 255, 255);
@@ -3240,3 +3268,43 @@ markup: |
 .spectrum--light .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28179%2C 179%2C 179%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
       }
+.spectrum--light .spectrum-Tag {
+  color: rgb(112, 112, 112);
+  background-color: rgb(252, 252, 252);
+  border: 1px solid rgb(142, 142, 142);
+}
+.spectrum--light .spectrum-Tag:hover {
+    color: rgb(44, 44, 44);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-Tag.is-invalid {
+    color: rgb(215, 55, 63);
+    border-color: rgb(215, 55, 63);
+  }
+.spectrum--light .spectrum-Tag.is-invalid:focus {
+      box-shadow: 0 0 0 1px rgb(215, 55, 63);
+    }
+.spectrum--light .spectrum-Tag.is-disabled {
+    color: rgb(179, 179, 179);
+    background-color: rgb(234, 234, 234);
+    border-color: rgb(234, 234, 234);
+  }
+.spectrum--light .spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum--light .spectrum-Tag-removeButton:hover::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%2844%2C 44%2C 44%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+    }
+.spectrum--light .spectrum-Tag.is-disabled .spectrum-Tag-removeButton::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28179%2C 179%2C 179%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+  }
+.spectrum--light .spectrum-Tag--quiet,
+  .spectrum--light .spectrum-Tag--quiet:hover,
+  .spectrum--light .spectrum-Tag--quiet:focus,
+  .spectrum--light .spectrum-Tag--quiet.is-invalid,
+  .spectrum--light .spectrum-Tag--quiet.is-disabled {
+    background-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }

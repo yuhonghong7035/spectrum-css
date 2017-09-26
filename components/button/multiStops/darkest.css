@@ -599,3 +599,64 @@ markup: |
 .spectrum--darkest .spectrum-Button--icon:disabled {
     color: rgb(60, 60, 60);
   }
+.spectrum--darkest .spectrum-Button--dropdown {
+  color: rgb(180, 180, 180);
+  background-color: rgb(24, 24, 24);
+  border-color: rgb(45, 45, 45);
+}
+.spectrum--darkest .spectrum-Button--dropdown:hover {
+    color: rgb(226, 226, 226);
+    background-color: rgb(8, 8, 8);
+    border-color: rgb(60, 60, 60);
+  }
+.spectrum--darkest .spectrum-Button--dropdown:focus,
+  .spectrum--darkest .spectrum-Button--dropdown.is-focused {
+    border-color: rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(20, 115, 230);
+  }
+.spectrum--darkest .spectrum-Button--dropdown:active,
+  .spectrum--darkest .spectrum-Button--dropdown.is-selected {
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(60, 60, 60);
+  }
+.spectrum--darkest .spectrum-Button--dropdown:active:focus,
+    .spectrum--darkest .spectrum-Button--dropdown:active.is-focused,
+    .spectrum--darkest .spectrum-Button--dropdown.is-selected:focus,
+    .spectrum--darkest .spectrum-Button--dropdown.is-selected.is-focused {
+      box-shadow: none;
+    }
+.spectrum--darkest .spectrum-Button--dropdown.is-invalid {
+    border-color: rgb(215, 55, 63);
+  }
+.spectrum--darkest .spectrum-Button--dropdown.is-invalid:focus,
+    .spectrum--darkest .spectrum-Button--dropdown.is-invalid.is-focused {
+      border-color: rgb(215, 55, 63);
+      box-shadow: 0 0 0 1px rgb(215, 55, 63);
+    }
+.spectrum--darkest .spectrum-Button--dropdown:disabled,
+  .spectrum--darkest .spectrum-Button--dropdown.is-disabled {
+    background-color: rgb(38, 38, 38);
+    color: rgb(73, 73, 73);
+  }
+.spectrum--darkest .spectrum-Button--dropdown:disabled:focus, .spectrum--darkest .spectrum-Button--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }
+.spectrum--darkest .spectrum-Button--quiet--dropdown {
+  border-color: transparent;
+  background-color: transparent;
+}
+.spectrum--darkest .spectrum-Button--quiet--dropdown:focus,
+  .spectrum--darkest .spectrum-Button--quiet--dropdown.is-focused {
+    box-shadow: 0 2px 0 0 rgb(20, 115, 230);
+  }
+.spectrum--darkest .spectrum-Button--quiet--dropdown.is-invalid:focus,
+    .spectrum--darkest .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
+      box-shadow: 0 2px 0 0 rgb(215, 55, 63);
+    }
+.spectrum--darkest .spectrum-Button--quiet--dropdown:disabled,
+  .spectrum--darkest .spectrum-Button--quiet--dropdown.is-disabled {
+    color: rgb(73, 73, 73);
+  }
+.spectrum--darkest .spectrum-Button--quiet--dropdown:disabled:focus, .spectrum--darkest .spectrum-Button--quiet--dropdown.is-disabled:focus {
+      box-shadow: none;
+    }

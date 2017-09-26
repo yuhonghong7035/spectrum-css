@@ -32,7 +32,7 @@
 }
 
 .spectrum-Flyout--top.is-open {
-  transform: translateY(-1 * 4px);
+  transform: translateY(-4px);
 }
 
 .spectrum-Flyout--right.is-open {
@@ -40,7 +40,7 @@
 }
 
 .spectrum-Flyout--left.is-open {
-  transform: translateX(-1 * 4px);
+  transform: translateX(-4px);
 }
 
 .spectrum-Flyout {

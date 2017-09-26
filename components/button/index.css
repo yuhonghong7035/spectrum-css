@@ -195,3 +195,47 @@
     position: relative;
     z-index: 1;
   }
+
+.spectrum-Button--dropdown,
+.spectrum-Button--quiet--dropdown {
+  height: 32px;
+
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: normal;
+  -webkit-font-smoothing: initial;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.spectrum-Button--dropdown {
+  margin: 0;
+  padding: 0 12px;
+
+  border: 1px solid;
+  border-radius: 4px;
+
+  transition: background-color 125ms,
+    box-shadow 125ms,
+    border-color 125ms;
+}
+
+.spectrum-Button--dropdown:disabled,
+  .spectrum-Button--dropdown.is-disabled {
+    border-width: 0;
+    cursor: default;
+  }
+
+.spectrum-Button--dropdown.is-open {
+    border: 1px solid;
+  }
+
+.spectrum-Button--quiet--dropdown {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+}
