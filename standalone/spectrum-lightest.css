@@ -1261,12 +1261,6 @@ markup: |
   /* Remove the native clear button in IE */
 }
 
-.spectrum-Textfield::-webkit-input-placeholder {
-    font-weight: normal;
-    font-style: italic;
-    transition: color 125ms ease-in-out;
-  }
-
 .spectrum-Textfield:-ms-input-placeholder {
     font-weight: normal;
     font-style: italic;
@@ -1278,10 +1272,6 @@ markup: |
     font-style: italic;
     transition: color 125ms ease-in-out;
   }
-
-.spectrum-Textfield:hover::-webkit-input-placeholder {
-      font-weight: normal;
-    }
 
 .spectrum-Textfield:hover:-ms-input-placeholder {
       font-weight: normal;
@@ -1295,10 +1285,6 @@ markup: |
     /* The opacity must be set to 1 */
     opacity: 1;
   }
-
-.spectrum-Textfield:disabled::-webkit-input-placeholder {
-      font-weight: normal;
-    }
 
 .spectrum-Textfield:disabled:-ms-input-placeholder {
       font-weight: normal;
@@ -1465,7 +1451,8 @@ markup: |
 .spectrum-Underlay,
 .spectrum-Dialog,
 .spectrum-Flyout,
-.spectrum-Popover {
+.spectrum-Popover,
+.spectrum-QuickActions {
   visibility: hidden;
 
   opacity: 0;
@@ -1481,7 +1468,8 @@ markup: |
 .spectrum-Underlay.is-open,
 .spectrum-Dialog.is-open,
 .spectrum-Flyout.is-open,
-.spectrum-Popover.is-open {
+.spectrum-Popover.is-open,
+.spectrum-QuickActions.is-open {
   visibility: visible;
 
   opacity: 1;
@@ -1491,23 +1479,29 @@ markup: |
   pointer-events: auto;
 }
 
+.spectrum-Tooltip--bottom.is-open,
 .spectrum-Flyout--bottom.is-open,
 .spectrum-Popover--bottom.is-open {
   transform: translateY(4px);
 }
 
+.spectrum-Tooltip--top.is-open,
 .spectrum-Flyout--top.is-open,
 .spectrum-Popover--top.is-open {
   transform: translateY(-4px);
 }
 
+.spectrum-Tooltip--right.is-open,
 .spectrum-Flyout--right.is-open,
-.spectrum-Popover--right.is-open {
+.spectrum-Popover--right.is-open,
+.spectrum-QuickActions--left.is-open {
   transform: translateX(4px);
 }
 
+.spectrum-Tooltip--left.is-open,
 .spectrum-Flyout--left.is-open,
-.spectrum-Popover--left.is-open {
+.spectrum-Popover--left.is-open,
+.spectrum-QuickActions--right.is-open {
   transform: translateX(-4px);
 }
 
@@ -1557,10 +1551,6 @@ markup: |
   margin-left: 3px;
 }
 
-.spectrum-Tooltip--right.is-open {
-    left: 4px;
-  }
-
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
     left: -6px;
     transform: rotate(90deg);
@@ -1569,10 +1559,6 @@ markup: |
 .spectrum-Tooltip--left {
   margin-right: 3px;
 }
-
-.spectrum-Tooltip--left.is-open {
-    left:  -4px;
-  }
 
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
     right: -6px;
@@ -1588,10 +1574,6 @@ markup: |
   margin-top: 3px;
 }
 
-.spectrum-Tooltip--bottom.is-open {
-    top: 4px;
-  }
-
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
     top: -4px;
     transform: rotate(180deg);
@@ -1600,10 +1582,6 @@ markup: |
 .spectrum-Tooltip--top {
   margin-bottom: 3px;
 }
-
-.spectrum-Tooltip--top.is-open {
-    top: -4px;
-  }
 
 .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     bottom: -4px;
@@ -3532,6 +3510,28 @@ markup: |
     border-radius: 7px;
     border-style: solid;
   }
+
+/* topdoc
+---
+name: Toggle Switch - A/B
+description: The Spectrum toggle A/B
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-0">
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-ab-0">Toggle A</label>
+  </div>
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-1" checked>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
+  </div>
+
+*/
 
 .spectrum-List {
   display: inline-block;
@@ -5861,6 +5861,153 @@ markup: |
   font-size: 1rem;
 }
 
+/* topdoc
+---
+name: Search Within
+description: The Spectrum search within field. Override the width of the component where necessary.
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-SearchWithin" style="margin-bottom: 180px;">
+    <div class="spectrum-Dropdown is-open">
+      <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+
+    <ul class="spectrum-Flyout is-open spectrum-List" role="menu" tabindex="0" style="top: 38px; left: 0;">
+      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">All</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Campaigns</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Audiences</li>
+      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Tags</li>
+    </ul>
+  </div>
+
+  <h4>Default (Changed Selection)</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">Campaigns</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield">
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-SearchWithin">
+    <div class="spectrum-Dropdown is-disabled">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+        <span class="spectrum-Dropdown-trigger-container">
+          <span class="spectrum-Dropdown-trigger-label">All</span>
+          <span class="spectrum-Dropdown-icon-container">
+            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+          </span>
+        </span>
+      </button>
+    </div>
+    <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
+    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+  </div>
+
+*/
+
+.spectrum-SearchWithin {
+  width: 250px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+}
+
+.spectrum-SearchWithin .spectrum-Dropdown {
+    min-width: 0;
+  }
+
+.spectrum-SearchWithin .spectrum-Dropdown-trigger {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+  }
+
+.spectrum-SearchWithin .spectrum-Textfield {
+    -ms-flex: 1;
+        flex: 1;
+    margin-left: -1px; /* hides left border */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+.spectrum-SearchWithin .spectrum-Textfield:hover, .spectrum-SearchWithin .spectrum-Textfield:focus {
+      position: relative; /* shows left border */
+    }
+
+.spectrum-QuickActions {
+
+  display: -ms-inline-flexbox;
+
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
+  }
+
+.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
+  }
+
+.spectrum-QuickActions-button {
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  padding: 0;
+  border-width: 1px;
+  line-height: 1.875rem;
+  border-radius: 16px;
+  border-style: solid;
+  transition: border-color 125ms ease-out,
+    color 125ms ease-out,
+    box-shadow 125ms ease-out;
+}
+
+.spectrum-QuickActions-button:hover {
+    cursor: pointer;
+  }
+
+.spectrum-QuickActions-button:active {
+    cursor: pointer;
+  }
+
+.spectrum-QuickActions-button:first-child {
+    margin-left: 0;
+  }
+
 /* Temporary skin variables that need to be moved into origins */
 
 :root {
@@ -7287,10 +7434,6 @@ markup: |
   color: rgb(80, 80, 80);
 }
 
-.spectrum-Textfield::-webkit-input-placeholder {
-    color: rgb(149, 149, 149);
-  }
-
 .spectrum-Textfield:-ms-input-placeholder {
     color: rgb(149, 149, 149);
   }
@@ -7303,10 +7446,6 @@ markup: |
     border-color: rgb(211, 211, 211);
     box-shadow: none;
   }
-
-.spectrum-Textfield:hover::-webkit-input-placeholder {
-      color: rgb(80, 80, 80);
-    }
 
 .spectrum-Textfield:hover:-ms-input-placeholder {
       color: rgb(80, 80, 80);
@@ -7333,10 +7472,6 @@ markup: |
     /* For safari mobile browser */
     -webkit-text-fill-color: rgb(188, 188, 188);
   }
-
-.spectrum-Textfield[disabled]::-webkit-input-placeholder {
-      color: rgb(234, 234, 234);
-    }
 
 .spectrum-Textfield[disabled]:-ms-input-placeholder {
       color: rgb(234, 234, 234);
@@ -8573,7 +8708,7 @@ Todo: Determine if these are supposed to be pseudo classes
           box-shadow: none;
         }
 
-.spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
           background-color: rgb(50, 50, 50);
         }
 
@@ -8585,7 +8720,7 @@ Todo: Determine if these are supposed to be pseudo classes
           border-color: rgb(118, 118, 118);
         }
 
-.spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
           background-color: rgb(118, 118, 118);
         }
 
@@ -8604,6 +8739,14 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled ~ .spectrum-ToggleSwitch-label, .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input[disabled] ~ .spectrum-ToggleSwitch-label {
         color: rgb(188, 188, 188);
       }
+
+.spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before, .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:focus:checked + .spectrum-ToggleSwitch-content::before {
+        background-color: rgb(234, 234, 234);
+      }
+
+.spectrum-ToggleSwitch--ab:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before, .spectrum-ToggleSwitch--ab:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
+          background-color: rgb(234, 234, 234);
+        }
 
 /* topdoc
 ---
@@ -9694,4 +9837,51 @@ markup: |
     background-color: transparent;
     background-color: transparent;
     border-color: transparent;
+  }
+
+/* topdoc
+---
+name: Quick Actions
+description: Spectrum quick actions (requires an icon)
+markup: |
+  <div class="spectrum-QuickActions is-open">
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+    </button>
+  </div>
+
+*/
+
+.spectrum-QuickActions-button {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(211, 211, 211);
+  color: rgb(118, 118, 118);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.spectrum-QuickActions-button:hover {
+    border-color: rgb(118, 118, 118);
+    color: rgb(50, 50, 50);
+  }
+
+.spectrum-QuickActions-button:focus {
+    border-color: rgb(55, 142, 240);
+    color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    outline: none;
+  }
+
+.spectrum-QuickActions-button:active {
+    border-color: rgb(80, 80, 80);
+    color: rgb(50, 50, 50);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }

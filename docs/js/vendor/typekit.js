@@ -5,7 +5,7 @@
 
   // note: 'ruf7eed' is CoralUI's default kit
   var config = {
-    kitId: 'ruf7eed',
+    kitId: 'ugb8kwy',
     scriptTimeout: 3000
   };
 

@@ -27,6 +27,22 @@
   pointer-events: auto;
 }
 
+.spectrum-Tooltip--bottom.is-open {
+  transform: translateY(4px);
+}
+
+.spectrum-Tooltip--top.is-open {
+  transform: translateY(-4px);
+}
+
+.spectrum-Tooltip--right.is-open {
+  transform: translateX(4px);
+}
+
+.spectrum-Tooltip--left.is-open {
+  transform: translateX(-4px);
+}
+
 .spectrum-Tooltip {
 
   position: relative;
@@ -73,10 +89,6 @@
   margin-left: 3px;
 }
 
-.spectrum-Tooltip--right.is-open {
-    left: 4px;
-  }
-
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
     left: -6px;
     transform: rotate(90deg);
@@ -85,10 +97,6 @@
 .spectrum-Tooltip--left {
   margin-right: 3px;
 }
-
-.spectrum-Tooltip--left.is-open {
-    left:  -4px;
-  }
 
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
     right: -6px;
@@ -104,10 +112,6 @@
   margin-top: 3px;
 }
 
-.spectrum-Tooltip--bottom.is-open {
-    top: 4px;
-  }
-
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
     top: -4px;
     transform: rotate(180deg);
@@ -116,10 +120,6 @@
 .spectrum-Tooltip--top {
   margin-bottom: 3px;
 }
-
-.spectrum-Tooltip--top.is-open {
-    top: -4px;
-  }
 
 .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     bottom: -4px;

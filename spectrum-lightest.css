@@ -1200,7 +1200,7 @@ markup: |
   </textarea>
 
 */
-.spectrum--lightest .spectrum-Textfield::-webkit-input-placeholder {
+.spectrum--lightest .spectrum-Textfield:-ms-input-placeholder {
     color: rgb(149, 149, 149);
   }
 /* topdoc
@@ -1222,21 +1222,15 @@ markup: |
   </textarea>
 
 */
-.spectrum--lightest .spectrum-Textfield:-ms-input-placeholder {
-    color: rgb(149, 149, 149);
-  }
-/* It's a little wonky, right? */
 .spectrum--lightest .spectrum-Textfield::placeholder {
     color: rgb(149, 149, 149);
   }
-/* TODO: is it wonky that textarea shares the selector? */
+/* It's a little wonky, right? */
 .spectrum--lightest .spectrum-Textfield:hover {
     border-color: rgb(211, 211, 211);
     box-shadow: none;
   }
-.spectrum--lightest .spectrum-Textfield:hover::-webkit-input-placeholder {
-      color: rgb(80, 80, 80);
-    }
+/* TODO: is it wonky that textarea shares the selector? */
 .spectrum--lightest .spectrum-Textfield:hover:-ms-input-placeholder {
       color: rgb(80, 80, 80);
     }
@@ -1258,9 +1252,6 @@ markup: |
     /* For safari mobile browser */
     -webkit-text-fill-color: rgb(188, 188, 188);
   }
-.spectrum--lightest .spectrum-Textfield[disabled]::-webkit-input-placeholder {
-      color: rgb(234, 234, 234);
-    }
 .spectrum--lightest .spectrum-Textfield[disabled]:-ms-input-placeholder {
       color: rgb(234, 234, 234);
     }
@@ -2361,7 +2352,7 @@ Todo: Determine if these are supposed to be pseudo classes
           border-color: rgb(50, 50, 50);
           box-shadow: none;
         }
-.spectrum--lightest .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum--lightest .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
           background-color: rgb(50, 50, 50);
         }
 .spectrum--lightest .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input ~ .spectrum-ToggleSwitch-label {
@@ -2370,7 +2361,7 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum--lightest .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-content::after {
           border-color: rgb(118, 118, 118);
         }
-.spectrum--lightest .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum--lightest .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
           background-color: rgb(118, 118, 118);
         }
 .spectrum--lightest .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input ~ .spectrum-ToggleSwitch-label {
@@ -2385,6 +2376,12 @@ Todo: Determine if these are supposed to be pseudo classes
 .spectrum--lightest .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled ~ .spectrum-ToggleSwitch-label, .spectrum--lightest .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input[disabled] ~ .spectrum-ToggleSwitch-label {
         color: rgb(188, 188, 188);
       }
+.spectrum--lightest .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::before, .spectrum--lightest .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:focus:checked + .spectrum-ToggleSwitch-content::before {
+        background-color: rgb(234, 234, 234);
+      }
+.spectrum--lightest .spectrum-ToggleSwitch--ab:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before, .spectrum--lightest .spectrum-ToggleSwitch--ab:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-content::before {
+          background-color: rgb(234, 234, 234);
+        }
 /* topdoc
 ---
 name: List
@@ -3307,4 +3304,46 @@ markup: |
     background-color: transparent;
     background-color: transparent;
     border-color: transparent;
+  }
+/* topdoc
+---
+name: Quick Actions
+description: Spectrum quick actions (requires an icon)
+markup: |
+  <div class="spectrum-QuickActions is-open">
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+    </button>
+  </div>
+
+*/
+.spectrum--lightest .spectrum-QuickActions-button {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(211, 211, 211);
+  color: rgb(118, 118, 118);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.spectrum--lightest .spectrum-QuickActions-button:hover {
+    border-color: rgb(118, 118, 118);
+    color: rgb(50, 50, 50);
+  }
+.spectrum--lightest .spectrum-QuickActions-button:focus {
+    border-color: rgb(55, 142, 240);
+    color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    outline: none;
+  }
+.spectrum--lightest .spectrum-QuickActions-button:active {
+    border-color: rgb(80, 80, 80);
+    color: rgb(50, 50, 50);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }

@@ -67,9 +67,6 @@ markup: |
   border-color: rgb(45, 45, 45);
   color: rgb(180, 180, 180);
 }
-.spectrum--darkest .spectrum-Textfield::-webkit-input-placeholder {
-    color: rgb(105, 105, 105);
-  }
 .spectrum--darkest .spectrum-Textfield:-ms-input-placeholder {
     color: rgb(105, 105, 105);
   }
@@ -80,9 +77,6 @@ markup: |
     border-color: rgb(60, 60, 60);
     box-shadow: none;
   }
-.spectrum--darkest .spectrum-Textfield:hover::-webkit-input-placeholder {
-      color: rgb(180, 180, 180);
-    }
 .spectrum--darkest .spectrum-Textfield:hover:-ms-input-placeholder {
       color: rgb(180, 180, 180);
     }
@@ -104,9 +98,6 @@ markup: |
     /* For safari mobile browser */
     -webkit-text-fill-color: rgb(73, 73, 73);
   }
-.spectrum--darkest .spectrum-Textfield[disabled]::-webkit-input-placeholder {
-      color: rgb(45, 45, 45);
-    }
 .spectrum--darkest .spectrum-Textfield[disabled]:-ms-input-placeholder {
       color: rgb(45, 45, 45);
     }

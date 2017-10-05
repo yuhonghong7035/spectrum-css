@@ -424,6 +424,9 @@ document.addEventListener('click', function(event) {
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#progress---small">Progress - Small</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#quick-actions">Quick Actions</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#radio---default">Radio - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
@@ -449,6 +452,9 @@ document.addEventListener('click', function(event) {
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#search---quiet">Search - Quiet</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#search-within">Search Within</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#slider---color">Slider - Color</a></div>
@@ -578,6 +584,9 @@ document.addEventListener('click', function(event) {
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#toast---warning">Toast - Warning</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#toggle-switch---ab">Toggle Switch - A/B</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#toggle-switch---onoff">Toggle Switch - On/Off</a></div>
@@ -5266,6 +5275,60 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             </div>
           </section>
         </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#quick-actions">
+            <header class="row" id="quick-actions">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Quick Actions</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>Spectrum quick actions (requires an icon)</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-QuickActions is-open">
+  <button class="spectrum-QuickActions-button">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+  </button>
+  <button class="spectrum-QuickActions-button">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+  </button>
+  <button class="spectrum-QuickActions-button">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+  </button>
+  <button class="spectrum-QuickActions-button">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+  </button>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-QuickActions is-open&quot;&gt;
+  &lt;button class=&quot;spectrum-QuickActions-button&quot;&gt;
+    &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text&quot; role=&quot;img&quot; aria-label=&quot;info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-QuickActions-button&quot;&gt;
+    &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft&quot; role=&quot;img&quot; aria-label=&quot;info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-QuickActions-button&quot;&gt;
+    &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop&quot; role=&quot;img&quot; aria-label=&quot;info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-QuickActions-button&quot;&gt;
+    &lt;span class=&quot;spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline&quot; role=&quot;img&quot; aria-label=&quot;info&quot;&gt;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
         <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#radio---default">
             <header class="row" id="radio---default">
               <div class="col-xs">
@@ -5659,6 +5722,172 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
   &lt;div class=&quot;spectrum-DecoratedTextfield-icon spectrum-Search-icon&quot;&gt;&lt;/div&gt;
   &lt;button type=&quot;reset&quot; class=&quot;spectrum-Button spectrum-Button--icon spectrum-Search-clear&quot; disabled&gt;&lt;/button&gt;
 &lt;/form&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#search-within">
+            <header class="row" id="search-within">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Search Within</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum search within field. Override the width of the component where necessary.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><h4>Default</h4>
+<div class="spectrum-SearchWithin">
+  <div class="spectrum-Dropdown">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">All</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+  </div>
+  <input type="text" placeholder="Search" class="spectrum-Textfield">
+  <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+</div>
+
+<h4>Open</h4>
+<div class="spectrum-SearchWithin" style="margin-bottom: 180px;">
+  <div class="spectrum-Dropdown is-open">
+    <button class="spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">All</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+  </div>
+  <input type="text" placeholder="Search" class="spectrum-Textfield">
+  <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+
+  <ul class="spectrum-Flyout is-open spectrum-List" role="menu" tabindex="0" style="top: 38px; left: 0;">
+    <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">All</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="-1">Campaigns</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="-1">Audiences</li>
+    <li class="spectrum-List-option" role="menuitem" tabindex="-1">Tags</li>
+  </ul>
+</div>
+
+<h4>Default (Changed Selection)</h4>
+<div class="spectrum-SearchWithin">
+  <div class="spectrum-Dropdown">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">Campaigns</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+  </div>
+  <input type="text" placeholder="Search" class="spectrum-Textfield">
+  <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
+</div>
+
+<h4>Disabled</h4>
+<div class="spectrum-SearchWithin">
+  <div class="spectrum-Dropdown is-disabled">
+    <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">All</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+        </span>
+      </span>
+    </button>
+  </div>
+  <input type="text" placeholder="Search" class="spectrum-Textfield" value="Term" disabled>
+  <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;h4&gt;Default&lt;/h4&gt;
+&lt;div class=&quot;spectrum-SearchWithin&quot;&gt;
+  &lt;div class=&quot;spectrum-Dropdown&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;All&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+          &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;spectrum-Textfield&quot;&gt;
+  &lt;button type=&quot;reset&quot; class=&quot;spectrum-Button spectrum-Button--icon spectrum-Search-clear&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Open&lt;/h4&gt;
+&lt;div class=&quot;spectrum-SearchWithin&quot; style=&quot;margin-bottom: 180px;&quot;&gt;
+  &lt;div class=&quot;spectrum-Dropdown is-open&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--dropdown is-selected spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;All&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+          &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;spectrum-Textfield&quot;&gt;
+  &lt;button type=&quot;reset&quot; class=&quot;spectrum-Button spectrum-Button--icon spectrum-Search-clear&quot;&gt;&lt;/button&gt;
+
+  &lt;ul class=&quot;spectrum-Flyout is-open spectrum-List&quot; role=&quot;menu&quot; tabindex=&quot;0&quot; style=&quot;top: 38px; left: 0;&quot;&gt;
+    &lt;li class=&quot;spectrum-List-option is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;All&lt;/li&gt;
+    &lt;li class=&quot;spectrum-List-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Campaigns&lt;/li&gt;
+    &lt;li class=&quot;spectrum-List-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Audiences&lt;/li&gt;
+    &lt;li class=&quot;spectrum-List-option&quot; role=&quot;menuitem&quot; tabindex=&quot;-1&quot;&gt;Tags&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Default (Changed Selection)&lt;/h4&gt;
+&lt;div class=&quot;spectrum-SearchWithin&quot;&gt;
+  &lt;div class=&quot;spectrum-Dropdown&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;Campaigns&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+          &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;spectrum-Textfield&quot;&gt;
+  &lt;button type=&quot;reset&quot; class=&quot;spectrum-Button spectrum-Button--icon spectrum-Search-clear&quot;&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;h4&gt;Disabled&lt;/h4&gt;
+&lt;div class=&quot;spectrum-SearchWithin&quot;&gt;
+  &lt;div class=&quot;spectrum-Dropdown is-disabled&quot;&gt;
+    &lt;button class=&quot;spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger&quot; disabled aria-haspopup=&quot;true&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-trigger-container&quot;&gt;
+        &lt;span class=&quot;spectrum-Dropdown-trigger-label&quot;&gt;All&lt;/span&gt;
+        &lt;span class=&quot;spectrum-Dropdown-icon-container&quot;&gt;
+          &lt;span class=&quot;spectrum-Dropdown-open-icon spectrum-Icon&quot;&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;spectrum-Textfield&quot; value=&quot;Term&quot; disabled&gt;
+  &lt;button type=&quot;reset&quot; class=&quot;spectrum-Button spectrum-Button--icon spectrum-Search-clear&quot; disabled&gt;&lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
             </div>
@@ -8920,6 +9149,52 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
   &lt;div class=&quot;spectrum-Toast-typeIcon&quot; role=&quot;img&quot; aria-label=&quot;alert&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;spectrum-Toast-content&quot;&gt;The toast is burning.&lt;/div&gt;
   &lt;button class=&quot;spectrum-Toast-closeButton&quot;&gt;&lt;/button&gt;  
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink" href="#toggle-switch---ab">
+            <header class="row" id="toggle-switch---ab">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading spectrum-Heading--pagetitle box">Toggle Switch - A/B</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <p>The Spectrum toggle A/B</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+  <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-0">
+  <span class="spectrum-ToggleSwitch-content"></span>
+  <label class="spectrum-ToggleSwitch-label" for="toggle-ab-0">Toggle A</label>
+</div>
+<div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+  <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-1" checked>
+  <span class="spectrum-ToggleSwitch-content"></span>
+  <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-ToggleSwitch spectrum-ToggleSwitch--ab&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-ToggleSwitch-input&quot; id=&quot;toggle-ab-0&quot;&gt;
+  &lt;span class=&quot;spectrum-ToggleSwitch-content&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-ToggleSwitch-label&quot; for=&quot;toggle-ab-0&quot;&gt;Toggle A&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;spectrum-ToggleSwitch spectrum-ToggleSwitch--ab&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; class=&quot;spectrum-ToggleSwitch-input&quot; id=&quot;toggle-ab-1&quot; checked&gt;
+  &lt;span class=&quot;spectrum-ToggleSwitch-content&quot;&gt;&lt;/span&gt;
+  &lt;label class=&quot;spectrum-ToggleSwitch-label&quot; for=&quot;toggle-ab-1&quot;&gt;Toggle B&lt;/label&gt;
 &lt;/div&gt;
 </code></pre>
               </div>
