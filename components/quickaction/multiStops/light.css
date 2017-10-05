@@ -1,0 +1,46 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+/* topdoc
+---
+name: Quick Actions
+description: Spectrum quick actions (requires an icon)
+markup: |
+  <div class="spectrum-QuickActions is-open">
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+    </button>
+    <button class="spectrum-QuickActions-button">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+    </button>
+  </div>
+
+*/
+.spectrum--light .spectrum-QuickActions-button {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(202, 202, 202);
+  color: rgb(112, 112, 112);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.spectrum--light .spectrum-QuickActions-button:hover {
+    border-color: rgb(112, 112, 112);
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-QuickActions-button:focus {
+    border-color: rgb(38, 128, 235);
+    color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    outline: none;
+  }
+.spectrum--light .spectrum-QuickActions-button:active {
+    border-color: rgb(75, 75, 75);
+    color: rgb(44, 44, 44);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
