@@ -325,7 +325,7 @@ markup: |
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 1</span>
-          <div class="spectrum-Tooltip-tip"></div>
+          <span class="spectrum-Tooltip-tip"></span>
         </div>
         <div class="spectrum-Steplist-marker">
         </div>
@@ -338,7 +338,7 @@ markup: |
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 2</span>
-          <div class="spectrum-Tooltip-tip"></div>
+          <span class="spectrum-Tooltip-tip"></span>
         </div>
         <div class="spectrum-Steplist-marker">
         </div>
@@ -351,7 +351,7 @@ markup: |
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 3</span>
-          <div class="spectrum-Tooltip-tip"></div>
+          <span class="spectrum-Tooltip-tip"></span>
         </div>
         <div class="spectrum-Steplist-marker">
         </div>
@@ -364,7 +364,7 @@ markup: |
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 4</span>
-          <div class="spectrum-Tooltip-tip"></div>
+          <span class="spectrum-Tooltip-tip"></span>
         </div>
         <div class="spectrum-Steplist-marker">
         </div>

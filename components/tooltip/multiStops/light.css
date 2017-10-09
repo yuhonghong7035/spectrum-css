@@ -2,6 +2,20 @@
 :root {
   /* Icon Button*/
 }
+.spectrum--light {
+
+/* topdoc
+---
+name: Tooltip - Links
+description: A Spectrum tooltip
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a></span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+*/
+}
 /* topdoc
 ---
 name: Tooltip - Default
@@ -9,7 +23,7 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
     <span class="spectrum-Tooltip-label">Normal Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
 */
@@ -25,7 +39,7 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-label">Error Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
 */
@@ -40,7 +54,7 @@ description: A Spectrum info tooltip is the same as default :)
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
     <span class="spectrum-Tooltip-label">Normal Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
 */
@@ -55,7 +69,7 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label">Success Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
 */

@@ -50,10 +50,11 @@
   top: 0px;
 
   display: inline-block;
+  box-sizing: border-box;
 
   width: auto;
-  padding: 2px 8px;
-
+  max-width: 256px;
+  padding: 2px 9px;
   border-radius: 4px;
 
   font-size: 0.75rem;
@@ -127,7 +128,7 @@
 
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: -2px;
+    margin-left: -4px;
   }
 
 /* topdoc
@@ -137,7 +138,7 @@ description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
   <br>
@@ -146,7 +147,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success
   is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
   <br>
@@ -155,7 +156,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info
   is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info spectrum-Tooltip-typeIcon"></span>Info</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
   <br>
@@ -164,7 +165,7 @@ markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error
   is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
-    <div class="spectrum-Tooltip-tip"></div>
+    <span class="spectrum-Tooltip-tip"></span>
   </span>
 
 */
@@ -249,19 +250,3 @@ markup: |
 .u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
     transform: translate(0, -50%);
   }
-
-/* topdoc
----
-name: Tooltip - Large
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--large is-open">
-    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
-    <div class="spectrum-Tooltip-tip"></div>
-  </span>
-
-*/
-
-.spectrum-Tooltip--large {
-  padding: 8px 16px;
-}
