@@ -148,6 +148,7 @@
   --spectrum-calendar-width-default: 250px;
   --spectrum-cyclebutton-button-background-color-default: transparent;
   --spectrum-cyclebutton-button-border-radius-default: 4px;
+  --spectrum-cyclebutton-button-box-shadow-spread-radius-focus: 2px;
   --spectrum-cyclebutton-button-height-default: 32px;
   --spectrum-cyclebutton-button-width-default: 32px;
   --spectrum-dialog-content-font-size-default: 14px;
@@ -269,12 +270,13 @@
   --spectrum-quickaction-height-default: 32px;
   --spectrum-quickaction-margin-default: 12px;
   --spectrum-quickaction-width-default: 32px;
-  --spectrum-rail-grip-border-radius-default: 2px;
-  --spectrum-rail-grip-border-width-horizontal-default: 3px;
-  --spectrum-rail-grip-border-width-vertical-default: 4px;
-  --spectrum-rail-grip-height-default: 16px;
-  --spectrum-rail-grip-width-default: 4px;
-  --spectrum-rail-slider-border-width-default: 2px;
+  --spectrum-rail-content-width-default: 304px;
+  --spectrum-rail-draghandle-width-default: 2px;
+  --spectrum-rail-gripper-border-radius-default: 2px;
+  --spectrum-rail-gripper-border-width-horizontal-default: 3px;
+  --spectrum-rail-gripper-border-width-vertical-default: 4px;
+  --spectrum-rail-gripper-height-default: 16px;
+  --spectrum-rail-gripper-width-default: 4px;
   --spectrum-slider-animation-ease-default: ease-in-out;
   --spectrum-slider-animation-transition-time-default: 125ms;
   --spectrum-slider-border-width-active: 8px;

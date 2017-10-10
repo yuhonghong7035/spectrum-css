@@ -5993,6 +5993,25 @@ markup: |
     margin-left: 0;
   }
 
+.spectrum-CycleButton {
+  width: 32px;
+  height: 32px;
+  line-height: 2rem;
+  border-radius: 4px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.spectrum-CycleButton:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
+    outline: 0;
+  }
+
+.spectrum-CycleButton-icon:not(.is-active) {
+  display: none
+}
+
 /* Temporary skin variables that need to be moved into origins */
 
 :root {
@@ -9882,3 +9901,40 @@ markup: |
     color: rgb(44, 44, 44);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+
+/* topdoc
+---
+name: Cycle Button - Default
+description: A Spectrum cycle button
+markup: |
+  <button class="spectrum-CycleButton">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle spectrum-CycleButton-icon is-active"></span>
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle spectrum-CycleButton-icon"></span>
+  </button>
+
+*/
+
+.spectrum-CycleButton {
+  background-color: transparent;
+}
+
+.spectrum-CycleButton:hover .spectrum-CycleButton-icon {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-CycleButton:active {
+    background-color: rgb(225, 225, 225);
+  }
+
+.spectrum-CycleButton:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+    box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
+  }
+
+.spectrum-CycleButton:focus .spectrum-CycleButton-icon {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-CycleButton-icon {
+  color: rgb(112, 112, 112);
+}

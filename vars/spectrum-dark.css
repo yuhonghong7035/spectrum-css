@@ -479,10 +479,10 @@
   --spectrum-quickaction-text-color-default: rgb(153, 153, 153);
   --spectrum-quickaction-text-color-focus: rgb(38, 128, 235);
   --spectrum-quickaction-text-color-hover: rgb(255, 255, 255);
-  --spectrum-rail-overlay-background-color-default: rgba(0, 0, 0, 0.4);
-  --spectrum-rail-slider-border-color-active: rgb(205, 205, 205);
-  --spectrum-rail-slider-border-color-default: rgb(62, 62, 62);
-  --spectrum-rail-slider-border-color-hover: rgb(77, 77, 77);
+  --spectrum-rail-content-background-color-default: rgb(50, 50, 50);
+  --spectrum-rail-draghandle-background-color-active: rgb(205, 205, 205);
+  --spectrum-rail-draghandle-background-color-default: rgb(62, 62, 62);
+  --spectrum-rail-draghandle-background-color-hover: rgb(77, 77, 77);
   --spectrum-rating-icon-color-active: rgb(205, 205, 205);
   --spectrum-rating-icon-color-default: rgb(123, 123, 123);
   --spectrum-rating-icon-color-disabled: rgb(92, 92, 92);

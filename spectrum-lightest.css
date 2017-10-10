@@ -3358,3 +3358,33 @@ markup: |
     color: rgb(50, 50, 50);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
+/* topdoc
+---
+name: Cycle Button - Default
+description: A Spectrum cycle button
+markup: |
+  <button class="spectrum-CycleButton">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle spectrum-CycleButton-icon is-active"></span>
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle spectrum-CycleButton-icon"></span>
+  </button>
+
+*/
+.spectrum--lightest .spectrum-CycleButton {
+  background-color: transparent;
+}
+.spectrum--lightest .spectrum-CycleButton:hover .spectrum-CycleButton-icon {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-CycleButton:active {
+    background-color: rgb(234, 234, 234);
+  }
+.spectrum--lightest .spectrum-CycleButton:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+    box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
+  }
+.spectrum--lightest .spectrum-CycleButton:focus .spectrum-CycleButton-icon {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-CycleButton-icon {
+  color: rgb(118, 118, 118);
+}
