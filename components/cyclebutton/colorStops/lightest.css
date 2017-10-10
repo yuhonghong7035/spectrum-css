@@ -1,0 +1,34 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+}
+/* topdoc
+---
+name: Cycle Button - Default
+description: A Spectrum cycle button
+markup: |
+  <button class="spectrum-CycleButton">
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle spectrum-CycleButton-icon is-active"></span>
+    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle spectrum-CycleButton-icon"></span>
+  </button>
+
+*/
+.spectrum-CycleButton {
+  background-color: transparent;
+}
+.spectrum-CycleButton:hover .spectrum-CycleButton-icon {
+      color: rgb(50, 50, 50);
+    }
+.spectrum-CycleButton:active {
+    background-color: rgb(234, 234, 234);
+  }
+.spectrum-CycleButton:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+    box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
+  }
+.spectrum-CycleButton:focus .spectrum-CycleButton-icon {
+      color: rgb(50, 50, 50);
+    }
+.spectrum-CycleButton-icon {
+  color: rgb(118, 118, 118);
+}
