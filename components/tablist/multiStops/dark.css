@@ -64,7 +64,7 @@
 .spectrum--dark .spectrum-Tab.is-selected {
     color: rgb(255, 255, 255);
   }
-.spectrum--dark .spectrum-Tab:focus {
+.spectrum--dark .spectrum-Tab.focus-ring {
     color: rgb(255, 255, 255);
     box-shadow: 0 0 0 2px rgb(38, 128, 235);
   }
@@ -100,12 +100,12 @@
 .spectrum--dark .spectrum-TabList--anchored {
   border-color: rgb(57, 57, 57);
 }
-.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:focus {
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.focus-ring {
       color: rgb(38, 128, 235);
       box-shadow: initial;
     }
 /* The focus line should become blue only for anchored tabs */
-.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab:focus ~ .spectrum-Tab-line {
+.spectrum--dark .spectrum-TabList--anchored .spectrum-Tab.focus-ring ~ .spectrum-Tab-line {
           background-color:  rgb(38, 128, 235);
       }
 /* topdoc

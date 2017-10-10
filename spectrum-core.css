@@ -141,7 +141,7 @@ markup: |
 */
 
 .spectrum-Link.is-disabled {
-  	cursor: default;
+    cursor: default;
     pointer-events: none;
   }
 
@@ -247,6 +247,7 @@ markup: |
 .spectrum-Button::-moz-focus-inner {
     border: 0;
     padding: 0;
+    /* Use uppercase PX so values don't get converted to rem */
     margin-top: -2PX;
     margin-bottom: -2PX;
   }

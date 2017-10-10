@@ -17,14 +17,14 @@
 .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::after {
       border-color: rgb(153, 153, 153);
     }
-.spectrum-ToggleSwitch-input:focus + .spectrum-ToggleSwitch-content::after {
+.spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-content::after {
         border-color: rgb(38, 128, 235);
         box-shadow: 0 0 0 1px rgb(38, 128, 235);
       }
-.spectrum-ToggleSwitch-input:focus:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-content::before {
         background-color: rgb(38, 128, 235);
       }
-.spectrum-ToggleSwitch-input:focus ~ .spectrum-ToggleSwitch-label {
+.spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
       color: rgb(90, 169, 250);
     }
 .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-content::after {

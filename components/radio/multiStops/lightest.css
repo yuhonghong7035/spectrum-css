@@ -5,11 +5,11 @@
 .spectrum--lightest .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
     border-color: rgb(118, 118, 118);
   }
-.spectrum--lightest .spectrum-Radio-input:focus + .spectrum-Radio-checkmark {
+.spectrum--lightest .spectrum-Radio-input.focus-ring + .spectrum-Radio-checkmark {
       border-color: rgb(55, 142, 240);
       box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
-.spectrum--lightest .spectrum-Radio-input:focus ~ .spectrum-Radio-label {
+.spectrum--lightest .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
       color: rgb(13, 102, 208);
     }
 /* topdoc

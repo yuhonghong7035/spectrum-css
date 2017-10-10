@@ -40,7 +40,7 @@ markup: |
 */
 
 .spectrum-Link.is-disabled {
-  	cursor: default;
+    cursor: default;
     pointer-events: none;
   }
 

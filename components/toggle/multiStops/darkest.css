@@ -17,14 +17,14 @@
 .spectrum--darkest .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::after {
       border-color: rgb(133, 133, 133);
     }
-.spectrum--darkest .spectrum-ToggleSwitch-input:focus + .spectrum-ToggleSwitch-content::after {
+.spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-content::after {
         border-color: rgb(20, 115, 230);
         box-shadow: 0 0 0 1px rgb(20, 115, 230);
       }
-.spectrum--darkest .spectrum-ToggleSwitch-input:focus:checked + .spectrum-ToggleSwitch-content::before {
+.spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-content::before {
         background-color: rgb(20, 115, 230);
       }
-.spectrum--darkest .spectrum-ToggleSwitch-input:focus ~ .spectrum-ToggleSwitch-label {
+.spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
       color: rgb(75, 156, 245);
     }
 .spectrum--darkest .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-content::after {

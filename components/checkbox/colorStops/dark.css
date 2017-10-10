@@ -14,11 +14,11 @@
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
     border-color: rgb(123, 123, 123);
   }
-.spectrum-Checkbox-input:focus + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-checkmark {
     border-color: rgb(38, 128, 235);
     box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
-.spectrum-Checkbox-input:focus ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
     color: rgb(90, 169, 250);
   }
 /* topdoc
