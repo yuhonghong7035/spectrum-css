@@ -39,10 +39,14 @@
       opacity: 1;
     }
 
-.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark {
-  border-top-width: 5px;
-  border-bottom-width: 5px;
-}
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark,
+  .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
+    border-width: 5px 2px 5px 2px;
+  }
+
+.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark::after, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
+      content: none;
+    }
 
 .spectrum-Checkbox-label {
   display: inline-block;
