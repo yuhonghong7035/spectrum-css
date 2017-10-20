@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 /* :before is used for the track of the switch */
 .spectrum--lightest .spectrum-ToggleSwitch-content::before {

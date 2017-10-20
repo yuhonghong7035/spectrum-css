@@ -61,12 +61,8 @@
   line-height: 0.75rem;
 }
 
-.spectrum-Tooltip, .spectrum-Tooltip.is-open {
+.spectrum-Tooltip {
     pointer-events: none;
-  }
-
-.spectrum-Tooltip .spectrum-Link {
-    pointer-events: all;
   }
 
 .spectrum-Tooltip-tip {

@@ -1,9 +1,11 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum--light .spectrum-Button.focus-ring {
-    box-shadow: 0 0 0 2px rgb(13, 102, 208);
+    box-shadow: 0 0 0 1px rgb(13, 102, 208);
   }
 .spectrum--light .spectrum-Button:hover {
     box-shadow: none;
@@ -297,7 +299,7 @@ markup: |
 .spectrum--light .spectrum-Button--action.focus-ring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 2px rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--action:hover {
@@ -347,32 +349,27 @@ markup: |
 */
 .spectrum--light .spectrum-Button--quiet--action {
   background-color: transparent;
-  border-color: transparent;
   color: rgb(75, 75, 75);
 }
 .spectrum--light .spectrum-Button--quiet--action.focus-ring {
     background-color: transparent;
-    border-color: rgb(38, 128, 235);
     box-shadow: 0 0 0 2px rgb(38, 128, 235);
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--action:hover {
     background-color: transparent;
-    border-color: transparent;
     box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--action:active,
   .spectrum--light .spectrum-Button--quiet--action.is-selected {
     background-color: rgb(225, 225, 225);
-    border-color: transparent;
     box-shadow: none;
     color: rgb(44, 44, 44);
   }
 .spectrum--light .spectrum-Button--quiet--action:disabled,
   .spectrum--light .spectrum-Button--quiet--action[disabled] {
     background-color: transparent;
-    border-color: transparent;
     color: rgb(179, 179, 179);
   }
 /* topdoc

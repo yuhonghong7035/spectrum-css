@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum-SplitButton-trigger::after {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath style='fill:rgb%28133%2C 133%2C 133%29' d='M10%2C1.01A.999.999%2C0%2C0%2C0%2C8.29474.30469L5.006%2C3.59081%2C1.71723.30469A.99843.99843%2C0%2C0%2C0%2C.28037%2C1.69138l.02455.02453L4.29953%2C5.70744a.99935.99935%2C0%2C0%2C0%2C1.41252.00049l.00049-.00049L9.70705%2C1.71591A.99435.99435%2C0%2C0%2C0%2C10%2C1.01Z'/%3E%3C/svg%3E");

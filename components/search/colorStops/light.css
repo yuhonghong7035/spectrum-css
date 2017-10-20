@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum-Search-icon {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M9.50774.49463H9.49837A5.9932%2C5.9932%2C0%2C0%2C0%2C3.50532%2C6.481v.00685a5.9932%2C5.9932%2C0%2C0%2C0%2C1.26435%2C3.6819L.22537%2C14.714A.75.75%2C0%2C1%2C0%2C1.27463%2C15.786l.01133-.01133%2C4.5443-4.5443A5.9977%2C5.9977%2C0%2C1%2C0%2C9.50774.49463Zm-.00237%2C10.5a4.5%2C4.5%2C0%2C1%2C1%2C4.5-4.5A4.5%2C4.5%2C0%2C0%2C1%2C9.50537%2C10.99463Z'/%3E%3C/svg%3E");

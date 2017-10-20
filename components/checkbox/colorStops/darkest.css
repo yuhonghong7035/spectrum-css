@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum-Checkbox-label {
   color: rgb(180, 180, 180);
@@ -92,48 +94,49 @@ markup: |
 .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
     color: rgb(73, 73, 73);
   }
-.spectrum-Checkbox-input:invalid + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid + .spectrum-Checkbox-checkmark {
       border-color: rgb(227, 72, 80);
     }
-.spectrum-Checkbox-input:invalid ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid ~ .spectrum-Checkbox-label {
       color: rgb(227, 72, 80);
     }
-.spectrum-Checkbox-input:invalid:hover + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid:hover + .spectrum-Checkbox-checkmark {
       border-color: rgb(236, 91, 98);
     }
-.spectrum-Checkbox-input:invalid:hover ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid:hover ~ .spectrum-Checkbox-label {
       color: rgb(236, 91, 98);
     }
-.spectrum-Checkbox-input:invalid:active + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid:active + .spectrum-Checkbox-checkmark {
       border-color: rgb(247, 109, 116);
     }
-.spectrum-Checkbox-input:invalid:active ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid:active ~ .spectrum-Checkbox-label {
       color: rgb(247, 109, 116);
     }
 /* topdoc
 ---
-name: Checkbox - Required
-description: A checkbox that must be checked
+name: Checkbox - Invalid
+description: The 'invalid' Spectrum checkbox
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
   <label class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-0">
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-1" checked>
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-2">
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
+
 */
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
     border-color: rgb(227, 72, 80);

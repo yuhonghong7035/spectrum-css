@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum--lightest .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
     border-color: rgb(55, 142, 240);

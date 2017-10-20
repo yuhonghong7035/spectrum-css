@@ -1,6 +1,8 @@
 /* Temporary skin variables that need to be moved into origins */
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 .spectrum-ActionMenu-button::before {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='18' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='30' cy='18' r='4.1'/%3E%3Ccircle style='fill:rgb%28180%2C 180%2C 180%29' cx='6' cy='18' r='4.1'/%3E%3C/svg%3E");

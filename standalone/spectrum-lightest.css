@@ -1528,12 +1528,8 @@ markup: |
   line-height: 0.75rem;
 }
 
-.spectrum-Tooltip, .spectrum-Tooltip.is-open {
+.spectrum-Tooltip {
     pointer-events: none;
-  }
-
-.spectrum-Tooltip .spectrum-Link {
-    pointer-events: all;
   }
 
 .spectrum-Tooltip-tip {
@@ -4334,21 +4330,14 @@ markup: |
   <div style="margin-top: 20px;">
     <label class="spectrum-FieldLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
     <div class="spectrum-Dropdown" style="width: 195px;">
-      <button class="spectrum-Dropdown-trigger" aria-haspopup="true">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
         <span class="spectrum-Dropdown-trigger-container">
-          <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
+          <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
           <span class="spectrum-Dropdown-icon-container">
-            <span class="spectrum-Dropdown-open-icon spectrum-Icon"></span>
+            <span class="spectrum-Dropdown-open-icon"></span>
           </span>
         </span>
       </button>
-      <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
-        <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-        <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-        <hr class="spectrum-Flyout-divider">
-        <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-      </ul>
     </div>
   </div>
 
@@ -6021,6 +6010,8 @@ markup: |
 
 :root {
   /* Icon Button*/
+
+  /* Button */
 }
 
 /* topdoc
@@ -6113,7 +6104,7 @@ description: |
   }
 
 .spectrum-Button.focus-ring {
-    box-shadow: 0 0 0 2px rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
 
 .spectrum-Button:hover {
@@ -6449,7 +6440,7 @@ markup: |
 .spectrum-Button--action.focus-ring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 2px rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 
@@ -6504,20 +6495,17 @@ markup: |
 
 .spectrum-Button--quiet--action {
   background-color: transparent;
-  border-color: transparent;
   color: rgb(80, 80, 80);
 }
 
 .spectrum-Button--quiet--action.focus-ring {
     background-color: transparent;
-    border-color: rgb(55, 142, 240);
     box-shadow: 0 0 0 2px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 
 .spectrum-Button--quiet--action:hover {
     background-color: transparent;
-    border-color: transparent;
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
@@ -6525,7 +6513,6 @@ markup: |
 .spectrum-Button--quiet--action:active,
   .spectrum-Button--quiet--action.is-selected {
     background-color: rgb(234, 234, 234);
-    border-color: transparent;
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
@@ -6533,7 +6520,6 @@ markup: |
 .spectrum-Button--quiet--action:disabled,
   .spectrum-Button--quiet--action[disabled] {
     background-color: transparent;
-    border-color: transparent;
     color: rgb(188, 188, 188);
   }
 
@@ -7134,54 +7120,55 @@ markup: |
     color: rgb(188, 188, 188);
   }
 
-.spectrum-Checkbox-input:invalid + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid + .spectrum-Checkbox-checkmark {
       border-color: rgb(227, 72, 80);
     }
 
-.spectrum-Checkbox-input:invalid ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid ~ .spectrum-Checkbox-label {
       color: rgb(227, 72, 80);
     }
 
-.spectrum-Checkbox-input:invalid:hover + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid:hover + .spectrum-Checkbox-checkmark {
       border-color: rgb(215, 55, 63);
     }
 
-.spectrum-Checkbox-input:invalid:hover ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid:hover ~ .spectrum-Checkbox-label {
       color: rgb(215, 55, 63);
     }
 
-.spectrum-Checkbox-input:invalid:active + .spectrum-Checkbox-checkmark {
+.spectrum-Checkbox-input.is-invalid:active + .spectrum-Checkbox-checkmark {
       border-color: rgb(201, 37, 45);
     }
 
-.spectrum-Checkbox-input:invalid:active ~ .spectrum-Checkbox-label {
+.spectrum-Checkbox-input.is-invalid:active ~ .spectrum-Checkbox-label {
       color: rgb(201, 37, 45);
     }
 
 /* topdoc
 ---
-name: Checkbox - Required
-description: A checkbox that must be checked
+name: Checkbox - Invalid
+description: The 'invalid' Spectrum checkbox
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
   <label class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" required>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-0">
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" required checked>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-1" checked>
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
   <label class="spectrum-Checkbox is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2" required>
+    <input type="checkbox" class="spectrum-Checkbox-input is-invalid" id="checkbox-2">
     <span class="spectrum-Checkbox-checkmark"></span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
+
 */
 
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-checkmark {
