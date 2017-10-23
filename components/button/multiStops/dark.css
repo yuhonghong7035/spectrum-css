@@ -350,6 +350,7 @@ markup: |
 .spectrum--dark .spectrum-Button--quiet--action {
   background-color: transparent;
   color: rgb(205, 205, 205);
+  border-width: 0;
 }
 .spectrum--dark .spectrum-Button--quiet--action.focus-ring {
     background-color: transparent;

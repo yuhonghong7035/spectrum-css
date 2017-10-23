@@ -70,17 +70,14 @@ markup: |
   </div>
 
 */
-.spectrum--darkest .spectrum-Stepper.is-focused,
-  .spectrum--darkest .spectrum-Stepper:focus-within {
+.spectrum--darkest .spectrum-Stepper.is-focused {
     box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
 .spectrum--darkest .spectrum-Stepper.is-focused .spectrum-Stepper-stepUp,
-    .spectrum--darkest .spectrum-Stepper.is-focused .spectrum-Stepper-stepDown,
-    .spectrum--darkest .spectrum-Stepper:focus-within .spectrum-Stepper-stepUp,
-    .spectrum--darkest .spectrum-Stepper:focus-within .spectrum-Stepper-stepDown {
+    .spectrum--darkest .spectrum-Stepper.is-focused .spectrum-Stepper-stepDown {
       border-color: rgb(20, 115, 230);
     }
-.spectrum--darkest .spectrum-Stepper.is-focused .spectrum-Stepper-input, .spectrum--darkest .spectrum-Stepper:focus-within .spectrum-Stepper-input {
+.spectrum--darkest .spectrum-Stepper.is-focused .spectrum-Stepper-input {
       border-color: rgb(20, 115, 230);
       box-shadow: 0 0 0 1px rgb(20, 115, 230);
     }
@@ -95,11 +92,14 @@ markup: |
 .spectrum--darkest .spectrum-Stepper.is-invalid .spectrum-Stepper-input {
       border-left-color: rgb(45, 45, 45);
     }
-.spectrum--darkest .spectrum-Stepper.is-invalid.is-focused,
-    .spectrum--darkest .spectrum-Stepper.is-invalid:focus-within {
+.spectrum--darkest .spectrum-Stepper.is-invalid .spectrum-Stepper-input:focus {
+        border-color: rgb(215, 55, 63);
+        box-shadow: 0 0 0 1px rgb(215, 55, 63);
+      }
+.spectrum--darkest .spectrum-Stepper.is-invalid.is-focused {
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
-.spectrum--darkest .spectrum-Stepper.is-invalid.is-focused .spectrum-Stepper-input, .spectrum--darkest .spectrum-Stepper.is-invalid:focus-within .spectrum-Stepper-input {
+.spectrum--darkest .spectrum-Stepper.is-invalid.is-focused .spectrum-Stepper-input {
         border-left-color: rgb(215, 55, 63);
         box-shadow: 0 0 0 1px rgb(215, 55, 63);
       }
@@ -207,29 +207,39 @@ markup: |
 .spectrum--darkest .spectrum-Stepper--quiet .spectrum-Stepper-stepUp:disabled, .spectrum--darkest .spectrum-Stepper--quiet .spectrum-Stepper-stepDown:disabled {
       border-color: rgb(45, 45, 45);
     }
-.spectrum--darkest .spectrum-Stepper--quiet.is-focused,
-  .spectrum--darkest .spectrum-Stepper--quiet:focus-within {
+.spectrum--darkest .spectrum-Stepper--quiet.is-focused {
     box-shadow: 0 1px 0 0 rgb(20, 115, 230);
   }
 .spectrum--darkest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepUp,
-    .spectrum--darkest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepDown,
-    .spectrum--darkest .spectrum-Stepper--quiet:focus-within .spectrum-Stepper-stepUp,
-    .spectrum--darkest .spectrum-Stepper--quiet:focus-within .spectrum-Stepper-stepDown {
+    .spectrum--darkest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepDown {
       border-color: rgb(20, 115, 230);
     }
-.spectrum--darkest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input, .spectrum--darkest .spectrum-Stepper--quiet:focus-within .spectrum-Stepper-input {
+.spectrum--darkest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input {
       border-color: rgb(20, 115, 230);
       box-shadow: 0 1px 0 0 rgb(20, 115, 230);
     }
-.spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp,
-    .spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
     .spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input {
       border-color: rgb(215, 55, 63);
     }
-.spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused,
-    .spectrum--darkest .spectrum-Stepper--quiet.is-invalid:focus-within {
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown:focus, .spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input:focus {
+        border-color: rgb(215, 55, 63);
+        box-shadow: 0 1px 0 0 rgb(215, 55, 63);
+      }
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp {
+      border-color: rgb(45, 45, 45);
+    }
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp:focus {
+        border-color: rgb(45, 45, 45);
+      }
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused {
       box-shadow: 0 1px 0 0 rgb(215, 55, 63);
     }
-.spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-input, .spectrum--darkest .spectrum-Stepper--quiet.is-invalid:focus-within .spectrum-Stepper-input {
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepUp,
+      .spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepDown {
+        border-color: rgb(215, 55, 63);
+      }
+.spectrum--darkest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-input {
+        border-color: rgb(215, 55, 63);
         box-shadow: 0 1px 0 0 rgb(215, 55, 63);
       }
