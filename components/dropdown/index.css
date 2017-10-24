@@ -108,6 +108,7 @@ markup: |
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: 12px;
   }
 
 .spectrum-Dropdown-trigger .spectrum-Dropdown-trigger-label.is-placeholder {
@@ -205,6 +206,10 @@ markup: |
   </div>
 
 */
+
+.spectrum-Dropdown--quiet {
+  min-width: 0;
+}
 
 .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
     margin: 0 12px;

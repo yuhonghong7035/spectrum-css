@@ -286,7 +286,7 @@ markup: |
 .spectrum-Button--quiet--action {
   font-size: 0.875rem;
   font-weight: 400;
-  border-width: 1px;
+  border-width: 0;
   border-radius: 4px;
 }
 
@@ -3703,6 +3703,7 @@ markup: |
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-right: 12px;
   }
 
 .spectrum-Dropdown-trigger .spectrum-Dropdown-trigger-label.is-placeholder {
@@ -3800,6 +3801,10 @@ markup: |
   </div>
 
 */
+
+.spectrum-Dropdown--quiet {
+  min-width: 0;
+}
 
 .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
     margin: 0 12px;
@@ -4601,6 +4606,7 @@ markup: |
 .spectrum-Stepper-stepDown {
   border-top: none;
   border-top-left-radius: 0;
+  border-bottom-width: 1px;
 }
 
 .spectrum-Stepper-stepDown:focus {

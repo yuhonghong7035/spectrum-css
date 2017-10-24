@@ -53,6 +53,7 @@
 .spectrum-Stepper-stepDown {
   border-top: none;
   border-top-left-radius: 0;
+  border-bottom-width: 1px;
 }
 
 .spectrum-Stepper-stepDown:focus {
