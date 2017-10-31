@@ -1,0 +1,74 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
+.spectrum-Banner {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.spectrum-Banner-header {
+  font-weight: bold;
+}
+
+/* topdoc
+---
+name: Banner - Info
+description: The Spectrum banner 'info'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--info">
+    <div class="spectrum-Banner-header">Most Popular</div>
+    <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Warning
+description: The Spectrum banner 'warning'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--warning">
+    <div class="spectrum-Banner-header">Purchase Soon</div>
+    <div class="spectrum-Banner-content">Your trial is about to expire</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Error
+description: The Spectrum banner 'error'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--error">
+    <div class="spectrum-Banner-header">Purchase Soon</div>
+    <div class="spectrum-Banner-content">Trial expires in 2 days</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Corner Placement
+description: The Spectrum banner 'corner placement'
+markup: |
+  <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
+    <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
+      <div class="spectrum-Banner-header">Most Popular</div>
+      <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Banner--corner {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}

@@ -1,0 +1,16 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+}
+.spectrum-Pagination-pageButton:hover {
+    background-color: rgba(50, 50, 50, .04);
+  }
+.spectrum-Pagination-pageButton:focus {
+    border-color: rgb(55, 142, 240);
+  }
+.spectrum-Pagination-pageButton.is-active {
+    background-color: rgb(80, 80, 80);
+    color: rgb(255, 255, 255);
+  }

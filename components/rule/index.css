@@ -1,0 +1,75 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
+/* topdoc
+---
+name: Rule - Default
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Main Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule">
+
+*/
+
+.spectrum-Rule {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+/* topdoc
+---
+name: Rule - Sub Section
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Sub Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule spectrum-Rule--subsection">
+
+*/
+
+.spectrum-Rule--subsection {
+  border-width: 1.5px;
+  border-radius: 1.5px;
+}
+
+/* topdoc
+---
+name: Rule - Sub Section 2
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Sub Section 2 (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule spectrum-Rule--subsection2">
+
+*/
+
+.spectrum-Rule--subsection2 {
+  border-width: 1px;
+  border-radius: 1px;
+}
+
+/* topdoc
+---
+name: Rule - Panel
+description:
+markup: |
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle"></span>
+  <span class="spectrum-Rule spectrum-Rule--panel"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment"></span>
+
+*/
+
+.spectrum-Rule--panel {
+  box-sizing: border-box;
+  display: inline-block;
+  border-width: 0.5px;
+  height: 24px;
+  vertical-align: text-bottom;
+  margin: 0 4px;
+  border-radius: 0;
+}
