@@ -2178,6 +2178,7 @@ Todo: Determine if these are supposed to be pseudo classes
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
       <div class="spectrum-Tab is-selected" tabindex="0">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab" tabindex="0">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -2806,6 +2807,7 @@ markup: |
 name: Well
 description: A Spectrum well
 markup: |
+  <h3 class="spectrum-Heading--subtitle2">Well Label (Optional)</h3>
   <span class="spectrum-Well">
   <em>Well done is better than well said.</em>
   <br>
@@ -3419,4 +3421,38 @@ markup: |
     }
 .spectrum--darkest .spectrum-CycleButton-icon {
   color: rgb(133, 133, 133);
+}
+.spectrum--darkest .spectrum-Pagination-pageButton:hover {
+    background-color: rgba(226, 226, 226, .04);
+  }
+.spectrum--darkest .spectrum-Pagination-pageButton:focus {
+    border-color: rgb(20, 115, 230);
+  }
+.spectrum--darkest .spectrum-Pagination-pageButton.is-active {
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+  }
+.spectrum--darkest .spectrum-Banner {
+  color: rgb(255, 255, 255);
+}
+.spectrum--darkest .spectrum-Banner--info {
+  background-color: rgb(38, 128, 235);
+}
+.spectrum--darkest .spectrum-Banner--warning {
+  background-color: rgb(230, 134, 25);
+}
+.spectrum--darkest .spectrum-Banner--error {
+  background-color: rgb(227, 72, 80);
+}
+.spectrum--darkest .spectrum-Rule {
+  border-color: rgb(180, 180, 180);
+}
+.spectrum--darkest .spectrum-Rule--subsection {
+  border-color: rgb(45, 45, 45);
+}
+.spectrum--darkest .spectrum-Rule--subsection2 {
+  border-color: rgb(38, 38, 38);
+}
+.spectrum--darkest .spectrum-Rule--panel {
+  border-color: rgb(45, 45, 45);
 }

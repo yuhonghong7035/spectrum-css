@@ -19,7 +19,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -38,7 +38,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -59,7 +59,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -82,11 +82,6 @@ markup: |
   margin-top: 2px;
   overflow-y: auto;
 }
-
-.spectrum-List.spectrum-Dropdown-flyout.is-open {
-    /* Animate downward */
-    transform: translateY(4px);
-  }
 
 .spectrum-Dropdown-trigger {
   position: relative;
@@ -157,7 +152,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -176,7 +171,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -196,7 +191,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -231,7 +226,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -251,7 +246,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -273,7 +268,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -293,7 +288,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>

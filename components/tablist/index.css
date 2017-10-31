@@ -37,6 +37,8 @@
 
 .spectrum-Tab-label {
   cursor: pointer;
+
+  margin-left: 7px;
 }
 
 .spectrum-Tab-line {
@@ -65,8 +67,10 @@
   }
 
 .spectrum-TabList--panel .spectrum-Tab-icon {
+    float: left;
+
     /* Ensure the label doesn't drop down */
-    display: inline-block;
+    display: block;
     vertical-align: middle;
 
     /* Support SVG icons */
@@ -84,6 +88,7 @@
 
 .spectrum-TabList--horizontal .spectrum-Tab {
     display: inline-block;
+    vertical-align: top;
   }
 
 .spectrum-TabList--horizontal .spectrum-Tab-label {
@@ -147,8 +152,11 @@
   }
 
 .spectrum-TabList--vertical .spectrum-Tab-label {
+    display: inline-block;
     text-overflow: ellipsis;
-    vertical-align: middle;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
 .spectrum-TabList--vertical .spectrum-Tab-line {
@@ -161,6 +169,11 @@
 
 .spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
+    }
+
+.spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab-icon {
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
 
 .spectrum-Tab-label:empty {

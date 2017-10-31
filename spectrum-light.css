@@ -1023,16 +1023,16 @@ markup: |
   background-color: rgb(112, 112, 112);
 }
 .spectrum--light .spectrum-Label--green {
-  background-color: rgb(45, 157, 120);
+  background-color: rgb(38, 142, 108);
 }
 .spectrum--light .spectrum-Label--blue, .spectrum--light .spectrum-Label--active, .spectrum--light .spectrum-Label--and  {
-  background-color: rgb(38, 128, 235);
+  background-color: rgb(20, 115, 230);
 }
 .spectrum--light .spectrum-Label--red {
-  background-color: rgb(227, 72, 80);
+  background-color: rgb(215, 55, 63);
 }
 .spectrum--light .spectrum-Label--orange, .spectrum--light .spectrum-Label--or {
-  background-color: rgb(230, 134, 25);
+  background-color: rgb(218, 123, 17);
 }
 .spectrum--light .spectrum-Progress-bar {
   background-color: rgb(225, 225, 225);
@@ -2178,6 +2178,7 @@ Todo: Determine if these are supposed to be pseudo classes
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
       <div class="spectrum-Tab is-selected" tabindex="0">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+        <label class="spectrum-Tab-label">With a Label</label>
       </div>
       <div class="spectrum-Tab" tabindex="0">
         <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
@@ -2806,6 +2807,7 @@ markup: |
 name: Well
 description: A Spectrum well
 markup: |
+  <h3 class="spectrum-Heading--subtitle2">Well Label (Optional)</h3>
   <span class="spectrum-Well">
   <em>Well done is better than well said.</em>
   <br>
@@ -3419,4 +3421,38 @@ markup: |
     }
 .spectrum--light .spectrum-CycleButton-icon {
   color: rgb(112, 112, 112);
+}
+.spectrum--light .spectrum-Pagination-pageButton:hover {
+    background-color: rgba(44, 44, 44, .04);
+  }
+.spectrum--light .spectrum-Pagination-pageButton:focus {
+    border-color: rgb(38, 128, 235);
+  }
+.spectrum--light .spectrum-Pagination-pageButton.is-active {
+    background-color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+  }
+.spectrum--light .spectrum-Banner {
+  color: rgb(255, 255, 255);
+}
+.spectrum--light .spectrum-Banner--info {
+  background-color: rgb(20, 115, 230);
+}
+.spectrum--light .spectrum-Banner--warning {
+  background-color: rgb(218, 123, 17);
+}
+.spectrum--light .spectrum-Banner--error {
+  background-color: rgb(215, 55, 63);
+}
+.spectrum--light .spectrum-Rule {
+  border-color: rgb(75, 75, 75);
+}
+.spectrum--light .spectrum-Rule--subsection {
+  border-color: rgb(225, 225, 225);
+}
+.spectrum--light .spectrum-Rule--subsection2 {
+  border-color: rgb(234, 234, 234);
+}
+.spectrum--light .spectrum-Rule--panel {
+  border-color: rgb(225, 225, 225);
 }

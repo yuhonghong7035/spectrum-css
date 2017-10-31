@@ -2859,6 +2859,8 @@ markup: |
 
 .spectrum-Tab-label {
   cursor: pointer;
+
+  margin-left: 7px;
 }
 
 .spectrum-Tab-line {
@@ -2887,8 +2889,10 @@ markup: |
   }
 
 .spectrum-TabList--panel .spectrum-Tab-icon {
+    float: left;
+
     /* Ensure the label doesn't drop down */
-    display: inline-block;
+    display: block;
     vertical-align: middle;
 
     /* Support SVG icons */
@@ -2906,6 +2910,7 @@ markup: |
 
 .spectrum-TabList--horizontal .spectrum-Tab {
     display: inline-block;
+    vertical-align: top;
   }
 
 .spectrum-TabList--horizontal .spectrum-Tab-label {
@@ -2969,8 +2974,11 @@ markup: |
   }
 
 .spectrum-TabList--vertical .spectrum-Tab-label {
+    display: inline-block;
     text-overflow: ellipsis;
-    vertical-align: middle;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
 .spectrum-TabList--vertical .spectrum-Tab-line {
@@ -2983,6 +2991,11 @@ markup: |
 
 .spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
+    }
+
+.spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab-icon {
+      margin-top: 6px;
+      margin-bottom: 6px;
     }
 
 .spectrum-Tab-label:empty {
@@ -3614,7 +3627,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3633,7 +3646,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3654,7 +3667,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3677,11 +3690,6 @@ markup: |
   margin-top: 2px;
   overflow-y: auto;
 }
-
-.spectrum-List.spectrum-Dropdown-flyout.is-open {
-    /* Animate downward */
-    transform: translateY(4px);
-  }
 
 .spectrum-Dropdown-trigger {
   position: relative;
@@ -3752,7 +3760,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3771,7 +3779,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3791,7 +3799,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3826,7 +3834,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3846,7 +3854,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3868,7 +3876,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -3888,7 +3896,7 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
       <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
@@ -4217,7 +4225,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
 
-    <ul class="spectrum-Flyout spectrum-List spectrum-ActionMenu-flyout is-open " role="menu">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open " role="menu">
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
@@ -4229,7 +4237,7 @@ markup: |
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
 
-    <ul class="spectrum-Flyout spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
+    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
       <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
@@ -4273,11 +4281,6 @@ markup: |
 .spectrum-ActionMenu-flyout {
   margin-top: 4px;
 }
-
-.spectrum-ActionMenu-flyout.is-open {
-    /* Animate downward when opened */
-    transform: translateY(4px);
-  }
 
 .spectrum-Well {
   display: block;
@@ -6010,4 +6013,287 @@ markup: |
 
 .spectrum-CycleButton-icon:not(.is-active) {
   display: none
+}
+
+/* topdoc
+---
+name: Pagination - Explicit
+description: A Spectrum 'explicit' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--icon"><span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span></button>
+    <input type="text" name="field" value="2" class="spectrum-Textfield spectrum-Pagination-input">
+    <span class="spectrum-Body--secondary spectrum-Pagination-counter">of 89 pages</span>
+    <button class="spectrum-Button spectrum-Button--icon"><span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span></button>
+  </nav>
+
+*/
+
+.spectrum-Pagination-input {
+  width: 48px;
+  min-width: 48px;
+}
+
+.spectrum-Pagination-counter {
+  display: inline-block;
+  height: 32px;
+  line-height: 2rem;
+  margin-left: 5px;
+}
+
+/* topdoc
+---
+name: Pagination - Listing
+description: A Spectrum 'listing' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">1</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton is-active">2</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">3</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">4</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">5</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">6</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">7</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">8</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">...</span>
+    <span tabindex="0" class="spectrum-Pagination-pageButton">24</span>
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Next</button>
+  </nav>
+
+*/
+
+.spectrum-Pagination-directionButton {
+  font-size: 0.9375rem;
+  font-weight: bold;
+}
+
+.spectrum-Pagination-pageButton {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 1.625rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 2px solid transparent;
+  outline: none;
+  transition: background-color 125ms ease-in-out,
+              color 125ms ease-in-out,
+              border-color 125ms ease-in-out;
+}
+
+/* topdoc
+---
+name: Pagination - Button Style CTA
+description: A Spectrum 'button style call-to-action' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-prevButton">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span>
+    </button>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-nextButton">
+      Next
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span>
+    </button>
+  </nav>
+
+*/
+
+.spectrum-Pagination-prevButton {
+  border-radius: 16px 0 0 16px;
+  float: left; /* removes DOM whitespace */
+  padding-right: 6px;
+  padding-left: 6px;
+  border-right: 0;
+}
+
+.spectrum-Pagination-nextButton {
+  border-radius: 0 16px 16px 0;
+  margin-left: 0 !important;
+}
+
+/* CTA is special and doesn't have a border between the buttons */
+
+.spectrum-Pagination-nextButton.spectrum-Button--cta {
+    border-left: 0;
+    margin-left: 2px !important;
+  }
+
+.spectrum-Pagination-prevButton:focus, .spectrum-Pagination-nextButton:focus {
+    /* this also triggers 'z-index: auto' and stays on top */
+    position: relative;
+  }
+
+/* topdoc
+---
+name: Pagination - Button Style Primary
+description: A Spectrum 'button style primary' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-prevButton">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span>
+    </button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-nextButton">
+      Next
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span>
+    </button>
+  </nav>
+
+*/
+
+/* topdoc
+---
+name: Pagination - Button Style Secondary
+description: A Spectrum 'button style secondary' pagination
+markup: |
+  <nav>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-Pagination-prevButton">
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronLeft" role="img" aria-label="Previous"></span>
+    </button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-Pagination-nextButton">
+      Next
+      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronRight" role="img" aria-label="Next"></span>
+    </button>
+  </nav>
+
+*/
+
+.spectrum-Banner {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.spectrum-Banner-header {
+  font-weight: bold;
+}
+
+/* topdoc
+---
+name: Banner - Info
+description: The Spectrum banner 'info'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--info">
+    <div class="spectrum-Banner-header">Most Popular</div>
+    <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Warning
+description: The Spectrum banner 'warning'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--warning">
+    <div class="spectrum-Banner-header">Purchase Soon</div>
+    <div class="spectrum-Banner-content">Your trial is about to expire</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Error
+description: The Spectrum banner 'error'
+markup: |
+  <div class="spectrum-Banner spectrum-Banner--error">
+    <div class="spectrum-Banner-header">Purchase Soon</div>
+    <div class="spectrum-Banner-content">Trial expires in 2 days</div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Banner - Corner Placement
+description: The Spectrum banner 'corner placement'
+markup: |
+  <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
+    <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
+      <div class="spectrum-Banner-header">Most Popular</div>
+      <div class="spectrum-Banner-content">Includes Illustrator CC</div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Banner--corner {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* topdoc
+---
+name: Rule - Default
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Main Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule">
+
+*/
+
+.spectrum-Rule {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+/* topdoc
+---
+name: Rule - Sub Section
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Sub Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule spectrum-Rule--subsection">
+
+*/
+
+.spectrum-Rule--subsection {
+  border-width: 1.5px;
+  border-radius: 1.5px;
+}
+
+/* topdoc
+---
+name: Rule - Sub Section 2
+description:
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Sub Section 2 (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule spectrum-Rule--subsection2">
+
+*/
+
+.spectrum-Rule--subsection2 {
+  border-width: 1px;
+  border-radius: 1px;
+}
+
+/* topdoc
+---
+name: Rule - Panel
+description:
+markup: |
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Delete"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle"></span>
+  <span class="spectrum-Rule spectrum-Rule--panel"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></span>
+  <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment"></span>
+
+*/
+
+.spectrum-Rule--panel {
+  box-sizing: border-box;
+  display: inline-block;
+  border-width: 0.5px;
+  height: 24px;
+  vertical-align: text-bottom;
+  margin: 0 4px;
+  border-radius: 0;
 }

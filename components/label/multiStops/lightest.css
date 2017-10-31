@@ -24,14 +24,14 @@ markup: |
   background-color: rgb(112, 112, 112);
 }
 .spectrum--lightest .spectrum-Label--green {
-  background-color: rgb(51, 171, 132);
+  background-color: rgb(38, 142, 108);
 }
 .spectrum--lightest .spectrum-Label--blue, .spectrum--lightest .spectrum-Label--active, .spectrum--lightest .spectrum-Label--and  {
-  background-color: rgb(55, 142, 240);
+  background-color: rgb(20, 115, 230);
 }
 .spectrum--lightest .spectrum-Label--red {
-  background-color: rgb(236, 91, 98);
+  background-color: rgb(215, 55, 63);
 }
 .spectrum--lightest .spectrum-Label--orange, .spectrum--lightest .spectrum-Label--or {
-  background-color: rgb(242, 148, 35);
+  background-color: rgb(218, 123, 17);
 }
