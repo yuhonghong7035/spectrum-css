@@ -37,8 +37,6 @@
 
 .spectrum-Tab-label {
   cursor: pointer;
-
-  margin-left: 7px;
 }
 
 .spectrum-Tab-line {
@@ -68,6 +66,8 @@
 
 .spectrum-TabList--panel .spectrum-Tab-icon {
     float: left;
+
+    margin-right: 7px;
 
     /* Ensure the label doesn't drop down */
     display: block;

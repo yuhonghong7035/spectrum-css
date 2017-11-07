@@ -164,40 +164,58 @@ markup: |
   text-decoration: underline;
 }
 
+.spectrum-Breadcrumbs {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .spectrum-Breadcrumb {
-  cursor: pointer;
+  display: inline-block;
   position: relative;
   margin-right: 24px;
   font-size: 1rem;
 }
 
-.spectrum-Breadcrumb::after {
-    position: absolute;
-    top: 8px;
-    right: -16px;
-    width: 5px;
-    height: 8px;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform:scale(1);
-    opacity:1;
-    content:'';
-  }
-
-.spectrum-Breadcrumb:last-of-type {
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     cursor: default;
   }
 
-.spectrum-Breadcrumb:last-of-type::after {
-      display: none;
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link[href],
+    .spectrum-Breadcrumb .spectrum-Breadcrumb-link[tabindex="0"] {
+      cursor: pointer;
     }
 
-.spectrum-Breadcrumb-title .spectrum-Breadcrumb:last-of-type {
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link::after {
+        position: absolute;
+        top: 8px;
+        right: -16px;
+        width: 5px;
+        height: 8px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform:scale(1);
+        opacity:1;
+        content:'';
+    }
+
+.spectrum-Breadcrumb:last-of-type .spectrum-Breadcrumb-link::after {
+        display: none;
+      }
+
+.spectrum-Breadcrumbs--title .spectrum-Breadcrumb:last-of-type {
     display: block;
     font-size: 1.75rem;
     font-weight: 300;
     line-height: 2rem;
     margin: 0.3em 0;
+  }
+
+.spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--page-title {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
   }
 
 :root {
@@ -2861,8 +2879,6 @@ markup: |
 
 .spectrum-Tab-label {
   cursor: pointer;
-
-  margin-left: 7px;
 }
 
 .spectrum-Tab-line {
@@ -2892,6 +2908,8 @@ markup: |
 
 .spectrum-TabList--panel .spectrum-Tab-icon {
     float: left;
+
+    margin-right: 7px;
 
     /* Ensure the label doesn't drop down */
     display: block;
@@ -5700,17 +5718,17 @@ markup: |
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
       <div class="spectrum-Tag" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag is-invalid" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
       </div>
@@ -5750,17 +5768,17 @@ markup: |
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
       <div class="spectrum-Tag spectrum-Tag--quiet" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
       </div>
       <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" role="listitem">
-        <img class="spectrum-Tag-avatar" src="http://wwwimages.adobe.com/content/dam/Adobe/en/leaders/images/138x138/adobe-leaders-shantanu-narayen-138x138.jpg" alt="Avatar">
+        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
         <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
       </div>
@@ -7151,30 +7169,46 @@ markup: |
     }
 
 .spectrum-Breadcrumb {
-	color: rgb(118, 118, 118);
+  color: rgb(118, 118, 118);
 }
 
-.spectrum-Breadcrumb:hover {
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link:hover {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link:focus {
+      color: rgb(20, 115, 230);
+      outline: 0;
+      border-bottom: 2px solid rgb(20, 115, 230);
+    }
+
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link:active {
+      color: rgb(50, 50, 50);
+      border-bottom: 0;
+    }
+
+.spectrum-Breadcrumb .spectrum-Breadcrumb-link::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M4%2C3.5a.4982.4982%2C0%2C0%2C0-.1468-.3538L.8538.1468A.5.5%2C0%2C1%2C0%2C.1465.8535L2.793%2C3.5.1467%2C6.1463a.5.5%2C0%2C1%2C0%2C.707.707l3-3A.4983.4983%2C0%2C0%2C0%2C4%2C3.5Z'/%3E%3C/svg%3E");
+    }
+
+.spectrum-Breadcrumb.is-selected,
+  .spectrum-Breadcrumb:last-of-type {
     color: rgb(50, 50, 50);
   }
 
-.spectrum-Breadcrumb:focus {
-    color: rgb(20, 115, 230);
-  	outline: 0;
-  	border-bottom: 2px solid rgb(20, 115, 230);
-  }
+.spectrum-Breadcrumb.is-selected ~ .spectrum-Breadcrumb:last-of-type {
+        color: rgb(118, 118, 118);
+      }
 
-.spectrum-Breadcrumb:active {
-  	color: rgb(50, 50, 50);
-  }
-
-.spectrum-Breadcrumb::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath style='fill:rgb%28118%2C 118%2C 118%29' d='M4%2C3.5a.4982.4982%2C0%2C0%2C0-.1468-.3538L.8538.1468A.5.5%2C0%2C1%2C0%2C.1465.8535L2.793%2C3.5.1467%2C6.1463a.5.5%2C0%2C1%2C0%2C.707.707l3-3A.4983.4983%2C0%2C0%2C0%2C4%2C3.5Z'/%3E%3C/svg%3E");
-  }
-
-.spectrum-Breadcrumb:last-of-type {
-    color: rgb(50, 50, 50);
-  }
+.spectrum-Breadcrumb.is-selected .spectrum-Breadcrumb-link:focus {
+        color: rgb(50, 50, 50);
+        border-bottom: 0;
+      }
 
 /* topdoc
 ---
@@ -7185,11 +7219,14 @@ modifiers:
   ':focus': Focused
   ':active': Active state
 markup: |
-  <div class="spectrum-Breadcrumb">
-    <span class="spectrum-Breadcrumb">Nike</span>
-    <span class="spectrum-Breadcrumb">Mens</span>
-    <span class="spectrum-Breadcrumb">Summer 2016</span>
-  </div>
+  <nav>
+    <ul class="spectrum-Breadcrumbs">
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Nike</a></li>
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Mens</a></li>
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Summer 2016</a></li>
+    </ul>
+  </nav>
+
 */
 
 /* topdoc
@@ -7201,11 +7238,18 @@ modifiers:
   ':focus': Focused
   ':active': Active state
 markup: |
-  <div class="spectrum-Breadcrumb-title">
-    <span class="spectrum-Breadcrumb">Nike</span>
-    <span class="spectrum-Breadcrumb">Mens</span>
-    <span class="spectrum-Breadcrumb">Summer 2016</span>
-  </div>
+  <nav>
+    <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Home</a></li>
+      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Playground</a></li>
+      <li class="spectrum-Breadcrumb">
+        <h1 class="spectrum-Heading--page-title">
+          <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Sliders</a>
+        </h1>
+      </li>
+    </ul>
+  </nav>
+
 */
 
 .spectrum-Alert {
