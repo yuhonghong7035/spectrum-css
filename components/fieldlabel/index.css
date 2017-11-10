@@ -22,7 +22,7 @@ markup: |
 
   min-width: 100px;
 
-  margin: 0 0 5px;
+  margin: 0 0 6px;
 
   font-size: 0.75rem;
   line-height: 0.75rem;
@@ -112,5 +112,5 @@ markup: |
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  margin: 10px 8px 5px 0;
+  margin: 10px 5px 6px 0;
 }

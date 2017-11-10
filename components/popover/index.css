@@ -28,36 +28,36 @@
 }
 
 .spectrum-Popover--bottom.is-open {
-  transform: translateY(4px);
+  transform: translateY(6px);
 }
 
 .spectrum-Popover--top.is-open {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .spectrum-Popover--right.is-open {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .spectrum-Popover--left.is-open {
-  transform: translateX(-4px);
+  transform: translateX(-6px);
 }
 
 .spectrum-Popover {
 
   /* Be a flexbox to allow a full sized content area that scrolls */
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-direction: column;
       flex-direction: column;
   box-sizing: border-box;
 
-  min-width: 270px;
-  padding: 30px;
-
   position: relative;
   left: 0px;
   top: 0px;
+
+  min-width: 192px;
+  min-height: 32px;
 
   border-style: solid;
   border-width: 1px;
@@ -67,6 +67,12 @@
 }
 
 /* Hide focus outline */
+
+/* Don't let sharp corners be pokey */
+
+.spectrum-Popover .spectrum-SelectList {
+    border-radius: 4px;
+  }
 
 .spectrum-Popover-tip {
   position: absolute;
@@ -88,36 +94,17 @@
     left: -1px;
   }
 
-/* topdoc
----
-name: Popover - Default - Left Placement
-description: A Spectrum 'default' popover with left placement. Note that the icon is not present, so the text is able to fill the full width of the title.
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--left is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--left {
-  margin-right: 13px;
+.spectrum-Popover--dialog {
+  min-width: 270px;
+  padding: 30px;
 }
 
-.spectrum-Popover--left .spectrum-Popover-tip {
-    right: -18px;
-    transform: rotate(-90deg);
-  }
-
 /* topdoc
 ---
-name: Popover - Default - Right Placement
-description: A Spectrum 'default' popover with right placement
+name: Popover - Dialog style
+description: Spectrum Popovers are implemented using the Dialog's inner elements.
 markup: |
-  <div class="spectrum-Popover spectrum-Popover--right is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Popover Title</div>
     </div>
@@ -125,11 +112,70 @@ markup: |
     <div class="spectrum-Popover-tip"></div>
   </div>
 
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Success Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
 */
 
-.spectrum-Popover--right {
-  margin-left: 13px;
-}
+.spectrum-Popover--left.spectrum-Popover--withTip {
+    margin-right: 13px;
+  }
+
+.spectrum-Popover--left .spectrum-Popover-tip {
+    right: -18px;
+    transform: rotate(-90deg);
+  }
+
+.spectrum-Popover--right.spectrum-Popover--withTip {
+    margin-left: 13px;
+  }
 
 .spectrum-Popover--right .spectrum-Popover-tip {
     left: -18px;
@@ -143,48 +189,18 @@ markup: |
     margin-top: -6px;
   }
 
-/* topdoc
----
-name: Popover - Default - Bottom Placement
-description: A Spectrum 'default' popover with bottom placement
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--bottom {
-  margin-top: 13px;
-}
+.spectrum-Popover--bottom.spectrum-Popover--withTip {
+    margin-top: 13px;
+  }
 
 .spectrum-Popover--bottom .spectrum-Popover-tip {
     top: -13px;
     transform: rotate(180deg);
   }
 
-/* topdoc
----
-name: Popover - Default - Top Placement
-description: A Spectrum 'default' popover with top placement
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--default is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--top {
-  margin-bottom: 13px;
-}
+.spectrum-Popover--top.spectrum-Popover--withTip {
+    margin-bottom: 13px;
+  }
 
 .spectrum-Popover--top .spectrum-Popover-tip {
     bottom: -13px;

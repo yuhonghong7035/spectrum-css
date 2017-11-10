@@ -6,18 +6,47 @@
 }
 
 .spectrum-Breadcrumbs {
-  display: block;
+  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.spectrum-Breadcrumbs:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 .spectrum-Breadcrumb {
-  display: inline-block;
+  display: block;
+  float: left;
+
   position: relative;
-  margin-right: 24px;
+
+  margin-right: 32px;
+
   font-size: 1rem;
+  font-weight: 300;
 }
+
+.spectrum-Breadcrumb::after {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: -18.5px;
+
+    width: 5px;
+    height: 8px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: scale(1);
+
+    opacity: 1;
+
+    content: '';
+  }
 
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     cursor: default;
@@ -28,33 +57,26 @@
       cursor: pointer;
     }
 
-.spectrum-Breadcrumb .spectrum-Breadcrumb-link::after {
-        position: absolute;
-        top: 8px;
-        right: -16px;
-        width: 5px;
-        height: 8px;
-        background-repeat: no-repeat;
-        background-position: center;
-        transform:scale(1);
-        opacity:1;
-        content:'';
+.spectrum-Breadcrumb:last-of-type::after {
+      display: none;
     }
 
-.spectrum-Breadcrumb:last-of-type .spectrum-Breadcrumb-link::after {
-        display: none;
-      }
-
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumb:last-of-type {
+    /* Clear the floats so we drop to a new line */
+    clear: left;
+
     display: block;
+
+    margin: 0.3em 0;
+
     font-size: 1.75rem;
     font-weight: 300;
     line-height: 2rem;
-    margin: 0.3em 0;
   }
 
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--page-title {
+    margin: 0;
+
     font-size: inherit;
     font-weight: inherit;
-    margin: 0;
   }

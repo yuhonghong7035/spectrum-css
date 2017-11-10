@@ -29,20 +29,23 @@ markup: |
   background-color: rgb(255, 255, 255);
   border-color: rgb(211, 211, 211);
   color: rgb(118, 118, 118);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
+.spectrum--lightest .spectrum-QuickActions-button:focus {
+    outline: none;
+  }
+.spectrum--lightest .spectrum-QuickActions-button.focus-ring {
+    border-color: rgb(38, 128, 235);
+    color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    outline: none;
+  }
 .spectrum--lightest .spectrum-QuickActions-button:hover {
     border-color: rgb(118, 118, 118);
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-QuickActions-button:focus {
-    border-color: rgb(55, 142, 240);
-    color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 1px rgb(55, 142, 240);
-    outline: none;
-  }
 .spectrum--lightest .spectrum-QuickActions-button:active {
     border-color: rgb(80, 80, 80);
     color: rgb(50, 50, 50);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   }

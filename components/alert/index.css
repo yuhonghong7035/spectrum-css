@@ -28,10 +28,10 @@ markup: |
 
   display: inline-block;
   box-sizing: border-box;
-  min-width: 384px;
+  min-width: 368px;
   min-height: 38px;
   margin: 8px 0;
-  padding: 16px 20px;
+  padding: 20px 20px;
 
   border-width: 2px;
   border-style: solid;
@@ -79,7 +79,7 @@ markup: |
 
 .spectrum-Alert-content {
   display: block;
-  margin: 12px 0 0 0;
+  margin: 8px 0 0 0;
   padding: 0;
 
   font-size: 0.875rem;

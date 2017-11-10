@@ -12,29 +12,40 @@ description: The default toast.
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>  
+    <button class="spectrum-Toast-closeButton"></button>
+  </div>
+
+  <br>
+
+  <div class="spectrum-Toast" style="position: absolute">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton"></button>
   </div>
 
 */
 
 .spectrum-Toast {
   position: relative;
-  padding: 12px 18px;
-  line-height: 1.5rem;
+
+  /* Ensure text vertical alignment matches the specs */
+  padding: 13px 18px 15px 18px;
 
   border-radius: 4px;
+
   font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .spectrum-Toast-typeIcon {
   position: absolute;
-  left: 15px;
+  left: 16px;
   top: 15px;
 
   width: 18px;
   height: 18px;
   vertical-align: -4px;
-  margin-right: 4px;
 
   /* Support font icons */
   font-size: 1.125rem;
@@ -46,11 +57,11 @@ markup: |
 .spectrum-Toast-content {
   display: block;
 
-  padding-right: 32px;
+  padding-right: 30px;
 }
 
 .spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
-    padding-left: 24px;
+    padding-left: 28px;
   }
 
 .spectrum-Toast-closeButton {
@@ -66,8 +77,6 @@ markup: |
 
   background-color: transparent;
 
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:white' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
-
   background-size: 8px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -77,16 +86,6 @@ markup: |
   cursor: pointer;
 }
 
-.spectrum-Toast-closeButton:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-.spectrum-Toast-closeButton:active {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-
 .spectrum-Toast-closeButton:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 1);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }

@@ -325,8 +325,8 @@ spectrum-slider-track-disabled(){
     border-color: rgb(180, 180, 180);
   }
 .spectrum--darkest .spectrum-Slider-handle:focus {
-    border-color: rgb(20, 115, 230);
-    background: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
+    background: rgb(38, 128, 235);
   }
 .spectrum--darkest .spectrum-Slider-handle:active {
     border-color: rgb(180, 180, 180);
@@ -411,8 +411,8 @@ Todo: Determine if these are supposed to be pseudo classes
 
 */
 .spectrum--darkest .spectrum-Slider-controls--focus .spectrum-Slider-handle {
-    border-color: rgb(20, 115, 230);
-    background: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
+    background: rgb(38, 128, 235);
     border-width: 8px;
     transition: all 125ms ease-in-out;
   }

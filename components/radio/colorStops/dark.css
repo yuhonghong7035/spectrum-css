@@ -5,11 +5,11 @@
   /* Button */
 }
 .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
-    border-color: rgb(153, 153, 153);
+    border-color: rgb(55, 142, 240);
   }
 .spectrum-Radio-input.focus-ring + .spectrum-Radio-checkmark {
-      border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
 .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
       color: rgb(90, 169, 250);
@@ -42,17 +42,23 @@ markup: |
     border-color: rgb(123, 123, 123);
   }
 .spectrum-Radio:hover .spectrum-Radio-checkmark {
-      border-color: rgb(255, 255, 255);
+      border-color: rgb(153, 153, 153);
       box-shadow: none;
+    }
+.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+      border-color: rgb(75, 156, 245);
     }
 .spectrum-Radio:hover .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
 .spectrum-Radio:active .spectrum-Radio-checkmark {
-      border-color: rgb(153, 153, 153);
+      border-color: rgb(205, 205, 205);
+    }
+.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+      border-color: rgb(90, 169, 250);
     }
 .spectrum-Radio:active .spectrum-Radio-label {
-      color: rgb(205, 205, 205);
+      color: rgb(255, 255, 255);
     }
 .spectrum-Radio.is-invalid .spectrum-Radio-checkmark {
       border-color: rgb(236, 91, 98);
@@ -83,13 +89,13 @@ markup: |
   </form>
 */
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-checkmark {
-      border-color: rgb(247, 109, 116);
+      border-color: rgb(247, 109, 116) !important;
     }
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(247, 109, 116);
     }
 .spectrum-Radio.is-invalid:active .spectrum-Radio-checkmark {
-      border-color: rgb(255, 123, 130);
+      border-color: rgb(255, 123, 130) !important;
     }
 .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
       color: rgb(255, 123, 130);

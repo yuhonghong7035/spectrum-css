@@ -140,7 +140,7 @@ markup: |
 
 .spectrum-Table-headCell {
   text-align: left;
-  font-size: 0.65625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   line-height: 0.75rem;
   letter-spacing: 0.06em;
@@ -361,8 +361,6 @@ markup: |
 
 .spectrum-Table-checkbox {
   vertical-align: super;
-  line-height: 0.75rem;
-  height: 12px;
 }
 
 /* topdoc

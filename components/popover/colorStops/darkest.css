@@ -4,102 +4,10 @@
 
   /* Button */
 }
-/* topdoc
----
-name: Popover - Info/Help
-description: A Spectrum 'info/help' popover. When the icon element is present (preceeding the title element), padding will be added so text doesn't overlap the icon.
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--help is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Info / Help Popover With a Long Title</div>
-      <div class="spectrum-Dialog-typeIcon"></div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--secondary">
-        <span>Cancel</span>
-      </button>
-      <button class="spectrum-Button spectrum-Button--quiet--primary">
-        <span>Save</span>
-      </button>
-    </div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-/* topdoc
----
-name: Popover - Success
-description: A Spectrum 'success' popover
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Success Popover</div>
-      <div class="spectrum-Dialog-typeIcon"></div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--secondary">
-        <span>Cancel</span>
-      </button>
-      <button class="spectrum-Button spectrum-Button--quiet--primary">
-        <span>Save</span>
-      </button>
-    </div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-/* topdoc
----
-name: Popover - Error
-description: A Spectrum 'error' popover
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--error is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Error Popover</div>
-      <div class="spectrum-Dialog-typeIcon"></div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--secondary">
-        <span>Cancel</span>
-      </button>
-      <button class="spectrum-Button spectrum-Button--quiet--primary">
-        <span>Save</span>
-      </button>
-    </div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-/* topdoc
----
-name: Popover - Warning
-description: A Spectrum 'warning' popover
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--warning is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Warning Popover</div>
-      <div class="spectrum-Dialog-typeIcon"></div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--quiet--secondary">
-        <span>Cancel</span>
-      </button>
-      <button class="spectrum-Button spectrum-Button--quiet--primary">
-        <span>Save</span>
-      </button>
-    </div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
 .spectrum-Popover {
   background-color: rgb(8, 8, 8);
-  border-color: rgb(60, 60, 60);
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
+  border-color: rgb(45, 45, 45);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
 }
 .spectrum-Popover .spectrum-Dialog-header,
   .spectrum-Popover .spectrum-Dialog-footer,
@@ -108,6 +16,6 @@ markup: |
   }
 .spectrum-Popover .spectrum-Popover-tip::after {
     background-color: rgb(8, 8, 8);
-    border-color: rgb(60, 60, 60);
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
+    border-color: rgb(45, 45, 45);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   }

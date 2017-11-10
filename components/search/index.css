@@ -1,3 +1,10 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
 /* topdoc
 ---
 name: Search
@@ -17,56 +24,89 @@ markup: |
 
 
 */
+
 /* topdoc
 ---
 name: Search - Quiet
 description: The quiet searchy, cleary field.
 markup: |
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+  <form class="spectrum-Search">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input">
+    <div class="spectrum-Search-icon"></div>
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
   </form>
 
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+  <form class="spectrum-Search">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input" disabled>
+    <div class="spectrum-Search-icon"></div>
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
   </form>
 
 */
-/* topdoc
----
-name: Search - Custom icon
-description: A searchy, cleary field with a custom icon
-markup: |
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
-  </form>
 
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
-  </form>
+.spectrum-Search {
+  display: inline-block;
+  position: relative;
+}
 
+.spectrum-Search-input {
+  display: block;
 
-*/
+  /* Use padding instead of text-indent so long strings don't overlap the icon */
+  padding-left: 36px;
+  text-indent: 0;
+
+  /* Don't let long strings overlap the close icon */
+  padding-right: 28px;
+}
+
+.spectrum-Search-input.spectrum-Textfield--quiet {
+    padding-left: 24px;
+    padding-right: 20px;
+  }
+
+/* Since quiet button has no left padding, push the icon all the way to the left */
+
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-icon {
+      left: 0;
+    }
+
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-clear {
+      right: -8px;
+    }
+
+/* Since quiet button has no right padding, push the icon all the way to the right */
+
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
+      right: 0;
+    }
+
+.spectrum-Search-icon {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 16px;
+  height: 32px;
+
+  /* Support font icons */
+  text-align: center;
+  line-height: 2rem;
+
+  /* Support SVG icons */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
 .spectrum-Search-clear {
   position: absolute;
   right: 0;
   top: 0;
 }
-.spectrum-Search-input {
-  /* Don't let long strings overlap the close icon */
-  padding-right: 28px;
-}
-/* Since quiet button has no right padding, push the icon all the way to the right */
-.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
-      right: 0;
-    }
+
 .spectrum-Search-clear:disabled {
   cursor: default;
 }

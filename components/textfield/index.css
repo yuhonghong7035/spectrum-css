@@ -12,7 +12,9 @@
   border-radius: 4px;
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: 4px 0;
+  padding: 3px 12px 5px;
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  text-indent: 0;
 
   min-width: 110px;
   height: 32px;
@@ -23,10 +25,7 @@
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.25rem;
-
-  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
-  padding-left: 12px;
-  text-indent: 0;
+  text-overflow: ellipsis;
 
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
@@ -43,23 +42,23 @@
 }
 
 .spectrum-Textfield:-ms-input-placeholder {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield::placeholder {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield:hover:-ms-input-placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:hover::placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:disabled {
@@ -68,11 +67,11 @@
   }
 
 .spectrum-Textfield:disabled:-ms-input-placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:disabled::placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */

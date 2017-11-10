@@ -31,7 +31,7 @@
   }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
-    border-width: 6px;
+    border-width: 7px;
   }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
@@ -41,7 +41,7 @@
 
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark,
   .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
-    border-width: 5px 2px 5px 2px;
+    border-width: 6px 3px 6px 3px;
   }
 
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark::after, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
@@ -59,8 +59,8 @@
 .spectrum-Checkbox-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 
   border-radius: 2px;
   border-width: 2px;
@@ -74,7 +74,7 @@
 .spectrum-Checkbox-checkmark::after {
     position: absolute;
     top: 50%;
-    left: 1px;
+    left: 2px;
     width: 10px;
     height: 10px;
 

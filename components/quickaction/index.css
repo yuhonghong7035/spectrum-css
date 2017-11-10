@@ -28,11 +28,11 @@
 }
 
 .spectrum-QuickActions--left.is-open {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .spectrum-QuickActions--right.is-open {
-  transform: translateX(-4px);
+  transform: translateX(-6px);
 }
 
 .spectrum-QuickActions {

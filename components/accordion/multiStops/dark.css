@@ -16,14 +16,18 @@
 .spectrum--dark .spectrum-Accordion-header:focus,
   .spectrum--dark .spectrum-Accordion-header:hover {
     color: rgb(255, 255, 255);
+
     background-color: rgb(57, 57, 57);
   }
 .spectrum--dark .spectrum-Accordion-header:focus::before, .spectrum--dark .spectrum-Accordion-header:hover::before {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' viewBox='0 0 6 10'%3E%3Cpath style='fill:rgb%28205%2C 205%2C 205%29' d='M6%2C5a.99422.99422%2C0%2C0%2C0-.29272-.70561L1.71586.30456A.99781.99781%2C0%2C0%2C0%2C.28015%2C1.69066l.02453.02452L3.59071%2C5%2C.30468%2C8.28483A.9978.9978%2C0%2C1%2C0%2C1.69135%2C9.72l.02451-.0245L5.70728%2C5.70561A.99412.99412%2C0%2C0%2C0%2C6%2C5Z'/%3E%3C/svg%3E");
     }
-.spectrum--dark .spectrum-Accordion-header:focus {
-    border-left-color: rgb(38, 128, 235);
-  }
+.spectrum--dark .spectrum-Accordion-header:focus:after  {
+      background-color: rgb(55, 142, 240);
+    }
+.spectrum--dark .spectrum-Accordion-item.is-open .spectrum-Accordion-header:hover {
+        background-color: transparent;
+      }
 .spectrum--dark .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header,
     .spectrum--dark .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:hover,
     .spectrum--dark .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:focus {

@@ -14,6 +14,7 @@ markup: |
     <span class="spectrum-Rating-icon"></span>
     <span class="spectrum-Rating-icon"></span>
     <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
   </div>
 
 */
@@ -21,10 +22,10 @@ markup: |
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28123%2C 123%2C 123%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
 }
 .spectrum-Rating:not(:hover) .spectrum-Rating-icon:not(.is-active) {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28123%2C 123%2C 123%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' enable-background='new 0 0 36 36'%3E%3Cpath style='fill:rgb%28123%2C 123%2C 123%29%3B' d='M18 7.9l2.2 5.8.7 1.9 2 .1 6.3.3-4.9 3.9-1.5 1.2.5 1.9 1.6 6-5.2-3.4-1.7-1.1-1.6 1.1-5.3 3.5 1.7-6.1.5-1.9-1.5-1.2-4.9-3.9 6.3-.3 1.9-.1.7-1.8 2.2-5.9m.1-7.1c-.3 0-.6.2-.7.5l-4.4 11.4-12.2.5c-.4 0-.7.4-.7.8 0 .2.1.4.3.5l9.5 7.6-3.3 11.9c-.1.4.1.8.5.9h.2c.1 0 .3 0 .4-.1l10.3-6.7 10.2 6.6c.1.1.3.1.4.1.4 0 .8-.3.8-.8v-.2l-3.2-11.7 9.5-7.7c.3-.3.4-.7.1-1.1-.1-.2-.3-.3-.5-.3l-12.3-.3-4.2-11.4c-.1-.3-.4-.5-.7-.5z'/%3E%3C/svg%3E");
   }
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28123%2C 123%2C 123%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' enable-background='new 0 0 36 36'%3E%3Cpath style='fill:rgb%28123%2C 123%2C 123%29%3B' d='M18 7.9l2.2 5.8.7 1.9 2 .1 6.3.3-4.9 3.9-1.5 1.2.5 1.9 1.6 6-5.2-3.4-1.7-1.1-1.6 1.1-5.3 3.5 1.7-6.1.5-1.9-1.5-1.2-4.9-3.9 6.3-.3 1.9-.1.7-1.8 2.2-5.9m.1-7.1c-.3 0-.6.2-.7.5l-4.4 11.4-12.2.5c-.4 0-.7.4-.7.8 0 .2.1.4.3.5l9.5 7.6-3.3 11.9c-.1.4.1.8.5.9h.2c.1 0 .3 0 .4-.1l10.3-6.7 10.2 6.6c.1.1.3.1.4.1.4 0 .8-.3.8-.8v-.2l-3.2-11.7 9.5-7.7c.3-.3.4-.7.1-1.1-.1-.2-.3-.3-.5-.3l-12.3-.3-4.2-11.4c-.1-.3-.4-.5-.7-.5z'/%3E%3C/svg%3E");
 }
 /* topdoc
 ---
@@ -35,6 +36,7 @@ markup: |
     <span class="spectrum-Rating-icon is-active"></span>
     <span class="spectrum-Rating-icon is-active"></span>
     <span class="spectrum-Rating-icon is-active"></span>
+    <span class="spectrum-Rating-icon"></span>
     <span class="spectrum-Rating-icon"></span>
   </div>
 
@@ -58,12 +60,14 @@ markup: |
     <span class="spectrum-Rating-icon is-active"></span>
     <span class="spectrum-Rating-icon"></span>
     <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
+    <span class="spectrum-Rating-icon"></span>
   </div>
 
 */
-.spectrum-Rating.is-disabled .spectrum-Rating-icon {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2892%2C 92%2C 92%29%3B' d='M18.059%2C5.082l3.554%2C9.505%2C10.219.481-7.975%2C6.405L26.529%2C31.3l-8.534-5.568L9.437%2C31.347l2.7-9.873-7.974-6.4%2C10.2-.49ZM18.082.823a.738.738%2C0%2C0%2C0-.7.478l-4.412%2C11.35-12.2.585a.75.75%2C0%2C0%2C0-.434%2C1.334l9.523%2C7.642-3.23%2C11.8a.752.752%2C0%2C0%2C0%2C.725.951.742.742%2C0%2C0%2C0%2C.41-.125L18%2C28.122%2C28.187%2C34.77a.742.742%2C0%2C0%2C0%2C.408.125.752.752%2C0%2C0%2C0%2C.725-.949L26.131%2C22.213l9.528-7.653a.75.75%2C0%2C0%2C0-.434-1.334l-12.2-.575L18.784%2C1.311A.738.738%2C0%2C0%2C0%2C18.082.823Z'/%3E%3C/svg%3E");
-    }
 .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2892%2C 92%2C 92%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
-      }
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%2862%2C 62%2C 62%29%3B' d='M18.477.593%2C22.8%2C12.029l12.212.578a.51.51%2C0%2C0%2C1%2C.295.907l-9.54%2C7.646%2C3.224%2C11.793a.51.51%2C0%2C0%2C1-.772.561L18%2C26.8%2C7.78%2C33.515a.51.51%2C0%2C0%2C1-.772-.561l3.224-11.793L.692%2C13.515a.51.51%2C0%2C0%2C1%2C.295-.907L13.2%2C12.029%2C17.523.593A.51.51%2C0%2C0%2C1%2C18.477.593Z'/%3E%3C/svg%3E");
+}
+.spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36' enable-background='new 0 0 36 36'%3E%3Cpath style='fill:rgb%2862%2C 62%2C 62%29%3B' d='M18 7.9l2.2 5.8.7 1.9 2 .1 6.3.3-4.9 3.9-1.5 1.2.5 1.9 1.6 6-5.2-3.4-1.7-1.1-1.6 1.1-5.3 3.5 1.7-6.1.5-1.9-1.5-1.2-4.9-3.9 6.3-.3 1.9-.1.7-1.8 2.2-5.9m.1-7.1c-.3 0-.6.2-.7.5l-4.4 11.4-12.2.5c-.4 0-.7.4-.7.8 0 .2.1.4.3.5l9.5 7.6-3.3 11.9c-.1.4.1.8.5.9h.2c.1 0 .3 0 .4-.1l10.3-6.7 10.2 6.6c.1.1.3.1.4.1.4 0 .8-.3.8-.8v-.2l-3.2-11.7 9.5-7.7c.3-.3.4-.7.1-1.1-.1-.2-.3-.3-.5-.3l-12.3-.3-4.2-11.4c-.1-.3-.4-.5-.7-.5z'/%3E%3C/svg%3E");
+}

@@ -4,23 +4,9 @@
 
   /* Button */
 }
-.spectrum--darkest {
-
 /* topdoc
 ---
-name: Tooltip - Links
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
-    <span class="spectrum-Tooltip-label"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a></span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-*/
-}
-/* topdoc
----
-name: Tooltip - Default
+name: Tooltip
 description: A Spectrum tooltip
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
@@ -28,54 +14,48 @@ markup: |
     <span class="spectrum-Tooltip-tip"></span>
   </span>
 
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--left is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--right is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--bottom is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a></span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
 */
 .spectrum--darkest .spectrum-Tooltip,
   .spectrum--darkest .spectrum-Tooltip .spectrum-Tooltip-tip::after {
     background-color: rgb(112, 112, 112);
     color: rgb(255, 255, 255);
   }
-/* topdoc
----
-name: Tooltip - Error
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
-    <span class="spectrum-Tooltip-label">Error Tooltip</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-*/
 .spectrum--darkest .spectrum-Tooltip--error,
   .spectrum--darkest .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(227, 72, 80);
+    background-color: rgb(236, 91, 98);
   }
-/* topdoc
----
-name: Tooltip - Info
-description: A Spectrum info tooltip is the same as default :)
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
-    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-*/
 .spectrum--darkest .spectrum-Tooltip--info,
   .spectrum--darkest .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(38, 128, 235);
+    background-color: rgb(55, 142, 240);
   }
-/* topdoc
----
-name: Tooltip - Success
-description: A Spectrum tooltip
-markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
-    <span class="spectrum-Tooltip-label">Success Tooltip</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-*/
 .spectrum--darkest .spectrum-Tooltip--success,
   .spectrum--darkest .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(45, 157, 120);
+    background-color: rgb(51, 171, 132);
   }

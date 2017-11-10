@@ -154,8 +154,8 @@ markup: |
 */
 .spectrum--darkest .spectrum-Button--warning {
   background-color: transparent;
-  border-color: rgb(236, 91, 98);
-  color: rgb(236, 91, 98);
+  border-color: rgb(227, 72, 80);
+  color: rgb(227, 72, 80);
 }
 .spectrum--darkest .spectrum-Button--warning.focus-ring {
     background-color: rgb(75, 156, 245);
@@ -163,8 +163,8 @@ markup: |
     color: rgb(255, 255, 255);
   }
 .spectrum--darkest .spectrum-Button--warning:hover {
-    background-color: rgb(236, 91, 98);
-    border-color: rgb(236, 91, 98);
+    background-color: rgb(227, 72, 80);
+    border-color: rgb(227, 72, 80);
     color: rgb(8, 8, 8);
   }
 .spectrum--darkest .spectrum-Button--warning:active {
@@ -298,8 +298,8 @@ markup: |
 }
 .spectrum--darkest .spectrum-Button--action.focus-ring {
     background-color: rgb(8, 8, 8);
-    border-color: rgb(20, 115, 230);
-    box-shadow: 0 0 0 1px rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
     color: rgb(226, 226, 226);
   }
 .spectrum--darkest .spectrum-Button--action:hover {
@@ -353,19 +353,25 @@ markup: |
 }
 .spectrum--darkest .spectrum-Button--quiet--action.focus-ring {
     background-color: transparent;
-    box-shadow: 0 0 0 2px rgb(20, 115, 230);
+    box-shadow: 0 0 0 2px rgb(38, 128, 235);
     color: rgb(226, 226, 226);
+  }
+.spectrum--darkest .spectrum-Button--quiet--action.is-selected {
+    color: rgb(180, 180, 180);
   }
 .spectrum--darkest .spectrum-Button--quiet--action:hover {
     background-color: transparent;
     box-shadow: none;
     color: rgb(226, 226, 226);
   }
-.spectrum--darkest .spectrum-Button--quiet--action:active,
-  .spectrum--darkest .spectrum-Button--quiet--action.is-selected {
+.spectrum--darkest .spectrum-Button--quiet--action:active {
     background-color: rgb(45, 45, 45);
     box-shadow: none;
     color: rgb(226, 226, 226);
+  }
+/* Make sure background color overrides hover and active */
+.spectrum--darkest .spectrum-Button--quiet--action.is-selected {
+    background-color: rgb(45, 45, 45);
   }
 .spectrum--darkest .spectrum-Button--quiet--action:disabled,
   .spectrum--darkest .spectrum-Button--quiet--action[disabled] {
@@ -410,7 +416,7 @@ markup: |
 }
 .spectrum--darkest .spectrum-Button--toggle.focus-ring {
     background-color: transparent;
-    border-color: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
     color: rgb(226, 226, 226);
   }
 .spectrum--darkest .spectrum-Button--toggle:hover {
@@ -436,7 +442,7 @@ markup: |
   }
 .spectrum--darkest .spectrum-Button--toggle.is-selected.focus-ring {
     background-color: rgb(45, 45, 45);
-    border-color: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
     color: rgb(226, 226, 226);
   }
 .spectrum--darkest .spectrum-Button--toggle.is-selected:hover {
@@ -506,27 +512,27 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--and">And</button>
-  <button class="spectrum-Button spectrum-Button--and" disabled>And</button>
+  <button class="spectrum-Button spectrum-Button--logic--and">And</button>
+  <button class="spectrum-Button spectrum-Button--logic--and" disabled>And</button>
 
 */
-.spectrum--darkest .spectrum-Button--and {
+.spectrum--darkest .spectrum-Button--logic--and {
   background-color: rgb(38, 128, 235);
   border-color: rgb(38, 128, 235);
   color: rgb(255, 255, 255);
 }
-.spectrum--darkest .spectrum-Button--and.focus-ring {
+.spectrum--darkest .spectrum-Button--logic--and.focus-ring {
     background-color: rgb(75, 156, 245);
-    border-color: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
-.spectrum--darkest .spectrum-Button--and:hover {
+.spectrum--darkest .spectrum-Button--logic--and:hover {
     background-color: rgb(75, 156, 245);
     border-color: rgb(75, 156, 245);
     color: rgb(255, 255, 255);
   }
-.spectrum--darkest .spectrum-Button--and:disabled,
-  .spectrum--darkest .spectrum-Button--and.is-disabled {
+.spectrum--darkest .spectrum-Button--logic--and:disabled,
+  .spectrum--darkest .spectrum-Button--logic--and.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);
@@ -540,27 +546,27 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-Button spectrum-Button--or">Or</button>
-  <button class="spectrum-Button spectrum-Button--or" disabled>Or</button>
+  <button class="spectrum-Button spectrum-Button--logic--or">Or</button>
+  <button class="spectrum-Button spectrum-Button--logic--or" disabled>Or</button>
 
 */
-.spectrum--darkest .spectrum-Button--or {
+.spectrum--darkest .spectrum-Button--logic--or {
   background-color: rgb(216, 55, 144);
   border-color: rgb(216, 55, 144);
   color: rgb(255, 255, 255);
 }
-.spectrum--darkest .spectrum-Button--or.focus-ring {
+.spectrum--darkest .spectrum-Button--logic--or.focus-ring {
     background-color: rgb(236, 90, 170);
-    border-color: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
-.spectrum--darkest .spectrum-Button--or:hover {
+.spectrum--darkest .spectrum-Button--logic--or:hover {
     background-color: rgb(236, 90, 170);
     border-color: rgb(236, 90, 170);
     color: rgb(255, 255, 255);
   }
-.spectrum--darkest .spectrum-Button--or:disabled,
-  .spectrum--darkest .spectrum-Button--or.is-disabled {
+.spectrum--darkest .spectrum-Button--logic--or:disabled,
+  .spectrum--darkest .spectrum-Button--logic--or.is-disabled {
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
     color: rgb(73, 73, 73);

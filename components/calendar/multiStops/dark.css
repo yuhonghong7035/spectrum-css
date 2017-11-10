@@ -13,63 +13,69 @@
 .spectrum--dark .spectrum-Calendar-dayOfWeek {
   color: rgb(153, 153, 153);
 }
-.spectrum--dark .spectrum-Calendar-date {
-  color: rgb(205, 205, 205);
-  background: transparent;
-}
-.spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection) {
-    color: rgb(205, 205, 205);
-    background: rgb(57, 57, 57);
+.spectrum--dark .spectrum-Calendar-date:hover {
+    color: rgb(255, 255, 255);
   }
-.spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection):active,
-    .spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-selection).is-selected {
-      color: white;
-      background: rgb(75, 156, 245);
+.spectrum--dark .spectrum-Calendar-date:hover:not(.is-range-end):not(.is-range-start):before {
+        background: rgba(255, 255, 255, .06);
+      }
+.spectrum--dark .spectrum-Calendar-date:hover.is-selected {
+      color: rgb(255, 255, 255);
     }
-.spectrum--dark .spectrum-Calendar-date:active,
-  .spectrum--dark .spectrum-Calendar-date.is-selected {
-    color: white;
-    background: rgb(55, 142, 240);
+.spectrum--dark .spectrum-Calendar-date:hover.is-selected:not(.is-range-end):not(.is-range-start):before {
+          background: rgba(55, 142, 240, .2);
+        }
+.spectrum--dark .spectrum-Calendar-date:hover .is-range-selection:before {
+        background: rgba(55, 142, 240, .2);
+      }
+.spectrum--dark .spectrum-Calendar-date:active {
+    background-color: rgba(255, 255, 255, .1);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selected {
+    color: rgb(255, 255, 255);
+    background: rgba(55, 142, 240, .1);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selected:not(.is-range-selection) {
+    font-weight: 700;
+    background: rgba(55, 142, 240, .2);
   }
 .spectrum--dark .spectrum-Calendar-date.is-today {
-    color: white;
-    background: rgb(205, 205, 205);
+    color: rgb(205, 205, 205);
+    font-weight: 700;
   }
-.spectrum--dark .spectrum-Calendar-date.is-today:hover {
-      color: white;
-      background: rgb(255, 255, 255);
+.spectrum--dark .spectrum-Calendar-date.is-today:before {
+      border-color: rgb(205, 205, 205);
     }
-.spectrum--dark .spectrum-Calendar-date.is-today:hover:active,
-      .spectrum--dark .spectrum-Calendar-date.is-today:hover.is-selected {
-        color: white;
-        background: rgb(75, 156, 245);
-        border-color: rgb(75, 156, 245);
-      }
-.spectrum--dark .spectrum-Calendar-date.is-today:active,
-    .spectrum--dark .spectrum-Calendar-date.is-today.is-selected {
-      color: white;
-      background: rgb(55, 142, 240);
-    }
+.spectrum--dark .spectrum-Calendar-date.is-today:hover.is-selected:before {
+          background: rgba(55, 142, 240, .2);
+        }
 .spectrum--dark .spectrum-Calendar-date.is-today.is-disabled {
       color: rgb(92, 92, 92);
-      background: rgb(57, 57, 57);
     }
+.spectrum--dark .spectrum-Calendar-date.is-today.is-disabled:before {
+        border-color: rgb(77, 77, 77);
+      }
 .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection) {
-    background: rgb(62, 62, 62);
+    background: rgba(255, 255, 255, .06);
     border-color: rgb(38, 128, 235);
-    color: rgb(205, 205, 205);
+    color: rgb(255, 255, 255);
   }
 .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-today {
-      background: rgb(255, 255, 255);
       border-color: rgb(38, 128, 235);
-      color: white;
     }
 .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection):active,
     .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-selected {
-      color: white;
-      background: rgb(55, 142, 240);
-      border-color: rgb(55, 142, 240);
+      color: rgb(255, 255, 255);
+      background: rgba(55, 142, 240, .2);
+      border-color: rgb(38, 128, 235);
     }
 .spectrum--dark .spectrum-Calendar-date.is-disabled {
     color: rgb(92, 92, 92);
   }
+.spectrum--dark .spectrum-Calendar-date.is-range-start,
+  .spectrum--dark .spectrum-Calendar-date.is-range-end {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-range-start:after, .spectrum--dark .spectrum-Calendar-date.is-range-end:after {
+      background-color: rgba(55, 142, 240, .1);
+    }

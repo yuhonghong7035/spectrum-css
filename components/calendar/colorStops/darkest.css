@@ -13,63 +13,69 @@
 .spectrum-Calendar-dayOfWeek {
   color: rgb(133, 133, 133);
 }
-.spectrum-Calendar-date {
-  color: rgb(180, 180, 180);
-  background: transparent;
-}
-.spectrum-Calendar-date:hover:not(.is-range-selection) {
-    color: rgb(180, 180, 180);
-    background: rgb(38, 38, 38);
+.spectrum-Calendar-date:hover {
+    color: rgb(226, 226, 226);
   }
-.spectrum-Calendar-date:hover:not(.is-range-selection):active,
-    .spectrum-Calendar-date:hover:not(.is-range-selection).is-selected {
-      color: white;
-      background: rgb(55, 142, 240);
+.spectrum-Calendar-date:hover:not(.is-range-end):not(.is-range-start):before {
+        background: rgba(226, 226, 226, .06);
+      }
+.spectrum-Calendar-date:hover.is-selected {
+      color: rgb(226, 226, 226);
     }
-.spectrum-Calendar-date:active,
-  .spectrum-Calendar-date.is-selected {
-    color: white;
-    background: rgb(38, 128, 235);
+.spectrum-Calendar-date:hover.is-selected:not(.is-range-end):not(.is-range-start):before {
+          background: rgba(38, 128, 235, .2);
+        }
+.spectrum-Calendar-date:hover .is-range-selection:before {
+        background: rgba(38, 128, 235, .2);
+      }
+.spectrum-Calendar-date:active {
+    background-color: rgba(226, 226, 226, .1);
+  }
+.spectrum-Calendar-date.is-selected {
+    color: rgb(226, 226, 226);
+    background: rgba(38, 128, 235, .1);
+  }
+.spectrum-Calendar-date.is-selected:not(.is-range-selection) {
+    font-weight: 700;
+    background: rgba(38, 128, 235, .2);
   }
 .spectrum-Calendar-date.is-today {
-    color: white;
-    background: rgb(180, 180, 180);
+    color: rgb(180, 180, 180);
+    font-weight: 700;
   }
-.spectrum-Calendar-date.is-today:hover {
-      color: white;
-      background: rgb(226, 226, 226);
+.spectrum-Calendar-date.is-today:before {
+      border-color: rgb(180, 180, 180);
     }
-.spectrum-Calendar-date.is-today:hover:active,
-      .spectrum-Calendar-date.is-today:hover.is-selected {
-        color: white;
-        background: rgb(55, 142, 240);
-        border-color: rgb(55, 142, 240);
-      }
-.spectrum-Calendar-date.is-today:active,
-    .spectrum-Calendar-date.is-today.is-selected {
-      color: white;
-      background: rgb(38, 128, 235);
-    }
+.spectrum-Calendar-date.is-today:hover.is-selected:before {
+          background: rgba(38, 128, 235, .2);
+        }
 .spectrum-Calendar-date.is-today.is-disabled {
       color: rgb(73, 73, 73);
-      background: rgb(38, 38, 38);
     }
+.spectrum-Calendar-date.is-today.is-disabled:before {
+        border-color: rgb(60, 60, 60);
+      }
 .spectrum-Calendar-date.is-focused:not(.is-range-selection) {
-    background: rgb(45, 45, 45);
+    background: rgba(226, 226, 226, .06);
     border-color: rgb(20, 115, 230);
-    color: rgb(180, 180, 180);
+    color: rgb(226, 226, 226);
   }
 .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-today {
-      background: rgb(226, 226, 226);
       border-color: rgb(20, 115, 230);
-      color: white;
     }
 .spectrum-Calendar-date.is-focused:not(.is-range-selection):active,
     .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-selected {
-      color: white;
-      background: rgb(38, 128, 235);
-      border-color: rgb(38, 128, 235);
+      color: rgb(226, 226, 226);
+      background: rgba(38, 128, 235, .2);
+      border-color: rgb(20, 115, 230);
     }
 .spectrum-Calendar-date.is-disabled {
     color: rgb(73, 73, 73);
   }
+.spectrum-Calendar-date.is-range-start,
+  .spectrum-Calendar-date.is-range-end {
+    color: rgb(226, 226, 226);
+  }
+.spectrum-Calendar-date.is-range-start:after, .spectrum-Calendar-date.is-range-end:after {
+      background-color: rgba(38, 128, 235, .1);
+    }

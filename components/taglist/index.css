@@ -30,17 +30,17 @@
   description: An editable taglist.
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 1</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-disabled" role="listitem">
+      <div class="spectrum-Tag is-disabled" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -52,20 +52,20 @@
   description: The Spectrum tag list with avatars
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -77,45 +77,20 @@
   description: The Spectrum tag list with icons
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" role="listitem" tabindex="0">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" role="listitem" tabindex="0">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
-      </div>
-    </div>
-
-*/
-
-/* topdoc
----
-  name: TagList - Quiet
-  description: The quiet Spectrum tag list. Should only be used with avatars or icons.
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag spectrum-Tag--quiet" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
-      </div>
-      <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
-      </div>
-      <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -133,7 +108,14 @@
     margin: 0 8px 8px 0;
   }
 
+.spectrum-TagList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 .spectrum-Tag {
+  float: left;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -202,4 +184,10 @@
 .spectrum-Tag-icon {
   margin-right: 8px;
   font-size: 1rem;
+}
+
+.spectrum-Tag-icon,
+.spectrum-Tag-avatar {
+  /* Move it 2px to the left cause Nate says so */
+  margin-left: -2px;
 }

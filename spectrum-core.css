@@ -100,7 +100,7 @@
 
 .spectrum-Heading--subtitle3 {
   font-weight: 700;
-  font-size: 0.65625rem;
+  font-size: 0.6875rem;
   line-height: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -165,18 +165,47 @@ markup: |
 }
 
 .spectrum-Breadcrumbs {
-  display: block;
+  display: inline-block;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.spectrum-Breadcrumbs:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 .spectrum-Breadcrumb {
-  display: inline-block;
+  display: block;
+  float: left;
+
   position: relative;
-  margin-right: 24px;
+
+  margin-right: 32px;
+
   font-size: 1rem;
+  font-weight: 300;
 }
+
+.spectrum-Breadcrumb::after {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: -18.5px;
+
+    width: 5px;
+    height: 8px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: scale(1);
+
+    opacity: 1;
+
+    content: '';
+  }
 
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     cursor: default;
@@ -187,35 +216,28 @@ markup: |
       cursor: pointer;
     }
 
-.spectrum-Breadcrumb .spectrum-Breadcrumb-link::after {
-        position: absolute;
-        top: 8px;
-        right: -16px;
-        width: 5px;
-        height: 8px;
-        background-repeat: no-repeat;
-        background-position: center;
-        transform:scale(1);
-        opacity:1;
-        content:'';
+.spectrum-Breadcrumb:last-of-type::after {
+      display: none;
     }
 
-.spectrum-Breadcrumb:last-of-type .spectrum-Breadcrumb-link::after {
-        display: none;
-      }
-
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumb:last-of-type {
+    /* Clear the floats so we drop to a new line */
+    clear: left;
+
     display: block;
+
+    margin: 0.3em 0;
+
     font-size: 1.75rem;
     font-weight: 300;
     line-height: 2rem;
-    margin: 0.3em 0;
   }
 
 .spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--page-title {
+    margin: 0;
+
     font-size: inherit;
     font-weight: inherit;
-    margin: 0;
   }
 
 :root {
@@ -236,7 +258,7 @@ markup: |
   font-family: inherit;
   font-size: 0.9375rem;
   line-height: 1.75rem;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 
@@ -317,8 +339,11 @@ markup: |
   font-weight: 400;
 }
 
-.spectrum-Button--and,
-.spectrum-Button--or {
+.spectrum-Button--logic--and,
+.spectrum-Button--logic--or {
+  height: 24px;
+  line-height: 0;
+  padding: 8px;
   border-width: 2px;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -477,10 +502,10 @@ markup: |
 
   display: inline-block;
   box-sizing: border-box;
-  min-width: 384px;
+  min-width: 368px;
   min-height: 38px;
   margin: 8px 0;
-  padding: 16px 20px;
+  padding: 20px 20px;
 
   border-width: 2px;
   border-style: solid;
@@ -528,7 +553,7 @@ markup: |
 
 .spectrum-Alert-content {
   display: block;
-  margin: 12px 0 0 0;
+  margin: 8px 0 0 0;
   padding: 0;
 
   font-size: 0.875rem;
@@ -580,7 +605,7 @@ markup: |
   }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
-    border-width: 6px;
+    border-width: 7px;
   }
 
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
@@ -590,7 +615,7 @@ markup: |
 
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark,
   .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark {
-    border-width: 5px 2px 5px 2px;
+    border-width: 6px 3px 6px 3px;
   }
 
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-checkmark::after, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-checkmark::after {
@@ -608,8 +633,8 @@ markup: |
 .spectrum-Checkbox-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 
   border-radius: 2px;
   border-width: 2px;
@@ -623,7 +648,7 @@ markup: |
 .spectrum-Checkbox-checkmark::after {
     position: absolute;
     top: 50%;
-    left: 1px;
+    left: 2px;
     width: 10px;
     height: 10px;
 
@@ -711,366 +736,6 @@ markup: |
   padding: 10px 14px;
 }
 
-@keyframes spectrum-progress-indeterminate {
-  to {
-    transform: translateX(110%);
-  }
-}
-
-.spectrum-Progress {
-  position: relative;
-  display: inline-block;
-  
-  min-width: 182px;
-  height: 6px;
-
-  vertical-align: top;
-}
-
-.spectrum-Progress-bar {
-  /* Visually apply border radius to child elements */
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  /* rightLabel is the default style */
-  right: 40px;
-
-  height: 6px;
-}
-
-.spectrum-Progress-status {
-  height: 6px;
-
-  transition: width 1s;
-}
-
-.spectrum-Progress-label {
-  position: absolute;
-  top: 0;
-
-  height: 14px;
-  width: 30px;
-
-  font-size: 0.75rem;
-
-  right: 0;
-  padding-left: 10px;
-
-  text-align: left;
-}
-
-.spectrum-Progress--indeterminate .spectrum-Progress-status {
-    display: none;
-  }
-
-.spectrum-Progress--indeterminate .spectrum-Progress-bar {
-    transform: translateZ(0);
-  }
-
-.spectrum-Progress--indeterminate .spectrum-Progress-bar::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      transform: translateX(-110%);
-
-      animation: spectrum-progress-indeterminate 934ms cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite forwards;
-    }
-
-.spectrum-Progress--leftLabel .spectrum-Progress-label {
-    left: 0;
-    padding-right: 10px;
-
-    /* resets the default rightLabel style */
-    padding-left: 0;
-
-    text-align: right;
-  }
-
-.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-    left: 40px;
-    right: 0;
-  }
-
-.spectrum-Progress--bottomLabel {
-  height: 20px;
-}
-
-.spectrum-Progress--bottomLabel .spectrum-Progress-label {
-    top: 8px;
-    left: 0;
-    right: 0;
-    width: auto;
-
-    /* resets the default rightLabel style */
-    padding-left: 0;
-
-    /* text-align: center // Alan said to inherit */
-
-    line-height: inherit;
-  }
-
-.spectrum-Progress--bottomLabel .spectrum-Progress-bar {
-    /* resets the default rightLabel style */
-    right: 0;
-  }
-
-.spectrum-Progress--noLabel spectrum-progress--noLabel()
-
-  .spectrum-Progress-label {
-    display: none;
-  }
-
-.spectrum-Progress--noLabel .spectrum-Progress-bar {
-    right: 0;
-  }
-
-/* topdoc
----
-name: Progress - Small
-description: A Spectrum 'small' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--small spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
-*/
-
-.spectrum-Progress--small {
-  height: 4px;
-  min-width: 148px;
-}
-
-.spectrum-Progress--small .spectrum-Progress-label {
-    height: 13px;
-    width: 28px;
-
-    font-size: 0.6875rem;
-  }
-
-.spectrum-Progress--small .spectrum-Progress-status {
-    height: 4px;
-  }
-
-.spectrum-Progress--small .spectrum-Progress-bar {
-    height: 4px;
-    border-radius: 2px;
-  }
-
-.spectrum-Progress--small.spectrum-Progress--bottomLabel {
-    height: 17px;
-  }
-
-.spectrum-Progress--small.spectrum-Progress--bottomLabel .spectrum-Progress-label {
-      top: 6px;
-      width: auto;
-
-      line-height: inherit;
-    }
-
-.spectrum-Progress--small.spectrum-Progress--leftLabel {
-    /* Be the same height as the label */
-    height: 13px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-      top: 4.5px;
-    }
-
-.spectrum-Progress--small.spectrum-Progress--leftLabel .spectrum-Progress-label {
-      line-height: 0.8125rem;
-    }
-
-.spectrum-Progress--small.spectrum-Progress--rightLabel {
-    /* Be the same height as the label */
-    height: 13px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-bar {
-      top: 4.5px;
-    }
-
-.spectrum-Progress--small.spectrum-Progress--rightLabel .spectrum-Progress-label {
-      line-height: 0.8125rem;
-    }
-
-/* topdoc
----
-name: Progress - Medium
-description: A Spectrum 'medium' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--medium" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--medium spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
-*/
-
-.spectrum-Progress--medium .spectrum-Progress-bar {
-    border-radius: 4px;
-  }
-
-.spectrum-Progress--medium.spectrum-Progress--leftLabel {
-    /* Be the same height as the label */
-    height: 14px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-      top: 4px;
-    }
-
-.spectrum-Progress--medium.spectrum-Progress--leftLabel .spectrum-Progress-label {
-      line-height: 0.875rem;
-    }
-
-.spectrum-Progress--medium.spectrum-Progress--rightLabel {
-    /* Be the same height as the label */
-    height: 14px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-bar {
-      top: 4px;
-    }
-
-.spectrum-Progress--medium.spectrum-Progress--rightLabel .spectrum-Progress-label {
-      line-height: 0.875rem;
-    }
-
-/* topdoc
----
-name: Progress - Large
-description: A Spectrum 'large' progress (normal & indeterminate)
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--noLabel spectrum-Progress--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 50%;"></div>
-      </div>
-      <div class="spectrum-Progress-label" hidden=""></div>
-    </div>
-  </div>
-  <div style="width: 200px; height: 25px; padding-top: 10px;">
-    <div class="spectrum-Progress spectrum-Progress--bottomLabel spectrum-Progress--large spectrum-Progress--indeterminate" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      <div class="spectrum-Progress-bar">
-        <div class="spectrum-Progress-status" handle="status" style="width: 0%;"></div>
-      </div>
-      <div class="spectrum-Progress-label">indeterminate</div>
-    </div>
-  </div>
-
-*/
-
-.spectrum-Progress--large {
-  height: 8px;
-  min-width: 272px;
-}
-
-.spectrum-Progress--large .spectrum-Progress-label {
-    height: 15px;
-    width: 32px;
-
-    font-size: 0.8125rem;
-  }
-
-.spectrum-Progress--large .spectrum-Progress-status {
-    height: 8px;
-  }
-
-.spectrum-Progress--large .spectrum-Progress-bar {
-    height: 8px;
-    border-radius: 6px;
-  }
-
-.spectrum-Progress--large.spectrum-Progress--bottomLabel {
-    height: 23px;
-  }
-
-.spectrum-Progress--large.spectrum-Progress--bottomLabel .spectrum-Progress-label {
-      top: 10px;
-      width: auto;
-
-      line-height: inherit;
-    }
-
-.spectrum-Progress--large.spectrum-Progress--leftLabel {
-    /* Be the same height as the label */
-    height: 15px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-bar {
-      top: 3.5px;
-    }
-
-.spectrum-Progress--large.spectrum-Progress--leftLabel .spectrum-Progress-label {
-      line-height: 0.9375rem;
-    }
-
-.spectrum-Progress--large.spectrum-Progress--rightLabel {
-    /* Be the same height as the label */
-    height: 15px;
-  }
-
-/* Move the bar to the vertical center */
-
-.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-bar {
-      top: 3.5px;
-    }
-
-.spectrum-Progress--large.spectrum-Progress--rightLabel .spectrum-Progress-label {
-      line-height: 0.9375rem;
-    }
-
 .spectrum-Radio {
   display: inline-block;
   position: relative;
@@ -1098,7 +763,7 @@ markup: |
 }
 
 .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
-    border-width: 6px;
+    border-width: 5px;
   }
 
 .spectrum-Radio-input:disabled {
@@ -1118,10 +783,10 @@ markup: |
 .spectrum-Radio-checkmark {
   display: inline-block;
   box-sizing: border-box;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 
-  border-radius: 6px;
+  border-radius: 7px;
   border-width: 2px;
   border-style: solid;
 
@@ -1256,7 +921,9 @@ markup: |
   border-radius: 4px;
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: 4px 0;
+  padding: 3px 12px 5px;
+  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
+  text-indent: 0;
 
   min-width: 110px;
   height: 32px;
@@ -1267,10 +934,7 @@ markup: |
   font-family: inherit;
   font-size: 0.875rem;
   line-height: 1.25rem;
-
-  /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
-  padding-left: 12px;
-  text-indent: 0;
+  text-overflow: ellipsis;
 
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
@@ -1287,23 +951,23 @@ markup: |
 }
 
 .spectrum-Textfield:-ms-input-placeholder {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield::placeholder {
-    font-weight: normal;
+    font-weight: 400;
     font-style: italic;
     transition: color 125ms ease-in-out;
   }
 
 .spectrum-Textfield:hover:-ms-input-placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:hover::placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:disabled {
@@ -1312,11 +976,11 @@ markup: |
   }
 
 .spectrum-Textfield:disabled:-ms-input-placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 .spectrum-Textfield:disabled::placeholder {
-      font-weight: normal;
+      font-weight: 400;
     }
 
 /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
@@ -1388,27 +1052,52 @@ name: Combo Box
 description: A combo box uses the input group component to display a field with a button next to it
 markup: |
   <h4>Default</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input">
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-open">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup is-disabled">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input" disabled>
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-disabled">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield" disabled>
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button" aria-haspopup="true" disabled>
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
   </div>
 
   <h4>Invalid</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup is-invalid">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-input is-invalid">
-    <button class="spectrum-Button spectrum-Button--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox is-invalid">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-ComboBox-textfield is-invalid">
+      <button class="spectrum-Button spectrum-Button--dropdown spectrum-ComboBox-button is-invalid" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
   </div>
 
 */
@@ -1418,32 +1107,64 @@ name: Combo Box - Quiet
 description: A combo box uses the input group component to display a field with a button next to it
 markup: |
   <h4>Default</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-open">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" disabled>
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button" aria-haspopup="true" disabled>
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-disabled">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield" disabled>
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button" aria-haspopup="true" disabled>
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
   </div>
 
   <h4>Invalid</h4>
-  <div class="spectrum-ComboBox spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
-    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input is-invalid">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-InputGroup-button is-invalid" aria-haspopup="true">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
-    </button>
+  <div class="spectrum-ComboBox spectrum-ComboBox spectrum-ComboBox--quiet is-invalid">
+    <div class="spectrum-ComboBox-fieldGroup">
+      <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-ComboBox-textfield is-invalid">
+      <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-ComboBox-button is-invalid" aria-haspopup="true">
+        <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--ChevronDown"></span>
+      </button>
+    </div>
   </div>
 
 */
 
-.spectrum-InputGroup {
+.spectrum-ComboBox {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.spectrum-ComboBox-fieldGroup {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-direction: row;
@@ -1453,7 +1174,7 @@ markup: |
   min-width: 192px;
 }
 
-.spectrum-InputGroup-input {
+.spectrum-ComboBox-textfield {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-right-width: 0;
@@ -1461,21 +1182,20 @@ markup: |
       flex: 1;
 }
 
-.spectrum-InputGroup-button {
+.spectrum-ComboBox-button {
   padding: 0;
   width: 34px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
+.spectrum-ComboBox--quiet .spectrum-ComboBox-button {
     border-bottom: 1px solid;
   }
 
 .spectrum-Tooltip,
 .spectrum-Underlay,
 .spectrum-Dialog,
-.spectrum-Flyout,
 .spectrum-Popover,
 .spectrum-QuickActions {
   visibility: hidden;
@@ -1492,7 +1212,6 @@ markup: |
 .spectrum-Tooltip.is-open,
 .spectrum-Underlay.is-open,
 .spectrum-Dialog.is-open,
-.spectrum-Flyout.is-open,
 .spectrum-Popover.is-open,
 .spectrum-QuickActions.is-open {
   visibility: visible;
@@ -1505,29 +1224,25 @@ markup: |
 }
 
 .spectrum-Tooltip--bottom.is-open,
-.spectrum-Flyout--bottom.is-open,
 .spectrum-Popover--bottom.is-open {
-  transform: translateY(4px);
+  transform: translateY(6px);
 }
 
 .spectrum-Tooltip--top.is-open,
-.spectrum-Flyout--top.is-open,
 .spectrum-Popover--top.is-open {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .spectrum-Tooltip--right.is-open,
-.spectrum-Flyout--right.is-open,
 .spectrum-Popover--right.is-open,
 .spectrum-QuickActions--left.is-open {
-  transform: translateX(4px);
+  transform: translateX(6px);
 }
 
 .spectrum-Tooltip--left.is-open,
-.spectrum-Flyout--left.is-open,
 .spectrum-Popover--left.is-open,
 .spectrum-QuickActions--right.is-open {
-  transform: translateX(-4px);
+  transform: translateX(-6px);
 }
 
 .spectrum-Tooltip {
@@ -1541,10 +1256,11 @@ markup: |
 
   width: auto;
   max-width: 256px;
-  padding: 2px 9px;
+  padding: 2px 8px;
   border-radius: 4px;
 
   font-size: 0.75rem;
+  font-weight: 400;
   line-height: 0.75rem;
 }
 
@@ -1555,18 +1271,22 @@ markup: |
 .spectrum-Tooltip-tip {
   position: absolute;
   overflow: hidden;
-  width: 8px;
-  height: 4px;
+  width: 11px;
+  height: 11px;
 }
 
 .spectrum-Tooltip-tip::after {
     content: '';
-    width: 6px;
-    height: 6px;
-    top: -4px;
+    width: 8px;
+    height: 8px;
+    top: -2px;
     left: 1px;
     position: absolute;
     transform: rotate(45deg);
+  }
+
+.spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    top: calc(50% - 5.5px);
   }
 
 .spectrum-Tooltip--right {
@@ -1574,8 +1294,11 @@ markup: |
 }
 
 .spectrum-Tooltip--right .spectrum-Tooltip-tip {
-    left: -6px;
+    left: -8px;
     transform: rotate(90deg);
+
+    /* This is a gross hack */
+    top: calc(50% - 5px);
   }
 
 .spectrum-Tooltip--left {
@@ -1583,13 +1306,8 @@ markup: |
 }
 
 .spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    right: -6px;
+    right: -8px;
     transform: rotate(-90deg);
-  }
-
-.spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    top: 50%;
-    margin-top: -2px;
   }
 
 .spectrum-Tooltip--bottom {
@@ -1597,7 +1315,7 @@ markup: |
 }
 
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
-    top: -4px;
+    top: -8px;
     transform: rotate(180deg);
   }
 
@@ -1606,48 +1324,47 @@ markup: |
 }
 
 .spectrum-Tooltip--top .spectrum-Tooltip-tip {
-    bottom: -4px;
+    bottom: -8px;
   }
 
 .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: -4px;
+    margin-left: -5.5px;
   }
 
 /* topdoc
 ---
-name: Tooltip - Icons
+name: Tooltip
 description: A Spectrum tooltip
 markup: |
-  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Note spectrum-Tooltip-typeIcon"></span>Normal</span>
-    <span class="spectrum-Tooltip-tip"></span>
-  </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success
-  is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--CheckmarkCircle spectrum-Tooltip-typeIcon"></span>Success</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
-
-  <br>
-  <br>
-
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info
-  is-open">
-    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Info spectrum-Tooltip-typeIcon"></span>Info</span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
+    <span class="spectrum-Tooltip-label">Success</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
 
-  <br>
-  <br>
+  <br><br>
 
-  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error
-  is-open">
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+    <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--InfoCircle spectrum-Tooltip-typeIcon"></span>Info</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--info is-open">
+    <span class="spectrum-Tooltip-label">Info</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
     <span class="spectrum-Tooltip-label"><span class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Alert spectrum-Tooltip-typeIcon"></span>Warning</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+  <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--error is-open">
+    <span class="spectrum-Tooltip-label">Warning</span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
 
@@ -1656,8 +1373,11 @@ markup: |
 .spectrum-Tooltip-typeIcon {
   margin-right: 8px;
 
+  /* Override the size, just for these icons only */
+  font-size: 0.875rem;
+
   /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -2px;
+  vertical-align: -3px;
   line-height: 0.875rem;
 }
 
@@ -1792,14 +1512,77 @@ markup: |
 
 /* topdoc
 ---
-name: Wait - Default (Radial) - Small
-description: A Spectrum Wait of default type (radial) in default size (small)
+name: Loader - Default
+description: A Spectrum determinate loader of default type (round)
 markup: |
-  <span class="spectrum-Wait"></span>
+  <div class="spectrum-Loader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
 
 */
 
-.spectrum-Wait {
+.spectrum-Loader {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  width: 32px;
+  height: 32px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Small
+description: A Spectrum Loader of default type (round) in small size
+markup: |
+  <div class="spectrum-Loader spectrum-Loader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+
+*/
+
+.spectrum-Loader--small {
+  width: 16px;
+  height: 16px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Large
+description: A Spectrum Loader of default type (round) in large size
+markup: |
+  <div class="spectrum-Loader spectrum-Loader--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+
+*/
+
+.spectrum-Loader--large {
+  width: 64px;
+  height: 64px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Full Page
+description: A Spectrum loader of default type (round) for full page overlays.
+markup: |
+  <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div class="spectrum-Loader spectrum-Loader--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+  </div>
+
+*/
+
+.spectrum-Loader--fullpage {
+  width: 64px;
+  height: 64px;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate
+description: An indeterminate Spectrum Loader of default type (round)
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate"></span>
+
+*/
+
+.spectrum-Loader--indeterminate {
   display: inline-block;
 
   background-size: auto 100%;
@@ -1810,22 +1593,6 @@ markup: |
   animation-iteration-count: infinite;
   animation-timing-function: steps(60);
 
-  width: 16px;
-  height: 16px;
-
-  animation-name: spectrum-wait-spinner-small-animation;
-}
-
-/* topdoc
----
-name: Wait - Default (Radial) - Medium
-description: A Spectrum Wait of default type (radial) in medium size
-markup: |
-  <span class="spectrum-Wait spectrum-Wait--medium"></span>
-
-*/
-
-.spectrum-Wait--medium {
   width: 32px;
   height: 32px;
 
@@ -1834,114 +1601,215 @@ markup: |
 
 /* topdoc
 ---
-name: Wait - Default (Radial) - Large
-description: A Spectrum Wait of default type (radial) in large size
+name: Loader - Indeterminate - Small
+description: A Spectrum Loader of default type (round) in small size
 markup: |
-  <span class="spectrum-Wait spectrum-Wait--large"></span>
+  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--small"></span>
 
 */
 
-.spectrum-Wait--large {
+.spectrum-Loader--indeterminate--small {
+  width: 16px;
+  height: 16px;
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate - Large
+description: An indeterminate Spectrum Loader of default type (round) in large size
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--large"></span>
+
+*/
+
+.spectrum-Loader--indeterminate--large {
   width: 64px;
   height: 64px;
 
   animation-name: spectrum-wait-spinner-large-animation;
 }
 
-.spectrum-Wait--centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+/* topdoc
+---
+name: Loader - Indeterminate - Full Page
+description: An indeterminate Spectrum loader of default type (round) for full page overlays
+markup: |
+  <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--fullpage"></span>
+  </div>
 
-  margin-top: -8px;
-  margin-left: -8px;
+*/
+
+.spectrum-Loader--indeterminate--fullpage {
+  width: 64px;
+  height: 64px;
+
+  animation-name: spectrum-wait-spinner-large-animation;
 }
 
-.spectrum-Wait--centered.spectrum-Wait--medium {
-    margin-top: -16px;
-    margin-left: -16px;
-  }
-
-.spectrum-Wait--centered.spectrum-Wait--large {
-    margin-top: -32px;
-    margin-left: -32px;
-  }
-
 /* topdoc
 ---
-name: Wait - Dots - Small
-description: A Spectrum wait of 'dots' type in the default (small) size
+name: Loader - Bar - Default
+description: A Spectrum bar loader
 markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots"></span>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Loader--bar-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--side-label" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
 
 */
 
-.spectrum-Wait--dots {
-  background-repeat: no-repeat;
-
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: steps(40);
-
-  width: 24px;
-  height: 9px;
-
-  background-size: auto 9px;
-
-  animation-name: spectrum-wait-dots-small-animation;
+.spectrum-Loader--bar {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 182px;
+  vertical-align: top;
 }
 
-.spectrum-Wait--dots.spectrum-Wait--centered {
-    margin-top: -4.5px;
-    margin-left: -12px;
+.spectrum-Loader--bar.spectrum-Loader--side-label {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: auto;
+  }
+
+.spectrum-Loader--bar-track {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  width: 182px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.spectrum-Loader--bar-fill {
+  height: 6px;
+
+  transition: width 1s;
+}
+
+.spectrum-Loader--bar-label, .spectrum-Loader--bar-percentage {
+  font-size: 0.75rem;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.spectrum-Loader--side-label .spectrum-Loader--bar-label {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+.spectrum-Loader--side-label .spectrum-Loader--bar-percentage {
+    -ms-flex-order: 3;
+        order: 3;
+    text-align: right;
+    margin-left: 12px;
+    margin-bottom: 0;
   }
 
 /* topdoc
 ---
-name: Wait - Dots - Medium
-description:  A Spectrum wait of 'dots' type in the medium size
+name: Loader - Bar - Small
+description: A Spectrum 'small' bar loader
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
 markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--medium"></span>
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Loader--bar-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 50px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small spectrum-Loader--side-label" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
 
 */
 
-.spectrum-Wait--dots.spectrum-Wait--medium {
-    width: 32px;
-    height: 12px;
+.spectrum-Loader--bar--small {
+  height: 4px;
+  min-width: 148px;
+}
 
-    background-size: auto 12px;
-
-    animation-name: spectrum-wait-dots-medium-animation;
+.spectrum-Loader--bar--small .spectrum-Loader--bar-fill {
+    height: 4px;
   }
 
-.spectrum-Wait--dots.spectrum-Wait--medium.spectrum-Wait--centered {
-      margin-top: -6px;
-      margin-left: -16px;
-    }
+.spectrum-Loader--bar--small .spectrum-Loader--bar-track {
+    height: 4px;
+    border-radius: 2px;
+  }
 
 /* topdoc
 ---
-name: Wait - Dots - Large
-description: A Spectrum wait of 'dots' type in the ;arge size
+name: Loader - Bar - Full Page
+description: A Spectrum bar loader for full page overlays
 markup: |
-  <span class="spectrum-Wait spectrum-Wait--dots spectrum-Wait--large"></span>
+  <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div>
+      <div class="spectrum-Loader--bar spectrum-Loader--bar--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-Loader--bar-label">Loading</div>
+        <div class="spectrum-Loader--bar-percentage">50%</div>
+        <div class="spectrum-Loader--bar-track">
+          <div class="spectrum-Loader--bar-fill spectrum-Loader--bar--fullpage-fill" handle="status" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 */
-
-.spectrum-Wait--dots.spectrum-Wait--large {
-    width: 64px;
-    height: 24px;
-
-    background-size: auto 24px;
-
-    animation-name: spectrum-wait-dots-large-animation;
-  }
-
-.spectrum-Wait--dots.spectrum-Wait--large.spectrum-Wait--centered {
-      margin-top: -12px;
-      margin-left: -32px;
-    }
 
 /* topdoc
 ---
@@ -1950,29 +1818,40 @@ description: The default toast.
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>  
+    <button class="spectrum-Toast-closeButton"></button>
+  </div>
+
+  <br>
+
+  <div class="spectrum-Toast" style="position: absolute">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton"></button>
   </div>
 
 */
 
 .spectrum-Toast {
   position: relative;
-  padding: 12px 18px;
-  line-height: 1.5rem;
+
+  /* Ensure text vertical alignment matches the specs */
+  padding: 13px 18px 15px 18px;
 
   border-radius: 4px;
+
   font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 .spectrum-Toast-typeIcon {
   position: absolute;
-  left: 15px;
+  left: 16px;
   top: 15px;
 
   width: 18px;
   height: 18px;
   vertical-align: -4px;
-  margin-right: 4px;
 
   /* Support font icons */
   font-size: 1.125rem;
@@ -1984,11 +1863,11 @@ markup: |
 .spectrum-Toast-content {
   display: block;
 
-  padding-right: 32px;
+  padding-right: 30px;
 }
 
 .spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
-    padding-left: 24px;
+    padding-left: 28px;
   }
 
 .spectrum-Toast-closeButton {
@@ -2004,8 +1883,6 @@ markup: |
 
   background-color: transparent;
 
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:white' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
-
   background-size: 8px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2015,18 +1892,8 @@ markup: |
   cursor: pointer;
 }
 
-.spectrum-Toast-closeButton:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-.spectrum-Toast-closeButton:active {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
-
 .spectrum-Toast-closeButton:focus {
     outline: none;
-    background-color: rgba(255, 255, 255, 1);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:black' d='M7.7803%2C6.72112%2C5.06444%2C4.00535%2C7.7803%2C1.28958A.749.749%2C0%2C1%2C0%2C6.73239.21913L6.72112.2304%2C4.00535%2C2.94627%2C1.28958.2304A.749.749%2C0%2C0%2C0%2C.21911%2C1.27829l.01129.01129L2.94627%2C4.00535.2304%2C6.72112A.749.749%2C0%2C1%2C0%2C1.27831%2C7.79158l.01127-.01127L4.00535%2C5.06444%2C6.72112%2C7.7803A.749.749%2C0%2C1%2C0%2C7.79156%2C6.73238Z'/%3E%3C/svg%3E");
   }
 
 .spectrum-Underlay {
@@ -2048,17 +1915,69 @@ markup: |
 name: Dialog - Default
 description: The Spectrum Dialog.
 markup: |
-  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
-  <div class="spectrum-Dialog" id="defaultDialog">
-    <div class="spectrum-Dialog-header">
-      <h2 class="spectrum-Dialog-title">Default Dialog</h2>
+  <div>
+    <h4>Confirmation dialog</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialog">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Enable Smart Filters?</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Smart filters are nondestructive and will preserve your original images.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Enable</button>
+      </div>
     </div>
-    <div class="spectrum-Dialog-content">
-      This is a dialog.
+  </div>
+  <div>
+    <h4>Information</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogInformation">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Connect to WiFi</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Please connect to WiFi to sync your projects or go to Settings to change your preferences.
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Continue</button>
+      </div>
     </div>
-    <div class="spectrum-Dialog-footer">
-      <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
-      <button class="spectrum-Button spectrum-Button--cta" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Save</button>
+  </div>
+  <div>
+    <h4>Destructive</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogDestructive">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Delete 3 Documents</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        Are you sure you want to delete the 3 selected documents?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Cancel</button>
+        <button class="spectrum-Button spectrum-Button--warning" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4>3 Buttons</h4>
+    <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Dialog</button>
+    <div class="spectrum-Dialog" id="defaultDialogDestructive">
+      <div class="spectrum-Dialog-header">
+        <h2 class="spectrum-Dialog-title">Rate This App</h2>
+      </div>
+      <div class="spectrum-Dialog-content">
+        If you enjoy our app, would you mind taking a moment to rate it?
+      </div>
+      <div class="spectrum-Dialog-footer">
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">No, Thanks</button>
+        <button class="spectrum-Button spectrum-Button--secondary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Remind Me Later</button>
+        <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Rate Now</button>
+      </div>
     </div>
   </div>
 
@@ -2091,12 +2010,12 @@ markup: |
 
   /* Don't be bigger than the screen */
   max-height: calc(100vh - 64px);
-  max-width: calc(100vw - 64px);
+  max-width: 480px;
 
   min-width: 320px;
 
   padding: 40px;
-  padding-top: 48px;
+  padding-top: 46px;
 
   border-radius: 4px;
   outline: none;
@@ -2127,7 +2046,7 @@ markup: |
 .spectrum-Dialog-header::after {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
 
     height: 2px;
@@ -2151,7 +2070,7 @@ markup: |
 .spectrum-Dialog-content {
   display: block;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 11px;
 
   overflow-y: auto;
 
@@ -2170,6 +2089,7 @@ markup: |
 
 .spectrum-Dialog-footer {
   border-radius: 0 0 4px 4px;
+  margin-top: 46px;
 
   text-align: right; /* right align buttons */
 
@@ -2191,7 +2111,7 @@ markup: |
   }
 
 .spectrum-Dialog-footer .spectrum-Button {
-    margin: 16px 12px 0 0;
+    margin: 0 12px 0 0;
   }
 
 .spectrum-Dialog-footer .spectrum-Button:last-child {
@@ -2857,10 +2777,15 @@ markup: |
 
   margin: 0;
   padding: 0;
+
+  /* Friends should align to the top of the tabs */
+  vertical-align: top;
 }
 
 .spectrum-Tab {
   position: relative;
+
+  box-sizing: border-box;
 
   /* Float above the tab line */
   z-index: 1;
@@ -2879,6 +2804,9 @@ markup: |
 
 .spectrum-Tab-label {
   cursor: pointer;
+  vertical-align: top;
+  display: inline-block;
+  padding: 2px 0;
 }
 
 .spectrum-Tab-line {
@@ -2890,39 +2818,44 @@ markup: |
   transition: transform 125ms ease-in-out;
   left: 0;
   transform-origin: top left;
+
+  border-radius: 2px;
 }
 
 .spectrum-TabList--page .spectrum-Tab, .spectrum-TabList--panel .spectrum-Tab {
     margin-bottom: 2px;
   }
 
-.spectrum-TabList--page .spectrum-Tab:focus, .spectrum-TabList--panel .spectrum-Tab:focus {
+.spectrum-TabList--page .spectrum-Tab.focus-ring, .spectrum-TabList--panel .spectrum-Tab.focus-ring {
       border-radius: 4px;
     }
 
 .spectrum-TabList--panel .spectrum-Tab-label {
-    font-size: 0.65625rem;
-    font-weight: 600;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
 .spectrum-TabList--panel .spectrum-Tab-icon {
     float: left;
 
-    margin-right: 7px;
-
     /* Ensure the label doesn't drop down */
     display: block;
-    vertical-align: middle;
 
     /* Support SVG icons */
-    width: 18px;
-    height: 18px;
+    /*width: var(--spectrum-tablist-icon-size);*/
+    /*height: var(--spectrum-tablist-icon-size);*/
 
     /* Support font icons */
-    font-size: 1.125rem;
-    line-height: 1.125rem;
+    /*font-size: var(--spectrum-tablist-icon-size);*/
   }
+
+/*line-height: var(--spectrum-tablist-icon-size);*/
+
+.spectrum-TabList--panel .spectrum-Tab-icon + .spectrum-Tab-label {
+      margin-left: 7px;
+    }
 
 .spectrum-TabList--horizontal {
   display: block;
@@ -2939,18 +2872,19 @@ markup: |
 
 .spectrum-TabList--horizontal .spectrum-Tab-line {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 1px;
     height: 2px;
   }
 
 .spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab {
       padding: 0 8px;
-      margin-right: 8px;
+      margin-right: 12px;
     }
 
 .spectrum-TabList--horizontal.spectrum-TabList--page .spectrum-Tab-label {
       text-transform: capitalize;
+      padding: 0;
     }
 
 .spectrum-TabList--horizontal.spectrum-TabList--anchored {
@@ -2960,11 +2894,13 @@ markup: |
 
 .spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab {
       margin: 0px 16px;
-      padding-bottom: 8px;
+      height: 46px;
     }
 
 .spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-label {
       text-transform: capitalize;
+      line-height: 2.875rem;
+      padding: 0;
     }
 
 .spectrum-TabList--horizontal.spectrum-TabList--anchored .spectrum-Tab-line {
@@ -2972,14 +2908,20 @@ markup: |
     }
 
 .spectrum-TabList--horizontal.spectrum-TabList--panel .spectrum-Tab {
-      margin-right: 8px;
-      height: 24px;
+      margin-right: 10px;
+      /*height: var(--spectrum-tablist-panel-horizontal-tab-item-height-default);*/
+      height: auto;
+    }
+
+.spectrum-TabList--horizontal.spectrum-TabList--panel .spectrum-Tab-icon {
+      margin-top: 4px;
+      margin-bottom: 4px;
     }
 
 .spectrum-TabList--panel .spectrum-Tab {
     line-height: normal;
 
-    padding: 1px 6px 5px 6px;
+    padding: 3px 7px 3px 7px;
   }
 
 .spectrum-TabList--vertical {
@@ -2997,8 +2939,6 @@ markup: |
     display: inline-block;
     text-overflow: ellipsis;
     vertical-align: top;
-    margin-top: 8px;
-    margin-bottom: 8px;
   }
 
 .spectrum-TabList--vertical .spectrum-Tab-line {
@@ -3011,11 +2951,12 @@ markup: |
 
 .spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab {
       height: 24px;
+      margin-bottom: 6px;
     }
 
 .spectrum-TabList--vertical.spectrum-TabList--panel .spectrum-Tab-icon {
-      margin-top: 6px;
-      margin-bottom: 6px;
+      margin-top: 3px;
+      margin-bottom: 3px;
     }
 
 .spectrum-Tab-label:empty {
@@ -3420,6 +3361,18 @@ markup: |
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-1">Toggle On</label>
   </div>
 
+  <br>
+
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle Off</label>
+  </div>
+  <div class="spectrum-ToggleSwitch">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle On</label>
+  </div>
 
 */
 
@@ -3446,29 +3399,6 @@ markup: |
 .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::after {
       transform: translateX(12px);
     }
-
-/* topdoc
----
-name: Toggle Switch - On/Off - Disabled
-description: The Spectrum toggle on/off - disabled
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle Off</label>
-  </div>
-  <div class="spectrum-ToggleSwitch">
-    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
-    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle On</label>
-  </div>
-
-
-*/
 
 .spectrum-ToggleSwitch-input:disabled,
   .spectrum-ToggleSwitch-input[disabled] {
@@ -3550,9 +3480,22 @@ markup: |
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
   </div>
 
+  <br>
+
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle A</label>
+  </div>
+  <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
+    <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
+    <span class="spectrum-ToggleSwitch-content"></span>
+    <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle B</label>
+  </div>
+
 */
 
-.spectrum-List {
+.spectrum-SelectList {
   display: inline-block;
   white-space: nowrap;
 
@@ -3561,20 +3504,15 @@ markup: |
   list-style-type: none;
   margin: 0;
   padding: 3px 0;
-
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-
 }
 
-.spectrum-List-option {
+.spectrum-SelectList-option {
   cursor: pointer;
   position: relative;
   display: -ms-flexbox;
   display: flex;
 
-  padding: 0 34px 0 12px;
+  padding: 0 36px 0 12px;
   margin: 0;
 
   height: 32px;
@@ -3585,20 +3523,20 @@ markup: |
   font-style: normal;
 }
 
-.spectrum-List-option:focus {
+.spectrum-SelectList-option:focus {
     outline: none;
   }
 
-.spectrum-List-option.is-selected::after {
+.spectrum-SelectList-option.is-selected::after {
       position: absolute;
-      right: 0;
+      right: 9px;
+      top: 11px;
 
-      width: 22px;
-      height: 32px;
+      width: 12px;
+      height: 12px;
 
       background-repeat: no-repeat;
-      background-size: 10px 8px;
-      background-position: right 12px center;
+      background-size: 12px 12px;
 
       transform: scale(1);
       opacity: 1;
@@ -3606,36 +3544,34 @@ markup: |
       content: '';
     }
 
-.spectrum-List-divider {
-  height: 1px;
-  margin: 8px auto;
+.spectrum-SelectList-divider {
+  height: 2px;
+  margin: 3px 12px;
   padding: 0 0;
   border: none;
-  width: 100%;
-}
-
-.spectrum-Flyout {
-
-  position: absolute;
-  display: inline-block;
-  white-space: nowrap;
-
-  box-sizing: border-box;
-
-  padding: 3px 0;
-  margin: 0;
-
-  min-width: 192px;
-  min-height: 32px;
-
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
 }
 
 /* topdoc
+---
+name: Flyout
+description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
+markup: |
+
+  <div class="spectrum-Popover is-open">
+    <ul class="spectrum-SelectList" role="menu">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+    </ul>
+  </div>
+
+*/
+
+/* topdoc
 name: Dropdown - Default
-description: A Spectrum 'default' dropdown element with a flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
+description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
@@ -3647,13 +3583,6 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
@@ -3666,16 +3595,16 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
   <div class="spectrum-Dropdown is-disabled" style="width: 195px;">
@@ -3687,13 +3616,6 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-option">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
 */
@@ -3704,12 +3626,11 @@ markup: |
   min-width: 192px;
 }
 
-.spectrum-List.spectrum-Dropdown-flyout {
-  min-width: 100%;
-  max-height: 280px;
-  margin-top: 2px;
-  overflow-y: auto;
-}
+.spectrum-Dropdown .spectrum-Popover {
+    min-width: 100%;
+    margin-top: 2px;
+    overflow-y: auto;
+  }
 
 .spectrum-Dropdown-trigger {
   position: relative;
@@ -3771,7 +3692,7 @@ name: Dropdown - Quiet
 description: A Spectrum 'quiet' dropdown.
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
@@ -3780,17 +3701,10 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Ballard</span>
@@ -3799,18 +3713,19 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
   </div>
-  <div class="dummy-spacing"></div>
 
   <h4>Disabled</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled">
+  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-disabled" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--quiet--dropdown spectrum-Dropdown-trigger" disabled aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label is-placeholder">Select a Country</span>
@@ -3819,13 +3734,6 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-Flyout-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-Flyout-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-Flyout-divider">
-      <li class="spectrum-Flyout-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
 */
@@ -3844,7 +3752,7 @@ name: Dropdown - Invalid
 description: A Spectrum 'invalid' dropdown element. This is also a good example of how to use a custom icon.
 markup: |
   <h4>Closed</h4>
-  <div class="spectrum-Dropdown is-invalid">
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
     <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
@@ -3854,18 +3762,33 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
 
   <h4>Open</h4>
-  <div class="spectrum-Dropdown is-open is-invalid">
-    <button class="spectrum-Button spectrum-Button--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
+    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-trigger-container">
+        <span class="spectrum-Dropdown-trigger-label">Ballard</span>
+        <span class="spectrum-Dropdown-icon-container">
+          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
+          <span class="spectrum-Dropdown-open-icon"></span>
+        </span>
+      </span>
+    </button>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Fremont</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Greenwood</li>
+        <hr class="spectrum-SelectList-divider">
+        <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
+    <button class="spectrum-Button spectrum-Button--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
       <span class="spectrum-Dropdown-trigger-container">
         <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
         <span class="spectrum-Dropdown-icon-container">
@@ -3874,76 +3797,25 @@ markup: |
         </span>
       </span>
     </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
   </div>
-
-  <div class="dummy-spacing"></div>
-
-  <h4>Closed</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-invalid">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
-      </span>
-    </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-
-  <h4>Open</h4>
-  <div class="spectrum-Dropdown spectrum-Dropdown--quiet is-open is-invalid">
-    <button class="spectrum-Button spectrum-Button--quiet--dropdown is-selected is-invalid spectrum-Dropdown-trigger" aria-haspopup="true">
-      <span class="spectrum-Dropdown-trigger-container">
-        <span class="spectrum-Dropdown-trigger-label">Select a Country</span>
-        <span class="spectrum-Dropdown-icon-container">
-          <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Alert"></span>
-          <span class="spectrum-Dropdown-open-icon"></span>
-        </span>
-      </span>
-    </button>
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-Dropdown-flyout is-open" role="menu" tabindex="0">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">Ballard</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Fremont</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Greenwood</li>
-      <hr class="spectrum-List-divider">
-      <li class="spectrum-List-option is-disabled" role="menuitem" tabindex="-1">United States of America</li>
-    </ul>
-  </div>
-
-  <div class="dummy-spacing"></div>
 
 */
 
 .spectrum-Popover {
 
   /* Be a flexbox to allow a full sized content area that scrolls */
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-direction: column;
       flex-direction: column;
   box-sizing: border-box;
 
-  min-width: 270px;
-  padding: 30px;
-
   position: relative;
   left: 0px;
   top: 0px;
+
+  min-width: 192px;
+  min-height: 32px;
 
   border-style: solid;
   border-width: 1px;
@@ -3953,6 +3825,12 @@ markup: |
 }
 
 /* Hide focus outline */
+
+/* Don't let sharp corners be pokey */
+
+.spectrum-Popover .spectrum-SelectList {
+    border-radius: 4px;
+  }
 
 .spectrum-Popover-tip {
   position: absolute;
@@ -3974,36 +3852,17 @@ markup: |
     left: -1px;
   }
 
-/* topdoc
----
-name: Popover - Default - Left Placement
-description: A Spectrum 'default' popover with left placement. Note that the icon is not present, so the text is able to fill the full width of the title.
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--left is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--left {
-  margin-right: 13px;
+.spectrum-Popover--dialog {
+  min-width: 270px;
+  padding: 30px;
 }
 
-.spectrum-Popover--left .spectrum-Popover-tip {
-    right: -18px;
-    transform: rotate(-90deg);
-  }
-
 /* topdoc
 ---
-name: Popover - Default - Right Placement
-description: A Spectrum 'default' popover with right placement
+name: Popover - Dialog style
+description: Spectrum Popovers are implemented using the Dialog's inner elements.
 markup: |
-  <div class="spectrum-Popover spectrum-Popover--right is-open" style="max-width:320px">
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
       <div class="spectrum-Dialog-title">Popover Title</div>
     </div>
@@ -4011,11 +3870,70 @@ markup: |
     <div class="spectrum-Popover-tip"></div>
   </div>
 
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Success Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
 */
 
-.spectrum-Popover--right {
-  margin-left: 13px;
-}
+.spectrum-Popover--left.spectrum-Popover--withTip {
+    margin-right: 13px;
+  }
+
+.spectrum-Popover--left .spectrum-Popover-tip {
+    right: -18px;
+    transform: rotate(-90deg);
+  }
+
+.spectrum-Popover--right.spectrum-Popover--withTip {
+    margin-left: 13px;
+  }
 
 .spectrum-Popover--right .spectrum-Popover-tip {
     left: -18px;
@@ -4029,48 +3947,18 @@ markup: |
     margin-top: -6px;
   }
 
-/* topdoc
----
-name: Popover - Default - Bottom Placement
-description: A Spectrum 'default' popover with bottom placement
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--bottom {
-  margin-top: 13px;
-}
+.spectrum-Popover--bottom.spectrum-Popover--withTip {
+    margin-top: 13px;
+  }
 
 .spectrum-Popover--bottom .spectrum-Popover-tip {
     top: -13px;
     transform: rotate(180deg);
   }
 
-/* topdoc
----
-name: Popover - Default - Top Placement
-description: A Spectrum 'default' popover with top placement
-markup: |
-  <div class="spectrum-Popover spectrum-Popover--top spectrum-Dialog--default is-open" style="max-width:320px">
-    <div class="spectrum-Dialog-header">
-      <div class="spectrum-Dialog-title">Popover Title</div>
-    </div>
-    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
-    <div class="spectrum-Popover-tip"></div>
-  </div>
-
-*/
-
-.spectrum-Popover--top {
-  margin-bottom: 13px;
-}
+.spectrum-Popover--top.spectrum-Popover--withTip {
+    margin-bottom: 13px;
+  }
 
 .spectrum-Popover--top .spectrum-Popover-tip {
     bottom: -13px;
@@ -4106,7 +3994,7 @@ markup: |
   border-radius: 0 16px 16px 0;
   border-left-width: 0;
   padding-left: 8.00004px;
-  padding-right: 12px;
+  padding-right: 10px;
 }
 
 .spectrum-SplitButton-trigger::after {
@@ -4114,6 +4002,7 @@ markup: |
     display: block;
     width: 10px;
     height: 6px;
+    margin-top: 1px;
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -4133,6 +4022,10 @@ markup: |
 
 /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
 
+:root {
+  /* Subtract the size of the border since it's on the item itself */
+}
+
 /* topdoc
 ---
 name: Accordion - Default
@@ -4149,6 +4042,10 @@ markup: |
     </div>
     <div class="spectrum-Accordion-item">
       <div class="spectrum-Accordion-header" tabindex="0">Header 2</div>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item">
+      <div class="spectrum-Accordion-header" tabindex="0">Header 3</div>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
   </div>
@@ -4180,28 +4077,36 @@ markup: |
   position: relative;
 
   box-sizing: border-box;
-  /* left padding takes into account the icon's size */
-  padding: 0 16px 0 32px;
+  /* left padding takes into account the icon's size as well as the focus state's left border */
+  padding: 0 16px 0 34px;
   margin: 0;
 
-  /* Subtract the size of the border since it's on the item itself */
-  height: 38px;
+  height: 39px;
 
-  /* For focus state */
-  border-left: 2px solid transparent;
-
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   text-transform: uppercase;
-  line-height: 2.5rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.6pt;
 
-  overflow: ellipsis;
+  text-overflow: ellipsis;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .spectrum-Accordion-header:focus {
     outline: none;
   }
+
+.spectrum-Accordion-header:focus::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: -1px;
+
+      height: 41px;
+      width: 2px;
+    }
 
 .spectrum-Accordion-header::before {
     display: block;
@@ -4215,7 +4120,7 @@ markup: |
 
     position: absolute;
     left: 16px;
-    top: 15px;
+    top: 14.5px;
 
     transition: transform ease 125ms;
   }
@@ -4229,6 +4134,11 @@ markup: |
       transform: rotate(90deg);
     }
 
+.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
+      /* No bottom border when open, so be less tall */
+      height: 40px;
+    }
+
 .spectrum-Accordion-item.is-open .spectrum-Accordion-content {
       display: block;
     }
@@ -4240,31 +4150,42 @@ markup: |
 /* topdoc
 ---
 name: Action Menu
-description: An action button with a flyout menu.
+description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.
 markup: |
+
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">More Actions</button>
+
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu">
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ActionMenu">
+    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected"></button>
+
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open">
+      <ul class="spectrum-SelectList" role="menu">
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
   <div class="spectrum-ActionMenu">
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
-
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open " role="menu">
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
-    </ul>
   </div>
-
-  <div class="dummy-spacing"></div>
-
-  <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button"></button>
-
-    <ul class="spectrum-Flyout spectrum-Flyout--bottom spectrum-List spectrum-ActionMenu-flyout is-open" role="menu">
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 1</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 2</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="0">Action 3</li>
-    </ul>
-  </div>
-
-  <div class="dummy-spacing"></div>
 
 */
 
@@ -4298,10 +4219,6 @@ markup: |
     margin-right: 0;
   }
 
-.spectrum-ActionMenu-flyout {
-  margin-top: 4px;
-}
-
 .spectrum-Well {
   display: block;
   min-width: 248px;
@@ -4329,7 +4246,7 @@ markup: |
 
   min-width: 100px;
 
-  margin: 0 0 5px;
+  margin: 0 0 6px;
 
   font-size: 0.75rem;
   line-height: 0.75rem;
@@ -4419,86 +4336,7 @@ markup: |
 
 .spectrum-FieldLabel--left {
   display: inline-block;
-  margin: 10px 8px 5px 0;
-}
-
-/* topdoc
----
-name: Decorated Textfield
-description: A textfield with an icon
-markup: |
-  <div class="spectrum-DecoratedTextfield">
-    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
-  </div>
-
-  <div class="spectrum-DecoratedTextfield">
-    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
-  </div>
-
-
-*/
-
-.spectrum-DecoratedTextfield {
-  display: inline-block;
-  position: relative;
-}
-
-.spectrum-DecoratedTextfield-input {
-  display: block;
-
-  /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-left: 36px;
-  text-indent: 0;
-}
-
-/* topdoc
----
-name: Decorated Textfield - Quiet
-description: A quiet textfield with an icon
-markup: |
-  <div class="spectrum-DecoratedTextfield">
-    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
-  </div>
-
-  <div class="spectrum-DecoratedTextfield">
-    <input type="text" placeholder="Happy field" name="text" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--SentimentPositive"></div>
-  </div>
-
-
-*/
-
-.spectrum-DecoratedTextfield-input.spectrum-Textfield--quiet {
-    padding-left: 32px;
-  }
-
-/* Since quiet button has no left padding, push the icon all the way to the left */
-
-.spectrum-DecoratedTextfield-input.spectrum-Textfield--quiet ~ .spectrum-DecoratedTextfield-icon {
-      left: 0;
-    }
-
-.spectrum-DecoratedTextfield-icon {
-  display: block;
-  position: absolute;
-  left: 4px;
-  top: 0;
-  width: 32px;
-  height: 32px;
-
-  /* Support font icons */
-  text-align: center;
-  line-height: 2rem;
-
-  /* Support SVG icons */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 16px 16px;
-
-  pointer-events: none;
+  margin: 10px 5px 6px 0;
 }
 
 /* topdoc
@@ -4526,56 +4364,82 @@ markup: |
 name: Search - Quiet
 description: The quiet searchy, cleary field.
 markup: |
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+  <form class="spectrum-Search">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input">
+    <div class="spectrum-Search-icon"></div>
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
   </form>
 
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Search-icon"></div>
+  <form class="spectrum-Search">
+    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input" disabled>
+    <div class="spectrum-Search-icon"></div>
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
   </form>
 
 */
 
-/* topdoc
----
-name: Search - Custom icon
-description: A searchy, cleary field with a custom icon
-markup: |
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input">
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
-  </form>
-
-  <form class="spectrum-Search spectrum-DecoratedTextfield">
-    <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input spectrum-DecoratedTextfield-input" disabled>
-    <div class="spectrum-DecoratedTextfield-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter"></div>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled></button>
-  </form>
-
-
-*/
-
-.spectrum-Search-clear {
-  position: absolute;
-  right: 0;
-  top: 0;
+.spectrum-Search {
+  display: inline-block;
+  position: relative;
 }
 
 .spectrum-Search-input {
+  display: block;
+
+  /* Use padding instead of text-indent so long strings don't overlap the icon */
+  padding-left: 36px;
+  text-indent: 0;
+
   /* Don't let long strings overlap the close icon */
   padding-right: 28px;
 }
+
+.spectrum-Search-input.spectrum-Textfield--quiet {
+    padding-left: 24px;
+    padding-right: 20px;
+  }
+
+/* Since quiet button has no left padding, push the icon all the way to the left */
+
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-icon {
+      left: 0;
+    }
+
+.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-clear {
+      right: -8px;
+    }
 
 /* Since quiet button has no right padding, push the icon all the way to the right */
 
 .spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
       right: 0;
     }
+
+.spectrum-Search-icon {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 16px;
+  height: 32px;
+
+  /* Support font icons */
+  text-align: center;
+  line-height: 2rem;
+
+  /* Support SVG icons */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px 16px;
+
+  pointer-events: none;
+}
+
+.spectrum-Search-clear {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 .spectrum-Search-clear:disabled {
   cursor: default;
@@ -4798,7 +4662,7 @@ markup: |
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, July 30, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">30</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, July 31, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">31</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">1</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="true" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today is-disabled">2</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="true" aria-invalid="false" title="Today, Wednesday, August 2, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">2</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">3</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">4</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">5</span></td>
@@ -4807,7 +4671,7 @@ markup: |
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">6</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">7</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">8</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">9</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled is-today">9</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">10</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">11</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-disabled">12</span></td>
@@ -4968,7 +4832,7 @@ markup: |
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, July 30, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">30</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, July 31, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">31</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today">2</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date">2</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date">5</span></td>
@@ -4976,14 +4840,14 @@ markup: |
              <tr role="row">
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date">8</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date">9</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">10</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">11</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">12</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">8</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">9</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">10</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-today">11</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">12</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">13</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">13</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">14</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
@@ -5026,7 +4890,7 @@ markup: |
 
 .spectrum-Calendar {
   display: inline-block;
-  width: 250px;
+  /*width: var(--spectrum-calendar-width-default);*/
 }
 
 .spectrum-Calendar-header {
@@ -5062,26 +4926,33 @@ markup: |
 }
 
 .spectrum-Calendar-prevMonth::after, .spectrum-Calendar-nextMonth::after {
-    background-size: 8px;
+    background-size: 10px;
   }
 
 .spectrum-Calendar-prevMonth {
-  left: 5px;
+  left: 3px;
 }
 
 .spectrum-Calendar-nextMonth {
-  right: 0;
+  right: 3px;
 }
 
 .spectrum-Calendar-dayOfWeek {
+  position: absolute;
+  bottom: 4px;
+
   display: block;
-  padding: 4px;
-  font-size: 0.65625rem;
-  text-transform: uppercase;
-  cursor: default;
-  text-decoration: none !important; /* override abbr styling from normalize.css */
-  border-bottom: none !important; /* override abbr styling from normalize.css */
+
   width: 32px;
+
+  border-bottom: none !important; /* override abbr styling from normalize.css */
+
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none !important; /* override abbr styling from normalize.css */
+
+  cursor: default;
 }
 
 .spectrum-Calendar-body {
@@ -5090,7 +4961,11 @@ markup: |
 
 .spectrum-Calendar-table {
   table-layout: fixed;
-  width: 100%;
+  /*width: 100%;*/
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5100,20 +4975,32 @@ markup: |
 .spectrum-Calendar-tableCell {
   text-align: center;
   padding: 0;
+  position: relative;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
 }
 
 .spectrum-Calendar-date {
+  /* This is fun, but we need to trick the table so it doesn't size itself in a weird way */
+  position: absolute;
   display: block;
-  position: relative;
-  cursor: pointer;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
+
   height: 32px;
   width: 32px;
-  border-radius: 32px;
-  line-height: 1.75rem;
-  border: 2px solid transparent;
   margin: 4px;
-  box-sizing: border-box;
+
+  border-radius: 32px;
+  border: 2px solid transparent;
+
   font-size: 0.875rem;
+  line-height: 1.75rem;
+
+  cursor: pointer;
 
   transition: background 125ms ease-in-out,
         color 125ms ease-in-out,
@@ -5129,35 +5016,117 @@ markup: |
     visibility: hidden;
   }
 
+.spectrum-Calendar-date:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 2px solid transparent;
+  }
+
+.spectrum-Calendar-date.is-selected:not(.is-range-selection):before {
+      /* No highlight for lone selections */
+      display: none;
+    }
+
 .spectrum-Calendar-date.is-range-selection {
     /* overrides to make the cells appear connected */
     margin: 4px 0;
-    padding: 0 4px;
-    box-sizing: content-box;
     border-width: 0;
     line-height: 2rem;
     border-radius: 0;
+
+    /* Todo: Calculate this */
+    width: 40px;
   }
 
+.spectrum-Calendar-date.is-range-selection.is-range-start,
+    .spectrum-Calendar-date.is-range-selection.is-range-end {
+      font-weight: 700;
+
+      width: 36px;
+    }
+
+.spectrum-Calendar-date.is-range-selection.is-range-start:after, .spectrum-Calendar-date.is-range-selection.is-range-end:after {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+        display: block;
+
+        height: 32px;
+        width: 32px;
+
+        border-radius: 32px;
+
+        content: '';
+      }
+
+.spectrum-Calendar-date.is-range-selection.is-range-start {
+      padding-right: 4px;
+
+      margin-left: 4px;
+
+      border-radius: 32px 0 0 32px;
+    }
+
+.spectrum-Calendar-date.is-range-selection.is-range-start:after {
+        left: 0;
+      }
+
+.spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
+        border-radius: 32px;
+      }
+
 .spectrum-Calendar-date.is-range-selection.is-range-end {
-      padding-right: 0;
+      padding-left: 4px;
+
       margin-right: 4px;
+
       border-radius: 0 32px 32px 0;
     }
+
+.spectrum-Calendar-date.is-range-selection.is-range-end:after {
+        right: 0;
+      }
 
 .spectrum-Calendar-date.is-range-selection.is-range-end.is-range-start {
         border-radius: 32px;
       }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start {
-      border-radius: 32px 0 0 32px;
-      padding-left: 0;
-      margin-left: 4px;
+.spectrum-Calendar-tableCell:first-of-type .spectrum-Calendar-date.is-range-selection {
+    width: 36px;
+
+    padding-right: 4px;
+
+    margin-left: 4px;
+
+    border-radius: 32px 0 0 32px;
+  }
+
+.spectrum-Calendar-tableCell:first-of-type .spectrum-Calendar-date.is-range-selection:before {
+      left: 0;
     }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
-        border-radius: 32px;
-      }
+.spectrum-Calendar-tableCell:last-of-type .spectrum-Calendar-date.is-range-selection {
+    width: 36px;
+
+    padding-left: 4px;
+
+    margin-right: 4px;
+
+    border-radius: 0 32px 32px 0;
+  }
+
+.spectrum-Calendar-tableCell:last-of-type .spectrum-Calendar-date.is-range-selection:before {
+      left: auto;
+      right: 0;
+    }
 
 /* topdoc
 ---
@@ -5294,7 +5263,7 @@ markup: |
 
 .spectrum-Table-headCell {
   text-align: left;
-  font-size: 0.65625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   line-height: 0.75rem;
   letter-spacing: 0.06em;
@@ -5515,8 +5484,6 @@ markup: |
 
 .spectrum-Table-checkbox {
   vertical-align: super;
-  line-height: 0.75rem;
-  height: 12px;
 }
 
 /* topdoc
@@ -5660,8 +5627,8 @@ markup: |
 .spectrum-Rating .spectrum-Rating-icon {
     background-size: contain;
     background-repeat: no-repeat;
-    width: 22px;
-    height: 18px;
+    width: 24px;
+    height: 16px;
     float: left;
   }
 
@@ -5695,17 +5662,17 @@ markup: |
   description: An editable taglist.
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 1</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-disabled" role="listitem">
+      <div class="spectrum-Tag is-disabled" tabindex="0" role="listitem">
         <span class="spectrum-Tag-label">Tag 2</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 4" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -5717,20 +5684,20 @@ markup: |
   description: The Spectrum tag list with avatars
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" role="listitem" tabindex="0">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
         <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -5742,45 +5709,20 @@ markup: |
   description: The Spectrum tag list with icons
   markup: |
     <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag" role="listitem">
+      <div class="spectrum-Tag" role="listitem" tabindex="0">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
-      <div class="spectrum-Tag is-invalid" role="listitem">
+      <div class="spectrum-Tag is-invalid" role="listitem" tabindex="0">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1"></button>
       </div>
       <div class="spectrum-Tag is-disabled" role="listitem">
         <span class="spectrum-Tag-icon spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Tag"></span>
         <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
-      </div>
-    </div>
-
-*/
-
-/* topdoc
----
-  name: TagList - Quiet
-  description: The quiet Spectrum tag list. Should only be used with avatars or icons.
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-Tag spectrum-Tag--quiet" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
-      </div>
-      <div class="spectrum-Tag spectrum-Tag--quiet is-invalid" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu"></button>
-      </div>
-      <div class="spectrum-Tag spectrum-Tag--quiet is-disabled" role="listitem">
-        <img class="spectrum-Tag-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-Tag-label">Shantanu</span>
-        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" disabled></button>
+        <button class="spectrum-Tag-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled></button>
       </div>
     </div>
 
@@ -5798,7 +5740,14 @@ markup: |
     margin: 0 8px 8px 0;
   }
 
+.spectrum-TagList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 .spectrum-Tag {
+  float: left;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-align: center;
@@ -5869,6 +5818,12 @@ markup: |
   font-size: 1rem;
 }
 
+.spectrum-Tag-icon,
+.spectrum-Tag-avatar {
+  /* Move it 2px to the left cause Nate says so */
+  margin-left: -2px;
+}
+
 /* topdoc
 ---
 name: Search Within
@@ -5905,12 +5860,14 @@ markup: |
     <input type="text" placeholder="Search" class="spectrum-Textfield">
     <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear"></button>
 
-    <ul class="spectrum-Flyout is-open spectrum-List" role="menu" tabindex="0" style="top: 38px; left: 0;">
-      <li class="spectrum-List-option is-selected" role="menuitem" tabindex="-1">All</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Campaigns</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Audiences</li>
-      <li class="spectrum-List-option" role="menuitem" tabindex="-1">Tags</li>
-    </ul>
+    <div class="spectrum-Popover is-open" style="position: absolute; top: 38px; left: 0;">
+      <ul class="spectrum-SelectList" role="menu" tabindex="0">
+        <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="-1">All</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Campaigns</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Audiences</li>
+        <li class="spectrum-SelectList-option" role="menuitem" tabindex="-1">Tags</li>
+      </ul>
+    </div>
   </div>
 
   <h4>Default (Changed Selection)</h4>

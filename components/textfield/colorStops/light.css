@@ -82,11 +82,11 @@ markup: |
       color: rgb(75, 75, 75);
     }
 .spectrum-Textfield:active {
-    border-color: rgb(38, 128, 235);
+    border-color: rgb(20, 115, 230);
   }
 .spectrum-Textfield:focus {
-    border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    border-color: rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
 .spectrum-Textfield[disabled] {
     background-color: rgb(234, 234, 234);
@@ -105,7 +105,7 @@ markup: |
 .spectrum-Textfield.is-invalid,
   .spectrum-Textfield:invalid {
     border-color: rgb(227, 72, 80);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28215%2C 55%2C 63%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
   }
 .spectrum-Textfield.is-invalid:focus, .spectrum-Textfield:invalid:focus { /* might break things due to pre-defined focus */
       box-shadow: 0 0 0 1px rgb(227, 72, 80);
@@ -134,11 +134,11 @@ markup: |
     border-color: rgb(202, 202, 202);
   }
 .spectrum-Textfield--quiet:active {
-    border-color: rgb(38, 128, 235);
+    border-color: rgb(20, 115, 230);
   }
 .spectrum-Textfield--quiet:focus {
-    border-color: rgb(38, 128, 235);
-    box-shadow: 0 1px 0 rgb(38, 128, 235);
+    border-color: rgb(20, 115, 230);
+    box-shadow: 0 1px 0 rgb(20, 115, 230);
   }
 .spectrum-Textfield--quiet:disabled {
     background-color: transparent;

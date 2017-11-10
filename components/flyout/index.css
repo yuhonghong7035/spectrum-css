@@ -1,63 +1,17 @@
-:root {
+/* topdoc
+---
+name: Flyout
+description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
+markup: |
 
-  /* Radio button */
+  <div class="spectrum-Popover is-open">
+    <ul class="spectrum-SelectList" role="menu">
+      <li class="spectrum-SelectList-option is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-option is-disabled" role="menuitem" tabindex="0">United States of America</li>
+    </ul>
+  </div>
 
-  /* Field group */
-}
-
-.spectrum-Flyout {
-  visibility: hidden;
-
-  opacity: 0;
-
-  transition: transform 125ms ease-in-out,
-              opacity 125ms ease-in-out,
-              visibility 0ms linear 125ms;
-
-  pointer-events: none;
-}
-
-.spectrum-Flyout.is-open {
-  visibility: visible;
-
-  opacity: 1;
-
-  transition-delay: 0ms;
-
-  pointer-events: auto;
-}
-
-.spectrum-Flyout--bottom.is-open {
-  transform: translateY(4px);
-}
-
-.spectrum-Flyout--top.is-open {
-  transform: translateY(-4px);
-}
-
-.spectrum-Flyout--right.is-open {
-  transform: translateX(4px);
-}
-
-.spectrum-Flyout--left.is-open {
-  transform: translateX(-4px);
-}
-
-.spectrum-Flyout {
-
-  position: absolute;
-  display: inline-block;
-  white-space: nowrap;
-
-  box-sizing: border-box;
-
-  padding: 3px 0;
-  margin: 0;
-
-  min-width: 192px;
-  min-height: 32px;
-
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 4px;
-}
+*/
