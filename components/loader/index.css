@@ -1,0 +1,363 @@
+:root {
+
+  /* Radio button */
+
+  /* Field group */
+}
+
+@keyframes spectrum-wait-spinner-small-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-medium-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -1920px center;
+  }
+}
+
+@keyframes spectrum-wait-spinner-large-animation {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: -3840px center;
+  }
+}
+
+/* dots wait (three dots) */
+
+@keyframes spectrum-wait-dots-small-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -960px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-medium-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1280px center;
+  }
+}
+
+@keyframes spectrum-wait-dots-large-animation {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -2560px center;
+  }
+}
+
+/* topdoc
+---
+name: Loader - Default
+description: A Spectrum determinate loader of default type (round)
+markup: |
+  <div class="spectrum-Loader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+
+*/
+
+.spectrum-Loader {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  width: 32px;
+  height: 32px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Small
+description: A Spectrum Loader of default type (round) in small size
+markup: |
+  <div class="spectrum-Loader spectrum-Loader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+
+*/
+
+.spectrum-Loader--small {
+  width: 16px;
+  height: 16px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Large
+description: A Spectrum Loader of default type (round) in large size
+markup: |
+  <div class="spectrum-Loader spectrum-Loader--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+
+*/
+
+.spectrum-Loader--large {
+  width: 64px;
+  height: 64px;
+}
+
+/* topdoc
+---
+name: Loader - Default - Full Page
+description: A Spectrum loader of default type (round) for full page overlays.
+markup: |
+  <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div class="spectrum-Loader spectrum-Loader--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
+  </div>
+
+*/
+
+.spectrum-Loader--fullpage {
+  width: 64px;
+  height: 64px;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate
+description: An indeterminate Spectrum Loader of default type (round)
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate"></span>
+
+*/
+
+.spectrum-Loader--indeterminate {
+  display: inline-block;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(60);
+
+  width: 32px;
+  height: 32px;
+
+  animation-name: spectrum-wait-spinner-medium-animation;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate - Small
+description: A Spectrum Loader of default type (round) in small size
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--small"></span>
+
+*/
+
+.spectrum-Loader--indeterminate--small {
+  width: 16px;
+  height: 16px;
+
+  animation-name: spectrum-wait-spinner-small-animation;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate - Large
+description: An indeterminate Spectrum Loader of default type (round) in large size
+markup: |
+  <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--large"></span>
+
+*/
+
+.spectrum-Loader--indeterminate--large {
+  width: 64px;
+  height: 64px;
+
+  animation-name: spectrum-wait-spinner-large-animation;
+}
+
+/* topdoc
+---
+name: Loader - Indeterminate - Full Page
+description: An indeterminate Spectrum loader of default type (round) for full page overlays
+markup: |
+  <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--fullpage"></span>
+  </div>
+
+*/
+
+.spectrum-Loader--indeterminate--fullpage {
+  width: 64px;
+  height: 64px;
+
+  animation-name: spectrum-wait-spinner-large-animation;
+}
+
+/* topdoc
+---
+name: Loader - Bar - Default
+description: A Spectrum bar loader
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Loader--bar-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--side-label" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Loader--bar {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 182px;
+  vertical-align: top;
+}
+
+.spectrum-Loader--bar.spectrum-Loader--side-label {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-flow: row;
+        flex-flow: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: auto;
+  }
+
+.spectrum-Loader--bar-track {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  width: 182px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+.spectrum-Loader--bar-fill {
+  height: 6px;
+
+  transition: width 1s;
+}
+
+.spectrum-Loader--bar-label, .spectrum-Loader--bar-percentage {
+  font-size: 0.75rem;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.spectrum-Loader--side-label .spectrum-Loader--bar-label {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+.spectrum-Loader--side-label .spectrum-Loader--bar-percentage {
+    -ms-flex-order: 3;
+        order: 3;
+    text-align: right;
+    margin-left: 12px;
+    margin-bottom: 0;
+  }
+
+/* topdoc
+---
+name: Loader - Bar - Small
+description: A Spectrum 'small' bar loader
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-Loader--bar-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 50px 0;">
+    <div class="spectrum-Loader--bar spectrum-Loader--bar--small spectrum-Loader--side-label" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-Loader--bar-label">Loading</div>
+      <div class="spectrum-Loader--bar-percentage">50%</div>
+      <div class="spectrum-Loader--bar-track">
+        <div class="spectrum-Loader--bar-fill" handle="status" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+
+*/
+
+.spectrum-Loader--bar--small {
+  height: 4px;
+  min-width: 148px;
+}
+
+.spectrum-Loader--bar--small .spectrum-Loader--bar-fill {
+    height: 4px;
+  }
+
+.spectrum-Loader--bar--small .spectrum-Loader--bar-track {
+    height: 4px;
+    border-radius: 2px;
+  }
+
+/* topdoc
+---
+name: Loader - Bar - Full Page
+description: A Spectrum bar loader for full page overlays
+markup: |
+  <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div>
+      <div class="spectrum-Loader--bar spectrum-Loader--bar--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-Loader--bar-label">Loading</div>
+        <div class="spectrum-Loader--bar-percentage">50%</div>
+        <div class="spectrum-Loader--bar-track">
+          <div class="spectrum-Loader--bar-fill spectrum-Loader--bar--fullpage-fill" handle="status" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+*/

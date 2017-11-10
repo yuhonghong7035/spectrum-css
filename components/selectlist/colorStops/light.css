@@ -1,0 +1,58 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+}
+/* topdoc
+---
+name: SelectList
+description: A list of options that can be used in a Popover.
+markup: |
+
+  <ul class="spectrum-SelectList" role="listbox">
+    <li class="spectrum-SelectList-option is-selected" role="option" tabindex="0">Ballard</li>
+    <li class="spectrum-SelectList-option" role="option" tabindex="0">Fremont</li>
+    <li class="spectrum-SelectList-option" role="option" tabindex="0">Greenwood</li>
+    <hr class="spectrum-SelectList-divider">
+    <li class="spectrum-SelectList-option is-disabled" role="option" tabindex="0">United States of America</li>
+  </ul>
+
+
+*/
+.spectrum-SelectList {
+  background-color: rgb(255, 255, 255);
+}
+.spectrum-SelectList-option {
+  background-color: transparent;
+  color: rgb(75, 75, 75);
+}
+.spectrum-SelectList-option:focus,
+  .spectrum-SelectList-option.is-focused {
+    background-color: rgb(245, 245, 245);
+    color: rgb(75, 75, 75);
+    background-image: linear-gradient(to right, rgb(38, 128, 235) 0%, rgb(38, 128, 235) 2px, transparent 2px, transparent 100%);
+  }
+.spectrum-SelectList-option:hover {
+    background-color: rgb(245, 245, 245);
+    color: rgb(75, 75, 75);
+  }
+.spectrum-SelectList-option.is-selected {
+    color: rgb(13, 102, 208);
+  }
+.spectrum-SelectList-option.is-selected::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M12%2C2.5a1%2C1%2C0%2C0%2C0-1.7073-.7067L4.5%2C7.5859%2C2.2073%2C5.2933A1%2C1%2C0%2C1%2C0%2C.76872%2C6.68272L.7933%2C6.7073%2C3.7927%2C9.7067a1%2C1%2C0%2C0%2C0%2C1.41421.00049L5.2074%2C9.7067l6.4994-6.4994A.9967.9967%2C0%2C0%2C0%2C12%2C2.5Z' style='fill:rgb%2838%2C 128%2C 235%29'/%3E%3C/svg%3E");
+    }
+.spectrum-SelectList-option .is-active,
+  .spectrum-SelectList-option:active {
+    background-color: rgb(234, 234, 234);
+  }
+.spectrum-SelectList-option.is-disabled {
+    background-color: transparent;
+    background-image: none;
+    color: rgb(179, 179, 179);
+    cursor: default;
+  }
+.spectrum-SelectList-divider {
+  background-color: rgb(245, 245, 245);
+}

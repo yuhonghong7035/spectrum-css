@@ -1,0 +1,69 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+}
+.spectrum-ComboBox-textfield:focus ~ .spectrum-ComboBox-button {
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+  }
+.spectrum-ComboBox-textfield:focus.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox-textfield:focus:invalid ~ .spectrum-ComboBox-button {
+      border-color: rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+    }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-button {
+    border-color: rgb(62, 62, 62);
+  }
+.spectrum-ComboBox--quiet:hover .spectrum-ComboBox-button {
+      border-color: rgb(77, 77, 77);
+    }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:invalid ~ .spectrum-ComboBox-button {
+        border-color: rgb(227, 72, 80);
+      }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus ~ .spectrum-ComboBox-button {
+        border-color: rgb(55, 142, 240);
+        box-shadow: 0 1px 0 rgb(55, 142, 240);
+      }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus:invalid ~ .spectrum-ComboBox-button {
+          border-color: rgb(227, 72, 80);
+          box-shadow: 0 1px 0 rgb(227, 72, 80);
+        }
+.spectrum-ComboBox-button {
+  border-color: rgb(62, 62, 62);
+  background-color: rgb(45, 45, 45);
+  color: rgb(153, 153, 153);
+
+}
+.spectrum-ComboBox-button:hover {
+    border-color: rgb(77, 77, 77);
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+  }
+.spectrum-ComboBox-button:active,
+  .is-open .spectrum-ComboBox-button {
+    border-color: rgb(77, 77, 77);
+    background-color: rgb(57, 57, 57);
+    color: rgb(255, 255, 255);
+  }
+.spectrum-ComboBox-button:disabled:hover {
+    border-color: transparent;
+    background-color: rgb(57, 57, 57);
+    color: rgb(92, 92, 92);
+  }
+.spectrum-ComboBox-button.is-invalid,
+  .spectrum-ComboBox-button:invalid {
+    border-color: rgb(227, 72, 80);
+  }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-button {
+    background-color: inherit;
+  }
+.spectrum-ComboBox--quiet .spectrum-ComboBox-button:hover,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.focus-ring,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-button:active,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.is-open,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-button:invalid,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.is-invalid,
+    .spectrum-ComboBox--quiet .spectrum-ComboBox-buttondisabled {
+      background-color: inherit;
+    }
