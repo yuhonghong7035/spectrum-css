@@ -4,10 +4,10 @@
 
   /* Button */
 }
-.spectrum--dark .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-color: rgb(55, 142, 240);
   }
-.spectrum--dark .spectrum-Radio-input.focus-ring + .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
       border-color: rgb(55, 142, 240);
       box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
@@ -25,12 +25,12 @@ modifiers:
 markup: |
   <div class="spectrum-Radio">
     <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-    <span class="spectrum-Radio-checkmark"></span>
+    <span class="spectrum-Radio-button"></span>
     <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
   </div>
   <div class="spectrum-Radio">
     <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
-    <span class="spectrum-Radio-checkmark"></span>
+    <span class="spectrum-Radio-button"></span>
     <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
   </div>
 
@@ -38,29 +38,29 @@ markup: |
 .spectrum--dark .spectrum-Radio .spectrum-Radio-label {
     color: rgb(205, 205, 205);
   }
-.spectrum--dark .spectrum-Radio .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio .spectrum-Radio-button {
     border-color: rgb(123, 123, 123);
   }
-.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-button {
       border-color: rgb(153, 153, 153);
       box-shadow: none;
     }
-.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(75, 156, 245);
     }
 .spectrum--dark .spectrum-Radio:hover .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
-.spectrum--dark .spectrum-Radio:active .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio:active .spectrum-Radio-button {
       border-color: rgb(205, 205, 205);
     }
-.spectrum--dark .spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(90, 169, 250);
     }
 .spectrum--dark .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
-.spectrum--dark .spectrum-Radio.is-invalid .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio.is-invalid .spectrum-Radio-button {
       border-color: rgb(236, 91, 98);
     }
 .spectrum--dark .spectrum-Radio.is-invalid .spectrum-Radio-label {
@@ -78,23 +78,23 @@ markup: |
   <form>
     <div class="spectrum-Radio is-invalid">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
     </div>
     <div class="spectrum-Radio is-invalid">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>
   </form>
 */
-.spectrum--dark .spectrum-Radio.is-invalid:hover .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio.is-invalid:hover .spectrum-Radio-button {
       border-color: rgb(247, 109, 116) !important;
     }
 .spectrum--dark .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(247, 109, 116);
     }
-.spectrum--dark .spectrum-Radio.is-invalid:active .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio.is-invalid:active .spectrum-Radio-button {
       border-color: rgb(255, 123, 130) !important;
     }
 .spectrum--dark .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
@@ -111,17 +111,17 @@ modifiers:
 markup: |
   <div class="spectrum-Radio">
     <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>
-    <span class="spectrum-Radio-checkmark"></span>
+    <span class="spectrum-Radio-button"></span>
     <label class="spectrum-Radio-label" for="radio-disable-0">Kittens</label>
   </div>
   <div class="spectrum-Radio">
     <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-1" disabled checked>
-    <span class="spectrum-Radio-checkmark"></span>
+    <span class="spectrum-Radio-button"></span>
     <label class="spectrum-Radio-label" for="radio-disable-0">Puppies</label>
   </div>
 
 */
-.spectrum--dark .spectrum-Radio-input:disabled + .spectrum-Radio-checkmark {
+.spectrum--dark .spectrum-Radio-input:disabled + .spectrum-Radio-button {
     border-color: rgb(77, 77, 77);
   }
 .spectrum--dark .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {

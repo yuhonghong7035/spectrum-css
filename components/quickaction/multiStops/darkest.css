@@ -10,41 +10,49 @@ name: Quick Actions
 description: Spectrum quick actions (requires an icon)
 markup: |
   <div class="spectrum-QuickActions is-open">
-    <button class="spectrum-QuickActions-button">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Text" role="img" aria-label="info"></span>
+    <button class="spectrum-QuickActions-item">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
+        <use xlink:href="#spectrum-icon-18-Text" />
+      </svg>
     </button>
-    <button class="spectrum-QuickActions-button">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--RotateLeft" role="img" aria-label="info"></span>
+    <button class="spectrum-QuickActions-item">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
+        <use xlink:href="#spectrum-icon-18-RotateLeft" />
+      </svg>
     </button>
-    <button class="spectrum-QuickActions-button">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Crop" role="img" aria-label="info"></span>
+    <button class="spectrum-QuickActions-item">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Crop">
+        <use xlink:href="#spectrum-icon-18-Crop" />
+      </svg>
     </button>
-    <button class="spectrum-QuickActions-button">
-      <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--DeleteOutline" role="img" aria-label="info"></span>
+    <button class="spectrum-QuickActions-item">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="DeleteOutline">
+        <use xlink:href="#spectrum-icon-18-DeleteOutline" />
+      </svg>
     </button>
   </div>
 
 */
-.spectrum--darkest .spectrum-QuickActions-button {
+.spectrum--darkest .spectrum-QuickActions-item {
   background-color: rgb(8, 8, 8);
   border-color: rgb(60, 60, 60);
   color: rgb(133, 133, 133);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
-.spectrum--darkest .spectrum-QuickActions-button:focus {
+.spectrum--darkest .spectrum-QuickActions-item:focus {
     outline: none;
   }
-.spectrum--darkest .spectrum-QuickActions-button.focus-ring {
+.spectrum--darkest .spectrum-QuickActions-item.focus-ring {
     border-color: rgb(38, 128, 235);
     color: rgb(20, 115, 230);
     box-shadow: 0 0 0 1px rgb(38, 128, 235);
     outline: none;
   }
-.spectrum--darkest .spectrum-QuickActions-button:hover {
+.spectrum--darkest .spectrum-QuickActions-item:hover {
     border-color: rgb(133, 133, 133);
     color: rgb(226, 226, 226);
   }
-.spectrum--darkest .spectrum-QuickActions-button:active {
+.spectrum--darkest .spectrum-QuickActions-item:active {
     border-color: rgb(180, 180, 180);
     color: rgb(226, 226, 226);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);

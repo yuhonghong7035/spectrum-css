@@ -33,7 +33,9 @@ markup:
   <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
     <div class="spectrum-Dialog-header">
       <h2 class="spectrum-Dialog-title">Unable to Share</h2>
-      <div class="spectrum-Dialog-typeIcon"></div>
+      <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AlertError" />
+      </svg>
     </div>
     <div class="spectrum-Dialog-content">
       An error occurred while sharing your project. Please verify the email address and try again.
@@ -47,7 +49,6 @@ markup:
 .spectrum-Dialog--error .spectrum-Dialog-title {
     color: rgb(227, 72, 80);
   }
-.spectrum-Dialog--error .spectrum-Dialog-typeIcon::after {
+.spectrum-Dialog--error .spectrum-Dialog-typeIcon{
     color: rgb(227, 72, 80);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
   }

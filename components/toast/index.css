@@ -12,14 +12,22 @@ description: The default toast.
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>
+    <button class="spectrum-Toast-closeButton">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ToastClose" />
+      </svg>
+    </button>
   </div>
 
   <br>
 
   <div class="spectrum-Toast" style="position: absolute">
     <div class="spectrum-Toast-content">This is a toast.</div>
-    <button class="spectrum-Toast-closeButton"></button>
+    <button class="spectrum-Toast-closeButton">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ToastClose" />
+      </svg>
+    </button>
   </div>
 
 */
@@ -46,12 +54,6 @@ markup: |
   width: 18px;
   height: 18px;
   vertical-align: -4px;
-
-  /* Support font icons */
-  font-size: 1.125rem;
-
-  /* Support SVG icons */
-  background-size: contain;
 }
 
 .spectrum-Toast-content {
@@ -69,6 +71,8 @@ markup: |
   right: 8px;
   top: 8px;
 
+  padding: 0;
+
   width: 32px;
   height: 32px;
 
@@ -77,14 +81,18 @@ markup: |
 
   background-color: transparent;
 
-  background-size: 8px;
-  background-position: center center;
-  background-repeat: no-repeat;
-
   transition: background-color 125ms ease-in-out;
 
   cursor: pointer;
 }
+
+.spectrum-Toast-closeButton .spectrum-Icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+  }
 
 .spectrum-Toast-closeButton:focus {
     outline: none;

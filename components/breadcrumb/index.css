@@ -18,6 +18,19 @@
     clear: both;
   }
 
+.spectrum-Breadcrumb-separator {
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -18.5px;
+
+  width: 5px;
+  height: 8px;
+
+  transform: scale(1);
+
+  opacity: 1;
+}
+
 .spectrum-Breadcrumb {
   display: block;
   float: left;
@@ -30,24 +43,6 @@
   font-weight: 300;
 }
 
-.spectrum-Breadcrumb::after {
-    position: absolute;
-    top: calc(50% - 3px);
-    right: -18.5px;
-
-    width: 5px;
-    height: 8px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-
-    transform: scale(1);
-
-    opacity: 1;
-
-    content: '';
-  }
-
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     cursor: default;
   }
@@ -57,7 +52,7 @@
       cursor: pointer;
     }
 
-.spectrum-Breadcrumb:last-of-type::after {
+.spectrum-Breadcrumb:last-of-type .spectrum-Breadcrumb-separator {
       display: none;
     }
 
@@ -74,7 +69,7 @@
     line-height: 2rem;
   }
 
-.spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--page-title {
+.spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--pageTitle {
     margin: 0;
 
     font-size: inherit;

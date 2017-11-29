@@ -4,66 +4,67 @@
 
   /* Button */
 }
-.spectrum-ComboBox-textfield:focus ~ .spectrum-ComboBox-button {
+.spectrum-ComboBox .spectrum-Button {
+    border-color: rgb(45, 45, 45);
+    background-color: rgb(24, 24, 24);
+    color: rgb(133, 133, 133);
+  }
+.spectrum-ComboBox .spectrum-Button:hover {
+      border-color: rgb(60, 60, 60);
+      background-color: rgb(8, 8, 8);
+      color: rgb(226, 226, 226);
+    }
+.spectrum-ComboBox .spectrum-Button:active,
+    .is-open .spectrum-ComboBox .spectrum-Button {
+      border-color: rgb(60, 60, 60);
+      background-color: rgb(38, 38, 38);
+      color: rgb(226, 226, 226);
+    }
+.spectrum-ComboBox .spectrum-Button:disabled {
+      background-color: rgb(38, 38, 38);
+    }
+.spectrum-ComboBox .spectrum-Button:disabled:hover {
+        border-color: transparent;
+        background-color: rgb(38, 38, 38);
+        color: rgb(73, 73, 73);
+      }
+.spectrum-ComboBox .spectrum-Button.is-invalid,
+    .spectrum-ComboBox .spectrum-Button:invalid {
+      border-color: rgb(215, 55, 63);
+    }
+.spectrum-ComboBox-input:focus ~ .spectrum-Button {
     border-color: rgb(20, 115, 230);
     box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
-.spectrum-ComboBox-textfield:focus.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox-textfield:focus:invalid ~ .spectrum-ComboBox-button {
+.spectrum-ComboBox-input:focus.is-invalid ~ .spectrum-Button, .spectrum-ComboBox-input:focus:invalid ~ .spectrum-Button {
       border-color: rgb(215, 55, 63);
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-button {
+.spectrum-ComboBox--quiet .spectrum-Button {
     border-color: rgb(45, 45, 45);
+    background-color: inherit;
   }
-.spectrum-ComboBox--quiet:hover .spectrum-ComboBox-button {
+.spectrum-ComboBox--quiet .spectrum-Button:hover,
+    .spectrum-ComboBox--quiet .spectrum-Button.focus-ring,
+    .spectrum-ComboBox--quiet .spectrum-Button:active,
+    .spectrum-ComboBox--quiet .spectrum-Button.is-open,
+    .spectrum-ComboBox--quiet .spectrum-Button:invalid,
+    .spectrum-ComboBox--quiet .spectrum-Button.is-invalid,
+    .spectrum-ComboBox--quiet .spectrum-Button:disabled,
+    .spectrum-ComboBox--quiet .spectrum-Button:disabled:hover {
+      background-color: inherit;
+    }
+.spectrum-ComboBox--quiet:hover .spectrum-Button {
       border-color: rgb(60, 60, 60);
     }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:invalid ~ .spectrum-ComboBox-button {
+.spectrum-ComboBox--quiet .spectrum-ComboBox-input.is-invalid ~ .spectrum-Button, .spectrum-ComboBox--quiet .spectrum-ComboBox-input:invalid ~ .spectrum-Button {
         border-color: rgb(215, 55, 63);
       }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus ~ .spectrum-ComboBox-button {
+.spectrum-ComboBox--quiet .spectrum-ComboBox-input:focus ~ .spectrum-Button {
         border-color: rgb(38, 128, 235);
         box-shadow: 0 1px 0 rgb(38, 128, 235);
       }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus.is-invalid ~ .spectrum-ComboBox-button, .spectrum-ComboBox--quiet .spectrum-ComboBox-textfield:focus:invalid ~ .spectrum-ComboBox-button {
+.spectrum-ComboBox--quiet .spectrum-ComboBox-input:focus.is-invalid ~ .spectrum-Button, .spectrum-ComboBox--quiet .spectrum-ComboBox-input:focus:invalid ~ .spectrum-Button {
           border-color: rgb(215, 55, 63);
           box-shadow: 0 1px 0 rgb(215, 55, 63);
         }
-.spectrum-ComboBox-button {
-  border-color: rgb(45, 45, 45);
-  background-color: rgb(24, 24, 24);
-  color: rgb(133, 133, 133);
-
-}
-.spectrum-ComboBox-button:hover {
-    border-color: rgb(60, 60, 60);
-    background-color: rgb(8, 8, 8);
-    color: rgb(226, 226, 226);
-  }
-.spectrum-ComboBox-button:active,
-  .is-open .spectrum-ComboBox-button {
-    border-color: rgb(60, 60, 60);
-    background-color: rgb(38, 38, 38);
-    color: rgb(226, 226, 226);
-  }
-.spectrum-ComboBox-button:disabled:hover {
-    border-color: transparent;
-    background-color: rgb(38, 38, 38);
-    color: rgb(73, 73, 73);
-  }
-.spectrum-ComboBox-button.is-invalid,
-  .spectrum-ComboBox-button:invalid {
-    border-color: rgb(215, 55, 63);
-  }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-button {
-    background-color: inherit;
-  }
-.spectrum-ComboBox--quiet .spectrum-ComboBox-button:hover,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.focus-ring,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-button:active,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.is-open,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-button:invalid,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-button.is-invalid,
-    .spectrum-ComboBox--quiet .spectrum-ComboBox-buttondisabled {
-      background-color: inherit;
-    }

@@ -13,8 +13,18 @@ markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">
       <tr>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
-        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
         <th class="spectrum-Table-headCell">Column Title</th>
       </tr>
     </thead>
@@ -56,8 +66,18 @@ description: The standard table with divs
 markup: |
   <div class="spectrum-Table">
     <div class="spectrum-Table-head" style="display: flex">
-      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">Column Title</div>
-      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">
+        Column Title
+        <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+        </svg>
+      </div>
+      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">
+        Column Title
+        <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+        </svg>
+      </div>
       <div class="spectrum-Table-headCell" style="flex: 1">Column Title</div>
     </div>
     <div class="spectrum-Table-body" style="height: 120px">
@@ -98,8 +118,18 @@ description: The standard table with divs
 markup: |
   <div class="spectrum-Table spectrum-Table--quiet">
     <div class="spectrum-Table-head" style="display: flex">
-      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">Column Title</div>
-      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">Column Title</div>
+      <div class="spectrum-Table-headCell is-sortable is-sorted-desc" style="flex: 1">
+        Column Title
+        <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+        </svg>
+      </div>
+      <div class="spectrum-Table-headCell is-sortable" style="flex: 1">
+        Column Title
+        <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+        </svg>
+      </div>
       <div class="spectrum-Table-headCell" style="flex: 1">Column Title</div>
     </div>
     <div class="spectrum-Table-body" style="height: 120px">
@@ -138,6 +168,18 @@ markup: |
   border-spacing: 0;
 }
 
+.spectrum-Table-sortedIcon {
+  display: none;
+  margin-left: 4px;
+
+  width: 10px;
+  height: 12px;
+
+  vertical-align: bottom;
+
+  transition: transform 125ms ease-in-out;
+}
+
 .spectrum-Table-headCell {
   text-align: left;
   font-size: 0.6875rem;
@@ -154,18 +196,11 @@ markup: |
     cursor: pointer;
   }
 
-.spectrum-Table-headCell.is-sorted-asc::after, .spectrum-Table-headCell.is-sorted-desc::after {
-      content: '';
+.spectrum-Table-headCell.is-sorted-asc .spectrum-Table-sortedIcon, .spectrum-Table-headCell.is-sorted-desc .spectrum-Table-sortedIcon {
       display: inline-block;
-      margin-left: 4px;
-      width: 10px;
-      height: 12px;
-      background-size: contain;
-      vertical-align: bottom;
-      transition: transform 125ms ease-in-out;
     }
 
-.spectrum-Table-headCell.is-sorted-asc::after {
+.spectrum-Table-headCell.is-sorted-asc .spectrum-Table-sortedIcon {
       transform: rotateZ(180deg);
     }
 
@@ -225,8 +260,18 @@ markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">
       <tr>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
-        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
         <th class="spectrum-Table-headCell">Column Title</th>
       </tr>
     </thead>
@@ -276,11 +321,25 @@ markup: |
         <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </th>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
-        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
         <th class="spectrum-Table-headCell">Column Title</th>
       </tr>
     </thead>
@@ -289,7 +348,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -302,7 +365,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -315,7 +382,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -328,7 +399,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -341,7 +416,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -374,11 +453,25 @@ markup: |
         <th class="spectrum-Table-headCell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </th>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
-        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
         <th class="spectrum-Table-headCell">Column Title</th>
       </tr>
     </thead>
@@ -387,7 +480,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -400,7 +497,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -413,7 +514,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0" checked>
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -426,7 +531,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -439,7 +548,11 @@ markup: |
         <td class="spectrum-Table-cell spectrum-Table-checkboxCell">
           <label class="spectrum-Checkbox spectrum-Table-checkbox">
             <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-            <span class="spectrum-Checkbox-checkmark"></span>
+            <span class="spectrum-Checkbox-box">
+              <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+                <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+              </svg>
+            </span>
           </label>
         </td>
         <td class="spectrum-Table-cell">
@@ -461,8 +574,18 @@ markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">
       <tr>
-        <th class="spectrum-Table-headCell is-sortable is-sorted-desc">Column Title</th>
-        <th class="spectrum-Table-headCell is-sortable">Column Title</th>
+        <th class="spectrum-Table-headCell is-sortable is-sorted-asc">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
+        <th class="spectrum-Table-headCell is-sortable">
+          Column Title
+          <svg class="spectrum-Icon spectrum-Table-sortedIcon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-TableSortArrow" />
+          </svg>
+        </th>
         <th class="spectrum-Table-headCell">Column Title</th>
       </tr>
     </thead>

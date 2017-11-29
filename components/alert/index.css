@@ -13,7 +13,9 @@ description: >-
   Combine this strategy with any variant.
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
-    <div class="spectrum-Alert-typeIcon" role="img" aria-label="alert"></div>
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertError" />
+    </svg>
     <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
     <div class="spectrum-Alert-content">This is an alert.</div>
     <div class="spectrum-Alert-footer">
@@ -38,26 +40,13 @@ markup: |
   border-radius: 4px;
 }
 
-.spectrum-Alert-typeIcon {
+.spectrum-Alert-icon {
   position: absolute;
+  display: block;
   top: 20px;
   right: 20px;
-
-  /* Support font icons */
-  text-align: right;
-}
-
-.spectrum-Alert-typeIcon::after {
-  display: block;
-  content: '';
   width: 18px;
   height: 18px;
-
-  /* Support font icons */
-  font-size: 1.125rem;
-
-  /* Support SVG icons */
-  background-size: contain;
 }
 
 .spectrum-Alert-header {

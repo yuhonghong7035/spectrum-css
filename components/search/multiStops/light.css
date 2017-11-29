@@ -5,25 +5,8 @@
   /* Button */
 }
 .spectrum--light .spectrum-Search-icon {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M9.50774.49463H9.49837A5.9932%2C5.9932%2C0%2C0%2C0%2C3.50532%2C6.481v.00685a5.9932%2C5.9932%2C0%2C0%2C0%2C1.26435%2C3.6819L.22537%2C14.714A.75.75%2C0%2C1%2C0%2C1.27463%2C15.786l.01133-.01133%2C4.5443-4.5443A5.9977%2C5.9977%2C0%2C1%2C0%2C9.50774.49463Zm-.00237%2C10.5a4.5%2C4.5%2C0%2C1%2C1%2C4.5-4.5A4.5%2C4.5%2C0%2C0%2C1%2C9.50537%2C10.99463Z'/%3E%3C/svg%3E");
   color: rgb(112, 112, 112);
 }
 .spectrum--light .spectrum-Search-input:disabled ~ .spectrum-Search-icon {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath style='fill:rgb%28179%2C 179%2C 179%29' d='M9.50774.49463H9.49837A5.9932%2C5.9932%2C0%2C0%2C0%2C3.50532%2C6.481v.00685a5.9932%2C5.9932%2C0%2C0%2C0%2C1.26435%2C3.6819L.22537%2C14.714A.75.75%2C0%2C1%2C0%2C1.27463%2C15.786l.01133-.01133%2C4.5443-4.5443A5.9977%2C5.9977%2C0%2C1%2C0%2C9.50774.49463Zm-.00237%2C10.5a4.5%2C4.5%2C0%2C1%2C1%2C4.5-4.5A4.5%2C4.5%2C0%2C0%2C1%2C9.50537%2C10.99463Z'/%3E%3C/svg%3E");
       color: rgb(179, 179, 179);
-    }
-.spectrum--light .spectrum-Search-clear::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M7.775%2C6.71577%2C5.05909%2C4%2C7.775%2C1.28423A.749.749%2C0%2C1%2C0%2C6.727.21378L6.71577.22505%2C4%2C2.94092%2C1.28423.22505A.749.749%2C0%2C0%2C0%2C.21376%2C1.27295l.01129.01129L2.94092%2C4%2C.22505%2C6.71577A.749.749%2C0%2C1%2C0%2C1.273%2C7.78623L1.28423%2C7.775%2C4%2C5.05909%2C6.71577%2C7.775A.749.749%2C0%2C1%2C0%2C7.78621%2C6.727Z'/%3E%3C/svg%3E");
-  }
-.spectrum--light .spectrum-Search-clear:focus::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:rgb%2875%2C 75%2C 75%29' d='M7.775%2C6.71577%2C5.05909%2C4%2C7.775%2C1.28423A.749.749%2C0%2C1%2C0%2C6.727.21378L6.71577.22505%2C4%2C2.94092%2C1.28423.22505A.749.749%2C0%2C0%2C0%2C.21376%2C1.27295l.01129.01129L2.94092%2C4%2C.22505%2C6.71577A.749.749%2C0%2C1%2C0%2C1.273%2C7.78623L1.28423%2C7.775%2C4%2C5.05909%2C6.71577%2C7.775A.749.749%2C0%2C1%2C0%2C7.78621%2C6.727Z'/%3E%3C/svg%3E");
-    }
-.spectrum--light .spectrum-Search-clear:hover::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:rgb%2844%2C 44%2C 44%29' d='M7.775%2C6.71577%2C5.05909%2C4%2C7.775%2C1.28423A.749.749%2C0%2C1%2C0%2C6.727.21378L6.71577.22505%2C4%2C2.94092%2C1.28423.22505A.749.749%2C0%2C0%2C0%2C.21376%2C1.27295l.01129.01129L2.94092%2C4%2C.22505%2C6.71577A.749.749%2C0%2C1%2C0%2C1.273%2C7.78623L1.28423%2C7.775%2C4%2C5.05909%2C6.71577%2C7.775A.749.749%2C0%2C1%2C0%2C7.78621%2C6.727Z'/%3E%3C/svg%3E");
-    }
-.spectrum--light .spectrum-Search-clear:active::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:rgb%2875%2C 75%2C 75%29' d='M7.775%2C6.71577%2C5.05909%2C4%2C7.775%2C1.28423A.749.749%2C0%2C1%2C0%2C6.727.21378L6.71577.22505%2C4%2C2.94092%2C1.28423.22505A.749.749%2C0%2C0%2C0%2C.21376%2C1.27295l.01129.01129L2.94092%2C4%2C.22505%2C6.71577A.749.749%2C0%2C1%2C0%2C1.273%2C7.78623L1.28423%2C7.775%2C4%2C5.05909%2C6.71577%2C7.775A.749.749%2C0%2C1%2C0%2C7.78621%2C6.727Z'/%3E%3C/svg%3E");
-    }
-.spectrum--light .spectrum-Search-clear:disabled::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath style='fill:rgb%28202%2C 202%2C 202%29' d='M7.775%2C6.71577%2C5.05909%2C4%2C7.775%2C1.28423A.749.749%2C0%2C1%2C0%2C6.727.21378L6.71577.22505%2C4%2C2.94092%2C1.28423.22505A.749.749%2C0%2C0%2C0%2C.21376%2C1.27295l.01129.01129L2.94092%2C4%2C.22505%2C6.71577A.749.749%2C0%2C1%2C0%2C1.273%2C7.78623L1.28423%2C7.775%2C4%2C5.05909%2C6.71577%2C7.775A.749.749%2C0%2C1%2C0%2C7.78621%2C6.727Z'/%3E%3C/svg%3E");
     }

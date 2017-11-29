@@ -9,15 +9,31 @@
   cursor: pointer;
 }
 
-.spectrum-Rating .spectrum-Rating-icon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 16px;
-    float: left;
-  }
-
 .spectrum-Rating.is-disabled {
     cursor: default;
     pointer-events: none;
   }
+
+.spectrum-Rating-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 16px;
+  float: left;
+}
+
+.spectrum-Rating-starActive,
+.spectrum-Rating-starInactive {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.spectrum-Rating-starActive {
+  display: none;
+}
+
+.spectrum-Rating-starInactive {
+  display: block;
+}
+

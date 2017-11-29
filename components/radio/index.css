@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.spectrum-Radio-input:checked + .spectrum-Radio-checkmark {
+.spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-width: 5px;
   }
 
@@ -49,7 +49,7 @@
   transition: color 125ms ease-in-out;
 }
 
-.spectrum-Radio-checkmark {
+.spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
   width: 14px;

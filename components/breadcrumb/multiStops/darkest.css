@@ -17,9 +17,21 @@ modifiers:
 markup: |
   <nav>
     <ul class="spectrum-Breadcrumbs">
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Nike</a></li>
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Mens</a></li>
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Summer 2016</a></li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" href="#">Nike</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Mens</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Summer 2016</a>
+      </li>
     </ul>
   </nav>
 
@@ -36,10 +48,20 @@ modifiers:
 markup: |
   <nav>
     <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" href="#">Home</a></li>
-      <li class="spectrum-Breadcrumb"><a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Playground</a></li>
       <li class="spectrum-Breadcrumb">
-        <h1 class="spectrum-Heading--page-title">
+        <a class="spectrum-Breadcrumb-link" href="#">Home</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <a class="spectrum-Breadcrumb-link" role="link" tabindex="0">Playground</a>
+        <svg class="spectrum-Icon spectrum-Breadcrumb-separator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-BreadcrumbChevron" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumb">
+        <h1 class="spectrum-Heading--pageTitle">
           <a class="spectrum-Breadcrumb-link" role="link" aria-current="page">Sliders</a>
         </h1>
       </li>
@@ -51,8 +73,8 @@ markup: |
 .spectrum--darkest .spectrum-Breadcrumb {
   color: rgb(133, 133, 133);
 }
-.spectrum--darkest .spectrum-Breadcrumb::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='7' viewBox='0 0 4 7'%3E%3Cpath style='fill:rgb%2873%2C 73%2C 73%29' d='M4%2C3.5a.4982.4982%2C0%2C0%2C0-.1468-.3538L.8538.1468A.5.5%2C0%2C1%2C0%2C.1465.8535L2.793%2C3.5.1467%2C6.1463a.5.5%2C0%2C1%2C0%2C.707.707l3-3A.4983.4983%2C0%2C0%2C0%2C4%2C3.5Z'/%3E%3C/svg%3E");
+.spectrum--darkest .spectrum-Breadcrumb .spectrum-Breadcrumb-separator {
+    color: rgb(73, 73, 73);
   }
 .spectrum--darkest .spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     color: inherit;
@@ -61,7 +83,7 @@ markup: |
 .spectrum--darkest .spectrum-Breadcrumb .spectrum-Breadcrumb-link:hover {
       color: rgb(226, 226, 226);
     }
-.spectrum--darkest .spectrum-Breadcrumb .spectrum-Breadcrumb-link:focus {
+.spectrum--darkest .spectrum-Breadcrumb .spectrum-Breadcrumb-link.focus-ring {
       color: rgb(55, 142, 240);
       outline: 0;
       border-bottom: 2px solid rgb(55, 142, 240);
@@ -77,7 +99,7 @@ markup: |
 .spectrum--darkest .spectrum-Breadcrumb.is-selected ~ .spectrum-Breadcrumb:last-of-type {
         color: rgb(133, 133, 133);
       }
-.spectrum--darkest .spectrum-Breadcrumb.is-selected .spectrum-Breadcrumb-link:focus {
+.spectrum--darkest .spectrum-Breadcrumb.is-selected .spectrum-Breadcrumb-link.focus-ring {
         color: rgb(226, 226, 226);
         border-bottom: 0;
       }

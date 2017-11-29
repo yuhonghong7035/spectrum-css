@@ -26,6 +26,7 @@
   --spectrum-alias-border-corner-radius-small: 2px;
   --spectrum-alias-border-corner-radius-xsmall: 1px;
   --spectrum-alias-border-size-thick: 2px;
+  --spectrum-alias-border-size-thicker: 4px;
   --spectrum-alias-border-size-thickest: 8px;
   --spectrum-alias-border-size-thin: 1px;
   --spectrum-alias-font-family-condensed: adobe-clean-han-traditional, Adobe Clean, Helvetica, Arial, sans-serif;
@@ -230,6 +231,7 @@
   --spectrum-global-layout-size-25: 2px;
   --spectrum-global-layout-size-250: 20px;
   --spectrum-global-layout-size-300: 24px;
+  --spectrum-global-layout-size-3400: 272px;
   --spectrum-global-layout-size-400: 32px;
   --spectrum-global-layout-size-4600: 368px;
   --spectrum-global-layout-size-50: 4px;
@@ -276,6 +278,17 @@
   --spectrum-logicbutton-font-size-default: 14px;
   --spectrum-logicbutton-font-weight-default: 700;
   --spectrum-logicbutton-height-default: 24px;
+  --spectrum-miller-column-chevron-height-default: 12px;
+  --spectrum-miller-column-item-border-radius-default: 4px;
+  --spectrum-miller-column-item-height-default: 40px;
+  --spectrum-miller-column-item-label-padding-left-default: 8px;
+  --spectrum-miller-column-item-margin-bottom-default: 4px;
+  --spectrum-miller-column-item-padding-left-default: 16px;
+  --spectrum-miller-column-item-padding-right-default: 16px;
+  --spectrum-miller-column-thumbnail-height-default: 24px;
+  --spectrum-miller-column-thumbnail-margin-left-default: 8px;
+  --spectrum-miller-column-thumbnail-width-default: 24px;
+  --spectrum-miller-column-width-default: 272px;
   --spectrum-pagination-counter-height-default: 32px;
   --spectrum-pagination-counter-margin-left-default: 5px;
   --spectrum-pagination-direction-button-font-size-default: 15px;
@@ -340,7 +353,7 @@
   --spectrum-slider-handle-border-radius-default: 8px;
   --spectrum-slider-handle-border-width-default: 2px;
   --spectrum-slider-handle-height-default: 16px;
-  --spectrum-slider-handle-outset-border-width-default: 2px;
+  --spectrum-slider-handle-outset-border-width-default: 4px;
   --spectrum-slider-handle-width-default: 16px;
   --spectrum-slider-height-default: 32px;
   --spectrum-slider-margin-bottom-default: 1px;

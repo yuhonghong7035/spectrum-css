@@ -50,13 +50,12 @@
 .spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
   }
 
-.spectrum-QuickActions-button {
+.spectrum-QuickActions-item {
   width: 32px;
   height: 32px;
   margin-left: 12px;
   padding: 0;
   border-width: 1px;
-  line-height: 1.875rem;
   border-radius: 16px;
   border-style: solid;
   transition: border-color 125ms ease-out,
@@ -64,14 +63,19 @@
     box-shadow 125ms ease-out;
 }
 
-.spectrum-QuickActions-button:hover {
+.spectrum-QuickActions-item:hover {
     cursor: pointer;
   }
 
-.spectrum-QuickActions-button:active {
+.spectrum-QuickActions-item:active {
     cursor: pointer;
   }
 
-.spectrum-QuickActions-button:first-child {
+.spectrum-QuickActions-item:first-child {
     margin-left: 0;
+  }
+
+.spectrum-QuickActions-item .spectrum-Icon {
+    /* Fix alignment */
+    margin-top: 2px;
   }

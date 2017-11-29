@@ -4,59 +4,59 @@
 
   /* Button */
 }
-.spectrum-Tag {
+.spectrum-TagList-item {
   color: rgb(133, 133, 133);
   background-color: rgb(24, 24, 24);
   border: 1px solid rgb(105, 105, 105);
 }
-.spectrum-Tag:hover {
+.spectrum-TagList-item:hover {
     background-color: rgb(8, 8, 8);
     color: rgb(226, 226, 226);
     border-color: rgb(226, 226, 226);
   }
-.spectrum-Tag.focus-ring {
+.spectrum-TagList-item.focus-ring {
     background-color: rgb(8, 8, 8);
     color: rgb(226, 226, 226);
     border-color: rgb(38, 128, 235);
     box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
-.spectrum-Tag.is-invalid {
+.spectrum-TagList-item.is-invalid {
     color: rgb(236, 91, 98);
     border-color: rgb(215, 55, 63);
   }
-.spectrum-Tag.is-invalid:hover {
+.spectrum-TagList-item.is-invalid:hover {
       border-color: rgb(215, 55, 63);
       color: rgb(236, 91, 98);
     }
-.spectrum-Tag.is-invalid.focus-ring {
+.spectrum-TagList-item.is-invalid.focus-ring {
       color: rgb(247, 109, 116);
       border-color: rgb(215, 55, 63);
       box-shadow: 0 0 0 1px rgb(215, 55, 63);
 
     }
-.spectrum-Tag.is-invalid .spectrum-Tag-removeButton::after {
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28215%2C 55%2C 63%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton .spectrum-Icon {
+        color: rgb(215, 55, 63);
       }
-.spectrum-Tag.is-invalid .spectrum-Tag-removeButton::focus::after {
-          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28236%2C 91%2C 98%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton::focus .spectrum-Icon {
+          color: rgb(236, 91, 98);
         }
-.spectrum-Tag.is-invalid .spectrum-Tag-removeButton:hover::after {
-          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28227%2C 72%2C 80%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton:hover .spectrum-Icon {
+          color: rgb(227, 72, 80);
         }
-.spectrum-Tag.is-disabled {
+.spectrum-TagList-item.is-disabled {
     color: rgb(73, 73, 73);
     background-color: rgb(38, 38, 38);
     border-color: rgb(38, 38, 38);
   }
-.spectrum-Tag.is-disabled .spectrum-Tag-avatar {
+.spectrum-TagList-item.is-disabled .spectrum-TagList-item-avatar {
       opacity: 0.3;
     }
-.spectrum-Tag-removeButton::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28105%2C 105%2C 105%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item-removeButton .spectrum-Icon {
+    color: rgb(105, 105, 105);
   }
-.spectrum-Tag-removeButton:hover::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%28226%2C 226%2C 226%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item-removeButton:hover .spectrum-Icon {
+      color: rgb(226, 226, 226);
     }
-.spectrum-Tag.is-disabled .spectrum-Tag-removeButton::after {
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18'%3E%3Cpath style='fill:rgb%2873%2C 73%2C 73%29' d='M13.2425%2C3.343%2C9%2C7.586%2C4.7575%2C3.343a.5.5%2C0%2C0%2C0-.707%2C0L3.343%2C4.05a.5.5%2C0%2C0%2C0%2C0%2C.707L7.586%2C9%2C3.343%2C13.2425a.5.5%2C0%2C0%2C0%2C0%2C.707l.707.7075a.5.5%2C0%2C0%2C0%2C.707%2C0L9%2C10.414l4.2425%2C4.2425a.5.5%2C0%2C0%2C0%2C.707%2C0l.7075-.7065a.5.5%2C0%2C0%2C0%2C0-.707L10.414%2C9l4.2425-4.2425a.5.5%2C0%2C0%2C0%2C0-.707L13.95%2C3.343a.5.5%2C0%2C0%2C0-.70711-.00039Z'/%3E%3C/svg%3E");
+.spectrum-TagList-item.is-disabled .spectrum-TagList-item-removeButton .spectrum-Icon {
+    color: rgb(73, 73, 73);
   }

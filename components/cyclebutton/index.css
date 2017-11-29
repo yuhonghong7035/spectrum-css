@@ -6,6 +6,7 @@
 }
 
 .spectrum-CycleButton {
+  position: relative;
   width: 32px;
   height: 32px;
   line-height: 2rem;
@@ -20,6 +21,14 @@
     outline: 0;
   }
 
-.spectrum-CycleButton-icon:not(.is-active) {
-  display: none
-}
+.spectrum-CycleButton .spectrum-Icon {
+    /* Be centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.spectrum-CycleButton .spectrum-Icon:not(.is-active) {
+    display: none
+  }

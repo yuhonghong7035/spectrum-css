@@ -41,12 +41,12 @@ markup: |
   font-smoothing: subpixel-antialiased;
 }
 
-.spectrum-Label-typeIcon {
+.spectrum-Label-icon {
   font-size: 0.875rem;
   line-height: 0;
 }
 
-.spectrum-Label-typeIcon:before {
+.spectrum-Label-icon:before {
     vertical-align: sub;
   }
 

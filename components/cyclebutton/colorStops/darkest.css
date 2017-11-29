@@ -10,15 +10,22 @@ name: Cycle Button - Default
 description: A Spectrum cycle button
 markup: |
   <button class="spectrum-CycleButton">
-    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PlayCircle spectrum-CycleButton-icon is-active"></span>
-    <span class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--PauseCircle spectrum-CycleButton-icon"></span>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">
+      <use xlink:href="#spectrum-icon-18-PlayCircle" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
+      <use xlink:href="#spectrum-icon-18-PauseCircle" />
+    </svg>
   </button>
 
 */
 .spectrum-CycleButton {
   background-color: transparent;
 }
-.spectrum-CycleButton:hover .spectrum-CycleButton-icon {
+.spectrum-CycleButton .spectrum-Icon {
+    color: rgb(133, 133, 133);
+  }
+.spectrum-CycleButton:hover .spectrum-Icon {
       color: rgb(226, 226, 226);
     }
 .spectrum-CycleButton:active {
@@ -28,9 +35,6 @@ markup: |
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
     box-shadow: 0px 0px 0px 2px rgb(20, 115, 230) inset;
   }
-.spectrum-CycleButton:focus .spectrum-CycleButton-icon {
+.spectrum-CycleButton:focus .spectrum-Icon {
       color: rgb(226, 226, 226);
     }
-.spectrum-CycleButton-icon {
-  color: rgb(133, 133, 133);
-}

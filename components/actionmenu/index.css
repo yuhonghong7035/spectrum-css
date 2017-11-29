@@ -5,13 +5,18 @@ description: An action button with a Flyout. Note that the `is-selected` class s
 markup: |
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected">More Actions</button>
+    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-More" />
+      </svg>
+      <span class="spectrum-ActionMenu-label">More Actions</span>
+    </button>
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
       </ul>
     </div>
   </div>
@@ -20,13 +25,17 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button is-selected"></button>
+    <button class="spectrum-Button spectrum-Button--quiet--action is-selected">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-More" />
+      </svg>
+    </button>
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
       <ul class="spectrum-SelectList" role="menu">
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 1</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 2</li>
-        <li class="spectrum-SelectList-option" role="menuitem" tabindex="0">Action 3</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 1</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 2</li>
+        <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Action 3</li>
       </ul>
     </div>
   </div>
@@ -35,32 +44,34 @@ markup: |
   <br>
 
   <div class="spectrum-ActionMenu">
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-ActionMenu-button">More Actions</button>
+    <button class="spectrum-Button spectrum-Button--quiet--action">
+      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-More" />
+      </svg>
+      <span class="spectrum-ActionMenu-label">More Actions</span>
+    </button>
   </div>
 
 */
 .spectrum-ActionMenu {
   display: inline-block;
 }
-.spectrum-ActionMenu-button {
-  display: block;
+.spectrum-ActionMenu > .spectrum-Button {
+    display: block;
 
-  padding: 0 8px;
-}
-.spectrum-ActionMenu-button::before {
-    display: inline-block;
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: -4px;
-    margin-right: 6px;
+    padding: 0 8px;
   }
-.spectrum-ActionMenu-button:empty {
-  padding: 0 6px;
+/* Increase specificity by nesting to override stuff here */
+.spectrum-ActionMenu > .spectrum-Button > .spectrum-ActionMenu-icon {
+      display: inline-block;
+      content: '';
+      width: 18px;
+      height: 5px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: 2px;
+    }
+.spectrum-ActionMenu-label {
+  margin-left: 6px;
 }
-.spectrum-ActionMenu-button:empty::before {
-    margin-right: 0;
-  }

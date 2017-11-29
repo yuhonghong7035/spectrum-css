@@ -19,18 +19,30 @@ markup: |
   <div class="spectrum-Accordion">
     <div class="spectrum-Accordion-item is-open">
       <div class="spectrum-Accordion-header" tabindex="0">Header 1</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item is-disabled">
       <div class="spectrum-Accordion-header">Header 2</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item">
       <div class="spectrum-Accordion-header" tabindex="0">Header 2</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
     <div class="spectrum-Accordion-item">
       <div class="spectrum-Accordion-header" tabindex="0">Header 3</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
       <div class="spectrum-Accordion-content">Item 1</div>
     </div>
   </div>
@@ -42,6 +54,18 @@ markup: |
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.spectrum-Accordion-indicator {
+  display: block;
+  width: 6px;
+  height: 10px;
+
+  position: absolute;
+  left: 16px;
+  top: 14.5px;
+
+  transition: transform ease 125ms;
 }
 
 .spectrum-Accordion-item {
@@ -93,29 +117,12 @@ markup: |
       width: 2px;
     }
 
-.spectrum-Accordion-header::before {
-    display: block;
-    content: '';
-    width: 6px;
-    height: 10px;
-
-    /* Support SVG icons */
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    position: absolute;
-    left: 16px;
-    top: 14.5px;
-
-    transition: transform ease 125ms;
-  }
-
 .spectrum-Accordion-content {
   padding: 0 16px 16px 16px;
   display: none;
 }
 
-.spectrum-Accordion-item.is-open .spectrum-Accordion-header::before {
+.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
       transform: rotate(90deg);
     }
 

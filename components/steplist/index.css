@@ -29,26 +29,26 @@ name: Steplist - Plain
 description: A steplist w/o labels or tooltips
 markup: |
   <div class="spectrum-Steplist spectrum-Steplist--small">
-    <div class="spectrum-Steplist-step is-complete">
+    <div class="spectrum-Steplist-item is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step is-complete">
+    <div class="spectrum-Steplist-item is-complete">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
       <span class="spectrum-Steplist-segment"></span>
     </div>
-    <div class="spectrum-Steplist-step is-selected">
+    <div class="spectrum-Steplist-item is-selected">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
       <span class="spectrum-Steplist-segment"></span>
     </div>
-    <div class="spectrum-Steplist-step">
+    <div class="spectrum-Steplist-item">
       <span class="spectrum-Steplist-markerContainer">
         <span class="spectrum-Steplist-marker"></span>
       </span>
@@ -88,32 +88,32 @@ markup: |
   padding: 11px 0;
 }
 
-.spectrum-Steplist--small .spectrum-Steplist-step {
+.spectrum-Steplist--small .spectrum-Steplist-item {
     padding: 0 40px 0 0;
     width: 80px;
   }
 
 /* Disable Label */
 
-.spectrum-Steplist--small .spectrum-Steplist-step .spectrum-Steplist-label {
+.spectrum-Steplist--small .spectrum-Steplist-item .spectrum-Steplist-label {
       display: none;
     }
 
-.spectrum-Steplist--small .spectrum-Steplist-step:first-child, .spectrum-Steplist--small .spectrum-Steplist-step:last-child {
+.spectrum-Steplist--small .spectrum-Steplist-item:first-child, .spectrum-Steplist--small .spectrum-Steplist-item:last-child {
       width: 20px;
     }
 
 /* Disable first line */
 
-.spectrum-Steplist--small .spectrum-Steplist-step:first-child .spectrum-Steplist-markerContainer {
+.spectrum-Steplist--small .spectrum-Steplist-item:first-child .spectrum-Steplist-markerContainer {
         margin-left: -10px;
       }
 
-.spectrum-Steplist--small .spectrum-Steplist-step:last-child .spectrum-Steplist-markerContainer {
+.spectrum-Steplist--small .spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer {
         margin-right: -10px;
       }
 
-.spectrum-Steplist-step {
+.spectrum-Steplist-item {
   outline: none;
   position: relative;
   display: inline-block;
@@ -128,13 +128,13 @@ markup: |
 
 /* Completed State */
 
-.spectrum-Steplist-step.is-complete .spectrum-Steplist-marker {
+.spectrum-Steplist-item.is-complete .spectrum-Steplist-marker {
       border: none;
     }
 
 /* The next step's line should be solid */
 
-.spectrum-Steplist-step.is-complete + .spectrum-Steplist-step .spectrum-Steplist-segment {
+.spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment {
       border-bottom-width: 2px;
       border-bottom-style: solid;
     }
@@ -143,11 +143,11 @@ markup: |
 
 /* Focus */
 
-.spectrum-Steplist-step.is-selected:focus {
+.spectrum-Steplist-item.is-selected:focus {
       outline: none;
     }
 
-.spectrum-Steplist-step.is-selected .spectrum-Steplist-marker {
+.spectrum-Steplist-item.is-selected .spectrum-Steplist-marker {
       border: none;
     }
 
@@ -157,28 +157,28 @@ name: Steplist - With Label
 description: A steplist with labels
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step is-complete">
+    <div class="spectrum-Steplist-item is-complete">
         <span class="spectrum-Steplist-label">Step 1</span>
         <span class="spectrum-Steplist-markerContainer">
           <span class="spectrum-Steplist-marker"></span>
         </span>
         <span class="spectrum-Steplist-segment"></span>
     </div>
-    <div class="spectrum-Steplist-step is-complete">
+    <div class="spectrum-Steplist-item is-complete">
         <span class="spectrum-Steplist-label">Step 2</span>
         <span class="spectrum-Steplist-markerContainer">
           <span class="spectrum-Steplist-marker"></span>
         </span>
         <span class="spectrum-Steplist-segment"></span>
     </div>
-    <div class="spectrum-Steplist-step is-selected">
+    <div class="spectrum-Steplist-item is-selected">
         <span class="spectrum-Steplist-label">Step 3</span>
         <span class="spectrum-Steplist-markerContainer">
           <span class="spectrum-Steplist-marker"></span>
         </span>
         <span class="spectrum-Steplist-segment"></span>
     </div>
-    <div class="spectrum-Steplist-step">
+    <div class="spectrum-Steplist-item">
         <span class="spectrum-Steplist-label">Step 4</span>
         <span class="spectrum-Steplist-markerContainer">
           <span class="spectrum-Steplist-marker"></span>
@@ -256,29 +256,29 @@ markup: |
 
 /* First step overrides */
 
-.spectrum-Steplist-step:first-child .spectrum-Steplist-markerContainer {
+.spectrum-Steplist-item:first-child .spectrum-Steplist-markerContainer {
     left: 0;
   }
 
-.spectrum-Steplist-step:first-child .spectrum-Steplist-label {
+.spectrum-Steplist-item:first-child .spectrum-Steplist-label {
     left: 0;
   }
 
-.spectrum-Steplist-step:first-child .spectrum-Steplist-segment {
+.spectrum-Steplist-item:first-child .spectrum-Steplist-segment {
     /* Not visible for first step */
     display: none;
   }
 
 /* Last step overrides */
 
-.spectrum-Steplist-step:last-child .spectrum-Steplist-label {
+.spectrum-Steplist-item:last-child .spectrum-Steplist-label {
     left: auto;
     right: 0;
 
     transform: translateX(50%);
   }
 
-.spectrum-Steplist-step:last-child .spectrum-Steplist-markerContainer {
+.spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer {
     left: auto;
     right: 0;
 
@@ -286,19 +286,19 @@ markup: |
     margin-right: -10px;
   }
 
-.spectrum-Steplist-step:last-child .spectrum-Steplist-segment {
+.spectrum-Steplist-item:last-child .spectrum-Steplist-segment {
     right: 8px;
     left: auto;
   }
 
-.spectrum-Steplist-step:first-child,
-.spectrum-Steplist-step:last-child {
+.spectrum-Steplist-item:first-child,
+.spectrum-Steplist-item:last-child {
   width: 20px;
 }
 
 /* Single step */
 
-.spectrum-Steplist-step:only-child .spectrum-Steplist-label {
+.spectrum-Steplist-item:only-child .spectrum-Steplist-label {
     /* Be centered */
     left: 50%;
 
@@ -306,7 +306,7 @@ markup: |
     transform: translate(-50%);
   }
 
-.spectrum-Steplist-step:only-child .spectrum-Steplist-markerContainer {
+.spectrum-Steplist-item:only-child .spectrum-Steplist-markerContainer {
     /* Be centered */
     left: 50%;
 
@@ -321,7 +321,7 @@ name: Steplist - With Tooltip
 description: A steplist with tooltips
 markup: |
   <div class="spectrum-Steplist">
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 1</span>
@@ -334,7 +334,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover is-complete">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 2</span>
@@ -347,7 +347,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 3</span>
@@ -360,7 +360,7 @@ markup: |
       <span class="spectrum-Steplist-segment">
       </span>
     </div>
-    <div class="spectrum-Steplist-step u-tooltip-showOnHover">
+    <div class="spectrum-Steplist-item u-tooltip-showOnHover">
       <div class="spectrum-Steplist-markerContainer">
         <div class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Steplist-tooltip">
           <span class="spectrum-Tooltip-label">Step 4</span>

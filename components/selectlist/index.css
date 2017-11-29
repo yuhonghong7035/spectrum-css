@@ -8,6 +8,7 @@
 .spectrum-SelectList {
   display: inline-block;
   white-space: nowrap;
+  overflow: auto;
 
   box-sizing: border-box;
 
@@ -16,7 +17,22 @@
   padding: 3px 0;
 }
 
-.spectrum-SelectList-option {
+.spectrum-SelectList-checkmark {
+  position: absolute;
+  right: 9px;
+  top: 11px;
+
+  width: 12px;
+  height: 12px;
+
+  width: 12px;
+  height: 12px;
+
+  transform: scale(1);
+  opacity: 1;
+}
+
+.spectrum-SelectList-item {
   cursor: pointer;
   position: relative;
   display: -ms-flexbox;
@@ -33,25 +49,12 @@
   font-style: normal;
 }
 
-.spectrum-SelectList-option:focus {
+.spectrum-SelectList-item:focus {
     outline: none;
   }
 
-.spectrum-SelectList-option.is-selected::after {
-      position: absolute;
-      right: 9px;
-      top: 11px;
-
-      width: 12px;
-      height: 12px;
-
-      background-repeat: no-repeat;
-      background-size: 12px 12px;
-
-      transform: scale(1);
-      opacity: 1;
-
-      content: '';
+.spectrum-SelectList-item.is-selected .spectrum-SelectList-checkmark {
+      display: block;
     }
 
 .spectrum-SelectList-divider {

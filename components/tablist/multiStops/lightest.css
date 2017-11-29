@@ -11,23 +11,23 @@
   description: The Spectrum anchored tab list.
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Monday</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <label class="spectrum-TabList-item-label">Monday</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tuesday</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tuesday</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Wednesday</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Wednesday</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Thursday</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Thursday</label>
       </div>
-      <div class="spectrum-Tab is-disabled" tabindex="0">
-        <label class="spectrum-Tab-label">Friday</label>
+      <div class="spectrum-TabList-item is-disabled" tabindex="0">
+        <label class="spectrum-TabList-item-label">Friday</label>
       </div>
       <!-- Apply .is-focused to element below when corresponding tab is in focus -->
-      <div class="spectrum-Tab-line" style="width: 48px; left: 15px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 48px; left: 15px;"></div>
     </div>
 
 */
@@ -42,76 +42,92 @@
     :focus: Focused
   markup: |
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-24-Folder" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+          <use xlink:href="#spectrum-icon-24-Image" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <use xlink:href="#spectrum-icon-24-Filter" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <use xlink:href="#spectrum-icon-24-Comment" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="height: 18px; top: 3px;"></div>
+      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-24-Folder" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+          <use xlink:href="#spectrum-icon-24-Image" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <use xlink:href="#spectrum-icon-24-Filter" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <use xlink:href="#spectrum-icon-24-Comment" />
+        </svg>
       </div>
-      <div class="spectrum-Tab-line" style="height: 18px; top: 3px;"></div>
+      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="height: 18px; top: 3px;"></div>
+      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
     </div>
 
 */
-.spectrum--lightest .spectrum-Tab {
+.spectrum--lightest .spectrum-TabList-item {
   color: rgb(118, 118, 118);
 }
-.spectrum--lightest .spectrum-Tab:hover {
+.spectrum--lightest .spectrum-TabList-item:hover {
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-Tab.is-selected {
+.spectrum--lightest .spectrum-TabList-item.is-selected {
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-Tab.focus-ring {
+.spectrum--lightest .spectrum-TabList-item.focus-ring {
     color: rgb(50, 50, 50);
     box-shadow: 0 0 0 2px rgb(38, 128, 235);
   }
-.spectrum--lightest .spectrum-Tab.is-disabled {
+.spectrum--lightest .spectrum-TabList-item.is-disabled {
     color: rgb(188, 188, 188);
   }
 /* topdoc
@@ -124,70 +140,86 @@
     :focus: Focused
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Folder spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-24-Folder" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Image spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+          <use xlink:href="#spectrum-icon-24-Image" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Filter spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <use xlink:href="#spectrum-icon-24-Filter" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeXS spectrum-Icon--Comment spectrum-Tab-icon"></div>
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <use xlink:href="#spectrum-icon-24-Comment" />
+        </svg>
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width: 46px; left: 7px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 46px; left: 7px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Folder spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-18-Folder" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Image spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+          <use xlink:href="#spectrum-icon-18-Image" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Filter spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+          <use xlink:href="#spectrum-icon-18-Filter" />
+        </svg>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <div class="spectrum-Icon spectrum-Icon--sizeS spectrum-Icon--Comment spectrum-Tab-icon"></div>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+          <use xlink:href="#spectrum-icon-18-Comment" />
+        </svg>
       </div>
-      <div class="spectrum-Tab-line" style="width: 17px; left: 7px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>
     </div>
 
     <br><br>
 
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width: 27px; left: 6px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 27px; left: 6px;"></div>
     </div>
 */
 .spectrum--lightest .spectrum-TabList--anchored {
   border-color: rgb(244, 244, 244);
 }
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.focus-ring {
+.spectrum--lightest .spectrum-TabList--anchored .spectrum-TabList-item.focus-ring {
       color: rgb(55, 142, 240);
       box-shadow: initial;
     }
 /* The focus line should become blue only for anchored tabs */
-.spectrum--lightest .spectrum-TabList--anchored .spectrum-Tab.focus-ring ~ .spectrum-Tab-line {
+.spectrum--lightest .spectrum-TabList--anchored .spectrum-TabList-item.focus-ring ~ .spectrum-TabList-item-line {
           background-color:  rgb(38, 128, 235);
       }
 /* topdoc
@@ -200,21 +232,21 @@
     ':focus': Focused
   markup: |
     <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
-      <div class="spectrum-Tab is-selected" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 1</label>
+      <div class="spectrum-TabList-item is-selected" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 1</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 2</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 2</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 3</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 3</label>
       </div>
-      <div class="spectrum-Tab" tabindex="0">
-        <label class="spectrum-Tab-label">Tab 4</label>
+      <div class="spectrum-TabList-item" tabindex="0">
+        <label class="spectrum-TabList-item-label">Tab 4</label>
       </div>
-      <div class="spectrum-Tab-line" style="width: 28px; left: 8px;"></div>
+      <div class="spectrum-TabList-item-line" style="width: 28px; left: 8px;"></div>
     </div>
 */
-.spectrum--lightest .spectrum-Tab-line {
+.spectrum--lightest .spectrum-TabList-item-line {
   background-color: rgb(50, 50, 50);
 }

@@ -16,12 +16,12 @@ modifiers:
 markup: |
   <div class="spectrum-ToggleSwitch">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-0">
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-0">Toggle Off</label>
   </div>
   <div class="spectrum-ToggleSwitch">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-1" checked>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-1">Toggle On</label>
   </div>
 
@@ -29,12 +29,12 @@ markup: |
 
   <div class="spectrum-ToggleSwitch">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle Off</label>
   </div>
   <div class="spectrum-ToggleSwitch">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle On</label>
   </div>
 
@@ -60,7 +60,7 @@ markup: |
   cursor: pointer;
 }
 
-.spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-content::after {
+.spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::after {
       transform: translateX(12px);
     }
 
@@ -76,7 +76,7 @@ markup: |
   transition: color 150ms ease-in-out;
 }
 
-.spectrum-ToggleSwitch-content {
+.spectrum-ToggleSwitch-switch {
   display: inline-block;
   /* positions the pseudo elements relative to this one */
   position: relative;
@@ -87,8 +87,8 @@ markup: |
   vertical-align: middle;
 }
 
-.spectrum-ToggleSwitch-content::before,
-  .spectrum-ToggleSwitch-content::after {
+.spectrum-ToggleSwitch-switch::before,
+  .spectrum-ToggleSwitch-switch::after {
     display: block;
     position: absolute;
     content: "";
@@ -97,7 +97,7 @@ markup: |
 
 /* ::before is used for the track of the switch */
 
-.spectrum-ToggleSwitch-content::before {
+.spectrum-ToggleSwitch-switch::before {
     transition: background 125ms ease-in-out, border 125ms ease-in-out;
 
     height: 14px;
@@ -110,7 +110,7 @@ markup: |
 
 /* ::after is used for the handle of the switch */
 
-.spectrum-ToggleSwitch-content::after {
+.spectrum-ToggleSwitch-switch::after {
     transition: background 125ms ease-in-out, border 125ms ease-in-out, transform 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
     width: 14px;
@@ -135,12 +135,12 @@ modifiers:
 markup: |
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-0">
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-0">Toggle A</label>
   </div>
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-ab-1" checked>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-ab-1">Toggle B</label>
   </div>
 
@@ -148,12 +148,12 @@ markup: |
 
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-0" disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-0">Toggle A</label>
   </div>
   <div class="spectrum-ToggleSwitch spectrum-ToggleSwitch--ab">
     <input type="checkbox" class="spectrum-ToggleSwitch-input" id="toggle-onoff-disabled-1" checked disabled>
-    <span class="spectrum-ToggleSwitch-content"></span>
+    <span class="spectrum-ToggleSwitch-switch"></span>
     <label class="spectrum-ToggleSwitch-label" for="toggle-onoff-disabled-1">Toggle B</label>
   </div>
 

@@ -63,7 +63,7 @@
   }
 
 .spectrum-Button .spectrum-Icon {
-    vertical-align: top;
+    vertical-align: text-top;
   }
 
 .spectrum-Button .spectrum-Icon + .spectrum-Button-label {
@@ -84,7 +84,7 @@
   border-radius: 4px;
 }
 
-.spectrum-Button--action--icon-only {
+.spectrum-Button--action--iconOnly {
   padding: 0 8px;
 }
 
@@ -95,7 +95,7 @@
   border-radius: 4px;
 }
 
-.spectrum-Button--quiet--action--icon-only {
+.spectrum-Button--quiet--action--iconOnly {
   padding: 0 8px;
 }
 
@@ -145,7 +145,6 @@
   /* There's never a background itself */
   background-color: transparent;
 
-  line-height: 2rem;
   text-align: center;
 
   cursor: pointer;
@@ -176,28 +175,22 @@
     border-radius: 4px;
   }
 
-/* The embedded SVG icon */
-
-.spectrum-Button--icon::after {
-    position: relative;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 8px 8px;
-  }
-
 .spectrum-Button--icon:disabled {
     cursor: default;
   }
 
-.spectrum-Button--icon::after,
-  .spectrum-Button--icon > * {
+.spectrum-Button--icon .spectrum-Icon {
     /* Float above the artificial background */
-    position: relative;
     z-index: 1;
+
+    /* Be centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 12px;
+    height: 12px;
   }
 
 .spectrum-Button--dropdown,

@@ -7,20 +7,20 @@
 .spectrum-Table-headCell {
   color: rgb(112, 112, 112);
 }
+.spectrum-Table-headCell.is-sortable .spectrum-Table-sortedIcon {
+      color: rgb(142, 142, 142);
+    }
 .spectrum-Table-headCell.is-sortable:hover {
       color: rgb(75, 75, 75);
     }
+.spectrum-Table-headCell.is-sortable:hover .spectrum-Table-sortedIcon {
+        color: rgb(112, 112, 112);
+      }
 .spectrum-Table-headCell.is-sortable:active {
       color: rgb(44, 44, 44);
     }
-.spectrum-Table-headCell.is-sorted-asc::after, .spectrum-Table-headCell.is-sorted-desc::after {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28142%2C 142%2C 142%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
-    }
-.spectrum-Table-headCell.is-sorted-asc:hover::after, .spectrum-Table-headCell.is-sorted-desc:hover::after {
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%28112%2C 112%2C 112%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
-      }
-.spectrum-Table-headCell.is-sorted-asc:active::after, .spectrum-Table-headCell.is-sorted-desc:active::after {
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath style='fill:rgb%2875%2C 75%2C 75%29' d='M9%2C7a1%2C1%2C0%2C0%2C0-1.71-.71L6%2C7.59V2A1%2C1%2C0%2C0%2C0%2C4%2C2V7.59L2.71%2C6.29A1%2C1%2C0%2C1%2C0%2C1.29%2C7.71l3%2C3a1%2C1%2C0%2C0%2C0%2C1.41%2C0l3-3A1%2C1%2C0%2C0%2C0%2C9%2C7Z'/%3E%3C/svg%3E");
+.spectrum-Table-headCell.is-sortable:active .spectrum-Table-sortedIcon {
+        color: rgb(75, 75, 75);
       }
 .spectrum-Table-body {
   border: 1px solid rgb(225, 225, 225);

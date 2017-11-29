@@ -7,30 +7,38 @@
 
 /* topdoc
 ---
-name: FieldGroup - Default
+name: Field Group - Default
 description: The Spectrum radio group 'default'
 markup: |
   <div class="spectrum-FieldGroup">
     <div class="spectrum-Radio">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
     </div>
     <div class="spectrum-Radio">
       <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-1">Dogs</label>
     </div>
   </div>
   <div class="spectrum-FieldGroup">
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
-      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-box">
+        <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        </svg>
+      </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>
     </label>
     <label class="spectrum-Checkbox">
       <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
-      <span class="spectrum-Checkbox-checkmark"></span>
+      <span class="spectrum-Checkbox-box">
+        <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+        </svg>
+      </span>
       <span class="spectrum-Checkbox-label">Checkbox</span>
     </label>
   </div>
@@ -50,18 +58,18 @@ markup: |
 
 /* topdoc
 ---
-name: FieldGroup - Vertical
+name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">
       <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-5">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-5">Kittens</label>
     </div>
     <div class="spectrum-Radio">
       <input type="radio" name="animals" class="spectrum-Radio-input" id="radio-6">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-6">Dogs</label>
     </div>
   </div>
@@ -86,23 +94,23 @@ markup: |
 
 /* topdoc
 ---
-name: FieldGroup - Labels Below
+name: Field Group - Labels Below
 description: The Spectrum radio group 'labelsBelow'
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">
     <div class="spectrum-Radio">
       <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-2">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-2">1</label>
     </div>
     <div class="spectrum-Radio">
       <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-3">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-3">2</label>
     </div>
     <div class="spectrum-Radio">
       <input type="radio" name="rating" class="spectrum-Radio-input" id="radio-4">
-      <span class="spectrum-Radio-checkmark"></span>
+      <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-4">3</label>
     </div>
   </div>
@@ -114,7 +122,7 @@ markup: |
     margin: 0;
   }
 
-.spectrum-FieldGroup--labelsBelow .spectrum-Radio-checkmark {
+.spectrum-FieldGroup--labelsBelow .spectrum-Radio-button {
     margin-bottom: 18px;
   }
 

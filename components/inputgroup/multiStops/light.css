@@ -12,18 +12,60 @@
       border-color: rgb(227, 72, 80);
       box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
+.spectrum--light .spectrum-InputGroup-button {
+  border-color: rgb(225, 225, 225);
+  background-color: rgb(252, 252, 252);
+  color: rgb(112, 112, 112);
+}
+.spectrum--light .spectrum-InputGroup-button:hover {
+    border-color: rgb(202, 202, 202);
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-InputGroup-button:active,
+  .spectrum--light .spectrum-InputGroup-button.is-selected {
+    border-color: rgb(202, 202, 202);
+    background-color: rgb(234, 234, 234);
+    color: rgb(44, 44, 44);
+  }
+.spectrum--light .spectrum-InputGroup-button:disabled:hover {
+    border-color: transparent;
+    background-color: rgb(234, 234, 234);
+    color: rgb(179, 179, 179);
+  }
+.spectrum--light .spectrum-InputGroup-button.is-invalid,
+  .spectrum--light .spectrum-InputGroup-button:invalid {
+    border-color: rgb(227, 72, 80);
+  }
 .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button {
     border-color: rgb(225, 225, 225);
+    background-color: inherit;
   }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button:hover,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button.focus-ring,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button:active,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button:invalid,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-invalid,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled,
+    .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled:hover {
+      background-color: inherit;
+    }
+.spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected {
+      border-color: rgb(202, 202, 202);
+    }
 .spectrum--light .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button {
       border-color: rgb(202, 202, 202);
     }
+.spectrum--light .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button:disabled {
+        border-color: rgb(225, 225, 225);
+      }
 .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button, .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
         border-color: rgb(227, 72, 80);
       }
 .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
-        border-color: rgb(38, 128, 235);
-        box-shadow: 0 1px 0 rgb(38, 128, 235);
+        border-color: rgb(20, 115, 230);
+        box-shadow: 0 1px 0 rgb(20, 115, 230);
       }
 .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum--light .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
           border-color: rgb(227, 72, 80);
