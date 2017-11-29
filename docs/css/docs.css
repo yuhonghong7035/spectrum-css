@@ -1,0 +1,128 @@
+.sdldocs-main-content,
+.sdldocs-header {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.wf-loading {
+  visibility: hidden;
+}
+.sdldocs-component {
+  margin-bottom: 3rem;
+}
+.sdldocs-component-description {
+  padding-left: 1rem;
+  font-size: 0.99rem;
+}
+.sdldocs-component-description p {
+  margin-top: 0;
+}
+.sdldocs-component-markup {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.sdldocs-code-link a {
+  color: #005abe;
+  text-decoration: none;
+}
+.sdldocs-code-link a:hover {
+  text-decoration: underline;
+}
+.sdldocs-code-example {
+  display: none;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 0 14px 25px 14px;
+  font-size: 12px;
+  border-radius: 1px;
+  font-weight: 400;
+  width: 100%;
+}
+.sdldocs-code-example-title {
+  margin-bottom: 3px;
+}
+pre.html {
+  margin: 0;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+}
+.u-sdldocs-clearfix {
+  zoom: 1;
+}
+.u-sdldocs-clearfix:before,
+.u-sdldocs-clearfix:after {
+  content: "";
+  display: table;
+}
+.u-sdldocs-clearfix:after {
+  clear: both;
+}
+.sdldocs-header {
+  min-height: 48px;
+  line-height: 48px;
+}
+.sdldocs-header-logo-image {
+  vertical-align: middle;
+}
+.sdldocs-header-title {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  display: none;
+}
+.sdldocs-colorstop {
+  min-width: 300px;
+  float: right;
+}
+.sdldocs-colorstop-label {
+  font-size: 0.9rem;
+  padding-right: 0;
+}
+.sdldocs-colorstop-selector {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 4px;
+}
+@media (min-width: 48em) {
+  .sdldocs-header-title {
+    display: inline;
+  }
+}
+.sdldocs-nav {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: none;
+}
+.sdldocs-nav-item {
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.sdldocs-nav-link {
+  color: #6b6b6b;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 80px;
+}
+@media (min-width: 48em) {
+  .sdldocs-nav {
+    display: block;
+  }
+  .sdldocs-nav-item {
+    border: none;
+  }
+  .sdldocs-nav-link {
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+}
+
+.sdldocs-subtleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* For documentation beautification only - DO NOT COPY */
+.dummy-spacing {
+  height: 160px;
+}

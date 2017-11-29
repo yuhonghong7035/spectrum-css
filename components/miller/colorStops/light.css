@@ -1,0 +1,32 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+}
+.spectrum-MillerColumn-item::after {
+    background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(142, 142, 142)));
+  }
+.spectrum-MillerColumn-item:focus,
+  .spectrum-MillerColumn-item:hover {
+    background-color: rgb(234, 234, 234);
+  }
+.spectrum-MillerColumn-item:focus::after, .spectrum-MillerColumn-item:hover::after {
+      background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(112, 112, 112)));
+    }
+.spectrum-MillerColumn-item.is-navigated {
+      /* gray background */
+      background-color: rgb(225, 225, 225);
+    }
+.spectrum-MillerColumn-item.is-navigated:hover {
+        background-color: rgb(225, 225, 225);
+      }
+.spectrum-MillerColumn-item.is-navigated::after {
+        background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(112, 112, 112)));
+      }
+.spectrum-MillerColumn-item.is-selected {
+      background-color: rgba(20, 115, 230, 0.1);
+    }
+.spectrum-MillerColumn-item.is-selected:hover {
+        background-color: rgba(20, 115, 230, 0.2);
+      }
