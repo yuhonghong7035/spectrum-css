@@ -67,6 +67,10 @@ markup: |
     overflow-y: auto;
   }
 
+.spectrum-Dropdown--quiet .spectrum-Popover {
+    left: -12px;
+  }
+
 .spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -160,7 +164,6 @@ markup: |
 
 .spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
     width: auto;
-    padding: 0 12px;
   }
 
 /* topdoc

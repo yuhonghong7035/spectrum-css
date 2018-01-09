@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* topdoc
 ---
@@ -79,15 +83,15 @@ markup: |
 
 */
 .spectrum--lightest .spectrum-Stepper.is-focused {
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-stepDown {
-      border-color: rgb(38, 128, 235);
+      border-color: rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-input {
-      border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper.is-invalid .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper.is-invalid .spectrum-Stepper-stepDown,
@@ -116,7 +120,7 @@ markup: |
   border-color: rgb(234, 234, 234);
 }
 .spectrum--lightest .spectrum-Stepper-stepUp:disabled, .spectrum--lightest .spectrum-Stepper-stepDown:disabled {
-    border-color: transparent;
+    border-color: rgba(0, 0, 0, 0);
   }
 .spectrum--lightest .spectrum-Stepper-stepDown:hover {
     /* Keep the border on hover */
@@ -200,15 +204,15 @@ markup: |
       border-color: rgb(234, 234, 234);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused {
-    box-shadow: 0 1px 0 0 rgb(38, 128, 235);
+    box-shadow: 0 1px 0 0 rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepDown {
-      border-color: rgb(38, 128, 235);
+      border-color: rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input {
-      border-color: rgb(38, 128, 235);
-      box-shadow: 0 1px 0 0 rgb(38, 128, 235);
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 1px 0 0 rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
     .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input {

@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--dark {
 /* topdoc
@@ -125,7 +129,7 @@
   }
 .spectrum--dark .spectrum-TabList-item.focus-ring {
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 0 2px rgb(55, 142, 240);
+    box-shadow: 0 0 0 2px rgb(38, 128, 235);
   }
 .spectrum--dark .spectrum-TabList-item.is-disabled {
     color: rgb(92, 92, 92);
@@ -220,7 +224,7 @@
     }
 /* The focus line should become blue only for anchored tabs */
 .spectrum--dark .spectrum-TabList--anchored .spectrum-TabList-item.focus-ring ~ .spectrum-TabList-item-line {
-          background-color:  rgb(55, 142, 240);
+          background-color:  rgb(38, 128, 235);
       }
 /* topdoc
 ---

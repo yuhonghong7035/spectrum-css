@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-Checkbox-label {
   color: rgb(205, 205, 205);
@@ -20,8 +24,9 @@
     border-color: rgb(55, 142, 240);
   }
 .spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box {
-    border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+
   }
 .spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
     color: rgb(90, 169, 250);
@@ -33,10 +38,12 @@
 .spectrum-Checkbox:hover.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: rgb(75, 156, 245);
+
   }
 .spectrum-Checkbox:active.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: rgb(90, 169, 250);
+
   }
 /* topdoc
 ---
@@ -81,6 +88,7 @@ markup: |
 }
 .spectrum-Checkbox:hover .spectrum-Checkbox-box {
       border-color: rgb(153, 153, 153);
+
       box-shadow: none;
     }
 .spectrum-Checkbox:hover .spectrum-Checkbox-label {
@@ -88,24 +96,28 @@ markup: |
     }
 .spectrum-Checkbox:active .spectrum-Checkbox-box {
       border-color: rgb(205, 205, 205);
+
     }
 .spectrum-Checkbox:active .spectrum-Checkbox-label {
       color: rgb(255, 255, 255);
     }
 .spectrum-Checkbox.is-invalid .spectrum-Checkbox-box {
       border-color: rgb(236, 91, 98);
+
     }
 .spectrum-Checkbox.is-invalid .spectrum-Checkbox-label {
       color: rgb(236, 91, 98);
     }
 .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box {
       border-color: rgb(247, 109, 116) !important;
+
     }
 .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-label {
       color: rgb(247, 109, 116);
     }
 .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-box {
       border-color: rgb(255, 123, 130);
+
     }
 .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-label {
       color: rgb(255, 123, 130);
@@ -197,6 +209,7 @@ markup: |
 */
 .spectrum-Checkbox-input:error + .spectrum-Checkbox-box {
     border-color: rgb(236, 91, 98);
+
   }
 .spectrum-Checkbox-input:error ~ .spectrum-Checkbox-label {
     color: rgb(247, 109, 116);

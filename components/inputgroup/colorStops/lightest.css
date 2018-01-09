@@ -3,7 +3,15 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
+.spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
+      .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
+        border-color: rgb(211, 211, 211);
+      }
 .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
     border-color: rgb(55, 142, 240);
     box-shadow: 0 0 0 1px rgb(55, 142, 240);
@@ -12,60 +20,30 @@
       border-color: rgb(236, 91, 98);
       box-shadow: 0 0 0 1px rgb(236, 91, 98);
     }
-.spectrum-InputGroup-button {
-  border-color: rgb(234, 234, 234);
-  background-color: rgb(255, 255, 255);
-  color: rgb(118, 118, 118);
-}
-.spectrum-InputGroup-button:hover {
-    border-color: rgb(211, 211, 211);
-    background-color: rgb(255, 255, 255);
-    color: rgb(50, 50, 50);
-  }
-.spectrum-InputGroup-button:active,
-  .spectrum-InputGroup-button.is-selected {
-    border-color: rgb(211, 211, 211);
-    background-color: rgb(244, 244, 244);
-    color: rgb(50, 50, 50);
-  }
-.spectrum-InputGroup-button:disabled:hover {
-    border-color: transparent;
-    background-color: rgb(244, 244, 244);
-    color: rgb(188, 188, 188);
-  }
-.spectrum-InputGroup-button.is-invalid,
-  .spectrum-InputGroup-button:invalid {
-    border-color: rgb(236, 91, 98);
-  }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-button {
-    border-color: rgb(234, 234, 234);
-    background-color: inherit;
-  }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-button:hover,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button.focus-ring,
+.spectrum-InputGroup--quiet .spectrum-InputGroup-button,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:hover,
+    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:focus,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button:active,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button:invalid,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-invalid,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled,
     .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled:hover {
-      background-color: inherit;
+      border-color: rgb(234, 234, 234);
     }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected {
-      border-color: rgb(211, 211, 211);
-    }
-.spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button {
-      border-color: rgb(211, 211, 211);
-    }
-.spectrum-InputGroup--quiet:hover .spectrum-InputGroup-button:disabled {
-        border-color: rgb(234, 234, 234);
+.spectrum-InputGroup--quiet:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
+      .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
+        border-color: rgb(211, 211, 211);
       }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid,
+      .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button,
+      .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid,
+      .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
         border-color: rgb(236, 91, 98);
       }
 .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
-        border-color: rgb(38, 128, 235);
-        box-shadow: 0 1px 0 rgb(38, 128, 235);
+        border-color: rgb(55, 142, 240);
+        box-shadow: 0 1px 0 rgb(55, 142, 240);
       }
 .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
           border-color: rgb(236, 91, 98);

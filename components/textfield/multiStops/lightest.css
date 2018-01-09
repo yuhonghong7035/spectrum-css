@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--lightest {
 /* TODO: is it wonky that textarea shares the selector? */
@@ -37,13 +41,13 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet">
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
   </textarea>
 
-  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--quiet is-invalid" required>
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
   </textarea>
 
 */
@@ -86,15 +90,15 @@ markup: |
       color: rgb(80, 80, 80);
     }
 .spectrum--lightest .spectrum-Textfield:active {
-    border-color: rgb(38, 128, 235);
+    border-color: rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Textfield:focus {
-    border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Textfield[disabled] {
     background-color: rgb(244, 244, 244);
-    border-color: transparent;
+    border-color: rgba(0, 0, 0, 0);
     color: rgb(188, 188, 188);
 
     /* For safari mobile browser */
@@ -131,21 +135,21 @@ markup: |
 
 */
 .spectrum--lightest .spectrum-Textfield--quiet {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-color: rgb(234, 234, 234);
 }
 .spectrum--lightest .spectrum-Textfield--quiet:hover {
     border-color: rgb(211, 211, 211);
   }
 .spectrum--lightest .spectrum-Textfield--quiet:active {
-    border-color: rgb(38, 128, 235);
+    border-color: rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Textfield--quiet:focus {
-    border-color: rgb(38, 128, 235);
-    box-shadow: 0 1px 0 rgb(38, 128, 235);
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 1px 0 rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Textfield--quiet:disabled {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     border-color:  rgb(234, 234, 234);
   }
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid,

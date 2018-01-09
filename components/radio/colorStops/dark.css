@@ -3,13 +3,18 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-color: rgb(55, 142, 240);
   }
 .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
-      border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 1px rgb(55, 142, 240);
+      border-color: rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+
     }
 .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
       color: rgb(90, 169, 250);
@@ -47,6 +52,7 @@ markup: |
     }
 .spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(75, 156, 245);
+
     }
 .spectrum-Radio:hover .spectrum-Radio-label {
       color: rgb(255, 255, 255);
@@ -56,12 +62,14 @@ markup: |
     }
 .spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(90, 169, 250);
+
     }
 .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
 .spectrum-Radio.is-invalid .spectrum-Radio-button {
       border-color: rgb(236, 91, 98);
+
     }
 .spectrum-Radio.is-invalid .spectrum-Radio-label {
       color: rgb(236, 91, 98);
@@ -90,12 +98,14 @@ markup: |
 */
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-button {
       border-color: rgb(247, 109, 116) !important;
+
     }
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(247, 109, 116);
     }
 .spectrum-Radio.is-invalid:active .spectrum-Radio-button {
       border-color: rgb(255, 123, 130) !important;
+
     }
 .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
       color: rgb(255, 123, 130);
@@ -123,6 +133,7 @@ markup: |
 */
 .spectrum-Radio-input:disabled + .spectrum-Radio-button {
     border-color: rgb(77, 77, 77);
+
   }
 .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
     color: rgb(92, 92, 92);

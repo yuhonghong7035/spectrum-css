@@ -287,7 +287,10 @@ markup: |
 /* topdoc
 ---
 name: Calendar - Range Selection
-description: A calendar with a range selected
+description: |
+    A calendar with a range selected.
+    `.is-selection-start` goes on the first day in the selection, and `.is-range-start` goes on the first day of each week or month in the middle of a selection (but not the first day of the selection).
+    `.is-selection-end` goes on the last day of the selection, and `.is-range-end` goes on the last day of each week or month in the middle of the selection (but not on the last day of the selection).
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
@@ -329,15 +332,15 @@ markup: |
              <tr role="row">
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">8</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-start">8</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">9</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">10</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-today">11</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">12</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">12</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">13</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">14</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">13</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-end">14</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
@@ -401,7 +404,7 @@ markup: |
   width: 100%;
   line-height: 2rem;
   margin: 0;
-  padding: 0 32px;;
+  padding: 0 32px;
 
   text-align: center;
   overflow: hidden;
@@ -539,13 +542,18 @@ markup: |
   }
 
 .spectrum-Calendar-date.is-range-selection.is-range-start,
-    .spectrum-Calendar-date.is-range-selection.is-range-end {
-      font-weight: 700;
-
+    .spectrum-Calendar-date.is-range-selection.is-range-end,
+    .spectrum-Calendar-date.is-range-selection.is-selection-start,
+    .spectrum-Calendar-date.is-range-selection.is-selection-end {
       width: 36px;
     }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start:after, .spectrum-Calendar-date.is-range-selection.is-range-end:after {
+.spectrum-Calendar-date.is-range-selection.is-selection-start,
+    .spectrum-Calendar-date.is-range-selection.is-selection-end {
+      font-weight: 700;
+    }
+
+.spectrum-Calendar-date.is-range-selection.is-selection-start:after, .spectrum-Calendar-date.is-range-selection.is-selection-end:after {
         position: absolute;
         top: 0;
         z-index: -1;
@@ -560,63 +568,39 @@ markup: |
         content: '';
       }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start {
+.spectrum-Calendar-date.is-range-selection.is-range-start,
+    .spectrum-Calendar-date.is-range-selection.is-selection-start {
       padding-right: 4px;
-
       margin-left: 4px;
-
       border-radius: 32px 0 0 32px;
     }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start:after {
+.spectrum-Calendar-date.is-range-selection.is-range-start:before,
+      .spectrum-Calendar-date.is-range-selection.is-range-start:after,
+      .spectrum-Calendar-date.is-range-selection.is-selection-start:before,
+      .spectrum-Calendar-date.is-range-selection.is-selection-start:after {
         left: 0;
       }
 
-.spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
-        border-radius: 32px;
-      }
-
-.spectrum-Calendar-date.is-range-selection.is-range-end {
+.spectrum-Calendar-date.is-range-selection.is-range-end,
+    .spectrum-Calendar-date.is-range-selection.is-selection-end {
       padding-left: 4px;
-
       margin-right: 4px;
-
       border-radius: 0 32px 32px 0;
     }
 
-.spectrum-Calendar-date.is-range-selection.is-range-end:after {
+.spectrum-Calendar-date.is-range-selection.is-range-end:before,
+      .spectrum-Calendar-date.is-range-selection.is-range-end:after,
+      .spectrum-Calendar-date.is-range-selection.is-selection-end:before,
+      .spectrum-Calendar-date.is-range-selection.is-selection-end:after {
+        left: auto;
         right: 0;
       }
 
-.spectrum-Calendar-date.is-range-selection.is-range-end.is-range-start {
-        border-radius: 32px;
-      }
-
-.spectrum-Calendar-tableCell:first-of-type .spectrum-Calendar-date.is-range-selection {
-    width: 36px;
-
-    padding-right: 4px;
-
-    margin-left: 4px;
-
-    border-radius: 32px 0 0 32px;
-  }
-
-.spectrum-Calendar-tableCell:first-of-type .spectrum-Calendar-date.is-range-selection:before {
-      left: 0;
-    }
-
-.spectrum-Calendar-tableCell:last-of-type .spectrum-Calendar-date.is-range-selection {
-    width: 36px;
-
-    padding-left: 4px;
-
-    margin-right: 4px;
-
-    border-radius: 0 32px 32px 0;
-  }
-
-.spectrum-Calendar-tableCell:last-of-type .spectrum-Calendar-date.is-range-selection:before {
-      left: auto;
-      right: 0;
+.spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end,
+    .spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end,
+    .spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start,
+    .spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
+      width: 32px;
+      border-radius: 32px;
     }

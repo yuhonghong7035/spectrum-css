@@ -70,7 +70,7 @@ markup: |
   }
 
 .spectrum-ToggleSwitch-label {
-  margin: 0 8px;
+  margin: 0 10px;
   font-size: 0.875rem;
   vertical-align: middle;
   transition: color 150ms ease-in-out;

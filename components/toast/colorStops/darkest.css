@@ -3,9 +3,13 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-Toast {
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(118, 118, 118);
   color: rgb(255, 255, 255);
 }
 .spectrum-Toast-typeIcon {
@@ -21,7 +25,7 @@
     background-color: rgba(255, 255, 255, 1);
   }
 .spectrum-Toast-closeButton.focus-ring:not(:active) {
-      color: rgb(112, 112, 112);
+      color: rgb(118, 118, 118);
     }
 .spectrum-Toast-closeButton:active {
     background-color: rgba(255, 255, 255, 0.15);

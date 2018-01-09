@@ -1,6 +1,7 @@
 (function() {
   function injectSVG() {
-    if (this.status !== 200) {
+    // 200 for web servers, 0 for CEP panels
+    if (this.status !== 200 && this.status !== 0) {
       console.error('Icons: Failed to fetch icons, server returned ' + this.status);
       return;
     }

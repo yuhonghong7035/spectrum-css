@@ -3,12 +3,16 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--light .spectrum-Dialog {
-  background: rgb(252, 252, 252);
+  background: rgb(245, 245, 245);
 }
 .spectrum--light .spectrum-Dialog-header {
-  background: rgb(252, 252, 252);
+  background: rgb(245, 245, 245);
 }
 .spectrum--light .spectrum-Dialog-header:after {
     background: rgb(234, 234, 234);
@@ -22,7 +26,7 @@
   color: rgb(44, 44, 44);
 }
 .spectrum--light .spectrum-Dialog-footer {
-  background: rgb(252, 252, 252);
+  background: rgb(245, 245, 245);
 }
 /* topdoc
 ---

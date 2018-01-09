@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* topdoc
 ---
@@ -29,7 +33,7 @@ markup: |
   background-color: rgb(37, 37, 37);
 }
 .spectrum-SelectList-item {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: rgb(205, 205, 205);
 }
 .spectrum-SelectList-item:focus,
@@ -53,7 +57,7 @@ markup: |
     background-color: rgb(57, 57, 57);
   }
 .spectrum-SelectList-item.is-disabled {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     background-image: none;
     color: rgb(92, 92, 92);
     cursor: default;

@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-StatusLight--negative::before {
   background-color: rgb(227, 72, 80);
@@ -25,7 +29,7 @@
 .spectrum-StatusLight--celery::before {
   background-color: rgb(68, 181, 86);
 }
-.spectrum-StatusLight--yellow::before {
+.spectrum-StatusLight--yellow::before { 
   background-color: rgb(223, 191, 0);
 }
 .spectrum-StatusLight--fuchsia::before {

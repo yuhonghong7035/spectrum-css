@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-Table-headCell {
   color: rgb(112, 112, 112);
@@ -24,7 +28,7 @@
       }
 .spectrum-Table-body {
   border: 1px solid rgb(225, 225, 225);
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(251, 251, 251);
 }
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
    by putting the border on the individual cells instead. */
@@ -48,7 +52,7 @@ tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
   }
 .spectrum-Table-row {
   border-bottom: 1px solid rgb(225, 225, 225);
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(251, 251, 251);
 }
 .spectrum-Table-row:hover {
     background-color: rgb(245, 245, 245);
@@ -70,10 +74,10 @@ tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
 }
 .spectrum-Table--quiet .spectrum-Table-body {
     border-width: 1px 0;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 .spectrum-Table--quiet .spectrum-Table-row {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 .spectrum-Table--quiet .spectrum-Table-row:hover {
       background-color: rgb(234, 234, 234);

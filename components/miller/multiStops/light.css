@@ -3,26 +3,21 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
-.spectrum--light .spectrum-MillerColumn-item::after {
-    background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(142, 142, 142)));
-  }
 .spectrum--light .spectrum-MillerColumn-item:focus,
   .spectrum--light .spectrum-MillerColumn-item:hover {
     background-color: rgb(234, 234, 234);
   }
-.spectrum--light .spectrum-MillerColumn-item:focus::after, .spectrum--light .spectrum-MillerColumn-item:hover::after {
-      background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(112, 112, 112)));
-    }
 .spectrum--light .spectrum-MillerColumn-item.is-navigated {
       /* gray background */
       background-color: rgb(225, 225, 225);
     }
 .spectrum--light .spectrum-MillerColumn-item.is-navigated:hover {
         background-color: rgb(225, 225, 225);
-      }
-.spectrum--light .spectrum-MillerColumn-item.is-navigated::after {
-        background-image: url("embed/S_MillerRightChevron_@1x.svg" param(--color rgb(112, 112, 112)));
       }
 .spectrum--light .spectrum-MillerColumn-item.is-selected {
       background-color: rgba(20, 115, 230, 0.1);

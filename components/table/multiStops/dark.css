@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--dark .spectrum-Table-headCell {
   color: rgb(153, 153, 153);
@@ -70,10 +74,10 @@
 }
 .spectrum--dark .spectrum-Table--quiet .spectrum-Table-body {
     border-width: 1px 0;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 .spectrum--dark .spectrum-Table--quiet .spectrum-Table-row {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 .spectrum--dark .spectrum-Table--quiet .spectrum-Table-row:hover {
       background-color: rgb(57, 57, 57);

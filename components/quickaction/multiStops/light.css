@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* topdoc
 ---
@@ -43,9 +47,9 @@ markup: |
     outline: none;
   }
 .spectrum--light .spectrum-QuickActions-item.focus-ring {
-    border-color: rgb(20, 115, 230);
+    border-color: rgb(38, 128, 235);
     color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 1px rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
     outline: none;
   }
 .spectrum--light .spectrum-QuickActions-item:hover {

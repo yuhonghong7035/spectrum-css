@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* topdoc
 ---
@@ -44,18 +48,18 @@ markup: |
 */
 .spectrum--light .spectrum-Tooltip,
   .spectrum--light .spectrum-Tooltip .spectrum-Tooltip-tip::after {
-    background-color: rgb(112, 112, 112);
+    background-color: rgb(118, 118, 118);
     color: rgb(255, 255, 255);
   }
 .spectrum--light .spectrum-Tooltip--error,
   .spectrum--light .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(201, 37, 45);
+    background-color: rgb(215, 55, 63);
   }
 .spectrum--light .spectrum-Tooltip--info,
   .spectrum--light .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(13, 102, 208);
+    background-color: rgb(20, 115, 230);
   }
 .spectrum--light .spectrum-Tooltip--success,
   .spectrum--light .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(18, 128, 92);
+    background-color: rgb(38, 142, 108);
   }

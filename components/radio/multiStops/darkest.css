@@ -3,13 +3,18 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--darkest .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-color: rgb(38, 128, 235);
   }
 .spectrum--darkest .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
-      border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      border-color: rgb(20, 115, 230);
+      box-shadow: 0 0 0 1px rgb(20, 115, 230);
+
     }
 .spectrum--darkest .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
       color: rgb(75, 156, 245);
@@ -47,6 +52,7 @@ markup: |
     }
 .spectrum--darkest .spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(55, 142, 240);
+
     }
 .spectrum--darkest .spectrum-Radio:hover .spectrum-Radio-label {
       color: rgb(226, 226, 226);
@@ -56,12 +62,14 @@ markup: |
     }
 .spectrum--darkest .spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(75, 156, 245);
+
     }
 .spectrum--darkest .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(226, 226, 226);
     }
 .spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-button {
       border-color: rgb(227, 72, 80);
+
     }
 .spectrum--darkest .spectrum-Radio.is-invalid .spectrum-Radio-label {
       color: rgb(227, 72, 80);
@@ -90,12 +98,14 @@ markup: |
 */
 .spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-button {
       border-color: rgb(236, 91, 98) !important;
+
     }
 .spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(236, 91, 98);
     }
 .spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-button {
       border-color: rgb(247, 109, 116) !important;
+
     }
 .spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
       color: rgb(247, 109, 116);
@@ -123,6 +133,7 @@ markup: |
 */
 .spectrum--darkest .spectrum-Radio-input:disabled + .spectrum-Radio-button {
     border-color: rgb(60, 60, 60);
+
   }
 .spectrum--darkest .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
     color: rgb(73, 73, 73);

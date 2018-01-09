@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--dark .spectrum-Label {
   color: rgb(255, 255, 255);
@@ -21,7 +25,7 @@ markup: |
 */
 .spectrum--dark .spectrum-Label--inactive,
 .spectrum--dark .spectrum-Label--grey {
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(118, 118, 118);
 }
 .spectrum--dark .spectrum-Label--green {
   background-color: rgb(38, 142, 108);

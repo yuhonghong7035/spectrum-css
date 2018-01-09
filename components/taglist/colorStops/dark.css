@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-TagList-item {
   color: rgb(153, 153, 153);
@@ -17,8 +21,8 @@
 .spectrum-TagList-item.focus-ring {
     background-color: rgb(37, 37, 37);
     color: rgb(255, 255, 255);
-    border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    border-color: rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 .spectrum-TagList-item.is-invalid {
     color: rgb(247, 109, 116);

@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* :before is used for the track of the switch */
 .spectrum--darkest .spectrum-ToggleSwitch-switch::before {
@@ -20,14 +24,14 @@
       border-color: rgb(38, 128, 235);
     }
 .spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-switch::after {
-        border-color: rgb(38, 128, 235);
-        box-shadow: 0 0 0 1px rgb(38, 128, 235);
+        border-color: rgb(20, 115, 230);
+        box-shadow: 0 0 0 1px rgb(20, 115, 230);
       }
 .spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
-        background-color: rgb(20, 115, 230);
+        background-color: rgb(45, 45, 45);
       }
 .spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
-      color: rgb(75, 156, 245);
+      color: rgb(55, 142, 240);
     }
 .spectrum--darkest .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-switch::after {
           border-color: rgb(133, 133, 133);
@@ -77,7 +81,7 @@
           background-color: rgb(45, 45, 45);
         }
 .spectrum--darkest .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::after {
-          border-color: rgb(38, 128, 235);
+          border-color: rgb(20, 115, 230);
         }
 .spectrum--darkest .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:disabled:checked + .spectrum-ToggleSwitch-switch::before {
           background-color: rgb(45, 45, 45);

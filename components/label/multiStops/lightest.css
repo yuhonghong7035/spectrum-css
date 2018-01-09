@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum--lightest .spectrum-Label {
   color: rgb(255, 255, 255);
@@ -21,7 +25,7 @@ markup: |
 */
 .spectrum--lightest .spectrum-Label--inactive,
 .spectrum--lightest .spectrum-Label--grey {
-  background-color: rgb(112, 112, 112);
+  background-color: rgb(118, 118, 118);
 }
 .spectrum--lightest .spectrum-Label--green {
   background-color: rgb(38, 142, 108);

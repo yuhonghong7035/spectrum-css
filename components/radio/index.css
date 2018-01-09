@@ -33,6 +33,7 @@
 
 .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-width: 5px;
+
   }
 
 .spectrum-Radio-input:disabled {

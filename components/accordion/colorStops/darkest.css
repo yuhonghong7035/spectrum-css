@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 .spectrum-Accordion-item {
   border-color: rgb(45, 45, 45);
@@ -23,7 +27,7 @@
       color: rgb(180, 180, 180);
     }
 .spectrum-Accordion-header:focus:after  {
-      background-color: rgb(38, 128, 235);
+      background-color: rgb(20, 115, 230);
     }
 .spectrum-Accordion-item.is-open .spectrum-Accordion-header:hover {
         background-color: transparent;

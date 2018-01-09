@@ -3,6 +3,10 @@
   /* Icon Button*/
 
   /* Button */
+
+  /* Loader */
+
+  /* Shell */
 }
 /* topdoc
 ---
@@ -20,7 +24,7 @@ markup: |
 
 */
 .spectrum--light .spectrum-CycleButton {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 .spectrum--light .spectrum-CycleButton .spectrum-Icon {
     color: rgb(112, 112, 112);
