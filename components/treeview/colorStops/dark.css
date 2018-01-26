@@ -1,0 +1,28 @@
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Loader */
+
+  /* Shell */
+}
+.spectrum-TreeView-link {
+  color: rgb(205, 205, 205);
+}
+.spectrum-TreeView-link:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum-TreeView-link:hover::before {
+      background-color: rgba(255, 255, 255, .04);
+    }
+.spectrum-TreeView-link.focus-ring {
+    color: rgb(255, 255, 255);
+  }
+.spectrum-TreeView-link.focus-ring::before {
+      background-color: rgba(255, 255, 255, .04);
+
+      /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
+    }
