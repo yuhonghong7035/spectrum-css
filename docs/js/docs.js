@@ -1,4 +1,5 @@
-/*eslint-disable no-unused-vars*/
+/* eslint-disable no-unused-vars */
+/* global document, window, Element, AdobeSpectrum */
 
 'use strict';
 
@@ -37,7 +38,7 @@ function closeDialog(dialog) {
   dialog.classList.remove('is-open');
 }
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
   changeCSS('light');
 });
 
@@ -56,6 +57,27 @@ document.addEventListener('click', function(event) {
     toggleMarkupVisibility(event);
   }
 });
+
+window.addEventListener('click', function(event) {
+  var el;
+  if ((el = event.target.closest('.spectrum-TreeView-item')) !== null) {
+    el.classList.toggle('is-open');
+    event.preventDefault();
+  }
+});
+
+// Display Slider focus style
+function toggleSliderFocus(event) {
+  if (!event.target.classList.contains('spectrum-Slider-input')) {
+    return;
+  }
+  var func = event.type === 'focus' ? 'add' : 'remove';
+  var handle = event.target.closest('.spectrum-Slider-handle');
+  handle.classList[func]('is-focused');
+}
+
+document.addEventListener('focus', toggleSliderFocus, true);
+document.addEventListener('blur', toggleSliderFocus, true);
 
 AdobeSpectrum.loadIcons('../icons/spectrum-css-icons.svg');
 AdobeSpectrum.loadIcons('../icons/spectrum-icons.svg');

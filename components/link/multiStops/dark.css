@@ -17,7 +17,7 @@
 .spectrum--dark .spectrum-Link:active {
     color: rgb(90, 169, 250);
   }
-.spectrum--dark .spectrum-Link:focus {
+.spectrum--dark .spectrum-Link.focus-ring {
     color: rgb(75, 156, 245);
   }
 .spectrum--dark .spectrum-Link.is-disabled {

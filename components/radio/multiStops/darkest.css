@@ -90,21 +90,33 @@ markup: |
       <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
     </div>
     <div class="spectrum-Radio is-invalid">
-      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
       <span class="spectrum-Radio-button"></span>
       <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>
   </form>
 */
-.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-button {
-      border-color: rgb(236, 91, 98) !important;
+.spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-input + .spectrum-Radio-button {
+      border-color: rgb(236, 91, 98);
 
     }
 .spectrum--darkest .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(236, 91, 98);
     }
-.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-button {
-      border-color: rgb(247, 109, 116) !important;
+.spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-input +.spectrum-Radio-button {
+      border-color: rgb(247, 109, 116);
 
     }
 .spectrum--darkest .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
@@ -132,9 +144,8 @@ markup: |
 
 */
 .spectrum--darkest .spectrum-Radio-input:disabled + .spectrum-Radio-button {
-    border-color: rgb(60, 60, 60);
-
+    border-color: rgb(60, 60, 60) !important;
   }
 .spectrum--darkest .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
-    color: rgb(73, 73, 73);
+    color: rgb(73, 73, 73) !important;
   }

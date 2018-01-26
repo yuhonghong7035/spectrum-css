@@ -81,6 +81,13 @@
 }
 
 .spectrum-Heading--pageTitle {
+
+  /**
+  * Normalize the margin on `h1` elements within `section` and
+  * `article` contexts in Chrome, Firefox, and Safari.
+  */
+  margin: 0.67em 0;
+
   font-weight: 300;
   font-size: 1.75rem;
   line-height: 2rem;
@@ -114,7 +121,15 @@
 
   /* Fill should match the current text color */
   fill: currentColor;
+  /* Don't catch clicks or hover, otherwise they may not escape the SVG */
+  pointer-events: none;
 }
+
+/* Hide the svg overflow in IE. */
+
+.spectrum-Icon:not(:root) {
+    overflow: hidden;
+  }
 
 /* topdoc
 ---
@@ -126,6 +141,11 @@ markup: |
 */
 
 .spectrum-Link {
+
+  /* Remove the gray background on active links in IE 10. */
+  background-color: transparent;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   transition: color 125ms ease-in-out;
   outline: none;
@@ -135,7 +155,11 @@ markup: |
     text-decoration: underline;
   }
 
-.spectrum-Link:focus {
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+  }
+
+.spectrum-Link.focus-ring {
     text-decoration: underline;
     -webkit-text-decoration-style: double;
             text-decoration-style: double;
@@ -259,13 +283,25 @@ markup: |
 
   height: 32px;
   padding: 0 14px 1px; /* 1px to push up text, sits kind of low */
+  
+  /* Remove button the margin in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the button overflow in Edge. */
+  overflow: visible;
 
   font-family: inherit;
   font-size: 0.9375rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-decoration: none;
+
+  /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
+  text-transform: none;
   -webkit-font-smoothing: antialiased;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
 
   /* Adjacent buttons should be aligned correctly */
   vertical-align: top;
@@ -291,10 +327,20 @@ markup: |
 
 .spectrum-Button::-moz-focus-inner {
     border: 0;
+    
+    /* Remove the inner border and padding for button in Firefox. */
+    border-style: none;
     padding: 0;
+
     /* Use uppercase PX so values don't get converted to rem */
     margin-top: -2PX;
     margin-bottom: -2PX;
+  }
+
+/* Restore the focus styles unset by the previous rule. */
+
+.spectrum-Button:-moz-focusring {
+    outline: 1px dotted ButtonText;
   }
 
 .spectrum-Button:hover,
@@ -575,6 +621,24 @@ markup: |
 }
 
 .spectrum-Checkbox-input {
+
+  /* Change the font styles in all browsers for input. */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  /* Add the correct box sizing for [type="checkbox"] in IE 10-. */
+  box-sizing: border-box;
+  
+  /* Remove the padding for [type="checkbox"] in IE 10-. */
+  padding: 0;
+
   position: absolute;
   width: 100%;
   height: 100%;
@@ -738,6 +802,24 @@ markup: |
   }
 
 .spectrum-Radio-input {
+
+  /* Change the font styles in all browsers for input. */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  /* Add the correct box sizing for [type="radio"] in IE 10-. */
+  box-sizing: border-box;
+  
+  /* Remove the padding for [type="radio"] in IE 10-. */
+  padding: 0;
+
   position: absolute;
   width: 100%;
   height: 100%;
@@ -927,7 +1009,14 @@ markup: |
 
   vertical-align: top; /* used to align them correctly in forms. */
 
-  font-family: inherit;
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  /* Change the input font styles in all browsers */
+  font-family: sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-overflow: ellipsis;
@@ -1014,6 +1103,9 @@ markup: |
   height: auto;
   padding: 4px 8px;
   text-indent: 0;
+
+  /* Remove the default vertical scrollbar for textarea in IE. */
+  overflow: auto;
 }
 
 .spectrum-Textfield--multiline.is-invalid,
@@ -1895,6 +1987,25 @@ markup: |
   }
 
 .spectrum-Toast-closeButton {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
+
   position: absolute;
   right: 8px;
   top: 8px;
@@ -1913,6 +2024,19 @@ markup: |
 
   cursor: pointer;
 }
+
+/* Remove the inner border and padding for button in Firefox. */
+
+.spectrum-Toast-closeButton::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+/* Restore the focus styles unset by the previous rule. */
+
+.spectrum-Toast-closeButton:-moz-focusring{
+    outline: 1px dotted ButtonText;
+  }
 
 .spectrum-Toast-closeButton .spectrum-Icon {
     position: absolute;
@@ -2547,6 +2671,7 @@ markup: |
   height: 2px;
   position: relative;
   margin-left: 0;
+  transition: all 125ms ease-in-out;
 }
 
 .spectrum-Slider-track--buffer {
@@ -2559,6 +2684,7 @@ markup: |
   height: 16px;
   position: absolute;
   top: -7px;
+  width: 100%;
 }
 
 .spectrum-Slider-handle {
@@ -2582,19 +2708,25 @@ markup: |
   border-width: 2px;
   border-style: solid;
 
-  /* Transition the border for focus animations */
-  transition: border 125ms ease-in-out;
+  transition: all 125ms ease-in-out;
 }
 
-.spectrum-Slider-handle:focus {
-    border-width: 8px;
-  }
-
-.spectrum-Slider-handle:active {
+.spectrum-Slider-handle:active,
+  .spectrum-Slider-handle.is-focused,
+  .spectrum-Slider-handle.is-dragged {
     border-width: 8px;
   }
 
 .spectrum-Slider-input {
+
+  /* Normalize input field */
+  /* Change the font styles for input in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
   width: 100%;
   height: 100%;
   padding: 0;
@@ -2608,6 +2740,10 @@ markup: |
   border: 0;
   pointer-events: none;
 }
+
+.spectrum-Slider-input:focus {
+    outline: none;
+  }
 
 .spectrum-Slider-labelContainer {
   display: block;
@@ -2762,21 +2898,15 @@ markup: |
     right: 8px;
     bottom: 8px;
     border-radius: 16px;
-  }
-
-.spectrum-Slider--round .spectrum-Slider-handle:focus {
-      border-width: 2px;
-    }
-
-.spectrum-Slider--round .spectrum-Slider-input {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    opacity: 1;
     transform: rotate(-45deg);
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    transition: background-color 125ms ease-in-out;
   }
 
-.spectrum-Slider--round .spectrum-Slider-input::after {
+.spectrum-Slider--round .spectrum-Slider-handle::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -2787,6 +2917,20 @@ markup: |
       transform: translateY(-50%);
       transition: background-color 125ms ease-in-out;
     }
+
+.spectrum-Slider--round .spectrum-Slider-handle:active,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-focused,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-dragged {
+      border-width: 2px;
+      cursor: ns-resize;
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+
+.spectrum-Slider--round .spectrum-Slider-input {
+    width: 100%;
+    height: 100%;
+  }
 
 .spectrum-Slider.is-disabled {
   cursor: default;
@@ -3405,6 +3549,24 @@ markup: |
 }
 
 .spectrum-ToggleSwitch-input {
+
+  /* Change the font styles in all browsers for input. */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+
+  /* Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  /* Show the overflow for input in Edge. */
+  overflow: visible;
+
+  /* Add the correct box sizing for [type="checkbox"] in IE 10-. */
+  box-sizing: border-box;
+  
+  /* Remove the padding for [type="checkbox"] in IE 10-. */
+  padding: 0;
+
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3568,6 +3730,13 @@ markup: |
     }
 
 .spectrum-SelectList-divider {
+
+  /* Add the correct box sizing for hr in Firefox. */
+  box-sizing: content-box;
+
+  /* Show the overflow for hr in Edge and IE. */
+  overflow: visible;
+
   height: 2px;
   margin: 3px 12px;
   padding: 0 0;
@@ -4508,6 +4677,13 @@ markup: |
 .spectrum-Search-input {
   display: block;
 
+  /* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
+  /* This gets overridden by .spectrum-Textfield */
+  -webkit-appearance: textfield;
+
+  /* Correct the outline for input[type="search"] style in Safari. */
+  outline-offset: -2px;
+
   /* Use padding instead of text-indent so long strings don't overlap the icon */
   padding-left: 36px;
   text-indent: 0;
@@ -4515,6 +4691,13 @@ markup: |
   /* Don't let long strings overlap the close icon */
   padding-right: 28px;
 }
+
+/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
+
+.spectrum-Search-input::-webkit-search-cancel-button,
+  .spectrum-Search-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 
 .spectrum-Search-input.spectrum-Textfield--quiet {
     padding-left: 24px;
@@ -5098,6 +5281,7 @@ markup: |
 }
 
 .spectrum-Calendar-dayOfWeek {
+
   position: absolute;
   bottom: 4px;
 
@@ -5114,6 +5298,16 @@ markup: |
 
   cursor: default;
 }
+
+.spectrum-Calendar-dayOfWeek[title] {
+    /* Normalize abbr[title] */
+    /* Remove the bottom border in Chrome 57- and Firefox 39-. */
+    border-bottom: none;
+
+    /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
 
 .spectrum-Calendar-body {
   outline: none;
@@ -6133,6 +6327,10 @@ markup: |
   }
 
 .spectrum-TagList-item-avatar {
+
+  /* Remove the border on images inside links in IE 10-. */
+  border-style: none;
+
   height: 16px;
   margin-right: 8px;
   border-radius: 50%;
@@ -6261,6 +6459,24 @@ markup: |
   }
 
 .spectrum-QuickActions-item {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
   width: 32px;
   height: 32px;
   margin-left: 12px;
@@ -6272,6 +6488,19 @@ markup: |
     color 125ms ease-out,
     box-shadow 125ms ease-out;
 }
+
+/* Remove the inner border and padding for button in Firefox. */
+
+.spectrum-QuickActions-item::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+/* Restore the focus styles unset by the previous rule. */
+
+.spectrum-QuickActions-item:-moz-focusring{
+    outline: 1px dotted ButtonText;
+  }
 
 .spectrum-QuickActions-item:hover {
     cursor: pointer;
@@ -6463,10 +6692,31 @@ markup: |
 
 */
 
+.spectrum-MillerColumns {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 8px 0;
+}
+
 .spectrum-MillerColumn {
   display: inline-block;
   width: 272px;
+  vertical-align: top;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  overflow: auto;
+  height: 100%;
 }
+
+.spectrum-MillerColumn:first-child {
+    margin-left: 8px;
+  }
 
 .spectrum-MillerColumn-childIndicator {
   display: none;
@@ -6490,6 +6740,8 @@ markup: |
   -ms-flex-align: center;
       align-items: center;
   width: 272px;
+  box-sizing: border-box;
+  transition: background-color 125ms ease-in-out;
 }
 
 /* checkbox on the left, shows up always */
@@ -6509,6 +6761,10 @@ markup: |
   }
 
 .spectrum-MillerColumn-item .spectrum-MillerColumn-itemThumbnail {
+
+    /* Remove the border on images inside links in IE 10-. */
+    border-style: none;
+
     width: 24px;
     height: 24px;
     margin-left: 8px;
@@ -6526,6 +6782,23 @@ markup: |
 }
 
 .spectrum-CycleButton {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
   position: relative;
   width: 32px;
   height: 32px;
@@ -6539,6 +6812,19 @@ markup: |
 .spectrum-CycleButton:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: 0;
+  }
+
+/* Remove the inner border and padding for button in Firefox. */
+
+.spectrum-CycleButton::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+/* Restore the focus styles unset by the previous rule. */
+
+.spectrum-CycleButton:-moz-focusring{
+    outline: 1px dotted ButtonText;
   }
 
 .spectrum-CycleButton .spectrum-Icon {
@@ -6814,6 +7100,14 @@ markup: |
 */
 
 .spectrum-Rule {
+
+  /* Add the correct box sizing for hr in Firefox. */
+  box-sizing: content-box;
+  height: 0;
+
+  /* Show the overflow for hr in Edge and IE. */
+  overflow: visible;
+
   border-style: solid;
   border-width: 2px;
   border-radius: 2px;
@@ -6987,3 +7281,420 @@ markup: |
     width: 100%;
     height: 100%;
   }
+
+/* topdoc
+---
+name: Tree View - Nested
+description: |
+  A nested Spectrum tree view.
+  Because the tree view is nested, the visibility of child items is controlled by the open state of the parent item.
+markup: |
+  <ul class="spectrum-TreeView" style="width: 250px">
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 1</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 1
+      </a>
+      <ul class="spectrum-TreeView">
+        <li class="spectrum-TreeView-item">
+          <a class="spectrum-TreeView-link" href="#">Layer 2</a>
+        </li>
+        <li class="spectrum-TreeView-item">
+          <a class="spectrum-TreeView-link" href="#">Layer 3</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 4</a>
+    </li>
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 5</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 2
+      </a>
+      <ul class="spectrum-TreeView">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-link" href="#">
+            <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+            </svg>
+            Group 3
+          </a>
+          <ul class="spectrum-TreeView">
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-link" href="#">
+                <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+                </svg>
+                Group 4
+              </a>
+              <ul class="spectrum-TreeView">
+                <li class="spectrum-TreeView-item">
+                  <a class="spectrum-TreeView-link" href="#">Layer 6</a>
+                </li>
+                <li class="spectrum-TreeView-item">
+                  <a class="spectrum-TreeView-link" href="#">
+                    <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+                    </svg>
+                    Group 5
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ui>
+    </li>
+  </ul>
+
+*/
+
+.spectrum-TreeView {
+  display: block;
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+
+.spectrum-TreeView-item {
+  /* Don't let child treeviews that are open spill out */
+  overflow: hidden;
+}
+
+.spectrum-TreeView-item.is-open > .spectrum-TreeView-link > .spectrum-TreeView-indicator {
+      /* Rotate the chevron */
+      transform: rotate(90deg);
+    }
+
+.spectrum-TreeView-item.is-open > .spectrum-TreeView {
+      /* Open the treeview */
+      height: auto;
+      visibility: visible;
+    }
+
+.spectrum-TreeView-link {
+  /* Be inline block with 100% width to prevent margin collapse */
+  display: inline-block;
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 8px 30px;
+  margin: 4px 0;
+
+  text-decoration: none;
+
+  /* Prevent weirdness that can cause the vertical bar to fall down */
+  white-space: nowrap;
+}
+
+.spectrum-TreeView-link:focus {
+    /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
+    outline: none;
+  }
+
+.spectrum-TreeView-link .spectrum-Icon {
+    vertical-align: top;
+    margin-right: 6px;
+  }
+
+.spectrum-TreeView-link::before {
+    content: '';
+
+    position: absolute;
+    left: 8px;
+    right: 6px;
+
+    /* Position correctly since top is not defined */
+    margin-top: -8px;
+
+    height: 36px;
+
+    background-color: transparent;
+
+    border-radius: 4px;
+  }
+
+.spectrum-TreeView-indicator {
+  display: block;
+  width: 6px;
+  height: 10px;
+
+  float: left;
+  margin-left: -14px;
+  margin-top: 5px;
+
+  transition: transform ease 125ms;
+}
+
+/* Close nested treeviews by default */
+
+.spectrum-TreeView .spectrum-TreeView {
+  /* Don't be a highlight container stealer */
+  position: static;
+
+  padding-left: 28px;
+
+  /* Be hidden */
+  height: 0;
+  visibility: hidden;
+}
+
+/* topdoc
+---
+name: Tree View - Flat
+description: |
+  A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
+  With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."
+markup: |
+  <ul class="spectrum-TreeView" style="width: 250px">
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 1</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 1
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1">
+      <a class="spectrum-TreeView-link" href="#">Layer 2</a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1">
+      <a class="spectrum-TreeView-link" href="#">Layer 3</a>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 4</a>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">Layer 5</a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 2
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent1 is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 3
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent2">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 4
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent3" hidden>
+      <a class="spectrum-TreeView-link" href="#">Layer 6</a>
+    </li>
+
+    <li class="spectrum-TreeView-item spectrum-TreeView-item--indent3" hidden>
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        Group 5
+      </a>
+    </li>
+  </ul>
+
+*/
+
+.spectrum-TreeView-item--indent1 {
+  padding-left: 28px;
+}
+
+.spectrum-TreeView-item--indent2 {
+  padding-left: 56px;
+}
+
+.spectrum-TreeView-item--indent3 {
+  padding-left: 84px;
+}
+
+.spectrum-TreeView-item--indent4 {
+  padding-left: 112px;
+}
+
+.spectrum-TreeView-item--indent5 {
+  padding-left: 140px;
+}
+
+.spectrum-TreeView-item--indent6 {
+  padding-left: 168px;
+}
+
+.spectrum-TreeView-item--indent7 {
+  padding-left: 196px;
+}
+
+.spectrum-TreeView-item--indent8 {
+  padding-left: 224px;
+}
+
+.spectrum-TreeView-item--indent9 {
+  padding-left: 252px;
+}
+
+.spectrum-TreeView-item--indent10 {
+  padding-left: 280px;
+}
+
+/* topdoc
+---
+name: Tree View - Nested with icons
+description: |
+  A nested Spectrum tree view with icons
+markup: |
+  <ul class="spectrum-TreeView" style="width: 250px">
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+          <use xlink:href="#spectrum-icon-18-Layers"></use>
+        </svg>
+        Layer 1
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-18-Folder"></use>
+        </svg>
+        Group 1
+      </a>
+      <ul class="spectrum-TreeView">
+        <li class="spectrum-TreeView-item">
+          <a class="spectrum-TreeView-link" href="#">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+              <use xlink:href="#spectrum-icon-18-Layers"></use>
+            </svg>
+            Layer 2
+          </a>
+        </li>
+        <li class="spectrum-TreeView-item">
+          <a class="spectrum-TreeView-link" href="#">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+              <use xlink:href="#spectrum-icon-18-Layers"></use>
+            </svg>
+            Layer 3
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+          <use xlink:href="#spectrum-icon-18-Layers"></use>
+        </svg>
+        Layer 4
+      </a>
+    </li>
+    <li class="spectrum-TreeView-item">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+          <use xlink:href="#spectrum-icon-18-Layers"></use>
+        </svg>
+        Layer 5
+      </a>
+    </li>
+
+    <li class="spectrum-TreeView-item is-open">
+      <a class="spectrum-TreeView-link" href="#">
+        <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+        </svg>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+          <use xlink:href="#spectrum-icon-18-Folder"></use>
+        </svg>
+        Group 2
+      </a>
+      <ul class="spectrum-TreeView">
+        <li class="spectrum-TreeView-item is-open">
+          <a class="spectrum-TreeView-link" href="#">
+            <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+            </svg>
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+              <use xlink:href="#spectrum-icon-18-Folder"></use>
+            </svg>
+            Group 3
+          </a>
+          <ul class="spectrum-TreeView">
+            <li class="spectrum-TreeView-item">
+              <a class="spectrum-TreeView-link" href="#">
+                <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                  <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+                </svg>
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                  <use xlink:href="#spectrum-icon-18-Folder"></use>
+                </svg>
+                Group 4
+              </a>
+              <ul class="spectrum-TreeView">
+                <li class="spectrum-TreeView-item">
+                  <a class="spectrum-TreeView-link" href="#">
+                    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Layers">
+                      <use xlink:href="#spectrum-icon-18-Layers"></use>
+                    </svg>
+                    Layer 6
+                  </a>
+                </li>
+                <li class="spectrum-TreeView-item">
+                  <a class="spectrum-TreeView-link" href="#">
+                    <svg class="spectrum-Icon spectrum-TreeView-indicator" focusable="false" aria-hidden="true">
+                      <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+                    </svg>
+                    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+                      <use xlink:href="#spectrum-icon-18-Folder"></use>
+                    </svg>
+                    Group 5
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ui>
+    </li>
+  </ul>
+
+*/

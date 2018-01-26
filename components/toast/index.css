@@ -67,6 +67,25 @@ markup: |
   }
 
 .spectrum-Toast-closeButton {
+
+  /* Change the font styles in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+  
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+  
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
+
   position: absolute;
   right: 8px;
   top: 8px;
@@ -85,6 +104,19 @@ markup: |
 
   cursor: pointer;
 }
+
+/* Remove the inner border and padding for button in Firefox. */
+
+.spectrum-Toast-closeButton::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+/* Restore the focus styles unset by the previous rule. */
+
+.spectrum-Toast-closeButton:-moz-focusring{
+    outline: 1px dotted ButtonText;
+  }
 
 .spectrum-Toast-closeButton .spectrum-Icon {
     position: absolute;

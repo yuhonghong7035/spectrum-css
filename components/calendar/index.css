@@ -434,6 +434,7 @@ markup: |
 }
 
 .spectrum-Calendar-dayOfWeek {
+
   position: absolute;
   bottom: 4px;
 
@@ -450,6 +451,16 @@ markup: |
 
   cursor: default;
 }
+
+.spectrum-Calendar-dayOfWeek[title] {
+    /* Normalize abbr[title] */
+    /* Remove the bottom border in Chrome 57- and Firefox 39-. */
+    border-bottom: none;
+
+    /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+    text-decoration: underline;
+    text-decoration: underline dotted;
+  }
 
 .spectrum-Calendar-body {
   outline: none;

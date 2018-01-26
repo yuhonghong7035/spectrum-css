@@ -222,6 +222,10 @@
   }
 
 .spectrum-TagList-item-avatar {
+
+  /* Remove the border on images inside links in IE 10-. */
+  border-style: none;
+
   height: 16px;
   margin-right: 8px;
   border-radius: 50%;

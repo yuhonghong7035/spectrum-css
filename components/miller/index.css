@@ -178,10 +178,31 @@ markup: |
 
 */
 
+.spectrum-MillerColumns {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 8px 0;
+}
+
 .spectrum-MillerColumn {
   display: inline-block;
   width: 272px;
+  vertical-align: top;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  overflow: auto;
+  height: 100%;
 }
+
+.spectrum-MillerColumn:first-child {
+    margin-left: 8px;
+  }
 
 .spectrum-MillerColumn-childIndicator {
   display: none;
@@ -205,6 +226,8 @@ markup: |
   -ms-flex-align: center;
       align-items: center;
   width: 272px;
+  box-sizing: border-box;
+  transition: background-color 125ms ease-in-out;
 }
 
 /* checkbox on the left, shows up always */
@@ -224,6 +247,10 @@ markup: |
   }
 
 .spectrum-MillerColumn-item .spectrum-MillerColumn-itemThumbnail {
+
+    /* Remove the border on images inside links in IE 10-. */
+    border-style: none;
+
     width: 24px;
     height: 24px;
     margin-left: 8px;

@@ -40,7 +40,6 @@ markup: |
   .spectrum--dark .spectrum-SelectList-item.is-focused {
     background-color: rgb(50, 50, 50);
     color: rgb(205, 205, 205);
-    background-image: linear-gradient(to right, rgb(38, 128, 235) 0%, rgb(38, 128, 235) 2px, transparent 2px, transparent 100%);
   }
 .spectrum--dark .spectrum-SelectList-item:hover {
     background-color: rgb(50, 50, 50);

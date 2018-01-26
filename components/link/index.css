@@ -15,6 +15,11 @@ markup: |
 */
 
 .spectrum-Link {
+
+  /* Remove the gray background on active links in IE 10. */
+  background-color: transparent;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+. */
+  -webkit-text-decoration-skip: objects;
   text-decoration: none;
   transition: color 125ms ease-in-out;
   outline: none;
@@ -24,7 +29,11 @@ markup: |
     text-decoration: underline;
   }
 
-.spectrum-Link:focus {
+.spectrum-Link.focus-ring {
+    text-decoration: underline;
+  }
+
+.spectrum-Link.focus-ring {
     text-decoration: underline;
     -webkit-text-decoration-style: double;
             text-decoration-style: double;

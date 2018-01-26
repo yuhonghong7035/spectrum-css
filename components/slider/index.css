@@ -53,6 +53,7 @@
   height: 2px;
   position: relative;
   margin-left: 0;
+  transition: all 125ms ease-in-out;
 }
 
 .spectrum-Slider-track--buffer {
@@ -65,6 +66,7 @@
   height: 16px;
   position: absolute;
   top: -7px;
+  width: 100%;
 }
 
 .spectrum-Slider-handle {
@@ -88,19 +90,25 @@
   border-width: 2px;
   border-style: solid;
 
-  /* Transition the border for focus animations */
-  transition: border 125ms ease-in-out;
+  transition: all 125ms ease-in-out;
 }
 
-.spectrum-Slider-handle:focus {
-    border-width: 8px;
-  }
-
-.spectrum-Slider-handle:active {
+.spectrum-Slider-handle:active,
+  .spectrum-Slider-handle.is-focused,
+  .spectrum-Slider-handle.is-dragged {
     border-width: 8px;
   }
 
 .spectrum-Slider-input {
+
+  /* Normalize input field */
+  /* Change the font styles for input in all browsers */
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
   width: 100%;
   height: 100%;
   padding: 0;
@@ -114,6 +122,10 @@
   border: 0;
   pointer-events: none;
 }
+
+.spectrum-Slider-input:focus {
+    outline: none;
+  }
 
 .spectrum-Slider-labelContainer {
   display: block;
@@ -268,21 +280,15 @@
     right: 8px;
     bottom: 8px;
     border-radius: 16px;
-  }
-
-.spectrum-Slider--round .spectrum-Slider-handle:focus {
-      border-width: 2px;
-    }
-
-.spectrum-Slider--round .spectrum-Slider-input {
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-    opacity: 1;
     transform: rotate(-45deg);
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    transition: background-color 125ms ease-in-out;
   }
 
-.spectrum-Slider--round .spectrum-Slider-input::after {
+.spectrum-Slider--round .spectrum-Slider-handle::after {
       content: '';
       position: absolute;
       top: 50%;
@@ -293,6 +299,20 @@
       transform: translateY(-50%);
       transition: background-color 125ms ease-in-out;
     }
+
+.spectrum-Slider--round .spectrum-Slider-handle:active,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-focused,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-dragged {
+      border-width: 2px;
+      cursor: ns-resize;
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }
+
+.spectrum-Slider--round .spectrum-Slider-input {
+    width: 100%;
+    height: 100%;
+  }
 
 .spectrum-Slider.is-disabled {
   cursor: default;
