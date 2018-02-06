@@ -362,6 +362,16 @@ markup: |
     margin-left: 12px;
   }
 
+a.spectrum-Button {
+  /* Remove appearance for clickable types in iOS and Safari. */
+  -webkit-appearance: none;
+  /* Make link text not selectable  */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .spectrum-Button--action {
   font-size: 0.875rem;
   font-weight: 400;
@@ -2974,6 +2984,10 @@ markup: |
 .spectrum-TabList-item.is-disabled {
     cursor: default;
   }
+
+.spectrum-TabList-item.is-disabled .spectrum-TabList-item-label {
+      cursor: default;
+    }
 
 .spectrum-TabList-item-label {
   cursor: pointer;
@@ -7368,6 +7382,11 @@ markup: |
   list-style: none;
   position: relative;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
 }
 
 .spectrum-TreeView-item {
@@ -7390,6 +7409,7 @@ markup: |
   /* Be inline block with 100% width to prevent margin collapse */
   display: inline-block;
   box-sizing: border-box;
+  cursor: pointer;
 
   width: 100%;
 
@@ -7418,6 +7438,7 @@ markup: |
     position: absolute;
     left: 8px;
     right: 6px;
+    z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
     margin-top: -8px;
@@ -7874,6 +7895,12 @@ markup: |
 
   <button class="spectrum-Button spectrum-Button--primary"
   disabled>Button</button>
+
+  <br><br>
+
+  <a role="button" href="#" class="spectrum-Button spectrum-Button--primary">Button</a>
+
+  <a role="button" class="spectrum-Button spectrum-Button--primary is-disabled">Button</a>
 
 */
 
@@ -12243,11 +12270,12 @@ markup: |
   color: rgb(75, 75, 75);
 }
 
-.spectrum-TreeView-link:hover {
+.spectrum-TreeView-link:hover,
+  .spectrum-TreeView-link.is-selected {
     color: rgb(44, 44, 44);
   }
 
-.spectrum-TreeView-link:hover::before {
+.spectrum-TreeView-link:hover::before, .spectrum-TreeView-link.is-selected::before {
       background-color: rgba(44, 44, 44, .04);
     }
 
@@ -12259,5 +12287,10 @@ markup: |
       background-color: rgba(44, 44, 44, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
+    }
+
+.spectrum-TreeView-link.is-drop-target::before {
+      background-color: rgba(20, 115, 230, .1);
       box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
     }

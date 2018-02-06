@@ -73,6 +73,12 @@ markup: |
   <button class="spectrum-Button spectrum-Button--primary"
   disabled>Button</button>
 
+  <br><br>
+
+  <a role="button" href="#" class="spectrum-Button spectrum-Button--primary">Button</a>
+
+  <a role="button" class="spectrum-Button spectrum-Button--primary is-disabled">Button</a>
+
 */
 .spectrum--light .spectrum-Button--primary {
   background-color: rgba(0, 0, 0, 0);

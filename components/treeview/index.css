@@ -91,6 +91,11 @@ markup: |
   list-style: none;
   position: relative;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
 }
 
 .spectrum-TreeView-item {
@@ -113,6 +118,7 @@ markup: |
   /* Be inline block with 100% width to prevent margin collapse */
   display: inline-block;
   box-sizing: border-box;
+  cursor: pointer;
 
   width: 100%;
 
@@ -141,6 +147,7 @@ markup: |
     position: absolute;
     left: 8px;
     right: 6px;
+    z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
     margin-top: -8px;

@@ -11,10 +11,11 @@
 .spectrum-TreeView-link {
   color: rgb(180, 180, 180);
 }
-.spectrum-TreeView-link:hover {
+.spectrum-TreeView-link:hover,
+  .spectrum-TreeView-link.is-selected {
     color: rgb(226, 226, 226);
   }
-.spectrum-TreeView-link:hover::before {
+.spectrum-TreeView-link:hover::before, .spectrum-TreeView-link.is-selected::before {
       background-color: rgba(226, 226, 226, .04);
     }
 .spectrum-TreeView-link.focus-ring {
@@ -24,5 +25,9 @@
       background-color: rgba(226, 226, 226, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+      box-shadow: 0px 0px 0px 2px rgb(20, 115, 230) inset;
+    }
+.spectrum-TreeView-link.is-drop-target::before {
+      background-color: rgba(38, 128, 235, .1);
       box-shadow: 0px 0px 0px 2px rgb(20, 115, 230) inset;
     }

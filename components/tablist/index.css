@@ -40,6 +40,10 @@
     cursor: default;
   }
 
+.spectrum-TabList-item.is-disabled .spectrum-TabList-item-label {
+      cursor: default;
+    }
+
 .spectrum-TabList-item-label {
   cursor: pointer;
   vertical-align: top;
