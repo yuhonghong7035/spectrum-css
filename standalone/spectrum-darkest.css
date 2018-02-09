@@ -1,8 +1,6 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 .spectrum {
@@ -28,20 +26,21 @@
 
 /* topdoc
 ---
-  name: Typography - Default
-  description: The default Spectrum Typography elements
-  markup: |
-    <h1 class="spectrum-Heading--display">Display (h1)</h1>
-    <h2 class="spectrum-Heading--pageTitle">Page Title (h2)</h2>
-    <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
-    <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
-    <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
+name: Typography - Default
+description: The default Spectrum Typography elements
+status: Beta
+markup: |
+  <h1 class="spectrum-Heading--display">Display (h1)</h1>
+  <h2 class="spectrum-Heading--pageTitle">Page Title (h2)</h2>
+  <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
+  <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
+  <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
 
-    <p class="spectrum-Body--small">Small Body Text</p>
-    <p class="spectrum-Body">Default Body Text</p>
-    <p class="spectrum-Body--secondary">Secondary Body Text</p>
-    <p class="spectrum-Body--italic"> Body Text Italic</p>
-    <p class="spectrum-Body--large">Large Body Text</p>
+  <p class="spectrum-Body--small">Small Body Text</p>
+  <p class="spectrum-Body">Default Body Text</p>
+  <p class="spectrum-Body--secondary">Secondary Body Text</p>
+  <p class="spectrum-Body--italic"> Body Text Italic</p>
+  <p class="spectrum-Body--large">Large Body Text</p>
 
 */
 
@@ -135,6 +134,7 @@
 ---
 name: Link - Default
 description: A link
+status: Released
 markup: |
   <a href="#" class="spectrum-Link">Link using spectrum-Link</a>
 
@@ -169,6 +169,7 @@ markup: |
 ---
 name: Link - Disabled
 description: A disabled link
+status: Released
 markup: |
   <p> This uses <a class="spectrum-Link is-disabled">is-disabled</a>.</p>
 
@@ -188,6 +189,7 @@ markup: |
 ---
 name: Link - Subtle
 description: A subtle link
+status: Released
 markup: |
   <p> This uses <a href="#" class="spectrum-Link
   spectrum-Link--subtle">spectrum-Link--subtle</a>.</p>
@@ -536,9 +538,8 @@ a.spectrum-Button {
 /* topdoc
 ---
 name: Alert - Closable
-description: >-
-  The closable Spectrum alert. It has a close button in the footer.
-  Combine this strategy with any variant.
+description: The closable Spectrum alert. It has a close button in the footer. Combine this strategy with any variant.
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -730,6 +731,7 @@ markup: |
 ---
 name: Label - Default
 description: A Spectrum label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
 
@@ -775,6 +777,7 @@ markup: |
 ---
 name: Label - Large
 description: A large Spectrum label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
   style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
@@ -875,10 +878,15 @@ markup: |
   transition: border 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }
 
+:root {
+  /* Field group */
+}
+
 /* topdoc
 ---
 name: Field Group - Default
 description: The Spectrum radio group 'default'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup">
     <div class="spectrum-Radio">
@@ -930,6 +938,7 @@ markup: |
 ---
 name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">
@@ -966,6 +975,7 @@ markup: |
 ---
 name: Field Group - Labels Below
 description: The Spectrum radio group 'labelsBelow'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">
     <div class="spectrum-Radio">
@@ -1145,6 +1155,7 @@ markup: |
 /* topdoc
 name: Combo Box
 description: A combo box uses the input group component to display a field with a button next to it
+status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-InputGroup">
@@ -1196,11 +1207,13 @@ markup: |
       </svg>
     </button>
   </div>
+
 */
 
 /* topdoc
 name: Combo Box - Quiet
 description: A combo box uses the input group component to display a field with a button next to it
+status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
@@ -1252,6 +1265,7 @@ markup: |
       </svg>
     </button>
   </div>
+
 */
 
 .spectrum-InputGroup {
@@ -1450,6 +1464,7 @@ markup: |
 ---
 name: Tooltip
 description: A Spectrum tooltip
+status: Released
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top spectrum-Tooltip--success is-open">
     <span class="spectrum-Tooltip-label">
@@ -1638,6 +1653,7 @@ markup: |
 ---
 name: Loader - Default
 description: A Spectrum determinate loader of default type (round)
+status: Beta
 markup: |
   <div class="spectrum-Loader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
 
@@ -1657,6 +1673,7 @@ markup: |
 ---
 name: Loader - Default - Small
 description: A Spectrum Loader of default type (round) in small size
+status: Beta
 markup: |
   <div class="spectrum-Loader spectrum-Loader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
 
@@ -1671,6 +1688,7 @@ markup: |
 ---
 name: Loader - Default - Large
 description: A Spectrum Loader of default type (round) in large size
+status: Beta
 markup: |
   <div class="spectrum-Loader spectrum-Loader--large" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
 
@@ -1685,6 +1703,7 @@ markup: |
 ---
 name: Loader - Default - Full Page
 description: A Spectrum loader of default type (round) for full page overlays.
+status: Beta
 markup: |
   <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
     <div class="spectrum-Loader spectrum-Loader--fullpage" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="background-position: 50% center;"></div>
@@ -1701,6 +1720,7 @@ markup: |
 ---
 name: Loader - Indeterminate
 description: An indeterminate Spectrum Loader of default type (round)
+status: Beta
 markup: |
   <span class="spectrum-Loader spectrum-Loader--indeterminate"></span>
 
@@ -1727,6 +1747,7 @@ markup: |
 ---
 name: Loader - Indeterminate - Small
 description: A Spectrum Loader of default type (round) in small size
+status: Beta
 markup: |
   <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--small"></span>
 
@@ -1743,6 +1764,7 @@ markup: |
 ---
 name: Loader - Indeterminate - Large
 description: An indeterminate Spectrum Loader of default type (round) in large size
+status: Beta
 markup: |
   <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--large"></span>
 
@@ -1759,6 +1781,7 @@ markup: |
 ---
 name: Loader - Indeterminate - Full Page
 description: An indeterminate Spectrum loader of default type (round) for full page overlays
+status: Beta
 markup: |
   <div style="width: 200px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
     <span class="spectrum-Loader spectrum-Loader--indeterminate spectrum-Loader--indeterminate--fullpage"></span>
@@ -1777,6 +1800,7 @@ markup: |
 ---
 name: Loader - Bar - Default
 description: A Spectrum bar loader
+status: Beta
 markup: |
   <div style="width: 200px; height: 25px; padding-top: 10px;">
     <div class="spectrum-Loader--bar" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
@@ -1868,6 +1892,7 @@ markup: |
 ---
 name: Loader - Bar - Small
 description: A Spectrum 'small' bar loader
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -1920,6 +1945,7 @@ markup: |
 ---
 name: Loader - Bar - Full Page
 description: A Spectrum bar loader for full page overlays
+status: Beta
 markup: |
   <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
     <div>
@@ -1939,6 +1965,7 @@ markup: |
 ---
 name: Toast - Default
 description: The default toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast">
     <div class="spectrum-Toast-content">This is a toast.</div>
@@ -2078,6 +2105,7 @@ markup: |
 ---
 name: Dialog - Default
 description: The Spectrum Dialog.
+status: Released
 markup: |
   <div>
     <h4>Confirmation dialog</h4>
@@ -2313,6 +2341,7 @@ markup: |
 ---
 name: Dialog - Fullscreen
 description: The Spectrum 'fullscreen' dialog
+status: Released
 markup: |
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Fullscreen Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreen" id="fullscreenDialog">
@@ -2471,6 +2500,7 @@ markup: |
 ---
 name: Dialog - Fullscreen Takeover
 description: The Spectrum 'fullscreen takeover' dialog
+status: Released
 markup: |
   <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling, false)">Open Fullscreen Takeover</button>
   <div class="spectrum-Dialog spectrum-Dialog--fullscreenTakeover" id="fullscreenTakeoverDialog">
@@ -2681,7 +2711,6 @@ markup: |
   height: 2px;
   position: relative;
   margin-left: 0;
-  transition: all 125ms ease-in-out;
 }
 
 .spectrum-Slider-track--buffer {
@@ -2718,7 +2747,7 @@ markup: |
   border-width: 2px;
   border-style: solid;
 
-  transition: all 125ms ease-in-out;
+  transition: border-width 125ms ease-in-out;
 }
 
 .spectrum-Slider-handle:active,
@@ -2863,9 +2892,6 @@ markup: |
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
-
-    /* Why? */
-    transition: all 125ms ease-in-out;
 
     box-sizing: border-box;
     outline: none;
@@ -3164,6 +3190,7 @@ markup: |
 ---
 name: Steplist - Plain
 description: A steplist w/o labels or tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist spectrum-Steplist--small">
     <div class="spectrum-Steplist-item is-complete">
@@ -3292,6 +3319,7 @@ markup: |
 ---
 name: Steplist - With Label
 description: A steplist with labels
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item is-complete">
@@ -3456,6 +3484,7 @@ markup: |
 ---
 name: Steplist - With Tooltip
 description: A steplist with tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">
@@ -3521,8 +3550,9 @@ markup: |
 
 /* topdoc
 ---
-name: Toggle Switch - On/Off
-description: The Spectrum toggle on/off
+name: Switch - On/Off
+description: The Spectrum Switch
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -3660,6 +3690,7 @@ markup: |
 ---
 name: Toggle Switch - A/B
 description: The Spectrum toggle A/B
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -3761,6 +3792,7 @@ markup: |
 ---
 name: Flyout
 description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
+status: Beta
 markup: |
 
   <div class="spectrum-Popover is-open">
@@ -3778,6 +3810,7 @@ markup: |
 /* topdoc
 name: Dropdown - Default
 description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
+status: Released
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown" style="width: 195px;">
@@ -3886,6 +3919,7 @@ markup: |
 /* topdoc
 name: Dropdown - Quiet
 description: A Spectrum 'quiet' dropdown.
+status: Released
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown spectrum-Dropdown--quiet" style="width: 195px;">
@@ -3939,6 +3973,7 @@ markup: |
 /* topdoc
 name: Dropdown - Invalid
 description: A Spectrum 'invalid' dropdown element. This is also a good example of how to use a custom icon.
+status: Released
 markup: |
   <h4>Closed</h4>
   <div class="spectrum-Dropdown is-invalid" style="width: 195px;">
@@ -4055,6 +4090,7 @@ markup: |
 ---
 name: Popover - Dialog style
 description: Spectrum Popovers are implemented using the Dialog's inner elements.
+status: Beta
 markup: |
   <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
     <div class="spectrum-Dialog-header">
@@ -4114,6 +4150,7 @@ markup: |
     </div>
     <div class="spectrum-Popover-tip"></div>
   </div>
+
 */
 
 .spectrum-Popover--left.spectrum-Popover--withTip {
@@ -4169,6 +4206,7 @@ markup: |
 ---
 name: SplitButton - CTA
 description: A CTA split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -4189,6 +4227,7 @@ markup: |
 ---
 name: SplitButton - Primary
 description: A primary split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -4209,6 +4248,7 @@ markup: |
 ---
 name: SplitButton - Secondary
 description: A secondary split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -4285,6 +4325,7 @@ markup: |
 ---
 name: Accordion - Default
 description: The default spectrum accordion
+status: Beta
 markup: |
   <div class="spectrum-Accordion">
     <div class="spectrum-Accordion-item is-open">
@@ -4413,6 +4454,7 @@ markup: |
 ---
 name: Action Menu
 description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.
+status: Beta
 markup: |
 
   <div class="spectrum-ActionMenu">
@@ -4505,6 +4547,7 @@ markup: |
 /* topdoc
 ---
 name: Field Label
+status: Beta
 description: >-
   Field label for use with form inputs.
 markup: |
@@ -4534,6 +4577,7 @@ markup: |
 /* topdoc
 ---
 name: Field Label - Left
+status: Beta
 description: >-
   Field label for use with form inputs; left variation.
 markup: |
@@ -4624,6 +4668,7 @@ markup: |
 ---
 name: Search
 description: The searchy, cleary field.
+status: Beta
 markup: |
   <form class="spectrum-Search">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input">
@@ -4656,6 +4701,7 @@ markup: |
 ---
 name: Search - Quiet
 description: The quiet searchy, cleary field.
+status: Beta
 markup: |
   <form class="spectrum-Search">
     <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-Search-input">
@@ -4870,6 +4916,7 @@ markup: |
 ---
 name: Calendar - Default
 description: The default calendar
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
@@ -4957,12 +5004,14 @@ markup: |
        </table>
      </div>
   </div>
+
 */
 
 /* topdoc
 ---
 name: Calendar - Disabled
 description: The disabled calendar
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
@@ -5050,12 +5099,14 @@ markup: |
        </table>
      </div>
   </div>
+
 */
 
 /* topdoc
 ---
 name: Calendar - Focused
 description: A calendar demonstrating focused dates
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
@@ -5143,6 +5194,7 @@ markup: |
        </table>
     </div>
   </div>
+
 */
 
 /* topdoc
@@ -5152,6 +5204,7 @@ description: |
     A calendar with a range selected.
     `.is-selection-start` goes on the first day in the selection, and `.is-range-start` goes on the first day of each week or month in the middle of a selection (but not the first day of the selection).
     `.is-selection-end` goes on the last day of the selection, and `.is-range-end` goes on the last day of each week or month in the middle of the selection (but not on the last day of the selection).
+status: Beta
 markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
@@ -5239,6 +5292,7 @@ markup: |
        </table>
      </div>
   </div>
+
 */
 
 .spectrum-Calendar {
@@ -5481,6 +5535,7 @@ markup: |
 ---
 name: Table - Standard
 description: The standard table
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">
@@ -5535,6 +5590,7 @@ markup: |
 ---
 name: Table - Divs
 description: The standard table with divs
+status: Beta
 markup: |
   <div class="spectrum-Table">
     <div class="spectrum-Table-head" style="display: flex">
@@ -5587,6 +5643,7 @@ markup: |
 ---
 name: Table - Divs Quiet
 description: The standard table with divs
+status: Beta
 markup: |
   <div class="spectrum-Table spectrum-Table--quiet">
     <div class="spectrum-Table-head" style="display: flex">
@@ -5728,6 +5785,7 @@ markup: |
 ---
 name: Table - Quiet
 description: The quiet table
+status: Beta
 markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">
@@ -5786,6 +5844,7 @@ markup: |
 ---
 name: Table - Standard Multi-Select
 description: The standard multi-select table
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">
@@ -5918,6 +5977,7 @@ markup: |
 ---
 name: Table - Quiet Multi-Select
 description: The quiet multi-select table
+status: Beta
 markup: |
   <table class="spectrum-Table spectrum-Table--quiet">
     <thead class="spectrum-Table-head">
@@ -6042,6 +6102,7 @@ markup: |
 ---
 name: Table - Column Dividers
 description: The standard table with column dividers
+status: Beta
 markup: |
   <table class="spectrum-Table">
     <thead class="spectrum-Table-head">
@@ -6092,8 +6153,13 @@ markup: |
 
 */
 
+:root {
+  /* Rating icon */
+}
+
 .spectrum-Rating {
   cursor: pointer;
+  position: relative;
 }
 
 .spectrum-Rating.is-disabled {
@@ -6101,11 +6167,20 @@ markup: |
     pointer-events: none;
   }
 
+.spectrum-Rating-input {
+  position: absolute;
+  width: 120px; /* 120px */
+  height: 16px; /* 16px; */
+  opacity: 0.0001;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24px;
-  height: 16px;
+  width: 24px; /* 24px; */
+  height: 16px; /* 16px; */
   float: left;
 }
 
@@ -6126,134 +6201,138 @@ markup: |
 
 /* topdoc
 ---
-  name: TagList - Default
-  description: A taglist with items that cannot be edited.
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="list">
-      <div class="spectrum-TagList-item" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 1</span>
-      </div>
-      <div class="spectrum-TagList-item is-invalid" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 2</span>
-      </div>
-      <div class="spectrum-TagList-item is-disabled" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 2</span>
-      </div>
+name: TagList - Default
+description: A taglist with items that cannot be edited.
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="list">
+    <div class="spectrum-TagList-item" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 1</span>
     </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+    </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: TagList - Removable
-  description: An editable taglist.
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-TagList-item" tabindex="0" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 1</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-invalid" tabindex="0" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 2</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 2" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-disabled" tabindex="0" role="listitem">
-        <span class="spectrum-TagList-item-label">Tag 2</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3" tabindex="-1" disabled>
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
+name: TagList - Removable
+description: An editable taglist.
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 1</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 1" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
     </div>
+    <div class="spectrum-TagList-item is-invalid" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 2" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag 3" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: TagList - Avatars
-  description: The Spectrum tag list with avatars
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-disabled" role="listitem">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
+name: TagList - Avatars
+description: The Spectrum tag list with avatars
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
     </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
+      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: TagList - Icons
-  description: The Spectrum tag list with icons
-  markup: |
-    <div class="spectrum-TagList" role="list" aria-label="Tags">
-      <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+name: TagList - Icons
+description: The Spectrum tag list with icons
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
-        </svg>
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
-      <div class="spectrum-TagList-item is-disabled" role="listitem">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-          <use xlink:href="#spectrum-icon-24-SentimentPositive" />
-        </svg>
-        <span class="spectrum-TagList-item-label">Shantanu</span>
-        <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
-          <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-            <use xlink:href="#spectrum-css-icon-TagClose" />
-          </svg>
-        </button>
-      </div>
+      </button>
     </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-TagList-item-removeButton spectrum-Button spectrum-Button--icon" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
 
 */
 
@@ -6361,6 +6440,7 @@ markup: |
 ---
 name: Search Within
 description: The Spectrum search within field. Override the width of the component where necessary.
+status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-SearchWithin">
@@ -6537,6 +6617,7 @@ markup: |
 ---
 name: Miller - Default
 description: The default spectrum miller column
+status: Beta
 markup: |
   <div class="spectrum-MillerColumns">
     <ul class="spectrum-MillerColumn">
@@ -6857,6 +6938,7 @@ markup: |
 ---
 name: Pagination - Explicit
 description: A Spectrum 'explicit' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--icon">
@@ -6891,6 +6973,7 @@ markup: |
 ---
 name: Pagination - Listing
 description: A Spectrum 'listing' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
@@ -6935,6 +7018,7 @@ markup: |
 ---
 name: Pagination - Button Style CTA
 description: A Spectrum 'button style call-to-action' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-prevButton">
@@ -6997,6 +7081,7 @@ markup: |
 ---
 name: Pagination - Button Style Primary
 description: A Spectrum 'button style primary' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-prevButton">
@@ -7018,6 +7103,7 @@ markup: |
 ---
 name: Pagination - Button Style Secondary
 description: A Spectrum 'button style secondary' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--secondary spectrum-Pagination-prevButton">
@@ -7051,6 +7137,7 @@ markup: |
 ---
 name: Banner - Info
 description: The Spectrum banner 'info'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--info">
     <div class="spectrum-Banner-header">Most Popular</div>
@@ -7063,6 +7150,7 @@ markup: |
 ---
 name: Banner - Warning
 description: The Spectrum banner 'warning'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--warning">
     <div class="spectrum-Banner-header">Purchase Soon</div>
@@ -7075,6 +7163,7 @@ markup: |
 ---
 name: Banner - Error
 description: The Spectrum banner 'error'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--error">
     <div class="spectrum-Banner-header">Purchase Soon</div>
@@ -7087,6 +7176,7 @@ markup: |
 ---
 name: Banner - Corner Placement
 description: The Spectrum banner 'corner placement'
+status: Beta
 markup: |
   <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
     <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">
@@ -7107,6 +7197,7 @@ markup: |
 ---
 name: Rule - Default
 description:
+status: Beta
 markup: |
   <h2 class="spectrum-Heading--subtitle1">Main Section (Text Customizable or Optional)</h2>
   <hr class="spectrum-Rule">
@@ -7131,6 +7222,7 @@ markup: |
 ---
 name: Rule - Sub Section
 description:
+status: Beta
 markup: |
   <h2 class="spectrum-Heading--subtitle1">Sub Section (Text Customizable or Optional)</h2>
   <hr class="spectrum-Rule spectrum-Rule--subsection">
@@ -7146,6 +7238,7 @@ markup: |
 ---
 name: Rule - Sub Section 2
 description:
+status: Beta
 markup: |
   <h2 class="spectrum-Heading--subtitle1">Sub Section 2 (Text Customizable or Optional)</h2>
   <hr class="spectrum-Rule spectrum-Rule--subsection2">
@@ -7161,6 +7254,7 @@ markup: |
 ---
 name: Rule - Panel
 description:
+status: Beta
 markup: |
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
     <use xlink:href="#spectrum-icon-18-Delete" />
@@ -7192,6 +7286,7 @@ markup: |
 ---
 name: Status Light - Status Colors
 description: Status Colors (300) - Color has meaning.
+status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
@@ -7218,6 +7313,7 @@ markup: |
 ---
 name: Status Light - Category Colors
 description: Category Colors (300) - Color is organizational.
+status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Multivariate Test</div>
@@ -7299,6 +7395,7 @@ markup: |
 /* topdoc
 ---
 name: Tree View - Nested
+status: Beta
 description: |
   A nested Spectrum tree view.
   Because the tree view is nested, the visibility of child items is controlled by the open state of the parent item.
@@ -7478,6 +7575,7 @@ markup: |
 /* topdoc
 ---
 name: Tree View - Flat
+status: Beta
 description: |
   A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
   With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."
@@ -7598,6 +7696,7 @@ markup: |
 /* topdoc
 ---
 name: Tree View - Nested with icons
+status: Beta
 description: |
   A nested Spectrum tree view with icons
 markup: |
@@ -7735,6 +7834,7 @@ markup: |
 /* topdoc
 ---
 name: Page
+status: n/a
 description: |
   The outer page container. The `<body>` tag should only have the `.spectrum` class if using a standalone CSS file.
   If using multistops, the `<body>` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
@@ -7841,6 +7941,7 @@ description: |
 ---
 name: Button - CTA
 description: A Spectrum 'call-to-action' button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -7886,6 +7987,7 @@ markup: |
 ---
 name: Button - Primary
 description: A Spectrum 'primary' button (which is also the default style)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -7939,6 +8041,7 @@ markup: |
 ---
 name: Button - Secondary
 description: A Spectrum 'secondary' style button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -7986,6 +8089,7 @@ markup: |
 ---
 name: Button - Warning
 description: A Spectrum button in 'warning' style
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8033,6 +8137,7 @@ markup: |
 ---
 name: Button - Quiet Primary
 description: A 'quiet primary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8081,6 +8186,7 @@ markup: |
 ---
 name: Button - Quiet Secondary
 description: A 'quiet secondary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8129,6 +8235,7 @@ markup: |
 ---
 name: Button - Action
 description: A Spectrum 'action' button, used in the action bar
+status: Released 
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8202,6 +8309,7 @@ markup: |
 ---
 name: Button - Quiet Action
 description: A Spectrum 'action' button, used in the action bar
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8276,6 +8384,7 @@ markup: |
 ---
 name: Button - Toggle
 description: A Spectrum 'toggle' button, used in toolbar
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8307,6 +8416,7 @@ markup: |
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
   </button>
+
 */
 
 .spectrum-Button--toggle {
@@ -8378,6 +8488,7 @@ markup: |
 ---
 name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8426,6 +8537,7 @@ markup: |
 ---
 name: Logic Button AND
 description: The Spectrum logical AND button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8465,6 +8577,7 @@ markup: |
 ---
 name: Logic Button OR
 description: The Spectrum logical OR button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8504,6 +8617,7 @@ markup: |
 ---
 name: Button - Icon
 description: A Spectrum icon-only button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8672,6 +8786,7 @@ markup: |
 ---
 name: Breadcrumb - Default
 description: The default Spectrum breadcrumb
+status: Beta
 modifiers:
   ':hover': Hover state
   ':focus': Focused
@@ -8703,6 +8818,7 @@ markup: |
 ---
 name: Breadcrumb - Title
 description: A Spectrum 'page title' breadcrumb
+status: Beta
 modifiers:
   ':hover': Hover state
   ':focus': Focused
@@ -8750,6 +8866,7 @@ markup: |
 ---
 name: Alert - Info
 description: The Spectrum alert 'info'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--info">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -8773,6 +8890,7 @@ markup: |
 ---
 name: Alert - Error
 description: The Spectrum alert 'error'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -8796,6 +8914,7 @@ markup: |
 ---
 name: Alert - Success
 description: The Spectrum alert 'success'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--success">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -8819,6 +8938,7 @@ markup: |
 ---
 name: Alert - Warning
 description: The Spectrum alert 'warning'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--warning">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -8889,6 +9009,7 @@ markup: |
 ---
 name: Checkbox - Default
 description: The Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -8978,6 +9099,7 @@ markup: |
 ---
 name: Checkbox - Disabled
 description: The 'disabled' Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9028,6 +9150,7 @@ markup: |
 ---
 name: Checkbox - Invalid
 description: The 'invalid' Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9080,6 +9203,7 @@ markup: |
 ---
 name: Label - Special
 description: A special label
+status: Beta
 markup: |
   <span class="spectrum-Label spectrum-Label--and">And</span>
   <span class="spectrum-Label spectrum-Label--or">Or</span>
@@ -9128,6 +9252,7 @@ markup: |
 ---
 name: Radio - Default
 description: The Spectrum radio thingy
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9194,6 +9319,7 @@ markup: |
 ---
 name: Radio - Invalid
 description: The 'invalid' Spectrum radio
+status: Released
 modifiers:
   ':hover': Hover state
   ':active': Active state
@@ -9223,6 +9349,7 @@ markup: |
       <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>
   </form>
+
 */
 
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-input + .spectrum-Radio-button {
@@ -9247,6 +9374,7 @@ markup: |
 ---
 name: Radio - Disabled
 description: The 'disabled' Spectrum radio
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9281,6 +9409,7 @@ markup: |
 ---
 name: Text Area - Default
 description: A Spectrum text area - (a multiline text field)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9301,6 +9430,7 @@ markup: |
 ---
 name: Text Area - Quiet
 description: A Spectrum text area - quiet
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9321,6 +9451,7 @@ markup: |
 ---
 name: Text Field - Default
 description: A Spectrum text field
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9404,6 +9535,7 @@ markup: |
 ---
 name: Text Field - Quiet
 description: A Spectrum text field - quiet
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -9502,6 +9634,7 @@ markup: |
 ---
 name: Tooltip
 description: A Spectrum tooltip
+status: Released
 markup: |
   <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
     <span class="spectrum-Tooltip-label">Normal Tooltip</span>
@@ -9535,6 +9668,7 @@ markup: |
     <span class="spectrum-Tooltip-label"><a href="#" class="spectrum-Link spectrum-Link--subtle">Link to</a></span>
     <span class="spectrum-Tooltip-tip"></span>
   </span>
+
 */
 
 .spectrum-Tooltip,
@@ -9644,6 +9778,7 @@ markup: |
 ---
 name: Dialog - Error
 description: The Spectrum 'error' dialog
+status: Released
 markup:
   <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
   <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
@@ -9673,25 +9808,26 @@ markup:
 
 /* topdoc
 ---
-  name: Slider - Default
-  description: The default Spectrum Slider element
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20">
-        </div>
+name: Slider - Default
+description: The default Spectrum Slider element
+status: Released
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20">
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
-        </div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled>
       </div>
     </div>
+  </div>
 
 
 
@@ -9702,326 +9838,337 @@ markup:
 
 /* topdoc
 ---
-  name: Slider - With Label
-  description: The default Spectrum Slider element
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-8" >
-        </div>
+name: Slider - With Label
+description: The default Spectrum Slider element
+status: Released
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-8" for="spectrum-Slider-input-8">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-8">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-8" >
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-9" for="spectrum-Slider-input-9">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-9">14</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-9" >
-        </div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-9" for="spectrum-Slider-input-9">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-9">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-9" >
       </div>
     </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: Slider - Filled
-  description: Spectrum slider with fill
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-6">14</div>
+name: Slider - Filled
+description: Spectrum slider with fill
+status: Released
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-6" for="spectrum-Slider-input-6">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-6">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--fill" style="width: 40%"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="width: 40%"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-6">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-6">
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-7" for="spectrum-Slider-input-7">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-7">14</div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-7" for="spectrum-Slider-input-7">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-7">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--fill" style="width: 100%;"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--fill" style="width: 100%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-7">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-7">
       </div>
     </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: Slider - Double Handle
-  description: Spectrum slider with double handle, also known as ranged slider.
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider" role="group" aria-labelledby="spectrum-Slider-label-4">
-      <div class="spectrum-Slider-labelContainer" role="presentation">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-4" for="spectrum-Slider-input-4-0">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-4">14 - 48</div>
+name: Slider - Double Handle
+description: Spectrum slider with double handle, also known as ranged slider.
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider" role="group" aria-labelledby="spectrum-Slider-label-4">
+    <div class="spectrum-Slider-labelContainer" role="presentation">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-4" for="spectrum-Slider-input-4-0">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-4">14 - 48</div>
+    </div>
+    <div class="spectrum-Slider-controls" role="presentation">
+      <div class="spectrum-Slider-track" role="presentation">
+        <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;"></div>
       </div>
-      <div class="spectrum-Slider-controls" role="presentation">
-        <div class="spectrum-Slider-track" role="presentation">
-          <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" id="spectrum-Slider-input-4-0" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-0">
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" id="spectrum-Slider-input-4-1" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-1">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" id="spectrum-Slider-input-4-0" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-0">
       </div>
-    </fieldset>
-    <div class="spectrum-Slider is-disabled" role="group" aria-labelledby="spectrum-Slider-label-5">
-      <div class="spectrum-Slider-labelContainer" role="presentation">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-5" for="spectrum-Slider-input-5-0">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-5">14 - 48</div>
-      </div>
-      <div class="spectrum-Slider-controls" role="presentation">
-        <div class="spectrum-Slider-track" role="presentation">
-          <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;" role="presentation"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" disabled id="spectrum-Slider-input-5-0" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-0">
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" disabled id="spectrum-Slider-input-5-1" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-1">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" id="spectrum-Slider-input-4-1" aria-labelledby="spectrum-Slider-label-4 spectrum-Slider-input-4-1">
       </div>
     </div>
-*/
-
-/* topdoc
----
-  name: Slider - Video Player
-  description: Spectrum slider for video players, which display a buffer.
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-16" for="spectrum-Slider-input-16">Slider Label - Default</label>
-        <div class="spectrum-Slider-value">3:48</div>
+  </fieldset>
+  <div class="spectrum-Slider is-disabled" role="group" aria-labelledby="spectrum-Slider-label-5">
+    <div class="spectrum-Slider-labelContainer" role="presentation">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-5" for="spectrum-Slider-input-5-0">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-5">14 - 48</div>
+    </div>
+    <div class="spectrum-Slider-controls" role="presentation">
+      <div class="spectrum-Slider-track" role="presentation">
+        <div class="spectrum-Slider-track--fill" style="left: 20%; width: 40%;" role="presentation"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-16"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 20%;">
-          <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" id="spectrum-Slider-input-16">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 20%;" role="presentation">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="min" disabled id="spectrum-Slider-input-5-0" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-0">
+      </div>
+      <div class="spectrum-Slider-handle" style="left: 60%;" role="presentation">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" aria-label="max" disabled id="spectrum-Slider-input-5-1" aria-labelledby="spectrum-Slider-label-5 spectrum-Slider-input-5-1">
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-17" for="spectrum-Slider-input-17">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value">3:48</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-17"></div>
-          <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
-        </div>
-        <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
-          <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" disabled id="spectrum-Slider-input-17">
-        </div>
-      </div>
-    </div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: Slider - Tick
-  description: Spectrum tick slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--tick">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
+name: Slider - Video Player
+description: Spectrum slider for video players, which display a buffer.
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-16" for="spectrum-Slider-input-16">Slider Label - Default</label>
+      <div class="spectrum-Slider-value">3:48</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-16"></div>
+        <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 20%;">
+        <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" id="spectrum-Slider-input-16">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--tick is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-17" for="spectrum-Slider-input-17">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value">3:48</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <div class="spectrum-Slider-track--buffer" style="width: 50%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="spectrum-Slider-label-17"></div>
+        <div class="spectrum-Slider-track--fill" style="width: 30%;"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-          <div class="spectrum-Slider-tick-mark"></div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
-        </div>
+      <div class="spectrum-Slider-handle" tabindex="0" style="left: 20%;">
+        <input type="range" class="spectrum-Slider-input" aria-valuetext="3:48" value="228" min="0" max="760" disabled id="spectrum-Slider-input-17">
       </div>
     </div>
+  </div>
+
 */
 
 /* topdoc
 ---
-  name: Slider - Tick with Labels
-  description: Spectrum tick slider with labels
-  markup: |
-    <div class="spectrum-Slider">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-12" for="spectrum-Slider-input-12">Slider Label</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-12">14</div>
+name: Slider - Tick
+description: Spectrum tick slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--tick">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-14" for="spectrum-Slider-input-14">Slider Label</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-14">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">0</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">20</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">40</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">60</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">80</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">100</div>
-          </div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-12">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-14">
       </div>
     </div>
-    <div class="spectrum-Slider is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-13">14</div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--tick is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-15" for="spectrum-Slider-input-15">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-15">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
+        <div class="spectrum-Slider-tick-mark"></div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-ticks">
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">0</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">20</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">40</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">60</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">80</div>
-          </div>
-          <div class="spectrum-Slider-tick-mark">
-            <div class="spectrum-Slider-labelContainer">100</div>
-          </div>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-13">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-15">
       </div>
     </div>
+  </div>
+
 */
 
 /* topdoc
 ---
-  name: Slider - Ramp
-  description: Spectrum ramp slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--ramp">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
+name: Slider - Tick with Labels
+description: Spectrum tick slider with labels
+status: Released
+markup: |
+  <div class="spectrum-Slider">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-12" for="spectrum-Slider-input-12">Slider Label</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-12">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">0</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">20</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">40</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">60</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">80</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">100</div>
+        </div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20"  id="spectrum-Slider-input-10">
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" id="spectrum-Slider-input-12">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--ramp is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
+  </div>
+  <div class="spectrum-Slider is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-13" for="spectrum-Slider-input-13">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-13">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-ticks">
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">0</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">20</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">40</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">60</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">80</div>
+        </div>
+        <div class="spectrum-Slider-tick-mark">
+          <div class="spectrum-Slider-labelContainer">100</div>
+        </div>
       </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track">
-          <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
-          </svg>
-        </div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-11" >
-        </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-13">
       </div>
     </div>
+  </div>
+
+*/
+
+/* topdoc
+---
+name: Slider - Ramp
+description: Spectrum ramp slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--ramp">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-10" for="spectrum-Slider-input-10">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-10">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+        </svg>
+      </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20"  id="spectrum-Slider-input-10">
+      </div>
+    </div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--ramp is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-11" for="spectrum-Slider-input-11">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-11">14</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track">
+        <svg class="spectrum-Slider-track--ramp" viewBox="0 0 240 16" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"></path>
+        </svg>
+      </div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-11" >
+      </div>
+    </div>
+  </div>
+
 */
 
 .spectrum-Slider {
@@ -10064,13 +10211,13 @@ spectrum-slider-track-disabled(){
     border-color: rgb(180, 180, 180);
   }
 
-.spectrum-Slider-handle:.is-focused {
+.spectrum-Slider-handle.is-focused {
     border-color: rgb(20, 115, 230);
     background: rgb(20, 115, 230);
   }
 
 .spectrum-Slider-handle:active,
-  .spectrum-Slider-handle:.is-dragging {
+  .spectrum-Slider-handle.is-dragged {
     border-color: rgb(180, 180, 180);
     background: rgb(180, 180, 180);
   }
@@ -10168,38 +10315,39 @@ Todo: Determine if these are supposed to be pseudo classes
 
 /* topdoc
 ---
-  name: Slider - Color
-  description: Spectrum Color slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--color">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Slider Label - Default</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-0">#2680eb</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider-input-0">
-        </div>
+name: Slider - Color
+description: Spectrum Color slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--color">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-0" for="spectrum-Slider-input-0">Slider Label - Default</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-0">#2680eb</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" id="spectrum-Slider-input-0">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--color is-disabled">
-      <div class="spectrum-Slider-labelContainer">
-        <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label - Disabled</label>
-        <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">#2680eb</div>
-      </div>
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-track"></div>
-        <div class="spectrum-Slider-handle" style="left: 40%;">
-          <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" disabled id="spectrum-Slider-input-1">
-        </div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--color is-disabled">
+    <div class="spectrum-Slider-labelContainer">
+      <label class="spectrum-Slider-label" id="spectrum-Slider-label-1" for="spectrum-Slider-input-1">Slider Label - Disabled</label>
+      <div class="spectrum-Slider-value" role="textbox" aria-readonly="true" aria-labelledby="spectrum-Slider-label-1">#2680eb</div>
+    </div>
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-track"></div>
+      <div class="spectrum-Slider-handle" style="left: 40%;">
+        <input type="range" class="spectrum-Slider-input" value="14" aria-valuetext="#2680eb" step="2" min="10" max="20" disabled id="spectrum-Slider-input-1">
       </div>
     </div>
+  </div>
 
 
 */
@@ -10221,30 +10369,35 @@ Todo: Determine if these are supposed to be pseudo classes
 
 /* topdoc
 ---
-  name: Slider - Round
-  description: Spectrum round slider
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused state
-    :active: Active state
-  markup: |
-    <div class="spectrum-Slider spectrum-Slider--round">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle">
-          <input type="range" class="spectrum-Slider-input">
-        </div>
+name: Slider - Round
+description: Spectrum round slider
+status: Released
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused state
+  :active: Active state
+markup: |
+  <div class="spectrum-Slider spectrum-Slider--round">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-handle">
+        <input type="range" class="spectrum-Slider-input">
       </div>
     </div>
-    <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
-      <div class="spectrum-Slider-controls">
-        <div class="spectrum-Slider-handle">
-          <input type="range" class="spectrum-Slider-input">
-        </div>
+  </div>
+  <div class="spectrum-Slider spectrum-Slider--round spectrum-Slider--round--small">
+    <div class="spectrum-Slider-controls">
+      <div class="spectrum-Slider-handle">
+        <input type="range" class="spectrum-Slider-input">
       </div>
     </div>
+  </div>
 
 */
+
+.spectrum-Slider--round .spectrum-Slider-handle {
+    box-shadow: none;
+  }
 
 .spectrum-Slider--round .spectrum-Slider-handle::after {
       background-color: rgb(133, 133, 133);
@@ -10278,219 +10431,225 @@ Todo: Determine if these are supposed to be pseudo classes
 
 /* topdoc
 ---
-  name: TabList - Anchored
-  description: The Spectrum anchored tab list.
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Monday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tuesday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Wednesday</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Thursday</label>
-      </div>
-      <div class="spectrum-TabList-item is-disabled" tabindex="0">
-        <label class="spectrum-TabList-item-label">Friday</label>
-      </div>
-      <!-- Apply .is-focused to element below when corresponding tab is in focus -->
-      <div class="spectrum-TabList-item-line" style="width: 48px; left: 15px;"></div>
+name: TabList - Anchored
+description: The Spectrum anchored tab list.
+status: Beta
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--anchored">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Monday</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tuesday</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Wednesday</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Thursday</label>
+    </div>
+    <div class="spectrum-TabList-item is-disabled" tabindex="0">
+      <label class="spectrum-TabList-item-label">Friday</label>
+    </div>
+    <!-- Apply .is-focused to element below when corresponding tab is in focus -->
+    <div class="spectrum-TabList-item-line" style="width: 48px; left: 15px;"></div>
+  </div>
 
 */
 
 /* topdoc
 ---
-  name: TabList - Page
-  description: The Spectrum tab list with page variant
-  modifiers:
-    ':disabled': Disabled state
-    ':hover': Hover state
-    ':focus': Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="width: 28px; left: 8px;"></div>
+name: TabList - Page
+description: The Spectrum tab list with page variant
+status: Beta
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--page">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 1</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 2</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 3</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="width: 28px; left: 8px;"></div>
+  </div>
+
 */
 
 /* topdoc
 ---
-  name: TabList - Panel
-  description: The Spectrum tab list with panel variant
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use xlink:href="#spectrum-icon-24-Folder" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use xlink:href="#spectrum-icon-24-Image" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use xlink:href="#spectrum-icon-24-Filter" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use xlink:href="#spectrum-icon-24-Comment" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="width: 46px; left: 7px;"></div>
+name: TabList - Panel
+description: The Spectrum tab list with panel variant
+status: Beta
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+        <use xlink:href="#spectrum-icon-24-Folder" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 1</label>
     </div>
-
-    <br><br>
-
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use xlink:href="#spectrum-icon-18-Folder" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use xlink:href="#spectrum-icon-18-Image" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use xlink:href="#spectrum-icon-18-Filter" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use xlink:href="#spectrum-icon-18-Comment" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+        <use xlink:href="#spectrum-icon-24-Image" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 2</label>
     </div>
-
-    <br><br>
-
-    <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="width: 27px; left: 6px;"></div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+        <use xlink:href="#spectrum-icon-24-Filter" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 3</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+        <use xlink:href="#spectrum-icon-24-Comment" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="width: 46px; left: 7px;"></div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Folder">
+        <use xlink:href="#spectrum-icon-18-Folder" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Image">
+        <use xlink:href="#spectrum-icon-18-Image" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Filter">
+        <use xlink:href="#spectrum-icon-18-Filter" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Comment">
+        <use xlink:href="#spectrum-icon-18-Comment" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item-line" style="width: 17px; left: 7px;"></div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-TabList spectrum-TabList--horizontal spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 1</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 2</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 3</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="width: 27px; left: 6px;"></div>
+  </div>
+
 */
 
 /* topdoc
 ---
-  name: TabList - Panel - Vertical
-  description: The Spectrum tab list with panel variant and vertical orientation
-  modifiers:
-    :disabled: Disabled state
-    :hover: Hover state
-    :focus: Focused
-  markup: |
-    <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use xlink:href="#spectrum-icon-24-Folder" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use xlink:href="#spectrum-icon-24-Image" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use xlink:href="#spectrum-icon-24-Filter" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use xlink:href="#spectrum-icon-24-Comment" />
-        </svg>
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+name: TabList - Panel - Vertical
+description: The Spectrum tab list with panel variant and vertical orientation
+status: Beta
+modifiers:
+  :disabled: Disabled state
+  :hover: Hover state
+  :focus: Focused
+markup: |
+  <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+        <use xlink:href="#spectrum-icon-24-Folder" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 1</label>
     </div>
-
-    <br><br>
-
-    <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
-          <use xlink:href="#spectrum-icon-24-Folder" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
-          <use xlink:href="#spectrum-icon-24-Image" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
-          <use xlink:href="#spectrum-icon-24-Filter" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
-          <use xlink:href="#spectrum-icon-24-Comment" />
-        </svg>
-      </div>
-      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+        <use xlink:href="#spectrum-icon-24-Image" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 2</label>
     </div>
-
-    <br><br>
-
-    <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
-      <div class="spectrum-TabList-item is-selected" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 1</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 2</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 3</label>
-      </div>
-      <div class="spectrum-TabList-item" tabindex="0">
-        <label class="spectrum-TabList-item-label">Tab 4</label>
-      </div>
-      <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+        <use xlink:href="#spectrum-icon-24-Filter" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 3</label>
     </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+        <use xlink:href="#spectrum-icon-24-Comment" />
+      </svg>
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Folder">
+        <use xlink:href="#spectrum-icon-24-Folder" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Image">
+        <use xlink:href="#spectrum-icon-24-Image" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Filter">
+        <use xlink:href="#spectrum-icon-24-Filter" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Comment">
+        <use xlink:href="#spectrum-icon-24-Comment" />
+      </svg>
+    </div>
+    <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-TabList spectrum-TabList--vertical spectrum-TabList--panel">
+    <div class="spectrum-TabList-item is-selected" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 1</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 2</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 3</label>
+    </div>
+    <div class="spectrum-TabList-item" tabindex="0">
+      <label class="spectrum-TabList-item-label">Tab 4</label>
+    </div>
+    <div class="spectrum-TabList-item-line" style="height: 18px; top: 3px;"></div>
+  </div>
 
 */
 
@@ -10716,6 +10875,7 @@ Todo: Determine if these are supposed to be pseudo classes
 ---
 name: SelectList
 description: A list of options that can be used in a Popover.
+status: Beta
 markup: |
 
   <ul class="spectrum-SelectList" role="listbox">
@@ -10831,6 +10991,7 @@ markup: |
 ---
 name: Toast - Warning
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--warning">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -10858,6 +11019,7 @@ markup: |
 ---
 name: Toast - Error
 description: The error toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--error">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -10885,6 +11047,7 @@ markup: |
 ---
 name: Toast - Info
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--info">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -10912,6 +11075,7 @@ markup: |
 ---
 name: Toast - Success
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--success">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -10999,6 +11163,7 @@ markup: |
 ---
 name: Well
 description: A Spectrum well
+status: Beta
 markup: |
   <h3 class="spectrum-Heading--subtitle2">Well Label (Optional)</h3>
   <span class="spectrum-Well">
@@ -11039,6 +11204,7 @@ markup: |
 ---
 name: Stepper - Default
 description: A Spectrum stepper. Note that you must manually apply the is-focused class, and that the is-focused styles below don't look correct unless your cursor is actually in the stepper input field.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -11170,6 +11336,7 @@ markup: |
 ---
 name: Stepper - Quiet
 description: A Spectrum stepper - quiet
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -11522,8 +11689,10 @@ tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
 ---
 name: Rating - Default
 description: The Spectrum Rating stars
+status: Beta
 markup: |
   <div class="spectrum-Rating">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating - Default">
     <span class="spectrum-Rating-icon">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -11614,8 +11783,10 @@ markup: |
 ---
 name: Rating - Active
 description: The 'active' Spectrum rating
+status: Beta
 markup: |
   <div class="spectrum-Rating">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" aria-label="Rating - Active">
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -11692,12 +11863,14 @@ markup: |
 ---
 name: Rating - Disabled
 description: The 'disabled' Spectrum rating
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
   <div class="spectrum-Rating is-disabled">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="1" aria-label="Rating - Disabled" disabled>
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -11769,6 +11942,18 @@ markup: |
 .spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starInactive {
     display: block;
   }
+
+.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon,
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active),
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active {
+        color: rgb(55, 142, 240);
+
+      }
+
+.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
+          stroke: currentColor;
+          stroke-width: 1px;
+        }
 
 .spectrum-TagList-item {
   color: rgb(133, 133, 133);
@@ -11844,6 +12029,7 @@ markup: |
 ---
 name: Quick Actions
 description: Spectrum quick actions (requires an icon)
+status: Beta
 markup: |
   <div class="spectrum-QuickActions is-open">
     <button class="spectrum-QuickActions-item">
@@ -11925,6 +12111,7 @@ markup: |
 ---
 name: Cycle Button - Default
 description: A Spectrum cycle button
+status: Beta
 markup: |
   <button class="spectrum-CycleButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">
@@ -12067,6 +12254,7 @@ markup: |
 ---
 name: Shell
 description: The application shell.
+status: Beta
 markup: |
   <div style="margin: 0 0 10px 0">Full size example</div>
   <button variant="primary" class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Shell in Fullscreen Dialog</button>

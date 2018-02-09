@@ -1,8 +1,6 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 .spectrum-Banner {
@@ -21,6 +19,7 @@
 ---
 name: Banner - Info
 description: The Spectrum banner 'info'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--info">
     <div class="spectrum-Banner-header">Most Popular</div>
@@ -33,6 +32,7 @@ markup: |
 ---
 name: Banner - Warning
 description: The Spectrum banner 'warning'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--warning">
     <div class="spectrum-Banner-header">Purchase Soon</div>
@@ -45,6 +45,7 @@ markup: |
 ---
 name: Banner - Error
 description: The Spectrum banner 'error'
+status: Beta
 markup: |
   <div class="spectrum-Banner spectrum-Banner--error">
     <div class="spectrum-Banner-header">Purchase Soon</div>
@@ -57,6 +58,7 @@ markup: |
 ---
 name: Banner - Corner Placement
 description: The Spectrum banner 'corner placement'
+status: Beta
 markup: |
   <div style="width: 255px; height: 325px; background-color: #ccc; position: relative;">
     <div class="spectrum-Banner spectrum-Banner--info spectrum-Banner--corner">

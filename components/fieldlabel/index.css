@@ -1,13 +1,12 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Field Label
+status: Beta
 description: >-
   Field label for use with form inputs.
 markup: |
@@ -37,6 +36,7 @@ markup: |
 /* topdoc
 ---
 name: Field Label - Left
+status: Beta
 description: >-
   Field label for use with form inputs; left variation.
 markup: |

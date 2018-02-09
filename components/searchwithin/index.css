@@ -1,14 +1,13 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Search Within
 description: The Spectrum search within field. Override the width of the component where necessary.
+status: Beta
 markup: |
   <h4>Default</h4>
   <div class="spectrum-SearchWithin">

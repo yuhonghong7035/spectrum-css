@@ -1,8 +1,6 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 :root {
@@ -27,6 +25,7 @@
 ---
 name: Steplist - Plain
 description: A steplist w/o labels or tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist spectrum-Steplist--small">
     <div class="spectrum-Steplist-item is-complete">
@@ -155,6 +154,7 @@ markup: |
 ---
 name: Steplist - With Label
 description: A steplist with labels
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item is-complete">
@@ -319,6 +319,7 @@ markup: |
 ---
 name: Steplist - With Tooltip
 description: A steplist with tooltips
+status: Beta
 markup: |
   <div class="spectrum-Steplist">
     <div class="spectrum-Steplist-item u-tooltip-showOnHover is-complete">

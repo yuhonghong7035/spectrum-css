@@ -1,8 +1,6 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 :root {
@@ -53,7 +51,6 @@
   height: 2px;
   position: relative;
   margin-left: 0;
-  transition: all 125ms ease-in-out;
 }
 
 .spectrum-Slider-track--buffer {
@@ -90,7 +87,7 @@
   border-width: 2px;
   border-style: solid;
 
-  transition: all 125ms ease-in-out;
+  transition: border-width 125ms ease-in-out;
 }
 
 .spectrum-Slider-handle:active,
@@ -235,9 +232,6 @@
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
-
-    /* Why? */
-    transition: all 125ms ease-in-out;
 
     box-sizing: border-box;
     outline: none;

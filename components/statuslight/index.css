@@ -1,14 +1,13 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Status Light - Status Colors
 description: Status Colors (300) - Color has meaning.
+status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
@@ -35,6 +34,7 @@ markup: |
 ---
 name: Status Light - Category Colors
 description: Category Colors (300) - Color is organizational.
+status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Multivariate Test</div>

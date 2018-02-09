@@ -1,14 +1,13 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Miller - Default
 description: The default spectrum miller column
+status: Beta
 markup: |
   <div class="spectrum-MillerColumns">
     <ul class="spectrum-MillerColumn">

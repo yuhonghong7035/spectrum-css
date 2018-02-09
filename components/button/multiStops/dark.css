@@ -24,6 +24,7 @@
 ---
 name: Button - CTA
 description: A Spectrum 'call-to-action' button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -63,6 +64,7 @@ markup: |
 ---
 name: Button - Primary
 description: A Spectrum 'primary' button (which is also the default style)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -110,6 +112,7 @@ markup: |
 ---
 name: Button - Secondary
 description: A Spectrum 'secondary' style button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -151,6 +154,7 @@ markup: |
 ---
 name: Button - Warning
 description: A Spectrum button in 'warning' style
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -192,6 +196,7 @@ markup: |
 ---
 name: Button - Quiet Primary
 description: A 'quiet primary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -234,6 +239,7 @@ markup: |
 ---
 name: Button - Quiet Secondary
 description: A 'quiet secondary' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -276,6 +282,7 @@ markup: |
 ---
 name: Button - Action
 description: A Spectrum 'action' button, used in the action bar
+status: Released 
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -343,6 +350,7 @@ markup: |
 ---
 name: Button - Quiet Action
 description: A Spectrum 'action' button, used in the action bar
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -408,6 +416,7 @@ markup: |
 ---
 name: Button - Toggle
 description: A Spectrum 'toggle' button, used in toolbar
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -439,6 +448,7 @@ markup: |
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
   </button>
+
 */
 .spectrum--dark .spectrum-Button--toggle {
   background-color: rgba(0, 0, 0, 0);
@@ -499,6 +509,7 @@ markup: |
 ---
 name: Button - Quiet Warning
 description: A 'quiet warning' Spectrum button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -541,6 +552,7 @@ markup: |
 ---
 name: Logic Button AND
 description: The Spectrum logical AND button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -575,6 +587,7 @@ markup: |
 ---
 name: Logic Button OR
 description: The Spectrum logical OR button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -609,6 +622,7 @@ markup: |
 ---
 name: Button - Icon
 description: A Spectrum icon-only button
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

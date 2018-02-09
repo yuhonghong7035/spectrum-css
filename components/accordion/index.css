@@ -1,8 +1,6 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
@@ -15,6 +13,7 @@
 ---
 name: Accordion - Default
 description: The default spectrum accordion
+status: Beta
 markup: |
   <div class="spectrum-Accordion">
     <div class="spectrum-Accordion-item is-open">

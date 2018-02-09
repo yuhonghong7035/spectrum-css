@@ -16,6 +16,7 @@
 ---
 name: Text Area - Default
 description: A Spectrum text area - (a multiline text field)
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -36,6 +37,7 @@ markup: |
 ---
 name: Text Area - Quiet
 description: A Spectrum text area - quiet
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -56,6 +58,7 @@ markup: |
 ---
 name: Text Field - Default
 description: A Spectrum text field
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -124,6 +127,7 @@ markup: |
 ---
 name: Text Field - Quiet
 description: A Spectrum text field - quiet
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

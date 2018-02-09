@@ -1,13 +1,12 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Tree View - Nested
+status: Beta
 description: |
   A nested Spectrum tree view.
   Because the tree view is nested, the visibility of child items is controlled by the open state of the parent item.
@@ -187,6 +186,7 @@ markup: |
 /* topdoc
 ---
 name: Tree View - Flat
+status: Beta
 description: |
   A Spectrum tree view drawn without nesting, suitable for infinite scrolling.
   With this version of the tree, you must manage the visibility of "child items" manually based on the open state of the "parent item."
@@ -307,6 +307,7 @@ markup: |
 /* topdoc
 ---
 name: Tree View - Nested with icons
+status: Beta
 description: |
   A nested Spectrum tree view with icons
 markup: |

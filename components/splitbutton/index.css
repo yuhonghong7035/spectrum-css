@@ -1,14 +1,13 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: SplitButton - CTA
 description: A CTA split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -29,6 +28,7 @@ markup: |
 ---
 name: SplitButton - Primary
 description: A primary split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -49,6 +49,7 @@ markup: |
 ---
 name: SplitButton - Secondary
 description: A secondary split button.
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

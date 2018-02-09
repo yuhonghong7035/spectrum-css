@@ -1,12 +1,15 @@
 :root {
 
   /* Radio button */
+}
 
-  /* Field group */
+:root {
+  /* Rating icon */
 }
 
 .spectrum-Rating {
   cursor: pointer;
+  position: relative;
 }
 
 .spectrum-Rating.is-disabled {
@@ -14,11 +17,20 @@
     pointer-events: none;
   }
 
+.spectrum-Rating-input {
+  position: absolute;
+  width: 120px; /* 120px */
+  height: 16px; /* 16px; */
+  opacity: 0.0001;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 24px;
-  height: 16px;
+  width: 24px; /* 24px; */
+  height: 16px; /* 16px; */
   float: left;
 }
 

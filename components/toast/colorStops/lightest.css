@@ -34,6 +34,7 @@
 ---
 name: Toast - Warning
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--warning">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -58,6 +59,7 @@ markup: |
 ---
 name: Toast - Error
 description: The error toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--error">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -82,6 +84,7 @@ markup: |
 ---
 name: Toast - Info
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--info">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">
@@ -106,6 +109,7 @@ markup: |
 ---
 name: Toast - Success
 description: The info toast.
+status: Beta
 markup: |
   <div class="spectrum-Toast spectrum-Toast--success">
     <svg class="spectrum-Icon spectrum-Toast-typeIcon" focusable="false" aria-hidden="true">

@@ -1,7 +1,9 @@
 :root {
 
   /* Radio button */
+}
 
+:root {
   /* Field group */
 }
 
@@ -9,6 +11,7 @@
 ---
 name: Field Group - Default
 description: The Spectrum radio group 'default'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup">
     <div class="spectrum-Radio">
@@ -60,6 +63,7 @@ markup: |
 ---
 name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
     <div class="spectrum-Radio">
@@ -96,6 +100,7 @@ markup: |
 ---
 name: Field Group - Labels Below
 description: The Spectrum radio group 'labelsBelow'
+status: Beta
 markup: |
   <div class="spectrum-FieldGroup spectrum-FieldGroup--labelsBelow">
     <div class="spectrum-Radio">

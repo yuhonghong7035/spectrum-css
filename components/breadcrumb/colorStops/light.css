@@ -45,6 +45,7 @@
 ---
 name: Breadcrumb - Default
 description: The default Spectrum breadcrumb
+status: Beta
 modifiers:
   ':hover': Hover state
   ':focus': Focused
@@ -75,6 +76,7 @@ markup: |
 ---
 name: Breadcrumb - Title
 description: A Spectrum 'page title' breadcrumb
+status: Beta
 modifiers:
   ':hover': Hover state
   ':focus': Focused

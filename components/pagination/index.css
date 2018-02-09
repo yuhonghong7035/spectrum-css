@@ -1,14 +1,13 @@
 :root {
 
   /* Radio button */
-
-  /* Field group */
 }
 
 /* topdoc
 ---
 name: Pagination - Explicit
 description: A Spectrum 'explicit' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--icon">
@@ -43,6 +42,7 @@ markup: |
 ---
 name: Pagination - Listing
 description: A Spectrum 'listing' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
@@ -87,6 +87,7 @@ markup: |
 ---
 name: Pagination - Button Style CTA
 description: A Spectrum 'button style call-to-action' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--cta spectrum-Pagination-prevButton">
@@ -149,6 +150,7 @@ markup: |
 ---
 name: Pagination - Button Style Primary
 description: A Spectrum 'button style primary' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--primary spectrum-Pagination-prevButton">
@@ -170,6 +172,7 @@ markup: |
 ---
 name: Pagination - Button Style Secondary
 description: A Spectrum 'button style secondary' pagination
+status: Beta
 markup: |
   <nav>
     <button class="spectrum-Button spectrum-Button--secondary spectrum-Pagination-prevButton">

@@ -23,6 +23,7 @@
 ---
 name: Radio - Default
 description: The Spectrum radio thingy
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -78,6 +79,7 @@ markup: |
 ---
 name: Radio - Invalid
 description: The 'invalid' Spectrum radio
+status: Released
 modifiers:
   ':hover': Hover state
   ':active': Active state
@@ -107,6 +109,7 @@ markup: |
       <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
     </div>
   </form>
+
 */
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-input + .spectrum-Radio-button {
       border-color: rgb(247, 109, 116);
@@ -126,6 +129,7 @@ markup: |
 ---
 name: Radio - Disabled
 description: The 'disabled' Spectrum radio
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

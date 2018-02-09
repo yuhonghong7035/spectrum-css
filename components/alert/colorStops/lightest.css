@@ -23,6 +23,7 @@
 ---
 name: Alert - Info
 description: The Spectrum alert 'info'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--info">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -43,6 +44,7 @@ markup: |
 ---
 name: Alert - Error
 description: The Spectrum alert 'error'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--error">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -63,6 +65,7 @@ markup: |
 ---
 name: Alert - Success
 description: The Spectrum alert 'success'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--success">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
@@ -83,6 +86,7 @@ markup: |
 ---
 name: Alert - Warning
 description: The Spectrum alert 'warning'
+status: Beta
 markup: |
   <div class="spectrum-Alert spectrum-Alert--warning">
     <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">

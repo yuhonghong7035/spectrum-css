@@ -49,6 +49,7 @@
 ---
 name: Checkbox - Default
 description: The Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -126,6 +127,7 @@ markup: |
 ---
 name: Checkbox - Disabled
 description: The 'disabled' Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
@@ -173,6 +175,7 @@ markup: |
 ---
 name: Checkbox - Invalid
 description: The 'invalid' Spectrum checkbox
+status: Released
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state

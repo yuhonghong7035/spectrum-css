@@ -12,8 +12,10 @@
 ---
 name: Rating - Default
 description: The Spectrum Rating stars
+status: Beta
 markup: |
   <div class="spectrum-Rating">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="0" aria-label="Rating - Default">
     <span class="spectrum-Rating-icon">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -91,8 +93,10 @@ markup: |
 ---
 name: Rating - Active
 description: The 'active' Spectrum rating
+status: Beta
 markup: |
   <div class="spectrum-Rating">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="3" aria-label="Rating - Active">
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -160,12 +164,14 @@ markup: |
 ---
 name: Rating - Disabled
 description: The 'disabled' Spectrum rating
+status: Beta
 modifiers:
   ':disabled': Disabled state
   ':hover': Hover state
   ':focus': Focused
 markup: |
   <div class="spectrum-Rating is-disabled">
+    <input class="spectrum-Rating-input" type="range" min="0" max="5" value="1" aria-label="Rating - Disabled" disabled>
     <span class="spectrum-Rating-icon is-active">
       <svg class="spectrum-Icon spectrum-Rating-starActive" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-Star" />
@@ -229,3 +235,13 @@ markup: |
 .spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starInactive {
     display: block;
   }
+.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon,
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active),
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active {
+        color: rgb(75, 156, 245);
+
+      }
+.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
+          stroke: currentColor;
+          stroke-width: 1px;
+        }
