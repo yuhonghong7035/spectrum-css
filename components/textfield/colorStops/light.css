@@ -150,6 +150,10 @@ markup: |
     border-color: rgb(38, 128, 235);
     box-shadow: 0 1px 0 rgb(38, 128, 235);
   }
+.spectrum-Textfield--quiet.focus-ring:not(:active) {
+      border-color: rgb(38, 128, 235);
+      box-shadow: 0 1px 0 rgb(38, 128, 235);
+    }
 .spectrum-Textfield--quiet:disabled {
     background-color: rgba(0, 0, 0, 0);
     border-color:  rgb(225, 225, 225);
@@ -161,3 +165,8 @@ markup: |
 .spectrum-Textfield--quiet.is-invalid:focus, .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(227, 72, 80);
     }
+/* might break things due to pre-defined focus-ring */
+.spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
+        border-color: rgb(227, 72, 80);
+        box-shadow: 0 1px 0 rgb(227, 72, 80);
+      }

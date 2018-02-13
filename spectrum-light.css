@@ -1513,6 +1513,10 @@ markup: |
     border-color: rgb(38, 128, 235);
     box-shadow: 0 1px 0 rgb(38, 128, 235);
   }
+.spectrum--light .spectrum-Textfield--quiet.focus-ring:not(:active) {
+      border-color: rgb(38, 128, 235);
+      box-shadow: 0 1px 0 rgb(38, 128, 235);
+    }
 .spectrum--light .spectrum-Textfield--quiet:disabled {
     background-color: rgba(0, 0, 0, 0);
     border-color:  rgb(225, 225, 225);
@@ -1524,6 +1528,11 @@ markup: |
 .spectrum--light .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--light .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(227, 72, 80);
     }
+/* might break things due to pre-defined focus-ring */
+.spectrum--light .spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum--light .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
+        border-color: rgb(227, 72, 80);
+        box-shadow: 0 1px 0 rgb(227, 72, 80);
+      }
 .spectrum--light .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
       .spectrum--light .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
         border-color: rgb(202, 202, 202);

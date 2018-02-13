@@ -9567,6 +9567,11 @@ markup: |
     box-shadow: 0 1px 0 rgb(20, 115, 230);
   }
 
+.spectrum-Textfield--quiet.focus-ring:not(:active) {
+      border-color: rgb(20, 115, 230);
+      box-shadow: 0 1px 0 rgb(20, 115, 230);
+    }
+
 .spectrum-Textfield--quiet:disabled {
     background-color: rgba(0, 0, 0, 0);
     border-color:  rgb(45, 45, 45);
@@ -9580,6 +9585,13 @@ markup: |
 .spectrum-Textfield--quiet.is-invalid:focus, .spectrum-Textfield--quiet:invalid:focus {
       box-shadow: 0 1px 0 rgb(215, 55, 63);
     }
+
+/* might break things due to pre-defined focus-ring */
+
+.spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
+        border-color: rgb(215, 55, 63);
+        box-shadow: 0 1px 0 rgb(215, 55, 63);
+      }
 
 .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
       .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
