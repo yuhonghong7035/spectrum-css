@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Cycle Button - Default
@@ -24,22 +26,32 @@ markup: |
   </button>
 
 */
+
 .spectrum--light .spectrum-CycleButton {
   background-color: rgba(0, 0, 0, 0);
 }
+
 .spectrum--light .spectrum-CycleButton .spectrum-Icon {
     color: rgb(112, 112, 112);
   }
+
 .spectrum--light .spectrum-CycleButton:hover .spectrum-Icon {
       color: rgb(44, 44, 44);
     }
+
 .spectrum--light .spectrum-CycleButton:active {
     background-color: rgb(225, 225, 225);
   }
-.spectrum--light .spectrum-CycleButton:focus {
+
+.spectrum--light .spectrum-CycleButton:active .spectrum-Icon {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum--light .spectrum-CycleButton.focus-ring {
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-    box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
+    box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
   }
-.spectrum--light .spectrum-CycleButton:focus .spectrum-Icon {
+
+.spectrum--light .spectrum-CycleButton.focus-ring .spectrum-Icon {
       color: rgb(44, 44, 44);
     }

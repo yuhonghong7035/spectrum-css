@@ -1,0 +1,11 @@
+.spectrum--large .spectrum-Toast {
+
+  border-radius: 4px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+.spectrum--large .spectrum-Toast-closeButton {
+
+  transition: background-color 125ms ease-in-out
+}

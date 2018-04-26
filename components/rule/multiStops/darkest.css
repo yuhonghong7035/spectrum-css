@@ -1,22 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--darkest .spectrum-Rule {
-  border-color: rgb(180, 180, 180);
-}
-.spectrum--darkest .spectrum-Rule--subsection {
-  border-color: rgb(45, 45, 45);
-}
-.spectrum--darkest .spectrum-Rule--subsection2 {
-  border-color: rgb(38, 38, 38);
-}
-.spectrum--darkest .spectrum-Rule--panel {
   border-color: rgb(45, 45, 45);
 }

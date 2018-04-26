@@ -1,38 +1,48 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--dark,
 .spectrum--dark .spectrum-Body {
   color: rgb(205, 205, 205);
 }
+
 .spectrum--dark .spectrum-Body--large {
   color: rgb(205, 205, 205);
 }
+
 .spectrum--dark .spectrum-Body--small {
   color: rgb(205, 205, 205);
 }
+
 .spectrum--dark .spectrum-Body--secondary {
   color: rgb(153, 153, 153);
 }
+
 .spectrum--dark .spectrum-Heading--display {
   color: rgb(255, 255, 255);
 }
+
 .spectrum--dark .spectrum-Heading--pageTitle {
-  color: rgb(255, 255, 255);
+  color: rgb(153, 153, 153);
 }
+
 .spectrum--dark .spectrum-Heading--subtitle1 {
   color: rgb(255, 255, 255);
 }
+
 .spectrum--dark .spectrum-Heading--subtitle2 {
   color: rgb(255, 255, 255);
 }
+
 .spectrum--dark .spectrum-Heading--subtitle3 {
   color: rgb(153, 153, 153);
 }

@@ -1,51 +1,70 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
-      .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
+      .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-FieldButton {
         border-color: rgb(60, 60, 60);
       }
-.spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+
+.spectrum-InputGroup-input:focus ~ .spectrum-FieldButton {
     border-color: rgb(20, 115, 230);
-    box-shadow: 0 0 0 1px rgb(20, 115, 230);
   }
-.spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+
+.spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-FieldButton, .spectrum-InputGroup-input:focus:invalid ~ .spectrum-FieldButton {
       border-color: rgb(215, 55, 63);
-      box-shadow: 0 0 0 1px rgb(215, 55, 63);
     }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-button,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:hover,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:focus,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:active,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-selected,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:invalid,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button.is-invalid,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled,
-    .spectrum-InputGroup--quiet .spectrum-InputGroup-button:disabled:hover {
+
+/* Only add the 2px ring for keyboard focus */
+
+.spectrum-InputGroup-input.focus-ring ~ .spectrum-FieldButton {
+    box-shadow: 0 0 0 0.0625rem rgb(20, 115, 230);
+  }
+
+.spectrum-InputGroup-input.focus-ring.is-invalid ~ .spectrum-FieldButton, .spectrum-InputGroup-input.focus-ring:invalid ~ .spectrum-FieldButton {
+      box-shadow: 0 0 0 0.0625rem rgb(215, 55, 63);
+    }
+
+.spectrum-InputGroup--quiet .spectrum-FieldButton,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:hover,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:focus,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:active,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton.is-selected,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:invalid,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton.is-invalid,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:disabled,
+    .spectrum-InputGroup--quiet .spectrum-FieldButton:disabled:hover {
       border-color: rgb(45, 45, 45);
     }
+
 .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
-      .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-InputGroup-button {
+      .spectrum-InputGroup--quiet:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-FieldButton {
         border-color: rgb(60, 60, 60);
       }
+
 .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid,
-      .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-InputGroup-button,
+      .spectrum-InputGroup--quiet .spectrum-InputGroup-input.is-invalid ~ .spectrum-FieldButton,
       .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid,
-      .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-InputGroup-button {
+      .spectrum-InputGroup--quiet .spectrum-InputGroup-input:invalid ~ .spectrum-FieldButton {
         border-color: rgb(215, 55, 63);
       }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-InputGroup-button {
+
+/* Always add the 2px ring for keyboard focus for quiet inputgroups */
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-FieldButton {
+        box-shadow: 0 0.0625rem 0 rgb(20, 115, 230);
         border-color: rgb(20, 115, 230);
-        box-shadow: 0 1px 0 rgb(20, 115, 230);
       }
-.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-InputGroup-button, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-InputGroup-button {
+
+.spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-FieldButton, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-FieldButton {
+          box-shadow: 0 0.0625rem 0 rgb(215, 55, 63);
           border-color: rgb(215, 55, 63);
-          box-shadow: 0 1px 0 rgb(215, 55, 63);
         }

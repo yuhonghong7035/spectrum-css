@@ -1,0 +1,103 @@
+.spectrum--large .spectrum-Button,
+.spectrum--large .spectrum-ActionButton,
+.spectrum--large .spectrum-LogicButton,
+.spectrum--large .spectrum-FieldButton,
+.spectrum--large .spectrum-ClearButton {
+
+  transition: background 125ms ease-out,
+              border-color 125ms ease-out,
+              color 125ms ease-out,
+              box-shadow 125ms ease-out;
+  font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif
+}
+.spectrum--large .spectrum-Button {
+
+  border-width: 2px;
+  border-radius: 20px;
+
+  height: 40px;
+
+  padding: 0 20px 1px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+.spectrum--large .spectrum-Button .spectrum-Icon + .spectrum-Button-label {
+    margin-left: 10px;
+  }
+.spectrum--large .spectrum-Button + .spectrum-Button {
+    margin-left: 12px;
+  }
+.spectrum--large .spectrum-ActionButton {
+
+  height: 40px;
+  min-width: 40px;
+  padding: 0 15px;
+
+  border-width: 1px;
+  border-radius: 5px;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+.spectrum--large .spectrum-Button-label {
+  line-height: 36px;
+}
+.spectrum--large .spectrum-ActionButton-label {
+  line-height: 38px;
+}
+.spectrum--large .spectrum-ActionButton--quiet {
+  padding: 0 15px;
+
+  border-width: 0;
+  border-radius: 5px;
+
+  font-size: 17px;
+  font-weight: 400;
+}
+.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label {
+    line-height: 40px;
+  }
+.spectrum--large .spectrum-LogicButton {
+
+  height: 24px;
+  padding: 10px;
+
+  border-width: 2px;
+  border-radius: 5px;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+.spectrum--large .spectrum-FieldButton {
+
+  height: 40px;
+
+  padding: 0 15px;
+  font-size: 17px;
+}
+.spectrum--large .spectrum-FieldButton {
+  padding: 0 15px;
+
+  border-width: 1px;
+  border-radius: 4px;
+
+  transition: background-color 125ms,
+    box-shadow 125ms,
+    border-color 125ms;
+}
+.spectrum--large .spectrum-FieldButton.is-open {
+    border-width: 1px;
+  }
+.spectrum--large .spectrum-ClearButton {
+
+  width: 40px;
+  height: 40px;
+}
+.spectrum--large .spectrum-ClearButton .spectrum-Icon {
+    width: 10px;
+  }
+.spectrum--large .spectrum-ClearButton--small {
+  width: 30px;
+  height: 30px;
+}

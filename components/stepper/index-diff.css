@@ -1,0 +1,20 @@
+.spectrum--large .spectrum-Stepper {
+
+  width: 192px;
+  border-radius: 4px;
+  transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
+}
+.spectrum--large .spectrum-Stepper-stepUp,
+.spectrum--large .spectrum-Stepper-stepDown {
+
+  height: 16px;
+  width: 24px;
+
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 4px 0 0 4px;
+}
+.spectrum--large .spectrum-Stepper-stepUp .spectrum-Icon, .spectrum--large .spectrum-Stepper-stepDown .spectrum-Icon {
+    width: 8px;
+    height: 6px;
+  }

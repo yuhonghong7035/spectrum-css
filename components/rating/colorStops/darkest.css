@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Rating - Default
@@ -59,36 +61,49 @@ markup: |
   </div>
 
 */
+
 .spectrum-Rating-icon {
   color: rgb(105, 105, 105);
 }
+
 /* Star */
+
 .spectrum-Rating-icon .spectrum-Rating-starActive {
     display: block;
   }
+
 .spectrum-Rating-icon .spectrum-Rating-starInactive {
     display: none;
   }
+
 .spectrum-Rating:not(:hover) .spectrum-Rating-icon:not(.is-active) {
     color: rgb(105, 105, 105);
   }
+
 /* StarOutline */
+
 .spectrum-Rating:not(:hover) .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starActive {
       display: none;
     }
+
 .spectrum-Rating:not(:hover) .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starInactive {
       display: block;
     }
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) {
   color: rgb(105, 105, 105);
 }
+
 /* StarOutline */
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starActive {
     display: none;
   }
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starInactive {
     display: block;
   }
+
 /* topdoc
 ---
 name: Rating - Active
@@ -140,26 +155,35 @@ markup: |
   </div>
 
 */
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active {
   color: rgb(105, 105, 105);
 }
+
 /* Star */
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active .spectrum-Rating-starActive {
     display: block;
   }
+
 .spectrum-Rating-icon:hover ~ .spectrum-Rating-icon.is-active .spectrum-Rating-starInactive {
     display: none;
   }
+
 .spectrum-Rating-icon.is-active {
     color: rgb(180, 180, 180);
   }
+
 /* Star */
+
 .spectrum-Rating-icon.is-active .spectrum-Rating-starActive {
       display: block;
     }
+
 .spectrum-Rating-icon.is-active .spectrum-Rating-starInactive {
       display: none;
     }
+
 /* topdoc
 ---
 name: Rating - Disabled
@@ -215,33 +239,43 @@ markup: |
   </div>
 
 */
+
 .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active {
   color: rgb(45, 45, 45);
 }
+
 /* Star */
+
 .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active .spectrum-Rating-starActive {
     display: block;
   }
+
 .spectrum-Rating.is-disabled .spectrum-Rating-icon.is-active .spectrum-Rating-starInactive {
     display: none;
   }
+
 .spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) {
   color: rgb(45, 45, 45);
 }
+
 /* StarOutline */
+
 .spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starActive {
     display: none;
   }
+
 .spectrum-Rating:not(:hover).is-disabled .spectrum-Rating-icon:not(.is-active) .spectrum-Rating-starInactive {
     display: block;
   }
-.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon,
-      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active),
-      .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active {
+
+.spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon,
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon:not(.is-active),
+      .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon.is-active {
         color: rgb(55, 142, 240);
 
       }
-.spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input:focus ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
+
+.spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
           stroke: currentColor;
-          stroke-width: 1px;
+          stroke-width: 0.0625rem;
         }

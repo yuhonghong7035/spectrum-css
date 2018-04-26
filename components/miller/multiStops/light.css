@@ -1,27 +1,33 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--light .spectrum-MillerColumn-item:focus,
   .spectrum--light .spectrum-MillerColumn-item:hover {
     background-color: rgb(234, 234, 234);
   }
+
 .spectrum--light .spectrum-MillerColumn-item.is-navigated {
       /* gray background */
       background-color: rgb(225, 225, 225);
     }
+
 .spectrum--light .spectrum-MillerColumn-item.is-navigated:hover {
         background-color: rgb(225, 225, 225);
       }
+
 .spectrum--light .spectrum-MillerColumn-item.is-selected {
       background-color: rgba(20, 115, 230, 0.1);
     }
+
 .spectrum--light .spectrum-MillerColumn-item.is-selected:hover {
         background-color: rgba(20, 115, 230, 0.2);
       }

@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Quick Actions
@@ -21,7 +23,7 @@ markup: |
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
         <use xlink:href="#spectrum-icon-18-RotateLeft" />
       </svg>
     </button>
@@ -38,27 +40,38 @@ markup: |
   </div>
 
 */
+
 .spectrum-QuickActions-item {
   background-color: rgb(255, 255, 255);
-  border-color: rgb(211, 211, 211);
-  color: rgb(118, 118, 118);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  border-color: rgb(234, 234, 234);
+  color: rgb(80, 80, 80);
 }
-.spectrum-QuickActions-item:focus {
-    outline: none;
-  }
+
 .spectrum-QuickActions-item.focus-ring {
+    background-color: rgb(255, 255, 255);
     border-color: rgb(55, 142, 240);
-    color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 1px rgb(55, 142, 240);
-    outline: none;
+    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    color: rgb(50, 50, 50);
   }
+
 .spectrum-QuickActions-item:hover {
-    border-color: rgb(118, 118, 118);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(211, 211, 211);
+    box-shadow: none;
     color: rgb(50, 50, 50);
   }
-.spectrum-QuickActions-item:active {
-    border-color: rgb(80, 80, 80);
+
+.spectrum-QuickActions-item:active,
+  .spectrum-QuickActions-item.is-selected {
+    background-color: rgb(244, 244, 244);
+    border-color: rgb(211, 211, 211);
+    box-shadow: none;
     color: rgb(50, 50, 50);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+.spectrum-QuickActions-item:disabled,
+  .spectrum-QuickActions-item.is-disabled {
+    background-color: rgb(244, 244, 244);
+    border-color: rgb(244, 244, 244);
+    color: rgb(188, 188, 188);
   }

@@ -1,8 +1,3 @@
-:root {
-
-  /* Radio button */
-}
-
 /* topdoc
 ---
 name: Search
@@ -14,9 +9,9 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+    <button type="reset" class="spectrum-ClearButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SearchClear" />
+        <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
   </form>
@@ -26,17 +21,15 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled>
+    <button type="reset" class="spectrum-ClearButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-SearchClear" />
+        <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
   </form>
 
 
-*/
-
-/* topdoc
+*//* topdoc
 ---
 name: Search - Quiet
 description: The quiet searchy, cleary field.
@@ -47,7 +40,7 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear">
+    <button type="reset" class="spectrum-ClearButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SearchClear" />
       </svg>
@@ -59,21 +52,21 @@ markup: |
     <svg class="spectrum-Icon spectrum-Search-icon" focusable="false" aria-hidden="true">
       <use xlink:href="#spectrum-css-icon-SearchMagGlass" />
     </svg>
-    <button type="reset" class="spectrum-Button spectrum-Button--icon spectrum-Search-clear" disabled>
+    <button type="reset" class="spectrum-ClearButton" disabled>
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-SearchClear" />
       </svg>
     </button>
   </form>
 
-*/
-
-.spectrum-Search {
+*/.spectrum-Search {
   display: inline-block;
   position: relative;
-}
-
-.spectrum-Search-input {
+}.spectrum-Search .spectrum-ClearButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }.spectrum-Search-input {
   display: block;
 
   /* Correct the odd appearance of input[type="search"] in Chrome and Safari.*/
@@ -81,76 +74,38 @@ markup: |
   -webkit-appearance: textfield;
 
   /* Correct the outline for input[type="search"] style in Safari. */
-  outline-offset: -2px;
+  outline-offset: -0.125rem;
 
   /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-left: 36px;
+  padding-left: 2.25rem;
   text-indent: 0;
 
   /* Don't let long strings overlap the close icon */
-  padding-right: 28px;
-}
-
-/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */
-
-.spectrum-Search-input::-webkit-search-cancel-button,
+  padding-right: 1.75rem;
+}/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */.spectrum-Search-input::-webkit-search-cancel-button,
   .spectrum-Search-input::-webkit-search-decoration {
     -webkit-appearance: none;
-  }
-
-.spectrum-Search-input.spectrum-Textfield--quiet {
-    padding-left: 24px;
-    padding-right: 20px;
-  }
-
-/* Since quiet button has no left padding, push the icon all the way to the left */
-
-.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-icon {
+  }.spectrum-Search-input.spectrum-Textfield--quiet {
+    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+  }/* Since quiet button has no left padding, push the icon all the way to the left */.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-icon {
       left: 0;
-    }
-
-.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-clear {
-      right: -8px;
-    }
-
-/* Since quiet button has no right padding, push the icon all the way to the right */
-
-.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
+    }.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-clear {
+      right: -0.5rem;
+    }/* Since quiet button has no right padding, push the icon all the way to the right */.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
       right: 0;
-    }
-
-.spectrum-Search-icon {
+    }.spectrum-Search-icon {
   display: block;
   position: absolute;
-  left: 12px;
+  left: 0.75rem;
   top: 0;
-  width: 16px;
-  height: 32px;
-
-  /* Support font icons */
-  text-align: center;
-  line-height: 2rem;
+  width: 1rem;
+  height: 2rem;
 
   /* Support SVG icons */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 16px 16px;
+  background-size: 1rem 1rem;
 
   pointer-events: none;
 }
-
-.spectrum-Search-clear {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.spectrum-Search-clear .spectrum-Icon {
-    width: 8px;
-    height: 8px;
-  }
-
-.spectrum-Search-clear .spectrum-Search-clear:disabled {
-    cursor: default;
-  }
-

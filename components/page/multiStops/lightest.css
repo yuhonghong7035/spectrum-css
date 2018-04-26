@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Page
@@ -17,6 +19,7 @@ description: |
   If using multistops, the `<body>` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
 
 */
+
 .spectrum--lightest {
   background-color: rgb(255, 255, 255);
 

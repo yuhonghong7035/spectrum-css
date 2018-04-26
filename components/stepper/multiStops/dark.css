@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Stepper - Default
@@ -20,12 +22,12 @@ modifiers:
 markup: |
   <div class="spectrum-Stepper">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -36,12 +38,12 @@ markup: |
 
   <div class="spectrum-Stepper is-focused">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -52,12 +54,12 @@ markup: |
 
   <div class="spectrum-Stepper is-invalid">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -68,12 +70,12 @@ markup: |
 
   <div class="spectrum-Stepper">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepUp" tabindex="-1" disabled>
+      <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1" disabled>
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--action spectrum-Stepper-stepDown" tabindex="-1" disabled>
+      <button class="spectrum-ActionButton spectrum-Stepper-stepDown" tabindex="-1" disabled>
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -83,50 +85,63 @@ markup: |
   </div>
 
 */
+
 .spectrum--dark .spectrum-Stepper.is-focused {
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
   }
+
 .spectrum--dark .spectrum-Stepper.is-focused .spectrum-Stepper-stepUp,
     .spectrum--dark .spectrum-Stepper.is-focused .spectrum-Stepper-stepDown {
       border-color: rgb(38, 128, 235);
     }
+
 .spectrum--dark .spectrum-Stepper.is-focused .spectrum-Stepper-input {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
     }
+
 .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-stepUp,
     .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-stepDown,
     .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-input {
       border-color: rgb(227, 72, 80);
     }
+
 .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-stepUp:focus, .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-stepDown:focus, .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(227, 72, 80);
       }
+
 .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-input {
       border-left-color: rgb(62, 62, 62);
     }
+
 .spectrum--dark .spectrum-Stepper.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0 0 1px rgb(227, 72, 80);
+        box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
       }
+
 .spectrum--dark .spectrum-Stepper.is-invalid.is-focused {
-      box-shadow: 0 0 0 1px rgb(227, 72, 80);
+      box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
     }
+
 .spectrum--dark .spectrum-Stepper.is-invalid.is-focused .spectrum-Stepper-input {
         border-left-color: rgb(227, 72, 80);
-        box-shadow: 0 0 0 1px rgb(227, 72, 80);
+        box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
       }
+
 .spectrum--dark .spectrum-Stepper-stepUp,
 .spectrum--dark .spectrum-Stepper-stepDown {
   border-color: rgb(62, 62, 62);
 }
+
 .spectrum--dark .spectrum-Stepper-stepUp:disabled, .spectrum--dark .spectrum-Stepper-stepDown:disabled {
     border-color: rgba(0, 0, 0, 0);
   }
+
 .spectrum--dark .spectrum-Stepper-stepDown:hover {
     /* Keep the border on hover */
     border-bottom-color: rgb(62, 62, 62);
   }
+
 /* topdoc
 ---
 name: Stepper - Quiet
@@ -139,12 +154,12 @@ modifiers:
 markup: |
   <div class="spectrum-Stepper spectrum-Stepper--quiet">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -155,12 +170,12 @@ markup: |
 
   <div class="spectrum-Stepper spectrum-Stepper--quiet is-focused">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -171,12 +186,12 @@ markup: |
 
   <div class="spectrum-Stepper spectrum-Stepper--quiet is-invalid">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepUp" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepDown" tabindex="-1">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1">
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -187,12 +202,12 @@ markup: |
 
   <div class="spectrum-Stepper spectrum-Stepper--quiet">
     <span class="spectrum-Stepper-buttons">
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepUp" tabindex="-1" disabled>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepUp" tabindex="-1" disabled>
         <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperUpChevron" />
         </svg>
       </button>
-      <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Stepper-stepDown" tabindex="-1" disabled>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Stepper-stepDown" tabindex="-1" disabled>
         <svg class="spectrum-Icon spectrum-Stepper-stepDownIcon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-StepperDownChevron" />
         </svg>
@@ -202,42 +217,53 @@ markup: |
   </div>
 
 */
+
 .spectrum--dark .spectrum-Stepper--quiet .spectrum-Stepper-stepUp:disabled, .spectrum--dark .spectrum-Stepper--quiet .spectrum-Stepper-stepDown:disabled {
       border-color: rgb(62, 62, 62);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-focused {
-    box-shadow: 0 1px 0 0 rgb(38, 128, 235);
+    box-shadow: 0 0.0625rem 0 0 rgb(38, 128, 235);
   }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepUp,
     .spectrum--dark .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepDown {
       border-color: rgb(38, 128, 235);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 1px 0 0 rgb(38, 128, 235);
+      box-shadow: 0 0.0625rem 0 0 rgb(38, 128, 235);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
     .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input {
       border-color: rgb(227, 72, 80);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown:focus, .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 1px 0 0 rgb(227, 72, 80);
+        box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
       }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp {
       border-color: rgb(62, 62, 62);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp:focus {
         border-color: rgb(62, 62, 62);
       }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid.is-focused {
-      box-shadow: 0 1px 0 0 rgb(227, 72, 80);
+      box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
     }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepUp,
       .spectrum--dark .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepDown {
         border-color: rgb(227, 72, 80);
       }
+
 .spectrum--dark .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-input {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 1px 0 0 rgb(227, 72, 80);
+        box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
       }

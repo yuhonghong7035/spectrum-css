@@ -1,13 +1,6 @@
 :root {
-
-  /* Radio button */
-}
-
-:root {
   /* Field group */
-}
-
-/* topdoc
+}/* topdoc
 ---
 name: Field Group - Default
 description: The Spectrum radio group 'default'
@@ -47,19 +40,13 @@ markup: |
   </div>
 
 
-*/
-
-.spectrum-FieldGroup {
+*/.spectrum-FieldGroup {
   display: inline-block;
   vertical-align: top;
-}
-
-.spectrum-FieldGroup .spectrum-Radio,
+}.spectrum-FieldGroup .spectrum-Radio,
   .spectrum-FieldGroup .spectrum-Checkbox {
-    margin-right: 12px;
-  }
-
-/* topdoc
+    margin-right: 0.75rem;
+  }/* topdoc
 ---
 name: Field Group - Vertical
 description: The Spectrum radio group 'vertical'
@@ -78,25 +65,17 @@ markup: |
     </div>
   </div>
 
-*/
-
-.spectrum-FieldGroup--vertical .spectrum-Radio,
+*/.spectrum-FieldGroup--vertical .spectrum-Radio,
   .spectrum-FieldGroup--vertical .spectrum-Checkbox {
     display: block;
-    margin: 0 0 0 -8px;
-  }
-
-.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
-    margin-left: 15px;
-  }
-
-.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Radio,
+    margin: 0 0 0 -0.5rem;
+  }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
+    margin-left: 0.9375rem;
+  }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Radio,
     .spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Checkbox {
       /* Prevent overlap due to negative margin */
       margin: 0;
-    }
-
-/* topdoc
+    }/* topdoc
 ---
 name: Field Group - Labels Below
 description: The Spectrum radio group 'labelsBelow'
@@ -120,19 +99,13 @@ markup: |
     </div>
   </div>
 
-*/
-
-.spectrum-FieldGroup--labelsBelow .spectrum-Radio {
-    height: 36px;
+*/.spectrum-FieldGroup--labelsBelow .spectrum-Radio {
+    height: 2.25rem;
     margin: 0;
-  }
-
-.spectrum-FieldGroup--labelsBelow .spectrum-Radio-button {
-    margin-bottom: 18px;
-  }
-
-.spectrum-FieldGroup--labelsBelow .spectrum-Radio-label {
+  }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-button {
+    margin-bottom: 1.125rem;
+  }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-label {
     position: relative;
-    top: 12px;
-    left: -17px;
+    top: 0.75rem;
+    left: -1.0625rem;
   }

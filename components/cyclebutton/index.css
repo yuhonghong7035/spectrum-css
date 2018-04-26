@@ -1,20 +1,15 @@
-:root {
-
-  /* Radio button */
-}
-
 .spectrum-CycleButton {
 
   /* Change the font styles in all browsers */
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 100%;
-  
+
   /* Remove the button margin in Firefox and Safari. */
   margin: 0;
-  
+
   /* Show button the overflow in Edge and IE. */
   overflow: visible;
-  
+
   /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
   text-transform: none;
 
@@ -22,41 +17,27 @@
   -webkit-appearance: button;
 
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   line-height: 2rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border: none;
   padding: 0;
   cursor: pointer;
-}
-
-.spectrum-CycleButton:focus {
+}.spectrum-CycleButton:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: 0;
-  }
-
-/* Remove the inner border and padding for button in Firefox. */
-
-.spectrum-CycleButton::-moz-focus-inner {
+  }/* Remove the inner border and padding for button in Firefox. */.spectrum-CycleButton::-moz-focus-inner {
     border-style: none;
     padding: 0;
-  }
-
-/* Restore the focus styles unset by the previous rule. */
-
-.spectrum-CycleButton:-moz-focusring{
-    outline: 1px dotted ButtonText;
-  }
-
-.spectrum-CycleButton .spectrum-Icon {
+  }/* Restore the focus styles unset by the previous rule. */.spectrum-CycleButton:-moz-focusring{
+    outline: 0.0625rem dotted ButtonText;
+  }.spectrum-CycleButton .spectrum-Icon {
     /* Be centered */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-.spectrum-CycleButton .spectrum-Icon:not(.is-active) {
+  }.spectrum-CycleButton .spectrum-Icon:not(.is-active) {
     display: none
   }

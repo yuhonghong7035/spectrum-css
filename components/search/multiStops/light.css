@@ -1,16 +1,19 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--light .spectrum-Search-icon {
   color: rgb(112, 112, 112);
 }
+
 .spectrum--light .spectrum-Search-input:disabled ~ .spectrum-Search-icon {
       color: rgb(179, 179, 179);
     }

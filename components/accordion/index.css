@@ -1,15 +1,7 @@
-:root {
+/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */:root {
 
-  /* Radio button */
-}
-
-/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
-
-:root {
   /* Subtract the size of the border since it's on the item itself */
-}
-
-/* topdoc
+}/* topdoc
 ---
 name: Accordion - Default
 description: The default spectrum accordion
@@ -46,50 +38,40 @@ markup: |
     </div>
   </div>
 
-*/
-
-.spectrum-Accordion {
+*/.spectrum-Accordion {
   display: block;
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.spectrum-Accordion-indicator {
+}.spectrum-Accordion-indicator {
   display: block;
-  width: 6px;
-  height: 10px;
+  width: 0.375rem;
+  height: 0.625rem;
 
   position: absolute;
-  left: 16px;
-  top: 14.5px;
+  left: 1rem;
+  top: 0.90625rem;
 
   transition: transform ease 125ms;
-}
-
-.spectrum-Accordion-item {
+}.spectrum-Accordion-item {
   z-index: inherit;
   position: relative;
 
   display: list-item;
   margin: 0;
 
-  border-bottom: 1px solid transparent;
-}
-
-.spectrum-Accordion-item:first-of-type {
-    border-top: 1px solid transparent;
-  }
-
-.spectrum-Accordion-header {
+  border-bottom: 0.0625rem solid transparent;
+}.spectrum-Accordion-item:first-of-type {
+    border-top: 0.0625rem solid transparent;
+  }.spectrum-Accordion-header {
   position: relative;
 
   box-sizing: border-box;
   /* left padding takes into account the icon's size as well as the focus state's left border */
-  padding: 0 16px 0 34px;
+  padding: 0 1rem 0 2.125rem;
   margin: 0;
 
-  height: 39px;
+  height: 2.4375rem;
 
   font-size: 0.6875rem;
   text-transform: uppercase;
@@ -99,41 +81,27 @@ markup: |
   text-overflow: ellipsis;
   cursor: pointer;
   font-weight: 500;
-}
-
-.spectrum-Accordion-header:focus {
+}.spectrum-Accordion-header:focus {
     outline: none;
-  }
-
-.spectrum-Accordion-header:focus::after {
+  }.spectrum-Accordion-header:focus::after {
       content: '';
 
       position: absolute;
       left: 0;
-      top: -1px;
+      top: -var(--spectrum-accordion-item-border-size);
 
-      height: 41px;
-      width: 2px;
-    }
-
-.spectrum-Accordion-content {
-  padding: 0 16px 16px 16px;
+      height: 2.5rem;
+      width: 0.125rem;
+    }.spectrum-Accordion-content {
+  padding: 0 1rem 1rem 1rem;
   display: none;
-}
-
-.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
+}.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
       transform: rotate(90deg);
-    }
-
-.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
+    }.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
       /* No bottom border when open, so be less tall */
-      height: 40px;
-    }
-
-.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
+      height: 2.4375rem;
+    }.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
       display: block;
-    }
-
-.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {
+    }.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {
       cursor: default;
     }

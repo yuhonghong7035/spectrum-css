@@ -1,8 +1,3 @@
-:root {
-
-  /* Radio button */
-}
-
 /* topdoc
 ---
 name: Pagination - Explicit
@@ -10,42 +5,36 @@ description: A Spectrum 'explicit' pagination
 status: Beta
 markup: |
   <nav>
-    <button class="spectrum-Button spectrum-Button--icon">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-prevButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Previous">
         <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
       </svg>
     </button>
     <input type="text" name="field" value="2" class="spectrum-Textfield spectrum-Pagination-input">
     <span class="spectrum-Body--secondary spectrum-Pagination-counter">of 89 pages</span>
-    <button class="spectrum-Button spectrum-Button--icon">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-nextButton">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true" aria-label="Next">
         <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
       </svg>
     </button>
   </nav>
 
-*/
-
-.spectrum-Pagination-input {
-  width: 48px;
-  min-width: 48px;
-}
-
-.spectrum-Pagination-counter {
+*/.spectrum-Pagination-input {
+  width: 3rem;
+  min-width: 3rem;
+}.spectrum-Pagination-counter {
   display: inline-block;
-  height: 32px;
+  height: 2rem;
   line-height: 2rem;
-  margin-left: 5px;
-}
-
-/* topdoc
+  margin-left: 0.3125rem;
+}/* topdoc
 ---
 name: Pagination - Listing
 description: A Spectrum 'listing' pagination
 status: Beta
 markup: |
   <nav>
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Prev</button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton">Prev</button>
     <span tabindex="0" class="spectrum-Pagination-pageButton">1</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton is-active">2</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">3</span>
@@ -56,34 +45,28 @@ markup: |
     <span tabindex="0" class="spectrum-Pagination-pageButton">8</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">...</span>
     <span tabindex="0" class="spectrum-Pagination-pageButton">24</span>
-    <button class="spectrum-Button spectrum-Button--quiet--action spectrum-Pagination-directionButton">Next</button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton">Next</button>
   </nav>
 
-*/
-
-.spectrum-Pagination-directionButton {
+*/.spectrum-Pagination-directionButton {
   font-size: 0.9375rem;
   font-weight: bold;
-}
-
-.spectrum-Pagination-pageButton {
+}.spectrum-Pagination-pageButton {
   box-sizing: border-box;
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   line-height: 1.625rem;
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 5px;
-  border: 2px solid transparent;
+  margin: 0 0.3125rem;
+  border: 0.125rem solid transparent;
   outline: none;
   transition: background-color 125ms ease-in-out,
               color 125ms ease-in-out,
               border-color 125ms ease-in-out;
-}
-
-/* topdoc
+}/* topdoc
 ---
 name: Pagination - Button Style CTA
 description: A Spectrum 'button style call-to-action' pagination
@@ -103,50 +86,32 @@ markup: |
     </button>
   </nav>
 
-*/
-
-.spectrum-Pagination-prevButton {
-  border-radius: 16px 0 0 16px;
+*/.spectrum-Pagination-prevButton {
+  border-radius: 1rem 0 0 1rem;
   float: left; /* removes DOM whitespace */
-  padding-right: 6px;
-  padding-left: 6px;
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
   border-right: 0;
-}
-
-.spectrum-Pagination-prevButton .spectrum-Icon {
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-
-.spectrum-Pagination-nextButton {
-  border-radius: 0 16px 16px 0;
+}.spectrum-Pagination-prevButton .spectrum-Icon {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }.spectrum-Pagination-nextButton {
+  border-radius: 0 1rem 1rem 0;
   margin-left: 0 !important;
-}
-
-/* CTA is special and doesn't have a border between the buttons */
-
-.spectrum-Pagination-nextButton.spectrum-Button--cta {
+}/* CTA is special and doesn't have a border between the buttons */.spectrum-Pagination-nextButton.spectrum-Button--cta {
     border-left: 0;
-    margin-left: 2px !important;
-  }
-
-.spectrum-Pagination-nextButton .spectrum-Icon {
-    margin-left: 8px;
-  }
-
-.spectrum-Pagination-prevButton:focus, .spectrum-Pagination-nextButton:focus {
+    margin-left: 0.125rem !important;
+  }.spectrum-Pagination-nextButton .spectrum-Icon {
+    margin-left: 0.5rem;
+  }.spectrum-Pagination-prevButton:focus, .spectrum-Pagination-nextButton:focus {
     /* this also triggers 'z-index: auto' and stays on top */
     position: relative;
-  }
-
-.spectrum-Pagination-prevButton .spectrum-Icon, .spectrum-Pagination-nextButton .spectrum-Icon {
-    width: 7px;
-    height: 10px;
+  }.spectrum-Pagination-prevButton .spectrum-Icon, .spectrum-Pagination-nextButton .spectrum-Icon {
+    width: 0.4375rem;
+    height: 0.625rem;
 
     vertical-align: baseline;
-  }
-
-/* topdoc
+  }/* topdoc
 ---
 name: Pagination - Button Style Primary
 description: A Spectrum 'button style primary' pagination
@@ -166,9 +131,7 @@ markup: |
     </button>
   </nav>
 
-*/
-
-/* topdoc
+*//* topdoc
 ---
 name: Pagination - Button Style Secondary
 description: A Spectrum 'button style secondary' pagination

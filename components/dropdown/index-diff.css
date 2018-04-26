@@ -1,0 +1,30 @@
+.spectrum--large .spectrum-Dropdown .spectrum-Popover {
+    margin-top: 8px;
+  }
+.spectrum--large .spectrum-Dropdown--quiet .spectrum-Popover {
+    left: -15px;
+  }
+.spectrum--large .spectrum-Dropdown-trigger .spectrum-Dropdown-label {
+
+    height: 38px;
+    line-height: 38px;
+
+    font-size: 17px
+  }
+.spectrum--large .spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+  margin-left: 15px;
+}
+.spectrum--large .spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
+  margin-left: 15px;
+}
+.spectrum--large .spectrum-Dropdown-icon {
+
+  width: 10px;
+  height: 6px;
+}
+.spectrum--large .spectrum-Dropdown .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+    margin-left: 15px;
+  }
+.spectrum--large .spectrum-Icon + .spectrum-Dropdown-icon {
+  margin-left: 10px;
+}

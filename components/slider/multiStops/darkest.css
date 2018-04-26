@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Slider - Ramp
@@ -53,8 +55,10 @@ markup: |
   </div>
 
 */
+
 .spectrum--darkest .spectrum-Slider {
 }
+
 /* topdoc
 ---
 name: Slider - Tick with Labels
@@ -127,9 +131,11 @@ markup: |
   </div>
 
 */
+
 .spectrum--darkest .spectrum-Slider-controls {
   background-color: transparent;
 }
+
 /* topdoc
 ---
 name: Slider - Tick
@@ -183,18 +189,11 @@ markup: |
   </div>
 
 */
+
 .spectrum--darkest .spectrum-Slider-track {
-  background: rgb(45, 45, 45);
+  background: rgb(118, 118, 118);
 }
-/*
-Todo: Determine if unused mixin is required
-spectrum-slider-track-disabled(){
-  background: $spectrum-slider-track-color-disabled;
-}
-*/
-.spectrum--darkest .spectrum-Slider-track--fill {
-  background: rgb(133, 133, 133);
-}
+
 /* topdoc
 ---
 name: Slider - Video Player
@@ -238,9 +237,22 @@ markup: |
   </div>
 
 */
-.spectrum--darkest .spectrum-Slider-track--buffer {
-  background: rgb(73, 73, 73);
+
+.spectrum--darkest .spectrum-Slider-labelContainer {
+  color: rgb(180, 180, 180);
 }
+
+/*
+Todo: Determine if unused mixin is required
+spectrum-slider-track-disabled(){
+  background: $spectrum-slider-track-color-disabled;
+}
+*/
+
+.spectrum--darkest .spectrum-Slider-track--fill {
+  background: rgb(118, 118, 118);
+}
+
 /* topdoc
 ---
 name: Slider - Double Handle
@@ -288,9 +300,11 @@ markup: |
   </div>
 
 */
-.spectrum--darkest .spectrum-Slider-track--ramp path {
-    fill: rgb(45, 45, 45);
-  }
+
+.spectrum--darkest .spectrum-Slider-track--buffer {
+  background: rgb(73, 73, 73);
+}
+
 /* topdoc
 ---
 name: Slider - Filled
@@ -318,7 +332,7 @@ markup: |
     </div>
     <div class="spectrum-Slider-controls">
       <div class="spectrum-Slider-track">
-        <div class="spectrum-Slider-track--fill" style="width: 100%;"></div>
+        <div class="spectrum-Slider-track--fill" style="width: 40%"></div>
       </div>
       <div class="spectrum-Slider-handle" style="left: 40%;">
         <input type="range" class="spectrum-Slider-input" value="14" step="2" min="10" max="20" disabled id="spectrum-Slider-input-7">
@@ -327,23 +341,11 @@ markup: |
   </div>
 
 */
-.spectrum--darkest .spectrum-Slider-handle {
-  border-color: rgb(133, 133, 133);
-  background: rgb(30, 30, 30);
-  box-shadow: 0 0 0 4px rgb(30, 30, 30);
-}
-.spectrum--darkest .spectrum-Slider-handle:hover {
-    border-color: rgb(180, 180, 180);
+
+.spectrum--darkest .spectrum-Slider-track--ramp path {
+    fill: rgb(118, 118, 118);
   }
-.spectrum--darkest .spectrum-Slider-handle.is-focused {
-    border-color: rgb(20, 115, 230);
-    background: rgb(20, 115, 230);
-  }
-.spectrum--darkest .spectrum-Slider-handle:active,
-  .spectrum--darkest .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(180, 180, 180);
-    background: rgb(180, 180, 180);
-  }
+
 /* topdoc
 ---
 name: Slider - With Label
@@ -376,25 +378,29 @@ markup: |
   </div>
 
 */
-.spectrum--darkest .spectrum-Slider-input {
-  background: transparent;
+
+.spectrum--darkest .spectrum-Slider-handle {
+  border-color: rgb(118, 118, 118);
+  background: rgb(30, 30, 30);
+  /*background: var(--spectrum-slider-handle-background-color);*/
+  box-shadow: 0 0 0 0.25rem rgb(30, 30, 30);
 }
-/*
-Todo: Determine if missing mixin is required
-.spectrum-Slider-ticks {
-  spectrum-slider-ticks()
-}
-*/
-.spectrum--darkest .spectrum-Slider-tick-mark:after {
-    background-color: rgb(45, 45, 45);
-    border-radius: 1px;
+
+.spectrum--darkest .spectrum-Slider-handle:hover {
+    border-color: rgb(80, 80, 80);
   }
-/*
-Todo: Determine if these are supposed to be pseudo classes
-*/
-.spectrum--darkest .spectrum-Slider-controls--hover .spectrum-Slider-handle {
-    border-color: rgb(180, 180, 180);
+
+.spectrum--darkest .spectrum-Slider-handle.is-focused {
+    border-color: rgb(20, 115, 230);
+    /*background: var(--spectrum-slider-handle-background-color-key-focus);*/
   }
+
+.spectrum--darkest .spectrum-Slider-handle:active,
+  .spectrum--darkest .spectrum-Slider-handle.is-dragged {
+    border-color: rgb(80, 80, 80);
+    /*background: var(--spectrum-slider-handle-background-color-down);*/
+  }
+
 /* topdoc
 ---
 name: Slider - Default
@@ -424,60 +430,100 @@ markup: |
 
 
 */
+
+.spectrum--darkest .spectrum-Slider-input {
+  background: transparent;
+}
+
+/*
+Todo: Determine if missing mixin is required
+.spectrum-Slider-ticks {
+  spectrum-slider-ticks()
+}
+*/
+
+.spectrum--darkest .spectrum-Slider-tick-mark:after {
+    background-color: rgb(45, 45, 45);
+  }
+
+/*
+Todo: Determine if these are supposed to be pseudo classes
+*/
+
+.spectrum--darkest .spectrum-Slider-controls--hover .spectrum-Slider-handle {
+    border-color: rgb(80, 80, 80);
+  }
+
 .spectrum--darkest .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(20, 115, 230);
     background: rgb(20, 115, 230);
   }
+
 .spectrum--darkest .spectrum-Slider-handle.is-focused {
     border-color: rgb(20, 115, 230);
     background: rgb(20, 115, 230);
   }
+
 .spectrum--darkest .spectrum-Slider-controls--active .spectrum-Slider-handle {
-    border-color: rgb(180, 180, 180);
-    background: rgb(180, 180, 180);
+    border-color: rgb(80, 80, 80);
+    background: rgba(0, 0, 0, 0);
   }
+
 .spectrum--darkest .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(180, 180, 180);
-    background: rgb(180, 180, 180);
+    border-color: rgb(80, 80, 80);
+    background: rgba(0, 0, 0, 0);
   }
+
 .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-labelContainer {
     color: rgb(73, 73, 73);
   }
+
 .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle {
-    border-color: rgb(60, 60, 60);
+    border-color: rgb(211, 211, 211);
+    /*background: var(--spectrum-slider-handle-background-color);*/
     background: rgb(30, 30, 30);
   }
+
 .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle:hover,
     .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-handle:active {
-      border-color: rgb(60, 60, 60);
-      border-width: 4px;
-      background: rgb(30, 30, 30);
+      border-color: rgb(211, 211, 211);
+      background: rgba(0, 0, 0, 0);
     }
-.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
-    background: rgb(45, 45, 45);
+
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track {
+    background: rgb(211, 211, 211);
   }
+
+.spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
+    background: rgb(234, 234, 234);
+  }
+
 .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--buffer {
     background: rgb(45, 45, 45);
   }
+
 .spectrum--darkest .spectrum-Slider.is-disabled .spectrum-Slider-track--ramp path {
       fill: rgb(38, 38, 38);
     }
+
 .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-track {
       background: rgb(38, 38, 38);
       box-shadow: none;
     }
+
 .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle {
       background: rgba(0, 0, 0, 0);
       box-shadow: none;
       border-color: rgb(60, 60, 60);
     }
+
 .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
       .spectrum--darkest .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
-        border-width: 4px;
         background: rgba(0, 0, 0, 0);
         box-shadow: none;
         border-color: rgb(60, 60, 60);
       }
+
 /* topdoc
 ---
 name: Slider - Color
@@ -516,18 +562,22 @@ markup: |
 
 
 */
+
 .spectrum--darkest .spectrum-Slider--color .spectrum-Slider-track {
     background: linear-gradient(to right, rgb(20, 115, 230), rgb(75, 156, 245));
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
   }
+
 .spectrum--darkest .spectrum-Slider--color .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05), 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
     border-color: rgb(8, 8, 8);
     background: rgba(0, 0, 0, 0);
   }
+
 .spectrum--darkest .spectrum-Slider--color .spectrum-Slider-handle.is-focused {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
     }
+
 /* topdoc
 ---
 name: Slider - Round
@@ -555,28 +605,36 @@ markup: |
   </div>
 
 */
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle {
     box-shadow: none;
   }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle::after {
       background-color: rgb(133, 133, 133);
     }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle:hover::after {
         background-color: rgb(180, 180, 180);
       }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle.is-focused {
       background-color: rgb(20, 115, 230);
     }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle.is-focused::after {
         background-color: rgb(8, 8, 8);
       }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle:active,
     .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle.is-dragged {
       background-color: rgb(180, 180, 180);
     }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle:active::after, .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-handle.is-dragged::after {
         background-color: rgb(8, 8, 8);
       }
+
 .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-controls::before,
     .spectrum--darkest .spectrum-Slider--round .spectrum-Slider-controls::after {
       background-color: rgb(105, 105, 105);

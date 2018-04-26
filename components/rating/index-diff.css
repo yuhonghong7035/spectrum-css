@@ -1,0 +1,13 @@
+.spectrum--large .spectrum-Rating-input {
+  width: 120px;
+  height: 16px;
+}
+.spectrum--large .spectrum-Rating-icon {
+  width: 24px;
+  height: 16px;
+}
+.spectrum--large .spectrum-Rating-starActive,
+.spectrum--large .spectrum-Rating-starInactive {
+  width: 16px;
+  height: 16px;
+}

@@ -1,33 +1,40 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--darkest .spectrum-TreeView-link {
   color: rgb(180, 180, 180);
 }
+
 .spectrum--darkest .spectrum-TreeView-link:hover,
   .spectrum--darkest .spectrum-TreeView-link.is-selected {
     color: rgb(226, 226, 226);
   }
+
 .spectrum--darkest .spectrum-TreeView-link:hover::before, .spectrum--darkest .spectrum-TreeView-link.is-selected::before {
       background-color: rgba(226, 226, 226, .04);
     }
+
 .spectrum--darkest .spectrum-TreeView-link.focus-ring {
     color: rgb(226, 226, 226);
   }
+
 .spectrum--darkest .spectrum-TreeView-link.focus-ring::before {
       background-color: rgba(226, 226, 226, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 2px rgb(20, 115, 230) inset;
+      box-shadow: 0px 0px 0px 0.125rem rgb(20, 115, 230) inset;
     }
+
 .spectrum--darkest .spectrum-TreeView-link.is-drop-target::before {
       background-color: rgba(38, 128, 235, .1);
-      box-shadow: 0px 0px 0px 2px rgb(20, 115, 230) inset;
+      box-shadow: 0px 0px 0px 0.125rem rgb(20, 115, 230) inset;
     }

@@ -1,50 +1,48 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum-Checkbox-label {
   color: rgb(80, 80, 80);
 }
+
+.spectrum-Checkbox-checkmark,
+.spectrum-Checkbox-partialCheckmark {
+  color: rgb(255, 255, 255);
+}
+
 .spectrum-Checkbox-box {
   border-color: rgb(149, 149, 149);
-}
-.spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
-    color: rgb(255, 255, 255);
-  }
-.spectrum-Checkbox-box {
   background-color: rgb(255, 255, 255);
 }
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-color: rgb(38, 128, 235);
-  }
-.spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box {
-    border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 1px rgb(55, 142, 240);
 
-  }
-.spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
-    color: rgb(13, 102, 208);
-  }
+/* Indetermiate is basically a checked state, so handle colors for checked state here */
+
 .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
 .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
   border-color: rgb(38, 128, 235);
 }
+
 .spectrum-Checkbox:hover.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: rgb(20, 115, 230);
 
   }
+
 .spectrum-Checkbox:active.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
     border-color: rgb(13, 102, 208);
 
   }
+
 /* topdoc
 ---
 name: Checkbox - Default
@@ -61,6 +59,9 @@ markup: |
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
@@ -69,6 +70,9 @@ markup: |
     <span class="spectrum-Checkbox-box">
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
       </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -79,98 +83,38 @@ markup: |
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
 
 */
+
 .spectrum-Checkbox {
   border-color: rgb(149, 149, 149);
 }
+
 .spectrum-Checkbox:hover .spectrum-Checkbox-box {
       border-color: rgb(118, 118, 118);
 
       box-shadow: none;
     }
+
 .spectrum-Checkbox:hover .spectrum-Checkbox-label {
       color: rgb(50, 50, 50);
     }
+
 .spectrum-Checkbox:active .spectrum-Checkbox-box {
       border-color: rgb(80, 80, 80);
 
     }
+
 .spectrum-Checkbox:active .spectrum-Checkbox-label {
       color: rgb(50, 50, 50);
     }
-.spectrum-Checkbox.is-invalid .spectrum-Checkbox-box {
-      border-color: rgb(227, 72, 80);
 
-    }
-.spectrum-Checkbox.is-invalid .spectrum-Checkbox-label {
-      color: rgb(227, 72, 80);
-    }
-.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box {
-      border-color: rgb(215, 55, 63) !important;
-
-    }
-.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-label {
-      color: rgb(215, 55, 63);
-    }
-.spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-box {
-      border-color: rgb(201, 37, 45);
-
-    }
-.spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-label {
-      color: rgb(201, 37, 45);
-    }
-/* topdoc
----
-name: Checkbox - Disabled
-description: The 'disabled' Spectrum checkbox
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-markup: |
-  <label class="spectrum-Checkbox is-disabled">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
-    <span class="spectrum-Checkbox-box">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
-      </svg>
-    </span>
-    <span class="spectrum-Checkbox-label">Checkbox</span>
-  </label>
-  <label class="spectrum-Checkbox is-disabled">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
-    <span class="spectrum-Checkbox-box">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
-      </svg>
-    </span>
-    <span class="spectrum-Checkbox-label">Checkbox</span>
-  </label>
-  <label class="spectrum-Checkbox is-disabled is-indeterminate">
-    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
-    <span class="spectrum-Checkbox-box">
-      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
-      </svg>
-    </span>
-    <span class="spectrum-Checkbox-label">Checkbox</span>
-  </label>
-
-*/
-.spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box {
-    /* I'm sorry about the !important */
-    border-color: rgb(211, 211, 211) !important;
-
-    background-color: transparent;
-  }
-.spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
-    color: rgb(188, 188, 188);
-  }
 /* topdoc
 ---
 name: Checkbox - Invalid
@@ -187,6 +131,9 @@ markup: |
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
@@ -195,6 +142,9 @@ markup: |
     <span class="spectrum-Checkbox-box">
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
       </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
@@ -205,15 +155,113 @@ markup: |
       <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
       </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
     </span>
     <span class="spectrum-Checkbox-label">Checkbox</span>
   </label>
 
 */
-.spectrum-Checkbox-input:error + .spectrum-Checkbox-box {
-    border-color: rgb(227, 72, 80);
 
+/* Extra-specific selectors added here to handle checked state */
+
+.spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum-Checkbox.is-invalid .spectrum-Checkbox-box {
+      border-color: rgb(227, 72, 80);
+    }
+
+.spectrum-Checkbox.is-invalid .spectrum-Checkbox-label {
+      color: rgb(215, 55, 63);
+    }
+
+.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box {
+      border-color: rgb(215, 55, 63);
+    }
+
+.spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-label {
+      color: rgb(201, 37, 45);
+    }
+
+.spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-box {
+      border-color: rgb(201, 37, 45);
+    }
+
+.spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-label {
+      color: rgb(201, 37, 45);
+    }
+
+/* topdoc
+---
+name: Checkbox - Disabled
+description: The 'disabled' Spectrum checkbox
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <label class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxCheckmark" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckboxPartialCheckmark" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+
+*/
+
+.spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box {
+    /* Use important to override hover states */
+    border-color: rgb(211, 211, 211) !important;
+
+    background-color: rgb(255, 255, 255);
   }
-.spectrum-Checkbox-input:error ~ .spectrum-Checkbox-label {
-    color: rgb(215, 55, 63);
+
+.spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
+    color: rgb(188, 188, 188);
+  }
+
+/* Focus */
+
+.spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box {
+    /* Since the specificity of .focus-ring is less than :hover, we need important */
+    border-color: rgb(55, 142, 240) !important;
+
+    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240) !important;
+  }
+
+.spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
+    color: rgb(20, 115, 230) !important;
   }

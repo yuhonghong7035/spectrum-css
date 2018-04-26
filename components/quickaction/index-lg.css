@@ -1,0 +1,78 @@
+.spectrum-QuickActions {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: transform 125ms ease-in-out,
+              opacity 125ms ease-in-out,
+              visibility 0ms linear 125ms;
+
+  pointer-events: none;
+}.spectrum-QuickActions.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+
+  pointer-events: auto;
+}.spectrum-QuickActions--left.is-open {
+  transform: translateX(0.375rem);
+}.spectrum-QuickActions--right.is-open {
+  transform: translateX(-0.375rem);
+}:root {
+
+  /* Missing from DNA */
+}.spectrum-QuickActions {
+
+  display: -ms-inline-flexbox;
+
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+}.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
+  }.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
+  }.spectrum-QuickActions-item {
+
+  /* Change the font styles in all browsers */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.625rem;
+  padding: 0;
+  border-width: 0.0625rem;
+  border-radius: 0.3125rem;
+  border-style: solid;
+  transition: border-color 125ms ease-out,
+    color 125ms ease-out,
+    box-shadow 125ms ease-out;
+}/* Remove the inner border and padding for button in Firefox. */.spectrum-QuickActions-item::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }/* Restore the focus styles unset by the previous rule. */.spectrum-QuickActions-item:-moz-focusring{
+    outline: 0.0625rem dotted ButtonText;
+  }.spectrum-QuickActions-item:hover {
+    cursor: pointer;
+  }.spectrum-QuickActions-item:active {
+    cursor: pointer;
+  }.spectrum-QuickActions-item:first-child {
+    margin-left: 0;
+  }.spectrum-QuickActions-item .spectrum-Icon {
+    /* Fix alignment */
+    margin-top: 0.125rem;
+  }

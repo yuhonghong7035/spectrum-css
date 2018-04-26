@@ -1,26 +1,20 @@
-:root {
-
-  /* Radio button */
-}
-
 .spectrum-Radio {
   display: inline-block;
   position: relative;
 
-  padding: 6px 8px;
-  margin-left: -8px;
+  padding: 0 0.5rem;
+  margin-left: -0.5rem;
 
   font-size: 0;
-}
 
-.spectrum-Radio + .spectrum-Radio {
+  height: 2rem;
+  line-height: 2rem;
+}.spectrum-Radio + .spectrum-Radio {
     margin-left: 0;
-  }
-
-.spectrum-Radio-input {
+  }.spectrum-Radio-input {
 
   /* Change the font styles in all browsers for input. */
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
 
@@ -32,7 +26,7 @@
 
   /* Add the correct box sizing for [type="radio"] in IE 10-. */
   box-sizing: border-box;
-  
+
   /* Remove the padding for [type="radio"] in IE 10-. */
   padding: 0;
 
@@ -45,35 +39,27 @@
   opacity: .0001;
 
   cursor: pointer;
-}
+}.spectrum-Radio-input:checked + .spectrum-Radio-button {
+    border-width: 0.3125rem;
 
-.spectrum-Radio-input:checked + .spectrum-Radio-button {
-    border-width: 5px;
-
-  }
-
-.spectrum-Radio-input:disabled {
+  }.spectrum-Radio-input:disabled {
     cursor: default;
-  }
-
-.spectrum-Radio-label {
-  margin-left: 8px;
+  }.spectrum-Radio-label {
+  margin-left: 0.625rem;
 
   font-size: 0.875rem;
 
   vertical-align: middle;
 
   transition: color 125ms ease-in-out;
-}
-
-.spectrum-Radio-button {
+}.spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
 
-  border-radius: 7px;
-  border-width: 2px;
+  border-radius: 0.4375rem;
+  border-width: 0.125rem;
   border-style: solid;
 
   vertical-align: middle;

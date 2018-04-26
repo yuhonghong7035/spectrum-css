@@ -1,0 +1,43 @@
+/* topdoc
+---
+name: Status Light - Status Colors
+description: Status Colors (300) - Color has meaning.
+status: Beta
+markup: |
+  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved, Complete, Success, New</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active, In Use, Live</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--archived">Archived, Deleted, Paused, Draft, Not Started, Ended</div>
+
+*/.spectrum-StatusLight {
+  height: 2.5rem;
+
+  line-height: 2.5rem;
+  font-size: 1.0625rem;
+  font-weight: 400;
+}.spectrum-StatusLight::before {
+    content: '';
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    margin: 0 0.9375rem;
+  }.spectrum-StatusLight--archived {
+  font-style: italic;
+}/* topdoc
+---
+name: Status Light - Category Colors
+description: Category Colors (300) - Color is organizational.
+status: Beta
+markup: |
+  <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--yellow">Multivariate Test</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--fuchsia">Display Ad Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--indigo">Flash Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--seafoam">Landing Page Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--chartreuse">Optimizing Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--magenta">Monitoring Campaign</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--purple">Other</div>
+
+*/

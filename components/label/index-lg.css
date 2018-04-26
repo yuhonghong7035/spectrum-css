@@ -1,0 +1,62 @@
+/* topdoc
+---
+name: Label - Default
+description: A Spectrum label
+status: Beta
+markup: |
+  <span class="spectrum-Label spectrum-Label--grey">Grey Label</span>
+
+  <span class="spectrum-Label spectrum-Label--green">Green Label</span>
+
+  <span class="spectrum-Label spectrum-Label--blue">Blue Label</span>
+
+  <span class="spectrum-Label spectrum-Label--red">Red Label</span>
+
+  <span class="spectrum-Label spectrum-Label--orange">Orange Label</span>
+
+
+*/.spectrum-Label {
+  display: inline-block;
+  position: relative;
+
+  width: auto;
+
+  padding: 0.375rem 0.5625rem;
+
+  border-radius: 0.25rem;
+
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}.spectrum-Label-icon {
+  font-size: 0.875rem;
+  line-height: 0;
+}.spectrum-Label-icon:before {
+    vertical-align: sub;
+  }/* topdoc
+---
+name: Label - Large
+description: A large Spectrum label
+status: Beta
+markup: |
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--grey"
+  style="margin: 0rem 0.25rem 0.25rem;">Grey Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--green"
+  style="margin: 0rem 0.25rem 0.25rem;">Green Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--blue"
+  style="margin: 0rem 0.25rem 0.25rem;">Blue Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--red"
+  style="margin: 0rem 0.25rem 0.25rem;">Red Label</span>
+
+  <span class="spectrum-Label spectrum-Label--large spectrum-Label--orange"
+  style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
+
+*/.spectrum-Label--large {
+  padding: 0.625rem 0.875rem;
+}

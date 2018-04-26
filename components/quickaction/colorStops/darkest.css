@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Quick Actions
@@ -21,7 +23,7 @@ markup: |
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
         <use xlink:href="#spectrum-icon-18-RotateLeft" />
       </svg>
     </button>
@@ -38,27 +40,38 @@ markup: |
   </div>
 
 */
+
 .spectrum-QuickActions-item {
-  background-color: rgb(8, 8, 8);
-  border-color: rgb(60, 60, 60);
-  color: rgb(133, 133, 133);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background-color: rgb(26, 26, 26);
+  border-color: rgb(45, 45, 45);
+  color: rgb(180, 180, 180);
 }
-.spectrum-QuickActions-item:focus {
-    outline: none;
-  }
+
 .spectrum-QuickActions-item.focus-ring {
+    background-color: rgb(8, 8, 8);
     border-color: rgb(20, 115, 230);
-    color: rgb(20, 115, 230);
-    box-shadow: 0 0 0 1px rgb(20, 115, 230);
-    outline: none;
+    box-shadow: 0 0 0 0.0625rem rgb(20, 115, 230);
+    color: rgb(226, 226, 226);
   }
+
 .spectrum-QuickActions-item:hover {
-    border-color: rgb(133, 133, 133);
+    background-color: rgb(8, 8, 8);
+    border-color: rgb(60, 60, 60);
+    box-shadow: none;
     color: rgb(226, 226, 226);
   }
-.spectrum-QuickActions-item:active {
-    border-color: rgb(180, 180, 180);
+
+.spectrum-QuickActions-item:active,
+  .spectrum-QuickActions-item.is-selected {
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(60, 60, 60);
+    box-shadow: none;
     color: rgb(226, 226, 226);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+.spectrum-QuickActions-item:disabled,
+  .spectrum-QuickActions-item.is-disabled {
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(38, 38, 38);
+    color: rgb(73, 73, 73);
   }

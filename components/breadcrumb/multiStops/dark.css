@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--dark {
 
 /* topdoc
@@ -76,35 +78,44 @@ markup: |
 
 */
 }
+
 .spectrum--dark .spectrum-Breadcrumb {
   color: rgb(153, 153, 153);
 }
+
 .spectrum--dark .spectrum-Breadcrumb .spectrum-Breadcrumb-separator {
     color: rgb(92, 92, 92);
   }
+
 .spectrum--dark .spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     color: inherit;
     text-decoration: none;
   }
+
 .spectrum--dark .spectrum-Breadcrumb .spectrum-Breadcrumb-link:hover {
       color: rgb(255, 255, 255);
     }
+
 .spectrum--dark .spectrum-Breadcrumb .spectrum-Breadcrumb-link.focus-ring {
       color: rgb(75, 156, 245);
       outline: 0;
-      border-bottom: 2px solid rgb(75, 156, 245);
+      border-bottom: 0.125rem solid rgb(75, 156, 245);
     }
+
 .spectrum--dark .spectrum-Breadcrumb .spectrum-Breadcrumb-link:active {
       color: rgb(255, 255, 255);
       border-bottom: 0;
     }
+
 .spectrum--dark .spectrum-Breadcrumb.is-selected,
   .spectrum--dark .spectrum-Breadcrumb:last-of-type {
     color: rgb(255, 255, 255);
   }
+
 .spectrum--dark .spectrum-Breadcrumb.is-selected ~ .spectrum-Breadcrumb:last-of-type {
         color: rgb(153, 153, 153);
       }
+
 .spectrum--dark .spectrum-Breadcrumb.is-selected .spectrum-Breadcrumb-link.focus-ring {
         color: rgb(255, 255, 255);
         border-bottom: 0;

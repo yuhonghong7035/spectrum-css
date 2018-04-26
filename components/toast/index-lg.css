@@ -1,0 +1,103 @@
+/* topdoc
+---
+name: Toast - Default
+description: The default toast.
+status: Beta
+markup: |
+  <div class="spectrum-Toast">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ToastClose" />
+      </svg>
+    </button>
+  </div>
+
+  <br>
+
+  <div class="spectrum-Toast" style="position: absolute">
+    <div class="spectrum-Toast-content">This is a toast.</div>
+    <button class="spectrum-Toast-closeButton">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ToastClose" />
+      </svg>
+    </button>
+  </div>
+
+*/.spectrum-Toast {
+  position: relative;
+
+  /* Ensure text vertical alignment matches the specs */
+  padding: 0.8125rem 1.125rem 0.9375rem 1.125rem;
+
+  border-radius: 0.25rem;
+
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+}.spectrum-Toast-typeIcon {
+  position: absolute;
+  left: 1rem;
+  top: 0.9375rem;
+
+  width: 1.125rem;
+  height: 1.125rem;
+  vertical-align: -0.25rem;
+}.spectrum-Toast-content {
+  display: block;
+
+  padding-right: 1.875rem;
+}.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
+    padding-left: 1.75rem;
+  }.spectrum-Toast-closeButton {
+
+  /* Change the font styles in all browsers */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+
+  /* Remove the button margin in Firefox and Safari. */
+  margin: 0;
+
+  /* Show button the overflow in Edge and IE. */
+  overflow: visible;
+
+  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+
+
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+
+  padding: 0;
+
+  width: 2rem;
+  height: 2rem;
+
+  border: none;
+  border-radius: 1.125rem;
+
+  background-color: transparent;
+
+  transition: background-color 125ms ease-in-out;
+
+  cursor: pointer;
+}/* Remove the inner border and padding for button in Firefox. */.spectrum-Toast-closeButton::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }/* Restore the focus styles unset by the previous rule. */.spectrum-Toast-closeButton:-moz-focusring{
+    outline: 0.0625rem dotted ButtonText;
+  }.spectrum-Toast-closeButton .spectrum-Icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    width: 0.5rem;
+    height: 0.5rem;
+  }.spectrum-Toast-closeButton:focus {
+    outline: none;
+  }

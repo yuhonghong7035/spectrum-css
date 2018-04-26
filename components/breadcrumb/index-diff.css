@@ -1,0 +1,22 @@
+.spectrum--large .spectrum-Breadcrumb-separator {
+  top: calc(50% - 3px);
+  right: -18.5px;
+
+  width: 5px;
+  height: 8px;
+}
+.spectrum--large .spectrum-Breadcrumb {
+
+  margin-right: 32px;
+
+  font-size: 16px;
+  font-weight: 300;
+}
+.spectrum--large .spectrum-Breadcrumbs--title .spectrum-Breadcrumb:last-of-type {
+
+    margin: 0.3em 0;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }

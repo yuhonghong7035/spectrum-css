@@ -1,0 +1,165 @@
+.spectrum-Popover {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: transform 125ms ease-in-out,
+              opacity 125ms ease-in-out,
+              visibility 0ms linear 125ms;
+
+  pointer-events: none;
+}.spectrum-Popover.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+
+  pointer-events: auto;
+}.spectrum-Popover--bottom.is-open {
+  transform: translateY(0.375rem);
+}.spectrum-Popover--top.is-open {
+  transform: translateY(-0.375rem);
+}.spectrum-Popover--right.is-open {
+  transform: translateX(0.375rem);
+}.spectrum-Popover--left.is-open {
+  transform: translateX(-0.375rem);
+}.spectrum-Popover {
+
+  /* Be a flexbox to allow a full sized content area that scrolls */
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  box-sizing: border-box;
+
+  position: absolute;
+
+  min-width: 12rem;
+  min-height: 2rem;
+
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 0.3125rem;
+
+  outline: none;
+}/* Hide focus outline *//* Don't let sharp corners be pokey */.spectrum-Popover .spectrum-SelectList {
+    border-radius: 0.3125rem;
+  }.spectrum-Popover-tip {
+  position: absolute;
+  /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
+  overflow: hidden;
+  width: 1.5625rem;
+  height: 0.84375rem;
+}.spectrum-Popover-tip::after {
+    content: '';
+    width: 1.5625rem;
+    height: 1.5625rem;
+    border-width: 0.0625rem;
+    border-style: solid;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -1.125rem;
+    left: -0.0625rem;
+  }.spectrum-Popover--dialog {
+  min-width: 16.875rem;
+  padding: 1.875rem 1.8125rem;
+}/* topdoc
+---
+name: Popover - Dialog style
+description: Spectrum Popovers are implemented using the Dialog's inner elements.
+status: Beta
+markup: |
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--bottom is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Popover Title</div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <div class="dummy-spacing" style="height: 215px"></div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Very Very Very Long Popover Title</div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <div class="dummy-spacing" style="height: 215px"></div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--top spectrum-Dialog--success is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Success Popover</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <div class="dummy-spacing" style="height: 290px"></div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-Popover spectrum-Popover--dialog spectrum-Popover--right spectrum-Dialog--error is-open" style="max-width:320px">
+    <div class="spectrum-Dialog-header">
+      <div class="spectrum-Dialog-title">Very Long Error Message With Much Text</div>
+      <div class="spectrum-Dialog-typeIcon"></div>
+    </div>
+    <div class="spectrum-Dialog-content">Cupcake ipsum dolor sit amet jelly beans. Chocolate jelly caramels. Icing soufflé chupa chups donut cheesecake. Jelly-o chocolate cake sweet roll cake danish candy biscuit halvah</div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--quiet--secondary">
+        <span>Cancel</span>
+      </button>
+      <button class="spectrum-Button spectrum-Button--quiet--primary">
+        <span>Save</span>
+      </button>
+    </div>
+    <div class="spectrum-Popover-tip"></div>
+  </div>
+
+  <div class="dummy-spacing" style="height: 290px"></div>
+
+*/.spectrum-Popover--left.spectrum-Popover--withTip {
+    margin-right: 0.8125rem;
+  }.spectrum-Popover--left .spectrum-Popover-tip {
+    right: -1.125rem;
+    transform: rotate(-90deg);
+  }.spectrum-Popover--right.spectrum-Popover--withTip {
+    margin-left: 0.8125rem;
+  }.spectrum-Popover--right .spectrum-Popover-tip {
+    left: -1.125rem;
+    transform: rotate(90deg);
+  }/* Center the tip by default */.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
+    top: 50%;
+    margin-top: -0.375rem;
+  }.spectrum-Popover--bottom.spectrum-Popover--withTip {
+    margin-top: 0.8125rem;
+  }.spectrum-Popover--bottom .spectrum-Popover-tip {
+    top: -0.8125rem;
+    transform: rotate(180deg);
+  }.spectrum-Popover--top.spectrum-Popover--withTip {
+    margin-bottom: 0.8125rem;
+  }.spectrum-Popover--top .spectrum-Popover-tip {
+    bottom: -0.8125rem;
+  }/* Center the tip by default */.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
+    left: 50%;
+    margin-left: -0.75rem;
+  }

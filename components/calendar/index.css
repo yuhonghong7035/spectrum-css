@@ -1,8 +1,3 @@
-:root {
-
-  /* Radio button */
-}
-
 /* topdoc
 ---
 name: Calendar - Default
@@ -12,12 +7,12 @@ markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
         <div class="spectrum-Heading spectrum-Calendar-heading" role="heading" aria-live="assertive" aria-atomic="true">August 2017</div>
-        <button aria-label="Previous" title="Previous" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-prevMonth">
+        <button aria-label="Previous" title="Previous" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-prevMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
           </svg>
         </button>
-        <button aria-label="Next" title="Next" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-nextMonth">
+        <button aria-label="Next" title="Next" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-nextMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
           </svg>
@@ -40,45 +35,45 @@ markup: |
              <tr role="row">
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, July 30, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">30</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, July 31, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">31</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today">2</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected">5</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today">2</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected">5</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date">8</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date">9</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date">10</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date">11</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date">12</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date">8</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date">9</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date">10</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date">11</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date">12</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date">13</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date">14</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date">13</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date">14</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Friday, September 1, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">1</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Saturday, September 2, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">2</span></td>
              </tr>
@@ -96,9 +91,7 @@ markup: |
      </div>
   </div>
 
-*/
-
-/* topdoc
+*//* topdoc
 ---
 name: Calendar - Disabled
 description: The disabled calendar
@@ -107,18 +100,18 @@ markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
         <div class="spectrum-Heading spectrum-Calendar-heading" role="heading" aria-live="assertive" aria-atomic="true">August 2017</div>
-        <button aria-label="Previous" title="Previous" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-prevMonth" disabled>
+        <button aria-label="Previous" title="Previous" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-prevMonth" disabled>
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
           </svg>
         </button>
-        <button aria-label="Next" title="Next" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-nextMonth" disabled>
+        <button aria-label="Next" title="Next" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-nextMonth" disabled>
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
           </svg>
         </button>
      </div>
-     <div class="spectrum-Calendar-body" role="grid" tabindex="0" aria-readonly="true" aria-disabled="true">
+     <div class="spectrum-Calendar-body" role="grid" aria-readonly="true" aria-disabled="true">
        <table role="presentation" class="spectrum-Calendar-table">
           <thead role="presentation">
              <tr role="row">
@@ -191,9 +184,7 @@ markup: |
      </div>
   </div>
 
-*/
-
-/* topdoc
+*//* topdoc
 ---
 name: Calendar - Focused
 description: A calendar demonstrating focused dates
@@ -202,12 +193,12 @@ markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
         <div class="spectrum-Heading spectrum-Calendar-heading" role="heading" aria-live="assertive" aria-atomic="true">August 2017</div>
-        <button aria-label="Previous" title="Previous" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-prevMonth">
+        <button aria-label="Previous" title="Previous" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-prevMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
           </svg>
         </button>
-        <button aria-label="Next" title="Next" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-nextMonth">
+        <button aria-label="Next" title="Next" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-nextMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
           </svg>
@@ -230,45 +221,45 @@ markup: |
              <tr role="row">
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, July 30, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">30</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, July 31, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">31</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today is-focused">2</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-focused">5</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date is-today is-focused">2</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-focused">5</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date is-focused">7</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date">8</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date">9</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date">10</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date">11</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date">12</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date is-focused">7</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date">8</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date">9</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date">10</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date">11</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date">12</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date">13</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date">14</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date">13</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date">14</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Friday, September 1, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">1</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Saturday, September 2, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">2</span></td>
              </tr>
@@ -286,9 +277,7 @@ markup: |
     </div>
   </div>
 
-*/
-
-/* topdoc
+*//* topdoc
 ---
 name: Calendar - Range Selection
 description: |
@@ -300,12 +289,12 @@ markup: |
   <div class="spectrum-Calendar">
      <div class="spectrum-Calendar-header">
         <div class="spectrum-Heading spectrum-Calendar-heading" role="heading" aria-live="assertive" aria-atomic="true">August 2017</div>
-        <button aria-label="Previous" title="Previous" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-prevMonth">
+        <button aria-label="Previous" title="Previous" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-prevMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselLeftChevron" />
           </svg>
         </button>
-        <button aria-label="Next" title="Next" class="spectrum-Button spectrum-Button--icon spectrum-Calendar-nextMonth">
+        <button aria-label="Next" title="Next" class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Calendar-nextMonth">
           <svg class="spectrum-Icon spectrum-Calendar-chevron" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-CarouselRightChevron" />
           </svg>
@@ -328,45 +317,45 @@ markup: |
              <tr role="row">
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Sunday, July 30, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">30</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Monday, July 31, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">31</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date">2</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date">5</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 1, 2017"><span role="presentation" class="spectrum-Calendar-date">1</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Today, Wednesday, August 2, 2017 selected"><span role="presentation" class="spectrum-Calendar-date">2</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 3, 2017"><span role="presentation" class="spectrum-Calendar-date">3</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 4, 2017"><span role="presentation" class="spectrum-Calendar-date">4</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 5, 2017"><span role="presentation" class="spectrum-Calendar-date">5</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-start">8</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">9</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">10</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-today">11</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">12</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 6, 2017"><span role="presentation" class="spectrum-Calendar-date">6</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 7, 2017"><span role="presentation" class="spectrum-Calendar-date">7</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 8, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-start">8</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 9, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">9</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Thursday, August 10, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection">10</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Friday, August 11, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-today">11</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Saturday, August 12, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-end">12</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">13</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-end">14</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Sunday, August 13, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-range-start">13</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="true" aria-invalid="false" title="Monday, August 14, 2017"><span role="presentation" class="spectrum-Calendar-date is-selected is-range-selection is-selection-end">14</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 15, 2017"><span role="presentation" class="spectrum-Calendar-date">15</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 16, 2017"><span role="presentation" class="spectrum-Calendar-date">16</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 17, 2017"><span role="presentation" class="spectrum-Calendar-date">17</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 18, 2017"><span role="presentation" class="spectrum-Calendar-date">18</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 19, 2017"><span role="presentation" class="spectrum-Calendar-date">19</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 20, 2017"><span role="presentation" class="spectrum-Calendar-date">20</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 21, 2017"><span role="presentation" class="spectrum-Calendar-date">21</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 22, 2017"><span role="presentation" class="spectrum-Calendar-date">22</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 23, 2017"><span role="presentation" class="spectrum-Calendar-date">23</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 24, 2017"><span role="presentation" class="spectrum-Calendar-date">24</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Friday, August 25, 2017"><span role="presentation" class="spectrum-Calendar-date">25</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Saturday, August 26, 2017"><span role="presentation" class="spectrum-Calendar-date">26</span></td>
              </tr>
              <tr role="row">
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
-                <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Sunday, August 27, 2017"><span role="presentation" class="spectrum-Calendar-date">27</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Monday, August 28, 2017"><span role="presentation" class="spectrum-Calendar-date">28</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Tuesday, August 29, 2017"><span role="presentation" class="spectrum-Calendar-date">29</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Wednesday, August 30, 2017"><span role="presentation" class="spectrum-Calendar-date">30</span></td>
+                <td role="gridcell" class="spectrum-Calendar-tableCell" tabindex="-1" aria-disabled="false" aria-selected="false" aria-invalid="false" title="Thursday, August 31, 2017"><span role="presentation" class="spectrum-Calendar-date">31</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Friday, September 1, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">1</span></td>
                 <td role="gridcell" class="spectrum-Calendar-tableCell" aria-disabled="true" aria-selected="false" aria-invalid="false" title="Saturday, September 2, 2017"><span role="presentation" class="spectrum-Calendar-date is-outsideMonth">2</span></td>
              </tr>
@@ -384,21 +373,15 @@ markup: |
      </div>
   </div>
 
-*/
-
-.spectrum-Calendar {
+*/.spectrum-Calendar {
   display: inline-block;
-  /*width: var(--spectrum-calendar-width-default);*/
-}
-
-.spectrum-Calendar-header {
+  /*width: var(--spectrum-calendar-width);*/
+}.spectrum-Calendar-header {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 32px;
-}
-
-.spectrum-Calendar-heading {
+  height: 2rem;
+}.spectrum-Calendar-heading {
   position: absolute;
   left: 0;
   top: 0;
@@ -410,43 +393,31 @@ markup: |
   width: 100%;
   line-height: 2rem;
   margin: 0;
-  padding: 0 32px;
+  padding: 0 2rem;
 
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.spectrum-Calendar-prevMonth,
+}.spectrum-Calendar-prevMonth,
 .spectrum-Calendar-nextMonth {
   position: absolute;
 
-}
-
-/* Todo: move to origins */
-
-.spectrum-Calendar-chevron {
-  width: 12px;
-  height: 16px;
-}
-
-.spectrum-Calendar-prevMonth {
-  left: 3px;
-}
-
-.spectrum-Calendar-nextMonth {
-  right: 3px;
-}
-
-.spectrum-Calendar-dayOfWeek {
+}/* Todo: move to origins */.spectrum-Calendar-chevron {
+  width: 0.75rem;
+  height: 1rem;
+}.spectrum-Calendar-prevMonth {
+  left: 0.1875rem;
+}.spectrum-Calendar-nextMonth {
+  right: 0.1875rem;
+}.spectrum-Calendar-dayOfWeek {
 
   position: absolute;
-  bottom: 4px;
+  bottom: 0.25rem;
 
   display: block;
 
-  width: 32px;
+  width: 2rem;
 
   border-bottom: none !important; /* override abbr styling from normalize.css */
 
@@ -456,9 +427,7 @@ markup: |
   text-decoration: none !important; /* override abbr styling from normalize.css */
 
   cursor: default;
-}
-
-.spectrum-Calendar-dayOfWeek[title] {
+}.spectrum-Calendar-dayOfWeek[title] {
     /* Normalize abbr[title] */
     /* Remove the bottom border in Chrome 57- and Firefox 39-. */
     border-bottom: none;
@@ -466,13 +435,9 @@ markup: |
     /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
     text-decoration: underline;
     text-decoration: underline dotted;
-  }
-
-.spectrum-Calendar-body {
+  }.spectrum-Calendar-body {
   outline: none;
-}
-
-.spectrum-Calendar-table {
+}.spectrum-Calendar-table {
   table-layout: fixed;
   /*width: 100%;*/
 
@@ -483,18 +448,16 @@ markup: |
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.spectrum-Calendar-tableCell {
+}.spectrum-Calendar-tableCell {
   text-align: center;
   padding: 0;
   position: relative;
-  height: 32px;
-  width: 32px;
-  padding: 4px;
-}
-
-.spectrum-Calendar-date {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.25rem;
+}.spectrum-Calendar-tableCell:focus {
+    outline: 0;
+  }.spectrum-Calendar-date {
   /* This is fun, but we need to trick the table so it doesn't size itself in a weird way */
   position: absolute;
   display: block;
@@ -503,12 +466,12 @@ markup: |
 
   box-sizing: border-box;
 
-  height: 32px;
-  width: 32px;
-  margin: 4px;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem;
 
-  border-radius: 32px;
-  border: 2px solid transparent;
+  border-radius: 2rem;
+  border: 0.125rem solid transparent;
 
   font-size: 0.875rem;
   line-height: 1.75rem;
@@ -518,106 +481,82 @@ markup: |
   transition: background 125ms ease-in-out,
         color 125ms ease-in-out,
         border-color 125ms ease-in-out;
-}
-
-.spectrum-Calendar-date.is-disabled {
+}.spectrum-Calendar-date.is-disabled {
     cursor: default;
     pointer-events: none;
-  }
-
-.spectrum-Calendar-date.is-outsideMonth {
+  }.spectrum-Calendar-date.is-outsideMonth {
     visibility: hidden;
-  }
-
-.spectrum-Calendar-date:before {
+  }.spectrum-Calendar-date:before {
     content: '';
     position: absolute;
-    z-index: -1;
-    top: calc(50% - 16px);
-    left: calc(50% - 16px);
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
     box-sizing: border-box;
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
-    border: 2px solid transparent;
-  }
-
-.spectrum-Calendar-date.is-selected:not(.is-range-selection):before {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: 0.125rem solid transparent;
+  }.spectrum-Calendar-date.is-selected:not(.is-range-selection) {
+    font-weight: 700;
+  }.spectrum-Calendar-date.is-selected:not(.is-range-selection):before {
       /* No highlight for lone selections */
       display: none;
-    }
-
-.spectrum-Calendar-date.is-range-selection {
+    }.spectrum-Calendar-date.is-today {
+    font-weight: 700;
+  }.spectrum-Calendar-date.is-range-selection {
     /* overrides to make the cells appear connected */
-    margin: 4px 0;
+    margin: 0.25rem 0;
     border-width: 0;
     line-height: 2rem;
     border-radius: 0;
 
     /* Todo: Calculate this */
-    width: 40px;
-  }
-
-.spectrum-Calendar-date.is-range-selection.is-range-start,
+    width: 2.5rem;
+  }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      width: 36px;
-    }
-
-.spectrum-Calendar-date.is-range-selection.is-selection-start,
+      width: 2.25rem;
+    }.spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
       font-weight: 700;
-    }
-
-.spectrum-Calendar-date.is-range-selection.is-selection-start:after, .spectrum-Calendar-date.is-range-selection.is-selection-end:after {
+    }.spectrum-Calendar-date.is-range-selection.is-selection-start:after, .spectrum-Calendar-date.is-range-selection.is-selection-end:after {
         position: absolute;
         top: 0;
-        z-index: -1;
 
         display: block;
 
-        height: 32px;
-        width: 32px;
+        height: 2rem;
+        width: 2rem;
 
-        border-radius: 32px;
+        border-radius: 2rem;
 
         content: '';
-      }
-
-.spectrum-Calendar-date.is-range-selection.is-range-start,
+      }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-start {
-      padding-right: 4px;
-      margin-left: 4px;
-      border-radius: 32px 0 0 32px;
-    }
-
-.spectrum-Calendar-date.is-range-selection.is-range-start:before,
+      padding-right: 0.25rem;
+      margin-left: 0.25rem;
+      border-radius: 2rem 0 0 2rem;
+    }.spectrum-Calendar-date.is-range-selection.is-range-start:before,
       .spectrum-Calendar-date.is-range-selection.is-range-start:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-start:before,
       .spectrum-Calendar-date.is-range-selection.is-selection-start:after {
         left: 0;
-      }
-
-.spectrum-Calendar-date.is-range-selection.is-range-end,
+      }.spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      padding-left: 4px;
-      margin-right: 4px;
-      border-radius: 0 32px 32px 0;
-    }
-
-.spectrum-Calendar-date.is-range-selection.is-range-end:before,
+      padding-left: 0.25rem;
+      margin-right: 0.25rem;
+      border-radius: 0 2rem 2rem 0;
+    }.spectrum-Calendar-date.is-range-selection.is-range-end:before,
       .spectrum-Calendar-date.is-range-selection.is-range-end:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-end:before,
       .spectrum-Calendar-date.is-range-selection.is-selection-end:after {
         left: auto;
         right: 0;
-      }
-
-.spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end,
+      }.spectrum-Calendar-date.is-range-selection.is-selection-start.is-selection-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
-      width: 32px;
-      border-radius: 32px;
+      width: 2rem;
+      border-radius: 2rem;
     }

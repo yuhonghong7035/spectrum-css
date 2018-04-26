@@ -1,43 +1,53 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--darkest .spectrum-Accordion-item {
   border-color: rgb(45, 45, 45);
 }
+
 .spectrum--darkest .spectrum-Accordion-indicator {
   color: rgb(105, 105, 105);
 }
+
 .spectrum--darkest .spectrum-Accordion-header {
   color: rgb(133, 133, 133);
 }
+
 .spectrum--darkest .spectrum-Accordion-header:focus,
   .spectrum--darkest .spectrum-Accordion-header:hover {
     color: rgb(226, 226, 226);
 
     background-color: rgb(38, 38, 38);
   }
+
 .spectrum--darkest .spectrum-Accordion-header:focus + .spectrum-Accordion-indicator, .spectrum--darkest .spectrum-Accordion-header:hover + .spectrum-Accordion-indicator {
       color: rgb(180, 180, 180);
     }
+
 .spectrum--darkest .spectrum-Accordion-header:focus:after  {
       background-color: rgb(20, 115, 230);
     }
+
 .spectrum--darkest .spectrum-Accordion-item.is-open .spectrum-Accordion-header:hover {
         background-color: transparent;
       }
+
 .spectrum--darkest .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header,
     .spectrum--darkest .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:hover,
     .spectrum--darkest .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header:focus {
       color: rgb(73, 73, 73);
       background-color: transparent;
     }
+
 .spectrum--darkest .spectrum-Accordion-item.is-disabled .spectrum-Accordion-header + .spectrum-Accordion-indicator {
       color: rgb(60, 60, 60);
     }

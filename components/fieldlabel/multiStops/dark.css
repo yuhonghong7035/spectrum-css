@@ -1,13 +1,16 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
-.spectrum--dark .spectrum-FieldLabel {
-  color: rgb(153, 153, 153);
+
+.spectrum--dark .spectrum-FieldLabel,
+.spectrum--dark .spectrum-Form-itemLabel {
+  color: rgb(205, 205, 205);
 }

@@ -1,0 +1,183 @@
+/* topdoc
+---
+name: TagList - Default
+description: A taglist with items that cannot be edited.
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="list">
+    <div class="spectrum-TagList-item" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 1</span>
+    </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+    </div>
+  </div>
+
+*//* topdoc
+---
+name: TagList - Removable
+description: An editable taglist.
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 1</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 1" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-invalid" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" tabindex="0" role="listitem">
+      <span class="spectrum-TagList-item-label">Tag 2</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+*//* topdoc
+---
+name: TagList - Avatars
+description: The Spectrum tag list with avatars
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+*//* topdoc
+---
+name: TagList - Icons
+description: The Spectrum tag list with icons
+status: Released
+markup: |
+  <div class="spectrum-TagList" role="list" aria-label="Tags">
+    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-TagList-item is-disabled" role="listitem">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+*/.spectrum-TagList {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}.spectrum-TagList:after {
+    content: "";
+    display: table;
+    clear: both;
+  }.spectrum-TagList-item {
+  float: left;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  box-sizing: border-box;
+
+  margin: 0.3125rem 0.3125rem;
+  padding: 0 0.8125rem;
+  height: 1.875rem;
+  max-width: 100%;
+
+  border-radius: 0.25rem;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  transition: border-color 125ms ease-in-out,
+    color 125ms ease-in-out,
+    box-shadow 125ms ease-in-out,
+    background-color 125ms ease-in-out;
+}.spectrum-TagList-item.is-disabled {
+    pointer-events: none;
+  }.spectrum-TagList-item > .spectrum-Icon,
+  .spectrum-TagList-item > .spectrum-Avatar {
+    margin-right: 0.625rem;
+  }.spectrum-TagList-item > .spectrum-Icon,
+  .spectrum-TagList-item > .spectrum-Avatar {
+    /* Move it 2px to the left cause Nate says so */
+    margin-left: -0.125rem;
+  }.spectrum-TagList-item .spectrum-ClearButton {
+    margin-right: -0.8125rem;
+  }.spectrum-TagList-item-label {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  font-size: 0.9375rem;
+  cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

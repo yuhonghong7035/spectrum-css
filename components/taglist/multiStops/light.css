@@ -1,66 +1,85 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--light .spectrum-TagList-item {
   color: rgb(112, 112, 112);
-  background-color: rgb(251, 251, 251);
-  border: 1px solid rgb(142, 142, 142);
+  background-color: rgb(250, 250, 250);
+  border: 0.0625rem solid rgb(142, 142, 142);
 }
+
+.spectrum--light .spectrum-TagList-item .spectrum-ClearButton {
+    color: rgb(142, 142, 142);
+  }
+
 .spectrum--light .spectrum-TagList-item:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(250, 250, 250);
     color: rgb(44, 44, 44);
     border-color: rgb(44, 44, 44);
   }
+
+.spectrum--light .spectrum-TagList-item:hover .spectrum-ClearButton {
+      color: rgb(44, 44, 44);
+    }
+
 .spectrum--light .spectrum-TagList-item.focus-ring {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(250, 250, 250);
     color: rgb(44, 44, 44);
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
+    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
   }
-.spectrum--light .spectrum-TagList-item.is-invalid {
-    color: rgb(201, 37, 45);
-    border-color: rgb(227, 72, 80);
-  }
-.spectrum--light .spectrum-TagList-item.is-invalid:hover {
-      border-color: rgb(227, 72, 80);
-      color: rgb(201, 37, 45);
-    }
-.spectrum--light .spectrum-TagList-item.is-invalid.focus-ring {
-      color: rgb(187, 18, 26);
-      border-color: rgb(227, 72, 80);
-      box-shadow: 0 0 0 1px rgb(227, 72, 80);
 
+.spectrum--light .spectrum-TagList-item.focus-ring .spectrum-ClearButton {
+      color: rgb(44, 44, 44);
     }
-.spectrum--light .spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton .spectrum-Icon {
-        color: rgb(227, 72, 80);
+
+.spectrum--light .spectrum-TagList-item.is-invalid {
+    color: rgb(112, 112, 112);
+    border-color: rgb(215, 55, 63);
+  }
+
+.spectrum--light .spectrum-TagList-item.is-invalid .spectrum-ClearButton {
+      color: rgb(215, 55, 63);
+    }
+
+.spectrum--light .spectrum-TagList-item.is-invalid:hover {
+      color: rgb(44, 44, 44);
+      border-color: rgb(201, 37, 45);
+    }
+
+.spectrum--light .spectrum-TagList-item.is-invalid:hover .spectrum-ClearButton {
+        color: rgb(201, 37, 45);
       }
-.spectrum--light .spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton::focus .spectrum-Icon {
-          color: rgb(201, 37, 45);
-        }
-.spectrum--light .spectrum-TagList-item.is-invalid .spectrum-TagList-item-removeButton:hover .spectrum-Icon {
-          color: rgb(215, 55, 63);
-        }
+
+.spectrum--light .spectrum-TagList-item.is-invalid.focus-ring {
+      color: rgb(44, 44, 44);
+      border-color: rgb(38, 128, 235);
+      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    }
+
+.spectrum--light .spectrum-TagList-item.is-invalid.focus-ring .spectrum-ClearButton {
+        color: rgb(201, 37, 45);
+      }
+
 .spectrum--light .spectrum-TagList-item.is-disabled {
     color: rgb(179, 179, 179);
     background-color: rgb(234, 234, 234);
     border-color: rgb(234, 234, 234);
   }
-.spectrum--light .spectrum-TagList-item.is-disabled .spectrum-TagList-item-avatar {
+
+.spectrum--light .spectrum-TagList-item.is-disabled .spectrum-Avatar {
+      /* Duplicated so state is on the tag */
       opacity: 0.3;
     }
-.spectrum--light .spectrum-TagList-item-removeButton .spectrum-Icon {
-    color: rgb(142, 142, 142);
-  }
-.spectrum--light .spectrum-TagList-item-removeButton:hover .spectrum-Icon {
-      color: rgb(44, 44, 44);
-    }
-.spectrum--light .spectrum-TagList-item.is-disabled .spectrum-TagList-item-removeButton .spectrum-Icon {
+
+.spectrum--light .spectrum-TagList-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
     color: rgb(179, 179, 179);
   }

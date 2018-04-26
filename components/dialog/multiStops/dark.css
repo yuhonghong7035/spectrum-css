@@ -1,33 +1,41 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--dark .spectrum-Dialog {
   background: rgb(50, 50, 50);
 }
+
 .spectrum--dark .spectrum-Dialog-header {
   background: rgb(50, 50, 50);
 }
+
 .spectrum--dark .spectrum-Dialog-header:after {
     background: rgb(57, 57, 57);
   }
+
 .spectrum--dark .spectrum-Dialog-title {
   /* Todo: Determine if missing class is required */
   color: rgb(255, 255, 255);
 }
+
 .spectrum--dark .spectrum-Dialog-typeIcon {
   /* Todo: Determine if missing class is required */
   color: rgb(255, 255, 255);
 }
+
 .spectrum--dark .spectrum-Dialog-footer {
   background: rgb(50, 50, 50);
 }
+
 /* topdoc
 ---
 name: Dialog - Error
@@ -51,9 +59,11 @@ markup:
   </div>
 
 */
+
 .spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title {
     color: rgb(236, 91, 98);
   }
+
 .spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon{
     color: rgb(236, 91, 98);
   }

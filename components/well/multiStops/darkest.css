@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Well
@@ -31,6 +33,7 @@ markup: |
   </span>
 
 */
+
 .spectrum--darkest .spectrum-Well {
   background-color: rgba(226, 226, 226, .02);
   border-color: rgba(226, 226, 226, .05);

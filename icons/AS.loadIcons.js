@@ -1,8 +1,19 @@
 (function() {
-  function injectSVG() {
+  function injectSVG(svgURL, callback) {
+    function handleError(string) {
+      var error = new Error(string);
+
+      console.error(error.toString());
+
+      if (typeof callback === 'function') {
+        callback(error);
+      }
+    }
+
+    var error;
     // 200 for web servers, 0 for CEP panels
     if (this.status !== 200 && this.status !== 0) {
-      console.error('Icons: Failed to fetch icons, server returned ' + this.status);
+      handleError('AS.loadIcons: Failed to fetch icons, server returned ' + this.status);
       return;
     }
 
@@ -13,7 +24,7 @@
       var svg = doc.firstChild;
     }
     catch (err) {
-      console.error('Icons: Error parsing icon SVG sprite: ' + err);
+      handleError('AS.loadIcons: Error parsing icon SVG sprite: ' + err);
       return;
     }
 
@@ -22,21 +33,28 @@
       // Hide the element
       svg.style.display = 'none';
 
+      svg.setAttribute('data-url', svgURL);
+
       // Insert it into the head
       document.head.insertBefore(svg, null);
+
+      // Pass the SVG to the callback
+      if (typeof callback === 'function') {
+        callback(null, svg);
+      }
     }
     else {
-      console.error('Icons: Parse SVG document contained something other than a SVG');
+      handleError('AS.loadIcons: Parse SVG document contained something other than a SVG');
     }
   }
 
-  function loadIcons(svgURL) {
+  function loadIcons(svgURL, callback) {
     // Request the SVG sprite
     var req = new XMLHttpRequest();
     req.open('GET', svgURL, true);
-    req.addEventListener('load', injectSVG);
+    req.addEventListener('load', injectSVG.bind(req, svgURL, callback));
     req.addEventListener('error', function(event) {
-      console.log('Icons: Request failed');
+      console.log('AS.loadIcons: Request failed');
     });
     req.send();
   }

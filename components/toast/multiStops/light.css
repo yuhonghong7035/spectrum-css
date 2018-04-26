@@ -1,35 +1,44 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum--light .spectrum-Toast {
   background-color: rgb(118, 118, 118);
   color: rgb(255, 255, 255);
 }
+
 .spectrum--light .spectrum-Toast-typeIcon {
   color: white;
 }
+
 .spectrum--light .spectrum-Toast-closeButton {
   color: white;
 }
+
 .spectrum--light .spectrum-Toast-closeButton:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
+
 .spectrum--light .spectrum-Toast-closeButton.focus-ring {
     background-color: rgba(255, 255, 255, 1);
   }
+
 .spectrum--light .spectrum-Toast-closeButton.focus-ring:not(:active) {
       color: rgb(118, 118, 118);
     }
+
 .spectrum--light .spectrum-Toast-closeButton:active {
     background-color: rgba(255, 255, 255, 0.15);
   }
+
 /* topdoc
 ---
 name: Toast - Warning
@@ -49,12 +58,15 @@ markup: |
   </div>
 
 */
+
 .spectrum--light .spectrum-Toast--warning {
   background-color: rgb(218, 123, 17);
 }
+
 .spectrum--light .spectrum-Toast--warning .spectrum-Toast-closeButton.focus-ring:not(:active) {
       color: rgb(218, 123, 17);
     }
+
 /* topdoc
 ---
 name: Toast - Error
@@ -74,12 +86,15 @@ markup: |
   </div>
 
 */
+
 .spectrum--light .spectrum-Toast--error {
   background-color: rgb(215, 55, 63);
 }
+
 .spectrum--light .spectrum-Toast--error .spectrum-Toast-closeButton.focus-ring:not(:active) {
       color: rgb(215, 55, 63);
     }
+
 /* topdoc
 ---
 name: Toast - Info
@@ -99,12 +114,15 @@ markup: |
   </div>
 
 */
+
 .spectrum--light .spectrum-Toast--info {
   background-color: rgb(20, 115, 230);
 }
+
 .spectrum--light .spectrum-Toast--info .spectrum-Toast-closeButton.focus-ring:not(:active) {
       color: rgb(20, 115, 230);
     }
+
 /* topdoc
 ---
 name: Toast - Success
@@ -124,9 +142,11 @@ markup: |
   </div>
 
 */
+
 .spectrum--light .spectrum-Toast--success {
   background-color: rgb(38, 142, 108);
 }
+
 .spectrum--light .spectrum-Toast--success .spectrum-Toast-closeButton.focus-ring:not(:active) {
       color: rgb(38, 142, 108);
     }

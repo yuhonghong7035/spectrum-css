@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: Quick Actions
@@ -21,7 +23,7 @@ markup: |
       </svg>
     </button>
     <button class="spectrum-QuickActions-item">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="RotateLeft">
         <use xlink:href="#spectrum-icon-18-RotateLeft" />
       </svg>
     </button>
@@ -38,27 +40,38 @@ markup: |
   </div>
 
 */
+
 .spectrum--light .spectrum-QuickActions-item {
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(202, 202, 202);
-  color: rgb(112, 112, 112);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background-color: rgb(250, 250, 250);
+  border-color: rgb(225, 225, 225);
+  color: rgb(75, 75, 75);
 }
-.spectrum--light .spectrum-QuickActions-item:focus {
-    outline: none;
-  }
+
 .spectrum--light .spectrum-QuickActions-item.focus-ring {
+    background-color: rgb(255, 255, 255);
     border-color: rgb(38, 128, 235);
-    color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 1px rgb(38, 128, 235);
-    outline: none;
+    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    color: rgb(44, 44, 44);
   }
+
 .spectrum--light .spectrum-QuickActions-item:hover {
-    border-color: rgb(112, 112, 112);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(202, 202, 202);
+    box-shadow: none;
     color: rgb(44, 44, 44);
   }
-.spectrum--light .spectrum-QuickActions-item:active {
-    border-color: rgb(75, 75, 75);
+
+.spectrum--light .spectrum-QuickActions-item:active,
+  .spectrum--light .spectrum-QuickActions-item.is-selected {
+    background-color: rgb(234, 234, 234);
+    border-color: rgb(202, 202, 202);
+    box-shadow: none;
     color: rgb(44, 44, 44);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+.spectrum--light .spectrum-QuickActions-item:disabled,
+  .spectrum--light .spectrum-QuickActions-item.is-disabled {
+    background-color: rgb(234, 234, 234);
+    border-color: rgb(234, 234, 234);
+    color: rgb(179, 179, 179);
   }

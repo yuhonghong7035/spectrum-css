@@ -1,24 +1,38 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 .spectrum-Radio-input:checked + .spectrum-Radio-button {
     border-color: rgb(55, 142, 240);
   }
+
 .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
 
     }
+
 .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
-      color: rgb(90, 169, 250);
+      color: rgb(75, 156, 245);
     }
+
+.spectrum-Radio-label {
+  color: rgb(205, 205, 205);
+}
+
+.spectrum-Radio-button {
+  background-color: rgb(47, 47, 47);
+  border-color: rgb(123, 123, 123);
+}
+
 /* topdoc
 ---
 name: Radio - Default
@@ -41,40 +55,42 @@ markup: |
   </div>
 
 */
-.spectrum-Radio .spectrum-Radio-label {
-    color: rgb(205, 205, 205);
-  }
-.spectrum-Radio .spectrum-Radio-button {
-    border-color: rgb(123, 123, 123);
-  }
+
 .spectrum-Radio:hover .spectrum-Radio-button {
       border-color: rgb(153, 153, 153);
       box-shadow: none;
     }
+
 .spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(75, 156, 245);
 
     }
+
 .spectrum-Radio:hover .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
+
 .spectrum-Radio:active .spectrum-Radio-button {
       border-color: rgb(205, 205, 205);
     }
+
 .spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button {
       border-color: rgb(90, 169, 250);
 
     }
+
 .spectrum-Radio:active .spectrum-Radio-label {
       color: rgb(255, 255, 255);
     }
+
 .spectrum-Radio.is-invalid .spectrum-Radio-button {
       border-color: rgb(236, 91, 98);
-
     }
+
 .spectrum-Radio.is-invalid .spectrum-Radio-label {
       color: rgb(236, 91, 98);
     }
+
 /* topdoc
 ---
 name: Radio - Invalid
@@ -111,20 +127,24 @@ markup: |
   </form>
 
 */
+
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-input + .spectrum-Radio-button {
       border-color: rgb(247, 109, 116);
-
     }
+
 .spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
       color: rgb(247, 109, 116);
     }
+
 .spectrum-Radio.is-invalid:active .spectrum-Radio-input +.spectrum-Radio-button {
       border-color: rgb(255, 123, 130);
 
     }
+
 .spectrum-Radio.is-invalid:active .spectrum-Radio-label {
       color: rgb(255, 123, 130);
     }
+
 /* topdoc
 ---
 name: Radio - Disabled
@@ -147,9 +167,11 @@ markup: |
   </div>
 
 */
+
 .spectrum-Radio-input:disabled + .spectrum-Radio-button {
     border-color: rgb(77, 77, 77) !important;
   }
+
 .spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
     color: rgb(92, 92, 92) !important;
   }

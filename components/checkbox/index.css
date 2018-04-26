@@ -1,20 +1,15 @@
-:root {
-
-  /* Radio button */
-}
-
 .spectrum-Checkbox {
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: 32px;
+  height: 2rem;
   line-height: 2rem;
-}
 
-.spectrum-Checkbox-input {
-
+  padding: 0 0.5rem;
+  margin-left: -0.5rem;
+}.spectrum-Checkbox-input {
   /* Change the font styles in all browsers for input. */
-  font-family: sans-serif;
+  font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
 
@@ -26,7 +21,7 @@
 
   /* Add the correct box sizing for [type="checkbox"] in IE 10-. */
   box-sizing: border-box;
-  
+
   /* Remove the padding for [type="checkbox"] in IE 10-. */
   padding: 0;
 
@@ -40,69 +35,59 @@
   z-index: 1;
 
   cursor: pointer;
-}
-
-.spectrum-Checkbox-input:disabled {
+}.spectrum-Checkbox-input:disabled {
     cursor: default;
-  }
-
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 7px;
-  }
-
-.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
+  }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-width: 0.4375rem;
+  }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       transform: scale(1);
       opacity: 1;
-    }
-
-.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
+    }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 6px 3px 6px 3px;
-  }
-
-.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
+    border-width: 0.4375rem;
+  }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       display: none;
-    }
+    }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark {
+      display: block;
 
-.spectrum-Checkbox-label {
+      transform: scale(1);
+      opacity: 1;
+    }.spectrum-Checkbox-label {
   display: inline-block;
-  margin: 0 8px;
+  margin: 0 0.625rem;
   font-size: 0.875rem;
+  font-weight: 400;
   vertical-align: middle;
   transition: color 125ms ease-in-out;
-}
-
-.spectrum-Checkbox-box {
+}.spectrum-Checkbox-box {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
 
-  border-radius: 2px;
-  border-width: 2px;
+  border-radius: 0.125rem;
+  border-width: 0.125rem;
   border-style: solid;
 
   vertical-align: middle;
 
   transition: border 125ms ease-in-out, box-shadow 125ms ease-in-out;
+}.spectrum-Checkbox-checkmark,
+.spectrum-Checkbox-partialCheckmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+
+  margin-top: -0.375rem;
+  margin-left: -0.375rem;
+
+  opacity: 0;
+  transform: scale(0);
+
+  transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
+}.spectrum-Checkbox-partialCheckmark {
+  display: none;
 }
-
-.spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
-    position: absolute;
-    top: 50%;
-    left: 1px;
-    width: 12px;
-    height: 12px;
-
-    margin-top: -6px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-
-    opacity: 0;
-    transform: scale(0);
-
-    transition: opacity 125ms ease-in-out, transform 125ms ease-in-out;
-
-    content: '';
-  }

@@ -1,13 +1,15 @@
 /* Temporary skin variables that need to be moved into origins */
+
 :root {
   /* Icon Button*/
 
   /* Button */
 
-  /* Loader */
-
   /* Shell */
+
+  /* haha remove this */
 }
+
 /* topdoc
 ---
 name: SelectList
@@ -30,38 +32,47 @@ markup: |
 
 
 */
+
 .spectrum--dark .spectrum-SelectList {
-  background-color: rgb(37, 37, 37);
+  background-color: rgba(0, 0, 0, 0);
 }
+
 .spectrum--dark .spectrum-SelectList-item {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(205, 205, 205);
 }
+
 .spectrum--dark .spectrum-SelectList-item:focus,
   .spectrum--dark .spectrum-SelectList-item.is-focused {
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 255, .04);
     color: rgb(205, 205, 205);
   }
+
 .spectrum--dark .spectrum-SelectList-item:hover {
-    background-color: rgb(50, 50, 50);
+    background-color: rgba(255, 255, 255, .04);
     color: rgb(205, 205, 205);
   }
+
 .spectrum--dark .spectrum-SelectList-item.is-selected {
     color: rgb(75, 156, 245);
   }
+
 .spectrum--dark .spectrum-SelectList-item.is-selected .spectrum-SelectList-checkmark {
-      color: rgb(38, 128, 235);
+      color: rgb(75, 156, 245);
     }
+
 .spectrum--dark .spectrum-SelectList-item .is-active,
   .spectrum--dark .spectrum-SelectList-item:active {
-    background-color: rgb(57, 57, 57);
+    background-color: rgba(255, 255, 255, .04);
   }
+
 .spectrum--dark .spectrum-SelectList-item.is-disabled {
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
     color: rgb(92, 92, 92);
     cursor: default;
   }
+
 .spectrum--dark .spectrum-SelectList-divider {
   background-color: rgb(50, 50, 50);
 }

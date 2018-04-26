@@ -22,6 +22,7 @@
 
 .spectrum-Icon {
   transition: color 0.25s ease-in-out;
+  pointer-events: auto !important;
 }
 .spectrum-Icon:hover {
   color: rgb(13, 102, 208);
