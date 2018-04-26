@@ -90,7 +90,7 @@
   <body class="u-sdldocs-clearfix spectrum spectrum--light">
     <div class="spectrum-Underlay" id="spectrum-underlay"></div>
     <header class="sdldocs-header">
-      <h2 class="spectrum-Heading--pageTitle"><a class="sdldocs-header-link" href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><span class="sdldocs-header-title">spectrum-css 2.0.0-beta.80</span></h2>
+      <h2 class="spectrum-Heading--pageTitle"><a class="sdldocs-header-link" href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><span class="sdldocs-header-title">spectrum-css 2.0.0-beta.81</span></h2>
       <div class="sdldocs-badge">
         <div class="sdldocs-badge-label">Spectrum</div>
         <div class="sdldocs-badge-version">4.0.0-beta.27
@@ -211,9 +211,6 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#breadcrumb---title">Breadcrumb - Title</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---action-toolbar)">Button - Action (toolbar)</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---cta">Button - CTA</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
@@ -239,6 +236,12 @@
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button---warning">Button - Warning</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button-group">Button Group</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#button-group-vertical)">Button Group (vertical)</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#calendar---default">Calendar - Default</a></div>
@@ -310,9 +313,6 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#field-label---right">Field Label - Right</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#flyout">Flyout</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#form">Form</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
@@ -331,7 +331,7 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---disabled">Link - Disabled</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---over-color">Link - Over Color</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---over-background">Link - Over Background</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#link---subtle">Link - Subtle</a></div>
@@ -370,7 +370,7 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#logic-button">Logic Button</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#miller---default">Miller - Default</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#miller-columns---default">Miller Columns - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#page">Page</a></div>
@@ -389,6 +389,9 @@
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#pagination---listing">Pagination - Listing</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#popover">Popover</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#popover---dialog-style">Popover - Dialog style</a></div>
@@ -472,10 +475,10 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#splitbutton---secondary">SplitButton - Secondary</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#status-light---category-colors">Status Light - Category Colors</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#status-light---label-colors">Status Light - Label Colors</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#status-light---status-colors">Status Light - Status Colors</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#status-light---semantic">Status Light - Semantic</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#steplist---plain">Steplist - Plain</a></div>
@@ -532,16 +535,10 @@
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tabs---vertical">Tabs - Vertical</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#taglist---avatars">TagList - Avatars</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tags---default">Tags - Default</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#taglist---default">TagList - Default</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#taglist---icons">TagList - Icons</a></div>
-          </div>
-          <div class="row center-xs around-xs start-sm">
-            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#taglist---removable">TagList - Removable</a></div>
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tags---deletable">Tags - Deletable</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#text-area---default">Text Area - Default</a></div>
@@ -572,6 +569,9 @@
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#toggle-switch---ab">Toggle Switch - A/B</a></div>
+          </div>
+          <div class="row center-xs around-xs start-sm">
+            <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tool">Tool</a></div>
           </div>
           <div class="row center-xs around-xs start-sm">
             <div class="sdldocs-nav-item"><a class="sdldocs-nav-link box" href="#tooltip">Tooltip</a></div>
@@ -698,20 +698,20 @@
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button class="spectrum-ActionButton"><span class="spectrum-Button-label">Button</span></button>
-<button class="spectrum-ActionButton" disabled><span class="spectrum-Button-label">Button</span></button>
+              <div class="box"><button class="spectrum-ActionButton"><span class="spectrum-ActionButton-label">Button</span></button>
+<button class="spectrum-ActionButton" disabled><span class="spectrum-ActionButton-label">Button</span></button>
 
 <button class="spectrum-ActionButton">
   <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
     <use xlink:href="#spectrum-icon-18-Delete" />
   </svg>
-  <span class="spectrum-Button-label">Button</span>
+  <span class="spectrum-ActionButton-label">Button</span>
 </button>
 <button class="spectrum-ActionButton" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
     <use xlink:href="#spectrum-icon-18-Delete" />
   </svg>
-  <span class="spectrum-Button-label">Button</span>
+  <span class="spectrum-ActionButton-label">Button</span>
 </button>
 
 <button class="spectrum-ActionButton">
@@ -732,20 +732,20 @@
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-ActionButton&quot;&gt;&lt;span class=&quot;spectrum-Button-label&quot;&gt;Button&lt;/span&gt;&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;&lt;span class=&quot;spectrum-Button-label&quot;&gt;Button&lt;/span&gt;&lt;/button&gt;
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-ActionButton&quot;&gt;&lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Button&lt;/span&gt;&lt;/button&gt;
+&lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;&lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Button&lt;/span&gt;&lt;/button&gt;
 
 &lt;button class=&quot;spectrum-ActionButton&quot;&gt;
   &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
     &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
   &lt;/svg&gt;
-  &lt;span class=&quot;spectrum-Button-label&quot;&gt;Button&lt;/span&gt;
+  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Button&lt;/span&gt;
 &lt;/button&gt;
 &lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
-      &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
     &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
   &lt;/svg&gt;
-  &lt;span class=&quot;spectrum-Button-label&quot;&gt;Button&lt;/span&gt;
+  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Button&lt;/span&gt;
 &lt;/button&gt;
 
 &lt;button class=&quot;spectrum-ActionButton&quot;&gt;
@@ -845,7 +845,7 @@
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
-              <p>Description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.</p>
+              <p>Description: An action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
@@ -1479,185 +1479,6 @@
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#button---action-toolbar)">
-            <header class="row" id="button---action-toolbar)">
-              <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Button - Action (toolbar)</h2>
-              </div>
-            </header></a>
-          <section class="sdldocs-component-description row">
-            <div class="col-xs">
-              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
-              <p>Description: Selection action buttons that form a toolbar</p>
-            </div>
-          </section>
-          <section class="sdldocs-component-markup row">
-            <div class="col-xs-offset-1 col-xs">
-              <div class="box"><button class="spectrum-ActionButton">
-  <span class="spectrum-ActionButton-label">Normal</span>
-</button>
-<button class="spectrum-ActionButton is-selected">
-  <span class="spectrum-ActionButton-label">Selected</span>
-</button>
-<button class="spectrum-ActionButton" disabled>
-  <span class="spectrum-ActionButton-label">Disabled</span>
-</button>
-<button class="spectrum-ActionButton is-selected" disabled>
-  <span class="spectrum-ActionButton-label">Disabled Selected</span>
-</button>
-
-<br>
-<br>
-
-<button class="spectrum-ActionButton">
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton is-selected">
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton" disabled>
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton is-selected" disabled>
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-
-<br>
-<br>
-
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-  <span class="spectrum-ActionButton-label">Normal</span>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-  <span class="spectrum-ActionButton-label">Selected</span>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
-  <span class="spectrum-ActionButton-label">Disabled</span>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
-  <span class="spectrum-ActionButton-label">Disabled Selected</span>
-</button>
-
-<br>
-<br>
-
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-<button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
-  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-    <use xlink:href="#spectrum-icon-18-Delete" />
-  </svg>
-</button>
-</div>
-            </div>
-          </section>
-          <section class="sdldocs-component-example col-xs-12">
-            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
-            <div class="row">
-              <div class="sdldocs-code-example box">
-                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-ActionButton&quot;&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Normal&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton is-selected&quot;&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Selected&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton is-selected&quot; disabled&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled Selected&lt;/span&gt;
-&lt;/button&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;button class=&quot;spectrum-ActionButton&quot;&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton is-selected&quot;&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton is-selected&quot; disabled&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet&quot;&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Normal&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet is-selected&quot;&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Selected&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet&quot; disabled&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet is-selected&quot; disabled&gt;
-  &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled Selected&lt;/span&gt;
-&lt;/button&gt;
-
-&lt;br&gt;
-&lt;br&gt;
-
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot;&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot;&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot; disabled&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-&lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot; disabled&gt;
-  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
-    &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
-</code></pre>
-              </div>
-            </div>
-          </section>
-        </article>
         <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#button---cta">
             <header class="row" id="button---cta">
               <div class="col-xs">
@@ -1996,6 +1817,438 @@ disabled>Button</button>
 
 &lt;button class=&quot;spectrum-Button spectrum-Button--warning&quot;
 disabled&gt;Button&lt;/button&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#button-group">
+            <header class="row" id="button-group">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Button Group</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
+              <p>Description: A group for buttons, action buttons, or tools.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><div class="spectrum-ButtonGroup">
+  <button class="spectrum-ActionButton">
+    <span class="spectrum-ActionButton-label">Normal</span>
+  </button>
+  <button class="spectrum-ActionButton is-selected">
+    <span class="spectrum-ActionButton-label">Selected</span>
+  </button>
+  <button class="spectrum-ActionButton" disabled>
+    <span class="spectrum-ActionButton-label">Disabled</span>
+  </button>
+  <button class="spectrum-ActionButton is-selected" disabled>
+    <span class="spectrum-ActionButton-label">Disabled Selected</span>
+  </button>
+</div>
+
+<br>
+<br>
+
+<div class="spectrum-ButtonGroup">
+  <button class="spectrum-ActionButton">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+</div>
+
+<br>
+<br>
+
+<div class="spectrum-ButtonGroup">
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+    <span class="spectrum-ActionButton-label">Normal</span>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
+    <span class="spectrum-ActionButton-label">Selected</span>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
+    <span class="spectrum-ActionButton-label">Disabled</span>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
+    <span class="spectrum-ActionButton-label">Disabled Selected</span>
+  </button>
+</div>
+
+<br>
+<br>
+
+<div class="spectrum-ButtonGroup">
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+</div>
+
+<br><br>
+
+<div class="spectrum-ButtonGroup">
+  <button class="spectrum-Tool">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-ButtonGroup&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot;&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Normal&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot;&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Selected&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot; disabled&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled Selected&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet&quot;&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Normal&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet is-selected&quot;&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Selected&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet&quot; disabled&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet is-selected&quot; disabled&gt;
+    &lt;span class=&quot;spectrum-ActionButton-label&quot;&gt;Disabled Selected&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup&quot;&gt;
+  &lt;button class=&quot;spectrum-Tool&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#button-group-vertical)">
+            <header class="row" id="button-group-vertical)">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Button Group (vertical)</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
+              <p>Description: A group for buttons, action buttons, or tools.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box">
+<div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+  <button class="spectrum-ActionButton">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+</div>
+
+<br>
+<br>
+
+<div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+  </button>
+</div>
+
+<br><br>
+
+<div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+  <button class="spectrum-Tool">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+      <use xlink:href="#spectrum-icon-18-Select" />
+    </svg>
+  </button>
+</div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">
+&lt;div class=&quot;spectrum-ButtonGroup spectrum-ButtonGroup--vertical&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup spectrum-ButtonGroup--vertical&quot;&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Delete&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Delete&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-ButtonGroup spectrum-ButtonGroup--vertical&quot;&gt;
+  &lt;button class=&quot;spectrum-Tool&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool is-selected&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;button class=&quot;spectrum-Tool is-selected&quot; disabled&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Select&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-18-Select&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
               </div>
             </div>
@@ -4897,57 +5150,6 @@ disabled&gt;Button&lt;/button&gt;
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#flyout">
-            <header class="row" id="flyout">
-              <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Flyout</h2>
-              </div>
-            </header></a>
-          <section class="sdldocs-component-description row">
-            <div class="col-xs">
-              <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
-              <p>Description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.</p>
-            </div>
-          </section>
-          <section class="sdldocs-component-markup row">
-            <div class="col-xs-offset-1 col-xs">
-              <div class="box">
-<div class="spectrum-Popover is-open">
-  <ul class="spectrum-SelectList" role="menu">
-    <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
-    <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
-    <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
-    <hr class="spectrum-SelectList-divider">
-    <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
-  </ul>
-</div>
-
-<div class="dummy-spacing"></div>
-</div>
-            </div>
-          </section>
-          <section class="sdldocs-component-example col-xs-12">
-            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
-            <div class="row">
-              <div class="sdldocs-code-example box">
-                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">
-&lt;div class=&quot;spectrum-Popover is-open&quot;&gt;
-  &lt;ul class=&quot;spectrum-SelectList&quot; role=&quot;menu&quot;&gt;
-    &lt;li class=&quot;spectrum-SelectList-item is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Ballard&lt;/li&gt;
-    &lt;li class=&quot;spectrum-SelectList-item&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Fremont&lt;/li&gt;
-    &lt;li class=&quot;spectrum-SelectList-item&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Greenwood&lt;/li&gt;
-    &lt;hr class=&quot;spectrum-SelectList-divider&quot;&gt;
-    &lt;li class=&quot;spectrum-SelectList-item is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;United States of America&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;dummy-spacing&quot;&gt;&lt;/div&gt;
-</code></pre>
-              </div>
-            </div>
-          </section>
-        </article>
         <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#form">
             <header class="row" id="form">
               <div class="col-xs">
@@ -4979,7 +5181,7 @@ disabled&gt;Button&lt;/button&gt;
     <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
     <div class="spectrum-Form-itemField">
       <div class="spectrum-Dropdown" style="width: 195px;">
-        <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+        <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
           <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
           <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
             <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -5074,7 +5276,7 @@ disabled&gt;Button&lt;/button&gt;
     &lt;label class=&quot;spectrum-Form-itemLabel spectrum-FieldLabel--left&quot; for=&quot;spectrum-textinput-instance&quot;&gt;Country&lt;/label&gt;
     &lt;div class=&quot;spectrum-Form-itemField&quot;&gt;
       &lt;div class=&quot;spectrum-Dropdown&quot; style=&quot;width: 195px;&quot;&gt;
-        &lt;button class=&quot;spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+        &lt;button class=&quot;spectrum-FieldButton spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
           &lt;span class=&quot;spectrum-Dropdown-label is-placeholder&quot;&gt;Select a Country&lt;/span&gt;
           &lt;svg class=&quot;spectrum-Icon spectrum-Dropdown-icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
             &lt;use xlink:href=&quot;#spectrum-css-icon-SelectDownChevron&quot; /&gt;
@@ -5263,10 +5465,7 @@ style=&quot;margin: 0rem 0.25rem 0.25rem;&quot;&gt;Orange Label&lt;/span&gt;
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><span class="spectrum-Label spectrum-Label--and">And</span>
-<span class="spectrum-Label spectrum-Label--or">Or</span>
-<br>
-<span class="spectrum-Label spectrum-Label--active">Active</span>
+              <div class="box"><span class="spectrum-Label spectrum-Label--active">Active</span>
 <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
 </div>
             </div>
@@ -5276,10 +5475,7 @@ style=&quot;margin: 0rem 0.25rem 0.25rem;&quot;&gt;Orange Label&lt;/span&gt;
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Label spectrum-Label--and&quot;&gt;And&lt;/span&gt;
-&lt;span class=&quot;spectrum-Label spectrum-Label--or&quot;&gt;Or&lt;/span&gt;
-&lt;br&gt;
-&lt;span class=&quot;spectrum-Label spectrum-Label--active&quot;&gt;Active&lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;span class=&quot;spectrum-Label spectrum-Label--active&quot;&gt;Active&lt;/span&gt;
 &lt;span class=&quot;spectrum-Label spectrum-Label--inactive&quot;&gt;Inactive&lt;/span&gt;
 </code></pre>
               </div>
@@ -5344,16 +5540,16 @@ style=&quot;margin: 0rem 0.25rem 0.25rem;&quot;&gt;Orange Label&lt;/span&gt;
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#link---over-color">
-            <header class="row" id="link---over-color">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#link---over-background">
+            <header class="row" id="link---over-background">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Link - Over Color</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Link - Over Background</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: </h2>
-              <p>Description: A link over color</p>
+              <p>Description: A link over a colored background.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
@@ -6085,16 +6281,16 @@ spectrum-Link--subtle&quot;&gt;spectrum-Link--subtle&lt;/a&gt;.&lt;/p&gt;
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#miller---default">
-            <header class="row" id="miller---default">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#miller-columns---default">
+            <header class="row" id="miller-columns---default">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Miller - Default</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Miller Columns - Default</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
-              <p>Description: The default spectrum miller column</p>
+              <p>Description: Miller columns.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
@@ -6735,6 +6931,57 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
   &lt;span tabindex=&quot;0&quot; class=&quot;spectrum-Pagination-pageButton&quot;&gt;24&lt;/span&gt;
   &lt;button class=&quot;spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Pagination-directionButton&quot;&gt;Next&lt;/button&gt;
 &lt;/nav&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#popover">
+            <header class="row" id="popover">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Popover</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
+              <p>Description: A basic popover with a SelectList inside.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box">
+<div class="spectrum-Popover is-open">
+  <ul class="spectrum-SelectList" role="menu">
+    <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
+    <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
+    <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
+    <hr class="spectrum-SelectList-divider">
+    <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
+  </ul>
+</div>
+
+<div class="dummy-spacing"></div>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">
+&lt;div class=&quot;spectrum-Popover is-open&quot;&gt;
+  &lt;ul class=&quot;spectrum-SelectList&quot; role=&quot;menu&quot;&gt;
+    &lt;li class=&quot;spectrum-SelectList-item is-selected&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Ballard&lt;/li&gt;
+    &lt;li class=&quot;spectrum-SelectList-item&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Fremont&lt;/li&gt;
+    &lt;li class=&quot;spectrum-SelectList-item&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;Greenwood&lt;/li&gt;
+    &lt;hr class=&quot;spectrum-SelectList-divider&quot;&gt;
+    &lt;li class=&quot;spectrum-SelectList-item is-disabled&quot; role=&quot;menuitem&quot; tabindex=&quot;0&quot;&gt;United States of America&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dummy-spacing&quot;&gt;&lt;/div&gt;
 </code></pre>
               </div>
             </div>
@@ -7960,7 +8207,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
         </svg>
       </button>
       <div class="spectrum-Shell-avatar">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
       </div>
     </div>
   </header>
@@ -8012,7 +8259,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
         </svg>
       </button>
       <div class="spectrum-Shell-avatar">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
       </div>
     </div>
   </header>
@@ -8051,7 +8298,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
       </svg>
     </button>
     <div class="spectrum-Shell-avatar">
-      <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+      <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
     </div>
   </div>
 </header>
@@ -8114,7 +8361,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
         &lt;/svg&gt;
       &lt;/button&gt;
       &lt;div class=&quot;spectrum-Shell-avatar&quot;&gt;
-        &lt;img class=&quot;spectrum-TagList-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+        &lt;img class=&quot;spectrum-Tags-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/header&gt;
@@ -8166,7 +8413,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
         &lt;/svg&gt;
       &lt;/button&gt;
       &lt;div class=&quot;spectrum-Shell-avatar&quot;&gt;
-        &lt;img class=&quot;spectrum-TagList-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+        &lt;img class=&quot;spectrum-Tags-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/header&gt;
@@ -8205,7 +8452,7 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
       &lt;/svg&gt;
     &lt;/button&gt;
     &lt;div class=&quot;spectrum-Shell-avatar&quot;&gt;
-      &lt;img class=&quot;spectrum-TagList-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+      &lt;img class=&quot;spectrum-Tags-item-avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/header&gt;
@@ -9225,16 +9472,16 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#status-light---category-colors">
-            <header class="row" id="status-light---category-colors">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#status-light---label-colors">
+            <header class="row" id="status-light---label-colors">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Status Light - Category Colors</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Status Light - Label Colors</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
-              <p>Description: Category Colors (300) - Color is organizational.</p>
+              <p>Description: Label Colors (400) - Color is organizational.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
@@ -9268,25 +9515,25 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#status-light---status-colors">
-            <header class="row" id="status-light---status-colors">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#status-light---semantic">
+            <header class="row" id="status-light---semantic">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Status Light - Status Colors</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Status Light - Semantic</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: Beta</h2>
-              <p>Description: Status Colors (300) - Color has meaning.</p>
+              <p>Description: Color has meaning; use these to convey specific meaning.</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
-<div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
-<div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved, Complete, Success, New</div>
-<div class="spectrum-StatusLight spectrum-StatusLight--active">Active, In Use, Live</div>
-<div class="spectrum-StatusLight spectrum-StatusLight--archived">Archived, Deleted, Paused, Draft, Not Started, Ended</div>
+              <div class="box"><div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+<div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+<div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+<div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+<div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
 </div>
             </div>
           </section>
@@ -9295,11 +9542,11 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--negative&quot;&gt;Error, Alert, Rejected, Failed&lt;/div&gt;
-&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--notice&quot;&gt;Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing&lt;/div&gt;
-&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--positive&quot;&gt;Approved, Complete, Success, New&lt;/div&gt;
-&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--active&quot;&gt;Active, In Use, Live&lt;/div&gt;
-&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--archived&quot;&gt;Archived, Deleted, Paused, Draft, Not Started, Ended&lt;/div&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--neutral&quot;&gt;Paused&lt;/div&gt;
+&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--active&quot;&gt;Active&lt;/div&gt;
+&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--positive&quot;&gt;Approved&lt;/div&gt;
+&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--notice&quot;&gt;Needs Approval&lt;/div&gt;
+&lt;div class=&quot;spectrum-StatusLight spectrum-StatusLight--negative&quot;&gt;Rejected&lt;/div&gt;
 </code></pre>
               </div>
             </div>
@@ -11835,95 +12082,10 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#taglist---avatars">
-            <header class="row" id="taglist---avatars">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#tags---default">
+            <header class="row" id="tags---default">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">TagList - Avatars</h2>
-              </div>
-            </header></a>
-          <section class="sdldocs-component-description row">
-            <div class="col-xs">
-              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
-              <p>Description: The Spectrum tag list with avatars</p>
-            </div>
-          </section>
-          <section class="sdldocs-component-markup row">
-            <div class="col-xs-offset-1 col-xs">
-              <div class="box"><div class="spectrum-TagList" role="list" aria-label="Tags">
-  <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-    <span class="spectrum-TagList-item-label">Shantanu</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-  <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-    <span class="spectrum-TagList-item-label">Shantanu</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-  <div class="spectrum-TagList-item is-disabled" role="listitem">
-    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-    <span class="spectrum-TagList-item-label">Shantanu</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-</div>
-</div>
-            </div>
-          </section>
-          <section class="sdldocs-component-example col-xs-12">
-            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
-            <div class="row">
-              <div class="sdldocs-code-example box">
-                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TagList&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
-  &lt;div class=&quot;spectrum-TagList-item&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
-    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
-    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-disabled&quot; role=&quot;listitem&quot;&gt;
-    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot; disabled&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#taglist---default">
-            <header class="row" id="taglist---default">
-              <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">TagList - Default</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Tags - Default</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
@@ -11934,15 +12096,55 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><div class="spectrum-TagList" role="list" aria-label="list">
-  <div class="spectrum-TagList-item" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 1</span>
+              <div class="box"><div class="spectrum-Tags" role="list" aria-label="list">
+  <div class="spectrum-Tags-item" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 1</span>
   </div>
-  <div class="spectrum-TagList-item is-invalid" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 2</span>
+  <div class="spectrum-Tags-item is-invalid" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 2</span>
   </div>
-  <div class="spectrum-TagList-item is-disabled" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 2</span>
+  <div class="spectrum-Tags-item is-disabled" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 2</span>
+  </div>
+</div>
+
+<br><br>
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+  </div>
+  <div class="spectrum-Tags-item is-invalid" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+  </div>
+  <div class="spectrum-Tags-item is-disabled" role="listitem">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+  </div>
+</div>
+
+<br><br>
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+    <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+      <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+    </svg>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+  </div>
+  <div class="spectrum-Tags-item is-invalid" role="listitem" tabindex="0">
+    <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+      <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+    </svg>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+  </div>
+  <div class="spectrum-Tags-item is-disabled" role="listitem">
+    <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+      <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+    </svg>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
   </div>
 </div>
 </div>
@@ -11953,15 +12155,55 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TagList&quot; role=&quot;list&quot; aria-label=&quot;list&quot;&gt;
-  &lt;div class=&quot;spectrum-TagList-item&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 1&lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;list&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 1&lt;/span&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-invalid&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 2&lt;/span&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-invalid&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 2&lt;/span&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-disabled&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 2&lt;/span&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 2&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -11969,48 +12211,109 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             </div>
           </section>
         </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#taglist---icons">
-            <header class="row" id="taglist---icons">
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#tags---deletable">
+            <header class="row" id="tags---deletable">
               <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">TagList - Icons</h2>
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Tags - Deletable</h2>
               </div>
             </header></a>
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
-              <p>Description: The Spectrum tag list with icons</p>
+              <p>Description: An editable taglist. Be sure to add the `spectrum-Tags-item--deletable`</p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"><div class="spectrum-TagList" role="list" aria-label="Tags">
-  <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+              <div class="box"><div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable" tabindex="0" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 1</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 1" tabindex="-1">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" tabindex="0" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 2</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
+    <span class="spectrum-Tags-item-label">Tag 2</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<br><br>
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" role="listitem" tabindex="0">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
+    <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+    <span class="spectrum-Tags-item-label">Shantanu</span>
+    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-TagClose" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<br><br>
+
+<div class="spectrum-Tags" role="list" aria-label="Tags">
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable" role="listitem" tabindex="0">
     <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
       <use xlink:href="#spectrum-icon-24-SentimentPositive" />
     </svg>
-    <span class="spectrum-TagList-item-label">Shantanu</span>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
     <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
   </div>
-  <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" role="listitem" tabindex="0">
     <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
       <use xlink:href="#spectrum-icon-24-SentimentPositive" />
     </svg>
-    <span class="spectrum-TagList-item-label">Shantanu</span>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
     <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
       </svg>
     </button>
   </div>
-  <div class="spectrum-TagList-item is-disabled" role="listitem">
+  <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
     <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
       <use xlink:href="#spectrum-icon-24-SentimentPositive" />
     </svg>
-    <span class="spectrum-TagList-item-label">Shantanu</span>
+    <span class="spectrum-Tags-item-label">Shantanu</span>
     <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
       <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-TagClose" />
@@ -12026,114 +12329,96 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TagList&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
-  &lt;div class=&quot;spectrum-TagList-item&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
-    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
-      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
-    &lt;/svg&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
-    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
-      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
-    &lt;/svg&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-disabled&quot; role=&quot;listitem&quot;&gt;
-    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
-      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
-    &lt;/svg&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Shantanu&lt;/span&gt;
-    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot; disabled&gt;
-      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
-        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
-      &lt;/svg&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#taglist---removable">
-            <header class="row" id="taglist---removable">
-              <div class="col-xs">
-                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">TagList - Removable</h2>
-              </div>
-            </header></a>
-          <section class="sdldocs-component-description row">
-            <div class="col-xs">
-              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
-              <p>Description: An editable taglist.</p>
-            </div>
-          </section>
-          <section class="sdldocs-component-markup row">
-            <div class="col-xs-offset-1 col-xs">
-              <div class="box"><div class="spectrum-TagList" role="list" aria-label="Tags">
-  <div class="spectrum-TagList-item" tabindex="0" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 1</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 1" tabindex="-1">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-  <div class="spectrum-TagList-item is-invalid" tabindex="0" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 2</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-  <div class="spectrum-TagList-item is-disabled" tabindex="0" role="listitem">
-    <span class="spectrum-TagList-item-label">Tag 2</span>
-    <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
-      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-        <use xlink:href="#spectrum-css-icon-TagClose" />
-      </svg>
-    </button>
-  </div>
-</div>
-</div>
-            </div>
-          </section>
-          <section class="sdldocs-component-example col-xs-12">
-            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
-            <div class="row">
-              <div class="sdldocs-code-example box">
-                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-TagList&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
-  &lt;div class=&quot;spectrum-TagList-item&quot; tabindex=&quot;0&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 1&lt;/span&gt;
+                <pre class="html"><code data-language="html">&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable&quot; tabindex=&quot;0&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 1&lt;/span&gt;
     &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 1&quot; tabindex=&quot;-1&quot;&gt;
       &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
         &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
       &lt;/svg&gt;
     &lt;/button&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-invalid&quot; tabindex=&quot;0&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 2&lt;/span&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-invalid&quot; tabindex=&quot;0&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 2&lt;/span&gt;
     &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 2&quot; tabindex=&quot;-1&quot;&gt;
       &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
         &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
       &lt;/svg&gt;
     &lt;/button&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;spectrum-TagList-item is-disabled&quot; tabindex=&quot;0&quot; role=&quot;listitem&quot;&gt;
-    &lt;span class=&quot;spectrum-TagList-item-label&quot;&gt;Tag 2&lt;/span&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Tag 2&lt;/span&gt;
     &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 3&quot; tabindex=&quot;-1&quot; disabled&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 2&quot; tabindex=&quot;-1&quot;&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 2&quot; tabindex=&quot;-1&quot;&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;img class=&quot;spectrum-Avatar&quot; src=&quot;img/example-ava.jpg&quot; alt=&quot;Avatar&quot;&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag 3&quot; tabindex=&quot;-1&quot; disabled&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-Tags&quot; role=&quot;list&quot; aria-label=&quot;Tags&quot;&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-invalid&quot; role=&quot;listitem&quot; tabindex=&quot;0&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot;&gt;
+      &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;spectrum-Tags-item spectrum-Tags-item--deletable is-disabled&quot; role=&quot;listitem&quot;&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeXS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Tag&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-icon-24-SentimentPositive&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span class=&quot;spectrum-Tags-item-label&quot;&gt;Shantanu&lt;/span&gt;
+    &lt;button class=&quot;spectrum-ClearButton spectrum-ClearButton--small&quot; aria-label=&quot;Remove tag Shantanu&quot; tabindex=&quot;-1&quot; disabled&gt;
       &lt;svg class=&quot;spectrum-Icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
         &lt;use xlink:href=&quot;#spectrum-css-icon-TagClose&quot; /&gt;
       &lt;/svg&gt;
@@ -12634,6 +12919,79 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
   &lt;span class=&quot;spectrum-ToggleSwitch-switch&quot;&gt;&lt;/span&gt;
   &lt;label class=&quot;spectrum-ToggleSwitch-label&quot; for=&quot;toggle-onoff-disabled-1&quot;&gt;Toggle B&lt;/label&gt;
 &lt;/div&gt;
+</code></pre>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="sdldocs-component box"><a class="sdldocs-subtleLink js-hashtitle" href="#tool">
+            <header class="row" id="tool">
+              <div class="col-xs">
+                <h2 class="sdldocs-component-name spectrum-Heading--pagetitle box">Tool</h2>
+              </div>
+            </header></a>
+          <section class="sdldocs-component-description row">
+            <div class="col-xs">
+              <h2 class="spectrum-Heading--subtitle1">Design Status: Released</h2>
+              <p>Description: The tool button.</p>
+            </div>
+          </section>
+          <section class="sdldocs-component-markup row">
+            <div class="col-xs-offset-1 col-xs">
+              <div class="box"><button class="spectrum-Tool">
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+    <use xlink:href="#spectrum-icon-18-Brush" />
+  </svg>
+</button>
+
+<button class="spectrum-Tool is-selected">
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+    <use xlink:href="#spectrum-icon-18-Brush" />
+  </svg>
+</button>
+
+<button class="spectrum-Tool" disabled>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+    <use xlink:href="#spectrum-icon-18-Brush" />
+  </svg>
+</button>
+
+<button class="spectrum-Tool is-selected" disabled>
+  <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+    <use xlink:href="#spectrum-icon-18-Brush" />
+  </svg>
+</button>
+</div>
+            </div>
+          </section>
+          <section class="sdldocs-component-example col-xs-12">
+            <div class="row end-xs"><a class="sdldocs-code-link spectrum-Link box" href="#">show markup</a></div>
+            <div class="row">
+              <div class="sdldocs-code-example box">
+                <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Tool&quot;&gt;
+  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+    &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;spectrum-Tool is-selected&quot;&gt;
+  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+    &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;spectrum-Tool&quot; disabled&gt;
+  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+    &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;spectrum-Tool is-selected&quot; disabled&gt;
+  &lt;svg class=&quot;spectrum-Icon spectrum-Icon--sizeS&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot; aria-label=&quot;Brush&quot;&gt;
+    &lt;use xlink:href=&quot;#spectrum-icon-18-Brush&quot; /&gt;
+  &lt;/svg&gt;
+&lt;/button&gt;
 </code></pre>
               </div>
             </div>

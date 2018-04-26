@@ -106,8 +106,8 @@ markup: |
 
   width: 100%;
 
-  padding: 0.5rem 1.875rem;
-  margin: 0.25rem 0;
+  padding: 8px 30px;
+  margin: 4px 0;
 
   text-decoration: none;
 
@@ -118,38 +118,38 @@ markup: |
     outline: none;
   }.spectrum-TreeView-link .spectrum-Icon {
     vertical-align: top;
-    margin-right: 0.5rem;
+    margin-right: 8px;
   }.spectrum-TreeView-link::before {
     content: '';
 
     position: absolute;
-    left: 0.125rem;
+    left: 2px;
     right: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
-    margin-top: -0.5rem;
+    margin-top: -8px;
 
-    height: 2.25rem;
+    height: 36px;
 
     background-color: transparent;
 
-    border-radius: 0.25rem;
+    border-radius: 4px;
   }.spectrum-TreeView-indicator {
   display: block;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
 
   float: left;
-  margin-left: -0.875rem;
-  margin-top: 0.3125rem;
+  margin-left: -14px;
+  margin-top: 5px;
 
   transition: transform ease 125ms;
 }/* Close nested treeviews by default */.spectrum-TreeView .spectrum-TreeView {
   /* Don't be a highlight container stealer */
   position: static;
 
-  padding-left: 1.75rem;
+  padding-left: 28px;
 
   /* Be hidden */
   height: 0;
@@ -234,25 +234,25 @@ markup: |
   </ul>
 
 */.spectrum-TreeView-item--indent1 {
-  padding-left: 1.75rem;
+  padding-left: 28px;
 }.spectrum-TreeView-item--indent2 {
-  padding-left: 3.5rem;
+  padding-left: 56px;
 }.spectrum-TreeView-item--indent3 {
-  padding-left: 5.25rem;
+  padding-left: 84px;
 }.spectrum-TreeView-item--indent4 {
-  padding-left: 7rem;
+  padding-left: 112px;
 }.spectrum-TreeView-item--indent5 {
-  padding-left: 8.75rem;
+  padding-left: 140px;
 }.spectrum-TreeView-item--indent6 {
-  padding-left: 10.5rem;
+  padding-left: 168px;
 }.spectrum-TreeView-item--indent7 {
-  padding-left: 12.25rem;
+  padding-left: 196px;
 }.spectrum-TreeView-item--indent8 {
-  padding-left: 14rem;
+  padding-left: 224px;
 }.spectrum-TreeView-item--indent9 {
-  padding-left: 15.75rem;
+  padding-left: 252px;
 }.spectrum-TreeView-item--indent10 {
-  padding-left: 17.5rem;
+  padding-left: 280px;
 }/* topdoc
 ---
 name: Tree View - Nested with icons

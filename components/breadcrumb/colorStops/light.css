@@ -30,7 +30,7 @@
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link.focus-ring {
       color: rgb(13, 102, 208);
       outline: 0;
-      border-bottom: 0.125rem solid rgb(13, 102, 208);
+      border-bottom: 2px solid rgb(13, 102, 208);
     }
 
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link:active {

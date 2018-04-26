@@ -380,20 +380,20 @@ markup: |
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 2rem;
+  height: 32px;
 }.spectrum-Calendar-heading {
   position: absolute;
   left: 0;
   top: 0;
 
-  font-size: 1.375rem;
+  font-size: 22px;
   font-weight: bold;
 
   box-sizing: border-box;
   width: 100%;
-  line-height: 2rem;
+  line-height: 32px;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 32px;
 
   text-align: center;
   overflow: hidden;
@@ -404,24 +404,24 @@ markup: |
   position: absolute;
 
 }/* Todo: move to origins */.spectrum-Calendar-chevron {
-  width: 0.75rem;
-  height: 1rem;
+  width: 12px;
+  height: 16px;
 }.spectrum-Calendar-prevMonth {
-  left: 0.1875rem;
+  left: 3px;
 }.spectrum-Calendar-nextMonth {
-  right: 0.1875rem;
+  right: 3px;
 }.spectrum-Calendar-dayOfWeek {
 
   position: absolute;
-  bottom: 0.25rem;
+  bottom: 4px;
 
   display: block;
 
-  width: 2rem;
+  width: 32px;
 
   border-bottom: none !important; /* override abbr styling from normalize.css */
 
-  font-size: 0.8125rem;
+  font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none !important; /* override abbr styling from normalize.css */
@@ -452,9 +452,9 @@ markup: |
   text-align: center;
   padding: 0;
   position: relative;
-  height: 2rem;
-  width: 2rem;
-  padding: 0.25rem;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
 }.spectrum-Calendar-tableCell:focus {
     outline: 0;
   }.spectrum-Calendar-date {
@@ -466,15 +466,15 @@ markup: |
 
   box-sizing: border-box;
 
-  height: 2rem;
-  width: 2rem;
-  margin: 0.25rem;
+  height: 32px;
+  width: 32px;
+  margin: 4px;
 
-  border-radius: 2rem;
-  border: 0.125rem solid transparent;
+  border-radius: 32px;
+  border: 2px solid transparent;
 
-  font-size: 1.0625rem;
-  line-height: 1.75rem;
+  font-size: 17px;
+  line-height: 28px;
 
   cursor: pointer;
 
@@ -489,13 +489,13 @@ markup: |
   }.spectrum-Calendar-date:before {
     content: '';
     position: absolute;
-    top: calc(50% - 1rem);
-    left: calc(50% - 1rem);
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
     box-sizing: border-box;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
-    border: 0.125rem solid transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 2px solid transparent;
   }.spectrum-Calendar-date.is-selected:not(.is-range-selection) {
     font-weight: 700;
   }.spectrum-Calendar-date.is-selected:not(.is-range-selection):before {
@@ -505,18 +505,18 @@ markup: |
     font-weight: 700;
   }.spectrum-Calendar-date.is-range-selection {
     /* overrides to make the cells appear connected */
-    margin: 0.25rem 0;
+    margin: 4px 0;
     border-width: 0;
-    line-height: 2rem;
+    line-height: 32px;
     border-radius: 0;
 
     /* Todo: Calculate this */
-    width: 2.5rem;
+    width: 40px;
   }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      width: 2.25rem;
+      width: 36px;
     }.spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
       font-weight: 700;
@@ -526,17 +526,17 @@ markup: |
 
         display: block;
 
-        height: 2rem;
-        width: 2rem;
+        height: 32px;
+        width: 32px;
 
-        border-radius: 2rem;
+        border-radius: 32px;
 
         content: '';
       }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-start {
-      padding-right: 0.25rem;
-      margin-left: 0.25rem;
-      border-radius: 2rem 0 0 2rem;
+      padding-right: 4px;
+      margin-left: 4px;
+      border-radius: 32px 0 0 32px;
     }.spectrum-Calendar-date.is-range-selection.is-range-start:before,
       .spectrum-Calendar-date.is-range-selection.is-range-start:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-start:before,
@@ -544,9 +544,9 @@ markup: |
         left: 0;
       }.spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      padding-left: 0.25rem;
-      margin-right: 0.25rem;
-      border-radius: 0 2rem 2rem 0;
+      padding-left: 4px;
+      margin-right: 4px;
+      border-radius: 0 32px 32px 0;
     }.spectrum-Calendar-date.is-range-selection.is-range-end:before,
       .spectrum-Calendar-date.is-range-selection.is-range-end:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-end:before,
@@ -557,6 +557,6 @@ markup: |
     .spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
-      width: 2rem;
-      border-radius: 2rem;
+      width: 32px;
+      border-radius: 32px;
     }

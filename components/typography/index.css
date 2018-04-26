@@ -1,6 +1,6 @@
 .spectrum {
   font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 14px;
 }.spectrum:lang(zh-Hans) {
     font-family: adobe-clean-han-simplified-c, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
   }.spectrum:lang(zh) {
@@ -29,26 +29,26 @@ markup: |
 
 */.spectrum,
 .spectrum-Body {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 20px;
 }.spectrum-Body--italic {
   font-style: italic;
 }.spectrum-Body--large {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 24px;
 }.spectrum-Body--small {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 16px;
 }.spectrum-Body--secondary {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 20px;
 }.spectrum-Heading--display {
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 40px;
   line-height: 1.5;
 }.spectrum-Heading--pageTitle {
 
@@ -59,20 +59,20 @@ markup: |
   margin: 0.67em 0;
 
   font-weight: 300;
-  font-size: 1.75rem;
+  font-size: 28px;
   line-height: 1.5;
 }.spectrum-Heading--subtitle1 {
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 18px;
+  line-height: 24px;
 }.spectrum-Heading--subtitle2 {
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
 }.spectrum-Heading--subtitle3 {
   font-weight: 700;
-  font-size: 0.6875rem;
-  line-height: 1rem;
+  font-size: 11px;
+  line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }

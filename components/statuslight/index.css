@@ -1,34 +1,34 @@
 /* topdoc
 ---
-name: Status Light - Status Colors
-description: Status Colors (300) - Color has meaning.
+name: Status Light - Semantic
+description: Color has meaning; use these to convey specific meaning.
 status: Beta
 markup: |
-  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved, Complete, Success, New</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active, In Use, Live</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--archived">Archived, Deleted, Paused, Draft, Not Started, Ended</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
 
 */.spectrum-StatusLight {
-  height: 2rem;
+  height: 32px;
 
-  line-height: 2rem;
-  font-size: 0.875rem;
+  line-height: 32px;
+  font-size: 14px;
   font-weight: 400;
 }.spectrum-StatusLight::before {
     content: '';
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    margin: 0 0.75rem;
-  }.spectrum-StatusLight--archived {
+    margin: 0 12px;
+  }.spectrum-StatusLight--neutral {
   font-style: italic;
 }/* topdoc
 ---
-name: Status Light - Category Colors
-description: Category Colors (300) - Color is organizational.
+name: Status Light - Label Colors
+description: Label Colors (400) - Color is organizational.
 status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>

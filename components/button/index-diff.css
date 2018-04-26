@@ -2,7 +2,8 @@
 .spectrum--large .spectrum-ActionButton,
 .spectrum--large .spectrum-LogicButton,
 .spectrum--large .spectrum-FieldButton,
-.spectrum--large .spectrum-ClearButton {
+.spectrum--large .spectrum-ClearButton,
+.spectrum--large .spectrum-Tool {
 
   transition: background 125ms ease-out,
               border-color 125ms ease-out,
@@ -17,7 +18,7 @@
 
   height: 40px;
 
-  padding: 0 20px 1px;
+  padding: 0 18px 1px;
 
   font-size: 18px;
   font-weight: 700;
@@ -28,7 +29,8 @@
 .spectrum--large .spectrum-Button + .spectrum-Button {
     margin-left: 12px;
   }
-.spectrum--large .spectrum-ActionButton {
+.spectrum--large .spectrum-ActionButton,
+.spectrum--large .spectrum-Tool {
 
   height: 40px;
   min-width: 40px;
@@ -40,13 +42,18 @@
   font-size: 17px;
   font-weight: 400;
 }
+.spectrum--large .spectrum-ActionButton .spectrum-Icon + .spectrum-ActionButton-label,
+.spectrum--large .spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
+    margin-left: 10px;
+  }
 .spectrum--large .spectrum-Button-label {
   line-height: 36px;
 }
 .spectrum--large .spectrum-ActionButton-label {
   line-height: 38px;
 }
-.spectrum--large .spectrum-ActionButton--quiet {
+.spectrum--large .spectrum-ActionButton--quiet,
+.spectrum--large .spectrum-Tool {
   padding: 0 15px;
 
   border-width: 0;
@@ -55,7 +62,8 @@
   font-size: 17px;
   font-weight: 400;
 }
-.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label {
+.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label,
+.spectrum--large .spectrum-Tool .spectrum-ActionButton-label {
     line-height: 40px;
   }
 .spectrum--large .spectrum-LogicButton {
@@ -100,4 +108,9 @@
 .spectrum--large .spectrum-ClearButton--small {
   width: 30px;
   height: 30px;
+}
+.spectrum--large .spectrum-Tool {
+
+  width: 40px;
+  height: 40px;
 }

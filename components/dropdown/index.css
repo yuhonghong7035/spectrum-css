@@ -129,11 +129,11 @@ markup: |
 }.spectrum-Dropdown .spectrum-Popover {
     top: 100%;
     min-width: 100%;
-    margin-top: 0.375rem;
+    margin-top: 6px;
 
     overflow-y: auto;
   }.spectrum-Dropdown--quiet .spectrum-Popover {
-    left: -0.75rem;
+    left: -12px;
   }.spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -151,32 +151,32 @@ markup: |
     white-space: nowrap;
     overflow: hidden;
 
-    height: 1.875rem;
-    line-height: 1.875rem;
+    height: 30px;
+    line-height: 30px;
 
-    font-size: 0.875rem;
+    font-size: 14px;
 
     text-overflow: ellipsis;
     text-align: left;
   }.spectrum-Dropdown-trigger .spectrum-Dropdown-label.is-placeholder {
       font-style: italic;
     }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }/* Only apply margin if there's a label */.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }.spectrum-Dropdown-icon {
   display: inline-block;
   position: relative;
   vertical-align: top;
 
-  width: 0.625rem;
-  height: 0.375rem;
+  width: 10px;
+  height: 6px;
 
   opacity: 1;
 }/* Error icons */.spectrum-Dropdown .spectrum-Icon:not(.spectrum-Dropdown-icon) {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }.spectrum-Icon + .spectrum-Dropdown-icon {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }/* topdoc
 name: Dropdown - Quiet
 description: A Spectrum 'quiet' dropdown.

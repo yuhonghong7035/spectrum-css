@@ -28,28 +28,28 @@ markup: |
   position: relative;
 
   /* Ensure text vertical alignment matches the specs */
-  padding: 0.8125rem 1.125rem 0.9375rem 1.125rem;
+  padding: 13px 18px 15px 18px;
 
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
-  font-size: 1.0625rem;
+  font-size: 17px;
   font-weight: 600;
-  line-height: 1.25rem;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased;
 }.spectrum-Toast-typeIcon {
   position: absolute;
-  left: 1rem;
-  top: 0.9375rem;
+  left: 16px;
+  top: 15px;
 
-  width: 1.125rem;
-  height: 1.125rem;
-  vertical-align: -0.25rem;
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
 }.spectrum-Toast-content {
   display: block;
 
-  padding-right: 1.875rem;
+  padding-right: 30px;
 }.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
-    padding-left: 1.75rem;
+    padding-left: 28px;
   }.spectrum-Toast-closeButton {
 
   /* Change the font styles in all browsers */
@@ -71,16 +71,16 @@ markup: |
 
 
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+  right: 8px;
+  top: 8px;
 
   padding: 0;
 
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
 
   border: none;
-  border-radius: 1.125rem;
+  border-radius: 18px;
 
   background-color: transparent;
 
@@ -91,13 +91,13 @@ markup: |
     border-style: none;
     padding: 0;
   }/* Restore the focus styles unset by the previous rule. */.spectrum-Toast-closeButton:-moz-focusring{
-    outline: 0.0625rem dotted ButtonText;
+    outline: 1px dotted ButtonText;
   }.spectrum-Toast-closeButton .spectrum-Icon {
     position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    left: 12px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
   }.spectrum-Toast-closeButton:focus {
     outline: none;
   }

@@ -108,7 +108,7 @@ markup: |
 
 .spectrum--lightest .spectrum-Textfield.focus-ring:not(:active) {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
 
 .spectrum--lightest .spectrum-Textfield[disabled] {
@@ -138,7 +138,7 @@ markup: |
 
 .spectrum--lightest .spectrum-Textfield.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield:invalid.focus-ring:not(:active) {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
       }
 
 /* topdoc
@@ -174,12 +174,12 @@ markup: |
 
 .spectrum--lightest .spectrum-Textfield--quiet:focus {
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0.0625rem 0 rgb(55, 142, 240);
+    box-shadow: 0 1px 0 rgb(55, 142, 240);
   }
 
 .spectrum--lightest .spectrum-Textfield--quiet.focus-ring:not(:active) {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0.0625rem 0 rgb(55, 142, 240);
+      box-shadow: 0 1px 0 rgb(55, 142, 240);
     }
 
 .spectrum--lightest .spectrum-Textfield--quiet:disabled {
@@ -193,12 +193,12 @@ markup: |
   }
 
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--lightest .spectrum-Textfield--quiet:invalid:focus {
-      box-shadow: 0 0.0625rem 0 rgb(236, 91, 98);
+      box-shadow: 0 1px 0 rgb(236, 91, 98);
     }
 
 /* might break things due to pre-defined focus-ring */
 
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0.0625rem 0 rgb(236, 91, 98);
+        box-shadow: 0 1px 0 rgb(236, 91, 98);
       }

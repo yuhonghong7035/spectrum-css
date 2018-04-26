@@ -1,7 +1,7 @@
 /* topdoc
 ---
 name: Action Menu
-description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.
+description: An action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open.
 status: Beta
 markup: |
 
@@ -60,19 +60,19 @@ markup: |
 .spectrum-ActionMenu > .spectrum-ActionButton {
     display: block;
 
-    padding: 0 0.5rem;
+    padding: 0 8px;
   }
 /* Increase specificity by nesting to override stuff here */
 .spectrum-ActionMenu > .spectrum-ActionButton > .spectrum-ActionMenu-icon {
       display: inline-block;
       content: '';
-      width: 1.125rem;
-      height: 0.3125rem;
+      width: 18px;
+      height: 5px;
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      vertical-align: 0.125rem;
+      vertical-align: 2px;
     }
 .spectrum-ActionMenu-label {
-  margin-left: 0.375rem;
+  margin-left: 6px;
 }

@@ -2,7 +2,7 @@ html.spectrum--large {
   font-size: 20PX;
 }.spectrum {
   font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
-  font-size: 0.875rem;
+  font-size: 14px;
 }.spectrum:lang(zh-Hans) {
     font-family: adobe-clean-han-simplified-c, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
   }.spectrum:lang(zh) {
@@ -31,26 +31,26 @@ markup: |
 
 */.spectrum,
 .spectrum-Body {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 20px;
 }.spectrum-Body--italic {
   font-style: italic;
 }.spectrum-Body--large {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 24px;
 }.spectrum-Body--small {
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 16px;
 }.spectrum-Body--secondary {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.25rem;
+  line-height: 20px;
 }.spectrum-Heading--display {
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 40px;
   line-height: 1.5;
 }.spectrum-Heading--pageTitle {
 
@@ -61,20 +61,20 @@ markup: |
   margin: 0.67em 0;
 
   font-weight: 300;
-  font-size: 1.75rem;
+  font-size: 28px;
   line-height: 1.5;
 }.spectrum-Heading--subtitle1 {
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+  font-size: 18px;
+  line-height: 24px;
 }.spectrum-Heading--subtitle2 {
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
 }.spectrum-Heading--subtitle3 {
   font-weight: 700;
-  font-size: 0.6875rem;
-  line-height: 1rem;
+  font-size: 11px;
+  line-height: 16px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }.spectrum-Icon {
@@ -141,8 +141,8 @@ markup: |
   text-decoration: underline;
 }/* topdoc
 ---
-name: Link - Over Color
-description: A link over color
+name: Link - Over Background
+description: A link over a colored background.
 markup: |
   <div style="background-color: rgb(15, 121, 125); padding: 15px 20px; display: inline-block;">
     <p class="spectrum-Body" style="color: rgb(255, 255, 255);">
@@ -176,18 +176,18 @@ markup: |
 
   width: auto;
 
-  padding: 0.375rem 0.5625rem;
+  padding: 6px 9px;
 
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 12px;
+  line-height: 16px;
 
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
 }.spectrum-Label-icon {
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 0;
 }.spectrum-Label-icon:before {
     vertical-align: sub;
@@ -213,7 +213,7 @@ markup: |
   style="margin: 0rem 0.25rem 0.25rem;">Orange Label</span>
 
 */.spectrum-Label--large {
-  padding: 0.625rem 0.875rem;
+  padding: 10px 14px;
 }.spectrum-Breadcrumbs {
   display: inline-block;
   list-style-type: none;
@@ -225,11 +225,11 @@ markup: |
     clear: both;
   }.spectrum-Breadcrumb-separator {
   position: absolute;
-  top: calc(50% - 0.1875rem);
-  right: -1.15625rem;
+  top: calc(50% - 3px);
+  right: -18.5px;
 
-  width: 0.3125rem;
-  height: 0.5rem;
+  width: 5px;
+  height: 8px;
 
   transform: scale(1);
 
@@ -240,9 +240,9 @@ markup: |
 
   position: relative;
 
-  margin-right: 2rem;
+  margin-right: 32px;
 
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 300;
 }.spectrum-Breadcrumb .spectrum-Breadcrumb-link {
     cursor: default;
@@ -259,9 +259,9 @@ markup: |
 
     margin: 0.3em 0;
 
-    font-size: 1.75rem;
+    font-size: 28px;
     font-weight: 300;
-    line-height: 2rem;
+    line-height: 32px;
   }.spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--pageTitle {
     margin: 0;
 
@@ -271,7 +271,8 @@ markup: |
 .spectrum-ActionButton,
 .spectrum-LogicButton,
 .spectrum-FieldButton,
-.spectrum-ClearButton {
+.spectrum-ClearButton,
+.spectrum-Tool {
   display: inline-block;
   box-sizing: border-box;
 
@@ -280,6 +281,9 @@ markup: |
 
   /* Remove button the margin in Firefox and Safari. */
   margin: 0;
+
+  border-style: solid;
+  white-space: nowrap;
 
   /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
   text-transform: none;
@@ -305,13 +309,15 @@ markup: |
 .spectrum-ActionButton:focus,
 .spectrum-LogicButton:focus,
 .spectrum-FieldButton:focus,
-.spectrum-ClearButton:focus {
+.spectrum-ClearButton:focus,
+.spectrum-Tool:focus {
     outline: none;
   }/* Fix Firefox */.spectrum-Button::-moz-focus-inner,
 .spectrum-ActionButton::-moz-focus-inner,
 .spectrum-LogicButton::-moz-focus-inner,
 .spectrum-FieldButton::-moz-focus-inner,
-.spectrum-ClearButton::-moz-focus-inner {
+.spectrum-ClearButton::-moz-focus-inner,
+.spectrum-Tool::-moz-focus-inner {
     border: 0;
 
     /* Remove the inner border and padding for button in Firefox. */
@@ -325,40 +331,45 @@ markup: |
 .spectrum-ActionButton:-moz-focusring,
 .spectrum-LogicButton:-moz-focusring,
 .spectrum-FieldButton:-moz-focusring,
-.spectrum-ClearButton:-moz-focusring {
-    outline: 0.0625rem dotted ButtonText;
+.spectrum-ClearButton:-moz-focusring,
+.spectrum-Tool:-moz-focusring {
+    outline: 1px dotted ButtonText;
   }.spectrum-Button:disabled,
 .spectrum-ActionButton:disabled,
 .spectrum-LogicButton:disabled,
 .spectrum-FieldButton:disabled,
-.spectrum-ClearButton:disabled {
+.spectrum-ClearButton:disabled,
+.spectrum-Tool:disabled {
     cursor: default;
   }.spectrum-Button .spectrum-Icon,
 .spectrum-ActionButton .spectrum-Icon,
 .spectrum-LogicButton .spectrum-Icon,
 .spectrum-FieldButton .spectrum-Icon,
-.spectrum-ClearButton .spectrum-Icon {
+.spectrum-ClearButton .spectrum-Icon,
+.spectrum-Tool .spectrum-Icon {
     height: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     vertical-align: middle;
   }.spectrum-Button {
 
-  border-width: 0.125rem;
+  border-width: 2px;
   border-style: solid;
-  border-radius: 1rem;
+  border-radius: 16px;
 
-  height: 2rem;
+  height: 32px;
 
-  padding: 0 1rem 0.0625rem; /* 1px to push up text, sits kind of low */
+  padding: 0 14px 1px; /* 1px to push up text, sits kind of low */
 
-  font-size: 0.9375rem;
+  font-size: 15px;
   font-weight: 700;
 }.spectrum-Button:hover,
   .spectrum-Button:active {
     box-shadow: none;
   }.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
-    margin-left: 0.5rem;
+    margin-left: 8px;
   }/* Space out buttons when placed next to eachother */.spectrum-Button + .spectrum-Button {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }a.spectrum-Button {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
@@ -367,20 +378,24 @@ markup: |
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}.spectrum-ActionButton {
+}.spectrum-ActionButton,
+.spectrum-Tool {
 
-  height: 2rem;
-  min-width: 2rem;
-  padding: 0 0.75rem;
+  height: 32px;
+  min-width: 32px;
+  padding: 0 12px;
 
-  border-width: 0.0625rem;
-  border-radius: 0.25rem;
+  border-width: 1px;
+  border-radius: 4px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
 
   text-align: center;
-}.spectrum-ActionButton-label,
+}.spectrum-ActionButton .spectrum-Icon + .spectrum-ActionButton-label,
+.spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
+    margin-left: 8px;
+  }.spectrum-ActionButton-label,
 .spectrum-Button-label {
   display: inline-block;
   height: 100%;
@@ -388,28 +403,30 @@ markup: |
 }.spectrum-ActionButton-label:empty, .spectrum-Button-label:empty {
     display: none;
   }.spectrum-Button-label {
-  line-height: 1.75rem;
+  line-height: 28px;
 }.spectrum-ActionButton-label {
-  line-height: 1.875rem;
-}.spectrum-ActionButton--quiet {
-  padding: 0 0.75rem;
+  line-height: 30px;
+}.spectrum-ActionButton--quiet,
+.spectrum-Tool {
+  padding: 0 12px;
 
   border-width: 0;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
-}.spectrum-ActionButton--quiet .spectrum-ActionButton-label {
-    line-height: 2rem;
+}.spectrum-ActionButton--quiet .spectrum-ActionButton-label,
+.spectrum-Tool .spectrum-ActionButton-label {
+    line-height: 32px;
   }.spectrum-LogicButton {
 
-  height: 1.5rem;
-  padding: 0.5rem;
+  height: 24px;
+  padding: 8px;
 
-  border-width: 0.125rem;
-  border-radius: 0.25rem;
+  border-width: 2px;
+  border-radius: 4px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 700;
   line-height: 0;
 }.spectrum-Button--block {
@@ -424,13 +441,13 @@ markup: |
   white-space: nowrap;
 }.spectrum-FieldButton {
 
-  height: 2rem;
+  height: 32px;
 
-  padding: 0 0.75rem;
+  padding: 0 12px;
 
   font-family: inherit;
   font-weight: normal;
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: normal;
   -webkit-font-smoothing: initial;
 
@@ -438,11 +455,11 @@ markup: |
   outline: none;
 }.spectrum-FieldButton {
   margin: 0;
-  padding: 0 0.75rem;
+  padding: 0 12px;
 
-  border-width: 0.0625rem;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
   transition: background-color 125ms,
     box-shadow 125ms,
@@ -452,7 +469,7 @@ markup: |
     border-width: 0;
     cursor: default;
   }.spectrum-FieldButton.is-open {
-    border-width: 0.0625rem;
+    border-width: 1px;
   }.spectrum-FieldButton--quiet {
   margin: 0;
   padding: 0;
@@ -461,20 +478,299 @@ markup: |
   border-radius: 0;
 }.spectrum-ClearButton {
 
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
 
   padding: 0;
   margin: 0;
 
   border: none;
 }.spectrum-ClearButton .spectrum-Icon {
-    width: 0.5rem;
+    width: 8px;
     height: 100%;
   }.spectrum-ClearButton--small {
-  width: 1.5rem;
-  height: 1.5rem;
-}:root {
+  width: 24px;
+  height: 24px;
+}/* topdoc
+---
+name: Tool
+description: The tool button.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Tool">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+*/.spectrum-Tool {
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+}/* topdoc
+---
+name: Button Group
+description: A group for buttons, action buttons, or tools.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-ButtonGroup">
+    <button class="spectrum-ActionButton">
+      <span class="spectrum-ActionButton-label">Normal</span>
+    </button>
+    <button class="spectrum-ActionButton is-selected">
+      <span class="spectrum-ActionButton-label">Selected</span>
+    </button>
+    <button class="spectrum-ActionButton" disabled>
+      <span class="spectrum-ActionButton-label">Disabled</span>
+    </button>
+    <button class="spectrum-ActionButton is-selected" disabled>
+      <span class="spectrum-ActionButton-label">Disabled Selected</span>
+    </button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ButtonGroup">
+    <button class="spectrum-ActionButton">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ButtonGroup">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+      <span class="spectrum-ActionButton-label">Normal</span>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
+      <span class="spectrum-ActionButton-label">Selected</span>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
+      <span class="spectrum-ActionButton-label">Disabled</span>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
+      <span class="spectrum-ActionButton-label">Disabled Selected</span>
+    </button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ButtonGroup">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-ButtonGroup">
+    <button class="spectrum-Tool">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+        <use xlink:href="#spectrum-icon-18-Brush" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+  </div>
+
+*/.spectrum-ButtonGroup {
+  display: -ms-flexbox;
+  display: flex;
+}.spectrum-ButtonGroup * {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }.spectrum-ButtonGroup .spectrum-Button + .spectrum-Button {
+    margin-left: 16px;
+  }.spectrum-ButtonGroup .spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-ButtonGroup .spectrum-Tool + .spectrum-Tool {
+    margin-left: 8px;
+  }.spectrum-ButtonGroup .spectrum-Tool + .spectrum-Tool {
+    margin-left: 8px;
+  }/* topdoc
+---
+name: Button Group (vertical)
+description: A group for buttons, action buttons, or tools.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-ActionButton">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+        <use xlink:href="#spectrum-icon-18-Delete" />
+      </svg>
+    </button>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+    <button class="spectrum-Tool">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+        <use xlink:href="#spectrum-icon-18-Brush" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected">
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+
+    <button class="spectrum-Tool is-selected" disabled>
+      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+        <use xlink:href="#spectrum-icon-18-Select" />
+      </svg>
+    </button>
+  </div>
+
+*/.spectrum-ButtonGroup--vertical {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}.spectrum-ButtonGroup--vertical .spectrum-Button + .spectrum-Button {
+    margin-top: 16px;
+    margin-left: 0;
+  }.spectrum-ButtonGroup--vertical .spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-ButtonGroup--vertical .spectrum-Tool + .spectrum-Tool {
+    margin-top: 8px;
+    margin-left: 0;
+  }.spectrum-ButtonGroup--vertical .spectrum-Tool + .spectrum-Tool {
+    margin-top: 8px;
+    margin-left: 0;
+  }:root {
 
   /* DNA */
 }/* topdoc
@@ -499,21 +795,21 @@ markup: |
 
   display: inline-block;
   box-sizing: border-box;
-  min-width: 23rem;
-  min-height: 2.375rem;
-  margin: 0.5rem 0;
-  padding: 1.25rem 1.25rem;
+  min-width: 368px;
+  min-height: 38px;
+  margin: 8px 0;
+  padding: 20px 20px;
 
-  border-width: 0.125rem;
+  border-width: 2px;
   border-style: solid;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 }.spectrum-Alert-icon {
   position: absolute;
   display: block;
-  top: 1.25rem;
-  right: 1.25rem;
-  width: 1.125rem;
-  height: 1.125rem;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
 }.spectrum-Alert-header {
   display: inline-block;
   height: auto;
@@ -522,19 +818,19 @@ markup: |
   padding: 0;
 
   /* Leave room for the icon */
-  padding-right: 1.875rem;
+  padding-right: 30px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 700;
   font-style: normal;
-  line-height: 0.875rem;
+  line-height: 14px;
   text-transform: none;
 }.spectrum-Alert-content {
   display: block;
-  margin: 0.5rem 0 0 0;
+  margin: 8px 0 0 0;
   padding: 0;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   word-wrap: break-word;
 }.spectrum-Alert-footer {
   display: block;
@@ -559,8 +855,8 @@ markup: |
   <img class="spectrum-Avatar is-disabled" src="img/example-ava.jpg" alt="Disabled Avatar">
 
 */.spectrum-Avatar {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
 
   border-radius: 50%;
   border-style: none;
@@ -570,11 +866,11 @@ markup: |
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 
-  padding: 0 0.5rem;
-  margin-left: -0.5rem;
+  padding: 0 8px;
+  margin-left: -8px;
 }.spectrum-Checkbox-input {
   /* Change the font styles in all browsers for input. */
   font-family: inherit;
@@ -606,13 +902,13 @@ markup: |
 }.spectrum-Checkbox-input:disabled {
     cursor: default;
   }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 0.4375rem;
+    border-width: 7px;
   }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       transform: scale(1);
       opacity: 1;
     }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 0.4375rem;
+    border-width: 7px;
   }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       display: none;
     }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark {
@@ -622,8 +918,8 @@ markup: |
       opacity: 1;
     }.spectrum-Checkbox-label {
   display: inline-block;
-  margin: 0 0.625rem;
-  font-size: 0.875rem;
+  margin: 0 10px;
+  font-size: 14px;
   font-weight: 400;
   vertical-align: middle;
   transition: color 125ms ease-in-out;
@@ -631,11 +927,11 @@ markup: |
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 14px;
+  height: 14px;
 
-  border-radius: 0.125rem;
-  border-width: 0.125rem;
+  border-radius: 2px;
+  border-width: 2px;
   border-style: solid;
 
   vertical-align: middle;
@@ -646,11 +942,11 @@ markup: |
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 12px;
+  height: 12px;
 
-  margin-top: -0.375rem;
-  margin-left: -0.375rem;
+  margin-top: -6px;
+  margin-left: -6px;
 
   opacity: 0;
   transform: scale(0);
@@ -662,13 +958,13 @@ markup: |
   display: inline-block;
   position: relative;
 
-  padding: 0 0.5rem;
-  margin-left: -0.5rem;
+  padding: 0 8px;
+  margin-left: -8px;
 
   font-size: 0;
 
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 }.spectrum-Radio + .spectrum-Radio {
     margin-left: 0;
   }.spectrum-Radio-input {
@@ -700,14 +996,14 @@ markup: |
 
   cursor: pointer;
 }.spectrum-Radio-input:checked + .spectrum-Radio-button {
-    border-width: 0.3125rem;
+    border-width: 5px;
 
   }.spectrum-Radio-input:disabled {
     cursor: default;
   }.spectrum-Radio-label {
-  margin-left: 0.625rem;
+  margin-left: 10px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
 
   vertical-align: middle;
 
@@ -715,11 +1011,11 @@ markup: |
 }.spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 14px;
+  height: 14px;
 
-  border-radius: 0.4375rem;
-  border-width: 0.125rem;
+  border-radius: 7px;
+  border-width: 2px;
   border-style: solid;
 
   vertical-align: middle;
@@ -772,7 +1068,7 @@ markup: |
   vertical-align: top;
 }.spectrum-FieldGroup .spectrum-Radio,
   .spectrum-FieldGroup .spectrum-Checkbox {
-    margin-right: 0.75rem;
+    margin-right: 12px;
   }/* topdoc
 ---
 name: Field Group - Vertical
@@ -795,9 +1091,9 @@ markup: |
 */.spectrum-FieldGroup--vertical .spectrum-Radio,
   .spectrum-FieldGroup--vertical .spectrum-Checkbox {
     display: block;
-    margin: 0 0 0 -0.5rem;
+    margin: 0 0 0 -8px;
   }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
-    margin-left: 0.9375rem;
+    margin-left: 15px;
   }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Radio,
     .spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Checkbox {
       /* Prevent overlap due to negative margin */
@@ -827,31 +1123,31 @@ markup: |
   </div>
 
 */.spectrum-FieldGroup--labelsBelow .spectrum-Radio {
-    height: 2.25rem;
+    height: 36px;
     margin: 0;
   }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-button {
-    margin-bottom: 1.125rem;
+    margin-bottom: 18px;
   }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-label {
     position: relative;
-    top: 0.75rem;
-    left: -1.0625rem;
+    top: 12px;
+    left: -17px;
   }:root {
 
   /* Todo fix in DNA */
 }.spectrum-Textfield {
   /* box */
   box-sizing: border-box;
-  border: 0.0625rem solid;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 4px;
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: 0.1875rem 0.75rem 0.3125rem;
+  padding: 3px 12px 5px;
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  min-width: 4.5rem;
-  height: 2rem;
-  width: 12rem;
+  min-width: 72px;
+  height: 32px;
+  width: 192px;
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -863,8 +1159,8 @@ markup: |
 
   /* Change the input font styles in all browsers */
   font-family: inherit;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
   text-overflow: ellipsis;
 
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
@@ -910,12 +1206,12 @@ markup: |
   }/* removes the native spin buttons */.spectrum-Textfield.is-invalid,
   .spectrum-Textfield:invalid {
     background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-    background-position: calc(100% - 0.4375rem) 50%;
-    padding-right: 1.875rem;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) 50%;
+    padding-right: 30px;
   }.spectrum-Textfield--multiline {
   height: auto;
-  padding: 0.25rem 0.5rem;
+  padding: 4px 8px;
   text-indent: 0;
 
   /* Remove the default vertical scrollbar for textarea in IE. */
@@ -923,15 +1219,15 @@ markup: |
 }.spectrum-Textfield--multiline.is-invalid,
   .spectrum-Textfield--multiline:invalid {
     background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-    background-position: calc(100% - 0.4375rem) calc(100% - 0.4375rem);
-    padding-right: 1.875rem;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) calc(100% - 7px);
+    padding-right: 30px;
   }.spectrum-Textfield--quiet {
   border-radius: 0;
   text-indent: 0;
 
   border: none;
-  border-bottom: 0.0625rem solid;
+  border-bottom: 1px solid;
 
   /* removes the side padding to align the text properly */
   padding-left: 0;
@@ -1062,9 +1358,9 @@ markup: |
       flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  min-width: 12rem;
+  min-width: 192px;
 }.spectrum-InputGroup .spectrum-FieldButton {
-    padding: 0 0.75rem;
+    padding: 0 12px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }.spectrum-InputGroup-input {
@@ -1074,21 +1370,21 @@ markup: |
   -ms-flex: 1;
       flex: 1;
 }.spectrum-InputGroup-icon {
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 10px;
+  height: 10px;
   height: 100%;
 }.spectrum-InputGroup--quiet .spectrum-FieldButton {
     border-radius: 0;
 
     position: relative;
-    width: 1.5rem;
-    border-bottom: 0.0625rem solid;
+    width: 24px;
+    border-bottom: 1px solid;
   }/* More hitarea */.spectrum-InputGroup--quiet .spectrum-FieldButton:after {
       content: '';
       position: absolute;
       height: 100%;
-      width: 0.625rem;
-      right: -0.625rem;
+      width: 10px;
+      right: -10px;
     }.spectrum-InputGroup--quiet .spectrum-InputGroup-icon {
     right: 0;
   }.spectrum-Tooltip,
@@ -1119,18 +1415,18 @@ markup: |
   pointer-events: auto;
 }.spectrum-Tooltip--bottom.is-open,
 .spectrum-Popover--bottom.is-open {
-  transform: translateY(0.375rem);
+  transform: translateY(6px);
 }.spectrum-Tooltip--top.is-open,
 .spectrum-Popover--top.is-open {
-  transform: translateY(-0.375rem);
+  transform: translateY(-6px);
 }.spectrum-Tooltip--right.is-open,
 .spectrum-Popover--right.is-open,
 .spectrum-QuickActions--left.is-open {
-  transform: translateX(0.375rem);
+  transform: translateX(6px);
 }.spectrum-Tooltip--left.is-open,
 .spectrum-Popover--left.is-open,
 .spectrum-QuickActions--right.is-open {
-  transform: translateX(-0.375rem);
+  transform: translateX(-6px);
 }.spectrum-Tooltip {
 
   position: relative;
@@ -1141,13 +1437,13 @@ markup: |
   box-sizing: border-box;
 
   width: auto;
-  max-width: 16rem;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
+  max-width: 256px;
+  padding: 2px 8px;
+  border-radius: 4px;
 
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 0.75rem;
+  line-height: 12px;
 }.spectrum-Tooltip {
     pointer-events: none;
   }.spectrum-Tooltip.is-open {
@@ -1155,43 +1451,43 @@ markup: |
 }.spectrum-Tooltip-tip {
   position: absolute;
   overflow: hidden;
-  width: 0.6875rem;
-  height: 0.6875rem;
+  width: 11px;
+  height: 11px;
 }.spectrum-Tooltip-tip::after {
     content: '';
-    width: 0.5rem;
-    height: 0.5rem;
-    top: -0.125rem;
-    left: 0.0625rem;
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    left: 1px;
     position: absolute;
     transform: rotate(45deg);
   }.spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    top: calc(50% - 0.34375rem);
+    top: calc(50% - 5.5px);
   }.spectrum-Tooltip--right {
-  margin-left: 0.1875rem;
+  margin-left: 3px;
 }.spectrum-Tooltip--right .spectrum-Tooltip-tip {
-    left: -0.5rem;
+    left: -8px;
     transform: rotate(90deg);
 
     /* This is a gross hack */
-    top: calc(50% - 0.3125rem);
+    top: calc(50% - 5px);
   }.spectrum-Tooltip--left {
-  margin-right: 0.1875rem;
+  margin-right: 3px;
 }.spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    right: -0.5rem;
+    right: -8px;
     transform: rotate(-90deg);
   }.spectrum-Tooltip--bottom {
-  margin-top: 0.1875rem;
+  margin-top: 3px;
 }.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
-    top: -0.5rem;
+    top: -8px;
     transform: rotate(180deg);
   }.spectrum-Tooltip--top {
-  margin-bottom: 0.1875rem;
+  margin-bottom: 3px;
 }.spectrum-Tooltip--top .spectrum-Tooltip-tip {
-    bottom: -0.5rem;
+    bottom: -8px;
   }.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: -0.34375rem;
+    margin-left: -5.5px;
   }/* topdoc
 ---
 name: Tooltip
@@ -1240,17 +1536,17 @@ markup: |
   </span>
 
 */.spectrum-Tooltip-typeIcon {
-  margin-right: 0.5rem;
+  margin-right: 8px;
 
   /* Override the size, just for these icons only */
-  font-size: 0.875rem;
+  font-size: 14px;
 
   /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -0.125rem;
-  line-height: 0.875rem;
+  vertical-align: -2px;
+  line-height: 14px;
 }.spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: 1.25rem;
+  line-height: 20px;
 }.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
@@ -1264,27 +1560,27 @@ markup: |
     top:50%;
   }.u-tooltip-showOnHover .spectrum-Tooltip--right .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--left .spectrum-Tooltip-tip {
       top: 50%;
-      margin-top: -0.25rem;
+      margin-top: -4px;
     }.u-tooltip-showOnHover .spectrum-Tooltip--right {
-    transform: translate(-0.5rem, -50%);
+    transform: translate(-8px, -50%);
   }.u-tooltip-showOnHover .spectrum-Tooltip--left {
-    transform: translate(calc(-100% + 0.5rem), -50%);
+    transform: translate(calc(-100% + 8px), -50%);
   }.u-tooltip-showOnHover .spectrum-Tooltip--bottom,
   .u-tooltip-showOnHover .spectrum-Tooltip--top {
     left:50%;
   }.u-tooltip-showOnHover .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--top .spectrum-Tooltip-tip {
       left: 50%;
-      margin-left: -0.25rem;
+      margin-left: -4px;
     }.u-tooltip-showOnHover .spectrum-Tooltip--bottom {
-    transform: translate(-50%, -0.5rem);
+    transform: translate(-50%, -8px);
   }.u-tooltip-showOnHover .spectrum-Tooltip--top {
-    transform: translate(-50%, 0.5rem);
+    transform: translate(-50%, 8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip {
     opacity: 1;
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, 0.5rem);
+    transform: translate(-50%, 8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, -0.5rem);
+    transform: translate(-50%, -8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {
@@ -1772,8 +2068,8 @@ markup: |
     transform: rotate(180deg);
   }
 }@keyframes spectrum-fills-rotate {
-  0% {transform: rotate(0deg)}
-  100% {transform: rotate(360deg)}
+  0% {transform: rotate(-90deg)}
+  100% {transform: rotate(270deg)}
 }/* topdoc
 ---
 name: Loader - Default
@@ -1799,14 +2095,14 @@ markup: |
 
 */.spectrum-Loader {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
   position: relative;
 }.spectrum-Loader-track {
-  width: 1.625rem;
-  height: 1.625rem;
-  border: solid 0.1875rem;
-  border-radius: 2rem;
+  width: 26px;
+  height: 26px;
+  border: solid 3px;
+  border-radius: 32px;
 }.spectrum-Loader-fills {
   position: absolute;
   top: 0;
@@ -1814,10 +2110,10 @@ markup: |
   width: 100%;
   height: 100%;
 }.spectrum-Loader-fill {
-  width: 1.625rem;
-  height: 1.625rem;
-  border: solid 0.1875rem;
-  border-radius: 2rem;
+  width: 26px;
+  height: 26px;
+  border: solid 3px;
+  border-radius: 32px;
 }.spectrum-Loader-fill-mask-1,
 .spectrum-Loader-fill-mask-2 {
   width: 50%;
@@ -1859,18 +2155,18 @@ markup: |
   <input type="number" min="0" max="100" style="display: block;" onchange="changeLoader(this.previousElementSibling, this.value)"/>
 
 */.spectrum-Loader--small {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
 }.spectrum-Loader--small .spectrum-Loader-track {
-    width: 0.75rem;
-    height: 0.75rem;
-    border: solid 0.125rem;
-    border-radius: 1rem;
+    width: 12px;
+    height: 12px;
+    border: solid 2px;
+    border-radius: 16px;
   }.spectrum-Loader--small .spectrum-Loader-fill {
-    width: 0.75rem;
-    height: 0.75rem;
-    border: solid 0.125rem;
-    border-radius: 1rem;
+    width: 12px;
+    height: 12px;
+    border: solid 2px;
+    border-radius: 16px;
   }/* topdoc
 ---
 name: Loader - Default - Large
@@ -1895,18 +2191,18 @@ markup: |
   <input type="number" min="0" max="100" style="display: block;" onchange="changeLoader(this.previousElementSibling, this.value)"/>
 
 */.spectrum-Loader--large {
-  width: 4rem;
-  height: 4rem;
+  width: 64px;
+  height: 64px;
 }.spectrum-Loader--large .spectrum-Loader-track {
-    width: 3.5rem;
-    height: 3.5rem;
-    border: solid 0.25rem;
-    border-radius: 4rem;
+    width: 56px;
+    height: 56px;
+    border: solid 4px;
+    border-radius: 64px;
   }.spectrum-Loader--large .spectrum-Loader-fill {
-    width: 3.5rem;
-    height: 3.5rem;
-    border: solid 0.25rem;
-    border-radius: 4rem;
+    width: 56px;
+    height: 56px;
+    border: solid 4px;
+    border-radius: 64px;
   }/* topdoc
 ---
 name: Loader - Default - Over Background
@@ -1933,18 +2229,18 @@ markup: |
   <input type="number" min="0" max="100" style="display: block;" onchange="changeLoader(this.previousElementSibling.firstElementChild, this.value)"/>
 
 */.spectrum-Loader--overBackground {
-  width: 4rem;
-  height: 4rem;
+  width: 64px;
+  height: 64px;
 }.spectrum-Loader--overBackground .spectrum-Loader-track {
-    width: 3.5rem;
-    height: 3.5rem;
-    border: solid 0.25rem;
-    border-radius: 4rem;
+    width: 56px;
+    height: 56px;
+    border: solid 4px;
+    border-radius: 64px;
   }.spectrum-Loader--overBackground .spectrum-Loader-fill {
-    width: 3.5rem;
-    height: 3.5rem;
-    border: solid 0.25rem;
-    border-radius: 4rem;
+    width: 56px;
+    height: 56px;
+    border: solid 4px;
+    border-radius: 64px;
   }/* topdoc
 ---
 name: Loader - Bar - Default
@@ -1988,7 +2284,7 @@ markup: |
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  width: 11.375rem;
+  width: 182px;
   vertical-align: top;
 }.spectrum-Loader--bar.spectrum-Loader--side-label {
     display: -ms-inline-flexbox;
@@ -2001,25 +2297,25 @@ markup: |
   }.spectrum-Loader--bar-track {
   /* Visually apply border radius to child elements */
   overflow: hidden;
-  width: 11.375rem;
-  height: 0.375rem;
-  border-radius: 0.25rem;
+  width: 182px;
+  height: 6px;
+  border-radius: 4px;
 }.spectrum-Loader--bar-fill {
-  height: 0.375rem;
+  height: 6px;
 
   transition: width 1s;
 }.spectrum-Loader--bar-label, .spectrum-Loader--bar-percentage {
-  font-size: 0.75rem;
+  font-size: 12px;
   text-align: left;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
 }.spectrum-Loader--side-label .spectrum-Loader--bar-label {
-    margin-right: 0.75rem;
+    margin-right: 12px;
     margin-bottom: 0;
   }.spectrum-Loader--side-label .spectrum-Loader--bar-percentage {
     -ms-flex-order: 3;
         order: 3;
     text-align: right;
-    margin-left: 0.75rem;
+    margin-left: 12px;
     margin-bottom: 0;
   }/* topdoc
 ---
@@ -2059,13 +2355,13 @@ markup: |
   </div>
 
 */.spectrum-Loader--bar--small {
-  height: 0.25rem;
-  min-width: 9.25rem;
+  height: 4px;
+  min-width: 148px;
 }.spectrum-Loader--bar--small .spectrum-Loader--bar-fill {
-    height: 0.25rem;
+    height: 4px;
   }.spectrum-Loader--bar--small .spectrum-Loader--bar-track {
-    height: 0.25rem;
-    border-radius: 0.125rem;
+    height: 4px;
+    border-radius: 2px;
   }/* topdoc
 ---
 name: Loader - Indeterminate
@@ -2193,28 +2489,28 @@ markup: |
   position: relative;
 
   /* Ensure text vertical alignment matches the specs */
-  padding: 0.8125rem 1.125rem 0.9375rem 1.125rem;
+  padding: 13px 18px 15px 18px;
 
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.25rem;
+  line-height: 20px;
   -webkit-font-smoothing: antialiased;
 }.spectrum-Toast-typeIcon {
   position: absolute;
-  left: 1rem;
-  top: 0.9375rem;
+  left: 16px;
+  top: 15px;
 
-  width: 1.125rem;
-  height: 1.125rem;
-  vertical-align: -0.25rem;
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
 }.spectrum-Toast-content {
   display: block;
 
-  padding-right: 1.875rem;
+  padding-right: 30px;
 }.spectrum-Toast--warning .spectrum-Toast-content, .spectrum-Toast--error .spectrum-Toast-content, .spectrum-Toast--info .spectrum-Toast-content, .spectrum-Toast--success .spectrum-Toast-content {
-    padding-left: 1.75rem;
+    padding-left: 28px;
   }.spectrum-Toast-closeButton {
 
   /* Change the font styles in all browsers */
@@ -2236,16 +2532,16 @@ markup: |
 
 
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
+  right: 8px;
+  top: 8px;
 
   padding: 0;
 
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
 
   border: none;
-  border-radius: 1.125rem;
+  border-radius: 18px;
 
   background-color: transparent;
 
@@ -2256,13 +2552,13 @@ markup: |
     border-style: none;
     padding: 0;
   }/* Restore the focus styles unset by the previous rule. */.spectrum-Toast-closeButton:-moz-focusring{
-    outline: 0.0625rem dotted ButtonText;
+    outline: 1px dotted ButtonText;
   }.spectrum-Toast-closeButton .spectrum-Icon {
     position: absolute;
-    left: 0.75rem;
-    top: 0.75rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    left: 12px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
   }.spectrum-Toast-closeButton:focus {
     outline: none;
   }.spectrum-Underlay {
@@ -2403,7 +2699,7 @@ markup: |
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%) translateY(0.5rem);
+  transform: translateX(-50%) translateY(-50%) translateY(8px);
 
   /* Appear above underlay */
   z-index: 2;
@@ -2417,15 +2713,15 @@ markup: |
   width: fit-content;
 
   /* Don't be bigger than the screen */
-  max-height: calc(100vh - 4rem);
+  max-height: calc(100vh - 64px);
   max-width: 90%;
 
-  min-width: 18rem;
+  min-width: 288px;
 
-  padding: 2.5rem 2.4375rem;
-  padding-top: 2.875rem;
+  padding: 40px 39px;
+  padding-top: 46px;
 
-  border-radius: 0.25rem;
+  border-radius: 4px;
   outline: none;
 }/* Firefox shows outline */.spectrum-Dialog.is-open {
 
@@ -2434,21 +2730,21 @@ markup: |
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 0 0.0625rem;
+  padding: 0 1px;
   box-sizing: border-box;
   width: 100%;
-  -ms-flex: 0 0 2.125rem;
-      flex: 0 0 2.125rem;
+  -ms-flex: 0 0 34px;
+      flex: 0 0 34px;
 
-  border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 4px 4px 0 0;
   outline: none; /* Hide focus outline around header */
 }/* The rule element */.spectrum-Dialog-header::after {
     position: absolute;
-    right: 0.0625rem;
-    bottom: 0.25rem;
-    left: 0.0625rem;
+    right: 1px;
+    bottom: 4px;
+    left: 1px;
 
-    height: 0.125rem;
+    height: 2px;
 
     content: '';
   }.spectrum-Dialog-title {
@@ -2457,13 +2753,13 @@ markup: |
 }.spectrum-Dialog-typeIcon {
   display: block;
   content: '';
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 18px;
+  height: 18px;
 }.spectrum-Dialog-content {
   display: block;
   box-sizing: border-box;
-  padding: 0.6875rem 0.0625rem 0.0625rem 0.0625rem;
-  margin-bottom: -0.0625rem;
+  padding: 11px 1px 1px 1px;
+  margin-bottom: -1px;
 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -2477,11 +2773,11 @@ markup: |
 
   outline: none; /* Hide focus outline */
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
 }.spectrum-Dialog-footer {
-  border-radius: 0 0 0.25rem 0.25rem;
-  margin-top: 3rem;
+  border-radius: 0 0 4px 4px;
+  margin-top: 48px;
 
   text-align: right; /* right align buttons */
 
@@ -2497,15 +2793,15 @@ markup: |
     height: 0;
     clear: both;
   }.spectrum-Dialog-footer .spectrum-Button {
-    margin: 0 1rem 0 0;
+    margin: 0 16px 0 0;
   }.spectrum-Dialog-footer .spectrum-Button:last-child {
       margin-right: 0;
     }.spectrum-Dialog-title {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 700;
 
   /* Get correct height on the heading */
-  margin: -0.25rem 0 0 0;
+  margin: -4px 0 0 0;
 
   /* Truncate text when it's too long to fit */
   white-space: nowrap;
@@ -2544,12 +2840,12 @@ markup: |
 
 
 */.spectrum-Dialog--fullscreen {
-  left: 2rem;
-  top: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+  left: 32px;
+  top: 32px;
+  right: 32px;
+  bottom: 32px;
 
-  transform: translate(0, 0.5rem);
+  transform: translate(0, 8px);
 }.spectrum-Dialog--fullscreen.is-open {
     transform: translate(0, 0);
   }.spectrum-Dialog--fullscreen,
@@ -2558,13 +2854,13 @@ markup: |
   max-height: none;
   max-width: none;
 
-  padding-top: 2.5rem 2.4375rem;
+  padding-top: 40px 39px;
 }.spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
-    padding-bottom: 1.5rem;
+    padding-bottom: 24px;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-title, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-title {
-    font-size: 1.75rem;
+    font-size: 28px;
     font-weight: 100;
-    line-height: 2.25rem;
+    line-height: 36px;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
     max-height: none;
   }/* topdoc
@@ -2736,8 +3032,8 @@ markup: |
 }.spectrum-Slider {
   position: relative;
   display: block;
-  min-height: 2rem;
-  width: 8rem;
+  min-height: 32px;
+  width: 128px;
 }.spectrum-Slider-controls {
   position: relative;
   display: inline-block;
@@ -2745,58 +3041,58 @@ markup: |
   vertical-align: top;
   z-index: auto;
   width: 100%;
-  min-height: 2rem;
+  min-height: 32px;
 }.spectrum-Slider-track {
-  border-radius: 0.0625rem;
+  border-radius: 1px;
   pointer-events: none;
-  height: 0.125rem;
+  height: 2px;
 
-  top: 1rem;
+  top: 16px;
   z-index: 1;
 
-  left: 0.5rem;
-  margin-top: -0.0625rem;
+  left: 8px;
+  margin-top: -1px;
   margin-right: 0;
   margin-bottom: 0;
-  padding: 0 1rem 0 0;
+  padding: 0 16px 0 0;
 
   position: absolute;
 
-  width: calc(100% - 1rem);
-  margin-left: -0.5rem;
+  width: calc(100% - 16px);
+  margin-left: -8px;
 }.spectrum-Slider-track--fill {
   width: 0;
-  height: 0.125rem;
+  height: 2px;
   position: relative;
   margin-left: 0;
 }.spectrum-Slider-track--buffer {
   position: absolute;
-  margin-bottom: -0.125rem;
+  margin-bottom: -2px;
   margin-left: 0;
 }.spectrum-Slider-track--ramp {
-  height: 1rem;
+  height: 16px;
   position: absolute;
-  top: -0.4375rem;
+  top: -7px;
   width: 100%;
 }.spectrum-Slider-handle {
   position: absolute;
   left: 0;
   z-index: 2;
 
-  top: 1rem;
+  top: 16px;
   display: inline-block;
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   margin-right: 0;
   margin-bottom: 0;
-  margin-top: -0.5rem;
-  margin-left: -0.5rem;
-  width: 1rem;
-  height: 1rem;
+  margin-top: -8px;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
 
-  border-width: 0.125rem;
+  border-width: 2px;
   border-style: solid;
 
   transition: border-width 130ms (.45, 0, .40, 1);
@@ -2804,7 +3100,7 @@ markup: |
   .spectrum-Slider-handle.is-focused,
   .spectrum-Slider-handle.is-dragged,
   .spectrum-Slider-handle.is-tophandle {
-    border-width: 0.5rem;
+    border-width: 8px;
     z-index: 1;
   }.spectrum-Slider-input {
 
@@ -2836,10 +3132,10 @@ markup: |
 
   width: auto;
 
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 12px;
+  line-height: 12px;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
   font-smoothing: subpixel-antialiased;
@@ -2850,8 +3146,8 @@ markup: |
   padding-right: 0;
   cursor: default;
 }.spectrum-Slider-ticks {
-  margin: 0 0.0625rem;
-  margin-top: 0.6875rem;
+  margin: 0 1px;
+  margin-top: 11px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -2860,35 +3156,35 @@ markup: |
 }.spectrum-Slider-tick-mark {
   position: relative;
 
-  width: 0.125rem;
+  width: 2px;
 }.spectrum-Slider-tick-mark:after {
     display: block;
     position: absolute;
     top: 0;
-    left: calc(50% - 0.0625rem);
+    left: calc(50% - 1px);
     content: '';
-    width: 0.125rem;
-    height: 0.625rem;
+    width: 2px;
+    height: 10px;
 
-    border-radius: 0.0625rem;
+    border-radius: 1px;
   }.spectrum-Slider-tick-mark .spectrum-Slider-labelContainer {
     position: relative;
-    margin: 1rem 0 0 0;
+    margin: 16px 0 0 0;
     text-align: center;
   }.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-labelContainer {
       /* Move over so we're left justified */
       text-align: left;
-      left: 0.375rem;
+      left: 6px;
     }.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-labelContainer {
       /* Move over so we're right justified */
-      left: -0.375rem;
+      left: -6px;
       text-align: right;
     }.spectrum-Slider--color .spectrum-Slider-controls {
-    margin-top: 0.5rem;
+    margin-top: 8px;
   }.spectrum-Slider--color .spectrum-Slider-controls,
   .spectrum-Slider--color .spectrum-Slider-track {
     min-height: auto;
-    height: 1.5rem;
+    height: 24px;
   }.spectrum-Slider--color .spectrum-Slider-track {
     top: 0;
     margin-top: 0;
@@ -2897,18 +3193,18 @@ markup: |
     top: 50%;
   }.spectrum-Slider--round {
   display: inline-block;
-  width: 3rem;
+  width: 48px;
   height: auto;
   min-height: 0;
 }.spectrum-Slider--round .spectrum-Slider-controls {
-    width: 2rem;
-    height: 2rem;
+    width: 32px;
+    height: 32px;
     min-height: 0;
 
-    border-radius: 1rem;
+    border-radius: 16px;
     position: relative;
     display: inline-block;
-    margin-right: 1.5rem;
+    margin-right: 24px;
     cursor: pointer;
     cursor: -webkit-grab;
     cursor: grab;
@@ -2918,32 +3214,32 @@ markup: |
   }.spectrum-Slider--round .spectrum-Slider-controls::before,
     .spectrum-Slider--round .spectrum-Slider-controls::after {
       content: '';
-      width: 0.25rem;
-      height: 0.125rem;
-      border-radius: 0.0625rem;
+      width: 4px;
+      height: 2px;
+      border-radius: 1px;
       position: absolute;
       bottom: 0;
     }.spectrum-Slider--round .spectrum-Slider-controls::before {
       left: auto;
-      right: -0.125rem;
+      right: -2px;
       transform: rotate(45deg);
     }.spectrum-Slider--round .spectrum-Slider-controls::after {
-      left: -0.125rem;
+      left: -2px;
       transform: rotate(-45deg);
     }.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 24px;
+      height: 24px;
     }.spectrum-Slider--round .spectrum-Slider-handle {
     width: 100%;
     height: 100%;
-    border-width: 0.125rem;
+    border-width: 2px;
     box-shadow: none;
     position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    border-radius: 1rem;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 16px;
     transform: rotate(-45deg);
     cursor: pointer;
     cursor: -webkit-grab;
@@ -2954,16 +3250,16 @@ markup: |
       content: '';
       position: absolute;
       top: 50%;
-      left: -0.125rem;
-      width: 0.75rem;
-      height: 0.125rem;
-      border-radius: 0.0625rem;
+      left: -2px;
+      width: 12px;
+      height: 2px;
+      border-radius: 1px;
       transform: translateY(-50%);
       transition: background-color 130ms (.45, 0, .40, 1);
     }.spectrum-Slider--round .spectrum-Slider-handle:active,
     .spectrum-Slider--round .spectrum-Slider-handle.is-focused,
     .spectrum-Slider--round .spectrum-Slider-handle.is-dragged {
-      border-width: 0.125rem;
+      border-width: 2px;
       cursor: ns-resize;
       cursor: -webkit-grabbing;
       cursor: grabbing;
@@ -2977,7 +3273,7 @@ markup: |
     pointer-events: none;
   }.spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
       .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
-        border-width: 0.0625rem;
+        border-width: 1px;
       }:root {
   /* The size of the icons in tabs */
 }.spectrum-Tabs {
@@ -2999,8 +3295,8 @@ markup: |
 
   box-sizing: border-box;
 
-  height: 2.875rem;
-  line-height: 2.875rem;
+  height: 46px;
+  line-height: 46px;
 
   /* Float above the tab line */
   z-index: 1;
@@ -3016,10 +3312,10 @@ markup: |
       cursor: default;
     }.spectrum-Tabs-item .spectrum-Icon {
     /* Vertical centering */
-    height: 2.875rem;
+    height: 46px;
   }.spectrum-Tabs-item .spectrum-Icon + .spectrum-Tabs-item-label {
       /* Icons really aren't supposed to be here, so there is no gap variable in DNA */
-      margin-left: 0.375rem;
+      margin-left: 6px;
     }.spectrum-Tabs-item::before {
     content: '';
     position: absolute;
@@ -3027,12 +3323,12 @@ markup: |
 
     box-sizing: border-box;
 
-    height: 2rem;
-    margin-top: -0.9375rem;
-    left: -0.5rem;
-    right: -0.5rem;
-    border: 0.125rem solid transparent;
-    border-radius: 0.3125rem;
+    height: 32px;
+    margin-top: -15px;
+    left: -8px;
+    right: -8px;
+    border: 2px solid transparent;
+    border-radius: 5px;
 
     pointer-events: none;
   }.spectrum-Tabs-item-label {
@@ -3052,15 +3348,15 @@ markup: |
   transition: transform 125ms ease-in-out;
   transform-origin: top left;
 
-  border-radius: 0.0625rem;
+  border-radius: 1px;
 }.spectrum-Tabs--compact .spectrum-Tabs-item {
-    height: 1.875rem;
-    line-height: 1.875rem;
+    height: 30px;
+    line-height: 30px;
   }.spectrum-Tabs--compact .spectrum-Tabs-item .spectrum-Icon {
       /* Vertical centering */
-      height: 1.875rem;
+      height: 30px;
     }.spectrum-Tabs--horizontal {
-  border-bottom: 0.125rem solid;
+  border-bottom: 2px solid;
 
   /* Optimization: margin is the same for compact and normal tabs */
   /*
@@ -3075,7 +3371,7 @@ markup: |
 }.spectrum-Tabs--horizontal .spectrum-Tabs-item {
     vertical-align: top;
   }.spectrum-Tabs--horizontal .spectrum-Tabs-item + .spectrum-Tabs-item {
-      margin-left: 1.5rem;
+      margin-left: 24px;
     }.spectrum-Tabs--horizontal .spectrum-Tabs-item-label {
     text-overflow: ellipsis;
     text-transform: capitalize;
@@ -3083,26 +3379,26 @@ markup: |
   }.spectrum-Tabs--horizontal .spectrum-Tabs-selectionIndicator {
     position: absolute;
     bottom: 0;
-    height: 0.125rem;
+    height: 2px;
 
-    bottom: -0.125rem;
+    bottom: -2px;
   }.spectrum-Tabs--vertical {
   -ms-flex-direction: column;
       flex-direction: column;
   padding: 0;
   margin: 0;
 }.spectrum-Tabs--vertical .spectrum-Tabs-item {
-    margin-left: 0.125rem;
+    margin-left: 2px;
   }.spectrum-Tabs--vertical .spectrum-Tabs-item::before {
-      margin-top: -1rem;
+      margin-top: -16px;
     }.spectrum-Tabs--vertical .spectrum-Tabs-item-label {
     display: inline-block;
     text-overflow: ellipsis;
     vertical-align: top;
   }.spectrum-Tabs--vertical .spectrum-Tabs-selectionIndicator {
-    top: 0.125rem;
-    left: -0.375rem;
-    width: 0.125rem;
+    top: 0;
+    left: -6px;
+    width: 2px;
   }:root {
   /* The width of a step */
 
@@ -3161,31 +3457,31 @@ markup: |
   display: block;
   vertical-align: top;
   margin: 0;
-  padding-top: 1.375rem;
-  padding-left: 3.75rem;
-  padding-right: 3.75rem;
+  padding-top: 22px;
+  padding-left: 60px;
+  padding-right: 60px;
 
   text-align: center;
   white-space: nowrap;
   font-size: 0; /* To remove html whitespace between inline elements */
-  line-height: 1rem; /* in case the container changes it */
+  line-height: 16px; /* in case the container changes it */
 }.spectrum-Steplist--interactive .spectrum-Steplist-label,
   .spectrum-Steplist--interactive .spectrum-Steplist-markerContainer {
     /* Show cursor on hit zone when clickable */
     cursor: pointer;
   }/* Small (w/o label or tooltip) */.spectrum-Steplist--small {
-  padding: 0.6875rem 0;
+  padding: 11px 0;
 }.spectrum-Steplist--small .spectrum-Steplist-item {
-    padding: 0 2.5rem 0 0;
-    width: 5rem;
+    padding: 0 40px 0 0;
+    width: 80px;
   }/* Disable Label */.spectrum-Steplist--small .spectrum-Steplist-item .spectrum-Steplist-label {
       display: none;
     }.spectrum-Steplist--small .spectrum-Steplist-item:first-child, .spectrum-Steplist--small .spectrum-Steplist-item:last-child {
-      width: 1.25rem;
+      width: 20px;
     }/* Disable first line */.spectrum-Steplist--small .spectrum-Steplist-item:first-child .spectrum-Steplist-markerContainer {
-        margin-left: -0.625rem;
+        margin-left: -10px;
       }.spectrum-Steplist--small .spectrum-Steplist-item:last-child .spectrum-Steplist-markerContainer {
-        margin-right: -0.625rem;
+        margin-right: -10px;
       }.spectrum-Steplist-item {
   outline: none;
   position: relative;
@@ -3195,12 +3491,12 @@ markup: |
   /* Don't let tooltips mess up alignment */
   vertical-align: bottom;
 
-  width: 5rem;
-  padding: 0 2.5rem 0 0;
+  width: 80px;
+  padding: 0 40px 0 0;
 }/* Completed State */.spectrum-Steplist-item.is-complete .spectrum-Steplist-marker {
       border: none;
     }/* The next step's line should be solid */.spectrum-Steplist-item.is-complete + .spectrum-Steplist-item .spectrum-Steplist-segment {
-      border-bottom-width: 0.125rem;
+      border-bottom-width: 2px;
       border-bottom-style: solid;
     }/* Selected state *//* Focus */.spectrum-Steplist-item.is-selected:focus {
       outline: none;
@@ -3246,12 +3542,12 @@ markup: |
 */.spectrum-Steplist-label {
   position: absolute;
   left: 50%;
-  bottom: 0.625rem;
+  bottom: 10px;
 
   display: block;
-  width: 7.5rem;
+  width: 120px;
 
-  font-size: 0.75rem;
+  font-size: 12px;
   white-space: normal;
 
   transform: translateX(-50%);
@@ -3260,13 +3556,13 @@ markup: |
 
   z-index: 2;
   position: absolute;
-  bottom: -0.625rem;
+  bottom: -10px;
   left: 50%;
 
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 20px;
+  height: 20px;
 
-  margin-left: -0.625rem;
+  margin-left: -10px;
 }/* Circle step marker */.spectrum-Steplist-marker {
   box-sizing: border-box; /* So we can stroke nicely */
   display: block;
@@ -3274,27 +3570,27 @@ markup: |
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -0.25rem;
-  margin-left: -0.25rem;
+  margin-top: -4px;
+  margin-left: -4px;
 
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 8px;
+  height: 8px;
 
-  border-radius: 0.5rem;
+  border-radius: 8px;
 
-  border: 0.125rem solid;
+  border: 2px solid;
   border-color: transparent;
   background: transparent;
 }/* Step line */.spectrum-Steplist-segment {
   display: block;
   z-index: 1;
   position: absolute;
-  right: 4.25rem;
-  width: 6.5rem;
-  bottom: -0.0625rem;
+  right: 68px;
+  width: 104px;
+  bottom: -1px;
 
   /* Default is dashed */
-  border-bottom-width: 0.125rem;
+  border-bottom-width: 2px;
   border-bottom-style: dashed;
 }/* First step overrides */.spectrum-Steplist-item:first-child .spectrum-Steplist-markerContainer {
     left: 0;
@@ -3313,13 +3609,13 @@ markup: |
     right: 0;
 
     margin-left: 0;
-    margin-right: -0.625rem;
+    margin-right: -10px;
   }.spectrum-Steplist-item:last-child .spectrum-Steplist-segment {
-    right: 0.5rem;
+    right: 8px;
     left: auto;
   }.spectrum-Steplist-item:first-child,
 .spectrum-Steplist-item:last-child {
-  width: 1.25rem;
+  width: 20px;
 }/* Single step */.spectrum-Steplist-item:only-child .spectrum-Steplist-label {
     /* Be centered */
     left: 50%;
@@ -3332,7 +3628,7 @@ markup: |
 
     /* Override last-child bits */
     margin-right: 0;
-    margin-left: -0.625rem;
+    margin-left: -10px;
   }/* topdoc
 ---
 name: Steplist - With Tooltip
@@ -3396,7 +3692,7 @@ markup: |
 
 */.spectrum-Steplist-tooltip {
   /* adjust the tooltip position */
-  margin-top: -2.5rem !important;
+  margin-top: -40px !important;
 }/* topdoc
 ---
 name: Switch - On/Off
@@ -3435,8 +3731,8 @@ markup: |
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 }.spectrum-ToggleSwitch-input {
 
   /* Change the font styles in all browsers for input. */
@@ -3466,13 +3762,13 @@ markup: |
 
   cursor: pointer;
 }.spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::after {
-      transform: translateX(0.75rem);
+      transform: translateX(12px);
     }.spectrum-ToggleSwitch-input:disabled,
   .spectrum-ToggleSwitch-input[disabled] {
     cursor: default;
   }.spectrum-ToggleSwitch-label {
-  margin: 0 0.625rem;
-  font-size: 0.875rem;
+  margin: 0 10px;
+  font-size: 14px;
   vertical-align: middle;
   transition: color 150ms ease-in-out;
 }.spectrum-ToggleSwitch-switch {
@@ -3480,8 +3776,8 @@ markup: |
   /* positions the pseudo elements relative to this one */
   position: relative;
 
-  height: 0.875rem;
-  width: 1.625rem;
+  height: 14px;
+  width: 26px;
 
   vertical-align: middle;
 }.spectrum-ToggleSwitch-switch::before,
@@ -3493,23 +3789,23 @@ markup: |
   }/* ::before is used for the track of the switch */.spectrum-ToggleSwitch-switch::before {
     transition: background 125ms ease-in-out, border 125ms ease-in-out;
 
-    height: 0.875rem;
+    height: 14px;
 
     left: 0;
     right: 0;
 
-    border-radius: 0.4375rem;
+    border-radius: 7px;
   }/* ::after is used for the handle of the switch */.spectrum-ToggleSwitch-switch::after {
     transition: background 125ms ease-in-out, border 125ms ease-in-out, transform 125ms ease-in-out, box-shadow 125ms ease-in-out;
 
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 14px;
+    height: 14px;
 
     top: 0;
     left: 0;
 
-    border-width: 0.125rem;
-    border-radius: 0.4375rem;
+    border-width: 2px;
+    border-radius: 7px;
     border-style: solid;
   }/* topdoc
 ---
@@ -3554,14 +3850,14 @@ markup: |
 
   list-style-type: none;
   margin: 0;
-  padding: 0.1875rem 0;
+  padding: 3px 0;
 }.spectrum-SelectList-checkmark {
   position: absolute;
-  right: 0.5625rem;
-  top: 0.6875rem;
+  right: 9px;
+  top: 11px;
 
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 12px;
+  height: 12px;
 
   transform: scale(1);
   opacity: 1;
@@ -3571,13 +3867,13 @@ markup: |
   display: -ms-flexbox;
   display: flex;
 
-  padding: 0 2.25rem 0 0.75rem;
+  padding: 0 36px 0 12px;
   margin: 0;
 
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 400;
   font-style: normal;
 }.spectrum-SelectList-item:focus {
@@ -3592,29 +3888,11 @@ markup: |
   /* Show the overflow for hr in Edge and IE. */
   overflow: visible;
 
-  height: 0.125rem;
-  margin: 0.1875rem 0.75rem;
+  height: 2px;
+  margin: 3px 12px;
   padding: 0 0;
   border: none;
 }/* topdoc
----
-name: Flyout
-description: The Spectrum Flyout pattern is implemented using a Popover and a SelectList.
-status: Beta
-markup: |
-
-  <div class="spectrum-Popover is-open">
-    <ul class="spectrum-SelectList" role="menu">
-      <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
-      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
-      <hr class="spectrum-SelectList-divider">
-      <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
-    </ul>
-  </div>
-
-  <div class="dummy-spacing"></div>
-*//* topdoc
 name: Dropdown - Default
 description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
 status: Released
@@ -3745,11 +4023,11 @@ markup: |
 }.spectrum-Dropdown .spectrum-Popover {
     top: 100%;
     min-width: 100%;
-    margin-top: 0.375rem;
+    margin-top: 6px;
 
     overflow-y: auto;
   }.spectrum-Dropdown--quiet .spectrum-Popover {
-    left: -0.75rem;
+    left: -12px;
   }.spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -3767,32 +4045,32 @@ markup: |
     white-space: nowrap;
     overflow: hidden;
 
-    height: 1.875rem;
-    line-height: 1.875rem;
+    height: 30px;
+    line-height: 30px;
 
-    font-size: 0.875rem;
+    font-size: 14px;
 
     text-overflow: ellipsis;
     text-align: left;
   }.spectrum-Dropdown-trigger .spectrum-Dropdown-label.is-placeholder {
       font-style: italic;
     }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }/* Only apply margin if there's a label */.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }.spectrum-Dropdown-icon {
   display: inline-block;
   position: relative;
   vertical-align: top;
 
-  width: 0.625rem;
-  height: 0.375rem;
+  width: 10px;
+  height: 6px;
 
   opacity: 1;
 }/* Error icons */.spectrum-Dropdown .spectrum-Icon:not(.spectrum-Dropdown-icon) {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }.spectrum-Icon + .spectrum-Dropdown-icon {
-  margin-left: 0.5rem;
+  margin-left: 8px;
 }/* topdoc
 name: Dropdown - Quiet
 description: A Spectrum 'quiet' dropdown.
@@ -3921,7 +4199,26 @@ markup: |
   min-width: 0;
 }.spectrum-Dropdown--quiet .spectrum-Dropdown-trigger {
     width: auto;
-  }.spectrum-Popover {
+  }/* topdoc
+---
+name: Popover
+description: A basic popover with a SelectList inside.
+status: Beta
+markup: |
+
+  <div class="spectrum-Popover is-open">
+    <ul class="spectrum-SelectList" role="menu">
+      <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+*/.spectrum-Popover {
 
   /* Be a flexbox to allow a full sized content area that scrolls */
   display: -ms-inline-flexbox;
@@ -3932,35 +4229,35 @@ markup: |
 
   position: absolute;
 
-  min-width: 12rem;
-  min-height: 2rem;
+  min-width: 192px;
+  min-height: 32px;
 
   border-style: solid;
-  border-width: 0.0625rem;
-  border-radius: 0.25rem;
+  border-width: 1px;
+  border-radius: 4px;
 
   outline: none;
 }/* Hide focus outline *//* Don't let sharp corners be pokey */.spectrum-Popover .spectrum-SelectList {
-    border-radius: 0.25rem;
+    border-radius: 4px;
   }.spectrum-Popover-tip {
   position: absolute;
   /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
   overflow: hidden;
-  width: 1.25rem;
-  height: 0.6875rem;
+  width: 20px;
+  height: 11px;
 }.spectrum-Popover-tip::after {
     content: '';
-    width: 1.25rem;
-    height: 1.25rem;
-    border-width: 0.0625rem;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
     border-style: solid;
     position: absolute;
     transform: rotate(45deg);
-    top: -1.125rem;
-    left: -0.0625rem;
+    top: -18px;
+    left: -1px;
   }.spectrum-Popover--dialog {
-  min-width: 16.875rem;
-  padding: 1.875rem 1.8125rem;
+  min-width: 270px;
+  padding: 30px 29px;
 }/* topdoc
 ---
 name: Popover - Dialog style
@@ -4035,30 +4332,30 @@ markup: |
   <div class="dummy-spacing" style="height: 290px"></div>
 
 */.spectrum-Popover--left.spectrum-Popover--withTip {
-    margin-right: 0.8125rem;
+    margin-right: 13px;
   }.spectrum-Popover--left .spectrum-Popover-tip {
-    right: -1.125rem;
+    right: -18px;
     transform: rotate(-90deg);
   }.spectrum-Popover--right.spectrum-Popover--withTip {
-    margin-left: 0.8125rem;
+    margin-left: 13px;
   }.spectrum-Popover--right .spectrum-Popover-tip {
-    left: -1.125rem;
+    left: -18px;
     transform: rotate(90deg);
   }/* Center the tip by default */.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
     top: 50%;
-    margin-top: -0.375rem;
+    margin-top: -6px;
   }.spectrum-Popover--bottom.spectrum-Popover--withTip {
-    margin-top: 0.8125rem;
+    margin-top: 13px;
   }.spectrum-Popover--bottom .spectrum-Popover-tip {
-    top: -0.8125rem;
+    top: -13px;
     transform: rotate(180deg);
   }.spectrum-Popover--top.spectrum-Popover--withTip {
-    margin-bottom: 0.8125rem;
+    margin-bottom: 13px;
   }.spectrum-Popover--top .spectrum-Popover-tip {
-    bottom: -0.8125rem;
+    bottom: -13px;
   }/* Center the tip by default */.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
     left: 50%;
-    margin-left: -0.75rem;
+    margin-left: -12px;
   }/* topdoc
 ---
 name: SplitButton - CTA
@@ -4121,28 +4418,28 @@ markup: |
   display: inline-block;
 }/* Spacing for buttons placed inline */.spectrum-SplitButton + .spectrum-SplitButton,
   .spectrum-SplitButton + .spectrum-Button {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }/* Spacing for buttons placed inline */.spectrum-Button + .spectrum-SplitButton {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }.spectrum-SplitButton-action {
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 16px 0 0 16px;
 }/* CTA is special and doesn't have a border between the buttons */.spectrum-SplitButton-action.spectrum-Button--cta {
     border-right: 0;
-    margin-right: 0.125rem;
+    margin-right: 2px;
   }.spectrum-SplitButton-trigger {
   margin-left: 0 !important;
 
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 16px 16px 0;
   border-left-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.625rem;
+  padding-left: 8.00004px;
+  padding-right: 10px;
 }.spectrum-SplitButton-trigger.focus-ring {
     box-shadow: none;
   }.spectrum-SplitButton-icon {
   display: block;
-  width: 0.625rem;
-  height: 0.375rem;
-  margin-top: 0.0625rem;
+  width: 10px;
+  height: 6px;
+  margin-top: 1px;
 }.spectrum-SplitButton-action,
 .spectrum-SplitButton-trigger {
   position: relative;
@@ -4199,12 +4496,12 @@ markup: |
   margin: 0;
 }.spectrum-Accordion-indicator {
   display: block;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
 
   position: absolute;
-  left: 1rem;
-  top: 0.90625rem;
+  left: 16px;
+  top: 14.5px;
 
   transition: transform ease 125ms;
 }.spectrum-Accordion-item {
@@ -4214,22 +4511,22 @@ markup: |
   display: list-item;
   margin: 0;
 
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 1px solid transparent;
 }.spectrum-Accordion-item:first-of-type {
-    border-top: 0.0625rem solid transparent;
+    border-top: 1px solid transparent;
   }.spectrum-Accordion-header {
   position: relative;
 
   box-sizing: border-box;
   /* left padding takes into account the icon's size as well as the focus state's left border */
-  padding: 0 1rem 0 2.125rem;
+  padding: 0 16px 0 34px;
   margin: 0;
 
-  height: 2.4375rem;
+  height: 39px;
 
-  font-size: 0.6875rem;
+  font-size: 11px;
   text-transform: uppercase;
-  line-height: 2.4375rem;
+  line-height: 39px;
   letter-spacing: 0.6pt;
 
   text-overflow: ellipsis;
@@ -4244,16 +4541,16 @@ markup: |
       left: 0;
       top: -var(--spectrum-accordion-item-border-size);
 
-      height: 2.5rem;
-      width: 0.125rem;
+      height: 40px;
+      width: 2px;
     }.spectrum-Accordion-content {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 16px 16px 16px;
   display: none;
 }.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
       transform: rotate(90deg);
     }.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
       /* No bottom border when open, so be less tall */
-      height: 2.4375rem;
+      height: 39px;
     }.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
       display: block;
     }.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {
@@ -4261,7 +4558,7 @@ markup: |
     }/* topdoc
 ---
 name: Action Menu
-description: An action button with a Flyout. Note that the `is-selected` class should be applied to the button when the menu is open.
+description: An action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open.
 status: Beta
 markup: |
 
@@ -4315,29 +4612,31 @@ markup: |
 
 */.spectrum-ActionMenu {
   display: inline-block;
-}.spectrum-ActionMenu > .spectrum-ActionButton {
+}.spectrum-ActionMenu > .spectrum-ActionButton,
+.spectrum-ActionMenu > .spectrum-Tool {
     display: block;
 
-    padding: 0 0.5rem;
-  }/* Increase specificity by nesting to override stuff here */.spectrum-ActionMenu > .spectrum-ActionButton > .spectrum-ActionMenu-icon {
+    padding: 0 8px;
+  }/* Increase specificity by nesting to override stuff here */.spectrum-ActionMenu > .spectrum-ActionButton > .spectrum-ActionMenu-icon,
+.spectrum-ActionMenu > .spectrum-Tool > .spectrum-ActionMenu-icon {
       display: inline-block;
       content: '';
-      width: 1.125rem;
-      height: 0.3125rem;
+      width: 18px;
+      height: 5px;
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      vertical-align: 0.125rem;
+      vertical-align: 2px;
     }.spectrum-ActionMenu-label {
-  margin-left: 0.375rem;
+  margin-left: 6px;
 }.spectrum-Well {
   display: block;
-  min-width: 15.5rem;
-  padding: 1rem;
-  margin-top: 0.25rem;
-  border-width: 0.0625rem;
+  min-width: 248px;
+  padding: 16px;
+  margin-top: 4px;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 }/* topdoc
 ---
 name: Field Label
@@ -4353,12 +4652,12 @@ markup: |
 .spectrum-Form-itemLabel {
   display: block;
 
-  min-width: 6.25rem;
+  min-width: 100px;
 
-  margin: 0 0 0.375rem;
+  margin: 0 0 6px;
 
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 12px;
+  line-height: 12px;
 
   vertical-align: top;
 
@@ -4378,7 +4677,7 @@ markup: |
 
 */.spectrum-FieldLabel--left {
   display: inline-block;
-  padding: 0.625rem 0.3125rem 0 0;
+  padding: 10px 5px 0 0;
 }/* topdoc
 ---
 name: Field Label - Right
@@ -4393,7 +4692,7 @@ markup: |
 */.spectrum-FieldLabel--right {
   display: inline-block;
   text-align: right;
-  padding: 0.625rem 0.5rem 0 0;
+  padding: 10px 8px 0 0;
 }/* topdoc
 ---
 name: Form
@@ -4418,7 +4717,7 @@ markup: |
       <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Dropdown" style="width: 195px;">
-          <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+          <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
             <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -4492,8 +4791,8 @@ markup: |
 */.spectrum-Form {
   display: table;
   border-collapse: separate;
-  border-spacing: 0 1.25rem;
-  margin: -1.25rem 0;
+  border-spacing: 0 20px;
+  margin: -20px 0;
 }.spectrum-Form-item {
   display: table-row;
 }.spectrum-Form-itemLabel {
@@ -4576,38 +4875,38 @@ markup: |
   -webkit-appearance: textfield;
 
   /* Correct the outline for input[type="search"] style in Safari. */
-  outline-offset: -0.125rem;
+  outline-offset: -2px;
 
   /* Use padding instead of text-indent so long strings don't overlap the icon */
-  padding-left: 2.25rem;
+  padding-left: 36px;
   text-indent: 0;
 
   /* Don't let long strings overlap the close icon */
-  padding-right: 1.75rem;
+  padding-right: 28px;
 }/* Remove the inner padding and cancel buttons for input[type="search"] in Chrome and Safari on macOS. */.spectrum-Search-input::-webkit-search-cancel-button,
   .spectrum-Search-input::-webkit-search-decoration {
     -webkit-appearance: none;
   }.spectrum-Search-input.spectrum-Textfield--quiet {
-    padding-left: 1.5rem;
-    padding-right: 1.25rem;
+    padding-left: 24px;
+    padding-right: 20px;
   }/* Since quiet button has no left padding, push the icon all the way to the left */.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-icon {
       left: 0;
     }.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-clear {
-      right: -0.5rem;
+      right: -8px;
     }/* Since quiet button has no right padding, push the icon all the way to the right */.spectrum-Search-input.spectrum-Textfield--quiet ~ .spectrum-Search-rightIcon {
       right: 0;
     }.spectrum-Search-icon {
   display: block;
   position: absolute;
-  left: 0.75rem;
+  left: 12px;
   top: 0;
-  width: 1rem;
-  height: 2rem;
+  width: 16px;
+  height: 32px;
 
   /* Support SVG icons */
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 1rem 1rem;
+  background-size: 16px 16px;
 
   pointer-events: none;
 }.spectrum-Stepper {
@@ -4618,9 +4917,9 @@ markup: |
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 
-  width: 12rem;
+  width: 192px;
   line-height: 0;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
 }.spectrum-Stepper::before {
   content: '';
@@ -4631,21 +4930,21 @@ markup: |
   position: relative;
   display: block;
 
-  height: 1rem;
-  width: 1.5rem;
+  height: 16px;
+  width: 24px;
 
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
+  padding-left: 6px;
+  padding-right: 6px;
 
   /* Avoid margin added by adjacent buttons */
   margin: 0 !important;
 
-  border-width: 0.0625rem;
+  border-width: 1px;
   border-right-width: 0;
-  border-radius: 0.25rem 0 0 0.25rem;
+  border-radius: 4px 0 0 4px;
 }.spectrum-Stepper-stepUp .spectrum-Icon, .spectrum-Stepper-stepDown .spectrum-Icon {
-    width: 0.5rem;
-    height: 0.375rem;
+    width: 8px;
+    height: 6px;
     opacity: 1;
   }.spectrum-Stepper-stepUp {
   border-bottom: none;
@@ -4654,18 +4953,18 @@ markup: |
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0.1875rem;
+    bottom: 3px;
   }.spectrum-Stepper-stepDown {
   border-top: none;
   border-top-left-radius: 0;
-  border-bottom-width: 0.0625rem;
+  border-bottom-width: 1px;
 }.spectrum-Stepper-stepDown:focus {
     border-top: none;
   }.spectrum-Stepper-stepDown .spectrum-Icon {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 0.1875rem;
+    top: 3px;
   }.spectrum-Stepper-input {
   position: relative;
 
@@ -4677,7 +4976,8 @@ markup: |
   border-bottom-left-radius: 0;
 }.spectrum-Stepper--quiet {
   border-radius: 0;
-}.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-ActionButton {
+}.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-ActionButton,
+.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-Tool {
       border-top: none;
       border-left: none;
     }.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-Stepper-stepDown {
@@ -5064,20 +5364,20 @@ markup: |
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 2rem;
+  height: 32px;
 }.spectrum-Calendar-heading {
   position: absolute;
   left: 0;
   top: 0;
 
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: bold;
 
   box-sizing: border-box;
   width: 100%;
-  line-height: 2rem;
+  line-height: 32px;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0 32px;
 
   text-align: center;
   overflow: hidden;
@@ -5088,24 +5388,24 @@ markup: |
   position: absolute;
 
 }/* Todo: move to origins */.spectrum-Calendar-chevron {
-  width: 0.75rem;
-  height: 1rem;
+  width: 12px;
+  height: 16px;
 }.spectrum-Calendar-prevMonth {
-  left: 0.1875rem;
+  left: 3px;
 }.spectrum-Calendar-nextMonth {
-  right: 0.1875rem;
+  right: 3px;
 }.spectrum-Calendar-dayOfWeek {
 
   position: absolute;
-  bottom: 0.25rem;
+  bottom: 4px;
 
   display: block;
 
-  width: 2rem;
+  width: 32px;
 
   border-bottom: none !important; /* override abbr styling from normalize.css */
 
-  font-size: 0.6875rem;
+  font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none !important; /* override abbr styling from normalize.css */
@@ -5136,9 +5436,9 @@ markup: |
   text-align: center;
   padding: 0;
   position: relative;
-  height: 2rem;
-  width: 2rem;
-  padding: 0.25rem;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
 }.spectrum-Calendar-tableCell:focus {
     outline: 0;
   }.spectrum-Calendar-date {
@@ -5150,15 +5450,15 @@ markup: |
 
   box-sizing: border-box;
 
-  height: 2rem;
-  width: 2rem;
-  margin: 0.25rem;
+  height: 32px;
+  width: 32px;
+  margin: 4px;
 
-  border-radius: 2rem;
-  border: 0.125rem solid transparent;
+  border-radius: 32px;
+  border: 2px solid transparent;
 
-  font-size: 0.875rem;
-  line-height: 1.75rem;
+  font-size: 14px;
+  line-height: 28px;
 
   cursor: pointer;
 
@@ -5173,13 +5473,13 @@ markup: |
   }.spectrum-Calendar-date:before {
     content: '';
     position: absolute;
-    top: calc(50% - 1rem);
-    left: calc(50% - 1rem);
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
     box-sizing: border-box;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem;
-    border: 0.125rem solid transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 2px solid transparent;
   }.spectrum-Calendar-date.is-selected:not(.is-range-selection) {
     font-weight: 700;
   }.spectrum-Calendar-date.is-selected:not(.is-range-selection):before {
@@ -5189,18 +5489,18 @@ markup: |
     font-weight: 700;
   }.spectrum-Calendar-date.is-range-selection {
     /* overrides to make the cells appear connected */
-    margin: 0.25rem 0;
+    margin: 4px 0;
     border-width: 0;
-    line-height: 2rem;
+    line-height: 32px;
     border-radius: 0;
 
     /* Todo: Calculate this */
-    width: 2.5rem;
+    width: 40px;
   }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      width: 2.25rem;
+      width: 36px;
     }.spectrum-Calendar-date.is-range-selection.is-selection-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
       font-weight: 700;
@@ -5210,17 +5510,17 @@ markup: |
 
         display: block;
 
-        height: 2rem;
-        width: 2rem;
+        height: 32px;
+        width: 32px;
 
-        border-radius: 2rem;
+        border-radius: 32px;
 
         content: '';
       }.spectrum-Calendar-date.is-range-selection.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-selection-start {
-      padding-right: 0.25rem;
-      margin-left: 0.25rem;
-      border-radius: 2rem 0 0 2rem;
+      padding-right: 4px;
+      margin-left: 4px;
+      border-radius: 32px 0 0 32px;
     }.spectrum-Calendar-date.is-range-selection.is-range-start:before,
       .spectrum-Calendar-date.is-range-selection.is-range-start:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-start:before,
@@ -5228,9 +5528,9 @@ markup: |
         left: 0;
       }.spectrum-Calendar-date.is-range-selection.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end {
-      padding-left: 0.25rem;
-      margin-right: 0.25rem;
-      border-radius: 0 2rem 2rem 0;
+      padding-left: 4px;
+      margin-right: 4px;
+      border-radius: 0 32px 32px 0;
     }.spectrum-Calendar-date.is-range-selection.is-range-end:before,
       .spectrum-Calendar-date.is-range-selection.is-range-end:after,
       .spectrum-Calendar-date.is-range-selection.is-selection-end:before,
@@ -5241,8 +5541,8 @@ markup: |
     .spectrum-Calendar-date.is-range-selection.is-selection-start.is-range-end,
     .spectrum-Calendar-date.is-range-selection.is-selection-end.is-range-start,
     .spectrum-Calendar-date.is-range-selection.is-range-start.is-range-end {
-      width: 2rem;
-      border-radius: 2rem;
+      width: 32px;
+      border-radius: 32px;
     }/* topdoc
 ---
 name: Table - Standard
@@ -5403,22 +5703,22 @@ markup: |
   border-spacing: 0;
 }.spectrum-Table-sortedIcon {
   display: none;
-  margin-left: 0.25rem;
+  margin-left: 4px;
 
-  width: 0.625rem;
-  height: 0.75rem;
+  width: 10px;
+  height: 12px;
 
   vertical-align: bottom;
 
   transition: transform 125ms ease-in-out;
 }.spectrum-Table-headCell {
   text-align: left;
-  font-size: 0.6875rem;
+  font-size: 11px;
   font-weight: 700;
-  line-height: 0.75rem;
+  line-height: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0.25rem 1rem;
+  padding: 4px 16px;
   transition: color 125ms ease-in-out;
   cursor: default;
   outline: 0;
@@ -5435,24 +5735,24 @@ markup: |
 }.spectrum-Table-cell--alignRight {
   text-align: right;
 }.spectrum-Table-body {
-  border-radius: 0.25rem;
+  border-radius: 4px;
   overflow: auto;
 }/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
    by putting it on the individual cells instead. */.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body {
     border: none;
     border-radius: 0;
   }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
-      border-top-left-radius: 0.25rem;
+      border-top-left-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
-      border-top-right-radius: 0.25rem;
+      border-top-right-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
-      border-bottom-left-radius: 0.25rem;
+      border-bottom-left-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
-      border-bottom-right-radius: 0.25rem;
+      border-bottom-right-radius: 4px;
     }.spectrum-Table-cell {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  padding: 0.75rem 1rem;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px 16px;
 }.spectrum-Table-row {
   cursor: pointer;
   transition: background-color 125ms ease-in-out;
@@ -5829,21 +6129,21 @@ markup: |
     pointer-events: none;
   }.spectrum-Rating-input {
   position: absolute;
-  width: 7.5rem; /* 120px */
-  height: 1rem; /* 16px; */
+  width: 120px; /* 120px */
+  height: 16px; /* 16px; */
   opacity: 0.0001;
   pointer-events: none;
   z-index: 0;
 }.spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 1.5rem; /* 24px; */
-  height: 1rem; /* 16px; */
+  width: 24px; /* 24px; */
+  height: 16px; /* 16px; */
   float: left;
 }.spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   margin: 0 auto;
 }.spectrum-Rating-starActive {
   display: none;
@@ -5851,47 +6151,87 @@ markup: |
   display: block;
 }/* topdoc
 ---
-name: TagList - Default
+name: Tags - Default
 description: A taglist with items that cannot be edited.
 status: Released
 markup: |
-  <div class="spectrum-TagList" role="list" aria-label="list">
-    <div class="spectrum-TagList-item" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 1</span>
+  <div class="spectrum-Tags" role="list" aria-label="list">
+    <div class="spectrum-Tags-item" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 1</span>
     </div>
-    <div class="spectrum-TagList-item is-invalid" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 2</span>
+    <div class="spectrum-Tags-item is-invalid" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 2</span>
     </div>
-    <div class="spectrum-TagList-item is-disabled" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 2</span>
+    <div class="spectrum-Tags-item is-disabled" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 2</span>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-Tags" role="list" aria-label="Tags">
+    <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+    </div>
+    <div class="spectrum-Tags-item is-invalid" role="listitem" tabindex="0">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+    </div>
+    <div class="spectrum-Tags-item is-disabled" role="listitem">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-Tags" role="list" aria-label="Tags">
+    <div class="spectrum-Tags-item" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+    </div>
+    <div class="spectrum-Tags-item is-invalid" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+    </div>
+    <div class="spectrum-Tags-item is-disabled" role="listitem">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
     </div>
   </div>
 
 *//* topdoc
 ---
-name: TagList - Removable
-description: An editable taglist.
+name: Tags - Deletable
+description: An editable taglist. Be sure to add the `spectrum-Tags-item--deletable`
 status: Released
 markup: |
-  <div class="spectrum-TagList" role="list" aria-label="Tags">
-    <div class="spectrum-TagList-item" tabindex="0" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 1</span>
+  <div class="spectrum-Tags" role="list" aria-label="Tags">
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable" tabindex="0" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 1</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 1" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
-    <div class="spectrum-TagList-item is-invalid" tabindex="0" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 2</span>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" tabindex="0" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 2</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
-    <div class="spectrum-TagList-item is-disabled" tabindex="0" role="listitem">
-      <span class="spectrum-TagList-item-label">Tag 2</span>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
+      <span class="spectrum-Tags-item-label">Tag 2</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
@@ -5900,34 +6240,68 @@ markup: |
     </div>
   </div>
 
-*//* topdoc
----
-name: TagList - Avatars
-description: The Spectrum tag list with avatars
-status: Released
-markup: |
-  <div class="spectrum-TagList" role="list" aria-label="Tags">
-    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
+  <br><br>
+
+  <div class="spectrum-Tags" role="list" aria-label="Tags">
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable" role="listitem" tabindex="0">
       <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-      <span class="spectrum-TagList-item-label">Shantanu</span>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" role="listitem" tabindex="0">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 2" tabindex="-1">
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
+      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
+      <span class="spectrum-Tags-item-label">Shantanu</span>
+      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag 3" tabindex="-1" disabled>
+        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-TagClose" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="spectrum-Tags" role="list" aria-label="Tags">
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
-    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-      <span class="spectrum-TagList-item-label">Shantanu</span>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-invalid" role="listitem" tabindex="0">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
         </svg>
       </button>
     </div>
-    <div class="spectrum-TagList-item is-disabled" role="listitem">
-      <img class="spectrum-Avatar" src="img/example-ava.jpg" alt="Avatar">
-      <span class="spectrum-TagList-item-label">Shantanu</span>
+    <div class="spectrum-Tags-item spectrum-Tags-item--deletable is-disabled" role="listitem">
+      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
+        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
+      </svg>
+      <span class="spectrum-Tags-item-label">Shantanu</span>
       <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
         <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
           <use xlink:href="#spectrum-css-icon-TagClose" />
@@ -5936,59 +6310,17 @@ markup: |
     </div>
   </div>
 
-*//* topdoc
----
-name: TagList - Icons
-description: The Spectrum tag list with icons
-status: Released
-markup: |
-  <div class="spectrum-TagList" role="list" aria-label="Tags">
-    <div class="spectrum-TagList-item" role="listitem" tabindex="0">
-      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
-      </svg>
-      <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
-        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-TagClose" />
-        </svg>
-      </button>
-    </div>
-    <div class="spectrum-TagList-item is-invalid" role="listitem" tabindex="0">
-      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
-      </svg>
-      <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1">
-        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-TagClose" />
-        </svg>
-      </button>
-    </div>
-    <div class="spectrum-TagList-item is-disabled" role="listitem">
-      <svg class="spectrum-Icon spectrum-Icon--sizeXS" focusable="false" aria-hidden="true" aria-label="Tag">
-        <use xlink:href="#spectrum-icon-24-SentimentPositive" />
-      </svg>
-      <span class="spectrum-TagList-item-label">Shantanu</span>
-      <button class="spectrum-ClearButton spectrum-ClearButton--small" aria-label="Remove tag Shantanu" tabindex="-1" disabled>
-        <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
-          <use xlink:href="#spectrum-css-icon-TagClose" />
-        </svg>
-      </button>
-    </div>
-  </div>
-
-*/.spectrum-TagList {
+*/.spectrum-Tags {
   display: inline-block;
 
   margin: 0;
   padding: 0;
   list-style: none;
-}.spectrum-TagList:after {
+}.spectrum-Tags:after {
     content: "";
     display: table;
     clear: both;
-  }.spectrum-TagList-item {
+  }.spectrum-Tags-item {
   float: left;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5996,12 +6328,14 @@ markup: |
       align-items: center;
   box-sizing: border-box;
 
-  margin: 0.25rem 0.25rem;
-  padding: 0 0.625rem;
-  height: 1.5rem;
+  margin: 4px 4px;
+  padding: 0 9px;
+  height: 24px;
   max-width: 100%;
 
-  border-radius: 0.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
   outline: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -6012,21 +6346,24 @@ markup: |
     color 125ms ease-in-out,
     box-shadow 125ms ease-in-out,
     background-color 125ms ease-in-out;
-}.spectrum-TagList-item.is-disabled {
+}.spectrum-Tags-item.is-disabled {
     pointer-events: none;
-  }.spectrum-TagList-item > .spectrum-Icon,
-  .spectrum-TagList-item > .spectrum-Avatar {
-    margin-right: 0.5rem;
-  }.spectrum-TagList-item > .spectrum-Icon,
-  .spectrum-TagList-item > .spectrum-Avatar {
-    /* Move it 2px to the left cause Nate says so */
-    margin-left: -0.125rem;
-  }.spectrum-TagList-item .spectrum-ClearButton {
-    margin-right: -0.625rem;
-  }.spectrum-TagList-item-label {
+  }.spectrum-Tags-item > .spectrum-Icon,
+  .spectrum-Tags-item > .spectrum-Avatar {
+    margin-right: 8px;
+
+    /* Add padding for "avatar" variant */
+    margin-left: -2px;
+  }.spectrum-Tags-item > .spectrum-Icon ~ .spectrum-Tags-item-label, .spectrum-Tags-item > .spectrum-Avatar ~ .spectrum-Tags-item-label {
+      margin-right: -2px;
+    }.spectrum-Tags-item .spectrum-ClearButton {
+    margin-right: -10px;
+  }.spectrum-Tags-item-label {
+  height: 100%;
+  line-height: 22px;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
-  font-size: 0.75rem;
+  font-size: 12px;
   cursor: default;
   overflow: hidden;
   white-space: nowrap;
@@ -6122,7 +6459,7 @@ markup: |
 
   /* Force override */
 }.spectrum-SearchWithin {
-  width: 15.625rem;
+  width: 250px;
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
@@ -6132,7 +6469,7 @@ markup: |
   }.spectrum-SearchWithin .spectrum-Textfield {
     -ms-flex: 1;
         flex: 1;
-    margin-left: -0.0625rem; /* hides left border */
+    margin-left: -1px; /* hides left border */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }.spectrum-SearchWithin .spectrum-Textfield:hover, .spectrum-SearchWithin .spectrum-Textfield:focus {
@@ -6172,12 +6509,12 @@ markup: |
   /* Correct the inability to style clickable types in iOS and Safari. */
   -webkit-appearance: button;
 
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: 0.625rem;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
   padding: 0;
-  border-width: 0.0625rem;
-  border-radius: 0.25rem;
+  border-width: 1px;
+  border-radius: 4px;
   border-style: solid;
   transition: border-color 125ms ease-out,
     color 125ms ease-out,
@@ -6186,7 +6523,7 @@ markup: |
     border-style: none;
     padding: 0;
   }/* Restore the focus styles unset by the previous rule. */.spectrum-QuickActions-item:-moz-focusring{
-    outline: 0.0625rem dotted ButtonText;
+    outline: 1px dotted ButtonText;
   }.spectrum-QuickActions-item:hover {
     cursor: pointer;
   }.spectrum-QuickActions-item:active {
@@ -6195,11 +6532,11 @@ markup: |
     margin-left: 0;
   }.spectrum-QuickActions-item .spectrum-Icon {
     /* Fix alignment */
-    margin-top: 0.125rem;
+    margin-top: 2px;
   }/* topdoc
 ---
-name: Miller - Default
-description: The default spectrum miller column
+name: Miller Columns - Default
+description: Miller columns.
 status: Beta
 markup: |
   <div class="spectrum-MillerColumns">
@@ -6375,39 +6712,39 @@ markup: |
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 0.5rem 0;
+  padding: 8px 0;
 }.spectrum-MillerColumn {
   display: inline-block;
-  width: 17rem;
+  width: 272px;
   vertical-align: top;
   outline: none;
   margin: 0;
   padding: 0;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   overflow: auto;
   height: 100%;
 }.spectrum-MillerColumn:first-child {
-    margin-left: 0.5rem;
+    margin-left: 8px;
   }.spectrum-MillerColumn-childIndicator {
   display: none;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
   transition: transform ease 125ms;
 }.spectrum-MillerColumn-item {
   cursor: pointer;
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1rem 0 1rem;
-  margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  padding: 0 16px 0 16px;
+  margin-bottom: 4px;
+  font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  height: 2.5rem;
-  border-radius: 0.25rem;
+  height: 40px;
+  border-radius: 4px;
   -ms-flex-align: center;
       align-items: center;
-  width: 17rem;
+  width: 272px;
   box-sizing: border-box;
   transition: background-color 125ms ease-in-out;
 }/* checkbox on the left, shows up always */.spectrum-MillerColumn-item.is-branch-selectable .spectrum-Checkbox, .spectrum-MillerColumn-item.is-selected .spectrum-Checkbox, .spectrum-MillerColumn-item:hover .spectrum-Checkbox {
@@ -6421,14 +6758,14 @@ markup: |
     /* Remove the border on images inside links in IE 10-. */
     border-style: none;
 
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
     vertical-align: middle;
   }.spectrum-MillerColumn-itemLabel {
   -ms-flex: 1;
       flex: 1;
-  padding-left: 0.5rem;
+  padding-left: 8px;
 
   text-overflow: ellipsis;
   overflow: hidden;
@@ -6452,10 +6789,10 @@ markup: |
   -webkit-appearance: button;
 
   position: relative;
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-  border-radius: 0.25rem;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 4px;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -6466,7 +6803,7 @@ markup: |
     border-style: none;
     padding: 0;
   }/* Restore the focus styles unset by the previous rule. */.spectrum-CycleButton:-moz-focusring{
-    outline: 0.0625rem dotted ButtonText;
+    outline: 1px dotted ButtonText;
   }.spectrum-CycleButton .spectrum-Icon {
     /* Be centered */
     position: absolute;
@@ -6497,13 +6834,13 @@ markup: |
   </nav>
 
 */.spectrum-Pagination-input {
-  width: 3rem;
-  min-width: 3rem;
+  width: 48px;
+  min-width: 48px;
 }.spectrum-Pagination-counter {
   display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
-  margin-left: 0.3125rem;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 5px;
 }/* topdoc
 ---
 name: Pagination - Listing
@@ -6526,19 +6863,19 @@ markup: |
   </nav>
 
 */.spectrum-Pagination-directionButton {
-  font-size: 0.9375rem;
+  font-size: 15px;
   font-weight: bold;
 }.spectrum-Pagination-pageButton {
   box-sizing: border-box;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  line-height: 1.625rem;
+  width: 32px;
+  height: 32px;
+  line-height: 26px;
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 0.3125rem;
-  border: 0.125rem solid transparent;
+  margin: 0 5px;
+  border: 2px solid transparent;
   outline: none;
   transition: background-color 125ms ease-in-out,
               color 125ms ease-in-out,
@@ -6564,28 +6901,28 @@ markup: |
   </nav>
 
 */.spectrum-Pagination-prevButton {
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 16px 0 0 16px;
   float: left; /* removes DOM whitespace */
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
+  padding-right: 6px;
+  padding-left: 6px;
   border-right: 0;
 }.spectrum-Pagination-prevButton .spectrum-Icon {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
+    margin-left: 4px;
+    margin-right: 4px;
   }.spectrum-Pagination-nextButton {
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 16px 16px 0;
   margin-left: 0 !important;
 }/* CTA is special and doesn't have a border between the buttons */.spectrum-Pagination-nextButton.spectrum-Button--cta {
     border-left: 0;
-    margin-left: 0.125rem !important;
+    margin-left: 2px !important;
   }.spectrum-Pagination-nextButton .spectrum-Icon {
-    margin-left: 0.5rem;
+    margin-left: 8px;
   }.spectrum-Pagination-prevButton:focus, .spectrum-Pagination-nextButton:focus {
     /* this also triggers 'z-index: auto' and stays on top */
     position: relative;
   }.spectrum-Pagination-prevButton .spectrum-Icon, .spectrum-Pagination-nextButton .spectrum-Icon {
-    width: 0.4375rem;
-    height: 0.625rem;
+    width: 7px;
+    height: 10px;
 
     vertical-align: baseline;
   }/* topdoc
@@ -6630,10 +6967,10 @@ markup: |
 
 */.spectrum-Banner {
   display: inline-block;
-  border-radius: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
 }.spectrum-Banner-header {
   font-weight: bold;
 }/* topdoc
@@ -6684,8 +7021,8 @@ markup: |
 
 */.spectrum-Banner--corner {
   position: absolute;
-  top: -0.625rem;
-  right: -0.625rem;
+  top: -10px;
+  right: -10px;
 }/* topdoc
 ---
 name: Rule - Default
@@ -6705,39 +7042,39 @@ markup: |
   overflow: visible;
 
   border-style: solid;
-  border-width: 0.125rem;
-  border-radius: 0.125rem;
+  border-width: 2px;
+  border-radius: 2px;
 }/* topdoc
 ---
-name: Status Light - Status Colors
-description: Status Colors (300) - Color has meaning.
+name: Status Light - Semantic
+description: Color has meaning; use these to convey specific meaning.
 status: Beta
 markup: |
-  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Error, Alert, Rejected, Failed</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval, Pending, Scheduled, Syncing, Indexing, Processing</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved, Complete, Success, New</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active, In Use, Live</div>
-  <div class="spectrum-StatusLight spectrum-StatusLight--archived">Archived, Deleted, Paused, Draft, Not Started, Ended</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--neutral">Paused</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--active">Active</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--positive">Approved</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
+  <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
 
 */.spectrum-StatusLight {
-  height: 2rem;
+  height: 32px;
 
-  line-height: 2rem;
-  font-size: 0.875rem;
+  line-height: 32px;
+  font-size: 14px;
   font-weight: 400;
 }.spectrum-StatusLight::before {
     content: '';
     display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    margin: 0 0.75rem;
-  }.spectrum-StatusLight--archived {
+    margin: 0 12px;
+  }.spectrum-StatusLight--neutral {
   font-style: italic;
 }/* topdoc
 ---
-name: Status Light - Category Colors
-description: Category Colors (300) - Color is organizational.
+name: Status Light - Label Colors
+description: Label Colors (400) - Color is organizational.
 status: Beta
 markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--celery">A/B Test</div>
@@ -6750,8 +7087,8 @@ markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--purple">Other</div>
 
 */.spectrum-Shell {
-  height: 3rem;
-  padding: 0 1rem;
+  height: 48px;
+  padding: 0 16px;
   box-sizing: border-box;
   display: -ms-flexbox;
   display: flex;
@@ -6759,33 +7096,33 @@ markup: |
       justify-content: space-between;
   position: relative;
 }.spectrum-Shell .spectrum-TabList-item {
-    top: 0.0625rem;
+    top: 1px;
   }.spectrum-Shell .spectrum-TabList-item-line {
-    bottom: -0.4375rem;
+    bottom: -7px;
   }.spectrum-Shell .spectrum-Button--icon {
-    width: 1.125rem;
-    height: 1.125rem;
+    width: 18px;
+    height: 18px;
   }.spectrum-Shell-leftContainer,  .spectrum-Shell-rightContainer {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
 }.spectrum-Shell-logoIcon {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 24px;
+  width: 24px;
   position: relative;
-  margin-right: 0.75rem;
+  margin-right: 12px;
 }.spectrum-Shell-logoLabel {
-  margin-right: 4.5rem;
+  margin-right: 72px;
 }.spectrum-Shell-rightContainer > * {
-  margin: 0 0.875rem;
+  margin: 0 14px;
 }.spectrum-Shell-rightContainer > *:first-child {
-    margin-left: 1.75rem;
+    margin-left: 28px;
   }.spectrum-Shell-rightContainer > *:last-child {
     margin-right: 0;
   }.spectrum-Shell-avatar {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 24px;
+  height: 24px;
   border-radius: 100%;
   position: relative;
 }.spectrum-Shell-avatar img {
@@ -6899,8 +7236,8 @@ markup: |
 
   width: 100%;
 
-  padding: 0.5rem 1.875rem;
-  margin: 0.25rem 0;
+  padding: 8px 30px;
+  margin: 4px 0;
 
   text-decoration: none;
 
@@ -6911,38 +7248,38 @@ markup: |
     outline: none;
   }.spectrum-TreeView-link .spectrum-Icon {
     vertical-align: top;
-    margin-right: 0.5rem;
+    margin-right: 8px;
   }.spectrum-TreeView-link::before {
     content: '';
 
     position: absolute;
-    left: 0.125rem;
+    left: 2px;
     right: 0;
     z-index: -1; /* make sure we don't block clicks on chevron */
 
     /* Position correctly since top is not defined */
-    margin-top: -0.5rem;
+    margin-top: -8px;
 
-    height: 2.25rem;
+    height: 36px;
 
     background-color: transparent;
 
-    border-radius: 0.25rem;
+    border-radius: 4px;
   }.spectrum-TreeView-indicator {
   display: block;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
 
   float: left;
-  margin-left: -0.875rem;
-  margin-top: 0.3125rem;
+  margin-left: -14px;
+  margin-top: 5px;
 
   transition: transform ease 125ms;
 }/* Close nested treeviews by default */.spectrum-TreeView .spectrum-TreeView {
   /* Don't be a highlight container stealer */
   position: static;
 
-  padding-left: 1.75rem;
+  padding-left: 28px;
 
   /* Be hidden */
   height: 0;
@@ -7027,25 +7364,25 @@ markup: |
   </ul>
 
 */.spectrum-TreeView-item--indent1 {
-  padding-left: 1.75rem;
+  padding-left: 28px;
 }.spectrum-TreeView-item--indent2 {
-  padding-left: 3.5rem;
+  padding-left: 56px;
 }.spectrum-TreeView-item--indent3 {
-  padding-left: 5.25rem;
+  padding-left: 84px;
 }.spectrum-TreeView-item--indent4 {
-  padding-left: 7rem;
+  padding-left: 112px;
 }.spectrum-TreeView-item--indent5 {
-  padding-left: 8.75rem;
+  padding-left: 140px;
 }.spectrum-TreeView-item--indent6 {
-  padding-left: 10.5rem;
+  padding-left: 168px;
 }.spectrum-TreeView-item--indent7 {
-  padding-left: 12.25rem;
+  padding-left: 196px;
 }.spectrum-TreeView-item--indent8 {
-  padding-left: 14rem;
+  padding-left: 224px;
 }.spectrum-TreeView-item--indent9 {
-  padding-left: 15.75rem;
+  padding-left: 252px;
 }.spectrum-TreeView-item--indent10 {
-  padding-left: 17.5rem;
+  padding-left: 280px;
 }/* topdoc
 ---
 name: Tree View - Nested with icons
@@ -7295,7 +7632,7 @@ description: |
   }
 
 .spectrum-Button.focus-ring {
-    box-shadow: 0 0 0 0.1875rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 3px rgb(55, 142, 240);
   }
 
 .spectrum-Button:active {
@@ -7540,7 +7877,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 
 .spectrum-Button--overBackground:active {
@@ -7591,7 +7928,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 
 .spectrum-Button--quiet--overBackground:active {
@@ -7716,20 +8053,20 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-ActionButton"><span class="spectrum-Button-label">Button</span></button>
-  <button class="spectrum-ActionButton" disabled><span class="spectrum-Button-label">Button</span></button>
+  <button class="spectrum-ActionButton"><span class="spectrum-ActionButton-label">Button</span></button>
+  <button class="spectrum-ActionButton" disabled><span class="spectrum-ActionButton-label">Button</span></button>
 
   <button class="spectrum-ActionButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
   <button class="spectrum-ActionButton" disabled>
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
 
   <button class="spectrum-ActionButton">
@@ -7745,28 +8082,32 @@ markup: |
 
 */
 
-.spectrum-ActionButton {
+.spectrum-ActionButton,
+.spectrum-Tool {
   background-color: rgb(47, 47, 47);
   border-color: rgb(62, 62, 62);
   color: rgb(205, 205, 205);
 }
 
-.spectrum-ActionButton:hover {
+.spectrum-ActionButton:hover,
+.spectrum-Tool:hover {
     background-color: rgb(37, 37, 37);
     border-color: rgb(77, 77, 77);
     box-shadow: none;
     color: rgb(255, 255, 255);
   }
 
-.spectrum-ActionButton.focus-ring {
+.spectrum-ActionButton.focus-ring,
+.spectrum-Tool.focus-ring {
     background-color: rgb(37, 37, 37);
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
 
 .spectrum-ActionButton:active,
-  .spectrum-ActionButton.is-selected {
+.spectrum-ActionButton.is-selected,
+.spectrum-Tool:active {
     background-color: rgb(57, 57, 57);
     border-color: rgb(77, 77, 77);
     box-shadow: none;
@@ -7774,7 +8115,8 @@ markup: |
   }
 
 .spectrum-ActionButton:disabled,
-  .spectrum-ActionButton.is-disabled {
+.spectrum-ActionButton.is-disabled,
+.spectrum-Tool:disabled {
     background-color: rgb(57, 57, 57);
     border-color: rgb(57, 57, 57);
     color: rgb(92, 92, 92);
@@ -7847,7 +8189,8 @@ markup: |
 
 */
 
-.spectrum-ActionButton--quiet {
+.spectrum-ActionButton--quiet,
+.spectrum-Tool {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(205, 205, 205);
 }
@@ -7856,26 +8199,31 @@ markup: |
     color: rgb(205, 205, 205);
   }
 
-.spectrum-ActionButton--quiet:hover {
+.spectrum-ActionButton--quiet:hover,
+.spectrum-Tool:hover {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     color: rgb(255, 255, 255);
   }
 
-.spectrum-ActionButton--quiet.focus-ring {
+.spectrum-ActionButton--quiet.focus-ring,
+.spectrum-Tool.focus-ring {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0.125rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 2px rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
 
-.spectrum-ActionButton--quiet:active {
+.spectrum-ActionButton--quiet:active,
+.spectrum-Tool:active {
     background-color: rgb(62, 62, 62);
     box-shadow: none;
     color: rgb(255, 255, 255);
   }
 
 .spectrum-ActionButton--quiet:disabled,
-  .spectrum-ActionButton--quiet[disabled] {
+.spectrum-ActionButton--quiet[disabled],
+.spectrum-Tool:disabled,
+.spectrum-Tool[disabled] {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(92, 92, 92);
   }
@@ -7910,97 +8258,6 @@ markup: |
     border-color: rgba(0, 0, 0, 0);
     color: rgb(92, 92, 92);
   }
-
-/* topdoc
----
-name: Button - Action (toolbar)
-description: Selection action buttons that form a toolbar
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-  '.is-selected': Selected state
-markup: |
-  <button class="spectrum-ActionButton">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-
-*/
 
 /* topdoc
 ---
@@ -8155,35 +8412,6 @@ markup: |
 
 */
 
-.spectrum-Button--quiet--dropdown {
-  color: rgb(205, 205, 205);
-  border-color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.spectrum-Button--quiet--dropdown:hover {
-    color: rgb(255, 255, 255);
-  }
-
-.spectrum-Button--quiet--dropdown.focus-ring,
-  .spectrum-Button--quiet--dropdown.is-focused {
-    box-shadow: 0 0.125rem 0 0 rgb(38, 128, 235);
-  }
-
-.spectrum-Button--quiet--dropdown.is-invalid.focus-ring,
-    .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(227, 72, 80);
-    }
-
-.spectrum-Button--quiet--dropdown:disabled,
-  .spectrum-Button--quiet--dropdown.is-disabled {
-    color: rgb(92, 92, 92);
-  }
-
-.spectrum-Button--quiet--dropdown:disabled.focus-ring, .spectrum-Button--quiet--dropdown.is-disabled.focus-ring {
-      box-shadow: none;
-    }
-
 .spectrum-FieldButton {
   color: rgb(205, 205, 205);
   background-color: rgb(47, 47, 47);
@@ -8199,7 +8427,7 @@ markup: |
 .spectrum-FieldButton.focus-ring,
   .spectrum-FieldButton.is-focused {
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 
 .spectrum-FieldButton:active,
@@ -8222,7 +8450,7 @@ markup: |
 .spectrum-FieldButton.is-invalid.focus-ring,
     .spectrum-FieldButton.is-invalid.is-focused {
       border-color: rgb(227, 72, 80);
-      box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 
 .spectrum-FieldButton:disabled,
@@ -8249,7 +8477,7 @@ markup: |
 .spectrum-FieldButton--quiet.focus-ring,
   .spectrum-FieldButton--quiet.is-focused {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0.125rem 0 0 rgb(38, 128, 235);
+    box-shadow: 0 2px 0 0 rgb(38, 128, 235);
   }
 
 .spectrum-FieldButton--quiet:active,
@@ -8267,7 +8495,7 @@ markup: |
 
 .spectrum-FieldButton--quiet.is-invalid.focus-ring,
     .spectrum-FieldButton--quiet.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(227, 72, 80);
+      box-shadow: 0 2px 0 0 rgb(227, 72, 80);
     }
 
 .spectrum-FieldButton--quiet:disabled,
@@ -8304,11 +8532,51 @@ markup: |
     color: rgb(255, 255, 255);
   }
 
-.spectrum-ClearButton:disabled {
+.spectrum-ClearButton:disabled,
+  .spectrum-ClearButton.is-disabled {
     background-color: rgba(0, 0, 0, 0);
 
     color: rgb(92, 92, 92);
   }
+
+.spectrum-Tool.is-selected {
+    color: rgb(55, 142, 240);
+  }
+
+.spectrum-Tool.is-selected .spectrum-Tool-hold {
+      color: rgb(153, 153, 153);
+    }
+
+.spectrum-Tool.is-selected:hover {
+      color: rgb(75, 156, 245);
+    }
+
+.spectrum-Tool.is-selected:hover .spectrum-Tool-hold {
+        color: rgb(255, 255, 255);
+      }
+
+.spectrum-Tool.is-selected:active {
+      color: rgb(90, 169, 250);
+    }
+
+.spectrum-Tool.is-selected:active .spectrum-Tool-hold {
+        color: rgb(255, 255, 255);
+      }
+
+.spectrum-Tool.is-selected.focus-ring {
+      color: rgb(75, 156, 245);
+    }
+
+.spectrum-Tool.is-selected.focus-ring .spectrum-Tool-hold {
+        color: rgb(255, 255, 255);
+      }
+
+.spectrum-Tool.is-selected:disabled,
+    .spectrum-Tool.is-selected.is-disabled {
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      color: rgb(92, 92, 92);
+    }
 
 .spectrum-Breadcrumb {
   color: rgb(153, 153, 153);
@@ -8330,7 +8598,7 @@ markup: |
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link.focus-ring {
       color: rgb(75, 156, 245);
       outline: 0;
-      border-bottom: 0.125rem solid rgb(75, 156, 245);
+      border-bottom: 2px solid rgb(75, 156, 245);
     }
 
 .spectrum-Breadcrumb .spectrum-Breadcrumb-link:active {
@@ -8428,9 +8696,6 @@ name: Label - Special
 description: A special label
 status: Beta
 markup: |
-  <span class="spectrum-Label spectrum-Label--and">And</span>
-  <span class="spectrum-Label spectrum-Label--or">Or</span>
-  <br>
   <span class="spectrum-Label spectrum-Label--active">Active</span>
   <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
 
@@ -8824,7 +9089,7 @@ markup: |
     /* Since the specificity of .focus-ring is less than :hover, we need important */
     border-color: rgb(38, 128, 235) !important;
 
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235) !important;
+    box-shadow: 0 0 0 1px rgb(38, 128, 235) !important;
   }
 
 .spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
@@ -8837,7 +9102,7 @@ markup: |
 
 .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
 
     }
 
@@ -9094,7 +9359,7 @@ markup: |
 
 .spectrum-Textfield.focus-ring:not(:active) {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
     }
 
 .spectrum-Textfield[disabled] {
@@ -9124,7 +9389,7 @@ markup: |
 
 .spectrum-Textfield.is-invalid.focus-ring:not(:active), .spectrum-Textfield:invalid.focus-ring:not(:active) {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+        box-shadow: 0 0 0 1px rgb(227, 72, 80);
       }
 
 /* topdoc
@@ -9160,12 +9425,12 @@ markup: |
 
 .spectrum-Textfield--quiet:focus {
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0.0625rem 0 rgb(38, 128, 235);
+    box-shadow: 0 1px 0 rgb(38, 128, 235);
   }
 
 .spectrum-Textfield--quiet.focus-ring:not(:active) {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0.0625rem 0 rgb(38, 128, 235);
+      box-shadow: 0 1px 0 rgb(38, 128, 235);
     }
 
 .spectrum-Textfield--quiet:disabled {
@@ -9179,14 +9444,14 @@ markup: |
   }
 
 .spectrum-Textfield--quiet.is-invalid:focus, .spectrum-Textfield--quiet:invalid:focus {
-      box-shadow: 0 0.0625rem 0 rgb(227, 72, 80);
+      box-shadow: 0 1px 0 rgb(227, 72, 80);
     }
 
 /* might break things due to pre-defined focus-ring */
 
 .spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0.0625rem 0 rgb(227, 72, 80);
+        box-shadow: 0 1px 0 rgb(227, 72, 80);
       }
 
 .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
@@ -9205,11 +9470,11 @@ markup: |
 /* Only add the 2px ring for keyboard focus */
 
 .spectrum-InputGroup-input.focus-ring ~ .spectrum-FieldButton {
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 
 .spectrum-InputGroup-input.focus-ring.is-invalid ~ .spectrum-FieldButton, .spectrum-InputGroup-input.focus-ring:invalid ~ .spectrum-FieldButton {
-      box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 
 .spectrum-InputGroup--quiet .spectrum-FieldButton,
@@ -9239,12 +9504,12 @@ markup: |
 /* Always add the 2px ring for keyboard focus for quiet inputgroups */
 
 .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-FieldButton {
-        box-shadow: 0 0.0625rem 0 rgb(38, 128, 235);
+        box-shadow: 0 1px 0 rgb(38, 128, 235);
         border-color: rgb(38, 128, 235);
       }
 
 .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-FieldButton, .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-FieldButton {
-          box-shadow: 0 0.0625rem 0 rgb(227, 72, 80);
+          box-shadow: 0 1px 0 rgb(227, 72, 80);
           border-color: rgb(227, 72, 80);
         }
 
@@ -9816,7 +10081,7 @@ spectrum-slider-track-disabled(){
   border-color: rgb(118, 118, 118);
   background: rgb(50, 50, 50);
   /*background: var(--spectrum-slider-handle-background-color);*/
-  box-shadow: 0 0 0 0.25rem rgb(50, 50, 50);
+  box-shadow: 0 0 0 4px rgb(50, 50, 50);
 }
 
 .spectrum-Slider-handle:hover {
@@ -9968,17 +10233,17 @@ markup: |
 
 .spectrum-Slider--color .spectrum-Slider-track {
     background: linear-gradient(to right, rgb(38, 128, 235), rgb(90, 169, 250));
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05), 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
     border-color: rgb(37, 37, 37);
     background: rgba(0, 0, 0, 0);
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
     }
 
 /* topdoc
@@ -10521,7 +10786,7 @@ markup: |
 
 .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-switch::after {
         border-color: rgb(38, 128, 235);
-        box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+        box-shadow: 0 0 0 1px rgb(38, 128, 235);
       }
 
 .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
@@ -10853,7 +11118,7 @@ markup: |
 .spectrum-Popover {
   background-color: rgb(37, 37, 37);
   border-color: rgb(77, 77, 77);
-  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
 }
 
 .spectrum-Popover .spectrum-Dialog-header,
@@ -10865,7 +11130,7 @@ markup: |
 .spectrum-Popover .spectrum-Popover-tip::after {
     background-color: rgb(37, 37, 37);
     border-color: rgb(77, 77, 77);
-    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   }
 
 .spectrum-Accordion-item {
@@ -11029,7 +11294,7 @@ markup: |
 */
 
 .spectrum-Stepper.is-focused {
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 
 .spectrum-Stepper.is-focused .spectrum-Stepper-stepUp,
@@ -11039,7 +11304,7 @@ markup: |
 
 .spectrum-Stepper.is-focused .spectrum-Stepper-input {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
     }
 
 .spectrum-Stepper.is-invalid .spectrum-Stepper-stepUp,
@@ -11058,16 +11323,16 @@ markup: |
 
 .spectrum-Stepper.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+        box-shadow: 0 0 0 1px rgb(227, 72, 80);
       }
 
 .spectrum-Stepper.is-invalid.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 
 .spectrum-Stepper.is-invalid.is-focused .spectrum-Stepper-input {
         border-left-color: rgb(227, 72, 80);
-        box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+        box-shadow: 0 0 0 1px rgb(227, 72, 80);
       }
 
 .spectrum-Stepper-stepUp,
@@ -11165,7 +11430,7 @@ markup: |
     }
 
 .spectrum-Stepper--quiet.is-focused {
-    box-shadow: 0 0.0625rem 0 0 rgb(38, 128, 235);
+    box-shadow: 0 1px 0 0 rgb(38, 128, 235);
   }
 
 .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepUp,
@@ -11175,7 +11440,7 @@ markup: |
 
 .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0.0625rem 0 0 rgb(38, 128, 235);
+      box-shadow: 0 1px 0 0 rgb(38, 128, 235);
     }
 
 .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
@@ -11185,7 +11450,7 @@ markup: |
 
 .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown:focus, .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
+        box-shadow: 0 1px 0 0 rgb(227, 72, 80);
       }
 
 .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp {
@@ -11197,7 +11462,7 @@ markup: |
       }
 
 .spectrum-Stepper--quiet.is-invalid.is-focused {
-      box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
+      box-shadow: 0 1px 0 0 rgb(227, 72, 80);
     }
 
 .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepUp,
@@ -11207,7 +11472,7 @@ markup: |
 
 .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-input {
         border-color: rgb(227, 72, 80);
-        box-shadow: 0 0.0625rem 0 0 rgb(227, 72, 80);
+        box-shadow: 0 1px 0 0 rgb(227, 72, 80);
       }
 
 .spectrum-Calendar-prevMonth {
@@ -11353,7 +11618,7 @@ markup: |
       }
 
 .spectrum-Table-body {
-  border: 0.0625rem solid rgb(62, 62, 62);
+  border: 1px solid rgb(62, 62, 62);
   background-color: rgb(47, 47, 47);
 }
 
@@ -11369,23 +11634,23 @@ tbody.spectrum-Table-body .spectrum-Table-row {
   }
 
 tbody.spectrum-Table-body .spectrum-Table-cell {
-    border-top: 0.0625rem solid rgb(62, 62, 62);
+    border-top: 1px solid rgb(62, 62, 62);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 0.0625rem solid rgb(62, 62, 62);
+    border-left: 1px solid rgb(62, 62, 62);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 0.0625rem solid rgb(62, 62, 62);
+    border-right: 1px solid rgb(62, 62, 62);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 0.0625rem solid rgb(62, 62, 62);
+    border-bottom: 1px solid rgb(62, 62, 62);
   }
 
 .spectrum-Table-row {
-  border-bottom: 0.0625rem solid rgb(62, 62, 62);
+  border-bottom: 1px solid rgb(62, 62, 62);
   background-color: rgb(47, 47, 47);
 }
 
@@ -11420,11 +11685,11 @@ tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
 }
 
 .spectrum-Table-cell--divider {
-  border-right: 0.0625rem solid rgb(62, 62, 62);
+  border-right: 1px solid rgb(62, 62, 62);
 }
 
 .spectrum-Table--quiet .spectrum-Table-body {
-    border-width: 0.0625rem 0;
+    border-width: 1px 0;
     background-color: rgba(0, 0, 0, 0);
   }
 
@@ -11731,80 +11996,126 @@ markup: |
 
 .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
           stroke: currentColor;
-          stroke-width: 0.0625rem;
+          stroke-width: 1px;
         }
 
-.spectrum-TagList-item {
+.spectrum-Tags-item {
   color: rgb(153, 153, 153);
   background-color: rgb(47, 47, 47);
-  border: 0.0625rem solid rgb(123, 123, 123);
+  border-color: rgb(123, 123, 123);
 }
 
-.spectrum-TagList-item .spectrum-ClearButton {
+.spectrum-Tags-item .spectrum-ClearButton {
     color: rgb(123, 123, 123);
   }
 
-.spectrum-TagList-item:hover {
+.spectrum-Tags-item:hover {
     background-color: rgb(47, 47, 47);
     color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
   }
 
-.spectrum-TagList-item:hover .spectrum-ClearButton {
+.spectrum-Tags-item:hover .spectrum-ClearButton {
       color: rgb(255, 255, 255);
     }
 
-.spectrum-TagList-item.focus-ring {
+.spectrum-Tags-item.focus-ring {
     background-color: rgb(47, 47, 47);
     color: rgb(255, 255, 255);
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 
-.spectrum-TagList-item.focus-ring .spectrum-ClearButton {
+.spectrum-Tags-item.focus-ring .spectrum-ClearButton {
       color: rgb(255, 255, 255);
     }
 
-.spectrum-TagList-item.is-invalid {
+.spectrum-Tags-item.is-invalid {
     color: rgb(153, 153, 153);
     border-color: rgb(236, 91, 98);
   }
 
-.spectrum-TagList-item.is-invalid .spectrum-ClearButton {
+.spectrum-Tags-item.is-invalid .spectrum-ClearButton {
       color: rgb(236, 91, 98);
     }
 
-.spectrum-TagList-item.is-invalid:hover {
+.spectrum-Tags-item.is-invalid:hover {
       color: rgb(255, 255, 255);
       border-color: rgb(247, 109, 116);
     }
 
-.spectrum-TagList-item.is-invalid:hover .spectrum-ClearButton {
+.spectrum-Tags-item.is-invalid:hover .spectrum-ClearButton {
         color: rgb(247, 109, 116);
       }
 
-.spectrum-TagList-item.is-invalid.focus-ring {
+.spectrum-Tags-item.is-invalid.focus-ring {
       color: rgb(255, 255, 255);
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
     }
 
-.spectrum-TagList-item.is-invalid.focus-ring .spectrum-ClearButton {
+.spectrum-Tags-item.is-invalid.focus-ring .spectrum-ClearButton {
         color: rgb(247, 109, 116);
       }
 
-.spectrum-TagList-item.is-disabled {
+.spectrum-Tags-item.is-disabled {
     color: rgb(92, 92, 92);
     background-color: rgb(57, 57, 57);
     border-color: rgb(57, 57, 57);
   }
 
-.spectrum-TagList-item.is-disabled .spectrum-Avatar {
+.spectrum-Tags-item.is-disabled .spectrum-Avatar {
       /* Duplicated so state is on the tag */
       opacity: 0.3;
     }
 
-.spectrum-TagList-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
+.spectrum-Tags-item--deletable:hover {
+    color: rgb(153, 153, 153);
+  }
+
+.spectrum-Tags-item--deletable:hover .spectrum-ClearButton {
+      color: rgb(255, 255, 255);
+    }
+
+.spectrum-Tags-item--deletable:active {
+    color: rgb(153, 153, 153);
+  }
+
+.spectrum-Tags-item--deletable:active .spectrum-ClearButton {
+      color: rgb(255, 255, 255);
+    }
+
+.spectrum-Tags-item--deletable.is-invalid:hover {
+      border-color: rgb(247, 109, 116);
+      color: rgb(153, 153, 153);
+    }
+
+.spectrum-Tags-item--deletable.is-invalid:hover .spectrum-ClearButton {
+        color: rgb(247, 109, 116);
+      }
+
+.spectrum-Tags-item--deletable.is-invalid:active {
+      border-color: rgb(255, 123, 130);
+      color: rgb(153, 153, 153);
+    }
+
+.spectrum-Tags-item--deletable.is-invalid:active .spectrum-ClearButton {
+        color: rgb(255, 123, 130);
+      }
+
+.spectrum-Tags-item--deletable.focus-ring {
+    color: rgb(153, 153, 153);
+  }
+
+.spectrum-Tags-item--deletable.focus-ring .spectrum-ClearButton {
+      color: rgb(255, 255, 255);
+    }
+
+.spectrum-Tags-item--deletable.focus-ring.is-invalid {
+      color: rgb(153, 153, 153);
+    }
+
+.spectrum-Tags-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
     color: rgb(92, 92, 92);
   }
 
@@ -11848,7 +12159,7 @@ markup: |
 .spectrum-QuickActions-item.focus-ring {
     background-color: rgb(37, 37, 37);
     border-color: rgb(38, 128, 235);
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
     color: rgb(255, 255, 255);
   }
 
@@ -11935,7 +12246,7 @@ markup: |
 
 .spectrum-CycleButton.focus-ring {
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-    box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+    box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
   }
 
 .spectrum-CycleButton.focus-ring .spectrum-Icon {
@@ -11991,11 +12302,11 @@ markup: |
   background-color: rgb(38, 128, 235);
 }
 
-.spectrum-StatusLight--archived {
+.spectrum-StatusLight--neutral {
   color: rgb(205, 205, 205);
 }
 
-.spectrum-StatusLight--archived::before {
+.spectrum-StatusLight--neutral::before {
     background-color: rgb(92, 92, 92);
   }
 
@@ -12088,7 +12399,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -12140,7 +12451,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -12179,7 +12490,7 @@ markup: |
         </svg>
       </button>
       <div class="spectrum-Shell-avatar">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
       </div>
     </div>
   </header>
@@ -12256,10 +12567,10 @@ markup: |
       background-color: rgba(255, 255, 255, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
     }
 
 .spectrum-TreeView-link.is-drop-target::before {
       background-color: rgba(55, 142, 240, .1);
-      box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
     }

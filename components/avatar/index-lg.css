@@ -9,8 +9,8 @@ markup: |
 
 */
 .spectrum-Avatar {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 20px;
+  height: 20px;
 
   border-radius: 50%;
   border-style: none;

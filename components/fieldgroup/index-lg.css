@@ -45,7 +45,7 @@ markup: |
   vertical-align: top;
 }.spectrum-FieldGroup .spectrum-Radio,
   .spectrum-FieldGroup .spectrum-Checkbox {
-    margin-right: 0.75rem;
+    margin-right: 12px;
   }/* topdoc
 ---
 name: Field Group - Vertical
@@ -68,9 +68,9 @@ markup: |
 */.spectrum-FieldGroup--vertical .spectrum-Radio,
   .spectrum-FieldGroup--vertical .spectrum-Checkbox {
     display: block;
-    margin: 0 0 0 -0.625rem;
+    margin: 0 0 0 -10px;
   }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
-    margin-left: 0.9375rem;
+    margin-left: 15px;
   }.spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Radio,
     .spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical .spectrum-Checkbox {
       /* Prevent overlap due to negative margin */
@@ -100,12 +100,12 @@ markup: |
   </div>
 
 */.spectrum-FieldGroup--labelsBelow .spectrum-Radio {
-    height: 2.25rem;
+    height: 36px;
     margin: 0;
   }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-button {
-    margin-bottom: 1.125rem;
+    margin-bottom: 18px;
   }.spectrum-FieldGroup--labelsBelow .spectrum-Radio-label {
     position: relative;
-    top: 0.75rem;
-    left: -1.0625rem;
+    top: 12px;
+    left: -17px;
   }

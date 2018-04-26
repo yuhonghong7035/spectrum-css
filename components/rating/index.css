@@ -8,21 +8,21 @@
     pointer-events: none;
   }.spectrum-Rating-input {
   position: absolute;
-  width: 7.5rem; /* 120px */
-  height: 1rem; /* 16px; */
+  width: 120px; /* 120px */
+  height: 16px; /* 16px; */
   opacity: 0.0001;
   pointer-events: none;
   z-index: 0;
 }.spectrum-Rating-icon {
   background-size: contain;
   background-repeat: no-repeat;
-  width: 1.5rem; /* 24px; */
-  height: 1rem; /* 16px; */
+  width: 24px; /* 24px; */
+  height: 16px; /* 16px; */
   float: left;
 }.spectrum-Rating-starActive,
 .spectrum-Rating-starInactive {
-  width: 1rem;
-  height: 1rem;
+  width: 16px;
+  height: 16px;
   margin: 0 auto;
 }.spectrum-Rating-starActive {
   display: none;

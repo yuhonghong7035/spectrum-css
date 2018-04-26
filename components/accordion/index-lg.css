@@ -45,12 +45,12 @@ markup: |
   margin: 0;
 }.spectrum-Accordion-indicator {
   display: block;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
 
   position: absolute;
-  left: 1rem;
-  top: 0.90625rem;
+  left: 16px;
+  top: 14.5px;
 
   transition: transform ease 125ms;
 }.spectrum-Accordion-item {
@@ -60,22 +60,22 @@ markup: |
   display: list-item;
   margin: 0;
 
-  border-bottom: 0.0625rem solid transparent;
+  border-bottom: 1px solid transparent;
 }.spectrum-Accordion-item:first-of-type {
-    border-top: 0.0625rem solid transparent;
+    border-top: 1px solid transparent;
   }.spectrum-Accordion-header {
   position: relative;
 
   box-sizing: border-box;
   /* left padding takes into account the icon's size as well as the focus state's left border */
-  padding: 0 1rem 0 2.125rem;
+  padding: 0 16px 0 34px;
   margin: 0;
 
-  height: 2.4375rem;
+  height: 39px;
 
-  font-size: 0.8125rem;
+  font-size: 13px;
   text-transform: uppercase;
-  line-height: 2.4375rem;
+  line-height: 39px;
   letter-spacing: 0.6pt;
 
   text-overflow: ellipsis;
@@ -90,16 +90,16 @@ markup: |
       left: 0;
       top: -var(--spectrum-accordion-item-border-size);
 
-      height: 2.5rem;
-      width: 0.125rem;
+      height: 40px;
+      width: 2px;
     }.spectrum-Accordion-content {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 16px 16px 16px;
   display: none;
 }.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
       transform: rotate(90deg);
     }.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
       /* No bottom border when open, so be less tall */
-      height: 2.4375rem;
+      height: 39px;
     }.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
       display: block;
     }.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {

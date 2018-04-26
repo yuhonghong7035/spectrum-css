@@ -67,7 +67,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -119,7 +119,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -158,7 +158,7 @@ markup: |
         </svg>
       </button>
       <div class="spectrum-Shell-avatar">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
       </div>
     </div>
   </header>

@@ -89,7 +89,7 @@ markup: |
 
   /* Force override */
 }.spectrum-SearchWithin {
-  width: 15.625rem;
+  width: 250px;
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
@@ -99,7 +99,7 @@ markup: |
   }.spectrum-SearchWithin .spectrum-Textfield {
     -ms-flex: 1;
         flex: 1;
-    margin-left: -0.0625rem; /* hides left border */
+    margin-left: -1px; /* hides left border */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }.spectrum-SearchWithin .spectrum-Textfield:hover, .spectrum-SearchWithin .spectrum-Textfield:focus {

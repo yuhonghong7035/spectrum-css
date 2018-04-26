@@ -17,14 +17,33 @@
 
   pointer-events: auto;
 }.spectrum-Popover--bottom.is-open {
-  transform: translateY(0.375rem);
+  transform: translateY(6px);
 }.spectrum-Popover--top.is-open {
-  transform: translateY(-0.375rem);
+  transform: translateY(-6px);
 }.spectrum-Popover--right.is-open {
-  transform: translateX(0.375rem);
+  transform: translateX(6px);
 }.spectrum-Popover--left.is-open {
-  transform: translateX(-0.375rem);
-}.spectrum-Popover {
+  transform: translateX(-6px);
+}/* topdoc
+---
+name: Popover
+description: A basic popover with a SelectList inside.
+status: Beta
+markup: |
+
+  <div class="spectrum-Popover is-open">
+    <ul class="spectrum-SelectList" role="menu">
+      <li class="spectrum-SelectList-item is-selected" role="menuitem" tabindex="0">Ballard</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Fremont</li>
+      <li class="spectrum-SelectList-item" role="menuitem" tabindex="0">Greenwood</li>
+      <hr class="spectrum-SelectList-divider">
+      <li class="spectrum-SelectList-item is-disabled" role="menuitem" tabindex="0">United States of America</li>
+    </ul>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+*/.spectrum-Popover {
 
   /* Be a flexbox to allow a full sized content area that scrolls */
   display: -ms-inline-flexbox;
@@ -35,35 +54,35 @@
 
   position: absolute;
 
-  min-width: 12rem;
-  min-height: 2rem;
+  min-width: 192px;
+  min-height: 32px;
 
   border-style: solid;
-  border-width: 0.0625rem;
-  border-radius: 0.25rem;
+  border-width: 1px;
+  border-radius: 4px;
 
   outline: none;
 }/* Hide focus outline *//* Don't let sharp corners be pokey */.spectrum-Popover .spectrum-SelectList {
-    border-radius: 0.25rem;
+    border-radius: 4px;
   }.spectrum-Popover-tip {
   position: absolute;
   /* This hides half of the tooltip, but it also crops the shadow slightly, which is undesireable */
   overflow: hidden;
-  width: 1.25rem;
-  height: 0.6875rem;
+  width: 20px;
+  height: 11px;
 }.spectrum-Popover-tip::after {
     content: '';
-    width: 1.25rem;
-    height: 1.25rem;
-    border-width: 0.0625rem;
+    width: 20px;
+    height: 20px;
+    border-width: 1px;
     border-style: solid;
     position: absolute;
     transform: rotate(45deg);
-    top: -1.125rem;
-    left: -0.0625rem;
+    top: -18px;
+    left: -1px;
   }.spectrum-Popover--dialog {
-  min-width: 16.875rem;
-  padding: 1.875rem 1.8125rem;
+  min-width: 270px;
+  padding: 30px 29px;
 }/* topdoc
 ---
 name: Popover - Dialog style
@@ -138,28 +157,28 @@ markup: |
   <div class="dummy-spacing" style="height: 290px"></div>
 
 */.spectrum-Popover--left.spectrum-Popover--withTip {
-    margin-right: 0.8125rem;
+    margin-right: 13px;
   }.spectrum-Popover--left .spectrum-Popover-tip {
-    right: -1.125rem;
+    right: -18px;
     transform: rotate(-90deg);
   }.spectrum-Popover--right.spectrum-Popover--withTip {
-    margin-left: 0.8125rem;
+    margin-left: 13px;
   }.spectrum-Popover--right .spectrum-Popover-tip {
-    left: -1.125rem;
+    left: -18px;
     transform: rotate(90deg);
   }/* Center the tip by default */.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
     top: 50%;
-    margin-top: -0.375rem;
+    margin-top: -6px;
   }.spectrum-Popover--bottom.spectrum-Popover--withTip {
-    margin-top: 0.8125rem;
+    margin-top: 13px;
   }.spectrum-Popover--bottom .spectrum-Popover-tip {
-    top: -0.8125rem;
+    top: -13px;
     transform: rotate(180deg);
   }.spectrum-Popover--top.spectrum-Popover--withTip {
-    margin-bottom: 0.8125rem;
+    margin-bottom: 13px;
   }.spectrum-Popover--top .spectrum-Popover-tip {
-    bottom: -0.8125rem;
+    bottom: -13px;
   }/* Center the tip by default */.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
     left: 50%;
-    margin-left: -0.75rem;
+    margin-left: -12px;
   }

@@ -1,7 +1,7 @@
 /* topdoc
 ---
-name: Miller - Default
-description: The default spectrum miller column
+name: Miller Columns - Default
+description: Miller columns.
 status: Beta
 markup: |
   <div class="spectrum-MillerColumns">
@@ -177,39 +177,39 @@ markup: |
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 0.5rem 0;
+  padding: 8px 0;
 }.spectrum-MillerColumn {
   display: inline-block;
-  width: 17rem;
+  width: 272px;
   vertical-align: top;
   outline: none;
   margin: 0;
   padding: 0;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   overflow: auto;
   height: 100%;
 }.spectrum-MillerColumn:first-child {
-    margin-left: 0.5rem;
+    margin-left: 8px;
   }.spectrum-MillerColumn-childIndicator {
   display: none;
-  width: 0.375rem;
-  height: 0.625rem;
+  width: 6px;
+  height: 10px;
   transition: transform ease 125ms;
 }.spectrum-MillerColumn-item {
   cursor: pointer;
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1rem 0 1rem;
-  margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  padding: 0 16px 0 16px;
+  margin-bottom: 4px;
+  font-size: 14px;
   font-weight: 400;
   font-style: normal;
-  height: 2.5rem;
-  border-radius: 0.25rem;
+  height: 40px;
+  border-radius: 4px;
   -ms-flex-align: center;
       align-items: center;
-  width: 17rem;
+  width: 272px;
   box-sizing: border-box;
   transition: background-color 125ms ease-in-out;
 }/* checkbox on the left, shows up always */.spectrum-MillerColumn-item.is-branch-selectable .spectrum-Checkbox, .spectrum-MillerColumn-item.is-selected .spectrum-Checkbox, .spectrum-MillerColumn-item:hover .spectrum-Checkbox {
@@ -223,14 +223,14 @@ markup: |
     /* Remove the border on images inside links in IE 10-. */
     border-style: none;
 
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
     vertical-align: middle;
   }.spectrum-MillerColumn-itemLabel {
   -ms-flex: 1;
       flex: 1;
-  padding-left: 0.5rem;
+  padding-left: 8px;
 
   text-overflow: ellipsis;
   overflow: hidden;

@@ -2,7 +2,8 @@
 .spectrum-ActionButton,
 .spectrum-LogicButton,
 .spectrum-FieldButton,
-.spectrum-ClearButton {
+.spectrum-ClearButton,
+.spectrum-Tool {
   display: inline-block;
   box-sizing: border-box;
 
@@ -11,6 +12,9 @@
 
   /* Remove button the margin in Firefox and Safari. */
   margin: 0;
+
+  border-style: solid;
+  white-space: nowrap;
 
   /* Remove the inheritance of text transform on button in Edge, Firefox, and IE. */
   text-transform: none;
@@ -36,13 +40,15 @@
 .spectrum-ActionButton:focus,
 .spectrum-LogicButton:focus,
 .spectrum-FieldButton:focus,
-.spectrum-ClearButton:focus {
+.spectrum-ClearButton:focus,
+.spectrum-Tool:focus {
     outline: none;
   }/* Fix Firefox */.spectrum-Button::-moz-focus-inner,
 .spectrum-ActionButton::-moz-focus-inner,
 .spectrum-LogicButton::-moz-focus-inner,
 .spectrum-FieldButton::-moz-focus-inner,
-.spectrum-ClearButton::-moz-focus-inner {
+.spectrum-ClearButton::-moz-focus-inner,
+.spectrum-Tool::-moz-focus-inner {
     border: 0;
 
     /* Remove the inner border and padding for button in Firefox. */
@@ -56,40 +62,45 @@
 .spectrum-ActionButton:-moz-focusring,
 .spectrum-LogicButton:-moz-focusring,
 .spectrum-FieldButton:-moz-focusring,
-.spectrum-ClearButton:-moz-focusring {
-    outline: 0.0625rem dotted ButtonText;
+.spectrum-ClearButton:-moz-focusring,
+.spectrum-Tool:-moz-focusring {
+    outline: 1px dotted ButtonText;
   }.spectrum-Button:disabled,
 .spectrum-ActionButton:disabled,
 .spectrum-LogicButton:disabled,
 .spectrum-FieldButton:disabled,
-.spectrum-ClearButton:disabled {
+.spectrum-ClearButton:disabled,
+.spectrum-Tool:disabled {
     cursor: default;
   }.spectrum-Button .spectrum-Icon,
 .spectrum-ActionButton .spectrum-Icon,
 .spectrum-LogicButton .spectrum-Icon,
 .spectrum-FieldButton .spectrum-Icon,
-.spectrum-ClearButton .spectrum-Icon {
+.spectrum-ClearButton .spectrum-Icon,
+.spectrum-Tool .spectrum-Icon {
     height: 100%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     vertical-align: middle;
   }.spectrum-Button {
 
-  border-width: 0.125rem;
+  border-width: 2px;
   border-style: solid;
-  border-radius: 1.25rem;
+  border-radius: 20px;
 
-  height: 2.5rem;
+  height: 40px;
 
-  padding: 0 1.25rem 0.0625rem; /* 1px to push up text, sits kind of low */
+  padding: 0 18px 1px; /* 1px to push up text, sits kind of low */
 
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 700;
 }.spectrum-Button:hover,
   .spectrum-Button:active {
     box-shadow: none;
   }.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
-    margin-left: 0.625rem;
+    margin-left: 10px;
   }/* Space out buttons when placed next to eachother */.spectrum-Button + .spectrum-Button {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }a.spectrum-Button {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
@@ -98,20 +109,24 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}.spectrum-ActionButton {
+}.spectrum-ActionButton,
+.spectrum-Tool {
 
-  height: 2.5rem;
-  min-width: 2.5rem;
-  padding: 0 0.9375rem;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 15px;
 
-  border-width: 0.0625rem;
-  border-radius: 0.3125rem;
+  border-width: 1px;
+  border-radius: 5px;
 
-  font-size: 1.0625rem;
+  font-size: 17px;
   font-weight: 400;
 
   text-align: center;
-}.spectrum-ActionButton-label,
+}.spectrum-ActionButton .spectrum-Icon + .spectrum-ActionButton-label,
+.spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
+    margin-left: 10px;
+  }.spectrum-ActionButton-label,
 .spectrum-Button-label {
   display: inline-block;
   height: 100%;
@@ -119,28 +134,30 @@
 }.spectrum-ActionButton-label:empty, .spectrum-Button-label:empty {
     display: none;
   }.spectrum-Button-label {
-  line-height: 2.25rem;
+  line-height: 36px;
 }.spectrum-ActionButton-label {
-  line-height: 2.375rem;
-}.spectrum-ActionButton--quiet {
-  padding: 0 0.9375rem;
+  line-height: 38px;
+}.spectrum-ActionButton--quiet,
+.spectrum-Tool {
+  padding: 0 15px;
 
   border-width: 0;
-  border-radius: 0.3125rem;
+  border-radius: 5px;
 
-  font-size: 1.0625rem;
+  font-size: 17px;
   font-weight: 400;
-}.spectrum-ActionButton--quiet .spectrum-ActionButton-label {
-    line-height: 2.5rem;
+}.spectrum-ActionButton--quiet .spectrum-ActionButton-label,
+.spectrum-Tool .spectrum-ActionButton-label {
+    line-height: 40px;
   }.spectrum-LogicButton {
 
-  height: 1.5rem;
-  padding: 0.625rem;
+  height: 24px;
+  padding: 10px;
 
-  border-width: 0.125rem;
-  border-radius: 0.3125rem;
+  border-width: 2px;
+  border-radius: 5px;
 
-  font-size: 1.0625rem;
+  font-size: 17px;
   font-weight: 700;
   line-height: 0;
 }.spectrum-Button--block {
@@ -155,13 +172,13 @@
   white-space: nowrap;
 }.spectrum-FieldButton {
 
-  height: 2.5rem;
+  height: 40px;
 
-  padding: 0 0.9375rem;
+  padding: 0 15px;
 
   font-family: inherit;
   font-weight: normal;
-  font-size: 1.0625rem;
+  font-size: 17px;
   line-height: normal;
   -webkit-font-smoothing: initial;
 
@@ -169,11 +186,11 @@
   outline: none;
 }.spectrum-FieldButton {
   margin: 0;
-  padding: 0 0.9375rem;
+  padding: 0 15px;
 
-  border-width: 0.0625rem;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 
   transition: background-color 125ms,
     box-shadow 125ms,
@@ -183,7 +200,7 @@
     border-width: 0;
     cursor: default;
   }.spectrum-FieldButton.is-open {
-    border-width: 0.0625rem;
+    border-width: 1px;
   }.spectrum-FieldButton--quiet {
   margin: 0;
   padding: 0;
@@ -192,17 +209,57 @@
   border-radius: 0;
 }.spectrum-ClearButton {
 
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
 
   padding: 0;
   margin: 0;
 
   border: none;
 }.spectrum-ClearButton .spectrum-Icon {
-    width: 0.625rem;
+    width: 10px;
     height: 100%;
   }.spectrum-ClearButton--small {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 30px;
+  height: 30px;
+}/* topdoc
+---
+name: Tool
+description: The tool button.
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Tool">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+  </button>
+
+*/.spectrum-Tool {
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
 }

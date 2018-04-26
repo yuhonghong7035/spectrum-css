@@ -277,5 +277,5 @@ markup: |
 
 .spectrum--light .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum--light .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum--light .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
           stroke: currentColor;
-          stroke-width: 0.0625rem;
+          stroke-width: 1px;
         }

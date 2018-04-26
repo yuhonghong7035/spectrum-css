@@ -120,9 +120,9 @@ markup: |
       flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  min-width: 12rem;
+  min-width: 192px;
 }.spectrum-InputGroup .spectrum-FieldButton {
-    padding: 0 0.9375rem;
+    padding: 0 15px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }.spectrum-InputGroup-input {
@@ -132,21 +132,21 @@ markup: |
   -ms-flex: 1;
       flex: 1;
 }.spectrum-InputGroup-icon {
-  width: 0.625rem;
-  height: 0.625rem;
+  width: 10px;
+  height: 10px;
   height: 100%;
 }.spectrum-InputGroup--quiet .spectrum-FieldButton {
     border-radius: 0;
 
     position: relative;
-    width: 1.5rem;
-    border-bottom: 0.0625rem solid;
+    width: 24px;
+    border-bottom: 1px solid;
   }/* More hitarea */.spectrum-InputGroup--quiet .spectrum-FieldButton:after {
       content: '';
       position: absolute;
       height: 100%;
-      width: 0.625rem;
-      right: -0.625rem;
+      width: 10px;
+      right: -10px;
     }.spectrum-InputGroup--quiet .spectrum-InputGroup-icon {
     right: 0;
   }

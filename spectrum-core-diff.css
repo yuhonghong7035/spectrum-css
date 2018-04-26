@@ -102,7 +102,8 @@
 .spectrum--large .spectrum-ActionButton,
 .spectrum--large .spectrum-LogicButton,
 .spectrum--large .spectrum-FieldButton,
-.spectrum--large .spectrum-ClearButton {
+.spectrum--large .spectrum-ClearButton,
+.spectrum--large .spectrum-Tool {
 
   transition: background 125ms ease-out,
               border-color 125ms ease-out,
@@ -117,7 +118,7 @@
 
   height: 40px;
 
-  padding: 0 20px 1px;
+  padding: 0 18px 1px;
 
   font-size: 18px;
   font-weight: 700;
@@ -128,7 +129,8 @@
 .spectrum--large .spectrum-Button + .spectrum-Button {
     margin-left: 12px;
   }
-.spectrum--large .spectrum-ActionButton {
+.spectrum--large .spectrum-ActionButton,
+.spectrum--large .spectrum-Tool {
 
   height: 40px;
   min-width: 40px;
@@ -140,13 +142,18 @@
   font-size: 17px;
   font-weight: 400;
 }
+.spectrum--large .spectrum-ActionButton .spectrum-Icon + .spectrum-ActionButton-label,
+.spectrum--large .spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
+    margin-left: 10px;
+  }
 .spectrum--large .spectrum-Button-label {
   line-height: 36px;
 }
 .spectrum--large .spectrum-ActionButton-label {
   line-height: 38px;
 }
-.spectrum--large .spectrum-ActionButton--quiet {
+.spectrum--large .spectrum-ActionButton--quiet,
+.spectrum--large .spectrum-Tool {
   padding: 0 15px;
 
   border-width: 0;
@@ -155,7 +162,8 @@
   font-size: 17px;
   font-weight: 400;
 }
-.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label {
+.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label,
+.spectrum--large .spectrum-Tool .spectrum-ActionButton-label {
     line-height: 40px;
   }
 .spectrum--large .spectrum-LogicButton {
@@ -201,6 +209,29 @@
   width: 30px;
   height: 30px;
 }
+.spectrum--large .spectrum-Tool {
+
+  width: 40px;
+  height: 40px;
+}
+.spectrum--large .spectrum-ButtonGroup .spectrum-Button + .spectrum-Button {
+    margin-left: 16px;
+  }
+.spectrum--large .spectrum-ButtonGroup .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 10px;
+  }
+.spectrum--large .spectrum-ButtonGroup .spectrum-Tool + .spectrum-Tool {
+    margin-left: 10px;
+  }
+.spectrum--large .spectrum-ButtonGroup--vertical .spectrum-Button + .spectrum-Button {
+    margin-top: 16px;
+  }
+.spectrum--large .spectrum-ButtonGroup--vertical .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-top: 10px;
+  }
+.spectrum--large .spectrum-ButtonGroup--vertical .spectrum-Tool + .spectrum-Tool {
+    margin-top: 10px;
+  }
 .spectrum--large .spectrum-Alert {
   min-width: 368px;
   min-height: 38px;
@@ -919,8 +950,8 @@
     transform: rotate(180deg);
   }
 }@keyframes spectrum-fills-rotate {
-  0% {transform: rotate(0deg)}
-  100% {transform: rotate(360deg)}
+  0% {transform: rotate(-90deg)}
+  100% {transform: rotate(270deg)}
 }
 
 }
@@ -1290,7 +1321,6 @@
       margin-top: -20px;
     }
 .spectrum--large .spectrum-Tabs--vertical .spectrum-Tabs-selectionIndicator {
-    top: 2px;
     left: -9px;
     width: 2px;
   }
@@ -1517,7 +1547,7 @@
 
   border-radius: 0 20px 20px 0;
   border-left-width: 0;
-  padding-left: 8px;
+  padding-left: 8.00004px;
   padding-right: 10px
 }
 .spectrum--large .spectrum-SplitButton-icon {
@@ -1764,12 +1794,13 @@
   width: 16px;
   height: 16px;
 }
-.spectrum--large .spectrum-TagList-item {
+.spectrum--large .spectrum-Tags-item {
 
   margin: 5px 5px;
-  padding: 0 13px;
+  padding: 0 12px;
   height: 30px;
 
+  border-width: 1px;
   border-radius: 4px;
 
   transition: border-color 125ms ease-in-out,
@@ -1777,14 +1808,19 @@
     box-shadow 125ms ease-in-out,
     background-color 125ms ease-in-out;
 }
-.spectrum--large .spectrum-TagList-item > .spectrum-Icon,
-  .spectrum--large .spectrum-TagList-item > .spectrum-Avatar {
+.spectrum--large .spectrum-Tags-item > .spectrum-Icon,
+  .spectrum--large .spectrum-Tags-item > .spectrum-Avatar {
     margin-right: 10px;
+    margin-left: -3px;
   }
-.spectrum--large .spectrum-TagList-item .spectrum-ClearButton {
+.spectrum--large .spectrum-Tags-item > .spectrum-Icon ~ .spectrum-Tags-item-label, .spectrum--large .spectrum-Tags-item > .spectrum-Avatar ~ .spectrum-Tags-item-label {
+      margin-right: -3px;
+    }
+.spectrum--large .spectrum-Tags-item .spectrum-ClearButton {
     margin-right: -13px;
   }
-.spectrum--large .spectrum-TagList-item-label {
+.spectrum--large .spectrum-Tags-item-label {
+  line-height: 28px;
   font-size: 15px;
 }
 .spectrum--large .spectrum-SearchWithin {

@@ -49,7 +49,7 @@ markup: |
 
 .spectrum--dark .spectrum-CycleButton.focus-ring {
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-    box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+    box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
   }
 
 .spectrum--dark .spectrum-CycleButton.focus-ring .spectrum-Icon {

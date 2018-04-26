@@ -44,7 +44,7 @@
       }
 
 .spectrum--dark .spectrum-Table-body {
-  border: 0.0625rem solid rgb(62, 62, 62);
+  border: 1px solid rgb(62, 62, 62);
   background-color: rgb(47, 47, 47);
 }
 
@@ -60,23 +60,23 @@
   }
 
 .spectrum--dark tbody.spectrum-Table-body .spectrum-Table-cell {
-    border-top: 0.0625rem solid rgb(62, 62, 62);
+    border-top: 1px solid rgb(62, 62, 62);
   }
 
 .spectrum--dark tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 0.0625rem solid rgb(62, 62, 62);
+    border-left: 1px solid rgb(62, 62, 62);
   }
 
 .spectrum--dark tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 0.0625rem solid rgb(62, 62, 62);
+    border-right: 1px solid rgb(62, 62, 62);
   }
 
 .spectrum--dark tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 0.0625rem solid rgb(62, 62, 62);
+    border-bottom: 1px solid rgb(62, 62, 62);
   }
 
 .spectrum--dark .spectrum-Table-row {
-  border-bottom: 0.0625rem solid rgb(62, 62, 62);
+  border-bottom: 1px solid rgb(62, 62, 62);
   background-color: rgb(47, 47, 47);
 }
 
@@ -111,11 +111,11 @@
 }
 
 .spectrum--dark .spectrum-Table-cell--divider {
-  border-right: 0.0625rem solid rgb(62, 62, 62);
+  border-right: 1px solid rgb(62, 62, 62);
 }
 
 .spectrum--dark .spectrum-Table--quiet .spectrum-Table-body {
-    border-width: 0.0625rem 0;
+    border-width: 1px 0;
     background-color: rgba(0, 0, 0, 0);
   }
 

@@ -1,9 +1,9 @@
 .spectrum-Well {
   display: block;
-  min-width: 15.5rem;
-  padding: 1rem;
-  margin-top: 0.25rem;
-  border-width: 0.0625rem;
+  min-width: 248px;
+  padding: 16px;
+  margin-top: 4px;
+  border-width: 1px;
   border-style: solid;
-  border-radius: 0.25rem;
+  border-radius: 4px;
 }

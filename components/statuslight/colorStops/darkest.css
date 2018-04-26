@@ -26,11 +26,11 @@
   background-color: rgb(20, 115, 230);
 }
 
-.spectrum-StatusLight--archived {
+.spectrum-StatusLight--neutral {
   color: rgb(180, 180, 180);
 }
 
-.spectrum-StatusLight--archived::before {
+.spectrum-StatusLight--neutral::before {
     background-color: rgb(73, 73, 73);
   }
 

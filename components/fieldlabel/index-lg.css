@@ -13,12 +13,12 @@ markup: |
 .spectrum-Form-itemLabel {
   display: block;
 
-  min-width: 6.25rem;
+  min-width: 100px;
 
-  margin: 0 0 0.375rem;
+  margin: 0 0 6px;
 
-  font-size: 0.75rem;
-  line-height: 0.75rem;
+  font-size: 12px;
+  line-height: 12px;
 
   vertical-align: top;
 
@@ -38,7 +38,7 @@ markup: |
 
 */.spectrum-FieldLabel--left {
   display: inline-block;
-  padding: 0.625rem 0.3125rem 0 0;
+  padding: 10px 5px 0 0;
 }/* topdoc
 ---
 name: Field Label - Right
@@ -53,7 +53,7 @@ markup: |
 */.spectrum-FieldLabel--right {
   display: inline-block;
   text-align: right;
-  padding: 0.625rem 0.5rem 0 0;
+  padding: 10px 8px 0 0;
 }/* topdoc
 ---
 name: Form
@@ -78,7 +78,7 @@ markup: |
       <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="spectrum-textinput-instance">Country</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Dropdown" style="width: 195px;">
-          <button class="spectrum-Button spectrum-Button--dropdown spectrum-Dropdown-trigger" aria-haspopup="true">
+          <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
             <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
             <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
               <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
@@ -152,8 +152,8 @@ markup: |
 */.spectrum-Form {
   display: table;
   border-collapse: separate;
-  border-spacing: 0 1.25rem;
-  margin: -1.25rem 0;
+  border-spacing: 0 20px;
+  margin: -20px 0;
 }.spectrum-Form-item {
   display: table-row;
 }.spectrum-Form-itemLabel {

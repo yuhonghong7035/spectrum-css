@@ -413,7 +413,7 @@ spectrum-slider-track-disabled(){
   border-color: rgb(118, 118, 118);
   background: rgb(30, 30, 30);
   /*background: var(--spectrum-slider-handle-background-color);*/
-  box-shadow: 0 0 0 0.25rem rgb(30, 30, 30);
+  box-shadow: 0 0 0 4px rgb(30, 30, 30);
 }
 
 .spectrum-Slider-handle:hover {
@@ -565,17 +565,17 @@ markup: |
 
 .spectrum-Slider--color .spectrum-Slider-track {
     background: linear-gradient(to right, rgb(20, 115, 230), rgb(75, 156, 245));
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05), 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
     border-color: rgb(8, 8, 8);
     background: rgba(0, 0, 0, 0);
   }
 
 .spectrum-Slider--color .spectrum-Slider-handle.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
     }
 
 /* topdoc

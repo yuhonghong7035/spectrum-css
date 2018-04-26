@@ -44,7 +44,7 @@
       }
 
 .spectrum-Table-body {
-  border: 0.0625rem solid rgb(234, 234, 234);
+  border: 1px solid rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
 
@@ -60,23 +60,23 @@ tbody.spectrum-Table-body .spectrum-Table-row {
   }
 
 tbody.spectrum-Table-body .spectrum-Table-cell {
-    border-top: 0.0625rem solid rgb(234, 234, 234);
+    border-top: 1px solid rgb(234, 234, 234);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 0.0625rem solid rgb(234, 234, 234);
+    border-left: 1px solid rgb(234, 234, 234);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 0.0625rem solid rgb(234, 234, 234);
+    border-right: 1px solid rgb(234, 234, 234);
   }
 
 tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 0.0625rem solid rgb(234, 234, 234);
+    border-bottom: 1px solid rgb(234, 234, 234);
   }
 
 .spectrum-Table-row {
-  border-bottom: 0.0625rem solid rgb(234, 234, 234);
+  border-bottom: 1px solid rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
 
@@ -111,11 +111,11 @@ tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
 }
 
 .spectrum-Table-cell--divider {
-  border-right: 0.0625rem solid rgb(234, 234, 234);
+  border-right: 1px solid rgb(234, 234, 234);
 }
 
 .spectrum-Table--quiet .spectrum-Table-body {
-    border-width: 0.0625rem 0;
+    border-width: 1px 0;
     background-color: rgba(0, 0, 0, 0);
   }
 

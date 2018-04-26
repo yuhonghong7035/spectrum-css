@@ -31,10 +31,10 @@
       background-color: rgba(255, 255, 255, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
     }
 
 .spectrum-TreeView-link.is-drop-target::before {
       background-color: rgba(55, 142, 240, .1);
-      box-shadow: 0px 0px 0px 0.125rem rgb(38, 128, 235) inset;
+      box-shadow: 0px 0px 0px 2px rgb(38, 128, 235) inset;
     }

@@ -259,7 +259,7 @@ markup: |
     /* Since the specificity of .focus-ring is less than :hover, we need important */
     border-color: rgb(38, 128, 235) !important;
 
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235) !important;
+    box-shadow: 0 0 0 1px rgb(38, 128, 235) !important;
   }
 
 .spectrum--dark .spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {

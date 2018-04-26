@@ -16,7 +16,7 @@
 
 .spectrum--dark .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
       border-color: rgb(38, 128, 235);
-      box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
 
     }
 

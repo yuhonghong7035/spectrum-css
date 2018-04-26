@@ -4,17 +4,17 @@
 }.spectrum-Textfield {
   /* box */
   box-sizing: border-box;
-  border: 0.0625rem solid;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-radius: 4px;
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: 0.1875rem 0.75rem 0.3125rem;
+  padding: 3px 12px 5px;
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  min-width: 7rem;
-  height: 2.5rem;
-  width: 12rem;
+  min-width: 112px;
+  height: 40px;
+  width: 192px;
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -26,8 +26,8 @@
 
   /* Change the input font styles in all browsers */
   font-family: inherit;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
   text-overflow: ellipsis;
 
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
@@ -73,12 +73,12 @@
   }/* removes the native spin buttons */.spectrum-Textfield.is-invalid,
   .spectrum-Textfield:invalid {
     background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-    background-position: calc(100% - 0.4375rem) 50%;
-    padding-right: 1.875rem;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) 50%;
+    padding-right: 30px;
   }.spectrum-Textfield--multiline {
   height: auto;
-  padding: 0.25rem 0.5rem;
+  padding: 4px 8px;
   text-indent: 0;
 
   /* Remove the default vertical scrollbar for textarea in IE. */
@@ -86,15 +86,15 @@
 }.spectrum-Textfield--multiline.is-invalid,
   .spectrum-Textfield--multiline:invalid {
     background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-    background-position: calc(100% - 0.4375rem) calc(100% - 0.4375rem);
-    padding-right: 1.875rem;
+    background-size: 16px 16px;
+    background-position: calc(100% - 7px) calc(100% - 7px);
+    padding-right: 30px;
   }.spectrum-Textfield--quiet {
   border-radius: 0;
   text-indent: 0;
 
   border: none;
-  border-bottom: 0.0625rem solid;
+  border-bottom: 1px solid;
 
   /* removes the side padding to align the text properly */
   padding-left: 0;

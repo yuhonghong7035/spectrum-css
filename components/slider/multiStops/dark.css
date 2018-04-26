@@ -383,7 +383,7 @@ markup: |
   border-color: rgb(118, 118, 118);
   background: rgb(50, 50, 50);
   /*background: var(--spectrum-slider-handle-background-color);*/
-  box-shadow: 0 0 0 0.25rem rgb(50, 50, 50);
+  box-shadow: 0 0 0 4px rgb(50, 50, 50);
 }
 
 .spectrum--dark .spectrum-Slider-handle:hover {
@@ -565,17 +565,17 @@ markup: |
 
 .spectrum--dark .spectrum-Slider--color .spectrum-Slider-track {
     background: linear-gradient(to right, rgb(38, 128, 235), rgb(90, 169, 250));
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 
 .spectrum--dark .spectrum-Slider--color .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05), 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
     border-color: rgb(37, 37, 37);
     background: rgba(0, 0, 0, 0);
   }
 
 .spectrum--dark .spectrum-Slider--color .spectrum-Slider-handle.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
     }
 
 /* topdoc

@@ -158,22 +158,22 @@ markup: |
   border-spacing: 0;
 }.spectrum-Table-sortedIcon {
   display: none;
-  margin-left: 0.25rem;
+  margin-left: 4px;
 
-  width: 0.625rem;
-  height: 0.75rem;
+  width: 10px;
+  height: 12px;
 
   vertical-align: bottom;
 
   transition: transform 125ms ease-in-out;
 }.spectrum-Table-headCell {
   text-align: left;
-  font-size: 0.8125rem;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 0.75rem;
+  line-height: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 0.25rem 1rem;
+  padding: 4px 16px;
   transition: color 125ms ease-in-out;
   cursor: default;
   outline: 0;
@@ -190,24 +190,24 @@ markup: |
 }.spectrum-Table-cell--alignRight {
   text-align: right;
 }.spectrum-Table-body {
-  border-radius: 0.25rem;
+  border-radius: 4px;
   overflow: auto;
 }/* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
    by putting it on the individual cells instead. */.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body {
     border: none;
     border-radius: 0;
   }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
-      border-top-left-radius: 0.25rem;
+      border-top-left-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
-      border-top-right-radius: 0.25rem;
+      border-top-right-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
-      border-bottom-left-radius: 0.25rem;
+      border-bottom-left-radius: 4px;
     }.spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
-      border-bottom-right-radius: 0.25rem;
+      border-bottom-right-radius: 4px;
     }.spectrum-Table-cell {
-  font-size: 1.0625rem;
-  line-height: 1.875rem;
-  padding: 0.75rem 1rem;
+  font-size: 17px;
+  line-height: 30px;
+  padding: 12px 16px;
 }.spectrum-Table-row {
   cursor: pointer;
   transition: background-color 125ms ease-in-out;

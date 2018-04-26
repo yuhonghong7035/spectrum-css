@@ -26,11 +26,11 @@
 /* Only add the 2px ring for keyboard focus */
 
 .spectrum--dark .spectrum-InputGroup-input.focus-ring ~ .spectrum-FieldButton {
-    box-shadow: 0 0 0 0.0625rem rgb(38, 128, 235);
+    box-shadow: 0 0 0 1px rgb(38, 128, 235);
   }
 
 .spectrum--dark .spectrum-InputGroup-input.focus-ring.is-invalid ~ .spectrum-FieldButton, .spectrum--dark .spectrum-InputGroup-input.focus-ring:invalid ~ .spectrum-FieldButton {
-      box-shadow: 0 0 0 0.0625rem rgb(227, 72, 80);
+      box-shadow: 0 0 0 1px rgb(227, 72, 80);
     }
 
 .spectrum--dark .spectrum-InputGroup--quiet .spectrum-FieldButton,
@@ -60,11 +60,11 @@
 /* Always add the 2px ring for keyboard focus for quiet inputgroups */
 
 .spectrum--dark .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-FieldButton {
-        box-shadow: 0 0.0625rem 0 rgb(38, 128, 235);
+        box-shadow: 0 1px 0 rgb(38, 128, 235);
         border-color: rgb(38, 128, 235);
       }
 
 .spectrum--dark .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-FieldButton, .spectrum--dark .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-FieldButton {
-          box-shadow: 0 0.0625rem 0 rgb(227, 72, 80);
+          box-shadow: 0 1px 0 rgb(227, 72, 80);
           border-color: rgb(227, 72, 80);
         }

@@ -94,7 +94,7 @@ description: |
     color: rgba(255, 255, 255, 0.5);
   }
 .spectrum--lightest .spectrum-Button.focus-ring {
-    box-shadow: 0 0 0 0.1875rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 3px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Button:active {
     /* Override focus -- clicking with spacebar should not show outline */
@@ -310,7 +310,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 .spectrum--lightest .spectrum-Button--overBackground:active {
     background-color: rgb(255, 255, 255);
@@ -355,7 +355,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 .spectrum--lightest .spectrum-Button--quiet--overBackground:active {
     background-color: rgba(255, 255, 255, 0.15);
@@ -465,20 +465,20 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-ActionButton"><span class="spectrum-Button-label">Button</span></button>
-  <button class="spectrum-ActionButton" disabled><span class="spectrum-Button-label">Button</span></button>
+  <button class="spectrum-ActionButton"><span class="spectrum-ActionButton-label">Button</span></button>
+  <button class="spectrum-ActionButton" disabled><span class="spectrum-ActionButton-label">Button</span></button>
 
   <button class="spectrum-ActionButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
   <button class="spectrum-ActionButton" disabled>
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
 
   <button class="spectrum-ActionButton">
@@ -493,32 +493,37 @@ markup: |
   </button>
 
 */
-.spectrum--lightest .spectrum-ActionButton {
+.spectrum--lightest .spectrum-ActionButton,
+.spectrum--lightest .spectrum-Tool {
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
   color: rgb(80, 80, 80);
 }
-.spectrum--lightest .spectrum-ActionButton:hover {
+.spectrum--lightest .spectrum-ActionButton:hover,
+.spectrum--lightest .spectrum-Tool:hover {
     background-color: rgb(255, 255, 255);
     border-color: rgb(211, 211, 211);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-ActionButton.focus-ring {
+.spectrum--lightest .spectrum-ActionButton.focus-ring,
+.spectrum--lightest .spectrum-Tool.focus-ring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 .spectrum--lightest .spectrum-ActionButton:active,
-  .spectrum--lightest .spectrum-ActionButton.is-selected {
+.spectrum--lightest .spectrum-ActionButton.is-selected,
+.spectrum--lightest .spectrum-Tool:active {
     background-color: rgb(244, 244, 244);
     border-color: rgb(211, 211, 211);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
 .spectrum--lightest .spectrum-ActionButton:disabled,
-  .spectrum--lightest .spectrum-ActionButton.is-disabled {
+.spectrum--lightest .spectrum-ActionButton.is-disabled,
+.spectrum--lightest .spectrum-Tool:disabled {
     background-color: rgb(244, 244, 244);
     border-color: rgb(244, 244, 244);
     color: rgb(188, 188, 188);
@@ -584,30 +589,36 @@ markup: |
   </button>
 
 */
-.spectrum--lightest .spectrum-ActionButton--quiet {
+.spectrum--lightest .spectrum-ActionButton--quiet,
+.spectrum--lightest .spectrum-Tool {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(80, 80, 80);
 }
 .spectrum--lightest .spectrum-ActionButton--quiet.is-selected {
     color: rgb(80, 80, 80);
   }
-.spectrum--lightest .spectrum-ActionButton--quiet:hover {
+.spectrum--lightest .spectrum-ActionButton--quiet:hover,
+.spectrum--lightest .spectrum-Tool:hover {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-ActionButton--quiet.focus-ring {
+.spectrum--lightest .spectrum-ActionButton--quiet.focus-ring,
+.spectrum--lightest .spectrum-Tool.focus-ring {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0.125rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 2px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-ActionButton--quiet:active {
+.spectrum--lightest .spectrum-ActionButton--quiet:active,
+.spectrum--lightest .spectrum-Tool:active {
     background-color: rgb(234, 234, 234);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
 .spectrum--lightest .spectrum-ActionButton--quiet:disabled,
-  .spectrum--lightest .spectrum-ActionButton--quiet[disabled] {
+.spectrum--lightest .spectrum-ActionButton--quiet[disabled],
+.spectrum--lightest .spectrum-Tool:disabled,
+.spectrum--lightest .spectrum-Tool[disabled] {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(188, 188, 188);
   }
@@ -657,96 +668,6 @@ markup: |
   border-color: rgba(0, 0, 0, 0);
   color: rgb(227, 72, 80);
 }
-/* topdoc
----
-name: Button - Action (toolbar)
-description: Selection action buttons that form a toolbar
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-  '.is-selected': Selected state
-markup: |
-  <button class="spectrum-ActionButton">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-
-*/
 .spectrum--lightest .spectrum-Button--quiet--warning:hover {
     background-color: rgb(244, 244, 244);
     border-color: rgb(244, 244, 244);
@@ -864,29 +785,6 @@ markup: |
   </button>
 
 */
-.spectrum--lightest .spectrum-Button--quiet--dropdown {
-  color: rgb(80, 80, 80);
-  border-color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-}
-.spectrum--lightest .spectrum-Button--quiet--dropdown:hover {
-    color: rgb(50, 50, 50);
-  }
-.spectrum--lightest .spectrum-Button--quiet--dropdown.focus-ring,
-  .spectrum--lightest .spectrum-Button--quiet--dropdown.is-focused {
-    box-shadow: 0 0.125rem 0 0 rgb(55, 142, 240);
-  }
-.spectrum--lightest .spectrum-Button--quiet--dropdown.is-invalid.focus-ring,
-    .spectrum--lightest .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(236, 91, 98);
-    }
-.spectrum--lightest .spectrum-Button--quiet--dropdown:disabled,
-  .spectrum--lightest .spectrum-Button--quiet--dropdown.is-disabled {
-    color: rgb(188, 188, 188);
-  }
-.spectrum--lightest .spectrum-Button--quiet--dropdown:disabled.focus-ring, .spectrum--lightest .spectrum-Button--quiet--dropdown.is-disabled.focus-ring {
-      box-shadow: none;
-    }
 .spectrum--lightest .spectrum-FieldButton {
   color: rgb(80, 80, 80);
   background-color: rgb(255, 255, 255);
@@ -900,7 +798,7 @@ markup: |
 .spectrum--lightest .spectrum-FieldButton.focus-ring,
   .spectrum--lightest .spectrum-FieldButton.is-focused {
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-FieldButton:active,
   .spectrum--lightest .spectrum-FieldButton.is-selected {
@@ -919,7 +817,7 @@ markup: |
 .spectrum--lightest .spectrum-FieldButton.is-invalid.focus-ring,
     .spectrum--lightest .spectrum-FieldButton.is-invalid.is-focused {
       border-color: rgb(236, 91, 98);
-      box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
     }
 .spectrum--lightest .spectrum-FieldButton:disabled,
   .spectrum--lightest .spectrum-FieldButton.is-disabled {
@@ -941,7 +839,7 @@ markup: |
 .spectrum--lightest .spectrum-FieldButton--quiet.focus-ring,
   .spectrum--lightest .spectrum-FieldButton--quiet.is-focused {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0.125rem 0 0 rgb(55, 142, 240);
+    box-shadow: 0 2px 0 0 rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-FieldButton--quiet:active,
   .spectrum--lightest .spectrum-FieldButton--quiet.is-selected {
@@ -956,7 +854,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-FieldButton--quiet.is-invalid.focus-ring,
     .spectrum--lightest .spectrum-FieldButton--quiet.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(236, 91, 98);
+      box-shadow: 0 2px 0 0 rgb(236, 91, 98);
     }
 .spectrum--lightest .spectrum-FieldButton--quiet:disabled,
   .spectrum--lightest .spectrum-FieldButton--quiet.is-disabled {
@@ -986,11 +884,42 @@ markup: |
 
     color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-ClearButton:disabled {
+.spectrum--lightest .spectrum-ClearButton:disabled,
+  .spectrum--lightest .spectrum-ClearButton.is-disabled {
     background-color: rgba(0, 0, 0, 0);
 
     color: rgb(188, 188, 188);
   }
+.spectrum--lightest .spectrum-Tool.is-selected {
+    color: rgb(38, 128, 235);
+  }
+.spectrum--lightest .spectrum-Tool.is-selected .spectrum-Tool-hold {
+      color: rgb(118, 118, 118);
+    }
+.spectrum--lightest .spectrum-Tool.is-selected:hover {
+      color: rgb(20, 115, 230);
+    }
+.spectrum--lightest .spectrum-Tool.is-selected:hover .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+.spectrum--lightest .spectrum-Tool.is-selected:active {
+      color: rgb(13, 102, 208);
+    }
+.spectrum--lightest .spectrum-Tool.is-selected:active .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+.spectrum--lightest .spectrum-Tool.is-selected.focus-ring {
+      color: rgb(20, 115, 230);
+    }
+.spectrum--lightest .spectrum-Tool.is-selected.focus-ring .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+.spectrum--lightest .spectrum-Tool.is-selected:disabled,
+    .spectrum--lightest .spectrum-Tool.is-selected.is-disabled {
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      color: rgb(188, 188, 188);
+    }
 .spectrum--lightest .spectrum-Breadcrumb {
   color: rgb(118, 118, 118);
 }
@@ -1007,7 +936,7 @@ markup: |
 .spectrum--lightest .spectrum-Breadcrumb .spectrum-Breadcrumb-link.focus-ring {
       color: rgb(20, 115, 230);
       outline: 0;
-      border-bottom: 0.125rem solid rgb(20, 115, 230);
+      border-bottom: 2px solid rgb(20, 115, 230);
     }
 .spectrum--lightest .spectrum-Breadcrumb .spectrum-Breadcrumb-link:active {
       color: rgb(50, 50, 50);
@@ -1066,9 +995,6 @@ name: Label - Special
 description: A special label
 status: Beta
 markup: |
-  <span class="spectrum-Label spectrum-Label--and">And</span>
-  <span class="spectrum-Label spectrum-Label--or">Or</span>
-  <br>
   <span class="spectrum-Label spectrum-Label--active">Active</span>
   <span class="spectrum-Label spectrum-Label--inactive">Inactive</span>
 
@@ -1445,7 +1371,7 @@ markup: |
     /* Since the specificity of .focus-ring is less than :hover, we need important */
     border-color: rgb(55, 142, 240) !important;
 
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240) !important;
+    box-shadow: 0 0 0 1px rgb(55, 142, 240) !important;
   }
 .spectrum--lightest .spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
     color: rgb(20, 115, 230) !important;
@@ -1455,7 +1381,7 @@ markup: |
   }
 .spectrum--lightest .spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
 
     }
 .spectrum--lightest .spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
@@ -1679,7 +1605,7 @@ markup: |
   }
 .spectrum--lightest .spectrum-Textfield.focus-ring:not(:active) {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Textfield[disabled] {
     background-color: rgb(244, 244, 244);
@@ -1703,7 +1629,7 @@ markup: |
 /* might break things due to pre-defined focus-ring */
 .spectrum--lightest .spectrum-Textfield.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield:invalid.focus-ring:not(:active) {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
       }
 /* topdoc
 ---
@@ -1734,11 +1660,11 @@ markup: |
   }
 .spectrum--lightest .spectrum-Textfield--quiet:focus {
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0.0625rem 0 rgb(55, 142, 240);
+    box-shadow: 0 1px 0 rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Textfield--quiet.focus-ring:not(:active) {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0.0625rem 0 rgb(55, 142, 240);
+      box-shadow: 0 1px 0 rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Textfield--quiet:disabled {
     background-color: rgba(0, 0, 0, 0);
@@ -1749,12 +1675,12 @@ markup: |
     border-color: rgb(236, 91, 98);
   }
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--lightest .spectrum-Textfield--quiet:invalid:focus {
-      box-shadow: 0 0.0625rem 0 rgb(236, 91, 98);
+      box-shadow: 0 1px 0 rgb(236, 91, 98);
     }
 /* might break things due to pre-defined focus-ring */
 .spectrum--lightest .spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0.0625rem 0 rgb(236, 91, 98);
+        box-shadow: 0 1px 0 rgb(236, 91, 98);
       }
 .spectrum--lightest .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus),
       .spectrum--lightest .spectrum-InputGroup:hover .spectrum-InputGroup-input:not(:disabled):not(.is-invalid):not(:focus) ~ .spectrum-FieldButton {
@@ -1768,10 +1694,10 @@ markup: |
     }
 /* Only add the 2px ring for keyboard focus */
 .spectrum--lightest .spectrum-InputGroup-input.focus-ring ~ .spectrum-FieldButton {
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-InputGroup-input.focus-ring.is-invalid ~ .spectrum-FieldButton, .spectrum--lightest .spectrum-InputGroup-input.focus-ring:invalid ~ .spectrum-FieldButton {
-      box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
     }
 .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-FieldButton,
     .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-FieldButton:hover,
@@ -1796,11 +1722,11 @@ markup: |
       }
 /* Always add the 2px ring for keyboard focus for quiet inputgroups */
 .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus ~ .spectrum-FieldButton {
-        box-shadow: 0 0.0625rem 0 rgb(55, 142, 240);
+        box-shadow: 0 1px 0 rgb(55, 142, 240);
         border-color: rgb(55, 142, 240);
       }
 .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus.is-invalid ~ .spectrum-FieldButton, .spectrum--lightest .spectrum-InputGroup--quiet .spectrum-InputGroup-input:focus:invalid ~ .spectrum-FieldButton {
-          box-shadow: 0 0.0625rem 0 rgb(236, 91, 98);
+          box-shadow: 0 1px 0 rgb(236, 91, 98);
           border-color: rgb(236, 91, 98);
         }
 /* topdoc
@@ -2299,7 +2225,7 @@ markup: |
   border-color: rgb(118, 118, 118);
   background: rgb(255, 255, 255);
   /*background: var(--spectrum-slider-handle-background-color);*/
-  box-shadow: 0 0 0 0.25rem rgb(255, 255, 255);
+  box-shadow: 0 0 0 4px rgb(255, 255, 255);
 }
 /* topdoc
 ---
@@ -2456,15 +2382,15 @@ markup: |
 */
 .spectrum--lightest .spectrum-Slider--color .spectrum-Slider-track {
     background: linear-gradient(to right, rgb(55, 142, 240), rgb(13, 102, 208));
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
   }
 .spectrum--lightest .spectrum-Slider--color .spectrum-Slider-handle {
-    box-shadow: inset 0 0 0 0.0625rem rgba(0, 0, 0, 0.05), 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.05);
     border-color: rgb(255, 255, 255);
     background: rgba(0, 0, 0, 0);
   }
 .spectrum--lightest .spectrum-Slider--color .spectrum-Slider-handle.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
     }
 /* topdoc
 ---
@@ -2961,7 +2887,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-switch::after {
         border-color: rgb(55, 142, 240);
-        box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+        box-shadow: 0 0 0 1px rgb(55, 142, 240);
       }
 .spectrum--lightest .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
         background-color: rgb(234, 234, 234);
@@ -3234,7 +3160,7 @@ markup: |
 .spectrum--lightest .spectrum-Popover {
   background-color: rgb(255, 255, 255);
   border-color: rgb(211, 211, 211);
-  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
 }
 .spectrum--lightest .spectrum-Popover .spectrum-Dialog-header,
   .spectrum--lightest .spectrum-Popover .spectrum-Dialog-footer,
@@ -3244,7 +3170,7 @@ markup: |
 .spectrum--lightest .spectrum-Popover .spectrum-Popover-tip::after {
     background-color: rgb(255, 255, 255);
     border-color: rgb(211, 211, 211);
-    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   }
 .spectrum--lightest .spectrum-Accordion-item {
   border-color: rgb(234, 234, 234);
@@ -3392,7 +3318,7 @@ markup: |
 
 */
 .spectrum--lightest .spectrum-Stepper.is-focused {
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-stepDown {
@@ -3400,7 +3326,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-Stepper.is-focused .spectrum-Stepper-input {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper.is-invalid .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper.is-invalid .spectrum-Stepper-stepDown,
@@ -3415,14 +3341,14 @@ markup: |
     }
 .spectrum--lightest .spectrum-Stepper.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
       }
 .spectrum--lightest .spectrum-Stepper.is-invalid.is-focused {
-      box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
     }
 .spectrum--lightest .spectrum-Stepper.is-invalid.is-focused .spectrum-Stepper-input {
         border-left-color: rgb(236, 91, 98);
-        box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
       }
 .spectrum--lightest .spectrum-Stepper-stepUp,
 .spectrum--lightest .spectrum-Stepper-stepDown {
@@ -3514,7 +3440,7 @@ markup: |
       border-color: rgb(234, 234, 234);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused {
-    box-shadow: 0 0.0625rem 0 0 rgb(55, 142, 240);
+    box-shadow: 0 1px 0 0 rgb(55, 142, 240);
   }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepUp,
     .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-stepDown {
@@ -3522,7 +3448,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-focused .spectrum-Stepper-input {
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0.0625rem 0 0 rgb(55, 142, 240);
+      box-shadow: 0 1px 0 0 rgb(55, 142, 240);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown,
     .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input {
@@ -3530,7 +3456,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepDown:focus, .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-input:focus {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0.0625rem 0 0 rgb(236, 91, 98);
+        box-shadow: 0 1px 0 0 rgb(236, 91, 98);
       }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid .spectrum-Stepper-stepUp {
       border-color: rgb(234, 234, 234);
@@ -3539,7 +3465,7 @@ markup: |
         border-color: rgb(234, 234, 234);
       }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid.is-focused {
-      box-shadow: 0 0.0625rem 0 0 rgb(236, 91, 98);
+      box-shadow: 0 1px 0 0 rgb(236, 91, 98);
     }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepUp,
       .spectrum--lightest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-stepDown {
@@ -3547,7 +3473,7 @@ markup: |
       }
 .spectrum--lightest .spectrum-Stepper--quiet.is-invalid.is-focused .spectrum-Stepper-input {
         border-color: rgb(236, 91, 98);
-        box-shadow: 0 0.0625rem 0 0 rgb(236, 91, 98);
+        box-shadow: 0 1px 0 0 rgb(236, 91, 98);
       }
 .spectrum--lightest .spectrum-Calendar-prevMonth {
   color: rgb(118, 118, 118);
@@ -3659,7 +3585,7 @@ markup: |
         color: rgb(80, 80, 80);
       }
 .spectrum--lightest .spectrum-Table-body {
-  border: 0.0625rem solid rgb(234, 234, 234);
+  border: 1px solid rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
 /* The tbody tag doesn't allow setting a border-radius, so these hacks are to make that work
@@ -3671,19 +3597,19 @@ markup: |
     border-top: none;
   }
 .spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-cell {
-    border-top: 0.0625rem solid rgb(234, 234, 234);
+    border-top: 1px solid rgb(234, 234, 234);
   }
 .spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:first-child {
-    border-left: 0.0625rem solid rgb(234, 234, 234);
+    border-left: 1px solid rgb(234, 234, 234);
   }
 .spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row .spectrum-Table-cell:last-child {
-    border-right: 0.0625rem solid rgb(234, 234, 234);
+    border-right: 1px solid rgb(234, 234, 234);
   }
 .spectrum--lightest tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell {
-    border-bottom: 0.0625rem solid rgb(234, 234, 234);
+    border-bottom: 1px solid rgb(234, 234, 234);
   }
 .spectrum--lightest .spectrum-Table-row {
-  border-bottom: 0.0625rem solid rgb(234, 234, 234);
+  border-bottom: 1px solid rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
 .spectrum--lightest .spectrum-Table-row:hover {
@@ -3710,10 +3636,10 @@ markup: |
   color: rgb(80, 80, 80);
 }
 .spectrum--lightest .spectrum-Table-cell--divider {
-  border-right: 0.0625rem solid rgb(234, 234, 234);
+  border-right: 1px solid rgb(234, 234, 234);
 }
 .spectrum--lightest .spectrum-Table--quiet .spectrum-Table-body {
-    border-width: 0.0625rem 0;
+    border-width: 1px 0;
     background-color: rgba(0, 0, 0, 0);
   }
 .spectrum--lightest .spectrum-Table--quiet .spectrum-Table-row {
@@ -3979,65 +3905,100 @@ markup: |
       }
 .spectrum--lightest .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon > .spectrum-Icon, .spectrum--lightest .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon:not(.is-active) > .spectrum-Icon, .spectrum--lightest .spectrum-Rating:not(:hover) .spectrum-Rating-input.focus-ring ~ .spectrum-Rating-icon.is-active > .spectrum-Icon {
           stroke: currentColor;
-          stroke-width: 0.0625rem;
+          stroke-width: 1px;
         }
-.spectrum--lightest .spectrum-TagList-item {
+.spectrum--lightest .spectrum-Tags-item {
   color: rgb(118, 118, 118);
   background-color: rgb(255, 255, 255);
-  border: 0.0625rem solid rgb(149, 149, 149);
+  border-color: rgb(149, 149, 149);
 }
-.spectrum--lightest .spectrum-TagList-item .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item .spectrum-ClearButton {
     color: rgb(149, 149, 149);
   }
-.spectrum--lightest .spectrum-TagList-item:hover {
+.spectrum--lightest .spectrum-Tags-item:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(50, 50, 50);
     border-color: rgb(50, 50, 50);
   }
-.spectrum--lightest .spectrum-TagList-item:hover .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item:hover .spectrum-ClearButton {
       color: rgb(50, 50, 50);
     }
-.spectrum--lightest .spectrum-TagList-item.focus-ring {
+.spectrum--lightest .spectrum-Tags-item.focus-ring {
     background-color: rgb(255, 255, 255);
     color: rgb(50, 50, 50);
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
-.spectrum--lightest .spectrum-TagList-item.focus-ring .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item.focus-ring .spectrum-ClearButton {
       color: rgb(50, 50, 50);
     }
-.spectrum--lightest .spectrum-TagList-item.is-invalid {
+.spectrum--lightest .spectrum-Tags-item.is-invalid {
     color: rgb(118, 118, 118);
     border-color: rgb(227, 72, 80);
   }
-.spectrum--lightest .spectrum-TagList-item.is-invalid .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item.is-invalid .spectrum-ClearButton {
       color: rgb(227, 72, 80);
     }
-.spectrum--lightest .spectrum-TagList-item.is-invalid:hover {
+.spectrum--lightest .spectrum-Tags-item.is-invalid:hover {
       color: rgb(50, 50, 50);
       border-color: rgb(215, 55, 63);
     }
-.spectrum--lightest .spectrum-TagList-item.is-invalid:hover .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item.is-invalid:hover .spectrum-ClearButton {
         color: rgb(215, 55, 63);
       }
-.spectrum--lightest .spectrum-TagList-item.is-invalid.focus-ring {
+.spectrum--lightest .spectrum-Tags-item.is-invalid.focus-ring {
       color: rgb(50, 50, 50);
       border-color: rgb(55, 142, 240);
-      box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
     }
-.spectrum--lightest .spectrum-TagList-item.is-invalid.focus-ring .spectrum-ClearButton {
+.spectrum--lightest .spectrum-Tags-item.is-invalid.focus-ring .spectrum-ClearButton {
         color: rgb(215, 55, 63);
       }
-.spectrum--lightest .spectrum-TagList-item.is-disabled {
+.spectrum--lightest .spectrum-Tags-item.is-disabled {
     color: rgb(188, 188, 188);
     background-color: rgb(244, 244, 244);
     border-color: rgb(244, 244, 244);
   }
-.spectrum--lightest .spectrum-TagList-item.is-disabled .spectrum-Avatar {
+.spectrum--lightest .spectrum-Tags-item.is-disabled .spectrum-Avatar {
       /* Duplicated so state is on the tag */
       opacity: 0.3;
     }
-.spectrum--lightest .spectrum-TagList-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
+.spectrum--lightest .spectrum-Tags-item--deletable:hover {
+    color: rgb(118, 118, 118);
+  }
+.spectrum--lightest .spectrum-Tags-item--deletable:hover .spectrum-ClearButton {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-Tags-item--deletable:active {
+    color: rgb(118, 118, 118);
+  }
+.spectrum--lightest .spectrum-Tags-item--deletable:active .spectrum-ClearButton {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-Tags-item--deletable.is-invalid:hover {
+      border-color: rgb(215, 55, 63);
+      color: rgb(118, 118, 118);
+    }
+.spectrum--lightest .spectrum-Tags-item--deletable.is-invalid:hover .spectrum-ClearButton {
+        color: rgb(215, 55, 63);
+      }
+.spectrum--lightest .spectrum-Tags-item--deletable.is-invalid:active {
+      border-color: rgb(201, 37, 45);
+      color: rgb(118, 118, 118);
+    }
+.spectrum--lightest .spectrum-Tags-item--deletable.is-invalid:active .spectrum-ClearButton {
+        color: rgb(201, 37, 45);
+      }
+.spectrum--lightest .spectrum-Tags-item--deletable.focus-ring {
+    color: rgb(118, 118, 118);
+  }
+.spectrum--lightest .spectrum-Tags-item--deletable.focus-ring .spectrum-ClearButton {
+      color: rgb(50, 50, 50);
+    }
+.spectrum--lightest .spectrum-Tags-item--deletable.focus-ring.is-invalid {
+      color: rgb(118, 118, 118);
+    }
+.spectrum--lightest .spectrum-Tags-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
     color: rgb(188, 188, 188);
   }
 /* topdoc
@@ -4078,7 +4039,7 @@ markup: |
 .spectrum--lightest .spectrum-QuickActions-item.focus-ring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 .spectrum--lightest .spectrum-QuickActions-item:hover {
@@ -4150,7 +4111,7 @@ markup: |
     }
 .spectrum--lightest .spectrum-CycleButton.focus-ring {
     /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-    box-shadow: 0px 0px 0px 0.125rem rgb(55, 142, 240) inset;
+    box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
   }
 .spectrum--lightest .spectrum-CycleButton.focus-ring .spectrum-Icon {
       color: rgb(50, 50, 50);
@@ -4192,10 +4153,10 @@ markup: |
 .spectrum--lightest .spectrum-StatusLight--active::before {
   background-color: rgb(55, 142, 240);
 }
-.spectrum--lightest .spectrum-StatusLight--archived {
+.spectrum--lightest .spectrum-StatusLight--neutral {
   color: rgb(80, 80, 80);
 }
-.spectrum--lightest .spectrum-StatusLight--archived::before {
+.spectrum--lightest .spectrum-StatusLight--neutral::before {
     background-color: rgb(188, 188, 188);
   }
 .spectrum--lightest .spectrum-StatusLight--celery::before {
@@ -4279,7 +4240,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -4331,7 +4292,7 @@ markup: |
           </svg>
         </button>
         <div class="spectrum-Shell-avatar">
-          <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+          <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
         </div>
       </div>
     </header>
@@ -4370,7 +4331,7 @@ markup: |
         </svg>
       </button>
       <div class="spectrum-Shell-avatar">
-        <img class="spectrum-TagList-item-avatar" src="img/example-ava.jpg" alt="Avatar">
+        <img class="spectrum-Tags-item-avatar" src="img/example-ava.jpg" alt="Avatar">
       </div>
     </div>
   </header>
@@ -4430,9 +4391,9 @@ markup: |
       background-color: rgba(50, 50, 50, .04);
 
       /* we cannot achieve rounded corners with outline so we use box-shadow instead */
-      box-shadow: 0px 0px 0px 0.125rem rgb(55, 142, 240) inset;
+      box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
     }
 .spectrum--lightest .spectrum-TreeView-link.is-drop-target::before {
       background-color: rgba(38, 128, 235, .1);
-      box-shadow: 0px 0px 0px 0.125rem rgb(55, 142, 240) inset;
+      box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
     }

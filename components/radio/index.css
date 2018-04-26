@@ -2,13 +2,13 @@
   display: inline-block;
   position: relative;
 
-  padding: 0 0.5rem;
-  margin-left: -0.5rem;
+  padding: 0 8px;
+  margin-left: -8px;
 
   font-size: 0;
 
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 }.spectrum-Radio + .spectrum-Radio {
     margin-left: 0;
   }.spectrum-Radio-input {
@@ -40,14 +40,14 @@
 
   cursor: pointer;
 }.spectrum-Radio-input:checked + .spectrum-Radio-button {
-    border-width: 0.3125rem;
+    border-width: 5px;
 
   }.spectrum-Radio-input:disabled {
     cursor: default;
   }.spectrum-Radio-label {
-  margin-left: 0.625rem;
+  margin-left: 10px;
 
-  font-size: 0.875rem;
+  font-size: 14px;
 
   vertical-align: middle;
 
@@ -55,11 +55,11 @@
 }.spectrum-Radio-button {
   display: inline-block;
   box-sizing: border-box;
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 14px;
+  height: 14px;
 
-  border-radius: 0.4375rem;
-  border-width: 0.125rem;
+  border-radius: 7px;
+  border-width: 2px;
   border-style: solid;
 
   vertical-align: middle;

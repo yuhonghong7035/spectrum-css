@@ -2,11 +2,11 @@
   display: inline-block;
   position: relative;
   font-size: 0;
-  height: 2rem;
-  line-height: 2rem;
+  height: 32px;
+  line-height: 32px;
 
-  padding: 0 0.5rem;
-  margin-left: -0.5rem;
+  padding: 0 8px;
+  margin-left: -8px;
 }.spectrum-Checkbox-input {
   /* Change the font styles in all browsers for input. */
   font-family: inherit;
@@ -38,13 +38,13 @@
 }.spectrum-Checkbox-input:disabled {
     cursor: default;
   }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 0.4375rem;
+    border-width: 7px;
   }.spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       transform: scale(1);
       opacity: 1;
     }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
   .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
-    border-width: 0.4375rem;
+    border-width: 7px;
   }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-checkmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-checkmark {
       display: none;
     }.spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark, .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box .spectrum-Checkbox-partialCheckmark {
@@ -54,8 +54,8 @@
       opacity: 1;
     }.spectrum-Checkbox-label {
   display: inline-block;
-  margin: 0 0.625rem;
-  font-size: 0.875rem;
+  margin: 0 10px;
+  font-size: 14px;
   font-weight: 400;
   vertical-align: middle;
   transition: color 125ms ease-in-out;
@@ -63,11 +63,11 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 14px;
+  height: 14px;
 
-  border-radius: 0.125rem;
-  border-width: 0.125rem;
+  border-radius: 2px;
+  border-width: 2px;
   border-style: solid;
 
   vertical-align: middle;
@@ -78,11 +78,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 12px;
+  height: 12px;
 
-  margin-top: -0.375rem;
-  margin-left: -0.375rem;
+  margin-top: -6px;
+  margin-left: -6px;
 
   opacity: 0;
   transform: scale(0);

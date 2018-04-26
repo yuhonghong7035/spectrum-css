@@ -17,13 +17,13 @@
 
   pointer-events: auto;
 }.spectrum-Tooltip--bottom.is-open {
-  transform: translateY(0.375rem);
+  transform: translateY(6px);
 }.spectrum-Tooltip--top.is-open {
-  transform: translateY(-0.375rem);
+  transform: translateY(-6px);
 }.spectrum-Tooltip--right.is-open {
-  transform: translateX(0.375rem);
+  transform: translateX(6px);
 }.spectrum-Tooltip--left.is-open {
-  transform: translateX(-0.375rem);
+  transform: translateX(-6px);
 }.spectrum-Tooltip {
 
   position: relative;
@@ -34,13 +34,13 @@
   box-sizing: border-box;
 
   width: auto;
-  max-width: 16rem;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
+  max-width: 256px;
+  padding: 2px 8px;
+  border-radius: 4px;
 
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 0.75rem;
+  line-height: 12px;
 }.spectrum-Tooltip {
     pointer-events: none;
   }.spectrum-Tooltip.is-open {
@@ -48,43 +48,43 @@
 }.spectrum-Tooltip-tip {
   position: absolute;
   overflow: hidden;
-  width: 0.6875rem;
-  height: 0.6875rem;
+  width: 11px;
+  height: 11px;
 }.spectrum-Tooltip-tip::after {
     content: '';
-    width: 0.5rem;
-    height: 0.5rem;
-    top: -0.125rem;
-    left: 0.0625rem;
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    left: 1px;
     position: absolute;
     transform: rotate(45deg);
   }.spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    top: calc(50% - 0.34375rem);
+    top: calc(50% - 5.5px);
   }.spectrum-Tooltip--right {
-  margin-left: 0.1875rem;
+  margin-left: 3px;
 }.spectrum-Tooltip--right .spectrum-Tooltip-tip {
-    left: -0.5rem;
+    left: -8px;
     transform: rotate(90deg);
 
     /* This is a gross hack */
-    top: calc(50% - 0.3125rem);
+    top: calc(50% - 5px);
   }.spectrum-Tooltip--left {
-  margin-right: 0.1875rem;
+  margin-right: 3px;
 }.spectrum-Tooltip--left .spectrum-Tooltip-tip {
-    right: -0.5rem;
+    right: -8px;
     transform: rotate(-90deg);
   }.spectrum-Tooltip--bottom {
-  margin-top: 0.1875rem;
+  margin-top: 3px;
 }.spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
-    top: -0.5rem;
+    top: -8px;
     transform: rotate(180deg);
   }.spectrum-Tooltip--top {
-  margin-bottom: 0.1875rem;
+  margin-bottom: 3px;
 }.spectrum-Tooltip--top .spectrum-Tooltip-tip {
-    bottom: -0.5rem;
+    bottom: -8px;
   }.spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum-Tooltip--top .spectrum-Tooltip-tip {
     left: 50%;
-    margin-left: -0.34375rem;
+    margin-left: -5.5px;
   }/* topdoc
 ---
 name: Tooltip
@@ -133,17 +133,17 @@ markup: |
   </span>
 
 */.spectrum-Tooltip-typeIcon {
-  margin-right: 0.625rem;
+  margin-right: 10px;
 
   /* Override the size, just for these icons only */
-  font-size: 0.875rem;
+  font-size: 14px;
 
   /* Fix font icon alignment in Chrome on Windows, works for Mac too */
-  vertical-align: -0.125rem;
-  line-height: 0.875rem;
+  vertical-align: -2px;
+  line-height: 14px;
 }.spectrum-Tooltip-label {
   /* Make sure line height is correct to prevent problems in Windows */
-  line-height: 1.5625rem;
+  line-height: 25px;
 }.u-tooltip-showOnHover {
   display: inline-block;
   position: relative;
@@ -157,27 +157,27 @@ markup: |
     top:50%;
   }.u-tooltip-showOnHover .spectrum-Tooltip--right .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--left .spectrum-Tooltip-tip {
       top: 50%;
-      margin-top: -0.25rem;
+      margin-top: -4px;
     }.u-tooltip-showOnHover .spectrum-Tooltip--right {
-    transform: translate(-0.5rem, -50%);
+    transform: translate(-8px, -50%);
   }.u-tooltip-showOnHover .spectrum-Tooltip--left {
-    transform: translate(calc(-100% + 0.5rem), -50%);
+    transform: translate(calc(-100% + 8px), -50%);
   }.u-tooltip-showOnHover .spectrum-Tooltip--bottom,
   .u-tooltip-showOnHover .spectrum-Tooltip--top {
     left:50%;
   }.u-tooltip-showOnHover .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .u-tooltip-showOnHover .spectrum-Tooltip--top .spectrum-Tooltip-tip {
       left: 50%;
-      margin-left: -0.25rem;
+      margin-left: -4px;
     }.u-tooltip-showOnHover .spectrum-Tooltip--bottom {
-    transform: translate(-50%, -0.5rem);
+    transform: translate(-50%, -8px);
   }.u-tooltip-showOnHover .spectrum-Tooltip--top {
-    transform: translate(-50%, 0.5rem);
+    transform: translate(-50%, 8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip {
     opacity: 1;
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, 0.5rem);
+    transform: translate(-50%, 8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, -0.5rem);
+    transform: translate(-50%, -8px);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--left {
     transform: translate(-100%, -50%);
   }.u-tooltip-showOnHover:hover .spectrum-Tooltip.spectrum-Tooltip--right {

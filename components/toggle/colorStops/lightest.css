@@ -33,7 +33,7 @@
 
 .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-switch::after {
         border-color: rgb(55, 142, 240);
-        box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+        box-shadow: 0 0 0 1px rgb(55, 142, 240);
       }
 
 .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {

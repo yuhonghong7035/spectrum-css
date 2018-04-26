@@ -60,28 +60,28 @@ markup: |
   display: inline-block;
 }/* Spacing for buttons placed inline */.spectrum-SplitButton + .spectrum-SplitButton,
   .spectrum-SplitButton + .spectrum-Button {
-    margin-left: 0.75rem;
+    margin-left: 12px;
   }/* Spacing for buttons placed inline */.spectrum-Button + .spectrum-SplitButton {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }.spectrum-SplitButton-action {
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 16px 0 0 16px;
 }/* CTA is special and doesn't have a border between the buttons */.spectrum-SplitButton-action.spectrum-Button--cta {
     border-right: 0;
-    margin-right: 0.125rem;
+    margin-right: 2px;
   }.spectrum-SplitButton-trigger {
   margin-left: 0 !important;
 
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 16px 16px 0;
   border-left-width: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.625rem;
+  padding-left: 8.00004px;
+  padding-right: 10px;
 }.spectrum-SplitButton-trigger.focus-ring {
     box-shadow: none;
   }.spectrum-SplitButton-icon {
   display: block;
-  width: 0.625rem;
-  height: 0.375rem;
-  margin-top: 0.0625rem;
+  width: 10px;
+  height: 6px;
+  margin-top: 1px;
 }.spectrum-SplitButton-action,
 .spectrum-SplitButton-trigger {
   position: relative;

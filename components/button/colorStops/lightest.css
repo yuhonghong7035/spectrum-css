@@ -11,7 +11,7 @@
 }
 
 .spectrum-Button.focus-ring {
-    box-shadow: 0 0 0 0.1875rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 3px rgb(55, 142, 240);
   }
 
 .spectrum-Button:active {
@@ -256,7 +256,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 
 .spectrum-Button--overBackground:active {
@@ -307,7 +307,7 @@ markup: |
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
     color: inherit;
-    box-shadow: 0 0 0 0.0625rem rgb(255, 255, 255);
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
   }
 
 .spectrum-Button--quiet--overBackground:active {
@@ -432,20 +432,20 @@ modifiers:
   ':hover': Hover state
   ':focus': Focused
 markup: |
-  <button class="spectrum-ActionButton"><span class="spectrum-Button-label">Button</span></button>
-  <button class="spectrum-ActionButton" disabled><span class="spectrum-Button-label">Button</span></button>
+  <button class="spectrum-ActionButton"><span class="spectrum-ActionButton-label">Button</span></button>
+  <button class="spectrum-ActionButton" disabled><span class="spectrum-ActionButton-label">Button</span></button>
 
   <button class="spectrum-ActionButton">
     <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
   <button class="spectrum-ActionButton" disabled>
-        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
       <use xlink:href="#spectrum-icon-18-Delete" />
     </svg>
-    <span class="spectrum-Button-label">Button</span>
+    <span class="spectrum-ActionButton-label">Button</span>
   </button>
 
   <button class="spectrum-ActionButton">
@@ -461,28 +461,32 @@ markup: |
 
 */
 
-.spectrum-ActionButton {
+.spectrum-ActionButton,
+.spectrum-Tool {
   background-color: rgb(255, 255, 255);
   border-color: rgb(234, 234, 234);
   color: rgb(80, 80, 80);
 }
 
-.spectrum-ActionButton:hover {
+.spectrum-ActionButton:hover,
+.spectrum-Tool:hover {
     background-color: rgb(255, 255, 255);
     border-color: rgb(211, 211, 211);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
 
-.spectrum-ActionButton.focus-ring {
+.spectrum-ActionButton.focus-ring,
+.spectrum-Tool.focus-ring {
     background-color: rgb(255, 255, 255);
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 
 .spectrum-ActionButton:active,
-  .spectrum-ActionButton.is-selected {
+.spectrum-ActionButton.is-selected,
+.spectrum-Tool:active {
     background-color: rgb(244, 244, 244);
     border-color: rgb(211, 211, 211);
     box-shadow: none;
@@ -490,7 +494,8 @@ markup: |
   }
 
 .spectrum-ActionButton:disabled,
-  .spectrum-ActionButton.is-disabled {
+.spectrum-ActionButton.is-disabled,
+.spectrum-Tool:disabled {
     background-color: rgb(244, 244, 244);
     border-color: rgb(244, 244, 244);
     color: rgb(188, 188, 188);
@@ -563,7 +568,8 @@ markup: |
 
 */
 
-.spectrum-ActionButton--quiet {
+.spectrum-ActionButton--quiet,
+.spectrum-Tool {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(80, 80, 80);
 }
@@ -572,26 +578,31 @@ markup: |
     color: rgb(80, 80, 80);
   }
 
-.spectrum-ActionButton--quiet:hover {
+.spectrum-ActionButton--quiet:hover,
+.spectrum-Tool:hover {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
 
-.spectrum-ActionButton--quiet.focus-ring {
+.spectrum-ActionButton--quiet.focus-ring,
+.spectrum-Tool.focus-ring {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0.125rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 2px rgb(55, 142, 240);
     color: rgb(50, 50, 50);
   }
 
-.spectrum-ActionButton--quiet:active {
+.spectrum-ActionButton--quiet:active,
+.spectrum-Tool:active {
     background-color: rgb(234, 234, 234);
     box-shadow: none;
     color: rgb(50, 50, 50);
   }
 
 .spectrum-ActionButton--quiet:disabled,
-  .spectrum-ActionButton--quiet[disabled] {
+.spectrum-ActionButton--quiet[disabled],
+.spectrum-Tool:disabled,
+.spectrum-Tool[disabled] {
     background-color: rgba(0, 0, 0, 0);
     color: rgb(188, 188, 188);
   }
@@ -626,97 +637,6 @@ markup: |
     border-color: rgba(0, 0, 0, 0);
     color: rgb(188, 188, 188);
   }
-
-/* topdoc
----
-name: Button - Action (toolbar)
-description: Selection action buttons that form a toolbar
-status: Released
-modifiers:
-  ':disabled': Disabled state
-  ':hover': Hover state
-  ':focus': Focused
-  '.is-selected': Selected state
-markup: |
-  <button class="spectrum-ActionButton">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-    <span class="spectrum-ActionButton-label">Normal</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-    <span class="spectrum-ActionButton-label">Selected</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet" disabled>
-    <span class="spectrum-ActionButton-label">Disabled</span>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected" disabled>
-    <span class="spectrum-ActionButton-label">Disabled Selected</span>
-  </button>
-
-  <br>
-  <br>
-
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-  <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
-    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-      <use xlink:href="#spectrum-icon-18-Delete" />
-    </svg>
-  </button>
-
-
-*/
 
 /* topdoc
 ---
@@ -871,35 +791,6 @@ markup: |
 
 */
 
-.spectrum-Button--quiet--dropdown {
-  color: rgb(80, 80, 80);
-  border-color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.spectrum-Button--quiet--dropdown:hover {
-    color: rgb(50, 50, 50);
-  }
-
-.spectrum-Button--quiet--dropdown.focus-ring,
-  .spectrum-Button--quiet--dropdown.is-focused {
-    box-shadow: 0 0.125rem 0 0 rgb(55, 142, 240);
-  }
-
-.spectrum-Button--quiet--dropdown.is-invalid.focus-ring,
-    .spectrum-Button--quiet--dropdown.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(236, 91, 98);
-    }
-
-.spectrum-Button--quiet--dropdown:disabled,
-  .spectrum-Button--quiet--dropdown.is-disabled {
-    color: rgb(188, 188, 188);
-  }
-
-.spectrum-Button--quiet--dropdown:disabled.focus-ring, .spectrum-Button--quiet--dropdown.is-disabled.focus-ring {
-      box-shadow: none;
-    }
-
 .spectrum-FieldButton {
   color: rgb(80, 80, 80);
   background-color: rgb(255, 255, 255);
@@ -915,7 +806,7 @@ markup: |
 .spectrum-FieldButton.focus-ring,
   .spectrum-FieldButton.is-focused {
     border-color: rgb(55, 142, 240);
-    box-shadow: 0 0 0 0.0625rem rgb(55, 142, 240);
+    box-shadow: 0 0 0 1px rgb(55, 142, 240);
   }
 
 .spectrum-FieldButton:active,
@@ -938,7 +829,7 @@ markup: |
 .spectrum-FieldButton.is-invalid.focus-ring,
     .spectrum-FieldButton.is-invalid.is-focused {
       border-color: rgb(236, 91, 98);
-      box-shadow: 0 0 0 0.0625rem rgb(236, 91, 98);
+      box-shadow: 0 0 0 1px rgb(236, 91, 98);
     }
 
 .spectrum-FieldButton:disabled,
@@ -965,7 +856,7 @@ markup: |
 .spectrum-FieldButton--quiet.focus-ring,
   .spectrum-FieldButton--quiet.is-focused {
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0.125rem 0 0 rgb(55, 142, 240);
+    box-shadow: 0 2px 0 0 rgb(55, 142, 240);
   }
 
 .spectrum-FieldButton--quiet:active,
@@ -983,7 +874,7 @@ markup: |
 
 .spectrum-FieldButton--quiet.is-invalid.focus-ring,
     .spectrum-FieldButton--quiet.is-invalid.is-focused {
-      box-shadow: 0 0.125rem 0 0 rgb(236, 91, 98);
+      box-shadow: 0 2px 0 0 rgb(236, 91, 98);
     }
 
 .spectrum-FieldButton--quiet:disabled,
@@ -1020,8 +911,48 @@ markup: |
     color: rgb(50, 50, 50);
   }
 
-.spectrum-ClearButton:disabled {
+.spectrum-ClearButton:disabled,
+  .spectrum-ClearButton.is-disabled {
     background-color: rgba(0, 0, 0, 0);
 
     color: rgb(188, 188, 188);
   }
+
+.spectrum-Tool.is-selected {
+    color: rgb(38, 128, 235);
+  }
+
+.spectrum-Tool.is-selected .spectrum-Tool-hold {
+      color: rgb(118, 118, 118);
+    }
+
+.spectrum-Tool.is-selected:hover {
+      color: rgb(20, 115, 230);
+    }
+
+.spectrum-Tool.is-selected:hover .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+
+.spectrum-Tool.is-selected:active {
+      color: rgb(13, 102, 208);
+    }
+
+.spectrum-Tool.is-selected:active .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+
+.spectrum-Tool.is-selected.focus-ring {
+      color: rgb(20, 115, 230);
+    }
+
+.spectrum-Tool.is-selected.focus-ring .spectrum-Tool-hold {
+        color: rgb(50, 50, 50);
+      }
+
+.spectrum-Tool.is-selected:disabled,
+    .spectrum-Tool.is-selected.is-disabled {
+      background-color: rgba(0, 0, 0, 0);
+      border-color: rgba(0, 0, 0, 0);
+      color: rgb(188, 188, 188);
+    }
