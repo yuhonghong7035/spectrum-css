@@ -159,12 +159,12 @@ markup: |
 */.spectrum-Popover--left.spectrum-Popover--withTip {
     margin-right: 13px;
   }.spectrum-Popover--left .spectrum-Popover-tip {
-    right: -18px;
+    right: -15px;
     transform: rotate(-90deg);
   }.spectrum-Popover--right.spectrum-Popover--withTip {
     margin-left: 13px;
   }.spectrum-Popover--right .spectrum-Popover-tip {
-    left: -18px;
+    left: -15px;
     transform: rotate(90deg);
   }/* Center the tip by default */.spectrum-Popover--left .spectrum-Popover-tip, .spectrum-Popover--right .spectrum-Popover-tip {
     top: 50%;
@@ -172,12 +172,12 @@ markup: |
   }.spectrum-Popover--bottom.spectrum-Popover--withTip {
     margin-top: 13px;
   }.spectrum-Popover--bottom .spectrum-Popover-tip {
-    top: -13px;
+    top: -11px;
     transform: rotate(180deg);
   }.spectrum-Popover--top.spectrum-Popover--withTip {
     margin-bottom: 13px;
   }.spectrum-Popover--top .spectrum-Popover-tip {
-    bottom: -13px;
+    bottom: -11px;
   }/* Center the tip by default */.spectrum-Popover--bottom .spectrum-Popover-tip, .spectrum-Popover--top .spectrum-Popover-tip {
     left: 50%;
     margin-left: -12px;

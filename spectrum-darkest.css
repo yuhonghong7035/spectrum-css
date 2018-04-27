@@ -2890,7 +2890,7 @@ markup: |
         box-shadow: 0 0 0 1px rgb(20, 115, 230);
       }
 .spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
-        background-color: rgb(45, 45, 45);
+        background-color: rgb(20, 115, 230);
       }
 .spectrum--darkest .spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
       color: rgb(55, 142, 240);

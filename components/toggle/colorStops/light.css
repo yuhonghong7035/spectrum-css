@@ -37,7 +37,7 @@
       }
 
 .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(38, 128, 235);
       }
 
 .spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
