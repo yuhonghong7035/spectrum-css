@@ -99,20 +99,18 @@ markup: |
       height: auto;
       visibility: visible;
     }.spectrum-TreeView-link {
-  /* Be inline block with 100% width to prevent margin collapse */
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   cursor: pointer;
 
-  width: 100%;
-
-  padding: 8px 30px;
-  margin: 4px 0;
+  padding: 12px 30px;
 
   text-decoration: none;
 
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }.spectrum-TreeView-link:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: none;
@@ -164,7 +162,7 @@ description: |
 markup: |
   <ul class="spectrum-TreeView" style="width: 250px">
     <li class="spectrum-TreeView-item">
-      <a class="spectrum-TreeView-link" href="#">Layer 1</a>
+      <a class="spectrum-TreeView-link" href="#">Layer 1 with a long name that doesn't fit at all</a>
     </li>
 
     <li class="spectrum-TreeView-item is-open">

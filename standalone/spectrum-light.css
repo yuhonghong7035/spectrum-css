@@ -525,12 +525,60 @@ markup: |
     </svg>
   </button>
 
+  <br><br>
+
+  <button class="spectrum-Tool">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Tool-hold" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CornerTriangle" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Tool-hold" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CornerTriangle" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Tool-hold" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CornerTriangle" />
+    </svg>
+  </button>
+
+  <button class="spectrum-Tool is-selected" disabled>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+      <use xlink:href="#spectrum-icon-18-Brush" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Tool-hold" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-CornerTriangle" />
+    </svg>
+  </button>
+
 */.spectrum-Tool {
+
+  position: relative;
 
   width: 32px;
   height: 32px;
 
   padding: 0;
+}.spectrum-Tool .spectrum-Tool-hold {
+    /* Increase specificity */
+    width: 5px;
+    height: 5px;
+  }.spectrum-Tool-hold {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
 }/* topdoc
 ---
 name: Button Group
@@ -2860,13 +2908,16 @@ markup: |
   max-height: none;
   max-width: none;
 
-  padding-top: 40px 39px;
+  padding-top: 36px;
 }.spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
-    padding-bottom: 24px;
+    -ms-flex: 0 0 48px;
+        flex: 0 0 48px;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-title, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-title {
     font-size: 28px;
     font-weight: 100;
-    line-height: 36px;
+
+    /* Get correct height on the heading */
+    margin: 4px 0 0 0;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
     max-height: none;
   }/* topdoc
@@ -6776,7 +6827,181 @@ markup: |
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}.spectrum-CycleButton {
+}/* topdoc
+---
+name: SplitView - Horizontal
+description: Horizontal SplitView
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
+    <div class="spectrum-SplitView-splitter"></div>
+    <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Horizontally Resizable
+description: Horizontally resizable SplitView with gripper
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="width: 304px">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Vertically Resizable
+description: Vertically resizable SplitView with gripper
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="height: 50px">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Horizontal Collapsed Left
+description: Horizontally collapsed SplitView
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="width: 0">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Horizontal Collapsed Right
+description: Horizontally collapsed SplitView
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--horizontal" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="width: 0">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Vertical Collapsed Top
+description: Vertically collapsed SplitView
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="height: 0">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable is-collapsed-start">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="flex: 1">Right</div>
+  </div>
+
+*//* topdoc
+---
+name: SplitView - Vertical Collapsed Bottom
+description: Vertically collapsed SplitView
+status: Beta
+markup: |
+  <div class="spectrum-SplitView spectrum-SplitView--vertical" style="height: 200px">
+    <div class="spectrum-SplitView-pane" style="flex: 1">Left</div>
+    <div class="spectrum-SplitView-splitter is-draggable is-collapsed-end">
+      <div class="spectrum-SplitView-gripper"></div>
+    </div>
+    <div class="spectrum-SplitView-pane" style="height: 0">Right</div>
+  </div>
+
+*/.spectrum-SplitView {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}.spectrum-SplitView-pane {
+  height: 100%;
+}.spectrum-SplitView-gripper {
+  content: '';
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-radius: 2px;
+
+  top: 50%;
+  transform: translate(0, -50%);
+
+  /* half of (width + horizontal border - handle width) * -1 (for negative opposite) */
+  left: -4px;
+  width: 4px;
+  height: 16px;
+  border-width: 4px 3px;
+}.spectrum-SplitView-splitter {
+  /* Contain the gripper */
+  position: relative;
+
+  /* Prevent text selection while dragging */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  width: 2px;
+  height: 100%;
+}/* make the center line of the gripper */.spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before {
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: calc(50% - 1px);
+        width: 2px;
+        height: 100%;
+      }.spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper {
+      left: 0;
+    }.spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper {
+      right: 0;
+      left: auto;
+    }.spectrum-SplitView--vertical {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}.spectrum-SplitView--vertical .spectrum-SplitView-pane {
+    height: auto;
+    width: 100%;
+  }.spectrum-SplitView--vertical .spectrum-SplitView-gripper {
+    /* half of (height + vertical border - handle width) * -1 (for negative opposite) */
+    top: -4px;
+
+    transform: translate(-50%, 0);
+    left: 50%;
+    width: 16px; /* same as default height */
+    height: 4px; /* same as default width */
+
+    /* opposite of default border-width */
+    border-width: 3px 4px;
+  }.spectrum-SplitView--vertical .spectrum-SplitView-splitter {
+    width: 100%;
+    height: 2px;
+  }.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper {
+        left: 50%;
+      }/* make the center line of the gripper */.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before, .spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before {
+          top: calc(50% - 1px);
+          left: 0;
+          width: 100%;
+          height: 2px;
+        }.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper {
+        top: 0;
+      }.spectrum-SplitView--vertical .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper {
+        top: auto;
+        bottom: 0;
+      }.spectrum-CycleButton {
 
   /* Change the font styles in all browsers */
   font-family: inherit;
@@ -7235,20 +7460,18 @@ markup: |
       height: auto;
       visibility: visible;
     }.spectrum-TreeView-link {
-  /* Be inline block with 100% width to prevent margin collapse */
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   cursor: pointer;
 
-  width: 100%;
-
-  padding: 8px 30px;
-  margin: 4px 0;
+  padding: 12px 30px;
 
   text-decoration: none;
 
   /* Prevent weirdness that can cause the vertical bar to fall down */
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }.spectrum-TreeView-link:focus {
     /* we cannot achieve rounded corners with outline so we use box-shadow (on skin.css) instead */
     outline: none;
@@ -7300,7 +7523,7 @@ description: |
 markup: |
   <ul class="spectrum-TreeView" style="width: 250px">
     <li class="spectrum-TreeView-item">
-      <a class="spectrum-TreeView-link" href="#">Layer 1</a>
+      <a class="spectrum-TreeView-link" href="#">Layer 1 with a long name that doesn't fit at all</a>
     </li>
 
     <li class="spectrum-TreeView-item is-open">
@@ -8581,6 +8804,30 @@ markup: |
     .spectrum-Tool.is-selected.is-disabled {
       background-color: rgba(0, 0, 0, 0);
       border-color: rgba(0, 0, 0, 0);
+      color: rgb(179, 179, 179);
+    }
+
+.spectrum-Tool.is-selected:disabled .spectrum-Tool-hold, .spectrum-Tool.is-selected.is-disabled .spectrum-Tool-hold {
+        color: rgb(179, 179, 179);
+      }
+
+.spectrum-Tool .spectrum-Tool-hold {
+    color: rgb(112, 112, 112);
+  }
+
+.spectrum-Tool:hover .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool:active .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool.focus-ring .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool.is-disabled .spectrum-Tool-hold, .spectrum-Tool:disabled .spectrum-Tool-hold {
       color: rgb(179, 179, 179);
     }
 
@@ -12258,6 +12505,65 @@ markup: |
 .spectrum-CycleButton.focus-ring .spectrum-Icon {
       color: rgb(44, 44, 44);
     }
+
+.spectrum-SplitView-pane {
+  background-color: rgb(245, 245, 245);
+}
+
+.spectrum-SplitView-splitter {
+  background-color: rgb(225, 225, 225);
+}
+
+.spectrum-SplitView-gripper {
+  border-color: rgb(225, 225, 225);
+}
+
+.spectrum-SplitView-gripper:before {
+    background-color: rgb(225, 225, 225);
+  }
+
+.spectrum-SplitView-splitter.is-draggable:hover,
+    .spectrum-SplitView-splitter.is-draggable.is-hovered {
+      background-color: rgb(202, 202, 202);
+    }
+
+.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper {
+        border-color: rgb(202, 202, 202);
+      }
+
+.spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before {
+          background-color: rgb(202, 202, 202);
+        }
+
+.spectrum-SplitView-splitter.is-draggable:active,
+    .spectrum-SplitView-splitter.is-draggable.is-active {
+      background-color: rgb(75, 75, 75);
+    }
+
+.spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper, .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper {
+        border-color: rgb(75, 75, 75);
+      }
+
+.spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before {
+          background-color: rgb(75, 75, 75);
+        }
+
+.spectrum-SplitView-splitter.is-draggable:focus {
+      outline: none;
+    }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring {
+      background-color: rgb(38, 128, 235);
+    }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper {
+        border-color: rgb(38, 128, 235);
+        box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      }
+
+.spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper:before {
+          background-color: rgb(38, 128, 235);
+        }
 
 .spectrum-Pagination-pageButton:hover {
     background-color: rgba(44, 44, 44, .04);

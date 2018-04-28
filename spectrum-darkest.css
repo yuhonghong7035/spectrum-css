@@ -920,6 +920,24 @@ markup: |
       border-color: rgba(0, 0, 0, 0);
       color: rgb(73, 73, 73);
     }
+.spectrum--darkest .spectrum-Tool.is-selected:disabled .spectrum-Tool-hold, .spectrum--darkest .spectrum-Tool.is-selected.is-disabled .spectrum-Tool-hold {
+        color: rgb(73, 73, 73);
+      }
+.spectrum--darkest .spectrum-Tool .spectrum-Tool-hold {
+    color: rgb(133, 133, 133);
+  }
+.spectrum--darkest .spectrum-Tool:hover .spectrum-Tool-hold {
+      color: rgb(226, 226, 226);
+    }
+.spectrum--darkest .spectrum-Tool:active .spectrum-Tool-hold {
+      color: rgb(226, 226, 226);
+    }
+.spectrum--darkest .spectrum-Tool.focus-ring .spectrum-Tool-hold {
+      color: rgb(226, 226, 226);
+    }
+.spectrum--darkest .spectrum-Tool.is-disabled .spectrum-Tool-hold, .spectrum--darkest .spectrum-Tool:disabled .spectrum-Tool-hold {
+      color: rgb(73, 73, 73);
+    }
 .spectrum--darkest .spectrum-Breadcrumb {
   color: rgb(133, 133, 133);
 }
@@ -4116,6 +4134,51 @@ markup: |
 .spectrum--darkest .spectrum-CycleButton.focus-ring .spectrum-Icon {
       color: rgb(226, 226, 226);
     }
+.spectrum--darkest .spectrum-SplitView-pane {
+  background-color: rgb(30, 30, 30);
+}
+.spectrum--darkest .spectrum-SplitView-splitter {
+  background-color: rgb(45, 45, 45);
+}
+.spectrum--darkest .spectrum-SplitView-gripper {
+  border-color: rgb(45, 45, 45);
+}
+.spectrum--darkest .spectrum-SplitView-gripper:before {
+    background-color: rgb(45, 45, 45);
+  }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:hover,
+    .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-hovered {
+      background-color: rgb(60, 60, 60);
+    }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper, .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper {
+        border-color: rgb(60, 60, 60);
+      }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:hover .spectrum-SplitView-gripper:before, .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-hovered .spectrum-SplitView-gripper:before {
+          background-color: rgb(60, 60, 60);
+        }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:active,
+    .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-active {
+      background-color: rgb(180, 180, 180);
+    }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper, .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper {
+        border-color: rgb(180, 180, 180);
+      }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:active .spectrum-SplitView-gripper:before, .spectrum--darkest .spectrum-SplitView-splitter.is-draggable.is-active .spectrum-SplitView-gripper:before {
+          background-color: rgb(180, 180, 180);
+        }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable:focus {
+      outline: none;
+    }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable.focus-ring {
+      background-color: rgb(20, 115, 230);
+    }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper {
+        border-color: rgb(20, 115, 230);
+        box-shadow: 0 0 0 1px rgb(20, 115, 230);
+      }
+.spectrum--darkest .spectrum-SplitView-splitter.is-draggable.focus-ring .spectrum-SplitView-gripper:before {
+          background-color: rgb(20, 115, 230);
+        }
 .spectrum--darkest .spectrum-Pagination-pageButton:hover {
     background-color: rgba(226, 226, 226, .04);
   }

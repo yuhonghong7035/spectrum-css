@@ -956,3 +956,27 @@ markup: |
       border-color: rgba(0, 0, 0, 0);
       color: rgb(179, 179, 179);
     }
+
+.spectrum-Tool.is-selected:disabled .spectrum-Tool-hold, .spectrum-Tool.is-selected.is-disabled .spectrum-Tool-hold {
+        color: rgb(179, 179, 179);
+      }
+
+.spectrum-Tool .spectrum-Tool-hold {
+    color: rgb(112, 112, 112);
+  }
+
+.spectrum-Tool:hover .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool:active .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool.focus-ring .spectrum-Tool-hold {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum-Tool.is-disabled .spectrum-Tool-hold, .spectrum-Tool:disabled .spectrum-Tool-hold {
+      color: rgb(179, 179, 179);
+    }

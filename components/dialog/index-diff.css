@@ -70,13 +70,13 @@
 .spectrum--large .spectrum-Dialog--fullscreen,
 .spectrum--large .spectrum-Dialog--fullscreenTakeover {
 
-  padding-top: 40px 39px;
+  padding-top: 36px;
 }
 .spectrum--large .spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum--large .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
-    padding-bottom: 24px;
+    -ms-flex: 0 0 48px;
+        flex: 0 0 48px;
   }
 .spectrum--large .spectrum-Dialog--fullscreen .spectrum-Dialog-title, .spectrum--large .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-title {
     font-size: 28px;
     font-weight: 100;
-    line-height: 36px;
   }

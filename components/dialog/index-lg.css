@@ -297,13 +297,16 @@ markup: |
   max-height: none;
   max-width: none;
 
-  padding-top: 40px 39px;
+  padding-top: 36px;
 }.spectrum-Dialog--fullscreen .spectrum-Dialog-header, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-header {
-    padding-bottom: 24px;
+    -ms-flex: 0 0 48px;
+        flex: 0 0 48px;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-title, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-title {
     font-size: 28px;
     font-weight: 100;
-    line-height: 36px;
+
+    /* Get correct height on the heading */
+    margin: 4px 0 0 0;
   }.spectrum-Dialog--fullscreen .spectrum-Dialog-content, .spectrum-Dialog--fullscreenTakeover .spectrum-Dialog-content {
     max-height: none;
   }/* topdoc
