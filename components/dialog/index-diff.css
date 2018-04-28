@@ -50,11 +50,8 @@
 }
 .spectrum--large .spectrum-Dialog-footer {
   border-radius: 0 0 5px 5px;
-  margin-top: 40px;
+  margin-top: 40px
 }
-.spectrum--large .spectrum-Dialog-footer .spectrum-Button {
-    margin: 0 16px 0 0
-  }
 .spectrum--large .spectrum-Dialog-title {
   font-size: 18px;
   font-weight: 700;

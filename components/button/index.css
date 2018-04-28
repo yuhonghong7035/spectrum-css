@@ -99,8 +99,6 @@
     box-shadow: none;
   }.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
     margin-left: 8px;
-  }/* Space out buttons when placed next to eachother */.spectrum-Button + .spectrum-Button {
-    margin-left: 12px;
   }a.spectrum-Button {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
@@ -310,4 +308,11 @@ markup: |
   position: absolute;
   right: 4px;
   bottom: 4px;
+}/* Potentially temporary: Add back default margin between all buttons when adjacent */.spectrum-Button:not(.spectrum-Button--block) + .spectrum-Button {
+  margin-left: 16px;
+}.spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-Tool + .spectrum-Tool {
+  margin-left: 8px;
+}.spectrum-Tool + .spectrum-Tool {
+  margin-left: 8px;
 }

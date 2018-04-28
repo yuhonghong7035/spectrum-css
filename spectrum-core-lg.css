@@ -368,8 +368,6 @@ markup: |
     box-shadow: none;
   }.spectrum-Button .spectrum-Icon + .spectrum-Button-label {
     margin-left: 10px;
-  }/* Space out buttons when placed next to eachother */.spectrum-Button + .spectrum-Button {
-    margin-left: 12px;
   }a.spectrum-Button {
   /* Remove appearance for clickable types in iOS and Safari. */
   -webkit-appearance: none;
@@ -579,6 +577,13 @@ markup: |
   position: absolute;
   right: 5px;
   bottom: 5px;
+}/* Potentially temporary: Add back default margin between all buttons when adjacent */.spectrum-Button:not(.spectrum-Button--block) + .spectrum-Button {
+  margin-left: 16px;
+}.spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-Tool + .spectrum-Tool {
+  margin-left: 10px;
+}.spectrum-Tool + .spectrum-Tool {
+  margin-left: 10px;
 }/* topdoc
 ---
 name: Button Group
@@ -2846,11 +2851,7 @@ markup: |
     display: block;
     height: 0;
     clear: both;
-  }.spectrum-Dialog-footer .spectrum-Button {
-    margin: 0 16px 0 0;
-  }.spectrum-Dialog-footer .spectrum-Button:last-child {
-      margin-right: 0;
-    }.spectrum-Dialog-title {
+  }.spectrum-Dialog-title {
   font-size: 18px;
   font-weight: 700;
 

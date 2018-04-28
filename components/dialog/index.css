@@ -235,11 +235,7 @@ markup: |
     display: block;
     height: 0;
     clear: both;
-  }.spectrum-Dialog-footer .spectrum-Button {
-    margin: 0 16px 0 0;
-  }.spectrum-Dialog-footer .spectrum-Button:last-child {
-      margin-right: 0;
-    }.spectrum-Dialog-title {
+  }.spectrum-Dialog-title {
   font-size: 18px;
   font-weight: 700;
 

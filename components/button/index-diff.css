@@ -26,9 +26,6 @@
 .spectrum--large .spectrum-Button .spectrum-Icon + .spectrum-Button-label {
     margin-left: 10px;
   }
-.spectrum--large .spectrum-Button + .spectrum-Button {
-    margin-left: 12px;
-  }
 .spectrum--large .spectrum-ActionButton,
 .spectrum--large .spectrum-Tool {
 
@@ -121,4 +118,14 @@
 .spectrum--large .spectrum-Tool-hold {
   right: 5px;
   bottom: 5px;
+}
+.spectrum--large .spectrum-Button:not(.spectrum-Button--block) + .spectrum-Button {
+  margin-left: 16px;
+}
+.spectrum--large .spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum--large .spectrum-Tool + .spectrum-Tool {
+  margin-left: 10px;
+}
+.spectrum--large .spectrum-Tool + .spectrum-Tool {
+  margin-left: 10px;
 }
