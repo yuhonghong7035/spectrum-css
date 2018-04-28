@@ -1,0 +1,131 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--darkest .spectrum-Tags-item {
+  color: rgb(133, 133, 133);
+  background-color: rgb(26, 26, 26);
+  border-color: rgb(105, 105, 105);
+}
+
+.spectrum--darkest .spectrum-Tags-item .spectrum-ClearButton {
+    color: rgb(105, 105, 105);
+  }
+
+.spectrum--darkest .spectrum-Tags-item:hover {
+    background-color: rgb(26, 26, 26);
+    color: rgb(226, 226, 226);
+    border-color: rgb(226, 226, 226);
+  }
+
+.spectrum--darkest .spectrum-Tags-item:hover .spectrum-ClearButton {
+      color: rgb(226, 226, 226);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.focus-ring {
+    background-color: rgb(26, 26, 26);
+    color: rgb(226, 226, 226);
+    border-color: rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(20, 115, 230);
+  }
+
+.spectrum--darkest .spectrum-Tags-item.focus-ring .spectrum-ClearButton {
+      color: rgb(226, 226, 226);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid {
+    color: rgb(133, 133, 133);
+    border-color: rgb(227, 72, 80);
+  }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid .spectrum-ClearButton {
+      color: rgb(227, 72, 80);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid:hover {
+      color: rgb(226, 226, 226);
+      border-color: rgb(236, 91, 98);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid:hover .spectrum-ClearButton {
+        color: rgb(236, 91, 98);
+      }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid.focus-ring {
+      color: rgb(226, 226, 226);
+      border-color: rgb(20, 115, 230);
+      box-shadow: 0 0 0 1px rgb(20, 115, 230);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.is-invalid.focus-ring .spectrum-ClearButton {
+        color: rgb(236, 91, 98);
+      }
+
+.spectrum--darkest .spectrum-Tags-item.is-disabled {
+    color: rgb(73, 73, 73);
+    background-color: rgb(38, 38, 38);
+    border-color: rgb(38, 38, 38);
+  }
+
+.spectrum--darkest .spectrum-Tags-item.is-disabled .spectrum-Avatar {
+      /* Duplicated so state is on the tag */
+      opacity: 0.3;
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable:hover {
+    color: rgb(133, 133, 133);
+  }
+
+.spectrum--darkest .spectrum-Tags-item--deletable:hover .spectrum-ClearButton {
+      color: rgb(226, 226, 226);
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable:active {
+    color: rgb(133, 133, 133);
+  }
+
+.spectrum--darkest .spectrum-Tags-item--deletable:active .spectrum-ClearButton {
+      color: rgb(226, 226, 226);
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.is-invalid:hover {
+      border-color: rgb(236, 91, 98);
+      color: rgb(133, 133, 133);
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.is-invalid:hover .spectrum-ClearButton {
+        color: rgb(236, 91, 98);
+      }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.is-invalid:active {
+      border-color: rgb(247, 109, 116);
+      color: rgb(133, 133, 133);
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.is-invalid:active .spectrum-ClearButton {
+        color: rgb(247, 109, 116);
+      }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.focus-ring {
+    color: rgb(133, 133, 133);
+  }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.focus-ring .spectrum-ClearButton {
+      color: rgb(226, 226, 226);
+    }
+
+.spectrum--darkest .spectrum-Tags-item--deletable.focus-ring.is-invalid {
+      color: rgb(133, 133, 133);
+    }
+
+.spectrum--darkest .spectrum-Tags-item.is-disabled .spectrum-ClearButton .spectrum-Icon {
+    color: rgb(73, 73, 73);
+  }
