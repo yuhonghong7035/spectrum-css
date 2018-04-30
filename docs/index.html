@@ -90,7 +90,7 @@
   <body class="u-sdldocs-clearfix spectrum spectrum--light">
     <div class="spectrum-Underlay" id="spectrum-underlay"></div>
     <header class="sdldocs-header">
-      <h2 class="spectrum-Heading--pageTitle"><a class="sdldocs-header-link" href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><span class="sdldocs-header-title">spectrum-css 2.0.0-beta.88</span></h2>
+      <h2 class="spectrum-Heading--pageTitle"><a class="sdldocs-header-link" href="http://spectrum.corp.adobe.com"><img class="sdldocs-header-logo-image" src="img/spectrum_logo_light.svg" alt="Adobe Spectrum Logo"></a><span class="sdldocs-header-title">spectrum-css 2.0.0-beta.89</span></h2>
       <div class="sdldocs-badge">
         <div class="sdldocs-badge-label">Spectrum</div>
         <div class="sdldocs-badge-version">4.2.1
@@ -138,21 +138,17 @@
             </div>
           </div>
         </div>
-        <div class="spectrum-Form-item" style="display: none;">
+        <div class="spectrum-Form-item">
           <label class="spectrum-Form-itemLabel spectrum-FieldLabel--right">Method</label>
           <div class="spectrum-Form-itemField">
             <div class="spectrum-FieldGroup spectrum-FieldGroup--vertical">
-              <div class="spectrum-Radio" onclick="changeScale(undefined, 'rem')">
-                <input class="spectrum-Radio-input" type="radio" name="scalingMethod" id="radio-rem"><span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-rem">REM</label>
+              <div class="spectrum-Radio" onclick="changeScale(undefined, 'standalone')">
+                <input class="spectrum-Radio-input" type="radio" name="scalingMethod" id="radio-standalone"><span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-rem">Standalone</label>
               </div>
-              <div class="spectrum-Radio" onclick="changeScale(undefined, 'rem-auto')">
-                <input class="spectrum-Radio-input" type="radio" name="scalingMethod" id="radio-rem-auto" checked><span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-rem">REM (auto-overrides)</label>
-              </div>
-              <div class="spectrum-Radio" onclick="changeScale(undefined, 'token')">
-                <input class="spectrum-Radio-input" type="radio" name="scalingMethod" id="radio-token"><span class="spectrum-Radio-button"></span>
-                <label class="spectrum-Radio-label" for="radio-token">Token</label>
+              <div class="spectrum-Radio" onclick="changeScale(undefined, 'diff')">
+                <input class="spectrum-Radio-input" type="radio" name="scalingMethod" id="radio-diff" checked><span class="spectrum-Radio-button"></span>
+                <label class="spectrum-Radio-label" for="radio-rem">Diff</label>
               </div>
             </div>
           </div>
@@ -6668,14 +6664,42 @@ Files select
           <section class="sdldocs-component-description row">
             <div class="col-xs">
               <h2 class="spectrum-Heading--subtitle1">Design Status: n/a</h2>
-              <p>Description: The outer page container. The `&lt;body&gt;` tag should only have the `.spectrum` class if using a standalone CSS file.
-If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
+              <p>Description: The outer page container. A parent tag should only have the `.spectrum` class if using a standalone CSS file.
+If using multistops, a parent tag should have both the `.spectrum` class and the corresponding colorstop variant class, i.e. `.spectrum--light`.
+Finally, if scaling to large with the diff strategy, a parent tag should have the `.spectrum--large` class.
 </p>
             </div>
           </section>
           <section class="sdldocs-component-markup row">
             <div class="col-xs-offset-1 col-xs">
-              <div class="box"></div>
+              <div class="box"><button class="spectrum-Button spectrum-Button--cta">Button</button>
+<br><br>
+<div class="spectrum--large">
+  <button class="spectrum-Button spectrum-Button--cta">Button</button>
+</div>
+<br><br>
+
+<div class="spectrum-Dropdown" style="width: 220px;">
+  <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+    <span class="spectrum-Dropdown-label">Ballard</span>
+    <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+    </svg>
+  </button>
+</div>
+<br><br>
+
+<div class="spectrum--large">
+  <div class="spectrum-Dropdown" style="width: 220px;">
+    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+      <span class="spectrum-Dropdown-label">Ballard</span>
+      <svg class="spectrum-Icon spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-SelectDownChevron" />
+      </svg>
+    </button>
+  </div>
+</div>
+</div>
             </div>
           </section>
           <section class="sdldocs-component-example col-xs-12">
@@ -6683,7 +6707,34 @@ If using multistops, the `&lt;body&gt;` tag should have both the `.spectrum` cla
             <div class="row">
               <div class="sdldocs-code-example box">
                 <h3 class="sdldocs-code-example-title spectrum-Heading--subtitle2">HTML</h3>
-                <pre class="html"><code data-language="html"></code></pre>
+                <pre class="html"><code data-language="html">&lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot;&gt;Button&lt;/button&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;spectrum--large&quot;&gt;
+  &lt;button class=&quot;spectrum-Button spectrum-Button--cta&quot;&gt;Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum-Dropdown&quot; style=&quot;width: 220px;&quot;&gt;
+  &lt;button class=&quot;spectrum-FieldButton spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+    &lt;span class=&quot;spectrum-Dropdown-label&quot;&gt;Ballard&lt;/span&gt;
+    &lt;svg class=&quot;spectrum-Icon spectrum-Dropdown-icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;use xlink:href=&quot;#spectrum-css-icon-SelectDownChevron&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;spectrum--large&quot;&gt;
+  &lt;div class=&quot;spectrum-Dropdown&quot; style=&quot;width: 220px;&quot;&gt;
+    &lt;button class=&quot;spectrum-FieldButton spectrum-Dropdown-trigger&quot; aria-haspopup=&quot;true&quot;&gt;
+      &lt;span class=&quot;spectrum-Dropdown-label&quot;&gt;Ballard&lt;/span&gt;
+      &lt;svg class=&quot;spectrum-Icon spectrum-Dropdown-icon&quot; focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;use xlink:href=&quot;#spectrum-css-icon-SelectDownChevron&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
               </div>
             </div>
           </section>

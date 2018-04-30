@@ -1,6 +1,4 @@
-html.spectrum--large {
-  font-size: 20PX;
-}.spectrum {
+.spectrum {
   font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
   font-size: 14px;
 }.spectrum:lang(zh-Hans) {
