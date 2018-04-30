@@ -1787,15 +1787,15 @@ markup: |
   }
 .spectrum--dark .spectrum-Tooltip--error,
   .spectrum--dark .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(215, 55, 63);
+    background-color: rgb(201, 37, 45);
   }
 .spectrum--dark .spectrum-Tooltip--info,
   .spectrum--dark .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(20, 115, 230);
+    background-color: rgb(13, 102, 208);
   }
 .spectrum--dark .spectrum-Tooltip--success,
   .spectrum--dark .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(38, 142, 108);
+    background-color: rgb(18, 128, 92);
   }
 .spectrum--dark .spectrum-Loader--bar-fill {
   background: rgb(55, 142, 240);
@@ -2061,7 +2061,7 @@ markup: |
 
 */
 .spectrum--dark .spectrum-Slider-track {
-  background: rgb(118, 118, 118);
+  background: rgb(62, 62, 62);
 }
 /* topdoc
 ---
@@ -2116,7 +2116,7 @@ spectrum-slider-track-disabled(){
 }
 */
 .spectrum--dark .spectrum-Slider-track--fill {
-  background: rgb(118, 118, 118);
+  background: rgb(153, 153, 153);
 }
 /* topdoc
 ---
@@ -2205,7 +2205,7 @@ markup: |
 
 */
 .spectrum--dark .spectrum-Slider-track--ramp path {
-    fill: rgb(118, 118, 118);
+    fill: rgb(62, 62, 62);
   }
 /* topdoc
 ---
@@ -2240,7 +2240,7 @@ markup: |
 
 */
 .spectrum--dark .spectrum-Slider-handle {
-  border-color: rgb(118, 118, 118);
+  border-color: rgb(153, 153, 153);
   background: rgb(50, 50, 50);
   /*background: var(--spectrum-slider-handle-background-color);*/
   box-shadow: 0 0 0 4px rgb(50, 50, 50);
@@ -2275,7 +2275,7 @@ markup: |
 
 */
 .spectrum--dark .spectrum-Slider-handle:hover {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(205, 205, 205);
   }
 .spectrum--dark .spectrum-Slider-handle.is-focused {
     border-color: rgb(38, 128, 235);
@@ -2283,7 +2283,7 @@ markup: |
   }
 .spectrum--dark .spectrum-Slider-handle:active,
   .spectrum--dark .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(205, 205, 205);
     /*background: var(--spectrum-slider-handle-background-color-down);*/
   }
 .spectrum--dark .spectrum-Slider-input {
@@ -2302,7 +2302,7 @@ Todo: Determine if missing mixin is required
 Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum--dark .spectrum-Slider-controls--hover .spectrum-Slider-handle {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(205, 205, 205);
   }
 .spectrum--dark .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(38, 128, 235);
@@ -2313,31 +2313,31 @@ Todo: Determine if these are supposed to be pseudo classes
     background: rgb(38, 128, 235);
   }
 .spectrum--dark .spectrum-Slider-controls--active .spectrum-Slider-handle {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(205, 205, 205);
     background: rgba(0, 0, 0, 0);
   }
 .spectrum--dark .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(205, 205, 205);
     background: rgba(0, 0, 0, 0);
   }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-labelContainer {
     color: rgb(92, 92, 92);
   }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-handle {
-    border-color: rgb(211, 211, 211);
+    border-color: rgb(77, 77, 77);
     /*background: var(--spectrum-slider-handle-background-color);*/
     background: rgb(50, 50, 50);
   }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-handle:hover,
     .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-handle:active {
-      border-color: rgb(211, 211, 211);
+      border-color: rgb(77, 77, 77);
       background: rgba(0, 0, 0, 0);
     }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-track {
-    background: rgb(211, 211, 211);
+    background: rgb(62, 62, 62);
   }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
-    background: rgb(234, 234, 234);
+    background: rgb(62, 62, 62);
   }
 .spectrum--dark .spectrum-Slider.is-disabled .spectrum-Slider-track--buffer {
     background: rgb(62, 62, 62);

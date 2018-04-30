@@ -9809,17 +9809,17 @@ markup: |
 
 .spectrum-Tooltip--error,
   .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(215, 55, 63);
+    background-color: rgb(201, 37, 45);
   }
 
 .spectrum-Tooltip--info,
   .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(20, 115, 230);
+    background-color: rgb(13, 102, 208);
   }
 
 .spectrum-Tooltip--success,
   .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(38, 142, 108);
+    background-color: rgb(18, 128, 92);
   }
 
 .spectrum-Loader--bar-fill {
@@ -10305,7 +10305,7 @@ markup: |
 }
 
 .spectrum-Slider-track {
-  background: rgb(118, 118, 118);
+  background: rgb(234, 234, 234);
 }
 
 .spectrum-Slider-labelContainer {
@@ -10328,7 +10328,7 @@ spectrum-slider-track-disabled(){
 }
 
 .spectrum-Slider-track--ramp path {
-    fill: rgb(118, 118, 118);
+    fill: rgb(234, 234, 234);
   }
 
 .spectrum-Slider-handle {
@@ -10413,7 +10413,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
 .spectrum-Slider.is-disabled .spectrum-Slider-track {
-    background: rgb(211, 211, 211);
+    background: rgb(234, 234, 234);
   }
 
 .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {

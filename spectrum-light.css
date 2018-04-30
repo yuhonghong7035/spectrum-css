@@ -1787,15 +1787,15 @@ markup: |
   }
 .spectrum--light .spectrum-Tooltip--error,
   .spectrum--light .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(215, 55, 63);
+    background-color: rgb(201, 37, 45);
   }
 .spectrum--light .spectrum-Tooltip--info,
   .spectrum--light .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(20, 115, 230);
+    background-color: rgb(13, 102, 208);
   }
 .spectrum--light .spectrum-Tooltip--success,
   .spectrum--light .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(38, 142, 108);
+    background-color: rgb(18, 128, 92);
   }
 .spectrum--light .spectrum-Loader--bar-fill {
   background: rgb(20, 115, 230);
@@ -2061,7 +2061,7 @@ markup: |
 
 */
 .spectrum--light .spectrum-Slider-track {
-  background: rgb(118, 118, 118);
+  background: rgb(225, 225, 225);
 }
 /* topdoc
 ---
@@ -2116,7 +2116,7 @@ spectrum-slider-track-disabled(){
 }
 */
 .spectrum--light .spectrum-Slider-track--fill {
-  background: rgb(118, 118, 118);
+  background: rgb(112, 112, 112);
 }
 /* topdoc
 ---
@@ -2205,7 +2205,7 @@ markup: |
 
 */
 .spectrum--light .spectrum-Slider-track--ramp path {
-    fill: rgb(118, 118, 118);
+    fill: rgb(225, 225, 225);
   }
 /* topdoc
 ---
@@ -2240,7 +2240,7 @@ markup: |
 
 */
 .spectrum--light .spectrum-Slider-handle {
-  border-color: rgb(118, 118, 118);
+  border-color: rgb(112, 112, 112);
   background: rgb(245, 245, 245);
   /*background: var(--spectrum-slider-handle-background-color);*/
   box-shadow: 0 0 0 4px rgb(245, 245, 245);
@@ -2275,7 +2275,7 @@ markup: |
 
 */
 .spectrum--light .spectrum-Slider-handle:hover {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(75, 75, 75);
   }
 .spectrum--light .spectrum-Slider-handle.is-focused {
     border-color: rgb(38, 128, 235);
@@ -2283,7 +2283,7 @@ markup: |
   }
 .spectrum--light .spectrum-Slider-handle:active,
   .spectrum--light .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(75, 75, 75);
     /*background: var(--spectrum-slider-handle-background-color-down);*/
   }
 .spectrum--light .spectrum-Slider-input {
@@ -2302,7 +2302,7 @@ Todo: Determine if missing mixin is required
 Todo: Determine if these are supposed to be pseudo classes
 */
 .spectrum--light .spectrum-Slider-controls--hover .spectrum-Slider-handle {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(75, 75, 75);
   }
 .spectrum--light .spectrum-Slider-controls--focus .spectrum-Slider-handle {
     border-color: rgb(38, 128, 235);
@@ -2313,31 +2313,31 @@ Todo: Determine if these are supposed to be pseudo classes
     background: rgb(38, 128, 235);
   }
 .spectrum--light .spectrum-Slider-controls--active .spectrum-Slider-handle {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(75, 75, 75);
     background: rgba(0, 0, 0, 0);
   }
 .spectrum--light .spectrum-Slider-handle.is-dragged {
-    border-color: rgb(80, 80, 80);
+    border-color: rgb(75, 75, 75);
     background: rgba(0, 0, 0, 0);
   }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-labelContainer {
     color: rgb(179, 179, 179);
   }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-handle {
-    border-color: rgb(211, 211, 211);
+    border-color: rgb(202, 202, 202);
     /*background: var(--spectrum-slider-handle-background-color);*/
     background: rgb(245, 245, 245);
   }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-handle:hover,
     .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-handle:active {
-      border-color: rgb(211, 211, 211);
+      border-color: rgb(202, 202, 202);
       background: rgba(0, 0, 0, 0);
     }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-track {
-    background: rgb(211, 211, 211);
+    background: rgb(225, 225, 225);
   }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
-    background: rgb(234, 234, 234);
+    background: rgb(225, 225, 225);
   }
 .spectrum--light .spectrum-Slider.is-disabled .spectrum-Slider-track--buffer {
     background: rgb(225, 225, 225);

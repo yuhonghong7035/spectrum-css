@@ -130,7 +130,7 @@
   --spectrum-fieldbutton-quiet-status: 'Beta';
   --spectrum-flyout-name: 'Flyout (Default)';
   --spectrum-flyout-description: 'Values for the default Flyout element';
-  --spectrum-flyout-status: 'Beta';
+  --spectrum-flyout-status: 'Released';
   --spectrum-label-colored-name: 'Colored Label - Default';
   --spectrum-label-colored-description: 'DEPRECATED: this is a colored label that is deprecated';
   --spectrum-label-colored-status: 'Deprecated';
@@ -196,7 +196,7 @@
   --spectrum-pagination-status: 'Beta';
   --spectrum-popover-name: 'Popover (Default)';
   --spectrum-popover-description: 'The default variant of Popover';
-  --spectrum-popover-status: 'Beta';
+  --spectrum-popover-status: 'Released';
   --spectrum-quickactions-name: 'Quickactions';
   --spectrum-quickactions-description: 'Quickactions element';
   --spectrum-quickactions-status: 'Released';
@@ -229,7 +229,7 @@
   --spectrum-searchwithin-status: 'Beta';
   --spectrum-selectlist-name: 'Select List';
   --spectrum-selectlist-description: 'The default variant of the Select List element. Selectable list of options, typically used in flyouts';
-  --spectrum-selectlist-status: 'Beta';
+  --spectrum-selectlist-status: 'Released';
   --spectrum-slider-color-name: 'Slider (Color)';
   --spectrum-slider-color-description: 'Values to use for a color slider';
   --spectrum-slider-color-status: 'Beta';

@@ -52,15 +52,15 @@ markup: |
 
 .spectrum--lightest .spectrum-Tooltip--error,
   .spectrum--lightest .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
-    background-color: rgb(215, 55, 63);
+    background-color: rgb(201, 37, 45);
   }
 
 .spectrum--lightest .spectrum-Tooltip--info,
   .spectrum--lightest .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
-    background-color: rgb(20, 115, 230);
+    background-color: rgb(13, 102, 208);
   }
 
 .spectrum--lightest .spectrum-Tooltip--success,
   .spectrum--lightest .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
-    background-color: rgb(38, 142, 108);
+    background-color: rgb(18, 128, 92);
   }

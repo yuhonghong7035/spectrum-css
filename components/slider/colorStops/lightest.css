@@ -383,7 +383,7 @@ markup: |
 }
 
 .spectrum-Slider-track {
-  background: rgb(118, 118, 118);
+  background: rgb(234, 234, 234);
 }
 
 .spectrum-Slider-labelContainer {
@@ -406,7 +406,7 @@ spectrum-slider-track-disabled(){
 }
 
 .spectrum-Slider-track--ramp path {
-    fill: rgb(118, 118, 118);
+    fill: rgb(234, 234, 234);
   }
 
 .spectrum-Slider-handle {
@@ -491,7 +491,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
 .spectrum-Slider.is-disabled .spectrum-Slider-track {
-    background: rgb(211, 211, 211);
+    background: rgb(234, 234, 234);
   }
 
 .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {

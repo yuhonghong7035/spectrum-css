@@ -191,7 +191,7 @@ markup: |
 */
 
 .spectrum--lightest .spectrum-Slider-track {
-  background: rgb(118, 118, 118);
+  background: rgb(234, 234, 234);
 }
 
 /* topdoc
@@ -343,7 +343,7 @@ markup: |
 */
 
 .spectrum--lightest .spectrum-Slider-track--ramp path {
-    fill: rgb(118, 118, 118);
+    fill: rgb(234, 234, 234);
   }
 
 /* topdoc
@@ -491,7 +491,7 @@ Todo: Determine if these are supposed to be pseudo classes
     }
 
 .spectrum--lightest .spectrum-Slider.is-disabled .spectrum-Slider-track {
-    background: rgb(211, 211, 211);
+    background: rgb(234, 234, 234);
   }
 
 .spectrum--lightest .spectrum-Slider.is-disabled .spectrum-Slider-track--fill {
