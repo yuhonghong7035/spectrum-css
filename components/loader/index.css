@@ -512,8 +512,9 @@ markup: |
   height: 32px;
   position: relative;
 }.spectrum-Loader-track {
-  width: 26px;
-  height: 26px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
   border: solid 3px;
   border-radius: 32px;
 }.spectrum-Loader-fills {
@@ -523,8 +524,9 @@ markup: |
   width: 100%;
   height: 100%;
 }.spectrum-Loader-fill {
-  width: 26px;
-  height: 26px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
   border: solid 3px;
   border-radius: 32px;
 }.spectrum-Loader-fill-mask-1,
@@ -571,13 +573,13 @@ markup: |
   width: 16px;
   height: 16px;
 }.spectrum-Loader--small .spectrum-Loader-track {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border: solid 2px;
     border-radius: 16px;
   }.spectrum-Loader--small .spectrum-Loader-fill {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border: solid 2px;
     border-radius: 16px;
   }/* topdoc
@@ -607,13 +609,13 @@ markup: |
   width: 64px;
   height: 64px;
 }.spectrum-Loader--large .spectrum-Loader-track {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border: solid 4px;
     border-radius: 64px;
   }.spectrum-Loader--large .spectrum-Loader-fill {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border: solid 4px;
     border-radius: 64px;
   }/* topdoc
@@ -645,13 +647,13 @@ markup: |
   width: 64px;
   height: 64px;
 }.spectrum-Loader--overBackground .spectrum-Loader-track {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border: solid 4px;
     border-radius: 64px;
   }.spectrum-Loader--overBackground .spectrum-Loader-fill {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     border: solid 4px;
     border-radius: 64px;
   }/* topdoc

@@ -271,8 +271,15 @@ markup: |
 .spectrum-FieldButton,
 .spectrum-ClearButton,
 .spectrum-Tool {
-  display: inline-block;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   box-sizing: border-box;
+
+  -ms-flex-align: center;
+
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 
   /* Show the button overflow in Edge. */
   overflow: visible;
@@ -299,7 +306,6 @@ markup: |
               box-shadow 125ms ease-out;
 
   text-decoration: none;
-  text-align: center;
   font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
 
   cursor: pointer;
@@ -345,10 +351,9 @@ markup: |
 .spectrum-FieldButton .spectrum-Icon,
 .spectrum-ClearButton .spectrum-Icon,
 .spectrum-Tool .spectrum-Icon {
-    height: 100%;
+    max-height: 100%;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    vertical-align: middle;
   }.spectrum-Button {
 
   border-width: 2px;
@@ -386,23 +391,16 @@ markup: |
 
   font-size: 17px;
   font-weight: 400;
-
-  text-align: center;
 }.spectrum-ActionButton .spectrum-Icon + .spectrum-ActionButton-label,
 .spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
     margin-left: 10px;
-  }.spectrum-ActionButton-label,
-.spectrum-Button-label {
-  display: inline-block;
-  height: 100%;
-  vertical-align: top;
-}.spectrum-ActionButton-label:empty, .spectrum-Button-label:empty {
+  }.spectrum-ActionButton .spectrum-Icon:only-child,
+.spectrum-Tool .spectrum-Icon:only-child {
+    /* Remove padding if we're the only child */
+    margin: 0 -15px;
+  }.spectrum-ActionButton-label:empty, .spectrum-Button-label:empty {
     display: none;
-  }.spectrum-Button-label {
-  line-height: 36px;
-}.spectrum-ActionButton-label {
-  line-height: 38px;
-}.spectrum-ActionButton--quiet,
+  }.spectrum-ActionButton--quiet,
 .spectrum-Tool {
   padding: 0 15px;
 
@@ -411,10 +409,7 @@ markup: |
 
   font-size: 17px;
   font-weight: 400;
-}.spectrum-ActionButton--quiet .spectrum-ActionButton-label,
-.spectrum-Tool .spectrum-ActionButton-label {
-    line-height: 40px;
-  }.spectrum-LogicButton {
+}.spectrum-LogicButton {
 
   height: 24px;
   padding: 10px;
@@ -425,8 +420,44 @@ markup: |
   font-size: 17px;
   font-weight: 700;
   line-height: 0;
-}.spectrum-Button--block {
-  display: block;
+}/* topdoc
+---
+name: Button - Block
+description: Spectrum buttons modified with the --block variant
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <button class="spectrum-Button spectrum-Button--cta spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-Button spectrum-Button--primary spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-Button spectrum-Button--secondary spectrum-Button--block">
+    <span class="spectrum-Button-label">Button</span>
+  </button>
+
+  <br>
+
+  <button class="spectrum-ActionButton spectrum-Button--block">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+      <use xlink:href="#spectrum-icon-18-Delete" />
+    </svg>
+    <span class="spectrum-ActionButton-label">Button</span>
+  </button>
+
+*/.spectrum-Button--block {
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -608,7 +639,6 @@ markup: |
   </div>
 
   <br>
-  <br>
 
   <div class="spectrum-ButtonGroup">
     <button class="spectrum-ActionButton">
@@ -634,7 +664,6 @@ markup: |
   </div>
 
   <br>
-  <br>
 
   <div class="spectrum-ButtonGroup">
     <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
@@ -651,7 +680,6 @@ markup: |
     </button>
   </div>
 
-  <br>
   <br>
 
   <div class="spectrum-ButtonGroup">
@@ -729,81 +757,101 @@ modifiers:
   ':focus': Focused
 markup: |
 
-  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-    <button class="spectrum-ActionButton">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton is-selected">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton is-selected" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-  </div>
+  <div style="display: flex; justify-content: space-between; width: 400px;">
 
-  <br>
-  <br>
+    <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+          <use xlink:href="#spectrum-icon-18-Properties" />
+        </svg>
+        <span class="spectrum-ActionButton-label">Properties</span>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Info">
+          <use xlink:href="#spectrum-icon-18-Info" />
+        <span class="spectrum-ActionButton-label">Info</span>
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="ViewAllTags">
+          <use xlink:href="#spectrum-icon-18-ViewAllTags" />
+        <span class="spectrum-ActionButton-label">Keywords</span>
+        </svg>
+      </button>
+    </div>
 
-  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-    <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
-        <use xlink:href="#spectrum-icon-18-Delete" />
-      </svg>
-    </button>
-  </div>
+    <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+      <button class="spectrum-ActionButton">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton is-selected">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton is-selected" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+    </div>
 
-  <br><br>
+    <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+      <button class="spectrum-ActionButton spectrum-ActionButton--quiet spectrum-Button--quiet--action--icon-only is-selected" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+          <use xlink:href="#spectrum-icon-18-Delete" />
+        </svg>
+      </button>
+    </div>
 
-  <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-    <button class="spectrum-Tool">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-        <use xlink:href="#spectrum-icon-18-Brush" />
-      </svg>
-    </button>
+    <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+      <button class="spectrum-Tool">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
+          <use xlink:href="#spectrum-icon-18-Brush" />
+        </svg>
+      </button>
 
-    <button class="spectrum-Tool is-selected">
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-        <use xlink:href="#spectrum-icon-18-Select" />
-      </svg>
-    </button>
+      <button class="spectrum-Tool is-selected">
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+          <use xlink:href="#spectrum-icon-18-Select" />
+        </svg>
+      </button>
 
-    <button class="spectrum-Tool" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-        <use xlink:href="#spectrum-icon-18-Select" />
-      </svg>
-    </button>
+      <button class="spectrum-Tool" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+          <use xlink:href="#spectrum-icon-18-Select" />
+        </svg>
+      </button>
 
-    <button class="spectrum-Tool is-selected" disabled>
-      <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-        <use xlink:href="#spectrum-icon-18-Select" />
-      </svg>
-    </button>
+      <button class="spectrum-Tool is-selected" disabled>
+        <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+          <use xlink:href="#spectrum-icon-18-Select" />
+        </svg>
+      </button>
+    </div>
+
   </div>
 
 */.spectrum-ButtonGroup--vertical {
@@ -811,7 +859,11 @@ markup: |
   display: inline-flex;
   -ms-flex-direction: column;
       flex-direction: column;
-}.spectrum-ButtonGroup--vertical .spectrum-Button + .spectrum-Button {
+}.spectrum-ButtonGroup--vertical .spectrum-ActionButton-label {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    text-align: left;
+  }.spectrum-ButtonGroup--vertical .spectrum-Button + .spectrum-Button {
     margin-top: 16px;
     margin-left: 0;
   }.spectrum-ButtonGroup--vertical .spectrum-ActionButton + .spectrum-ActionButton,
@@ -912,7 +964,11 @@ markup: |
   border-radius: 50%;
   border-style: none;
 
-  user-drag: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }.spectrum-Checkbox {
   display: inline-block;
   position: relative;
@@ -1258,8 +1314,8 @@ markup: |
   .spectrum-Textfield:invalid {
     background-repeat: no-repeat;
     background-size: 16px 16px;
-    background-position: calc(100% - 7px) 50%;
-    padding-right: 30px;
+    background-position: calc(100% - 8px) 50%;
+    padding-right: 40px;
   }.spectrum-Textfield--multiline {
   height: auto;
   padding: 4px 8px;
@@ -1269,10 +1325,7 @@ markup: |
   overflow: auto;
 }.spectrum-Textfield--multiline.is-invalid,
   .spectrum-Textfield--multiline:invalid {
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: calc(100% - 7px) calc(100% - 7px);
-    padding-right: 30px;
+    background-position: calc(100% - 8px) calc(100% - 8px);
   }.spectrum-Textfield--quiet {
   border-radius: 0;
   text-indent: 0;
@@ -1399,6 +1452,23 @@ markup: |
     </button>
   </div>
 
+*//* topdoc
+name: Date Picker - Quiet
+description: A date picker uses the input group component to display a field with a button next to it
+status: Beta
+markup: |
+  <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-owns="react-spectrum-2" aria-haspopup="true">
+    <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-input" aria-invalid="false" placeholder="Choose a date" value="">
+      <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button">
+        <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
+          <path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z">
+          </path>
+          <path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z">
+          </path>
+        </svg>
+    </button>
+  </div>
+
 */:root {
   /* Todo: move to DNA */
 }.spectrum-InputGroup {
@@ -1428,7 +1498,7 @@ markup: |
     border-radius: 0;
 
     position: relative;
-    width: 24px;
+    padding-right: 0;
     border-bottom: 1px solid;
   }/* More hitarea */.spectrum-InputGroup--quiet .spectrum-FieldButton:after {
       content: '';
@@ -2150,8 +2220,9 @@ markup: |
   height: 32px;
   position: relative;
 }.spectrum-Loader-track {
-  width: 24px;
-  height: 24px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }.spectrum-Loader-fills {
@@ -2161,8 +2232,9 @@ markup: |
   width: 100%;
   height: 100%;
 }.spectrum-Loader-fill {
-  width: 24px;
-  height: 24px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }.spectrum-Loader-fill-mask-1,
@@ -2209,13 +2281,13 @@ markup: |
   width: 16px;
   height: 16px;
 }.spectrum-Loader--small .spectrum-Loader-track {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }.spectrum-Loader--small .spectrum-Loader-fill {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }/* topdoc
@@ -2245,13 +2317,13 @@ markup: |
   width: 80px;
   height: 80px;
 }.spectrum-Loader--large .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }.spectrum-Loader--large .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }/* topdoc
@@ -2283,13 +2355,13 @@ markup: |
   width: 80px;
   height: 80px;
 }.spectrum-Loader--overBackground .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }.spectrum-Loader--overBackground .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }/* topdoc
@@ -3087,6 +3159,8 @@ markup: |
   /* Todo: Remove hardcoded values */
 }.spectrum-Slider {
   position: relative;
+  /* Don't let z-index'd child elements float above other things on the page */
+  z-index: 1;
   display: block;
   min-height: 32px;
   width: 160px;
@@ -3154,10 +3228,16 @@ markup: |
   transition: border-width 130ms (.45, 0, .40, 1);
 }.spectrum-Slider-handle:active,
   .spectrum-Slider-handle.is-focused,
+  .spectrum-Slider-handle.is-dragged {
+    border-width: 10px;
+  }.spectrum-Slider-handle:active .spectrum-Slider-input, .spectrum-Slider-handle.is-focused .spectrum-Slider-input, .spectrum-Slider-handle.is-dragged .spectrum-Slider-input {
+      top: -10px;
+      left: -10px;
+    }.spectrum-Slider-handle:active,
+  .spectrum-Slider-handle.is-focused,
   .spectrum-Slider-handle.is-dragged,
   .spectrum-Slider-handle.is-tophandle {
-    border-width: 10px;
-    z-index: 1;
+    z-index: 3;
   }.spectrum-Slider-input {
 
   /* Normalize input field */
@@ -3168,12 +3248,12 @@ markup: |
   /*  Remove the margin for input in Firefox and Safari. */
   margin: 0;
 
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
   padding: 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2.5px;
+  left: -2.5px;
   overflow: hidden;
   opacity: .000001;
   cursor: default;
@@ -3948,6 +4028,16 @@ markup: |
   margin: 3px 12px;
   padding: 0 0;
   border: none;
+}.spectrum-SelectList-sectionHeading {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 4px 0;
+  padding: 0 36px 0 12px;
+}:root {
+  /* hardcoded cause Nate said so */
 }/* topdoc
 name: Dropdown - Default
 description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
@@ -4082,8 +4172,6 @@ markup: |
     margin-top: 8px;
 
     overflow-y: auto;
-  }.spectrum-Dropdown--quiet .spectrum-Popover {
-    left: -15px;
   }.spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -4093,24 +4181,31 @@ markup: |
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-}.spectrum-Dropdown-trigger .spectrum-Dropdown-label {
-    /* Be the biggest! */
-    -ms-flex: 1;
-        flex: 1;
+}.spectrum-Dropdown-label {
+  /* Be the biggest! */
+  -ms-flex: 1;
+      flex: 1;
 
-    white-space: nowrap;
-    overflow: hidden;
+  min-width: 144px;
 
-    height: 38px;
-    line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
 
-    font-size: 17px;
+  height: 38px;
+  line-height: 38px;
 
-    text-overflow: ellipsis;
-    text-align: left;
-  }.spectrum-Dropdown-trigger .spectrum-Dropdown-label.is-placeholder {
-      font-style: italic;
-    }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+  font-size: 17px;
+
+  text-overflow: ellipsis;
+  text-align: left;
+}.spectrum-Dropdown-label.is-placeholder {
+    font-style: italic;
+  }.spectrum-Dropdown--quiet .spectrum-Popover {
+    left: -15px;
+  }.spectrum-Dropdown--quiet .spectrum-Dropdown-label {
+    /* Don't enforce minimum width for quiet dropdowns */
+    min-width: 0;
+  }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
   margin-left: 15px;
 }/* Only apply margin if there's a label */.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
   margin-left: 15px;
@@ -4617,13 +4712,12 @@ name: Action Menu
 description: An action button with a Popover. Note that the `is-selected` class should be applied to the button when the menu is open.
 status: Beta
 markup: |
-
   <div class="spectrum-ActionMenu">
     <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
-      <span class="spectrum-ActionMenu-label">More Actions</span>
+      <span class="spectrum-ActionButton-label">More Actions</span>
     </button>
 
     <div class="spectrum-Popover spectrum-Popover--bottom is-open">
@@ -4640,7 +4734,7 @@ markup: |
 
   <div class="spectrum-ActionMenu">
     <button class="spectrum-ActionButton spectrum-ActionButton--quiet is-selected">
-      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
     </button>
@@ -4659,10 +4753,10 @@ markup: |
 
   <div class="spectrum-ActionMenu">
     <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-      <svg class="spectrum-Icon spectrum-ActionMenu-icon" focusable="false" aria-hidden="true">
+      <svg class="spectrum-Icon" focusable="false" aria-hidden="true">
         <use xlink:href="#spectrum-css-icon-More" />
       </svg>
-      <span class="spectrum-ActionMenu-label">More Actions</span>
+      <span class="spectrum-ActionButton-label">More Actions</span>
     </button>
   </div>
 
@@ -4670,22 +4764,13 @@ markup: |
   display: inline-block;
 }.spectrum-ActionMenu > .spectrum-ActionButton,
 .spectrum-ActionMenu > .spectrum-Tool {
-    display: block;
-
-    padding: 0 8px;
-  }/* Increase specificity by nesting to override stuff here */.spectrum-ActionMenu > .spectrum-ActionButton > .spectrum-ActionMenu-icon,
-.spectrum-ActionMenu > .spectrum-Tool > .spectrum-ActionMenu-icon {
-      display: inline-block;
-      content: '';
+    /* Don't be inline */
+    display: -ms-flexbox;
+    display: flex;
+  }.spectrum-ActionMenu > .spectrum-ActionButton > .spectrum-Icon,
+.spectrum-ActionMenu > .spectrum-Tool > .spectrum-Icon {
       width: 18px;
-      height: 5px;
-      background-position: center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      vertical-align: 2px;
-    }.spectrum-ActionMenu-label {
-  margin-left: 6px;
-}.spectrum-Well {
+    }.spectrum-Well {
   display: block;
   min-width: 248px;
   padding: 16px;
@@ -4709,6 +4794,7 @@ markup: |
   display: block;
 
   min-width: 100px;
+  box-sizing: border-box;
 
   margin: 0 0 6px;
 
@@ -4826,6 +4912,7 @@ markup: |
       <label class="spectrum-Form-itemLabel spectrum-FieldLabel--left" for="fieldLabelExample-stepper">Age</label>
       <div class="spectrum-Form-itemField">
         <div class="spectrum-Stepper">
+          <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
           <span class="spectrum-Stepper-buttons">
             <button class="spectrum-ActionButton spectrum-Stepper-stepUp" tabindex="-1">
               <svg class="spectrum-Icon spectrum-Stepper-stepUpIcon" focusable="false" aria-hidden="true">
@@ -4838,7 +4925,6 @@ markup: |
               </svg>
             </button>
           </span>
-          <input type="number" class="spectrum-Textfield spectrum-Stepper-input" placeholder="Enter a number" min="-2" max="2" step="0.5" id="fieldLabelExample-stepper">
         </div>
       </div>
     </div>
@@ -4968,8 +5054,8 @@ markup: |
 }.spectrum-Stepper {
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 
@@ -4981,6 +5067,8 @@ markup: |
   content: '';
 }.spectrum-Stepper-buttons {
   display: block;
+  border-radius: 4px 0 0 4px;
+  transition: box-shadow 125ms ease-in-out;
 }.spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   position: relative;
@@ -4999,6 +5087,7 @@ markup: |
   border-right-width: 0;
   border-radius: 4px 0 0 4px;
 }.spectrum-Stepper-stepUp .spectrum-Icon, .spectrum-Stepper-stepDown .spectrum-Icon {
+    margin: 0 !important;
     width: 8px;
     height: 6px;
     opacity: 1;
@@ -5030,6 +5119,8 @@ markup: |
 
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+
+  z-index: 1;
 }.spectrum-Stepper--quiet {
   border-radius: 0;
 }.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-ActionButton,
@@ -5451,7 +5542,6 @@ markup: |
 }.spectrum-Calendar-nextMonth {
   right: 3px;
 }.spectrum-Calendar-dayOfWeek {
-
   position: absolute;
   bottom: 4px;
 
@@ -5492,6 +5582,7 @@ markup: |
   text-align: center;
   padding: 0;
   position: relative;
+  box-sizing: content-box;
   height: 32px;
   width: 32px;
   padding: 4px;
@@ -6522,6 +6613,9 @@ markup: |
 }.spectrum-SearchWithin .spectrum-Dropdown-trigger {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }.spectrum-SearchWithin .spectrum-Dropdown-label {
+    /* Override dropdown's min-width and be tiny */
+    min-width: 0;
   }.spectrum-SearchWithin .spectrum-Textfield {
     -ms-flex: 1;
         flex: 1;
@@ -6534,61 +6628,30 @@ markup: |
     position: absolute;
     top: 0;
     right: 0;
-  }:root {
-
-  /* Missing from DNA */
-}.spectrum-QuickActions {
+  }.spectrum-QuickActions {
+  box-sizing: border-box;
 
   display: -ms-inline-flexbox;
 
   display: inline-flex;
   -ms-flex-align: center;
       align-items: center;
-}.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
-  }.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
-  }.spectrum-QuickActions-item {
+  -ms-flex-pack: center;
+      justify-content: center;
 
-  /* Change the font styles in all browsers */
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
+  padding: 5px 5px;
 
-  /* Remove the button margin in Firefox and Safari. */
-  margin: 0;
-
-  /* Show button the overflow in Edge and IE. */
-  overflow: visible;
-
-  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
-  text-transform: none;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
-  width: 40px;
   height: 40px;
-  margin-left: 10px;
-  padding: 0;
-  border-width: 1px;
+
   border-radius: 5px;
-  border-style: solid;
-  transition: border-color 125ms ease-out,
-    color 125ms ease-out,
-    box-shadow 125ms ease-out;
-}/* Remove the inner border and padding for button in Firefox. */.spectrum-QuickActions-item::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }/* Restore the focus styles unset by the previous rule. */.spectrum-QuickActions-item:-moz-focusring{
-    outline: 1px dotted ButtonText;
-  }.spectrum-QuickActions-item:hover {
-    cursor: pointer;
-  }.spectrum-QuickActions-item:active {
-    cursor: pointer;
-  }.spectrum-QuickActions-item:first-child {
-    margin-left: 0;
-  }.spectrum-QuickActions-item .spectrum-Icon {
-    /* Fix alignment */
-    margin-top: 2px;
+}.spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-QuickActions .spectrum-Tool + .spectrum-Tool {
+    margin-left: 10px;
+  }.spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton,
+.spectrum-QuickActions--textOnly .spectrum-Tool + .spectrum-Tool {
+    margin-left: 5px;
+  }.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
+  }.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
   }/* topdoc
 ---
 name: Miller Columns - Default
@@ -6955,6 +7018,7 @@ markup: |
 
   width: 2px;
   height: 100%;
+  z-index: 1;
 }/* make the center line of the gripper */.spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before {
         content: '';
         position: absolute;
@@ -7286,6 +7350,8 @@ markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
 
+  <div class="spectrum-StatusLight is-disabled">Disabled</div>
+
 */.spectrum-StatusLight {
   height: 40px;
 
@@ -7325,10 +7391,8 @@ markup: |
   -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
-}.spectrum-Shell .spectrum-TabList-item {
+}.spectrum-Shell .spectrum-Tabs-item {
     top: 1px;
-  }.spectrum-Shell .spectrum-TabList-item-line {
-    bottom: -7px;
   }.spectrum-Shell .spectrum-Button--icon {
     width: 18px;
     height: 18px;

@@ -34,10 +34,20 @@
 }
 .spectrum--large .spectrum-Slider-handle:active,
   .spectrum--large .spectrum-Slider-handle.is-focused,
-  .spectrum--large .spectrum-Slider-handle.is-dragged,
-  .spectrum--large .spectrum-Slider-handle.is-tophandle {
+  .spectrum--large .spectrum-Slider-handle.is-dragged {
     border-width: 10px;
   }
+.spectrum--large .spectrum-Slider-handle:active .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-focused .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-dragged .spectrum-Slider-input {
+      top: -10px;
+      left: -10px;
+    }
+.spectrum--large .spectrum-Slider-input {
+
+  width: 20px;
+  height: 20px;
+  top: -2.5px;
+  left: -2.5px
+}
 .spectrum--large .spectrum-Slider-labelContainer {
 
   border-radius: 4px;

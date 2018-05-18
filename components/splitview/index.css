@@ -127,6 +127,7 @@ markup: |
 
   width: 2px;
   height: 100%;
+  z-index: 1;
 }/* make the center line of the gripper */.spectrum-SplitView-splitter.is-collapsed-start .spectrum-SplitView-gripper:before, .spectrum-SplitView-splitter.is-collapsed-end .spectrum-SplitView-gripper:before {
         content: '';
         position: absolute;

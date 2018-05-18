@@ -24,14 +24,17 @@
 .spectrum--large .spectrum-QuickActions--right.is-open {
   transform: translateX(-6px);
 }
-.spectrum--large .spectrum-QuickActions-item {
+.spectrum--large .spectrum-QuickActions {
 
-  width: 40px;
+  padding: 5px 5px;
+
   height: 40px;
-  margin-left: 10px;
-  border-width: 1px;
+
   border-radius: 5px;
-  transition: border-color 125ms ease-out,
-    color 125ms ease-out,
-    box-shadow 125ms ease-out
 }
+.spectrum--large .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 10px;
+  }
+.spectrum--large .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 5px;
+  }

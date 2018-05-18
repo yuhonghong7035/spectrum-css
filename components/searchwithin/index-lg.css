@@ -96,6 +96,9 @@ markup: |
 }.spectrum-SearchWithin .spectrum-Dropdown-trigger {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }.spectrum-SearchWithin .spectrum-Dropdown-label {
+    /* Override dropdown's min-width and be tiny */
+    min-width: 0;
   }.spectrum-SearchWithin .spectrum-Textfield {
     -ms-flex: 1;
         flex: 1;

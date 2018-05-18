@@ -20,59 +20,27 @@
   transform: translateX(6px);
 }.spectrum-QuickActions--right.is-open {
   transform: translateX(-6px);
-}:root {
-
-  /* Missing from DNA */
 }.spectrum-QuickActions {
+  box-sizing: border-box;
 
   display: -ms-inline-flexbox;
 
   display: inline-flex;
   -ms-flex-align: center;
       align-items: center;
-}.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
-  }.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
-  }.spectrum-QuickActions-item {
+  -ms-flex-pack: center;
+      justify-content: center;
 
-  /* Change the font styles in all browsers */
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
+  padding: 4px 4px;
 
-  /* Remove the button margin in Firefox and Safari. */
-  margin: 0;
-
-  /* Show button the overflow in Edge and IE. */
-  overflow: visible;
-
-  /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
-  text-transform: none;
-
-  /* Correct the inability to style clickable types in iOS and Safari. */
-  -webkit-appearance: button;
-
-  width: 40px;
   height: 40px;
-  margin-left: 10px;
-  padding: 0;
-  border-width: 1px;
+
   border-radius: 4px;
-  border-style: solid;
-  transition: border-color 125ms ease-out,
-    color 125ms ease-out,
-    box-shadow 125ms ease-out;
-}/* Remove the inner border and padding for button in Firefox. */.spectrum-QuickActions-item::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }/* Restore the focus styles unset by the previous rule. */.spectrum-QuickActions-item:-moz-focusring{
-    outline: 1px dotted ButtonText;
-  }.spectrum-QuickActions-item:hover {
-    cursor: pointer;
-  }.spectrum-QuickActions-item:active {
-    cursor: pointer;
-  }.spectrum-QuickActions-item:first-child {
-    margin-left: 0;
-  }.spectrum-QuickActions-item .spectrum-Icon {
-    /* Fix alignment */
-    margin-top: 2px;
+}.spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 8px;
+  }.spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 4px;
+  }.spectrum-QuickActions--right.is-open { /* should animate to the left when aligned right */
+  }.spectrum-QuickActions--left.is-open { /* should animate to the right when aligned left */
   }
+

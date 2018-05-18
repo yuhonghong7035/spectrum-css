@@ -1,8 +1,8 @@
 .spectrum-Stepper {
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 
@@ -14,6 +14,8 @@
   content: '';
 }.spectrum-Stepper-buttons {
   display: block;
+  border-radius: 4px 0 0 4px;
+  transition: box-shadow 125ms ease-in-out;
 }.spectrum-Stepper-stepUp,
 .spectrum-Stepper-stepDown {
   position: relative;
@@ -32,6 +34,7 @@
   border-right-width: 0;
   border-radius: 4px 0 0 4px;
 }.spectrum-Stepper-stepUp .spectrum-Icon, .spectrum-Stepper-stepDown .spectrum-Icon {
+    margin: 0 !important;
     width: 8px;
     height: 6px;
     opacity: 1;
@@ -63,6 +66,8 @@
 
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+
+  z-index: 1;
 }.spectrum-Stepper--quiet {
   border-radius: 0;
 }.spectrum-Stepper--quiet .spectrum-Stepper-buttons .spectrum-ActionButton {

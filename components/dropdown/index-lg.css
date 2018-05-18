@@ -1,4 +1,6 @@
-/* topdoc
+:root {
+  /* hardcoded cause Nate said so */
+}/* topdoc
 name: Dropdown - Default
 description: A Spectrum 'default' dropdown element with a Flyout whose minimum width is the width of the trigger. Also note that dropdown width must be set by the user.
 status: Released
@@ -132,8 +134,6 @@ markup: |
     margin-top: 8px;
 
     overflow-y: auto;
-  }.spectrum-Dropdown--quiet .spectrum-Popover {
-    left: -15px;
   }.spectrum-Dropdown-trigger {
   position: relative;
   width: 100%;
@@ -143,24 +143,31 @@ markup: |
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-}.spectrum-Dropdown-trigger .spectrum-Dropdown-label {
-    /* Be the biggest! */
-    -ms-flex: 1;
-        flex: 1;
+}.spectrum-Dropdown-label {
+  /* Be the biggest! */
+  -ms-flex: 1;
+      flex: 1;
 
-    white-space: nowrap;
-    overflow: hidden;
+  min-width: 144px;
 
-    height: 38px;
-    line-height: 38px;
+  white-space: nowrap;
+  overflow: hidden;
 
-    font-size: 17px;
+  height: 38px;
+  line-height: 38px;
 
-    text-overflow: ellipsis;
-    text-align: left;
-  }.spectrum-Dropdown-trigger .spectrum-Dropdown-label.is-placeholder {
-      font-style: italic;
-    }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+  font-size: 17px;
+
+  text-overflow: ellipsis;
+  text-align: left;
+}.spectrum-Dropdown-label.is-placeholder {
+    font-style: italic;
+  }.spectrum-Dropdown--quiet .spectrum-Popover {
+    left: -15px;
+  }.spectrum-Dropdown--quiet .spectrum-Dropdown-label {
+    /* Don't enforce minimum width for quiet dropdowns */
+    min-width: 0;
+  }/* Only apply margin to the icon if there's a label */.spectrum-Dropdown-label + .spectrum-Dropdown-icon {
   margin-left: 15px;
 }/* Only apply margin if there's a label */.spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
   margin-left: 15px;

@@ -8,11 +8,8 @@
       justify-content: space-between;
   position: relative;
 }
-.spectrum-Shell .spectrum-TabList-item {
+.spectrum-Shell .spectrum-Tabs-item {
     top: 1px;
-  }
-.spectrum-Shell .spectrum-TabList-item-line {
-    bottom: -7px;
   }
 .spectrum-Shell .spectrum-Button--icon {
     width: 18px;

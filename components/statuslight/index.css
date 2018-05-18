@@ -10,6 +10,8 @@ markup: |
   <div class="spectrum-StatusLight spectrum-StatusLight--notice">Needs Approval</div>
   <div class="spectrum-StatusLight spectrum-StatusLight--negative">Rejected</div>
 
+  <div class="spectrum-StatusLight is-disabled">Disabled</div>
+
 */.spectrum-StatusLight {
   height: 32px;
 

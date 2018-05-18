@@ -492,14 +492,14 @@
   height: 32px;
 }
 .spectrum--large .spectrum-Loader-track {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }
 .spectrum--large .spectrum-Loader-fill {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }
@@ -508,14 +508,14 @@
   height: 16px;
 }
 .spectrum--large .spectrum-Loader--small .spectrum-Loader-track {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }
 .spectrum--large .spectrum-Loader--small .spectrum-Loader-fill {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }
@@ -524,14 +524,14 @@
   height: 80px;
 }
 .spectrum--large .spectrum-Loader--large .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
 .spectrum--large .spectrum-Loader--large .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
@@ -540,14 +540,14 @@
   height: 80px;
 }
 .spectrum--large .spectrum-Loader--overBackground .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
 .spectrum--large .spectrum-Loader--overBackground .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }

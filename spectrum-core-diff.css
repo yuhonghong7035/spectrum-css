@@ -140,12 +140,10 @@
 .spectrum--large .spectrum-Tool .spectrum-Icon + .spectrum-ActionButton-label {
     margin-left: 10px;
   }
-.spectrum--large .spectrum-Button-label {
-  line-height: 36px;
-}
-.spectrum--large .spectrum-ActionButton-label {
-  line-height: 38px;
-}
+.spectrum--large .spectrum-ActionButton .spectrum-Icon:only-child,
+.spectrum--large .spectrum-Tool .spectrum-Icon:only-child {
+    margin: 0 -15px;
+  }
 .spectrum--large .spectrum-ActionButton--quiet,
 .spectrum--large .spectrum-Tool {
   padding: 0 15px;
@@ -156,10 +154,6 @@
   font-size: 17px;
   font-weight: 400;
 }
-.spectrum--large .spectrum-ActionButton--quiet .spectrum-ActionButton-label,
-.spectrum--large .spectrum-Tool .spectrum-ActionButton-label {
-    line-height: 40px;
-  }
 .spectrum--large .spectrum-LogicButton {
 
   height: 24px;
@@ -370,8 +364,19 @@
 .spectrum--large .spectrum-Textfield:disabled::placeholder {
       font-weight: 400;
     }
+.spectrum--large .spectrum-Textfield.is-invalid,
+  .spectrum--large .spectrum-Textfield:invalid {
+    background-size: 16px 16px;
+    background-position: calc(100% - 8px) 50%;
+    padding-right: 40px;
+  }
+.spectrum--large .spectrum-Textfield--multiline.is-invalid,
+  .spectrum--large .spectrum-Textfield--multiline:invalid {
+    background-position: calc(100% - 8px) calc(100% - 8px);
+  }
 .spectrum--large .spectrum-Textfield--quiet {
   border-radius: 0;
+  border-bottom: 1px solid;
 }
 .spectrum--large .spectrum-InputGroup {
   min-width: 192px;
@@ -975,14 +980,14 @@
   height: 32px;
 }
 .spectrum--large .spectrum-Loader-track {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }
 .spectrum--large .spectrum-Loader-fill {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border: solid 4px;
   border-radius: 32px;
 }
@@ -991,14 +996,14 @@
   height: 16px;
 }
 .spectrum--large .spectrum-Loader--small .spectrum-Loader-track {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }
 .spectrum--large .spectrum-Loader--small .spectrum-Loader-fill {
-    width: 10px;
-    height: 10px;
+    width: 16px;
+    height: 16px;
     border: solid 3px;
     border-radius: 16px;
   }
@@ -1007,14 +1012,14 @@
   height: 80px;
 }
 .spectrum--large .spectrum-Loader--large .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
 .spectrum--large .spectrum-Loader--large .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
@@ -1023,14 +1028,14 @@
   height: 80px;
 }
 .spectrum--large .spectrum-Loader--overBackground .spectrum-Loader-track {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
 .spectrum--large .spectrum-Loader--overBackground .spectrum-Loader-fill {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border: solid 5px;
     border-radius: 80px;
   }
@@ -1212,10 +1217,20 @@
 }
 .spectrum--large .spectrum-Slider-handle:active,
   .spectrum--large .spectrum-Slider-handle.is-focused,
-  .spectrum--large .spectrum-Slider-handle.is-dragged,
-  .spectrum--large .spectrum-Slider-handle.is-tophandle {
+  .spectrum--large .spectrum-Slider-handle.is-dragged {
     border-width: 10px;
   }
+.spectrum--large .spectrum-Slider-handle:active .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-focused .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-dragged .spectrum-Slider-input {
+      top: -10px;
+      left: -10px;
+    }
+.spectrum--large .spectrum-Slider-input {
+
+  width: 20px;
+  height: 20px;
+  top: -2.5px;
+  left: -2.5px
+}
 .spectrum--large .spectrum-Slider-labelContainer {
 
   border-radius: 4px;
@@ -1442,18 +1457,29 @@
   height: 2px;
   margin: 3px 12px;
 }
+.spectrum--large .spectrum-SelectList-sectionHeading {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 4px 0;
+  padding: 0 36px 0 12px;
+}
 .spectrum--large .spectrum-Dropdown .spectrum-Popover {
     margin-top: 8px;
   }
+.spectrum--large .spectrum-Dropdown-label {
+
+  min-width: 144px;
+
+  height: 38px;
+  line-height: 38px;
+
+  font-size: 17px
+}
 .spectrum--large .spectrum-Dropdown--quiet .spectrum-Popover {
     left: -15px;
-  }
-.spectrum--large .spectrum-Dropdown-trigger .spectrum-Dropdown-label {
-
-    height: 38px;
-    line-height: 38px;
-
-    font-size: 17px
   }
 .spectrum--large .spectrum-Dropdown-label + .spectrum-Dropdown-icon {
   margin-left: 15px;
@@ -1639,6 +1665,10 @@
   width: 192px;
   border-radius: 4px;
   transition: border-color 125ms ease-in-out, box-shadow 125ms ease-in-out;
+}
+.spectrum--large .spectrum-Stepper-buttons {
+  border-radius: 4px 0 0 4px;
+  transition: box-shadow 125ms ease-in-out;
 }
 .spectrum--large .spectrum-Stepper-stepUp,
 .spectrum--large .spectrum-Stepper-stepDown {
@@ -1870,17 +1900,20 @@
 .spectrum--large .spectrum-QuickActions--right.is-open {
   transform: translateX(-6px);
 }
-.spectrum--large .spectrum-QuickActions-item {
+.spectrum--large .spectrum-QuickActions {
 
-  width: 40px;
+  padding: 5px 5px;
+
   height: 40px;
-  margin-left: 10px;
-  border-width: 1px;
+
   border-radius: 5px;
-  transition: border-color 125ms ease-out,
-    color 125ms ease-out,
-    box-shadow 125ms ease-out
 }
+.spectrum--large .spectrum-QuickActions .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 10px;
+  }
+.spectrum--large .spectrum-QuickActions--textOnly .spectrum-ActionButton + .spectrum-ActionButton {
+    margin-left: 5px;
+  }
 .spectrum--large .spectrum-MillerColumns {
   padding: 8px 0;
 }

@@ -74,8 +74,8 @@
   .spectrum-Textfield:invalid {
     background-repeat: no-repeat;
     background-size: 16px 16px;
-    background-position: calc(100% - 7px) 50%;
-    padding-right: 30px;
+    background-position: calc(100% - 8px) 50%;
+    padding-right: 40px;
   }.spectrum-Textfield--multiline {
   height: auto;
   padding: 4px 8px;
@@ -85,10 +85,7 @@
   overflow: auto;
 }.spectrum-Textfield--multiline.is-invalid,
   .spectrum-Textfield--multiline:invalid {
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: calc(100% - 7px) calc(100% - 7px);
-    padding-right: 30px;
+    background-position: calc(100% - 8px) calc(100% - 8px);
   }.spectrum-Textfield--quiet {
   border-radius: 0;
   text-indent: 0;

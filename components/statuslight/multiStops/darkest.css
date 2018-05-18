@@ -10,6 +10,19 @@
   /* haha remove this */
 }
 
+.spectrum--darkest .spectrum-StatusLight {
+  color: rgb(180, 180, 180);
+}
+
+.spectrum--darkest .spectrum-StatusLight[disabled],
+  .spectrum--darkest .spectrum-StatusLight.is-disabled {
+    color: rgb(73, 73, 73);
+  }
+
+.spectrum--darkest .spectrum-StatusLight[disabled]::before, .spectrum--darkest .spectrum-StatusLight.is-disabled::before {
+      background-color: rgb(60, 60, 60);
+    }
+
 .spectrum--darkest .spectrum-StatusLight--negative::before {
   background-color: rgb(215, 55, 63);
 }
