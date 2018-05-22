@@ -1,0 +1,27 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--light .spectrum-Dropdown .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-icon {
+      color: rgb(44, 44, 44);
+    }
+
+.spectrum--light .spectrum-Dropdown.is-invalid .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+      color: rgb(227, 72, 80);
+    }
+
+.spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-icon, .spectrum--light .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-icon {
+        color: rgb(179, 179, 179);
+      }
+
+.spectrum--light .spectrum-Dropdown-icon {
+  color: rgb(75, 75, 75);
+}

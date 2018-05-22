@@ -1,0 +1,107 @@
+/* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */:root {
+
+  /* Subtract the size of the border since it's on the item itself */
+}/* topdoc
+---
+name: Accordion - Default
+description: The default spectrum accordion
+status: Beta
+markup: |
+  <div class="spectrum-Accordion">
+    <div class="spectrum-Accordion-item is-open">
+      <div class="spectrum-Accordion-header" tabindex="0">Header 1</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item is-disabled">
+      <div class="spectrum-Accordion-header">Header 2</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item">
+      <div class="spectrum-Accordion-header" tabindex="0">Header 2</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+    <div class="spectrum-Accordion-item">
+      <div class="spectrum-Accordion-header" tabindex="0">Header 3</div>
+      <svg class="spectrum-Icon spectrum-Accordion-indicator" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AccordionChevron" />
+      </svg>
+      <div class="spectrum-Accordion-content">Item 1</div>
+    </div>
+  </div>
+
+*/.spectrum-Accordion {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}.spectrum-Accordion-indicator {
+  display: block;
+  width: 6px;
+  height: 10px;
+
+  position: absolute;
+  left: 16px;
+  top: 14.5px;
+
+  transition: transform ease 125ms;
+}.spectrum-Accordion-item {
+  z-index: inherit;
+  position: relative;
+
+  display: list-item;
+  margin: 0;
+
+  border-bottom: 1px solid transparent;
+}.spectrum-Accordion-item:first-of-type {
+    border-top: 1px solid transparent;
+  }.spectrum-Accordion-header {
+  position: relative;
+
+  box-sizing: border-box;
+  /* left padding takes into account the icon's size as well as the focus state's left border */
+  padding: 0 16px 0 34px;
+  margin: 0;
+
+  height: 39px;
+
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 39px;
+  letter-spacing: 0.6pt;
+
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-weight: 500;
+}.spectrum-Accordion-header:focus {
+    outline: none;
+  }.spectrum-Accordion-header:focus::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: -var(--spectrum-accordion-item-border-size);
+
+      height: 40px;
+      width: 2px;
+    }.spectrum-Accordion-content {
+  padding: 0 16px 16px 16px;
+  display: none;
+}.spectrum-Accordion-item.is-open .spectrum-Accordion-indicator {
+      transform: rotate(90deg);
+    }.spectrum-Accordion-item.is-open .spectrum-Accordion-header::after {
+      /* No bottom border when open, so be less tall */
+      height: 39px;
+    }.spectrum-Accordion-item.is-open .spectrum-Accordion-content {
+      display: block;
+    }.spectrum-Accordion-item.is-disabled .spectrum-Accordion-header {
+      cursor: default;
+    }

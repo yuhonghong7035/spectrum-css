@@ -1,0 +1,259 @@
+:root {
+
+  /* This must be fixed to prevent problems with different width labels */
+
+  /* Todo: Remove hardcoded values */
+}.spectrum-Slider {
+  position: relative;
+  /* Don't let z-index'd child elements float above other things on the page */
+  z-index: 1;
+  display: block;
+  min-height: 32px;
+  width: 160px;
+}.spectrum-Slider-controls {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  z-index: auto;
+  width: 100%;
+  min-height: 32px;
+}.spectrum-Slider-track {
+  border-radius: 1px;
+  pointer-events: none;
+  height: 2px;
+
+  top: 16px;
+  z-index: 1;
+
+  left: 8px;
+  margin-top: -1px;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0 20px 0 0;
+
+  position: absolute;
+
+  width: calc(100% - 16px);
+  margin-left: -10px;
+}.spectrum-Slider-track--fill {
+  width: 0;
+  height: 2px;
+  position: relative;
+  margin-left: 0;
+}.spectrum-Slider-track--buffer {
+  position: absolute;
+  margin-bottom: -2px;
+  margin-left: 0;
+}.spectrum-Slider-track--ramp {
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  width: 100%;
+}.spectrum-Slider-handle {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+
+  top: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+
+  border-width: 2px;
+  border-style: solid;
+
+  transition: border-width 130ms (.45, 0, .40, 1);
+}.spectrum-Slider-handle:active,
+  .spectrum-Slider-handle.is-focused,
+  .spectrum-Slider-handle.is-dragged {
+    border-width: 10px;
+  }.spectrum-Slider-handle:active .spectrum-Slider-input, .spectrum-Slider-handle.is-focused .spectrum-Slider-input, .spectrum-Slider-handle.is-dragged .spectrum-Slider-input {
+      top: -10px;
+      left: -10px;
+    }.spectrum-Slider-handle:active,
+  .spectrum-Slider-handle.is-focused,
+  .spectrum-Slider-handle.is-dragged,
+  .spectrum-Slider-handle.is-tophandle {
+    z-index: 3;
+  }.spectrum-Slider-input {
+
+  /* Normalize input field */
+  /* Change the font styles for input in all browsers */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  /*  Remove the margin for input in Firefox and Safari. */
+  margin: 0;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  position: absolute;
+  top: -2.5px;
+  left: -2.5px;
+  overflow: hidden;
+  opacity: .000001;
+  cursor: default;
+  -webkit-appearance: none;
+  border: 0;
+  pointer-events: none;
+}.spectrum-Slider-input:focus {
+    outline: none;
+  }.spectrum-Slider-labelContainer {
+  display: block;
+  position: relative;
+
+  width: auto;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}.spectrum-Slider-label {
+  padding-left: 0;
+}.spectrum-Slider-value {
+  float: right;
+  padding-right: 0;
+  cursor: default;
+}.spectrum-Slider-ticks {
+  margin: 0 1px;
+  margin-top: 11px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  z-index: 0;
+}.spectrum-Slider-tick-mark {
+  position: relative;
+
+  width: 2px;
+}.spectrum-Slider-tick-mark:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    content: '';
+    width: 2px;
+    height: 10px;
+
+    border-radius: 1px;
+  }.spectrum-Slider-tick-mark .spectrum-Slider-labelContainer {
+    position: relative;
+    margin: 16px 0 0 0;
+    text-align: center;
+  }.spectrum-Slider-tick-mark:first-of-type .spectrum-Slider-labelContainer {
+      /* Move over so we're left justified */
+      text-align: left;
+      left: 6px;
+    }.spectrum-Slider-tick-mark:last-of-type .spectrum-Slider-labelContainer {
+      /* Move over so we're right justified */
+      left: -6px;
+      text-align: right;
+    }.spectrum-Slider--color .spectrum-Slider-controls {
+    margin-top: 8px;
+  }.spectrum-Slider--color .spectrum-Slider-controls,
+  .spectrum-Slider--color .spectrum-Slider-track {
+    min-height: auto;
+    height: 24px;
+  }.spectrum-Slider--color .spectrum-Slider-track {
+    top: 0;
+    margin-top: 0;
+  }.spectrum-Slider--color .spectrum-Slider-handle {
+    left: 40%;
+    top: 50%;
+  }.spectrum-Slider--round {
+  display: inline-block;
+  width: 48px;
+  height: auto;
+  min-height: 0;
+}.spectrum-Slider--round .spectrum-Slider-controls {
+    width: 32px;
+    height: 32px;
+    min-height: 0;
+
+    border-radius: 20px;
+    position: relative;
+    display: inline-block;
+    margin-right: 24px;
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    box-sizing: border-box;
+    outline: none;
+  }.spectrum-Slider--round .spectrum-Slider-controls::before,
+    .spectrum-Slider--round .spectrum-Slider-controls::after {
+      content: '';
+      width: 4px;
+      height: 2px;
+      border-radius: 1px;
+      position: absolute;
+      bottom: 0;
+    }.spectrum-Slider--round .spectrum-Slider-controls::before {
+      left: auto;
+      right: -2px;
+      transform: rotate(45deg);
+    }.spectrum-Slider--round .spectrum-Slider-controls::after {
+      left: -2px;
+      transform: rotate(-45deg);
+    }.spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
+      width: 24px;
+      height: 24px;
+    }.spectrum-Slider--round .spectrum-Slider-handle {
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+    box-shadow: none;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 20px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
+
+    transition: background-color 130ms (.45, 0, .40, 1);
+  }.spectrum-Slider--round .spectrum-Slider-handle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -2px;
+      width: 12px;
+      height: 2px;
+      border-radius: 1px;
+      transform: translateY(-50%);
+      transition: background-color 130ms (.45, 0, .40, 1);
+    }.spectrum-Slider--round .spectrum-Slider-handle:active,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-focused,
+    .spectrum-Slider--round .spectrum-Slider-handle.is-dragged {
+      border-width: 2px;
+      cursor: ns-resize;
+      cursor: -webkit-grabbing;
+      cursor: grabbing;
+    }.spectrum-Slider--round .spectrum-Slider-input {
+    width: 100%;
+    height: 100%;
+  }.spectrum-Slider.is-disabled {
+  cursor: default;
+}.spectrum-Slider.is-disabled .spectrum-Slider-handle {
+    cursor: default;
+    pointer-events: none;
+  }.spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
+      .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
+        border-width: 1px;
+      }

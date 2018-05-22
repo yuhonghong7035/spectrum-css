@@ -1,0 +1,54 @@
+.spectrum-Breadcrumbs {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}.spectrum-Breadcrumbs:after {
+    content: "";
+    display: table;
+    clear: both;
+  }.spectrum-Breadcrumb-separator {
+  position: absolute;
+  top: calc(50% - 3px);
+  right: -18.5px;
+
+  width: 5px;
+  height: 8px;
+
+  transform: scale(1);
+
+  opacity: 1;
+}.spectrum-Breadcrumb {
+  display: block;
+  float: left;
+
+  position: relative;
+
+  margin-right: 32px;
+
+  font-size: 16px;
+  font-weight: 300;
+}.spectrum-Breadcrumb .spectrum-Breadcrumb-link {
+    cursor: default;
+  }.spectrum-Breadcrumb .spectrum-Breadcrumb-link[href],
+    .spectrum-Breadcrumb .spectrum-Breadcrumb-link[tabindex="0"] {
+      cursor: pointer;
+    }.spectrum-Breadcrumb:last-of-type .spectrum-Breadcrumb-separator {
+      display: none;
+    }.spectrum-Breadcrumbs--title .spectrum-Breadcrumb:last-of-type {
+    /* Clear the floats so we drop to a new line */
+    clear: left;
+
+    display: block;
+
+    margin: 0.3em 0;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 32px;
+  }.spectrum-Breadcrumbs--title .spectrum-Breadcrumb .spectrum-Heading--pageTitle {
+    margin: 0;
+
+    font-size: inherit;
+    font-weight: inherit;
+  }

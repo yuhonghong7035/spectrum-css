@@ -1,0 +1,121 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--lightest .spectrum-Alert {
+  background-color: rgb(255, 255, 255);
+  /* default color set to body color, header element overwrites this */
+  color: rgb(118, 118, 118);
+}
+
+.spectrum--lightest .spectrum-Alert-header {
+  color: rgb(50, 50, 50);
+}
+
+.spectrum--lightest .spectrum-Alert-content {
+  color: rgb(118, 118, 118);
+}
+
+/* topdoc
+---
+name: Alert - Info
+description: The Spectrum alert 'info'
+status: Beta
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--info">
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertInfo" />
+    </svg>
+    <div class="spectrum-Alert-header">Infomation Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+
+.spectrum--lightest .spectrum-Alert--info {
+  border-color: rgb(55, 142, 240);
+}
+
+.spectrum--lightest .spectrum-Alert--info .spectrum-Alert-icon {
+    color: rgb(55, 142, 240);
+  }
+
+/* topdoc
+---
+name: Alert - Error
+description: The Spectrum alert 'error'
+status: Beta
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertError" />
+    </svg>
+    <div class="spectrum-Alert-header">Error Alert - Oh no</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+
+.spectrum--lightest .spectrum-Alert--error {
+  border-color: rgb(236, 91, 98);
+}
+
+.spectrum--lightest .spectrum-Alert--error .spectrum-Alert-icon {
+    color: rgb(236, 91, 98);
+  }
+
+/* topdoc
+---
+name: Alert - Success
+description: The Spectrum alert 'success'
+status: Beta
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--success">
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertSuccess" />
+    </svg>
+    <div class="spectrum-Alert-header">Successful Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+
+.spectrum--lightest .spectrum-Alert--success {
+  border-color: rgb(51, 171, 132);
+}
+
+.spectrum--lightest .spectrum-Alert--success .spectrum-Alert-icon {
+    color: rgb(51, 171, 132);
+  }
+
+/* topdoc
+---
+name: Alert - Warning
+description: The Spectrum alert 'warning'
+status: Beta
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--warning">
+    <svg class="spectrum-Icon spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertError" />
+    </svg>
+    <div class="spectrum-Alert-header">Warning Alert Header</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+  </div>
+
+*/
+
+.spectrum--lightest .spectrum-Alert--warning {
+  border-color: rgb(242, 148, 35);
+}
+
+.spectrum--lightest .spectrum-Alert--warning .spectrum-Alert-icon {
+    color: rgb(242, 148, 35);
+  }

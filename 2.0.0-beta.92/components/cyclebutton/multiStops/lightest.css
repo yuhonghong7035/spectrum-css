@@ -1,0 +1,57 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+/* topdoc
+---
+name: Cycle Button - Default
+description: A Spectrum cycle button
+status: Beta
+markup: |
+  <button class="spectrum-CycleButton">
+    <svg class="spectrum-Icon spectrum-Icon--sizeS is-active" focusable="false" aria-hidden="true" aria-label="Folder">
+      <use xlink:href="#spectrum-icon-18-PlayCircle" />
+    </svg>
+    <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="PauseCircle">
+      <use xlink:href="#spectrum-icon-18-PauseCircle" />
+    </svg>
+  </button>
+
+*/
+
+.spectrum--lightest .spectrum-CycleButton {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.spectrum--lightest .spectrum-CycleButton .spectrum-Icon {
+    color: rgb(118, 118, 118);
+  }
+
+.spectrum--lightest .spectrum-CycleButton:hover .spectrum-Icon {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum--lightest .spectrum-CycleButton:active {
+    background-color: rgb(234, 234, 234);
+  }
+
+.spectrum--lightest .spectrum-CycleButton:active .spectrum-Icon {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum--lightest .spectrum-CycleButton.focus-ring {
+    /* we cannot achieve rounded corners with outline so we use box-shadow instead */
+    box-shadow: 0px 0px 0px 2px rgb(55, 142, 240) inset;
+  }
+
+.spectrum--lightest .spectrum-CycleButton.focus-ring .spectrum-Icon {
+      color: rgb(50, 50, 50);
+    }

@@ -1,0 +1,65 @@
+.spectrum--large .spectrum {
+  font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.spectrum--large .spectrum:lang(zh-Hans) {
+    font-family: adobe-clean-han-simplified-c, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum--large .spectrum:lang(zh) {
+    font-family: adobe-clean-han-traditional, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum--large .spectrum:lang(ko) {
+    font-family: adobe-clean-han-korean, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum--large .spectrum:lang(ja) {
+    font-family: adobe-clean-han-japanese,  adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum--large .spectrum,
+.spectrum--large .spectrum-Body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.spectrum--large .spectrum-Body--large {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.spectrum--large .spectrum-Body--small {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.spectrum--large .spectrum-Body--secondary {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.spectrum--large .spectrum-Heading--display {
+  font-weight: 300;
+  font-size: 51px;
+  line-height: 1.5;
+}
+.spectrum--large .spectrum-Heading--pageTitle {
+
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.5;
+}
+.spectrum--large .spectrum-Heading--subtitle1 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+}
+.spectrum--large .spectrum-Heading--subtitle2 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
+}
+.spectrum--large .spectrum-Heading--subtitle3 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

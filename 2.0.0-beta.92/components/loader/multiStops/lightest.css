@@ -1,0 +1,59 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--lightest .spectrum-Loader--bar-fill {
+  background: rgb(38, 128, 235);
+}
+
+.spectrum--lightest .spectrum-Loader--bar-track {
+  background-color: rgb(234, 234, 234);
+}
+
+.spectrum--lightest .spectrum-Loader--bar--fullpage .spectrum-Loader--bar-fill {
+    background: rgb(255, 255, 255);
+  }
+
+.spectrum--lightest .spectrum-Loader--bar--fullpage .spectrum-Loader--bar-label, .spectrum--lightest .spectrum-Loader--bar--fullpage .spectrum-Loader--bar-percentage {
+    color: rgb(255, 255, 255);
+  }
+
+.spectrum--lightest .spectrum-Loader--bar--fullpage .spectrum-Loader--bar-track {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+.spectrum--lightest .spectrum-Loader-track {
+  border-color: rgb(234, 234, 234);
+}
+
+.spectrum--lightest .spectrum-Loader-Indeterminate {
+  background-color: inherit;
+}
+
+.spectrum--lightest .spectrum-Loader-fill {
+  border-color: rgb(38, 128, 235);
+}
+
+.spectrum--lightest .spectrum-Loader--overBackground .spectrum-Loader-track {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+.spectrum--lightest .spectrum-Loader--overBackground .spectrum-Loader-fill {
+    border-color: rgb(255, 255, 255);
+  }
+
+.spectrum--lightest .spectrum-Loader--indeterminateFullpage .spectrum-Loader-track {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+.spectrum--lightest .spectrum-Loader--indeterminateFullpage .spectrum-Loader-fill {
+    border-color: rgb(255, 255, 255);
+  }

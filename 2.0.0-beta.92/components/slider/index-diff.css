@@ -1,0 +1,111 @@
+.spectrum--large .spectrum-Slider {
+  min-height: 32px;
+  width: 160px;
+}
+.spectrum--large .spectrum-Slider-controls {
+  min-height: 32px;
+}
+.spectrum--large .spectrum-Slider-track {
+  border-radius: 1px;
+  height: 2px;
+
+  top: 16px;
+  padding: 0 20px 0 0;
+  margin-left: -10px;
+}
+.spectrum--large .spectrum-Slider-track--fill {
+  height: 2px;
+}
+.spectrum--large .spectrum-Slider-track--ramp {
+  height: 16px;
+}
+.spectrum--large .spectrum-Slider-handle {
+
+  top: 16px;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+
+  border-width: 2px;
+
+  transition: border-width 130ms (.45, 0, .40, 1);
+}
+.spectrum--large .spectrum-Slider-handle:active,
+  .spectrum--large .spectrum-Slider-handle.is-focused,
+  .spectrum--large .spectrum-Slider-handle.is-dragged {
+    border-width: 10px;
+  }
+.spectrum--large .spectrum-Slider-handle:active .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-focused .spectrum-Slider-input, .spectrum--large .spectrum-Slider-handle.is-dragged .spectrum-Slider-input {
+      top: -10px;
+      left: -10px;
+    }
+.spectrum--large .spectrum-Slider-input {
+
+  width: 20px;
+  height: 20px;
+  top: -2.5px;
+  left: -2.5px
+}
+.spectrum--large .spectrum-Slider-labelContainer {
+
+  border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 12px;
+}
+.spectrum--large .spectrum-Slider-ticks {
+  margin: 0 1px;
+}
+.spectrum--large .spectrum-Slider-tick-mark {
+
+  width: 2px;
+}
+.spectrum--large .spectrum-Slider-tick-mark:after {
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 10px;
+
+    border-radius: 1px;
+  }
+.spectrum--large .spectrum-Slider--color .spectrum-Slider-controls,
+  .spectrum--large .spectrum-Slider--color .spectrum-Slider-track {
+    height: 24px;
+  }
+.spectrum--large .spectrum-Slider--round {
+  width: 48px;
+}
+.spectrum--large .spectrum-Slider--round .spectrum-Slider-controls {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 20px;
+    margin-right: 24px;
+  }
+.spectrum--large .spectrum-Slider--round .spectrum-Slider-controls::before {
+      transform: rotate(45deg);
+    }
+.spectrum--large .spectrum-Slider--round .spectrum-Slider-controls::after {
+      transform: rotate(-45deg);
+    }
+.spectrum--large .spectrum-Slider--round.spectrum-Slider--round--small .spectrum-Slider-controls {
+      width: 24px;
+      height: 24px;
+    }
+.spectrum--large .spectrum-Slider--round .spectrum-Slider-handle {
+    border-radius: 20px;
+    transform: rotate(-45deg);
+
+    transition: background-color 130ms (.45, 0, .40, 1);
+  }
+.spectrum--large .spectrum-Slider--round .spectrum-Slider-handle::after {
+      width: 12px;
+      height: 2px;
+      border-radius: 1px;
+      transition: background-color 130ms (.45, 0, .40, 1);
+    }
+.spectrum--large .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:hover,
+      .spectrum--large .spectrum-Slider.is-disabled.spectrum-Slider--color .spectrum-Slider-handle:active {
+        border-width: 1px;
+      }

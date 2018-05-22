@@ -1,0 +1,69 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--dark .spectrum-Dialog {
+  background: rgb(50, 50, 50);
+}
+
+.spectrum--dark .spectrum-Dialog-header {
+  background: rgb(50, 50, 50);
+}
+
+.spectrum--dark .spectrum-Dialog-header:after {
+    background: rgb(57, 57, 57);
+  }
+
+.spectrum--dark .spectrum-Dialog-title {
+  /* Todo: Determine if missing class is required */
+  color: rgb(255, 255, 255);
+}
+
+.spectrum--dark .spectrum-Dialog-typeIcon {
+  /* Todo: Determine if missing class is required */
+  color: rgb(255, 255, 255);
+}
+
+.spectrum--dark .spectrum-Dialog-footer {
+  background: rgb(50, 50, 50);
+}
+
+/* topdoc
+---
+name: Dialog - Error
+description: The Spectrum 'error' dialog
+status: Released
+markup:
+  <button class="spectrum-Button spectrum-Button--primary" onclick="openDialog(this.nextElementSibling)">Open Error Dialog</button>
+  <div class="spectrum-Dialog spectrum-Dialog--error spectrum-Dialog--centered" id="errorDialog">
+    <div class="spectrum-Dialog-header">
+      <h2 class="spectrum-Dialog-title">Unable to Share</h2>
+      <svg class="spectrum-Icon spectrum-Dialog-typeIcon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-AlertError" />
+      </svg>
+    </div>
+    <div class="spectrum-Dialog-content">
+      An error occurred while sharing your project. Please verify the email address and try again.
+    </div>
+    <div class="spectrum-Dialog-footer">
+      <button class="spectrum-Button spectrum-Button--primary" onclick="closeDialog(this.closest('.spectrum-Dialog'))">Ok</button>
+    </div>
+  </div>
+
+*/
+
+.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-title {
+    color: rgb(236, 91, 98);
+  }
+
+.spectrum--dark .spectrum-Dialog--error .spectrum-Dialog-typeIcon{
+    color: rgb(236, 91, 98);
+  }

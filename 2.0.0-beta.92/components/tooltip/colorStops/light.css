@@ -1,0 +1,66 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+/* topdoc
+---
+name: Tooltip
+description: A Spectrum tooltip
+status: Released
+markup: |
+  <span class="spectrum-Tooltip spectrum-Tooltip--top is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--left is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--right is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+  <br><br>
+
+  <span class="spectrum-Tooltip spectrum-Tooltip--bottom is-open">
+    <span class="spectrum-Tooltip-label">Normal Tooltip</span>
+    <span class="spectrum-Tooltip-tip"></span>
+  </span>
+
+*/
+
+.spectrum-Tooltip,
+  .spectrum-Tooltip .spectrum-Tooltip-tip::after {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+  }
+
+.spectrum-Tooltip--error,
+  .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
+    background-color: rgb(201, 37, 45);
+  }
+
+.spectrum-Tooltip--info,
+  .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
+    background-color: rgb(13, 102, 208);
+  }
+
+.spectrum-Tooltip--success,
+  .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
+    background-color: rgb(18, 128, 92);
+  }

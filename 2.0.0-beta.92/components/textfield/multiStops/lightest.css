@@ -1,0 +1,204 @@
+/* Temporary skin variables that need to be moved into origins */
+
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+
+.spectrum--lightest {
+/* TODO: is it wonky that textarea shares the selector? */
+/* It's a little wonky, right? */
+
+/* topdoc
+---
+name: Text Area - Default
+description: A Spectrum text area - (a multiline text field)
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline">
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline" disabled>
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline is-invalid" required>
+  </textarea>
+
+*/
+
+/* topdoc
+---
+name: Text Area - Quiet
+description: A Spectrum text area - quiet
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet">
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet" disabled>
+  </textarea>
+
+  <textarea placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline spectrum-Textfield--quiet is-invalid" required>
+  </textarea>
+
+*/
+}
+
+/* topdoc
+---
+name: Text Field - Default
+description: A Spectrum text field
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield">
+
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield" disabled>
+
+  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield" pattern="[\d]+" required>
+
+*/
+
+.spectrum--lightest .spectrum-Textfield {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(234, 234, 234);
+  color: rgb(80, 80, 80);
+}
+
+.spectrum--lightest .spectrum-Textfield:-ms-input-placeholder {
+    color: rgb(149, 149, 149);
+  }
+
+.spectrum--lightest .spectrum-Textfield::placeholder {
+    color: rgb(149, 149, 149);
+  }
+
+.spectrum--lightest .spectrum-Textfield:hover {
+    border-color: rgb(211, 211, 211);
+    box-shadow: none;
+  }
+
+.spectrum--lightest .spectrum-Textfield:hover:-ms-input-placeholder {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum--lightest .spectrum-Textfield:hover::placeholder {
+      color: rgb(50, 50, 50);
+    }
+
+.spectrum--lightest .spectrum-Textfield:focus {
+    border-color: rgb(38, 128, 235);
+  }
+
+.spectrum--lightest .spectrum-Textfield.focus-ring:not(:active) {
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 0 0 1px rgb(55, 142, 240);
+    }
+
+.spectrum--lightest .spectrum-Textfield[disabled] {
+    background-color: rgb(244, 244, 244);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgb(188, 188, 188);
+
+    /* For safari mobile browser */
+    -webkit-text-fill-color: rgb(188, 188, 188);
+  }
+
+.spectrum--lightest .spectrum-Textfield[disabled]:-ms-input-placeholder {
+      color: rgb(188, 188, 188);
+    }
+
+.spectrum--lightest .spectrum-Textfield[disabled]::placeholder {
+      color: rgb(188, 188, 188);
+    }
+
+.spectrum--lightest .spectrum-Textfield.is-invalid,
+  .spectrum--lightest .spectrum-Textfield:invalid {
+    border-color: rgb(236, 91, 98);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath style='fill:rgb%28236%2C 91%2C 98%29' d='M17.127%2C2.579.4%2C32.512A1%2C1%2C0%2C0%2C0%2C1.272%2C34H34.728a1%2C1%2C0%2C0%2C0%2C.873-1.488L18.873%2C2.579A1%2C1%2C0%2C0%2C0%2C17.127%2C2.579ZM20%2C29.5a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-3a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Zm0-6a.5.5%2C0%2C0%2C1-.5.5h-3a.5.5%2C0%2C0%2C1-.5-.5v-12a.5.5%2C0%2C0%2C1%2C.5-.5h3a.5.5%2C0%2C0%2C1%2C.5.5Z'/%3E%3C/svg%3E");
+  }
+
+/* might break things due to pre-defined focus-ring */
+
+.spectrum--lightest .spectrum-Textfield.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield:invalid.focus-ring:not(:active) {
+        border-color: rgb(236, 91, 98);
+        box-shadow: 0 0 0 1px rgb(236, 91, 98);
+      }
+
+/* topdoc
+---
+name: Text Field - Quiet
+description: A Spectrum text field - quiet
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet">
+
+  <input type="text" placeholder="Enter your name" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet" disabled>
+
+  <input type="text" placeholder="Enter your name" name="field" value="Not a valid input" class="spectrum-Textfield spectrum-Textfield--quiet" pattern="[\d]+" required>
+
+*/
+
+.spectrum--lightest .spectrum-Textfield--quiet {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(234, 234, 234);
+}
+
+.spectrum--lightest .spectrum-Textfield--quiet:hover {
+    border-color: rgb(211, 211, 211);
+  }
+
+.spectrum--lightest .spectrum-Textfield--quiet:active {
+    border-color: rgb(38, 128, 235);
+  }
+
+.spectrum--lightest .spectrum-Textfield--quiet:focus {
+    border-color: rgb(55, 142, 240);
+    box-shadow: 0 1px 0 rgb(55, 142, 240);
+  }
+
+.spectrum--lightest .spectrum-Textfield--quiet.focus-ring:not(:active) {
+      border-color: rgb(55, 142, 240);
+      box-shadow: 0 1px 0 rgb(55, 142, 240);
+    }
+
+.spectrum--lightest .spectrum-Textfield--quiet:disabled {
+    background-color: rgba(0, 0, 0, 0);
+    border-color:  rgb(234, 234, 234);
+  }
+
+.spectrum--lightest .spectrum-Textfield--quiet.is-invalid,
+  .spectrum--lightest .spectrum-Textfield--quiet:invalid {
+    border-color: rgb(236, 91, 98);
+  }
+
+.spectrum--lightest .spectrum-Textfield--quiet.is-invalid:focus, .spectrum--lightest .spectrum-Textfield--quiet:invalid:focus {
+      box-shadow: 0 1px 0 rgb(236, 91, 98);
+    }
+
+/* might break things due to pre-defined focus-ring */
+
+.spectrum--lightest .spectrum-Textfield--quiet.is-invalid.focus-ring:not(:active), .spectrum--lightest .spectrum-Textfield--quiet:invalid.focus-ring:not(:active) {
+        border-color: rgb(236, 91, 98);
+        box-shadow: 0 1px 0 rgb(236, 91, 98);
+      }

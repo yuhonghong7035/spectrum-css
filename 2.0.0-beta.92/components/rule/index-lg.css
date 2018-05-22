@@ -1,0 +1,22 @@
+/* topdoc
+---
+name: Rule - Default
+description:
+status: Beta
+markup: |
+  <h2 class="spectrum-Heading--subtitle1">Main Section (Text Customizable or Optional)</h2>
+  <hr class="spectrum-Rule">
+
+*/.spectrum-Rule {
+
+  /* Add the correct box sizing for hr in Firefox. */
+  box-sizing: content-box;
+  height: 0;
+
+  /* Show the overflow for hr in Edge and IE. */
+  overflow: visible;
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2px;
+}

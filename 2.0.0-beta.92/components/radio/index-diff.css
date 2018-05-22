@@ -1,0 +1,28 @@
+.spectrum--large .spectrum-Radio {
+
+  padding: 0 10px;
+  margin-left: -10px;
+
+  height: 40px;
+  line-height: 40px
+}
+.spectrum--large .spectrum-Radio-input:checked + .spectrum-Radio-button {
+    border-width: 7px;
+
+  }
+.spectrum--large .spectrum-Radio-label {
+  margin-left: 13px;
+
+  font-size: 17px;
+
+  transition: color 125ms ease-in-out;
+}
+.spectrum--large .spectrum-Radio-button {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 9px;
+  border-width: 2px;
+
+  transition: border 125ms ease-in-out, box-shadow 125ms ease-in-out;
+}
