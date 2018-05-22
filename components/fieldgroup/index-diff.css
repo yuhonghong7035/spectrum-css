@@ -1,7 +1,0 @@
-.spectrum--large .spectrum-FieldGroup--vertical .spectrum-Radio,
-  .spectrum--large .spectrum-FieldGroup--vertical .spectrum-Checkbox {
-    margin: 0 0 0 -10px;
-  }
-.spectrum--large .spectrum-FieldGroup--vertical + .spectrum-FieldGroup--vertical {
-    margin-left: 15px
-  }
