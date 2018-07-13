@@ -1,0 +1,94 @@
+/* generated from dna-version: 4.7.2 */
+.spectrum {
+  font-family: adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+}
+.spectrum:lang(zh-Hans) {
+    font-family: adobe-clean-han-simplified-c, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum:lang(zh) {
+    font-family: adobe-clean-han-traditional, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum:lang(ko) {
+    font-family: adobe-clean-han-korean, adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+.spectrum:lang(ja) {
+    font-family: adobe-clean-han-japanese,  adobe-clean, Source Sans Pro, Helvetica, Arial, sans-serif;
+  }
+/* topdoc
+---
+name: Typography - Default
+description: The default Spectrum Typography elements
+status: Beta
+markup: |
+  <h1 class="spectrum-Heading--display">Display (h1)</h1>
+  <h2 class="spectrum-Heading--pageTitle">Page Title (h2)</h2>
+  <h2 class="spectrum-Heading--subtitle1">Subtitle 1 (h2)</h2>
+  <h3 class="spectrum-Heading--subtitle2">Subtitle 2 (h3)</h3>
+  <h4 class="spectrum-Heading--subtitle3">Subtitle 3 (h4)</h4>
+
+  <p class="spectrum-Body--small">Small Body Text</p>
+  <p class="spectrum-Body">Default Body Text</p>
+  <p class="spectrum-Body--secondary">Secondary Body Text</p>
+  <p class="spectrum-Body--italic"> Body Text Italic</p>
+  <p class="spectrum-Body--large">Large Body Text</p>
+
+*/
+.spectrum,
+.spectrum-Body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.spectrum-Body--italic {
+  font-style: italic;
+}
+.spectrum-Body--large {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.spectrum-Body--small {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.spectrum-Body--secondary {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.spectrum-Heading--display {
+  font-weight: 300;
+  font-size: 49px;
+  line-height: 1.5;
+}
+.spectrum-Heading--pageTitle {
+
+  /**
+  * Normalize the margin on `h1` elements within `section` and
+  * `article` contexts in Chrome, Firefox, and Safari.
+  */
+  margin: 0.67em 0;
+
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 1.5;
+}
+.spectrum-Heading--subtitle1 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+}
+.spectrum-Heading--subtitle2 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 25px;
+}
+.spectrum-Heading--subtitle3 {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

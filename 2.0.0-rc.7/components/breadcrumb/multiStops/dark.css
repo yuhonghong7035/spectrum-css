@@ -1,0 +1,112 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--dark {
+
+/* topdoc
+---
+name: Breadcrumbs - Default
+description: The default Spectrum breadcrumbs
+status: Beta
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <nav>
+    <ul class="spectrum-Breadcrumbs">
+      <li class="spectrum-Breadcrumbs-item">
+        <a class="spectrum-Breadcrumbs-itemLink" href="#">Nike</a>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumbs-item">
+        <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Mens</a>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumbs-item">
+        <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">Summer 2016</a>
+      </li>
+    </ul>
+  </nav>
+
+*/
+
+/* topdoc
+---
+name: Breadcrumbs - Title
+description: A Spectrum 'page title' breadcrumbs
+status: Beta
+modifiers:
+  ':hover': Hover state
+  ':focus': Focused
+  ':active': Active state
+markup: |
+  <nav>
+    <ul class="spectrum-Breadcrumbs spectrum-Breadcrumbs--title">
+      <li class="spectrum-Breadcrumbs-item">
+        <a class="spectrum-Breadcrumbs-itemLink" href="#">Home</a>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumbs-item">
+        <a class="spectrum-Breadcrumbs-itemLink" role="link" tabindex="0">Playground</a>
+        <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightSmall spectrum-Breadcrumbs-itemSeparator" focusable="false" aria-hidden="true">
+          <use xlink:href="#spectrum-css-icon-ChevronRightSmall" />
+        </svg>
+      </li>
+      <li class="spectrum-Breadcrumbs-item">
+        <h1 class="spectrum-Heading--pageTitle">
+          <a class="spectrum-Breadcrumbs-itemLink" role="link" aria-current="page">Sliders</a>
+        </h1>
+      </li>
+    </ul>
+  </nav>
+
+*/
+}
+.spectrum--dark .spectrum-Breadcrumbs-item {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Breadcrumbs-item .spectrum-Breadcrumbs-itemSeparator {
+    color: rgb(92, 92, 92);
+  }
+.spectrum--dark .spectrum-Breadcrumbs-item .spectrum-Breadcrumbs-itemLink {
+    color: inherit;
+    text-decoration: none;
+  }
+.spectrum--dark .spectrum-Breadcrumbs-item .spectrum-Breadcrumbs-itemLink:hover {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-Breadcrumbs-item .spectrum-Breadcrumbs-itemLink.focus-ring {
+      color: rgb(75, 156, 245);
+      outline: 0;
+      border-bottom: 2px solid rgb(75, 156, 245);
+    }
+.spectrum--dark .spectrum-Breadcrumbs-item .spectrum-Breadcrumbs-itemLink:active {
+      color: rgb(255, 255, 255);
+      border-bottom: 0;
+    }
+.spectrum--dark .spectrum-Breadcrumbs-item.is-selected,
+  .spectrum--dark .spectrum-Breadcrumbs-item:last-of-type {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Breadcrumbs-item.is-selected ~ .spectrum-Breadcrumb:last-of-type {
+        color: rgb(153, 153, 153);
+      }
+.spectrum--dark .spectrum-Breadcrumbs-item.is-selected .spectrum-Breadcrumbs-itemLink.focus-ring {
+        color: rgb(255, 255, 255);
+        border-bottom: 0;
+      }

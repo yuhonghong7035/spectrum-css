@@ -1,0 +1,27 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-BarLoader .spectrum-BarLoader-fill {
+    background: rgb(38, 128, 235);
+  }
+.spectrum-BarLoader .spectrum-BarLoader-track {
+    background-color: rgb(45, 45, 45);
+  }
+.spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-fill {
+      background: rgb(255, 255, 255);
+    }
+.spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-label,
+    .spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-percentage {
+      color: rgb(255, 255, 255);
+    }
+.spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-track {
+      background-color: rgba(255,255,255,0.2);
+    }

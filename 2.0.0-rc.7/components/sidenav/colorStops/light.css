@@ -1,0 +1,117 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+---
+name: SideNav - Default
+description: Side navigation provides access to information and features for a user.
+status: Released
+markup: |
+  <nav>
+    <ul class="spectrum-SideNav">
+      <li class="spectrum-SideNav-item is-selected">
+        <a href="#" class="spectrum-SideNav-itemLink" aria-current="page">Section Title 1</a>
+      </li>
+      <li class="spectrum-SideNav-item is-disabled">
+        <a class="spectrum-SideNav-itemLink">Section Title 2</a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 3</a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 4</a>
+      </li>
+    </ul>
+  </nav>
+
+*/
+/* topdoc
+---
+name: SideNav - Multilevel
+description: Multilevel Side navigation provides access to information and features for a user.
+status: Released
+markup: |
+  <nav>
+    <ul class="spectrum-SideNav spectrum-SideNav--multiLevel">
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 1</a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 2</a>
+        <ul class="spectrum-SideNav">
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Section  Title 1</a>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Section  Title 2</a>
+            <ul class="spectrum-SideNav">
+              <li class="spectrum-SideNav-item">
+                <a href="#" class="spectrum-SideNav-itemLink">Section Title 1</a>
+              </li>
+              <li class="spectrum-SideNav-item">
+                <a href="#" class="spectrum-SideNav-itemLink">Section Title 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="spectrum-SideNav-item">
+            <a href="#" class="spectrum-SideNav-itemLink">Section Title 3</a>
+          </li>
+        </ul>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 4</a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 5</a>
+      </li>
+      <li class="spectrum-SideNav-item">
+        <a href="#" class="spectrum-SideNav-itemLink">Section Title 6</a>
+      </li>
+    </ul>
+  </nav>
+
+*/
+.spectrum-SideNav-item.is-selected > .spectrum-SideNav-itemLink {
+      color: rgb(44, 44, 44);
+      background-color: rgba(44,44,44,0.06);
+    }
+.spectrum-SideNav-item .is-active > .spectrum-SideNav-itemLink {
+      background-color: rgba(44,44,44,0.06);
+    }
+/* Disable all children */
+.spectrum-SideNav-item.is-disabled .spectrum-SideNav-itemLink {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(179, 179, 179);
+
+      cursor: default;
+      pointer-events: none;
+    }
+.spectrum-SideNav-itemLink {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(75, 75, 75);
+}
+.spectrum-SideNav-itemLink:hover {
+    background-color: rgba(44,44,44,0.06);
+    color: rgb(44, 44, 44);
+  }
+.spectrum-SideNav-itemLink:active {
+    background-color: rgba(44,44,44,0.06);
+  }
+.spectrum-SideNav-itemLink.focus-ring {
+    background-color: rgba(44,44,44,0.06);
+    color: rgb(44, 44, 44);
+  }
+.spectrum-SideNav-itemLink.focus-ring::before {
+      border-color: rgb(38, 128, 235);
+    }
+.spectrum-SideNav-heading {
+  color: rgb(112, 112, 112);
+}

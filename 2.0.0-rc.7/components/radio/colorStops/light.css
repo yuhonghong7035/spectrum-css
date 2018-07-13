@@ -1,0 +1,155 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-Radio-input:checked + .spectrum-Radio-button {
+    border-color: rgb(20, 115, 230);
+  }
+.spectrum-Radio-input.focus-ring + .spectrum-Radio-button {
+      border-color: rgb(38, 128, 235);
+      box-shadow: 0 0 0 1px rgb(38, 128, 235);
+
+    }
+.spectrum-Radio-input.focus-ring ~ .spectrum-Radio-label {
+      color: rgb(13, 102, 208);
+    }
+.spectrum-Radio-label {
+  color: rgb(75, 75, 75);
+}
+.spectrum-Radio-button {
+  background-color: rgb(250, 250, 250);
+  border-color: rgb(142, 142, 142);
+}
+/* topdoc
+---
+name: Radio - Default
+description: The Spectrum radio thingy
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+    <span class="spectrum-Radio-button"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+  </div>
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+    <span class="spectrum-Radio-button"></span>
+    <label class="spectrum-Radio-label" for="radio-0">Puppies</label>
+  </div>
+
+*/
+.spectrum-Radio:hover .spectrum-Radio-button {
+      border-color: rgb(112, 112, 112);
+      box-shadow: none;
+    }
+.spectrum-Radio:hover .spectrum-Radio-input:checked + .spectrum-Radio-button {
+      border-color: rgb(13, 102, 208);
+
+    }
+.spectrum-Radio:hover .spectrum-Radio-label {
+      color: rgb(44, 44, 44);
+    }
+.spectrum-Radio:active .spectrum-Radio-button {
+      border-color: rgb(75, 75, 75);
+    }
+.spectrum-Radio:active .spectrum-Radio-input:checked + .spectrum-Radio-button {
+      border-color: rgb(9, 90, 186);
+
+    }
+.spectrum-Radio:active .spectrum-Radio-label {
+      color: rgb(44, 44, 44);
+    }
+.spectrum-Radio.is-invalid .spectrum-Radio-button {
+      border-color: rgb(215, 55, 63);
+    }
+.spectrum-Radio.is-invalid .spectrum-Radio-label {
+      color: rgb(215, 55, 63);
+    }
+/* topdoc
+---
+name: Radio - Invalid
+description: The 'invalid' Spectrum radio
+status: Released
+modifiers:
+  ':hover': Hover state
+  ':active': Active state
+  ':focus': Focused
+markup: |
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0">
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1" checked>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form
+  <form>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-0-disabled" disabled>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-0">Kittens</label>
+    </div>
+    <div class="spectrum-Radio is-invalid">
+      <input type="radio" name="pets" class="spectrum-Radio-input" id="radio-1-disabled" checked disabled>
+      <span class="spectrum-Radio-button"></span>
+      <label class="spectrum-Radio-label" for="radio-1">Puppies</label>
+    </div>
+  </form>
+
+*/
+.spectrum-Radio.is-invalid:hover .spectrum-Radio-input + .spectrum-Radio-button {
+      border-color: rgb(201, 37, 45);
+    }
+.spectrum-Radio.is-invalid:hover .spectrum-Radio-label {
+      color: rgb(201, 37, 45);
+    }
+.spectrum-Radio.is-invalid:active .spectrum-Radio-input +.spectrum-Radio-button {
+      border-color: rgb(187, 18, 26);
+
+    }
+.spectrum-Radio.is-invalid:active .spectrum-Radio-label {
+      color: rgb(187, 18, 26);
+    }
+/* topdoc
+---
+name: Radio - Disabled
+description: The 'disabled' Spectrum radio
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-disable-0" disabled>
+    <span class="spectrum-Radio-button"></span>
+    <label class="spectrum-Radio-label" for="radio-disable-0">Kittens</label>
+  </div>
+  <div class="spectrum-Radio">
+    <input type="radio" name="pets-disabled" class="spectrum-Radio-input" id="radio-1" disabled checked>
+    <span class="spectrum-Radio-button"></span>
+    <label class="spectrum-Radio-label" for="radio-disable-0">Puppies</label>
+  </div>
+
+*/
+.spectrum-Radio-input:disabled + .spectrum-Radio-button {
+    border-color: rgb(202, 202, 202) !important;
+  }
+.spectrum-Radio-input:disabled ~ .spectrum-Radio-label {
+    color: rgb(179, 179, 179) !important;
+  }

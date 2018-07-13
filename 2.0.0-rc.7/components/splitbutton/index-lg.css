@@ -1,0 +1,166 @@
+/* generated from dna-version: 4.7.2 */
+/* topdoc
+---
+name: SplitButton - CTA
+description: A CTA split button.
+status: Beta
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="spectrum-SplitButton spectrum-SplitButton--left">
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <button class="spectrum-Button spectrum-Button--cta spectrum-SplitButton-action">Split Button</button>
+  </div>
+
+*/
+/* topdoc
+---
+name: SplitButton - Primary
+description: A primary split button.
+status: Beta
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="spectrum-SplitButton spectrum-SplitButton--left">
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <button class="spectrum-Button spectrum-Button--primary spectrum-SplitButton-action">Split Button</button>
+  </div>
+
+*/
+/* topdoc
+---
+name: SplitButton - Secondary
+description: A secondary split button.
+status: Beta
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div class="spectrum-SplitButton">
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="spectrum-SplitButton spectrum-SplitButton--left">
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-trigger">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-SplitButton-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <button class="spectrum-Button spectrum-Button--secondary spectrum-SplitButton-action">Split Button</button>
+  </div>
+*/
+.spectrum-SplitButton {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  vertical-align: top;
+}
+/* Spacing for buttons placed inline */
+.spectrum-SplitButton + .spectrum-SplitButton,
+  .spectrum-SplitButton + .spectrum-Button {
+    margin-left: 15px;
+  }
+/* Spacing for buttons placed inline */
+.spectrum-Button + .spectrum-SplitButton {
+  margin-left: 15px;
+}
+.spectrum-SplitButton-action {
+  margin-left: 0;
+
+  border-radius: 20px 0 0 20px;
+}
+/* CTA is special and doesn't have a border between the buttons */
+.spectrum-SplitButton-action.spectrum-Button--cta {
+    border-right: 0;
+    margin-right: 2px;
+  }
+.spectrum-SplitButton-action + .spectrum-SplitButton-trigger {
+    /* Override button + button style */
+    margin-left: 0;
+  }
+.spectrum-SplitButton-trigger {
+  margin-left: 0;
+
+  border-radius: 0 20px 20px 0;
+  border-left-width: 0;
+
+  padding-left: 10.00005px;
+  padding-right: 13px;
+}
+.spectrum-SplitButton-trigger.focus-ring {
+    box-shadow: none;
+  }
+.spectrum-SplitButton-icon {
+  display: block;
+  margin-top: 1px;
+}
+.spectrum-SplitButton-action,
+.spectrum-SplitButton-trigger {
+  position: relative;
+}
+.spectrum-SplitButton-action:focus, .spectrum-SplitButton-trigger:focus {
+    /* Be on top when focused or border leaks */
+    z-index: 1;
+  }
+.spectrum-SplitButton-action .spectrum-Button-label + .spectrum-Icon {
+    margin-left: 15px;
+  }
+.spectrum-SplitButton--left .spectrum-SplitButton-action {
+    border-radius: 0 20px 20px 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+/* CTA is special and doesn't have a border between the buttons */
+.spectrum-SplitButton--left .spectrum-SplitButton-action.spectrum-Button--cta {
+      border-left: 0;
+      margin-left: 2px;
+    }
+.spectrum-SplitButton--left .spectrum-SplitButton-trigger {
+    margin-right: 0;
+
+    border-radius: 20px 0 0 20px;
+
+    border-left-width: 2px;
+    border-right-width: 0;
+
+    padding-right: 10.00005px;
+    padding-left: 13px;
+  }
