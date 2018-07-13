@@ -1,0 +1,90 @@
+/* generated from dna-version: 4.7.2 */
+.spectrum--large .spectrum-Tooltip {
+  visibility: hidden;
+
+  opacity: 0;
+
+  transition: transform 125ms ease-in-out,
+              opacity 125ms ease-in-out,
+              visibility 0ms linear 125ms;
+
+  pointer-events: none;
+}
+.spectrum--large .spectrum-Tooltip.is-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  transition-delay: 0ms;
+
+  pointer-events: auto;
+}
+.spectrum--large .spectrum-Tooltip--bottom.is-open {
+  transform: translateY(6px);
+}
+.spectrum--large .spectrum-Tooltip--top.is-open {
+  transform: translateY(-6px);
+}
+.spectrum--large .spectrum-Tooltip--right.is-open {
+  transform: translateX(6px);
+}
+.spectrum--large .spectrum-Tooltip--left.is-open {
+  transform: translateX(-6px);
+}
+.spectrum--large .spectrum-Tooltip {
+  max-width: 256px;
+  padding: 5px 13px;
+  border-radius: 5px;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.spectrum--large .spectrum-Tooltip-tip {
+  width: 11px;
+  height: 11px;
+}
+.spectrum--large .spectrum-Tooltip-tip::after {
+    width: 10px;
+    height: 10px;
+  }
+.spectrum--large .spectrum-Tooltip--right .spectrum-Tooltip-tip, .spectrum--large .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    top: calc(50% - 5.5px);
+  }
+.spectrum--large .spectrum-Tooltip--right {
+  margin-left: 3px;
+}
+.spectrum--large .spectrum-Tooltip--right .spectrum-Tooltip-tip {
+    left: -10px;
+    top: calc(50% - 5px);
+  }
+.spectrum--large .spectrum-Tooltip--left {
+  margin-right: 3px;
+}
+.spectrum--large .spectrum-Tooltip--left .spectrum-Tooltip-tip {
+    right: -10px;
+  }
+.spectrum--large .spectrum-Tooltip--bottom {
+  margin-top: 3px;
+}
+.spectrum--large .spectrum-Tooltip--bottom .spectrum-Tooltip-tip {
+    top: -10px;
+  }
+.spectrum--large .spectrum-Tooltip--top {
+  margin-bottom: 3px;
+}
+.spectrum--large .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+    bottom: -10px;
+  }
+.spectrum--large .spectrum-Tooltip--bottom .spectrum-Tooltip-tip, .spectrum--large .spectrum-Tooltip--top .spectrum-Tooltip-tip {
+    margin-left: -5.5px;
+  }
+.spectrum--large .spectrum-Tooltip-typeIcon {
+  margin-right: 10px;
+}
+.spectrum--large .spectrum-Tooltip-label {
+  line-height: 19px;
+}
+.spectrum--large .u-tooltip-showOnHover .spectrum-Tooltip {
+    transition: transform 125ms ease-in-out;
+  }

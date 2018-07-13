@@ -1,0 +1,28 @@
+/* generated from dna-version: 4.7.2 */
+:root {
+  /* Field group */
+}
+/* topdoc
+{{ fieldgroup/fieldgroup-default.yml }}
+*/
+.spectrum-FieldGroup {
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: top;
+}
+/* topdoc
+{{ fieldgroup/fieldgroup-vertical.yml }}
+*/
+.spectrum-FieldGroup--vertical {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.spectrum-FieldGroup--vertical .spectrum-Radio,
+  .spectrum-FieldGroup--vertical .spectrum-Checkbox {
+    margin: 0;
+  }
+/* topdoc
+{{ fieldgroup/fieldgroup-labelsbelow.yml }}
+*/

@@ -1,0 +1,55 @@
+/* generated from dna-version: 4.7.2 */
+/* topdoc
+{{ fieldlabel/fieldlabel.yml }}
+*/
+.spectrum-FieldLabel,
+.spectrum-Form-itemLabel {
+  display: block;
+
+  min-width: 100px;
+  box-sizing: border-box;
+
+  margin: 0 0 6px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  vertical-align: top;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+}
+/* topdoc
+{{ fieldlabel/fieldlabel-left.yml }}
+*/
+.spectrum-FieldLabel--left {
+  display: inline-block;
+  padding: 10px 5px 0 0;
+}
+/* topdoc
+{{ fieldlabel/fieldlabel-right.yml }}
+*/
+.spectrum-FieldLabel--right {
+  display: inline-block;
+  text-align: right;
+  padding: 10px 8px 0 0;
+}
+/* topdoc
+{{ form/index.yml }}
+*/
+.spectrum-Form {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  margin: -20px 0;
+}
+.spectrum-Form-item {
+  display: table-row;
+}
+.spectrum-Form-itemLabel {
+  display: table-cell;
+}
+.spectrum-Form-itemField {
+  display: table-cell;
+}

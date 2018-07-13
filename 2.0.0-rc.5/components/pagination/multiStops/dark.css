@@ -1,0 +1,21 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--dark .spectrum-Pagination-pageButton:hover {
+    background-color: rgba(255,255,255,0.04);
+  }
+.spectrum--dark .spectrum-Pagination-pageButton:focus {
+    border-color: rgb(38, 128, 235);
+  }
+.spectrum--dark .spectrum-Pagination-pageButton.is-selected {
+    background-color: rgb(205, 205, 205);
+    color: rgb(255, 255, 255);
+  }

@@ -1,0 +1,28 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-AssetList-item.focus-ring,
+  .spectrum-AssetList-item:hover {
+    background-color: rgb(57, 57, 57);
+  }
+.spectrum-AssetList-item.is-navigated {
+    /* gray background */
+    background-color: rgb(62, 62, 62);
+  }
+.spectrum-AssetList-item.is-navigated:hover {
+      background-color: rgb(62, 62, 62);
+    }
+.spectrum-AssetList-item.is-selected {
+    background-color: rgba(55,142,240,0.1);
+  }
+.spectrum-AssetList-item.is-selected:hover {
+      background-color: rgba(55,142,240,0.2);
+    }

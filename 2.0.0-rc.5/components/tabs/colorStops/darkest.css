@@ -1,0 +1,53 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+{{ tabs/tabs.yml }}
+*/
+/* topdoc
+{{ tabs/tabs-quiet.yml }}
+*/
+/* topdoc
+{{ tabs/tabs-compact.yml }}
+*/
+/* topdoc
+{{ tabs/tabs-quiet-compact.yml }}
+*/
+/* topdoc
+{{ tabs/tabs-vertical.yml }}
+*/
+.spectrum-Tabs {
+  border-bottom-color: rgb(38, 38, 38);
+}
+.spectrum-Tabs-selectionIndicator {
+  background-color: rgb(226, 226, 226);
+}
+.spectrum-Tabs-item {
+  color: rgb(133, 133, 133);
+}
+.spectrum-Tabs-item:hover {
+    color: rgb(226, 226, 226);
+  }
+.spectrum-Tabs-item.is-selected {
+    color: rgb(226, 226, 226);
+  }
+.spectrum-Tabs-item.focus-ring::before {
+      border-color: rgb(20, 115, 230);
+    }
+.spectrum-Tabs-item.is-disabled {
+    color: rgb(73, 73, 73);
+  }
+.spectrum-Tabs--quiet {
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+.spectrum-Tabs--quiet .spectrum-Tabs-selectionIndicator {
+    background-color: rgb(226, 226, 226);
+  }

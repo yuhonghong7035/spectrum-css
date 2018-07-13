@@ -1,0 +1,23 @@
+/* generated from dna-version: 4.7.2 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-Dropdown .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-icon {
+      color: rgb(50, 50, 50);
+    }
+.spectrum-Dropdown.is-invalid .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+      color: rgb(236, 91, 98);
+    }
+.spectrum-Dropdown.is-disabled .spectrum-Dropdown-icon, .spectrum-Dropdown.is-disabled .spectrum-Dropdown-trigger:hover .spectrum-Dropdown-icon {
+        color: rgb(188, 188, 188);
+      }
+.spectrum-Dropdown-icon {
+  color: rgb(80, 80, 80);
+}
