@@ -1,0 +1,107 @@
+/* generated from dna-version: 4.7.4 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* :before is used for the track of the switch */
+.spectrum--dark .spectrum-ToggleSwitch-switch::before {
+    background-color: rgb(62, 62, 62);
+  }
+/* :after is used for the handle of the switch */
+.spectrum--dark .spectrum-ToggleSwitch-switch::after {
+    background-color: rgb(47, 47, 47);
+    border-color: rgb(123, 123, 123);
+  }
+.spectrum--dark .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::before {
+      background-color: rgb(55, 142, 240);
+    }
+.spectrum--dark .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::after {
+      border-color: rgb(55, 142, 240);
+    }
+.spectrum--dark .spectrum-ToggleSwitch-input.focus-ring + .spectrum-ToggleSwitch-switch::after {
+        border-color: rgb(38, 128, 235);
+        box-shadow: 0 0 0 1px rgb(38, 128, 235);
+      }
+.spectrum--dark .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
+        background-color: rgb(38, 128, 235);
+      }
+.spectrum--dark .spectrum-ToggleSwitch-input.focus-ring ~ .spectrum-ToggleSwitch-label {
+      color: rgb(75, 156, 245);
+    }
+.spectrum--dark .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(153, 153, 153);
+          box-shadow: none;
+        }
+.spectrum--dark .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(75, 156, 245);
+        }
+.spectrum--dark .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(75, 156, 245);
+        }
+.spectrum--dark .spectrum-ToggleSwitch:hover .spectrum-ToggleSwitch-input ~ .spectrum-ToggleSwitch-label {
+        color: rgb(255, 255, 255);
+      }
+.spectrum--dark .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(205, 205, 205);
+        }
+.spectrum--dark .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(90, 169, 250);
+        }
+.spectrum--dark .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(90, 169, 250);
+        }
+.spectrum--dark .spectrum-ToggleSwitch:active .spectrum-ToggleSwitch-input ~ .spectrum-ToggleSwitch-label {
+        color: rgb(255, 255, 255);
+      }
+.spectrum--dark .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled ~ .spectrum-ToggleSwitch-label {
+        color: rgb(92, 92, 92);
+      }
+.spectrum--dark .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(77, 77, 77);
+        }
+.spectrum--dark .spectrum-ToggleSwitch .spectrum-ToggleSwitch-input:disabled:checked + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(77, 77, 77);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:checked + .spectrum-ToggleSwitch-switch::after {
+        /* Don't be blue */
+        border-color: rgb(123, 123, 123);
+      }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input.focus-ring:checked + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(38, 128, 235);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:disabled:checked + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:disabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab .spectrum-ToggleSwitch-input:disabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(77, 77, 77);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab:hover .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(153, 153, 153);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::before {
+          background-color: rgb(62, 62, 62);
+        }
+.spectrum--dark .spectrum-ToggleSwitch--ab:active .spectrum-ToggleSwitch-input:checked:enabled + .spectrum-ToggleSwitch-switch::after {
+          border-color: rgb(205, 205, 205);
+        }

@@ -1,0 +1,36 @@
+/* generated from dna-version: 4.7.4 */
+.spectrum--large .spectrum-BarLoader {
+  width: 182px;
+}
+.spectrum--large .spectrum-BarLoader-track {
+  width: 182px;
+  height: 6px;
+  border-radius: 4px;
+}
+.spectrum--large .spectrum-BarLoader-fill {
+  height: 6px;
+}
+.spectrum--large .spectrum-BarLoader-label, .spectrum--large .spectrum-BarLoader-percentage {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.spectrum--large .spectrum-BarLoader--sideLabel {
+  width: auto;
+}
+.spectrum--large .spectrum-BarLoader--sideLabel .spectrum-BarLoader-label {
+    margin-right: 12px;
+  }
+.spectrum--large .spectrum-BarLoader--sideLabel .spectrum-BarLoader-percentage {
+    margin-left: 12px;
+  }
+.spectrum--large .spectrum-BarLoader--small {
+  height: 4px;
+  min-width: 148px;
+}
+.spectrum--large .spectrum-BarLoader--small .spectrum-BarLoader-fill {
+    height: 4px;
+  }
+.spectrum--large .spectrum-BarLoader--small .spectrum-BarLoader-track {
+    height: 4px;
+    border-radius: 2px;
+  }

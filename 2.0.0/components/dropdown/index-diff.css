@@ -1,0 +1,43 @@
+/* generated from dna-version: 4.7.4 */
+.spectrum--large .spectrum-Dropdown {
+
+  min-width: 60px;
+}
+.spectrum--large .spectrum-Dropdown .spectrum-Popover {
+    min-width: 100%;
+  }
+.spectrum--large .spectrum-Dropdown-label {
+
+  height: 38px;
+  line-height: 38px;
+
+  font-size: 17px;
+}
+.spectrum--large .spectrum-Dropdown-label.is-placeholder {
+    font-weight: 400;
+    font-style: italic;
+    transition: color 125ms ease-in-out;
+  }
+.spectrum--large .spectrum-Dropdown--quiet .spectrum-Popover {
+    min-width: 0;
+    margin-top: 0px;
+    left: -15px;
+  }
+.spectrum--large .spectrum-Dropdown-label + .spectrum-Dropdown-icon {
+  margin-left: 15px;
+}
+.spectrum--large .spectrum-Dropdown-label ~ .spectrum-Dropdown-icon {
+  margin-left: 15px;
+}
+.spectrum--large .spectrum-Dropdown-icon {
+  transition: color 125ms ease-out;
+}
+.spectrum--large .spectrum-Dropdown .spectrum-Icon:not(.spectrum-Dropdown-icon) {
+    margin-left: 15px;
+  }
+.spectrum--large .spectrum-Icon + .spectrum-Dropdown-icon {
+  margin-left: 10px;
+}
+.spectrum--large .spectrum-Dropdown--quiet {
+  min-width: 60px
+}

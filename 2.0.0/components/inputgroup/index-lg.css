@@ -1,0 +1,192 @@
+/* generated from dna-version: 4.7.4 */
+/* topdoc
+name: Combo Box
+description: A combo box uses the input group component to display a field with a button next to it
+status: Beta
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-InputGroup">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field">
+    <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-InputGroup is-open">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field">
+    <button class="spectrum-FieldButton spectrum-InputGroup-button is-selected" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
+      <ul class="spectrum-Menu" role="listbox">
+        <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Ballard</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Fremont</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Greenwood</span>
+        </li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+          <span class="spectrum-Menu-itemLabel">United States of America</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-InputGroup is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field" disabled>
+    <button class="spectrum-FieldButton spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-InputGroup is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-InputGroup-field is-invalid">
+    <button class="spectrum-FieldButton spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+*/
+/* topdoc
+name: Combo Box - Quiet
+description: A combo box uses the input group component to display a field with a button next to it
+status: Beta
+markup: |
+  <h4>Default</h4>
+  <div class="spectrum-InputGroup spectrum-InputGroup--quiet">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
+    <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <h4>Open</h4>
+  <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-open">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field">
+    <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-selected" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+    <div class="spectrum-Popover spectrum-Popover--bottom is-open" style="position: absolute; top: 100%; width: 100%">
+      <ul class="spectrum-Menu" role="listbox">
+        <li class="spectrum-Menu-item is-selected" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Ballard</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Fremont</span>
+        </li>
+        <li class="spectrum-Menu-item" role="option" tabindex="0">
+          <span class="spectrum-Menu-itemLabel">Greenwood</span>
+        </li>
+        <li class="spectrum-Menu-divider" role="separator"></li>
+        <li class="spectrum-Menu-item is-disabled" role="option" aria-disabled="true">
+          <span class="spectrum-Menu-itemLabel">United States of America</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dummy-spacing"></div>
+
+  <h4>Disabled</h4>
+  <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-disabled">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" disabled>
+    <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button" aria-haspopup="true" disabled>
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+  <h4>Invalid</h4>
+  <div class="spectrum-InputGroup spectrum-InputGroup--quiet is-invalid">
+    <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field is-invalid">
+    <button class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button is-invalid" aria-haspopup="true">
+      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-InputGroup-icon" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+      </svg>
+    </button>
+  </div>
+
+*/
+/* topdoc
+name: Date Picker - Quiet
+description: A date picker uses the input group component to display a field with a button next to it
+status: Beta
+markup: |
+  <div aria-disabled="false" aria-invalid="false" class="spectrum-InputGroup spectrum-InputGroup--quiet spectrum-Datepicker" aria-readonly="false" aria-required="false" aria-haspopup="true">
+    <input type="text" class="spectrum-Textfield spectrum-Textfield--quiet spectrum-InputGroup-field" aria-invalid="false" placeholder="Choose a date" value="">
+      <button type="button" class="spectrum-FieldButton spectrum-FieldButton--quiet spectrum-InputGroup-button">
+        <svg viewBox="0 0 36 36" focusable="false" aria-hidden="true" role="img" class="spectrum-Icon spectrum-Icon--sizeS">
+          <path d="M33 6h-5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3H10V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H1a1 1 0 0 0-1 1v26a1 1 0 0 0 1 1h32a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1zm-1 26H2V8h4v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h14v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8h4z">
+          </path>
+          <path d="M6 12h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 18h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4zM6 24h4v4H6zm6 0h4v4h-4zm6 0h4v4h-4zm6 0h4v4h-4z">
+          </path>
+        </svg>
+    </button>
+  </div>
+
+*/
+:root {
+  /* Todo: move to DNA */
+}
+.spectrum-InputGroup {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-width: 240px;
+}
+.spectrum-InputGroup .spectrum-FieldButton {
+    padding: 0 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+.spectrum-InputGroup-field {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0;
+  -ms-flex: 1;
+      flex: 1;
+}
+.spectrum-InputGroup--quiet .spectrum-FieldButton {
+    border-radius: 0;
+
+    position: relative;
+    padding-right: 0;
+    border-bottom: 1px solid;
+  }
+/* More hitarea */
+.spectrum-InputGroup--quiet .spectrum-FieldButton:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 10px;
+      right: -10px;
+    }
+.spectrum-InputGroup--quiet .spectrum-InputGroup-icon {
+    right: 0;
+  }

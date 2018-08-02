@@ -1,0 +1,38 @@
+/* generated from dna-version: 4.7.4 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+---
+name: Well
+description: A Spectrum well
+status: Beta
+markup: |
+  <h3 class="spectrum-Heading--subtitle2">Well Label (Optional)</h3>
+  <span class="spectrum-Well">
+    <em>Well done is better than well said.</em>
+    <br>
+    <strong>Benjamin Franklin</strong>
+    <br><br>
+    Well said Ben!
+    <span class="spectrum-Well">
+      <em>Well done is better than well said.</em>
+      <br>
+      <strong>Benjamin Franklin</strong>
+      <br><br>
+      Well said Ben!
+    </span>
+  </span>
+
+*/
+.spectrum--dark .spectrum-Well {
+  background-color: rgba(205,205,205,0.02);
+  border-color: rgba(255,255,255,0.05);
+}
