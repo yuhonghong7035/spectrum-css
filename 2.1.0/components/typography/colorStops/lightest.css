@@ -1,0 +1,39 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum,
+.spectrum-Body {
+  color: rgb(80, 80, 80);
+}
+.spectrum-Body--large {
+  color: rgb(80, 80, 80);
+}
+.spectrum-Body--small {
+  color: rgb(80, 80, 80);
+}
+.spectrum-Body--secondary {
+  color: rgb(118, 118, 118);
+}
+.spectrum-Heading--display {
+  color: rgb(50, 50, 50);
+}
+.spectrum-Heading--pageTitle {
+  color: rgb(118, 118, 118);
+}
+.spectrum-Heading--subtitle1 {
+  color: rgb(50, 50, 50);
+}
+.spectrum-Heading--subtitle2 {
+  color: rgb(50, 50, 50);
+}
+.spectrum-Heading--subtitle3 {
+  color: rgb(118, 118, 118);
+}

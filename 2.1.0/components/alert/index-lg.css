@@ -1,0 +1,83 @@
+/* generated from dna-version: 4.8.1 */
+:root {
+
+  /* DNA */
+}
+/* topdoc
+---
+name: Alert - Closable
+description: The closable Spectrum alert. It has a close button in the footer. Combine this strategy with any variant.
+status: Beta
+markup: |
+  <div class="spectrum-Alert spectrum-Alert--error">
+    <svg class="spectrum-Icon spectrum-UIIcon-AlertMedium spectrum-Alert-icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#spectrum-css-icon-AlertMedium" />
+    </svg>
+    <div class="spectrum-Alert-header">Incorrect Payment Information - Error</div>
+    <div class="spectrum-Alert-content">This is an alert.</div>
+    <div class="spectrum-Alert-footer">
+      <button class="spectrum-Button spectrum-Button--primary spectrum-Button--quiet">Close</button>
+    </div>
+  </div>
+
+*/
+.spectrum-Alert {
+  position: relative;
+
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 368px;
+  min-height: 38px;
+  margin: 8px 0;
+  padding: 20px 20px;
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+}
+.spectrum-Alert-icon {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 20px;
+}
+.spectrum-Alert-header {
+  display: inline-block;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+
+  /* Leave room for the icon */
+  padding-right: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 14px;
+  text-transform: none;
+}
+.spectrum-Alert-content {
+  display: block;
+  margin: 8px 0 0 0;
+  padding: 0;
+
+  font-size: 14px;
+  word-wrap: break-word;
+}
+.spectrum-Alert-footer {
+  display: block;
+
+  text-align: right;
+
+  padding-top: 0.5rem;
+}
+.spectrum-Alert-footer:empty {
+    display: none;
+  }
+.spectrum-Alert-footer .spectrum-Button {
+    margin-right: 0;
+
+    /* Spacing between buttons */
+    margin-left: 0.75rem;
+  }

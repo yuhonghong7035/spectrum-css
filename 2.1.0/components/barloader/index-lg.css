@@ -1,0 +1,154 @@
+/* generated from dna-version: 4.8.1 */
+/* topdoc
+---
+name: Bar Loader
+description: A bar loader
+status: Beta
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-BarLoader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-BarLoader-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-BarLoader" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-label">Loading</div>
+      <div class="spectrum-BarLoader-percentage">50%</div>
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-BarLoader spectrum-BarLoader--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-label">Loading</div>
+      <div class="spectrum-BarLoader-percentage">50%</div>
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+
+*/
+.spectrum-BarLoader {
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 182px;
+  vertical-align: top;
+}
+.spectrum-BarLoader-track {
+  /* Visually apply border radius to child elements */
+  overflow: hidden;
+  width: 182px;
+  height: 6px;
+  border-radius: 4px;
+}
+.spectrum-BarLoader-fill {
+  border: none;
+  height: 6px;
+
+  transition: width 1s;
+}
+.spectrum-BarLoader-label, .spectrum-BarLoader-percentage {
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.spectrum-BarLoader--sideLabel {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: auto;
+}
+.spectrum-BarLoader--sideLabel .spectrum-BarLoader-label {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+.spectrum-BarLoader--sideLabel .spectrum-BarLoader-percentage {
+    -ms-flex-order: 3;
+        order: 3;
+    text-align: right;
+    margin-left: 12px;
+    margin-bottom: 0;
+  }
+/* topdoc
+---
+name: Bar Loader - Small
+description: A small bar loader
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <div style="width: 200px; height: 25px; padding-top: 10px;">
+    <div class="spectrum-BarLoader spectrum-BarLoader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+      <div class="spectrum-BarLoader-label" hidden=""></div>
+    </div>
+  </div>
+  <div style="margin: 20px 0;">
+    <div class="spectrum-BarLoader spectrum-BarLoader--small" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-label">Loading</div>
+      <div class="spectrum-BarLoader-percentage">50%</div>
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin: 50px 0;">
+    <div class="spectrum-BarLoader spectrum-BarLoader--small spectrum-BarLoader--sideLabel" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+      <div class="spectrum-BarLoader-label">Loading</div>
+      <div class="spectrum-BarLoader-percentage">50%</div>
+      <div class="spectrum-BarLoader-track">
+        <div class="spectrum-BarLoader-fill" style="width: 50%;"></div>
+      </div>
+    </div>
+  </div>
+
+*/
+.spectrum-BarLoader--small {
+  height: 4px;
+  min-width: 148px;
+}
+.spectrum-BarLoader--small .spectrum-BarLoader-fill {
+    height: 4px;
+  }
+.spectrum-BarLoader--small .spectrum-BarLoader-track {
+    height: 4px;
+    border-radius: 2px;
+  }
+/* topdoc
+---
+name: Bar Loader - Over Background
+description: A Spectrum bar loader for full page overlays
+status: Released
+markup: |
+  <div style="width: 400px; height: 200px; background-color: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;">
+    <div>
+      <div class="spectrum-BarLoader spectrum-BarLoader--overBackground" value="50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="spectrum-BarLoader-label">Loading</div>
+        <div class="spectrum-BarLoader-percentage">50%</div>
+        <div class="spectrum-BarLoader-track">
+          <div class="spectrum-BarLoader-fill" handle="status" style="width: 50%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+*/

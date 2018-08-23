@@ -1,0 +1,348 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--light .spectrum-Checkbox-label {
+  color: rgb(75, 75, 75);
+}
+.spectrum--light .spectrum-Checkbox-checkmark,
+.spectrum--light .spectrum-Checkbox-partialCheckmark {
+  color: rgb(250, 250, 250);
+}
+.spectrum--light .spectrum-Checkbox-box {
+  border-color: rgb(142, 142, 142);
+  background-color: rgb(250, 250, 250);
+}
+/* Indetermiate is basically a checked state, so handle colors for checked state here */
+.spectrum--light .spectrum-Checkbox.is-indeterminate .spectrum-Checkbox-box,
+.spectrum--light .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+  border-color: rgb(20, 115, 230);
+}
+.spectrum--light .spectrum-Checkbox:hover.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: rgb(13, 102, 208);
+
+  }
+.spectrum--light .spectrum-Checkbox:active.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: rgb(9, 90, 186);
+
+  }
+/* topdoc
+---
+name: Checkbox - Default
+description: The Spectrum checkbox
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <label class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <br>
+  <label class="spectrum-Checkbox">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox with an extrordinarily long label please don't do this but if you did it should truncate text when it gets longer than the container which contains the checkbox which has an unacceptably long label</span>
+  </label>
+*/
+.spectrum--light .spectrum-Checkbox {
+  border-color: rgb(142, 142, 142);
+}
+.spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-box {
+      border-color: rgb(112, 112, 112);
+
+      box-shadow: none;
+    }
+.spectrum--light .spectrum-Checkbox:hover .spectrum-Checkbox-label {
+      color: rgb(44, 44, 44);
+    }
+.spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-box {
+      border-color: rgb(75, 75, 75);
+
+    }
+.spectrum--light .spectrum-Checkbox:active .spectrum-Checkbox-label {
+      color: rgb(44, 44, 44);
+    }
+/* topdoc
+---
+name: Checkbox - Disabled
+description: The 'disabled' Spectrum checkbox
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <label class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-3" disabled>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-disabled is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-5" disabled>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+
+*/
+.spectrum--light .spectrum-Checkbox-input:disabled + .spectrum-Checkbox-box {
+    /* Use important to override hover states */
+    border-color: rgb(202, 202, 202) !important;
+
+    background-color: rgb(250, 250, 250);
+  }
+.spectrum--light .spectrum-Checkbox-input:disabled ~ .spectrum-Checkbox-label {
+    color: rgb(179, 179, 179);
+  }
+/* Focus */
+.spectrum--light .spectrum-Checkbox-input.focus-ring + .spectrum-Checkbox-box {
+    /* Since the specificity of .focus-ring is less than :hover, we need important */
+    border-color: rgb(38, 128, 235) !important;
+
+    box-shadow: 0 0 0 1px rgb(38, 128, 235) !important;
+  }
+.spectrum--light .spectrum-Checkbox-input.focus-ring ~ .spectrum-Checkbox-label {
+    color: rgb(13, 102, 208) !important;
+  }
+/* topdoc
+---
+name: Checkbox - Quiet
+description: The quiet Spectrum checkbox
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <label class="spectrum-Checkbox spectrum-Checkbox--quiet">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox spectrum-Checkbox--quiet">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox spectrum-Checkbox--quiet is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox spectrum-Checkbox--quiet is-invalid">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox spectrum-Checkbox--quiet is-invalid is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox spectrum-Checkbox-quiet is-disabled">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-4" disabled checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+
+*/
+.spectrum--light .spectrum-Checkbox--quiet.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox--quiet .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+  border-color: rgb(112, 112, 112);
+}
+.spectrum--light .spectrum-Checkbox--quiet:hover.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox--quiet:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: rgb(75, 75, 75);
+  }
+.spectrum--light .spectrum-Checkbox--quiet:active.is-indeterminate .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox--quiet:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box {
+    border-color: rgb(44, 44, 44);
+  }
+/* topdoc
+---
+name: Checkbox - Invalid
+description: The 'invalid' Spectrum checkbox
+status: Released
+modifiers:
+  ':disabled': Disabled state
+  ':hover': Hover state
+  ':focus': Focused
+markup: |
+  <label class="spectrum-Checkbox is-invalid">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-0">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-invalid">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-1" checked>
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+  <label class="spectrum-Checkbox is-invalid is-indeterminate">
+    <input type="checkbox" class="spectrum-Checkbox-input" id="checkbox-2">
+    <span class="spectrum-Checkbox-box">
+      <svg class="spectrum-Icon spectrum-UIIcon-CheckmarkSmall spectrum-Checkbox-checkmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-CheckmarkSmall" />
+      </svg>
+      <svg class="spectrum-Icon spectrum-UIIcon-DashSmall spectrum-Checkbox-partialCheckmark" focusable="false" aria-hidden="true">
+        <use xlink:href="#spectrum-css-icon-DashSmall" />
+      </svg>
+    </span>
+    <span class="spectrum-Checkbox-label">Checkbox</span>
+  </label>
+
+*/
+/* Extra-specific selectors added here to handle checked state */
+.spectrum--light .spectrum-Checkbox.is-invalid .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+  .spectrum--light .spectrum-Checkbox.is-invalid .spectrum-Checkbox-box {
+    border-color: rgb(215, 55, 63);
+  }
+.spectrum--light .spectrum-Checkbox.is-invalid .spectrum-Checkbox-label {
+    color: rgb(201, 37, 45);
+  }
+.spectrum--light .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum--light .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-box {
+      border-color: rgb(201, 37, 45);
+    }
+.spectrum--light .spectrum-Checkbox.is-invalid:hover .spectrum-Checkbox-label {
+      color: rgb(187, 18, 26);
+    }
+.spectrum--light .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-input:checked + .spectrum-Checkbox-box,
+    .spectrum--light .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-box {
+      border-color: rgb(187, 18, 26);
+    }
+.spectrum--light .spectrum-Checkbox.is-invalid:active .spectrum-Checkbox-label {
+      color: rgb(187, 18, 26);
+    }
