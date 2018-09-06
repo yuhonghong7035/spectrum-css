@@ -1,0 +1,18 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+{{ well/well.yml }}
+*/
+.spectrum-Well {
+  background-color: rgba(180,180,180,0.02);
+  border-color: rgba(226,226,226,0.05);
+}

@@ -1,0 +1,17 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-Search-icon {
+  color: rgb(133, 133, 133);
+}
+.spectrum-Search-input:disabled ~ .spectrum-Search-icon {
+      color: rgb(73, 73, 73);
+    }

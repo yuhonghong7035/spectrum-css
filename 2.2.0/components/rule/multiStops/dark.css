@@ -1,0 +1,20 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--dark .spectrum-Rule--large {
+  background-color: rgb(205, 205, 205);
+}
+.spectrum--dark .spectrum-Rule--medium {
+  background-color: rgb(62, 62, 62);
+}
+.spectrum--dark .spectrum-Rule--small {
+  background-color: rgb(57, 57, 57);
+}

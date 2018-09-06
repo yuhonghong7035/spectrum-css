@@ -1,0 +1,21 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-Dropzone {
+  border-color: rgb(62, 62, 62);
+}
+.spectrum-Dropzone.is-dragged {
+    border-color: rgb(38, 128, 235);
+    background-color: rgba(55,142,240,0.1);
+  }
+.spectrum-Dropzone.is-dragged .spectrum-IllustratedMessage-illustration {
+      color: rgb(38, 128, 235);
+    }

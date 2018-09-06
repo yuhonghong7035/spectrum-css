@@ -1,0 +1,43 @@
+/* generated from dna-version: 4.8.1 */
+.spectrum--large .spectrum-Table-sortedIcon {
+  margin-left: 4px;
+
+  transition: transform 125ms ease-in-out;
+}
+.spectrum--large .spectrum-Table-headCell {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+  padding: 10px 16px;
+  transition: color 125ms ease-in-out;
+}
+.spectrum--large .spectrum-Table-body {
+  border-radius: 5px;
+}
+.spectrum--large .spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:first-child {
+      border-top-left-radius: 5px;
+    }
+.spectrum--large .spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:first-child .spectrum-Table-cell:last-child {
+      border-top-right-radius: 5px;
+    }
+.spectrum--large .spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:first-child {
+      border-bottom-left-radius: 5px;
+    }
+.spectrum--large .spectrum-Table:not(.spectrum-Table--quiet) tbody.spectrum-Table-body .spectrum-Table-row:last-child .spectrum-Table-cell:last-child {
+      border-bottom-right-radius: 5px;
+    }
+.spectrum--large .spectrum-Table-cell {
+  font-size: 17px;
+  line-height: 30px;
+  padding: 12px 16px;
+}
+.spectrum--large .spectrum-Table-row {
+  transition: background-color 125ms ease-in-out
+}
+.spectrum--large .spectrum-Table--quiet .spectrum-Table-body {
+    border-radius: 0;
+  }
+.spectrum--large .spectrum-Table-checkboxCell {
+  padding-right: 0;
+}

@@ -1,0 +1,20 @@
+/* generated from dna-version: 4.8.1 */
+.spectrum--large .spectrum-Rule {
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum--large .spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum--large .spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}

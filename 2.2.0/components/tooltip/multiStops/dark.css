@@ -1,0 +1,38 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+{{ tooltip/tooltip-demo-button.yml }}
+*/
+.spectrum--dark .spectrum-Tooltip,
+  .spectrum--dark .spectrum-Tooltip .spectrum-Tooltip-tip::after {
+    background-color: rgb(118, 118, 118);
+    color: rgb(255, 255, 255);
+  }
+/* topdoc
+{{ tooltip/tooltip.yml }}
+*/
+.spectrum--dark .spectrum-Tooltip--error,
+  .spectrum--dark .spectrum-Tooltip--error .spectrum-Tooltip-tip::after {
+    background-color: rgb(201, 37, 45);
+  }
+.spectrum--dark .spectrum-Tooltip--info,
+  .spectrum--dark .spectrum-Tooltip--info .spectrum-Tooltip-tip::after {
+    background-color: rgb(13, 102, 208);
+  }
+.spectrum--dark .spectrum-Tooltip--help,
+  .spectrum--dark .spectrum-Tooltip--help .spectrum-Tooltip-tip::after {
+    background-color: rgb(13, 102, 208);
+  }
+.spectrum--dark .spectrum-Tooltip--success,
+  .spectrum--dark .spectrum-Tooltip--success .spectrum-Tooltip-tip::after {
+    background-color: rgb(18, 128, 92);
+  }
