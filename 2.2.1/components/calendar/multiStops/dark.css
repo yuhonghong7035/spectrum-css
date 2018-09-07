@@ -1,0 +1,95 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--dark .spectrum-Calendar-prevMonth {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Calendar-nextMonth {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Calendar-dayOfWeek {
+  color: rgb(153, 153, 153);
+}
+.spectrum--dark .spectrum-Calendar-date:hover {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Calendar-date:hover:not(.is-selection-end):not(.is-selection-start):before {
+        background: rgba(255,255,255,0.06);
+      }
+.spectrum--dark .spectrum-Calendar-date:hover.is-selected {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-Calendar-date:hover.is-selected:not(.is-selection-end):not(.is-selection-start):before {
+          background: rgba(55,142,240,0.2);
+        }
+.spectrum--dark .spectrum-Calendar-date:hover.is-range-selection:before {
+        background: rgba(55,142,240,0.2);
+      }
+.spectrum--dark .spectrum-Calendar-date:active {
+    background-color: rgba(255,255,255,0.1);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selected {
+    color: rgb(255, 255, 255);
+    background: rgba(55,142,240,0.1);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selected:not(.is-range-selection) {
+    background: rgba(55,142,240,0.2);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-today {
+    color: rgb(205, 205, 205);
+    border-color: rgb(205, 205, 205);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-today:before {
+      border-color: rgb(205, 205, 205);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-today:hover.is-selected:not(.is-range-selection):before {
+          background: rgba(55,142,240,0.2);
+        }
+.spectrum--dark .spectrum-Calendar-date.is-today.is-disabled {
+      color: rgb(92, 92, 92);
+      border-color: rgb(77, 77, 77);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-today.is-disabled:before {
+        border-color: rgb(77, 77, 77);
+      }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection) {
+    background: rgba(255,255,255,0.06);
+    border-color: rgb(38, 128, 235);
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-today {
+      border-color: rgb(38, 128, 235);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection):active,
+    .spectrum--dark .spectrum-Calendar-date.is-focused:not(.is-range-selection).is-selected {
+      color: rgb(255, 255, 255);
+      background: rgba(55,142,240,0.2);
+      border-color: rgb(38, 128, 235);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-focused.is-selected:before {
+        background: rgba(55,142,240,0.2);
+      }
+.spectrum--dark .spectrum-Calendar-date.is-focused.is-range-selection:before {
+        background: rgba(55,142,240,0.2);
+      }
+.spectrum--dark .spectrum-Calendar-date.is-disabled {
+    color: rgb(92, 92, 92);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selection-start,
+  .spectrum--dark .spectrum-Calendar-date.is-selection-end {
+    color: rgb(255, 255, 255);
+  }
+.spectrum--dark .spectrum-Calendar-date.is-selection-start:after, .spectrum--dark .spectrum-Calendar-date.is-selection-end:after {
+      background-color: rgba(55,142,240,0.1);
+    }
+.spectrum--dark .spectrum-Calendar-date.is-selection-start.is-disabled, .spectrum--dark .spectrum-Calendar-date.is-selection-end.is-disabled {
+      color: rgb(92, 92, 92);
+    }

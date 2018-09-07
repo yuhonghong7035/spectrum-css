@@ -2,12 +2,12 @@
 <html lang="en-US">
   <meta charset="utf-8">
   <title>Redirecting…</title>
-  <link rel="canonical" href="2.2.1/docs/">
-  <meta http-equiv="refresh" content="0; url=2.2.1/docs/">
+  <link rel="canonical" href="<%= version %>/docs/">
+  <meta http-equiv="refresh" content="0; url=<%= version %>/docs/">
   <h1>Redirecting…</h1>
-  <a href="2.2.1/docs/">Click here if you are not redirected.</a>
+  <a href="<%= version %>/docs/">Click here if you are not redirected.</a>
   <script>
-    var url = '2.2.1/docs/';
+    var url = '<%= version %>/docs/';
     if (location.search && url.indexOf('?') === -1) {
       url = url.replace(/($|#)/, location.search + '$1');
     }

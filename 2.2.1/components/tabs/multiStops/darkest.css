@@ -1,0 +1,55 @@
+/* generated from dna-version: 4.8.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum--darkest {
+/* topdoc
+{{ tabs/tabs.yml }}
+*/
+}
+/* topdoc
+{{ tabs/tabs-vertical.yml }}
+*/
+.spectrum--darkest .spectrum-Tabs {
+  border-bottom-color: rgb(38, 38, 38);
+}
+/* topdoc
+{{ tabs/tabs-quiet-compact.yml }}
+*/
+.spectrum--darkest .spectrum-Tabs-selectionIndicator {
+  background-color: rgb(226, 226, 226);
+}
+/* topdoc
+{{ tabs/tabs-compact.yml }}
+*/
+.spectrum--darkest .spectrum-Tabs-item {
+  color: rgb(133, 133, 133);
+}
+.spectrum--darkest .spectrum-Tabs-item:hover {
+    color: rgb(226, 226, 226);
+  }
+.spectrum--darkest .spectrum-Tabs-item.is-selected {
+    color: rgb(226, 226, 226);
+  }
+.spectrum--darkest .spectrum-Tabs-item.focus-ring::before {
+      border-color: rgb(20, 115, 230);
+    }
+.spectrum--darkest .spectrum-Tabs-item.is-disabled {
+    color: rgb(73, 73, 73);
+  }
+/* topdoc
+{{ tabs/tabs-quiet.yml }}
+*/
+.spectrum--darkest .spectrum-Tabs--quiet {
+  border-bottom-color: rgba(0, 0, 0, 0);
+}
+.spectrum--darkest .spectrum-Tabs--quiet .spectrum-Tabs-selectionIndicator {
+    background-color: rgb(226, 226, 226);
+  }
