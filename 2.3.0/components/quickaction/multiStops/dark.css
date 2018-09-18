@@ -1,0 +1,20 @@
+/* generated from dna-version: 4.8.4 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+/* topdoc
+{{ quickaction/quickactions.yml }}
+*/
+.spectrum--dark .spectrum-QuickActions-overlay {
+  background-color: rgba(0,0,0,0.2);
+}
+.spectrum--dark .spectrum-QuickActions {
+  background-color: rgba(50,50,50,0.9);
+}
