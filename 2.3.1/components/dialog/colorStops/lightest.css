@@ -1,0 +1,38 @@
+/* generated from dna-version: 4.8.4 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+}
+.spectrum-Dialog {
+  background: rgb(255, 255, 255);
+}
+.spectrum-Dialog-header {
+  background: rgb(255, 255, 255);
+}
+.spectrum-Dialog-header:after {
+    background: rgb(244, 244, 244);
+  }
+.spectrum-Dialog-title {
+  color: rgb(50, 50, 50);
+}
+.spectrum-Dialog-content {
+  color: rgb(80, 80, 80);
+}
+.spectrum-Dialog-typeIcon {
+  color: rgb(50, 50, 50);
+}
+.spectrum-Dialog-footer {
+  background: rgb(255, 255, 255);
+}
+.spectrum-Dialog--error .spectrum-Dialog-title {
+    color: rgb(215, 55, 63);
+  }
+.spectrum-Dialog--error .spectrum-Dialog-typeIcon {
+    color: rgb(215, 55, 63);
+  }
