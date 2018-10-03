@@ -1,0 +1,29 @@
+/* generated from dna-version: 4.8.4 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+
+  /* Custom selection color for placeholders using global blue-500 at 30% opacity. Should be updated in Spectrum-DNA */
+}
+.spectrum--dark .spectrum-BarLoader .spectrum-BarLoader-fill {
+    background: rgb(55, 142, 240);
+  }
+.spectrum--dark .spectrum-BarLoader .spectrum-BarLoader-track {
+    background-color: rgb(62, 62, 62);
+  }
+.spectrum--dark .spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-fill {
+      background: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-label,
+    .spectrum--dark .spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-percentage {
+      color: rgb(255, 255, 255);
+    }
+.spectrum--dark .spectrum-BarLoader.spectrum-BarLoader--overBackground .spectrum-BarLoader-track {
+      background-color: rgba(255,255,255,0.2);
+    }

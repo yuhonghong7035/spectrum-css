@@ -1,0 +1,15 @@
+/* generated from dna-version: 4.8.4 */
+/* generated from dna-version: 4.8.4 */
+/* topdoc
+{{ dropzone/dropzone.yml }}
+*/
+.spectrum-Dropzone {
+  text-align: center;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 112px;
+  border-style: dashed;
+}
+.spectrum-Dropzone.is-dragged {
+    border-style: solid;
+  }
