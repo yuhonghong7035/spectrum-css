@@ -1,0 +1,46 @@
+/* generated from dna-version: 4.8.4 */
+/* generated from dna-version: 4.8.4 */
+/* topdoc
+{{ toast/toast.yml }}
+*/
+.spectrum-Toast {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: start;
+      align-items: flex-start;
+
+  border-radius: 4px;
+
+  font-size: 17px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+.spectrum-Toast-typeIcon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+
+  margin: 19px -5px 19px 20px;
+}
+.spectrum-Toast-buttons {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+
+  margin: 10px 10px 0 -10px;
+}
+.spectrum-Toast-buttons .spectrum-Button,
+  .spectrum-Toast-buttons .spectrum-ClearButton {
+    margin: 0 0 10px 10px;
+  }
+.spectrum-Toast-content {
+  margin: 18px 20px 18px 20px;
+}
