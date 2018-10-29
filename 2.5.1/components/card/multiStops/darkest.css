@@ -1,0 +1,33 @@
+/* generated from dna-version: 5.0.1 */
+/* generated from dna-version: 5.0.1 */
+/* Temporary skin variables that need to be moved into origins */
+:root {
+  /* Icon Button*/
+
+  /* Button */
+
+  /* Shell */
+
+  /* haha remove this */
+
+  /* Custom selection color for placeholders using global blue-500 at 30% opacity. Should be updated in Spectrum-DNA */
+}
+.spectrum--darkest .spectrum-Card {
+  border-color: rgb(38, 38, 38);
+  background-color: rgb(8, 8, 8);
+}
+.spectrum--darkest .spectrum-Card:hover {
+    border-color: rgb(60, 60, 60);
+  }
+.spectrum--darkest .spectrum-Card.is-selected,
+  .spectrum--darkest .spectrum-Card:focus {
+    border-color: rgb(20, 115, 230);
+    box-shadow: 0 0 0 1px rgb(20, 115, 230);
+  }
+.spectrum--darkest .spectrum-Card-description {
+  color: rgb(133, 133, 133);
+}
+.spectrum--darkest .spectrum-Card-coverPhoto {
+  background-color: rgb(38, 38, 38);
+  border-bottom-color: rgb(38, 38, 38);
+}
