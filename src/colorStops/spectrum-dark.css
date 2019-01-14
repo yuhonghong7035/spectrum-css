@@ -1,6 +1,5 @@
 @import '../../vars/spectrum-dark.css';
 
-/* Temporary skin variables that need to be moved into origins */
 @import '../commons/skin.css';
 
 :root {
