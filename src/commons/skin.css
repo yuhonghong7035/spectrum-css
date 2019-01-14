@@ -19,14 +19,6 @@
   --spectrum-shell-grey800: rgb(180, 180, 180);
   --spectrum-shell-grey900: rgb(226, 226, 226);
 
-  /* haha remove this */
-  --spectrum-tablist-anchored-border-color: pink;
-  --spectrum-tablist-anchored-text-color-key-focus: green;
-  --spectrum-tablist-anchored-tabline-background-color-key-focus: orange;
-  --spectrum-tablist-anchored-tabline-background-color-key-focus: green;
-  --spectrum-tablist-panelborder-color-key-focus: orange;
-  --spectrum-tablist-panelborder-color-key-focus: red;
-
   /* Custom selection color for placeholders using global blue-500 at 30% opacity. Should be updated in Spectrum-DNA */
   --spectrum-textfield-placeholder-selected: rgba(20, 115, 230, 0.3);
 }
