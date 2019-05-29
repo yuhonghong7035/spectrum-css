@@ -1,0 +1,22 @@
+.spectrum-Rule {
+  overflow: visible;
+
+  border: none;
+  border-width: 2px;
+  border-radius: 2px;
+}
+.spectrum-Rule--large {
+  height: 4px;
+
+  border-radius: 2px;
+}
+.spectrum-Rule--medium {
+  height: 2px;
+
+  border-radius: 1px;
+}
+.spectrum-Rule--small {
+  height: 1px;
+
+  border-radius: 1px;
+}
