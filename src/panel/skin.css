@@ -1,10 +1,13 @@
 :root {
   --spectrum-panel-background-color: var(--spectrum-alias-background-color-default);
   --spectrum-panel-floating-dropshadow-color: var(--spectrum-alias-dropshadow-color);
+  --spectrum-panel-border-color: var(--spectrum-alias-border-color);
 }
 
 .spectrum-Panel {
   background: var(--spectrum-panel-background-color);
+
+  border-color: var(--spectrum-panel-border-color);
 }
 
 .spectrum-Panel--floating {

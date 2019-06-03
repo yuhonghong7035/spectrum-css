@@ -3,16 +3,61 @@
   --spectrum-panel-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-panel-padding: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-floating-border-radius: var(--spectrum-alias-border-radius-regular);
+
+  --spectrum-panel-border-width: var(--spectrum-global-dimension-size-25);
 }
 
 .spectrum-Panel {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: var(--spectrum-panel-min-width);
   min-height: var(--spectrum-panel-min-height);
   padding: var(--spectrum-panel-padding);
 }
 
+.spectrum-Panel--horizontal {
+  flex-direction: row;
+}
+
 .spectrum-Panel--floating {
+  position: fixed;
   border-radius: var(--spectrum-panel-floating-border-radius);
+}
+
+.spectrum-PanelGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+body > .spectrum-PanelGroup {
+  height: 100%;
+}
+
+.spectrum-PanelGroup {
+  > .spectrum-Panel:first-child {
+    border-right-style: solid;
+    border-right-width: var(--spectrum-panel-border-width);
+  }
+
+  > .spectrum-Panel:last-child {
+    border-left-style: solid;
+    border-left-width: var(--spectrum-panel-border-width);
+  }
+}
+
+.spectrum-PanelGroup--vertical {
+  flex-direction: column;
+
+  > .spectrum-Panel:first-child {
+    border-width: 0;
+    border-bottom-style: solid;
+    border-bottom-width: var(--spectrum-panel-border-width);
+  }
+
+  > .spectrum-Panel:last-child {
+    border-width: 0;
+    border-top-style: solid;
+    border-top-width: var(--spectrum-panel-border-width);
+  }
 }
