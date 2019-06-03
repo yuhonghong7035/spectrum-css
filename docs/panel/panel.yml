@@ -1,0 +1,21 @@
+---
+name: Panel
+components:
+  floating-buttons:
+    status: Unverfied
+    name: Floating Panel
+    description: Floating panel with Action Button group
+    markup: |
+      <div class="spectrum-Panel spectrum-Panel--floating">
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Edit</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Copy</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Delete</span>
+          </button>
+        </div>
+      </div>

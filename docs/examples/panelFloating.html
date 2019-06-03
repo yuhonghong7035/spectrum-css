@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spectrum CSS Floating Panel Example</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
+
+    <link rel="stylesheet" href="../components/commons/index-vars.css">
+    <link rel="stylesheet" href="../components/page/index-vars.css">
+    <link rel="stylesheet" href="../components/icon/index-vars.css">
+    <link rel="stylesheet" href="../components/button/index-vars.css">
+    <link rel="stylesheet" href="../components/panel/index-vars.css">
+
+    <script src="../icons/loadIcons.js"></script>
+    <script src="js/vendor/focus-ring-polyfill.js"></script>
+    <script src="js/vendor/typekit.js"></script>
+    <script src="js/Switcher.js"></script>
+    <script src="js/kbSwitcher.js"></script>
+    <script>
+      loadIcons('../icons/spectrum-css-icons.svg');
+      loadIcons('../icons/spectrum-icons.svg');
+    </script>
+  </head>
+  <body class="spectrum spectrum--light spectrum--medium">
+
+      <div class="spectrum-Panel spectrum-Panel--floating">
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Edit</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Copy</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Delete</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="spectrum-Panel spectrum-Panel--floating">
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Edit">
+              <use xlink:href="#spectrum-icon-18-Edit"></use>
+            </svg>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Copy">
+              <use xlink:href="#spectrum-icon-18-Copy"></use>
+            </svg>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Delete">
+              <use xlink:href="#spectrum-icon-18-Delete"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+  </body>
+</html>
