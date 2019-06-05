@@ -155,7 +155,7 @@
   &.spectrum-Panel--vertical {
     .spectrum-Panel-dragHandle {
       width: 100%;
-      height: var(--spectrum-panel-draghandle-area-width);
+      height: var(--spectrum-panel-padding);
     }
   }
 }
