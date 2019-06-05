@@ -7,7 +7,9 @@
   --spectrum-panel-draghandle-color-down: var(--spectrum-global-color-gray-700);
 }
 
-.spectrum-Panel {
+.spectrum-Panel,
+.spectrum-Header,
+.spectrum-PanelGroup {
   background: var(--spectrum-panel-background-color);
 
   border-color: var(--spectrum-panel-border-color);
