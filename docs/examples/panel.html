@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="../components/buttongroup/index-vars.css">
     <link rel="stylesheet" href="../components/accordion/index-vars.css">
     <link rel="stylesheet" href="../components/tabs/index-vars.css">
+    <link rel="stylesheet" href="../components/rule/index-vars.css">
+    <link rel="stylesheet" href="../components/fieldlabel/index-vars.css">
+    <link rel="stylesheet" href="../components/textfield/index-vars.css">
+    <link rel="stylesheet" href="../components/dropdown/index-vars.css">
     <link rel="stylesheet" href="../components/panel/index-vars.css">
 
     <script src="../icons/loadIcons.js"></script>
@@ -31,13 +35,27 @@
         margin: 0;
         height: 100%;
       }
+
+      .spectrum-Canvas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .spectrum-ArtBoard {
+        max-height: 90%;
+        max-width: 90%;
+
+        box-shadow: 0 1px 4px var(--spectrum-alias-dropshadow-color);
+      }
     </style>
   </head>
   <body class="spectrum spectrum--light spectrum--medium">
 
     <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical">
 
-      <div class="spectrum-Panel spectrum-Panel--horizontal">
+      <!-- Header -->
+      <div class="spectrum-Header">
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Home">
@@ -46,7 +64,9 @@
           </button>
         </div>
 
-        <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--compact spectrum-Tabs--quiet">
+        <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
+
+        <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div class="spectrum-Tabs-item is-selected" tabindex="0">
             <label class="spectrum-Tabs-itemLabel">Colors</label>
           </div>
@@ -59,7 +79,7 @@
           <div class="spectrum-Tabs-selectionIndicator" style="width: 39px; left: 6px;"></div>
         </div>
 
-        <h1 class="spectrum-Panel-heading spectrum-Body2">Adobe Thingger</h1>
+        <h1 class="spectrum-Panel-heading spectrum-Body3">Spectrum CSS</h1>
 
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
@@ -73,6 +93,8 @@
             </svg>
           </button>
         </div>
+
+        <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
 
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
@@ -96,36 +118,97 @@
             </svg>
           </button>
         </div>
+
+        <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
+
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Maximize">
+              <use xlink:href="#spectrum-icon-18-Maximize" />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div class="spectrum-PanelGroup">
-        <div class="spectrum-Panel spectrum-Panel--vertical">
-          <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-            <button class="spectrum-Tool">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
-                <use xlink:href="#spectrum-icon-18-Select" />
-              </svg>
-            </button>
+        <!-- Left panels -->
+        <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical spectrum-PanelGroup--left">
+          <div class="spectrum-Panel spectrum-Panel--vertical">
+            <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
+              <button class="spectrum-Tool">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+                  <use xlink:href="#spectrum-icon-18-Select" />
+                </svg>
+              </button>
 
-            <button class="spectrum-Tool is-selected">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
-                <use xlink:href="#spectrum-icon-18-Text" />
-              </svg>
-            </button>
+              <button class="spectrum-Tool is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
+                  <use xlink:href="#spectrum-icon-18-Text" />
+                </svg>
+              </button>
 
-            <button class="spectrum-Tool">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Rectangle">
-                <use xlink:href="#spectrum-icon-18-Rectangle" />
-              </svg>
-            </button>
+              <button class="spectrum-Tool">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Rectangle">
+                  <use xlink:href="#spectrum-icon-18-Rectangle" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
+        <!-- Canvas -->
         <div class="spectrum-Canvas" style="flex: 3">
-          Canvas
+
+          <img class="spectrum-ArtBoard" src="img/example-card-portrait.jpg">
         </div>
 
-        <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical">
+        <!-- Right panels -->
+        <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical spectrum-PanelGroup--right">
+
+          <div class="spectrum-Panel spectrum-Panel--vertical">
+            <div class="spectrum-Accordion" role="region">
+              <div class="spectrum-Accordion-item is-open" role="presentation">
+                <h3 class="spectrum-Accordion-itemHeading">
+                  <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Panel Title</button>
+                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
+                    <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
+                  </svg>
+                </h3>
+                <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Content</div>
+              </div>
+            </div>
+
+            <div class="spectrum-Rule spectrum-Rule--horizontal spectrum-Rule--small"></div>
+
+            <div class="spectrum-Form spectrum-Form--labelsAbove">
+              <div class="spectrum-Form-item">
+                <label for="fieldLabelExample-lifestory" class="spectrum-Form-itemLabel">Company Title</label>
+                <div class="spectrum-Form-itemField">
+                  <textarea id="fieldLabelExample-lifestory" placeholder="Enter your life story" name="field" class="spectrum-Textfield spectrum-Textfield--multiline"></textarea>
+                </div>
+              </div>
+              <div class="spectrum-Form-item">
+                <label class="spectrum-Form-itemLabel" for="fieldLabelExample-emailaddress">Email Address</label>
+                <div class="spectrum-Form-itemField">
+                  <input class="spectrum-Textfield" aria-invalid="false" type="text" placeholder="Enter your e-mail address" id="fieldLabelExample-emailaddress">
+                </div>
+              </div>
+              <div class="spectrum-Form-item">
+                <label class="spectrum-Form-itemLabel" for="spectrum-textinput-instance">Country</label>
+                <div class="spectrum-Form-itemField">
+                  <div class="spectrum-Dropdown" style="width: 195px;">
+                    <button class="spectrum-FieldButton spectrum-Dropdown-trigger" aria-haspopup="true">
+                      <span class="spectrum-Dropdown-label is-placeholder">Select a Country</span>
+                      <svg class="spectrum-Icon spectrum-UIIcon-ChevronDownMedium spectrum-Dropdown-icon" focusable="false" aria-hidden="true">
+                        <use xlink:href="#spectrum-css-icon-ChevronDownMedium" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="spectrum-Panel spectrum-Panel--vertical">
             <div class="spectrum-Accordion" role="region">
               <div class="spectrum-Accordion-item is-open" role="presentation">
@@ -139,19 +222,7 @@
               </div>
             </div>
           </div>
-          <div class="spectrum-Panel spectrum-Panel--vertical">
-            <div class="spectrum-Accordion" role="region">
-              <div class="spectrum-Accordion-item is-open" role="presentation">
-                <h3 class="spectrum-Accordion-itemHeading">
-                  <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Panel Title</button>
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-                  </svg>
-                </h3>
-                <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Content</div>
-              </div>
-            </div>
-          </div>
+
           <div class="spectrum-Panel spectrum-Panel--vertical">
             <div class="spectrum-Panel-dragHandle"></div>
             <div class="spectrum-Accordion" role="region">
@@ -167,8 +238,22 @@
             </div>
           </div>
         </div>
-      </div>
 
+
+        <!-- Right toolbar -->
+        <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical spectrum-PanelGroup--right">
+          <div class="spectrum-Panel spectrum-Panel--vertical">
+            <div class="spectrum-ButtonGroup">
+              <button class="spectrum-Tool is-selected">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Properties">
+                  <use xlink:href="#spectrum-icon-18-Properties" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
   </body>
 </html>
