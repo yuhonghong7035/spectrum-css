@@ -25,6 +25,7 @@
     <script src="js/vendor/typekit.js"></script>
     <script src="js/Switcher.js"></script>
     <script src="js/kbSwitcher.js"></script>
+    <script src="js/draggable.js"></script>
     <script>
       loadIcons('../icons/spectrum-css-icons.svg');
       loadIcons('../icons/spectrum-icons.svg');
@@ -51,6 +52,20 @@
     </style>
   </head>
   <body class="spectrum spectrum--light spectrum--medium">
+    <div class="spectrum-Panel spectrum-Panel--floating" draggablePanel style="left: 65px; top: 61px;">
+      <div class="spectrum-Panel-dragHandle" dragHandle></div>
+      <div class="spectrum-ButtonGroup">
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <span class="spectrum-ActionButton-label">Edit</span>
+        </button>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <span class="spectrum-ActionButton-label">Copy</span>
+        </button>
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+          <span class="spectrum-ActionButton-label">Delete</span>
+        </button>
+      </div>
+    </div>
 
     <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical">
 
@@ -223,18 +238,31 @@
             </div>
           </div>
 
-          <div class="spectrum-Panel spectrum-Panel--vertical">
-            <div class="spectrum-Panel-dragHandle"></div>
-            <div class="spectrum-Accordion" role="region">
-              <div class="spectrum-Accordion-item is-open" role="presentation">
-                <h3 class="spectrum-Accordion-itemHeading">
-                  <button class="spectrum-Accordion-itemHeader" type="button" id="spectrum-accordion-item-0-header" aria-controls="spectrum-accordion-item-0-content" aria-expanded="true">Panel Title</button>
-                  <svg class="spectrum-Icon spectrum-UIIcon-ChevronRightMedium spectrum-Accordion-itemIndicator" focusable="false" aria-hidden="true">
-                    <use xlink:href="#spectrum-css-icon-ChevronRightMedium" />
-                  </svg>
-                </h3>
-                <div class="spectrum-Accordion-itemContent" role="region" id="spectrum-accordion-item-0-content" aria-labelledby="spectrum-accordion-item-0-header">Content</div>
-              </div>
+
+          <div class="spectrum-Panel spectrum-Panel--vertical" draggablePanel>
+            <div class="spectrum-Panel-dragHandle" dragHandle></div>
+
+            <div class="spectrum-ButtonGroup">
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="TextAlignLeft">
+                  <use xlink:href="#spectrum-icon-18-TextAlignLeft" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="TextAlignCenter">
+                  <use xlink:href="#spectrum-icon-18-TextAlignCenter" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="TextAlignJustify">
+                  <use xlink:href="#spectrum-icon-18-TextAlignJustify" />
+                </svg>
+              </button>
+              <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+                <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="TextAlignRight">
+                  <use xlink:href="#spectrum-icon-18-TextAlignRight" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

@@ -19,50 +19,10 @@
     <script src="js/vendor/typekit.js"></script>
     <script src="js/Switcher.js"></script>
     <script src="js/kbSwitcher.js"></script>
+    <script src="js/draggable.js"></script>
     <script>
       loadIcons('../icons/spectrum-css-icons.svg');
       loadIcons('../icons/spectrum-icons.svg');
-
-      let startX = 0, startY = 0;
-      let offsetX = 0, offsetY = 0;
-      let currentElement = null;
-      let currentZIndex = 10;
-
-      document.addEventListener('mousedown', startDragging);
-
-      function finishDragging(e) {
-        document.removeEventListener('mouseup', finishDragging);
-        document.removeEventListener('mousemove', handleDrag);
-        currentElement = null;
-      }
-
-      function handleDrag(e) {
-        e.preventDefault();
-        currentElement.style.top = (e.clientY - offsetY) + "px";
-        currentElement.style.left = (e.clientX - offsetX) + "px";
-      }
-
-      function startDragging(e) {
-        if (e.target.hasAttribute('dragHandle')) {
-          // Find if the element or anyone up the tree is draggable
-          let element = e.target.closest('[draggablePanel]');
-
-          if (element) {
-            e.preventDefault();
-
-            offsetY = e.clientY - element.offsetTop;
-            offsetX = e.clientX - element.offsetLeft;
-
-            currentElement = element;
-
-            currentElement.style.zIndex = ++currentZIndex;
-
-            document.addEventListener('mouseup', finishDragging);
-            document.addEventListener('mousemove', handleDrag);
-          }
-        }
-      }
-
     </script>
   </head>
   <body class="spectrum spectrum--light spectrum--medium">
