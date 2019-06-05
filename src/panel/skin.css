@@ -5,14 +5,19 @@
   --spectrum-panel-draghandle-color: var(--spectrum-global-color-gray-400);
   --spectrum-panel-draghandle-color-hover: var(--spectrum-global-color-gray-600);
   --spectrum-panel-draghandle-color-down: var(--spectrum-global-color-gray-700);
+
+  --spectrum-header-background-color: var(--spectrum-alias-background-color-default);
 }
 
 .spectrum-Panel,
-.spectrum-Header,
 .spectrum-PanelGroup {
   background: var(--spectrum-panel-background-color);
 
   border-color: var(--spectrum-panel-border-color);
+}
+
+.spectrum-Header {
+  background: var(--spectrum-header-background-color);
 }
 
 .spectrum-Panel--floating {

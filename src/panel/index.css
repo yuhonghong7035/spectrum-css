@@ -34,14 +34,8 @@
   min-height: var(--spectrum-header-min-height);
   padding: 0 var(--spectrum-header-padding);
 
-  border-bottom-style: solid;
-  border-bottom-width: var(--spectrum-header-border-width);
-
   .spectrum-Tabs {
     align-self: flex-end;
-
-    /* Let the selected tab line overlap the border */
-    margin-bottom: calc(-1 * var(--spectrum-header-border-width));
   }
 
   .spectrum-Rule {
@@ -50,6 +44,12 @@
     /* Fake padding */
     max-height: calc(var(--spectrum-header-min-height) - var(--spectrum-header-padding) * 2);
   }
+}
+
+.spectrum-Header + .spectrum-Panel,
+.spectrum-Header + .spectrum-PanelGroup {
+  border-top-style: solid;
+  border-top-width: var(--spectrum-header-border-width);
 }
 
 .spectrum-Header-divider {
