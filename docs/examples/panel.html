@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../components/fieldlabel/index-vars.css">
     <link rel="stylesheet" href="../components/textfield/index-vars.css">
     <link rel="stylesheet" href="../components/dropdown/index-vars.css">
+    <link rel="stylesheet" href="../components/search/index-vars.css">
     <link rel="stylesheet" href="../components/panel/index-vars.css">
 
     <script src="../icons/loadIcons.js"></script>
@@ -29,6 +30,19 @@
     <script>
       loadIcons('../icons/spectrum-css-icons.svg');
       loadIcons('../icons/spectrum-icons.svg');
+      loadIcons('../icons/spectrum-icons-color.svg');
+
+      document.addEventListener('DOMContentLoaded', function() {
+        headerSearchButton.addEventListener('click', function(e) {
+          headerSearchButton.hidden = true;
+          headerSearchField.hidden = false;
+        });
+        headerSearchField.addEventListener('reset', function(e) {
+          e.preventDefault();
+          headerSearchButton.hidden = false;
+          headerSearchField.hidden = true;
+        });
+      });
     </script>
     <style>
       html,
@@ -48,6 +62,10 @@
         max-width: 90%;
 
         box-shadow: 0 1px 4px var(--spectrum-alias-dropshadow-color);
+      }
+
+      [hidden] {
+        display: none !important;
       }
     </style>
   </head>
@@ -70,8 +88,12 @@
     <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical">
 
       <!-- Header -->
-      <div class="spectrum-Header">
-        <div class="spectrum-ButtonGroup">
+      <div class="spectrum-Header spectrum--dark">
+        <svg class="spectrum-Icon spectrum-Header-icon" focusable="false" aria-hidden="true" aria-label="AdobeSocialColor_Dark">
+          <use xlink:href="#spectrum-icon-24-AdobeSocialColor_Dark"></use>
+        </svg>
+
+        <div class="spectrum-ButtonGroup" hidden>
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Home">
               <use xlink:href="#spectrum-icon-18-Home" />
@@ -79,7 +101,7 @@
           </button>
         </div>
 
-        <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
+        <div class="spectrum-Header-divider"></div>
 
         <div class="spectrum-Tabs spectrum-Tabs--horizontal spectrum-Tabs--quiet">
           <div class="spectrum-Tabs-item is-selected" tabindex="0">
@@ -95,6 +117,31 @@
         </div>
 
         <h1 class="spectrum-Panel-heading spectrum-Body3">Spectrum CSS</h1>
+
+        <button class="spectrum-ActionButton spectrum-ActionButton--quiet" id="headerSearchButton">
+          <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Search">
+            <use xlink:href="#spectrum-icon-18-Search" />
+          </svg>
+        </button>
+        <form class="spectrum-Search" id="headerSearchField" hidden>
+          <input type="search" placeholder="Search" name="search" value="" class="spectrum-Textfield spectrum-Search-input">
+          <svg class="spectrum-Icon spectrum-UIIcon-Magnifier spectrum-Search-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#spectrum-css-icon-Magnifier" />
+          </svg>
+          <button type="reset" class="spectrum-ClearButton">
+            <svg class="spectrum-Icon spectrum-UIIcon-CrossSmall" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-CrossSmall" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="spectrum-Header-divider"></div>
+
+        <button class="spectrum-Button spectrum-Button--primary">
+          <span class="spectrum-Button-label">Button</span>
+        </button>
+
+        <div class="spectrum-Header-divider"></div>
 
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
@@ -112,11 +159,6 @@
         <div class="spectrum-Rule spectrum-Rule--medium spectrum-Rule--vertical"></div>
 
         <div class="spectrum-ButtonGroup">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Search">
-              <use xlink:href="#spectrum-icon-18-Search" />
-            </svg>
-          </button>
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Help">
               <use xlink:href="#spectrum-icon-18-Help" />

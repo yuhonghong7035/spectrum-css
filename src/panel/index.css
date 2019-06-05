@@ -15,6 +15,15 @@
   --spectrum-panel-draghandle-border-radius: var(--spectrum-alias-border-radius-small);
 
   --spectrum-panel-draghandle-area-width: var(--spectrum-global-dimension-size-200);
+
+  /* Header */
+  --spectrum-header-min-height: var(--spectrum-global-dimension-size-600);
+  --spectrum-header-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-header-border-width: var(--spectrum-global-dimension-size-25);
+  --spectrum-header-divider-width: var(--spectrum-global-dimension-size-200);
+
+  --spectrum-header-icon-margin-left: var(--spectrum-global-dimension-size-300);
+  --spectrum-header-icon-size: var(--spectrum-global-dimension-size-400);
 }
 
 .spectrum-Header {
@@ -22,25 +31,36 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-height: var(--spectrum-panel-min-height);
-  padding: 0 var(--spectrum-panel-padding);
+  min-height: var(--spectrum-header-min-height);
+  padding: 0 var(--spectrum-header-padding);
 
   border-bottom-style: solid;
-  border-bottom-width: var(--spectrum-panel-border-width);
+  border-bottom-width: var(--spectrum-header-border-width);
 
   .spectrum-Tabs {
     align-self: flex-end;
 
     /* Let the selected tab line overlap the border */
-    margin-bottom: calc(-1 * var(--spectrum-panel-border-width));
+    margin-bottom: calc(-1 * var(--spectrum-header-border-width));
   }
 
   .spectrum-Rule {
-    margin: 0 var(--spectrum-panel-padding);
+    margin: 0 var(--spectrum-header-padding);
 
     /* Fake padding */
-    max-height: calc(var(--spectrum-panel-min-height) - var(--spectrum-panel-padding) * 2);
+    max-height: calc(var(--spectrum-header-min-height) - var(--spectrum-header-padding) * 2);
   }
+}
+
+.spectrum-Header-divider {
+  width: var(--spectrum-header-divider-width);
+  flex-grow: 0;
+}
+
+.spectrum-Header-icon {
+  margin-left: var(--spectrum-header-icon-margin-left);
+  width: var(--spectrum-header-icon-size);
+  height: var(--spectrum-header-icon-size);
 }
 
 .spectrum-Panel {
