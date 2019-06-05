@@ -22,11 +22,50 @@
     <script>
       loadIcons('../icons/spectrum-css-icons.svg');
       loadIcons('../icons/spectrum-icons.svg');
+
+      let startX = 0, startY = 0;
+      let offsetX = 0, offsetY = 0;
+      let currentElement = null;
+      let currentZIndex = 10;
+
+      document.addEventListener('mousedown', startDragging);
+
+      function finishDragging(e) {
+        document.removeEventListener('mouseup', finishDragging);
+        document.removeEventListener('mousemove', handleDrag);
+        currentElement = null;
+      }
+
+      function handleDrag(e) {
+        e.preventDefault();
+        currentElement.style.top = (e.clientY - offsetY) + "px";
+        currentElement.style.left = (e.clientX - offsetX) + "px";
+      }
+
+      function startDragging(e) {
+        // Find if the element or anyone up the tree is draggable
+        let element = e.target.closest('[draggablePanel]');
+
+        if (element) {
+          e.preventDefault();
+
+          offsetY = e.clientY - element.offsetTop;
+          offsetX = e.clientX - element.offsetLeft;
+
+          currentElement = element;
+
+          currentElement.style.zIndex = ++currentZIndex;
+
+          document.addEventListener('mouseup', finishDragging);
+          document.addEventListener('mousemove', handleDrag);
+        }
+      }
+
     </script>
   </head>
   <body class="spectrum spectrum--light spectrum--medium">
 
-      <div class="spectrum-Panel spectrum-Panel--vertical spectrum-Panel--floating" style="left: 60px; top: 60px">
+      <div class="spectrum-Panel spectrum-Panel--vertical spectrum-Panel--floating" draggablePanel style="left: 60px; top: 60px">
         <div class="spectrum-Panel-dragHandle"></div>
         <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
           <button class="spectrum-Tool">
@@ -49,7 +88,7 @@
         </div>
       </div>
 
-      <div class="spectrum-Panel spectrum-Panel--floating" style="left: 160px; top: 100px">
+      <div class="spectrum-Panel spectrum-Panel--floating" draggablePanel style="left: 160px; top: 100px">
         <div class="spectrum-Panel-dragHandle"></div>
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
