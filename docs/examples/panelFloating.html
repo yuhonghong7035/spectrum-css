@@ -43,21 +43,23 @@
       }
 
       function startDragging(e) {
-        // Find if the element or anyone up the tree is draggable
-        let element = e.target.closest('[draggablePanel]');
+        if (e.target.hasAttribute('dragHandle')) {
+          // Find if the element or anyone up the tree is draggable
+          let element = e.target.closest('[draggablePanel]');
 
-        if (element) {
-          e.preventDefault();
+          if (element) {
+            e.preventDefault();
 
-          offsetY = e.clientY - element.offsetTop;
-          offsetX = e.clientX - element.offsetLeft;
+            offsetY = e.clientY - element.offsetTop;
+            offsetX = e.clientX - element.offsetLeft;
 
-          currentElement = element;
+            currentElement = element;
 
-          currentElement.style.zIndex = ++currentZIndex;
+            currentElement.style.zIndex = ++currentZIndex;
 
-          document.addEventListener('mouseup', finishDragging);
-          document.addEventListener('mousemove', handleDrag);
+            document.addEventListener('mouseup', finishDragging);
+            document.addEventListener('mousemove', handleDrag);
+          }
         }
       }
 
@@ -66,7 +68,7 @@
   <body class="spectrum spectrum--light spectrum--medium">
 
       <div class="spectrum-Panel spectrum-Panel--vertical spectrum-Panel--floating" draggablePanel style="left: 60px; top: 60px">
-        <div class="spectrum-Panel-dragHandle"></div>
+        <div class="spectrum-Panel-dragHandle" dragHandle></div>
         <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
           <button class="spectrum-Tool">
             <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
@@ -89,7 +91,7 @@
       </div>
 
       <div class="spectrum-Panel spectrum-Panel--floating" draggablePanel style="left: 160px; top: 100px">
-        <div class="spectrum-Panel-dragHandle"></div>
+        <div class="spectrum-Panel-dragHandle" dragHandle></div>
         <div class="spectrum-ButtonGroup">
           <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
             <span class="spectrum-ActionButton-label">Edit</span>
