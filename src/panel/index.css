@@ -1,36 +1,141 @@
 :root {
   --spectrum-panel-min-width: var(--spectrum-global-dimension-size-600);
   --spectrum-panel-min-height: var(--spectrum-global-dimension-size-600);
+
+  --spectrum-panel-small-size: 256px;
+  --spectrum-panel-large-size: 304px;
+
   --spectrum-panel-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-panel-spacious-padding: var(--spectrum-global-dimension-size-100);
   --spectrum-panel-floating-border-radius: var(--spectrum-alias-border-radius-regular);
 
   --spectrum-panel-border-width: var(--spectrum-global-dimension-size-25);
+  --spectrum-panel-draghandle-width: var(--spectrum-global-dimension-size-300);
+  --spectrum-panel-draghandle-height: var(--spectrum-global-dimension-size-25);
+  --spectrum-panel-draghandle-border-radius: var(--spectrum-alias-border-radius-small);
+
+  --spectrum-panel-draghandle-area-width: var(--spectrum-global-dimension-size-200);
 }
 
 .spectrum-Panel {
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
   box-sizing: border-box;
   min-width: var(--spectrum-panel-min-width);
   min-height: var(--spectrum-panel-min-height);
   padding: var(--spectrum-panel-padding);
+
+  .spectrum-Tabs {
+    align-self: flex-end;
+  }
+
+  .spectrum-Accordion {
+    width: 100%;
+  }
 }
 
-.spectrum-Panel--horizontal {
-  flex-direction: row;
+.spectrum-Panel-heading {
+  text-align: center;
+  flex: 1;
+}
+
+.spectrum-Panel--spacious {
+  padding: var(--spectrum-global-dimension-size-150);
+}
+
+.spectrum-Panel-dragHandle {
+  position: relative;
+  z-index: 1; /* appear above stuff */
+
+  display: flex;
+
+  width: 0;
+  height: 100%;
+
+  cursor: pointer;
+  cursor: grab;
+
+  align-content: center;
+  justify-content: left;
+
+  &:active,
+  &.is-dragged {
+    cursor: ns-resize;
+    cursor: grabbing;
+  }
+
+  &:before {
+    display: block;
+    content: '';
+    border-radius: var(--spectrum-panel-draghandle-border-radius);
+    width: var(--spectrum-panel-draghandle-height);
+    height: var(--spectrum-panel-draghandle-width);
+
+    transition: background var(--spectrum-global-animation-duration-100) ease-in-out;
+  }
+
+  /* hit area */
+  &:after {
+    content: '';
+    position: absolute;
+    width: var(--spectrum-panel-draghandle-area-width);
+    height: 100%;
+    left: calc(-1 * var(--spectrum-panel-padding));
+    right: calc(-1 * var(--spectrum-panel-padding));
+  }
+}
+
+.spectrum-Panel--vertical {
+  flex-direction: column;
+
+  .spectrum-Panel-dragHandle {
+    height: 0;
+    width: 100%;
+
+    align-content: flex-start;
+    justify-content: center;
+
+    &:before {
+      width: var(--spectrum-panel-draghandle-width);
+      height: var(--spectrum-panel-draghandle-height);
+    }
+
+    /* hit area */
+    &:after {
+      height: var(--spectrum-panel-draghandle-area-width);
+      width: 100%;
+      top: calc(-1 * var(--spectrum-panel-padding));
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
 .spectrum-Panel--floating {
   position: fixed;
   border-radius: var(--spectrum-panel-floating-border-radius);
+
+
+  .spectrum-Panel-dragHandle {
+    width: var(--spectrum-panel-draghandle-area-width);
+    height: 100%;
+  }
+
+  &.spectrum-Panel--vertical {
+    .spectrum-Panel-dragHandle {
+      width: 100%;
+      height: var(--spectrum-panel-draghandle-area-width);
+    }
+  }
 }
 
 .spectrum-PanelGroup {
   display: flex;
+  flex: 1;
   flex-direction: row;
-}
-
-body > .spectrum-PanelGroup {
   height: 100%;
 }
 
@@ -49,15 +154,14 @@ body > .spectrum-PanelGroup {
 .spectrum-PanelGroup--vertical {
   flex-direction: column;
 
-  > .spectrum-Panel:first-child {
-    border-width: 0;
-    border-bottom-style: solid;
-    border-bottom-width: var(--spectrum-panel-border-width);
+  > .spectrum-Panel:first-child,
+  > .spectrum-Panel:last-child {
+    border-left-width: 0;
+    border-right-width: 0;
   }
 
-  > .spectrum-Panel:last-child {
-    border-width: 0;
-    border-top-style: solid;
-    border-top-width: var(--spectrum-panel-border-width);
+  > .spectrum-Panel {
+    border-bottom-style: solid;
+    border-bottom-width: var(--spectrum-panel-border-width);
   }
 }

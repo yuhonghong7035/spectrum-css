@@ -2,6 +2,9 @@
   --spectrum-panel-background-color: var(--spectrum-alias-background-color-default);
   --spectrum-panel-floating-dropshadow-color: var(--spectrum-alias-dropshadow-color);
   --spectrum-panel-border-color: var(--spectrum-alias-border-color);
+  --spectrum-panel-draghandle-color: var(--spectrum-global-color-gray-400);
+  --spectrum-panel-draghandle-color-hover: var(--spectrum-global-color-gray-600);
+  --spectrum-panel-draghandle-color-down: var(--spectrum-global-color-gray-700);
 }
 
 .spectrum-Panel {
@@ -12,4 +15,27 @@
 
 .spectrum-Panel--floating {
   box-shadow: 0 1px 4px var(--spectrum-panel-floating-dropshadow-color);
+}
+
+.spectrum-Panel-dragHandle {
+  &:before {
+    background: var(--spectrum-panel-draghandle-color);
+  }
+
+  &:hover {
+    &:before {
+      background: var(--spectrum-panel-draghandle-color-hover);
+    }
+  }
+
+  &:active,
+  &.is-dragged {
+    &:before {
+      background: var(--spectrum-panel-draghandle-color-down);
+    }
+  }
+}
+
+.spectrum-Canvas {
+  background: var(--spectrum-global-color-gray-200);
 }

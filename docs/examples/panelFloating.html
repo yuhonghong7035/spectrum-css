@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../components/commons/index-vars.css">
     <link rel="stylesheet" href="../components/page/index-vars.css">
+    <link rel="stylesheet" href="../components/typography/index-vars.css">
     <link rel="stylesheet" href="../components/icon/index-vars.css">
     <link rel="stylesheet" href="../components/button/index-vars.css">
     <link rel="stylesheet" href="../components/buttongroup/index-vars.css">
@@ -25,102 +26,44 @@
   </head>
   <body class="spectrum spectrum--light spectrum--medium">
 
-    <div class="spectrum-PanelGroup spectrum-PanelGroup--vertical">
-
-      <div class="spectrum-Panel spectrum-Panel--horizontal">
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Edit</span>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Copy</span>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Delete</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="spectrum-PanelGroup">
-
-        <div class="spectrum-Panel">
-          <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
-            <button class="spectrum-Tool">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-                <use xlink:href="#spectrum-icon-18-Brush" />
-              </svg>
-            </button>
-
-            <button class="spectrum-Tool is-selected">
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-                <use xlink:href="#spectrum-icon-18-Brush" />
-              </svg>
-            </button>
-
-            <button class="spectrum-Tool" disabled>
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-                <use xlink:href="#spectrum-icon-18-Brush" />
-              </svg>
-            </button>
-
-            <button class="spectrum-Tool is-selected" disabled>
-              <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-                <use xlink:href="#spectrum-icon-18-Brush" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="spectrum-Canvas" style="flex: 1">
-          Canvas
-        </div>
-
-        <div class="spectrum-Panel">
-          Accordion
-        </div>
-      </div>
-
-      <div class="spectrum-Panel spectrum-Panel--floating" style="left: 60px; top: 100px">
-        <div class="spectrum-ButtonGroup">
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Edit</span>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Copy</span>
-          </button>
-          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
-            <span class="spectrum-ActionButton-label">Delete</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="spectrum-Panel spectrum-Panel--floating" style="left: 60px; top: 60px">
+      <div class="spectrum-Panel spectrum-Panel--vertical spectrum-Panel--floating" style="left: 60px; top: 60px">
+        <div class="spectrum-Panel-dragHandle"></div>
         <div class="spectrum-ButtonGroup spectrum-ButtonGroup--vertical">
           <button class="spectrum-Tool">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-              <use xlink:href="#spectrum-icon-18-Brush" />
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Select">
+              <use xlink:href="#spectrum-icon-18-Select" />
             </svg>
           </button>
 
           <button class="spectrum-Tool is-selected">
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-              <use xlink:href="#spectrum-icon-18-Brush" />
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Text">
+              <use xlink:href="#spectrum-icon-18-Text" />
             </svg>
           </button>
 
-          <button class="spectrum-Tool" disabled>
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-              <use xlink:href="#spectrum-icon-18-Brush" />
-            </svg>
-          </button>
-
-          <button class="spectrum-Tool is-selected" disabled>
-            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Brush">
-              <use xlink:href="#spectrum-icon-18-Brush" />
+          <button class="spectrum-Tool">
+            <svg class="spectrum-Icon spectrum-Icon--sizeS" focusable="false" aria-hidden="true" aria-label="Rectangle">
+              <use xlink:href="#spectrum-icon-18-Rectangle" />
             </svg>
           </button>
         </div>
       </div>
+
+      <div class="spectrum-Panel spectrum-Panel--floating" style="left: 160px; top: 100px">
+        <div class="spectrum-Panel-dragHandle"></div>
+        <div class="spectrum-ButtonGroup">
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Edit</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Copy</span>
+          </button>
+          <button class="spectrum-ActionButton spectrum-ActionButton--quiet">
+            <span class="spectrum-ActionButton-label">Delete</span>
+          </button>
+        </div>
+      </div>
+
 
   </body>
 </html>
