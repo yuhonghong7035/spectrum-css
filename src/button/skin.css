@@ -681,6 +681,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-FieldButton--quiet {
+  position: relative;
   color: var(--spectrum-fieldbutton-text-color);
   border-color: var(--spectrum-fieldbutton-quiet-border-color);
   background-color: var(--spectrum-fieldbutton-quiet-background-color);
@@ -693,7 +694,21 @@ governing permissions and limitations under the License.
   &:focus-ring,
   &.is-focused {
     background-color: var(--spectrum-fieldbutton-quiet-background-color-key-focus);
-    box-shadow: 0 2px 0 0 var(--spectrum-fieldbutton-border-color-key-focus);
+
+    /*box-shadow: 0 2px 0 0 var(--spectrum-fieldbutton-border-color-key-focus);*/
+    border-color: transparent;
+    box-shadow: none;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: -6px;
+      right: -6px;
+      border-radius: 4px;
+      box-shadow: 0 0 0 2px var(--spectrum-textfield-border-color-key-focus);
+    }
 
     &.is-placeholder {
       color: var(--spectrum-fieldbutton-quiet-placeholder-text-color-key-focus);
