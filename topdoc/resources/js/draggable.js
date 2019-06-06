@@ -26,8 +26,10 @@
         e.preventDefault();
         currentElement = element;
 
-        offsetY = e.clientY - currentElement.offsetTop;
-        offsetX = e.clientX - currentElement.offsetLeft;
+        var rect = currentElement.getBoundingClientRect();
+
+        offsetY = e.clientY - rect.top;
+        offsetX = e.clientX - rect.left;
 
         currentElement.style.position = 'fixed';
         currentElement.style.zIndex = ++currentZIndex;
