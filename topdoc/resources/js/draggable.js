@@ -1,5 +1,4 @@
 (function() {
-  let startX = 0, startY = 0;
   let offsetX = 0, offsetY = 0;
   let currentElement = null;
   let currentZIndex = 10;
@@ -14,8 +13,8 @@
 
   function handleDrag(e) {
     e.preventDefault();
-    currentElement.style.top = (e.clientY - offsetY) + "px";
-    currentElement.style.left = (e.clientX - offsetX) + "px";
+    currentElement.style.top = (e.clientY - offsetY) + 'px';
+    currentElement.style.left = (e.clientX - offsetX) + 'px';
   }
 
   function startDragging(e) {
