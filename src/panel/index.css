@@ -6,7 +6,7 @@
   --spectrum-panel-large-size: 304px;
 
   --spectrum-panel-padding: var(--spectrum-global-dimension-size-100);
-  --spectrum-panel-spacious-padding: var(--spectrum-global-dimension-size-100);
+  --spectrum-panel-spacious-padding: var(--spectrum-global-dimension-size-150);
   --spectrum-panel-floating-border-radius: var(--spectrum-alias-border-radius-regular);
 
   --spectrum-panel-border-width: var(--spectrum-global-dimension-size-25);
@@ -78,11 +78,20 @@
   padding: var(--spectrum-panel-padding);
 
   .spectrum-Accordion {
+    /* Hack to fix accordion */
     width: 100%;
   }
 
-  .spectrum-Form {
-    margin: 8px;
+  > .spectrum-Form {
+    /* Make forms look right when they're just chillin */
+    margin: var(--spectrum-panel-padding);
+  }
+
+  &:hover {
+    /* Show drag handels on hover */
+    .spectrum-Panel-dragHandle {
+      visibility: visible;
+    }
   }
 }
 
@@ -93,10 +102,13 @@
 }
 
 .spectrum-Panel--spacious {
-  padding: var(--spectrum-global-dimension-size-150);
+  padding: var(--spectrum-panel-spacious-padding);
 }
 
 .spectrum-Panel-dragHandle {
+  /* Hide by default for full panels */
+  visibility: hidden;
+
   position: relative;
   z-index: 1; /* appear above stuff */
 
@@ -171,6 +183,9 @@
   border-radius: var(--spectrum-panel-floating-border-radius);
 
   .spectrum-Panel-dragHandle {
+    /* Show always for floating panels */
+    visibility: visible;
+
     width: var(--spectrum-panel-draghandle-area-width);
     height: 100%;
   }
