@@ -16,6 +16,8 @@
 
   --spectrum-panel-draghandle-area-width: var(--spectrum-global-dimension-size-200);
 
+  --spectrum-panel-resizable-hit-area: var(--spectrum-global-dimension-size-100);
+
   /* Header */
   --spectrum-header-min-height: var(--spectrum-global-dimension-size-600);
   --spectrum-header-padding: var(--spectrum-global-dimension-size-100);
@@ -196,7 +198,7 @@
     position: absolute;
     content: '';
     display: block;
-    width: var(--spectrum-panel-border-width);
+    width: var(--spectrum-panel-resizable-hit-area);
 
     cursor: ew-resize;
     cursor: col-resize;
@@ -219,7 +221,7 @@
 
   &.spectrum-PanelGroup--resizable {
     &:before {
-      left: calc(-1 * var(--spectrum-panel-border-width));
+      left: calc(-1 * (var(--spectrum-panel-resizable-hit-area) + var(--spectrum-panel-border-width)) / 2);
     }
   }
 }

@@ -4,6 +4,9 @@
   let currentElement = null;
   let direction = null;
 
+  let borderWidth = 2;
+  let tolerance = 8;
+
   document.addEventListener('mousedown', startDragging);
 
   function finishDragging(e) {
@@ -30,8 +33,8 @@
 
       // Make sure the drag is on the border
       if (
-        element.className.indexOf('--right') > 0 && e.offsetX <= 0 ||
-        element.className.indexOf('--left') > 0 && e.offsetX > element.offsetWidth
+        element.className.indexOf('--right') > 0 && e.offsetX <= (borderWidth + tolerance) / 2 ||
+        element.className.indexOf('--left') > 0 && e.offsetX > element.offsetWidth - (borderWidth + tolerance) / 2
       ) {
         direction = element.getAttribute('resizable');
 
@@ -42,10 +45,10 @@
         startY = e.clientY;
 
         if (direction === 'width') {
-          startWidth = element.offsetWidth;
+          startWidth = element.offsetWidth - borderWidth;
         }
         else if (direction === 'height') {
-          startHeight = element.offsetHeight;
+          startHeight = element.offsetHeight - borderWidth;
         }
 
         document.addEventListener('mouseup', finishDragging);
