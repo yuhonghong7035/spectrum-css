@@ -14,6 +14,7 @@ const path = require('path');
 
 exports.cwd = process.cwd();
 exports.builder = path.resolve(__dirname, '..');
+exports.site = path.resolve(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
 exports.topLevel = path.resolve(exports.builder, '..', '..');
 
 if (exports.cwd === exports.topLevel) {
