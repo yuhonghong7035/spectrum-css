@@ -14,23 +14,23 @@ const gulp = require('gulp');
 const path = require('path');
 
 function buildSite_resources() {
-  return gulp.src(`resources/**`)
-    .pipe(gulp.dest('dist/'));
+  return gulp.src(path.join(__dirname, 'resources/**'))
+    .pipe(gulp.dest(path.join(__dirname, 'dist/')));
 }
 
 function buildSite_loadicons() {
   return gulp.src(require.resolve('loadicons'))
-    .pipe(gulp.dest('dist/js/loadicons/'));
+    .pipe(gulp.dest(path.join(__dirname, 'dist/js/loadicons/')));
 }
 
 function buildSite_focusPolyfill() {
   return gulp.src(require.resolve('@adobe/focus-ring-polyfill'))
-    .pipe(gulp.dest('dist/js/focus-ring-polyfill/'));
+    .pipe(gulp.dest(path.join(__dirname, 'dist/js/focus-ring-polyfill/')));
 }
 
 function buildSite_lunr() {
   return gulp.src(require.resolve('lunr'))
-    .pipe(gulp.dest('dist/js/lunr/'));
+    .pipe(gulp.dest(path.join(__dirname, 'dist/js/lunr/')));
 }
 
 function buildSite_prism() {
@@ -38,10 +38,10 @@ function buildSite_prism() {
     `${path.dirname(require.resolve('prismjs'))}/themes/prism.css`,
     `${path.dirname(require.resolve('prismjs'))}/themes/prism-tomorrow.css`
   ])
-    .pipe(gulp.dest('dist/css/prisim/'));
+    .pipe(gulp.dest(path.join(__dirname, 'dist/css/prisim/')));
 }
 
-let build = gulp.parallel(
+let copySiteResources = gulp.parallel(
   buildSite_resources,
   buildSite_loadicons,
   buildSite_focusPolyfill,
@@ -49,5 +49,4 @@ let build = gulp.parallel(
   buildSite_prism
 );
 
-exports.build = build;
-exports.default = build;
+exports.copySiteResources = copySiteResources;

@@ -15,7 +15,6 @@
     "directory": "./"
   },
   "dependencies": {
-    "@spectrum-css/site": "^1.0.0-alpha.0",
     "autoprefixer": "^6.5.3",
     "browser-sync": "^2.26.7",
     "del": "^5.0.0",

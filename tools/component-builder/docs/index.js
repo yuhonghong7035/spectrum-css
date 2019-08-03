@@ -20,7 +20,7 @@ const merge = require('merge-stream');
 const through = require('through2');
 const ext = require('replace-ext');
 
-const sitePath = path.join(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
+const sitePath = path.join(__dirname, '..', '..', '..', 'site');
 
 var dependencies;
 var docDependencies;

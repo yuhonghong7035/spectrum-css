@@ -25,8 +25,6 @@ const lunr = require('lunr');
 const dirs = require('../lib/dirs');
 const depUtils = require('../lib/depUtils');
 
-const sitePath = path.join(__dirname, '..', 'node_modules', '@spectrum-css', 'site');
-
 let minimumDeps = [
   'icons',
   'label',
@@ -82,7 +80,7 @@ async function buildDocs_forDep(dep) {
         docsDeps = docsDeps.filter((dep, i) => docsDeps.indexOf(dep) === i);
 
         return Object.assign({}, {
-          util: require('@spectrum-css/site/util'),
+          util: require(`${dirs.site}/util`),
           dnaVars: JSON.parse(fs.readFileSync(path.join(dirs.components, 'vars', 'dist', 'spectrum-metadata.json'), 'utf8'))
         }, templateData, {
           pageURL: path.basename(file.basename, '.yml') + '.html',
@@ -107,7 +105,7 @@ async function buildDocs_forDep(dep) {
         file.path = ext(file.path, '.html');
 
         try {
-          const templatePath = `${sitePath}/templates/siteComponent.pug`;
+          const templatePath = `${dirs.site}/templates/siteComponent.pug`;
           let compiled = pugCompiler.renderFile(templatePath, templateData);
           file.contents = Buffer.from(compiled);
         } catch (err) {
@@ -241,12 +239,12 @@ function buildSite_getData() {
 };
 
 function buildSite_copyResources() {
-  return gulp.src(`${sitePath}/dist/**`)
+  return gulp.src(`${dirs.site}/dist/**`)
     .pipe(gulp.dest('dist/docs/'));
 }
 
 function buildSite_html() {
-  return gulp.src(`${sitePath}/*.pug`)
+  return gulp.src(`${dirs.site}/*.pug`)
     .pipe(data(function(file) {
       return {
         pageURL: path.basename(file.basename, '.pug') + '.html',

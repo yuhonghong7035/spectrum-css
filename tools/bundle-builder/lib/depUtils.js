@@ -38,8 +38,7 @@ async function getDependencies(package) {
     return (
       dep.indexOf('@spectrum-css') === 0 &&
       dep !== '@spectrum-css/bundle-builder' &&
-      dep !== '@spectrum-css/component-builder' &&
-      dep !== '@spectrum-css/site'
+      dep !== '@spectrum-css/component-builder'
     );
   });
 

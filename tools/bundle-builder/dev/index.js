@@ -121,8 +121,8 @@ function watchSite() {
 
   gulp.watch(
     [
-      `${dirs.builder}/docs/template.pug`,
-      `${dirs.builder}/docs/util.js`
+      `${dirs.site}/templates/siteComponent.pug`,
+      `${dirs.site}/util.js`
     ],
     gulp.series(
       gulp.parallel(
