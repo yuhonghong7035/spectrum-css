@@ -1,0 +1,17 @@
+
+.spectrum--medium .spectrum-InputGroup,
+.spectrum--medium .spectrum-Datepicker {
+  --spectrum-global-dimension-size-50: 4px;
+  --spectrum-global-dimension-size-100: 8px;
+  --spectrum-global-dimension-size-150: 12px;
+  --spectrum-global-dimension-size-700: 56px;
+  --spectrum-global-dimension-size-1600: 128px;
+  --spectrum-alias-single-line-width: 192px;
+  --spectrum-combobox-textfield-border-top-right-radius: 0;
+  --spectrum-combobox-textfield-border-bottom-right-radius: 0;
+  --spectrum-combobox-fieldbutton-border-top-left-radius: 0;
+  --spectrum-combobox-fieldbutton-border-bottom-left-radius: 0;
+  --spectrum-dropdown-padding-x: 12px;
+  --spectrum-textfield-height: 32px;
+  --spectrum-textfield-quiet-affixed-border-size: 1px;
+}

@@ -1,0 +1,28 @@
+
+.spectrum--large .spectrum-Breadcrumbs {
+  --spectrum-global-dimension-size-10: 1px;
+  --spectrum-breadcrumb-compact-item-text-size: 17px;
+  --spectrum-breadcrumb-list-height: 40px;
+  --spectrum-breadcrumb-item-text-line-height: 1.5;
+  --spectrum-breadcrumb-item-text-font-weight: 400;
+  --spectrum-breadcrumb-item-margin-right: 1px;
+  --spectrum-breadcrumb-item-border-radius: 5px;
+  --spectrum-breadcrumb-item-padding-x: 10px;
+  --spectrum-breadcrumb-title-text-font-weight: 700;
+  --spectrum-breadcrumb-button-gap: 1px;
+  --spectrum-breadcrumb-ui-icon-width: 8px;
+  --spectrum-breadcrumb-ui-icon-height: 10px;
+  --spectrum-breadcrumb-item-text-size: 19px;
+  --spectrum-breadcrumb-item-border-size-key-focus: 2px;
+  --spectrum-breadcrumb-multiline-item-text-line-height: 1.5;
+  --spectrum-breadcrumb-multiline-item-text-font-weight: 400;
+  --spectrum-breadcrumb-multiline-title-margin-top: 0px;
+  --spectrum-breadcrumb-multiline-title-text-line-height: 1.3;
+  --spectrum-breadcrumb-multiline-title-text-font-weight: 700;
+  --spectrum-breadcrumb-multiline-item-text-size: 15px;
+  --spectrum-breadcrumb-multiline-title-text-size: 22px;
+  --spectrum-breadcrumb-title-margin: 0.3em 0;
+  --spectrum-breadcrumb-title-active-text-size: 28px;
+  --spectrum-breadcrumb-title-active-text-font-weight: 300;
+  --spectrum-breadcrumb-title-active-text-line-height: 32px;
+}

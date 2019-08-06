@@ -1,0 +1,34 @@
+
+.spectrum--dark .spectrum-ToggleSwitch {
+  --spectrum-switch-text-color: rgb(227, 227, 227);
+  --spectrum-switch-handle-border-color: rgb(144, 144, 144);
+  --spectrum-switch-handle-background-color: rgb(47, 47, 47);
+  --spectrum-switch-track-color: rgb(74, 74, 74);
+  --spectrum-switch-text-color-hover: rgb(255, 255, 255);
+  --spectrum-switch-handle-border-color-hover: rgb(185, 185, 185);
+  --spectrum-switch-text-color-down: rgb(255, 255, 255);
+  --spectrum-switch-handle-border-color-down: rgb(227, 227, 227);
+  --spectrum-switch-text-color-key-focus: rgb(75, 156, 245);
+  --spectrum-switch-handle-border-color-key-focus: rgb(38, 128, 235);
+  --spectrum-switch-text-color-disabled: rgb(110, 110, 110);
+  --spectrum-switch-handle-border-color-disabled: rgb(90, 90, 90);
+  --spectrum-switch-track-color-disabled: rgb(74, 74, 74);
+  --spectrum-switch-handle-border-color-selected: rgb(55, 142, 240);
+  --spectrum-switch-track-color-selected: rgb(55, 142, 240);
+  --spectrum-switch-handle-border-color-selected-hover: rgb(75, 156, 245);
+  --spectrum-switch-track-color-selected-hover: rgb(75, 156, 245);
+  --spectrum-switch-handle-border-color-selected-down: rgb(90, 169, 250);
+  --spectrum-switch-track-color-selected-down: rgb(90, 169, 250);
+  --spectrum-switch-text-color-selected-key-focus: rgb(75, 156, 245);
+  --spectrum-switch-track-color-selected-key-focus: rgb(38, 128, 235);
+  --spectrum-switch-handle-border-color-selected-key-focus: rgb(38, 128, 235);
+  --spectrum-switch-text-color-selected-disabled: rgb(110, 110, 110);
+  --spectrum-switch-track-color-selected-disabled: rgb(90, 90, 90);
+  --spectrum-switch-handle-border-color-selected-disabled: rgb(90, 90, 90);
+  --spectrum-switch-quiet-handle-border-color-selected: rgb(185, 185, 185);
+  --spectrum-switch-quiet-track-color-selected: rgb(185, 185, 185);
+  --spectrum-switch-quiet-handle-border-color-selected-hover: rgb(227, 227, 227);
+  --spectrum-switch-quiet-track-color-selected-hover: rgb(227, 227, 227);
+  --spectrum-switch-quiet-handle-border-color-selected-down: rgb(255, 255, 255);
+  --spectrum-switch-quiet-track-color-selected-down: rgb(255, 255, 255);
+}

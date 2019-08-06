@@ -1,0 +1,34 @@
+
+.spectrum--light .spectrum-Table {
+  --spectrum-alias-highlight-selected: rgba(20,115,230,0.1);
+  --spectrum-alias-border-color-focus: rgb(38, 128, 235);
+  --spectrum-table-background-color: rgb(255, 255, 255);
+  --spectrum-table-border-color: rgb(225, 225, 225);
+  --spectrum-table-divider-border-color: rgb(225, 225, 225);
+  --spectrum-table-row-background-color: rgba(0, 0, 0, 0);
+  --spectrum-table-header-text-color: rgb(110, 110, 110);
+  --spectrum-table-header-sort-icon-color: rgb(142, 142, 142);
+  --spectrum-table-header-background-color: rgba(0, 0, 0, 0);
+  --spectrum-table-cell-text-color: rgb(75, 75, 75);
+  --spectrum-table-cell-background-color: rgba(0, 0, 0, 0);
+  --spectrum-table-cell-border-color: rgb(225, 225, 225);
+  --spectrum-table-row-background-color-hover: rgba(44,44,44,0.06);
+  --spectrum-table-header-text-color-hover: rgb(44, 44, 44);
+  --spectrum-table-header-sort-icon-color-hover: rgb(44, 44, 44);
+  --spectrum-table-row-background-color-down: rgba(44,44,44,0.1);
+  --spectrum-table-header-text-color-down: rgb(44, 44, 44);
+  --spectrum-table-header-sort-icon-color-down: rgb(44, 44, 44);
+  --spectrum-table-header-text-color-key-focus: rgb(44, 44, 44);
+  --spectrum-table-header-sort-icon-color-key-focus: rgb(44, 44, 44);
+  --spectrum-table-cell-border-color-key-focus: rgb(38, 128, 235);
+  --spectrum-table-row-background-color-selected: rgba(20,115,230,0.1);
+  --spectrum-table-row-background-color-selected-hover: rgba(20,115,230,0.2);
+  --spectrum-table-row-background-color-selected-key-focus: rgba(20,115,230,0.2);
+  --spectrum-table-quiet-row-background-color: rgba(0, 0, 0, 0);
+  --spectrum-table-quiet-cell-background-color: rgba(0, 0, 0, 0);
+  --spectrum-table-quiet-row-background-color-hover: rgba(44,44,44,0.06);
+  --spectrum-table-quiet-row-background-color-down: rgba(44,44,44,0.1);
+  --spectrum-table-quiet-row-background-color-selected: rgba(20,115,230,0.1);
+  --spectrum-table-quiet-row-background-color-selected-hover: rgba(20,115,230,0.2);
+  --spectrum-table-quiet-row-background-color-selected-key-focus: rgba(20,115,230,0.2);
+}

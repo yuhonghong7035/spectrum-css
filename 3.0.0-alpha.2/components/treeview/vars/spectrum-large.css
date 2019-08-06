@@ -1,0 +1,15 @@
+
+.spectrum--large .spectrum-TreeView {
+  --spectrum-global-dimension-size-25: 2px;
+  --spectrum-global-dimension-size-65: 6px;
+  --spectrum-global-dimension-size-125: 13px;
+  --spectrum-global-dimension-size-400: 40px;
+  --spectrum-treeview-item-height: 45px;
+  --spectrum-treeview-item-border-radius: 5px;
+  --spectrum-treeview-item-border-size: 2px;
+  --spectrum-treeview-item-padding-y: 8px;
+  --spectrum-treeview-item-margin-y: 8px;
+  --spectrum-treeview-item-padding-x: 30px;
+  --spectrum-treeview-item-indent: 35px;
+  --spectrum-treeview-item-icon-gap: 10px;
+}

@@ -1,0 +1,14 @@
+
+.spectrum--lightest .spectrum-Dropdown {
+  --spectrum-dropdown-placeholder-text-color: rgb(149, 149, 149);
+  --spectrum-dropdown-icon-color: rgb(116, 116, 116);
+  --spectrum-dropdown-placeholder-text-color-hover: rgb(50, 50, 50);
+  --spectrum-dropdown-icon-color-hover: rgb(50, 50, 50);
+  --spectrum-dropdown-placeholder-text-color-key-focus: rgb(50, 50, 50);
+  --spectrum-dropdown-icon-color-key-focus: rgb(50, 50, 50);
+  --spectrum-dropdown-placeholder-text-color-disabled: rgb(188, 188, 188);
+  --spectrum-dropdown-icon-color-disabled: rgb(211, 211, 211);
+  --spectrum-dropdown-placeholder-text-color-down: rgb(50, 50, 50);
+  --spectrum-dropdown-placeholder-text-color-mouse-focus: rgb(50, 50, 50);
+  --spectrum-dropdown-validation-icon-color-error: rgb(215, 55, 63);
+}
