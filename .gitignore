@@ -1,7 +1,10 @@
 /dist
 /node_modules
 /temp
-/packages
+/site
+/components
+/tools
+/bundles
 .npmrc
 lerna-debug.log
 npm-debug.log
