@@ -1,0 +1,8 @@
+
+.spectrum--darkest .spectrum-Tooltip {
+  --spectrum-tooltip-text-color: rgb(255, 255, 255);
+  --spectrum-tooltip-background-color: rgb(116, 116, 116);
+  --spectrum-tooltip-info-background-color: rgb(13, 102, 208);
+  --spectrum-tooltip-negative-background-color: rgb(201, 37, 45);
+  --spectrum-tooltip-positive-background-color: rgb(18, 128, 92);
+}

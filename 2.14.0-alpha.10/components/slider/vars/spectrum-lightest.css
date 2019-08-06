@@ -1,0 +1,39 @@
+
+.spectrum--lightest .spectrum-Slider,
+.spectrum--lightest .spectrum-Dial {
+  --spectrum-alias-background-color-default: rgb(255, 255, 255);
+  --spectrum-dial-handle-marker-color: rgb(116, 116, 116);
+  --spectrum-dial-min-max-tick-color: rgb(149, 149, 149);
+  --spectrum-dial-border-color-hover: rgb(80, 80, 80);
+  --spectrum-dial-handle-marker-color-hover: rgb(80, 80, 80);
+  --spectrum-dial-handle-marker-color-key-focus: rgb(255, 255, 255);
+  --spectrum-label-text-color: rgb(116, 116, 116);
+  --spectrum-label-text-color-disabled: rgb(188, 188, 188);
+  --spectrum-slider-color-handle-outset-border-color: rgba(0,0,0,0.05);
+  --spectrum-slider-color-handle-inset-border-color: rgba(0,0,0,0.05);
+  --spectrum-slider-color-handle-border-color: rgb(255, 255, 255);
+  --spectrum-slider-color-handle-color: rgba(0, 0, 0, 0);
+  --spectrum-slider-color-track-background-color-gradient-start: rgb(55, 142, 240);
+  --spectrum-slider-color-track-background-color-gradient-end: rgb(13, 102, 208);
+  --spectrum-slider-color-track-border-color: rgba(0,0,0,0.05);
+  --spectrum-slider-color-handle-outset-border-color-key-focus: rgba(0,0,0,0.05);
+  --spectrum-slider-color-track-color-disabled: rgb(244, 244, 244);
+  --spectrum-slider-color-handle-border-color-disabled: rgb(211, 211, 211);
+  --spectrum-slider-color-handle-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-slider-handle-border-color: rgb(116, 116, 116);
+  --spectrum-slider-handle-background-color: rgba(0, 0, 0, 0);
+  --spectrum-slider-track-color: rgb(234, 234, 234);
+  --spectrum-slider-handle-border-color-hover: rgb(80, 80, 80);
+  --spectrum-slider-handle-border-color-down: rgb(80, 80, 80);
+  --spectrum-slider-handle-background-color-down: rgba(0, 0, 0, 0);
+  --spectrum-slider-handle-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-slider-handle-background-color-key-focus: rgb(55, 142, 240);
+  --spectrum-slider-handle-border-color-disabled: rgb(211, 211, 211);
+  --spectrum-slider-track-color-disabled: rgb(234, 234, 234);
+  --spectrum-slider-fill-track-color: rgb(116, 116, 116);
+  --spectrum-slider-fill-track-color-disabled: rgb(234, 234, 234);
+  --spectrum-slider-player-track-buffer-color: rgb(188, 188, 188);
+  --spectrum-slider-player-track-buffer-color-disabled: rgb(234, 234, 234);
+  --spectrum-slider-ramp-track-color-disabled: rgb(244, 244, 244);
+  --spectrum-slider-tick-mark-color: rgb(234, 234, 234);
+}

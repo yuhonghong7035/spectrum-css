@@ -1,0 +1,23 @@
+
+.spectrum--dark .spectrum-Textfield {
+  --spectrum-textfield-placeholder-text-color: rgb(144, 144, 144);
+  --spectrum-textfield-text-color: rgb(227, 227, 227);
+  --spectrum-textfield-background-color: rgb(37, 37, 37);
+  --spectrum-textfield-border-color: rgb(74, 74, 74);
+  --spectrum-textfield-placeholder-text-color-hover: rgb(255, 255, 255);
+  --spectrum-textfield-border-color-hover: rgb(90, 90, 90);
+  --spectrum-textfield-border-color-key-focus: rgb(38, 128, 235);
+  --spectrum-textfield-placeholder-text-color-disabled: rgb(110, 110, 110);
+  --spectrum-textfield-text-color-disabled: rgb(110, 110, 110);
+  --spectrum-textfield-background-color-disabled: rgb(62, 62, 62);
+  --spectrum-textfield-border-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-textfield-border-color-down: rgb(55, 142, 240);
+  --spectrum-textfield-border-color-error: rgb(236, 91, 98);
+  --spectrum-textfield-quiet-background-color: rgba(0, 0, 0, 0);
+  --spectrum-textfield-quiet-border-color: rgb(74, 74, 74);
+  --spectrum-textfield-quiet-border-color-hover: rgb(90, 90, 90);
+  --spectrum-textfield-quiet-border-color-key-focus: rgb(38, 128, 235);
+  --spectrum-textfield-quiet-background-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-textfield-quiet-border-color-disabled: rgb(74, 74, 74);
+  --spectrum-textfield-quiet-border-color-down: rgb(55, 142, 240);
+}

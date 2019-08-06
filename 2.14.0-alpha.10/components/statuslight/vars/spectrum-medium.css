@@ -1,0 +1,9 @@
+
+.spectrum--medium .spectrum-StatusLight {
+  --spectrum-global-dimension-size-75: 6px;
+  --spectrum-statuslight-text-font-weight: 400;
+  --spectrum-statuslight-text-size: 14px;
+  --spectrum-statuslight-height: 32px;
+  --spectrum-statuslight-text-gap: 12px;
+  --spectrum-statuslight-dot-size: 8px;
+}

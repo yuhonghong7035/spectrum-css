@@ -1,0 +1,10 @@
+
+.spectrum--dark .spectrum-Alert {
+  --spectrum-alert-background-color: rgb(37, 37, 37);
+  --spectrum-alert-title-text-color: rgb(255, 255, 255);
+  --spectrum-alert-text-color: rgb(185, 185, 185);
+  --spectrum-alert-error-border-color: rgb(227, 72, 80);
+  --spectrum-alert-info-border-color: rgb(38, 128, 235);
+  --spectrum-alert-success-border-color: rgb(45, 157, 120);
+  --spectrum-alert-warning-border-color: rgb(230, 134, 25);
+}

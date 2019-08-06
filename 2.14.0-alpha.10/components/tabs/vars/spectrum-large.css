@@ -1,0 +1,23 @@
+
+.spectrum--large .spectrum-Tabs {
+  --spectrum-global-dimension-size-40: 4px;
+  --spectrum-tabs-compact-vertical-item-height: 40px;
+  --spectrum-tabs-compact-vertical-item-gap: 5px;
+  --spectrum-tabs-text-font-weight: 400;
+  --spectrum-tabs-text-size: 17px;
+  --spectrum-tabs-height: 60px;
+  --spectrum-tabs-icon-gap: 10px;
+  --spectrum-tabs-rule-border-radius: 1px;
+  --spectrum-tabs-focus-ring-height: 40px;
+  --spectrum-tabs-focus-ring-size: 2px;
+  --spectrum-tabs-focus-ring-padding-x: 10px;
+  --spectrum-tabs-focus-ring-border-radius: 6px;
+  --spectrum-tabs-item-gap: 30px;
+  --spectrum-tabs-rule-height: 2px;
+  --spectrum-tabs-selection-indicator-animation-duration: 130ms;
+  --spectrum-tabs-quiet-compact-height: 40px;
+  --spectrum-tabs-vertical-item-height: 56px;
+  --spectrum-tabs-vertical-item-gap: 5px;
+  --spectrum-tabs-vertical-item-margin-left: 15px;
+  --spectrum-tabs-vertical-rule-width: 2px;
+}

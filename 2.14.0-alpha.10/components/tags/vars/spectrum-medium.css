@@ -1,0 +1,12 @@
+
+.spectrum--medium .spectrum-Tags {
+  --spectrum-global-dimension-size-50: 4px;
+  --spectrum-tag-text-size: 12px;
+  --spectrum-tag-height: 24px;
+  --spectrum-tag-border-size: 1px;
+  --spectrum-tag-padding-x: 10px;
+  --spectrum-tag-avatar-padding-x: 8px;
+  --spectrum-tag-icon-padding-x: 8px;
+  --spectrum-taggroup-tag-gap-x: 8px;
+  --spectrum-taggroup-tag-gap-y: 8px;
+}
