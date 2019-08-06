@@ -1,0 +1,16 @@
+
+.spectrum--lightest .spectrum-Card {
+  --spectrum-alias-highlight-selected: rgba(38,128,235,0.1);
+  --spectrum-card-border-color: rgb(244, 244, 244);
+  --spectrum-card-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-card-border-color-hover: rgb(211, 211, 211);
+  --spectrum-card-coverphoto-background-color: rgb(244, 244, 244);
+  --spectrum-card-coverphoto-border-color: rgb(244, 244, 244);
+  --spectrum-card-description-text-color: rgb(116, 116, 116);
+  --spectrum-card-background-color: rgb(255, 255, 255);
+  --spectrum-card-quiet-preview-background-color: rgb(244, 244, 244);
+  --spectrum-card-quiet-preview-background-color-hover: rgb(234, 234, 234);
+  --spectrum-card-quiet-border-color-selected: rgb(38, 128, 235);
+  --spectrum-card-quiet-title-text-color: rgb(80, 80, 80);
+  --spectrum-card-quiet-subtitle-text-color: rgb(116, 116, 116);
+}

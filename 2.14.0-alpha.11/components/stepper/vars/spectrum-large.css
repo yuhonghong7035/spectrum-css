@@ -1,0 +1,7 @@
+
+.spectrum--large .spectrum-Stepper {
+  --spectrum-global-dimension-size-50: 5px;
+  --spectrum-global-dimension-size-150: 15px;
+  --spectrum-alias-single-line-height: 40px;
+  --spectrum-alias-single-line-width: 240px;
+}

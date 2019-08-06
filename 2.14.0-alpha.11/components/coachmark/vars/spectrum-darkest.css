@@ -1,0 +1,13 @@
+
+.spectrum--darkest .spectrum-CoachMarkPopover,
+.spectrum--darkest .spectrum-CoachMarkIndicator {
+  --spectrum-coachmark-indicator-ring-default-color: rgb(20, 115, 230);
+  --spectrum-coachmark-indicator-ring-low-contrast-color: rgb(8, 8, 8);
+  --spectrum-coachmark-indicator-ring-high-contrast-color: rgb(239, 239, 239);
+  --spectrum-coachmark-background-color: rgb(8, 8, 8);
+  --spectrum-coachmark-shadow-color: rgba(0,0,0,0.8);
+  --spectrum-coachmark-border-color: rgb(73, 73, 73);
+  --spectrum-coachmark-title-text-color: rgb(239, 239, 239);
+  --spectrum-coachmark-content-text-color: rgb(200, 200, 200);
+  --spectrum-coachmark-step-text-color: rgb(162, 162, 162);
+}

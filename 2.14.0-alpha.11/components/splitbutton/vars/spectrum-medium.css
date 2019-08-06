@@ -1,0 +1,6 @@
+
+.spectrum--medium .spectrum-SplitButton {
+  --spectrum-global-dimension-size-150: 12px;
+  --spectrum-button-primary-border-radius: 16px;
+  --spectrum-button-primary-border-size: 2px;
+}

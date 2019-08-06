@@ -1,0 +1,13 @@
+
+.spectrum--darkest .spectrum-InputGroup,
+.spectrum--darkest .spectrum-Datepicker {
+  --spectrum-dropdown-border-color-key-focus: rgb(20, 115, 230);
+  --spectrum-dropdown-border-color-error: rgb(227, 72, 80);
+  --spectrum-textfield-border-color-hover: rgb(73, 73, 73);
+  --spectrum-textfield-border-color-key-focus: rgb(20, 115, 230);
+  --spectrum-textfield-text-color-disabled: rgb(92, 92, 92);
+  --spectrum-textfield-border-color-error: rgb(227, 72, 80);
+  --spectrum-textfield-quiet-border-color: rgb(57, 57, 57);
+  --spectrum-textfield-quiet-border-color-hover: rgb(73, 73, 73);
+  --spectrum-textfield-quiet-border-color-key-focus: rgb(20, 115, 230);
+}

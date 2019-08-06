@@ -1,0 +1,10 @@
+
+.spectrum--lightest .spectrum-Dialog {
+  --spectrum-dialog-background-color: rgb(255, 255, 255);
+  --spectrum-dialog-icon-color: rgb(50, 50, 50);
+  --spectrum-dialog-rule-color: rgb(244, 244, 244);
+  --spectrum-dialog-title-text-color: rgb(50, 50, 50);
+  --spectrum-dialog-content-text-color: rgb(80, 80, 80);
+  --spectrum-dialog-error-icon-color: rgb(215, 55, 63);
+  --spectrum-dialog-error-title-text-color: rgb(215, 55, 63);
+}

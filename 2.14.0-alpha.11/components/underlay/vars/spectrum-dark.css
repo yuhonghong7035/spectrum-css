@@ -1,0 +1,4 @@
+
+.spectrum--dark .spectrum-Underlay {
+  --spectrum-dialog-underlay-background-color: rgba(0,0,0,0.5);
+}

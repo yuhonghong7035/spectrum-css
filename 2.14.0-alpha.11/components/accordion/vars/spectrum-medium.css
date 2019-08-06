@@ -1,0 +1,12 @@
+
+.spectrum--medium .spectrum-Accordion {
+  --spectrum-global-dimension-size-150: 12px;
+  --spectrum-accordion-item-height: 40px;
+  --spectrum-accordion-item-padding: 16px;
+  --spectrum-accordion-item-border-size: 1px;
+  --spectrum-accordion-icon-spacing: 16px;
+  --spectrum-accordion-item-title-text-size: 11px;
+  --spectrum-accordion-item-title-tracking: 0.06em;
+  --spectrum-accordion-item-content-padding: 16px;
+  --spectrum-accordion-item-border-size-key-focus: 2px;
+}

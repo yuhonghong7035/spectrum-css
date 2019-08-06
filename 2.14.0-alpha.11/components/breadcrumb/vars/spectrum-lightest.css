@@ -1,0 +1,12 @@
+
+.spectrum--lightest .spectrum-Breadcrumbs {
+  --spectrum-breadcrumb-ui-icon-color: rgb(188, 188, 188);
+  --spectrum-breadcrumb-text-color: rgb(116, 116, 116);
+  --spectrum-breadcrumb-text-color-hover: rgb(50, 50, 50);
+  --spectrum-breadcrumb-text-color-down: rgb(50, 50, 50);
+  --spectrum-breadcrumb-item-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-breadcrumb-text-color-key-focus: rgb(50, 50, 50);
+  --spectrum-breadcrumb-item-border-color-drop: rgb(38, 128, 235);
+  --spectrum-breadcrumb-item-background-color-drop: rgba(38,128,235,0.1);
+  --spectrum-breadcrumb-item-text-color-drop: rgb(50, 50, 50);
+}

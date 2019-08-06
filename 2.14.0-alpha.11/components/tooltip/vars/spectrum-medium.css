@@ -1,0 +1,16 @@
+
+.spectrum--medium .spectrum-Tooltip {
+  --spectrum-dropdown-flyout-menu-offset-y: 6px;
+  --spectrum-tooltip-text-font-weight: 400;
+  --spectrum-tooltip-min-height: 24px;
+  --spectrum-tooltip-padding-x: 10px;
+  --spectrum-tooltip-padding-top: 4px;
+  --spectrum-tooltip-content-max-width: 101px;
+  --spectrum-tooltip-icon-size: 14px;
+  --spectrum-tooltip-icon-margin-x: 8px;
+  --spectrum-tooltip-tip-height: 4px;
+  --spectrum-tooltip-tip-margin: 8px;
+  --spectrum-tooltip-border-radius: 4px;
+  --spectrum-tooltip-text-size: 12px;
+  --spectrum-tooltip-text-line-height: 16px;
+}
