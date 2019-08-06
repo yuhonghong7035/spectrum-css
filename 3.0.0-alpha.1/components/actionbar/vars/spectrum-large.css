@@ -1,0 +1,5 @@
+
+.spectrum--large .spectrum-ActionBar {
+  --spectrum-global-dimension-size-200: 20px;
+  --spectrum-global-dimension-size-600: 60px;
+}

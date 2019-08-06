@@ -1,0 +1,5 @@
+
+.spectrum--lightest .spectrum-Search {
+  --spectrum-textfield-icon-color: rgb(116, 116, 116);
+  --spectrum-textfield-text-color-disabled: rgb(188, 188, 188);
+}

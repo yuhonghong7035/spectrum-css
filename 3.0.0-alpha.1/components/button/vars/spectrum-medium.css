@@ -1,0 +1,54 @@
+
+.spectrum--medium .spectrum-Button,
+.spectrum--medium .spectrum-ActionButton,
+.spectrum--medium .spectrum-LogicButton,
+.spectrum--medium .spectrum-FieldButton,
+.spectrum--medium .spectrum-ClearButton,
+.spectrum--medium .spectrum-Tool {
+  --spectrum-global-dimension-size-50: 4px;
+  --spectrum-actionbutton-text-font-weight: 400;
+  --spectrum-actionbutton-text-size: 14px;
+  --spectrum-actionbutton-icon-size: 18px;
+  --spectrum-actionbutton-height: 32px;
+  --spectrum-actionbutton-min-width: 32px;
+  --spectrum-actionbutton-border-radius: 4px;
+  --spectrum-actionbutton-text-padding-x: 12px;
+  --spectrum-actionbutton-icon-padding-x: 7px;
+  --spectrum-actionbutton-hold-icon-padding-bottom: 3px;
+  --spectrum-actionbutton-hold-icon-padding-right: 3px;
+  --spectrum-actionbutton-border-size: 1px;
+  --spectrum-actionbutton-quiet-text-font-weight: 400;
+  --spectrum-actionbutton-quiet-text-size: 14px;
+  --spectrum-actionbutton-quiet-border-radius: 4px;
+  --spectrum-actionbutton-quiet-border-size: 1px;
+  --spectrum-actionbuttongroup-text-button-gap-x: 8px;
+  --spectrum-button-primary-height: 32px;
+  --spectrum-button-primary-padding-x: 16px;
+  --spectrum-button-primary-border-radius: 16px;
+  --spectrum-button-primary-border-size: 2px;
+  --spectrum-button-primary-text-font-weight: 700;
+  --spectrum-button-primary-text-gap: 8px;
+  --spectrum-button-primary-text-size: 15px;
+  --spectrum-button-primary-min-width: 72px;
+  --spectrum-buttongroup-button-gap-x: 16px;
+  --spectrum-clearbutton-medium-width: 32px;
+  --spectrum-clearbutton-medium-height: 32px;
+  --spectrum-clearbutton-small-width: 24px;
+  --spectrum-clearbutton-small-height: 24px;
+  --spectrum-dropdown-text-size: 14px;
+  --spectrum-dropdown-border-size: 1px;
+  --spectrum-dropdown-height: 32px;
+  --spectrum-dropdown-padding-x: 12px;
+  --spectrum-fieldbutton-quiet-border-radius: 0px;
+  --spectrum-logicbutton-and-border-size: 2px;
+  --spectrum-logicbutton-and-border-radius: 4px;
+  --spectrum-logicbutton-and-text-size: 14px;
+  --spectrum-logicbutton-and-text-font-weight: 700;
+  --spectrum-logicbutton-and-height: 24px;
+  --spectrum-logicbutton-and-padding-x: 8px;
+  --spectrum-tool-height: 32px;
+  --spectrum-tool-min-width: 32px;
+  --spectrum-tool-hold-icon-padding-bottom: 3px;
+  --spectrum-tool-hold-icon-padding-right: 3px;
+  --spectrum-toolgroup-text-button-gap-x: 8px;
+}
