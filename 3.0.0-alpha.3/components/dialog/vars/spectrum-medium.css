@@ -1,0 +1,23 @@
+
+.spectrum--medium .spectrum-Dialog {
+  --spectrum-global-dimension-size-200: 16px;
+  --spectrum-global-dimension-size-350: 28px;
+  --spectrum-global-dimension-size-450: 36px;
+  --spectrum-global-dimension-size-1600: 128px;
+  --spectrum-dialog-min-width: 288px;
+  --spectrum-dialog-rule-height: 2px;
+  --spectrum-dialog-rule-margin-top: 12px;
+  --spectrum-dialog-rule-margin-bottom: 16px;
+  --spectrum-dialog-title-text-size: 18px;
+  --spectrum-dialog-title-text-line-height: 1.3;
+  --spectrum-dialog-title-text-font-weight: 700;
+  --spectrum-dialog-content-text-size: 14px;
+  --spectrum-dialog-content-text-font-weight: 400;
+  --spectrum-dialog-padding: 40px;
+  --spectrum-dialog-border-radius: 4px;
+  --spectrum-dialog-content-text-line-height: 1.5;
+  --spectrum-dialog-entry-animation-delay: 160ms;
+  --spectrum-dialog-entry-animation-duration: 250ms;
+  --spectrum-dialog-entry-animation-distance: 20px;
+  --spectrum-dialog-exit-animation-duration: 130ms;
+}

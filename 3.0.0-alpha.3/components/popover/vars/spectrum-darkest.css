@@ -1,0 +1,6 @@
+
+.spectrum--darkest .spectrum-Popover {
+  --spectrum-popover-background-color: rgb(8, 8, 8);
+  --spectrum-popover-border-color: rgb(73, 73, 73);
+  --spectrum-popover-shadow-color: rgba(0,0,0,0.8);
+}

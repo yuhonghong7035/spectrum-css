@@ -1,0 +1,6 @@
+
+.spectrum--darkest .spectrum-Rule {
+  --spectrum-rule-large-background-color: rgb(200, 200, 200);
+  --spectrum-rule-medium-background-color: rgb(57, 57, 57);
+  --spectrum-rule-small-background-color: rgb(57, 57, 57);
+}

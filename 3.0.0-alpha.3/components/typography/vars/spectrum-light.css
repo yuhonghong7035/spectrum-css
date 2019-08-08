@@ -1,0 +1,103 @@
+
+.spectrum--light .spectrum-Body1,
+.spectrum--light .spectrum-Body2,
+.spectrum--light .spectrum-Body,
+.spectrum--light .spectrum-Body3,
+.spectrum--light .spectrum-Body4,
+.spectrum--light .spectrum-Body5,
+.spectrum--light .spectrum-Heading1,
+.spectrum--light .spectrum-Heading2,
+.spectrum--light .spectrum-Heading3,
+.spectrum--light .spectrum-Heading4,
+.spectrum--light .spectrum-Heading,
+.spectrum--light .spectrum-Heading5,
+.spectrum--light .spectrum-Heading6,
+.spectrum--light .spectrum-Subheading,
+.spectrum--light .spectrum-Detail,
+.spectrum--light .spectrum-Typography,
+.spectrum--light .spectrum-Article,
+.spectrum--light .spectrum-Code1,
+.spectrum--light .spectrum-Code2,
+.spectrum--light .spectrum-Code3,
+.spectrum--light .spectrum-Code4,
+.spectrum--light .spectrum-Code5 {
+  --spectrum-body-1-text-color: rgb(75, 75, 75);
+  --spectrum-body-2-text-color: rgb(75, 75, 75);
+  --spectrum-body-3-text-color: rgb(75, 75, 75);
+  --spectrum-body-4-text-color: rgb(75, 75, 75);
+  --spectrum-body-5-text-color: rgb(75, 75, 75);
+  --spectrum-body-article-1-text-color: rgb(75, 75, 75);
+  --spectrum-body-article-2-text-color: rgb(75, 75, 75);
+  --spectrum-body-article-3-text-color: rgb(75, 75, 75);
+  --spectrum-body-article-4-text-color: rgb(75, 75, 75);
+  --spectrum-body-article-5-text-color: rgb(75, 75, 75);
+  --spectrum-body-code-1-text-color: rgb(75, 75, 75);
+  --spectrum-body-code-2-text-color: rgb(75, 75, 75);
+  --spectrum-body-code-3-text-color: rgb(75, 75, 75);
+  --spectrum-body-code-4-text-color: rgb(75, 75, 75);
+  --spectrum-body-code-5-text-color: rgb(75, 75, 75);
+  --spectrum-body-han-1-text-color: rgb(75, 75, 75);
+  --spectrum-body-han-2-text-color: rgb(75, 75, 75);
+  --spectrum-body-han-3-text-color: rgb(75, 75, 75);
+  --spectrum-body-han-4-text-color: rgb(75, 75, 75);
+  --spectrum-body-han-5-text-color: rgb(75, 75, 75);
+  --spectrum-body-text-color: rgb(75, 75, 75);
+  --spectrum-body-large-text-color: rgb(75, 75, 75);
+  --spectrum-body-secondary-text-color: rgb(110, 110, 110);
+  --spectrum-body-small-text-color: rgb(75, 75, 75);
+  --spectrum-detail-article-text-color: rgb(75, 75, 75);
+  --spectrum-detail-text-color: rgb(75, 75, 75);
+  --spectrum-detail-han-text-color: rgb(75, 75, 75);
+  --spectrum-display-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-article-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-article-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-article-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-article-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-strong-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-strong-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-quiet-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-display-strong-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-display-strong-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-3-text-color: rgb(44, 44, 44);
+  --spectrum-heading-4-text-color: rgb(44, 44, 44);
+  --spectrum-heading-5-text-color: rgb(44, 44, 44);
+  --spectrum-heading-6-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-3-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-4-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-5-text-color: rgb(44, 44, 44);
+  --spectrum-heading-article-6-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-article-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-article-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-strong-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-strong-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-3-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-4-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-5-text-color: rgb(44, 44, 44);
+  --spectrum-heading-han-6-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-quiet-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-strong-han-1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-strong-han-2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-display-text-color: rgb(44, 44, 44);
+  --spectrum-heading-page-title-text-color: rgb(110, 110, 110);
+  --spectrum-heading-subtitle1-text-color: rgb(44, 44, 44);
+  --spectrum-heading-subtitle2-text-color: rgb(44, 44, 44);
+  --spectrum-heading-subtitle3-text-color: rgb(110, 110, 110);
+  --spectrum-subheading-article-text-color: rgb(44, 44, 44);
+  --spectrum-subheading-text-color: rgb(44, 44, 44);
+  --spectrum-subheading-han-text-color: rgb(44, 44, 44);
+}

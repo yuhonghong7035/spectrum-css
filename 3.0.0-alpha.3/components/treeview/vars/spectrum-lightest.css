@@ -1,0 +1,11 @@
+
+.spectrum--lightest .spectrum-TreeView {
+  --spectrum-alias-highlight-selected: rgba(38,128,235,0.1);
+  --spectrum-alias-text-color-disabled: rgb(188, 188, 188);
+  --spectrum-alias-icon-color-disabled: rgb(211, 211, 211);
+  --spectrum-treeview-item-text-color: rgb(80, 80, 80);
+  --spectrum-treeview-item-text-color-hover: rgb(50, 50, 50);
+  --spectrum-treeview-item-background-color-hover: rgba(50,50,50,0.04);
+  --spectrum-treeview-item-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-treeview-item-background-color-key-focus: rgba(50,50,50,0.04);
+}
