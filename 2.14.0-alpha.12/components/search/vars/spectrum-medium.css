@@ -1,0 +1,9 @@
+
+.spectrum--medium .spectrum-Search {
+  --spectrum-icon-magnifier-width: 16px;
+  --spectrum-search-padding-left: 36px;
+  --spectrum-search-padding-right: 28px;
+  --spectrum-search-quiet-padding-left: 24px;
+  --spectrum-search-quiet-padding-right: 20px;
+  --spectrum-textfield-height: 32px;
+}

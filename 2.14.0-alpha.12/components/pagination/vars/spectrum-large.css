@@ -1,0 +1,6 @@
+
+.spectrum--large .spectrum-Pagination {
+  --spectrum-pagination-textfield-width: 60px;
+  --spectrum-pagination-counter-margin-left: 6px;
+  --spectrum-pagination-page-button-margin-horizontal: 6px;
+}

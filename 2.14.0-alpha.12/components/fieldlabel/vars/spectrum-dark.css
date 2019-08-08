@@ -1,0 +1,8 @@
+
+.spectrum--dark .spectrum-FieldLabel,
+.spectrum--dark .spectrum-Form {
+  --spectrum-fieldlabel-asterisk-color: rgb(144, 144, 144);
+  --spectrum-fieldlabel-text-color: rgb(185, 185, 185);
+  --spectrum-fieldlabel-asterisk-color-disabled: rgb(110, 110, 110);
+  --spectrum-fieldlabel-text-color-disabled: rgb(110, 110, 110);
+}

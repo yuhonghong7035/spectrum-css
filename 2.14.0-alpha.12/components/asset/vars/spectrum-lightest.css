@@ -1,0 +1,6 @@
+
+.spectrum--lightest .spectrum-Asset {
+  --spectrum-asset-folder-background-color: rgb(234, 234, 234);
+  --spectrum-asset-file-background-color: rgb(255, 255, 255);
+  --spectrum-asset-icon-outline-color: rgb(188, 188, 188);
+}

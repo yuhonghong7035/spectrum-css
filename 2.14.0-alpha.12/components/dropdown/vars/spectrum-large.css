@@ -1,0 +1,20 @@
+
+.spectrum--large .spectrum-Dropdown {
+  --spectrum-global-dimension-size-2400: 240px;
+  --spectrum-global-dimension-size-3000: 300px;
+  --spectrum-dropdown-placeholder-text-font-style: italic;
+  --spectrum-dropdown-placeholder-text-font-weight: 400;
+  --spectrum-dropdown-text-size: 17px;
+  --spectrum-dropdown-icon-size: 22px;
+  --spectrum-dropdown-border-size: 1px;
+  --spectrum-dropdown-height: 40px;
+  --spectrum-dropdown-min-width: 60px;
+  --spectrum-dropdown-padding-x: 15px;
+  --spectrum-dropdown-icon-gap: 10px;
+  --spectrum-dropdown-icon-margin-left: 15px;
+  --spectrum-dropdown-quiet-min-width: 60px;
+  --spectrum-dropdown-quiet-popover-offset-x: 15px;
+  --spectrum-icon-chevron-down-medium-height: 8px;
+  --spectrum-popover-border-size: 1px;
+  --spectrum-selectlist-thumbnail-image-padding-x: 10px;
+}

@@ -1,0 +1,5 @@
+
+.spectrum--lightest .spectrum-Well {
+  --spectrum-well-background-color: rgba(80,80,80,0.02);
+  --spectrum-well-border-color: rgba(50,50,50,0.05);
+}
