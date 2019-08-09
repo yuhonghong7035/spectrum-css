@@ -1,0 +1,7 @@
+
+.spectrum--lightest .spectrum-Pagination {
+  --spectrum-pagination-page-button-background-color-hover: rgba(50,50,50,0.04);
+  --spectrum-pagination-page-button-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-pagination-page-button-background-color-down: rgb(80, 80, 80);
+  --spectrum-pagination-page-button-text-color-down: rgb(255, 255, 255);
+}

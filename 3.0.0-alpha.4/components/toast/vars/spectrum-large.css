@@ -1,0 +1,15 @@
+
+.spectrum--large .spectrum-Toast {
+  --spectrum-global-dimension-size-65: 6px;
+  --spectrum-global-dimension-size-85: 9px;
+  --spectrum-global-dimension-size-130: 14px;
+  --spectrum-toast-text-size: 17px;
+  --spectrum-toast-text-font-weight: 700;
+  --spectrum-toast-border-radius: 4px;
+  --spectrum-toast-padding-left: 20px;
+  --spectrum-toast-padding-right: 10px;
+  --spectrum-toast-padding-y: 10px;
+  --spectrum-toast-icon-padding-right: 15px;
+  --spectrum-toast-button-gap: 10px;
+  --spectrum-toast-content-padding-right: 20px;
+}

@@ -1,0 +1,23 @@
+
+.spectrum--lightest .spectrum-Radio {
+  --spectrum-radio-text-color: rgb(80, 80, 80);
+  --spectrum-radio-circle-border-color: rgb(149, 149, 149);
+  --spectrum-radio-circle-background-color: rgb(255, 255, 255);
+  --spectrum-radio-text-color-hover: rgb(50, 50, 50);
+  --spectrum-radio-circle-border-color-hover: rgb(116, 116, 116);
+  --spectrum-radio-text-color-down: rgb(50, 50, 50);
+  --spectrum-radio-circle-border-color-down: rgb(80, 80, 80);
+  --spectrum-radio-text-color-key-focus: rgb(20, 115, 230);
+  --spectrum-radio-circle-border-color-key-focus: rgb(55, 142, 240);
+  --spectrum-radio-text-color-disabled: rgb(188, 188, 188);
+  --spectrum-radio-circle-border-color-disabled: rgb(211, 211, 211);
+  --spectrum-radio-circle-border-color-selected: rgb(38, 128, 235);
+  --spectrum-radio-circle-border-color-selected-hover: rgb(20, 115, 230);
+  --spectrum-radio-circle-border-color-selected-down: rgb(13, 102, 208);
+  --spectrum-radio-circle-border-color-error: rgb(227, 72, 80);
+  --spectrum-radio-circle-border-color-error-hover: rgb(215, 55, 63);
+  --spectrum-radio-circle-border-color-error-down: rgb(201, 37, 45);
+  --spectrum-radio-quiet-circle-border-color-selected: rgb(116, 116, 116);
+  --spectrum-radio-quiet-circle-border-color-selected-hover: rgb(80, 80, 80);
+  --spectrum-radio-quiet-circle-border-color-selected-down: rgb(50, 50, 50);
+}
