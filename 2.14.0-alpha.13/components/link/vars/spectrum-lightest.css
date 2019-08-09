@@ -1,0 +1,13 @@
+
+.spectrum--lightest .spectrum-Link {
+  --spectrum-link-text-color: rgb(20, 115, 230);
+  --spectrum-link-text-color-hover: rgb(20, 115, 230);
+  --spectrum-link-text-color-down: rgb(13, 102, 208);
+  --spectrum-link-text-color-key-focus: rgb(20, 115, 230);
+  --spectrum-link-text-color-disabled: rgb(188, 188, 188);
+  --spectrum-link-over-background-text-color: rgb(255, 255, 255);
+  --spectrum-link-over-background-text-color-hover: rgb(255, 255, 255);
+  --spectrum-link-over-background-text-color-down: rgb(255, 255, 255);
+  --spectrum-link-over-background-text-color-key-focus: rgb(255, 255, 255);
+  --spectrum-link-over-background-text-color-disabled: rgba(255,255,255,0.5);
+}

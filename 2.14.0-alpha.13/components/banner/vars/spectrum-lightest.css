@@ -1,0 +1,7 @@
+
+.spectrum--lightest .spectrum-Banner {
+  --spectrum-banner-text-color: rgb(255, 255, 255);
+  --spectrum-banner-error-background-color: rgb(227, 72, 80);
+  --spectrum-banner-info-background-color: rgb(38, 128, 235);
+  --spectrum-banner-warning-background-color: rgb(230, 134, 25);
+}

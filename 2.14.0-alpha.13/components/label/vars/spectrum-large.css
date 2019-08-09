@@ -1,0 +1,11 @@
+
+.spectrum--large .spectrum-Label {
+  --spectrum-global-dimension-size-40: 4px;
+  --spectrum-global-dimension-size-50: 5px;
+  --spectrum-global-dimension-size-85: 9px;
+  --spectrum-global-dimension-size-100: 10px;
+  --spectrum-global-dimension-size-125: 13px;
+  --spectrum-global-dimension-size-150: 15px;
+  --spectrum-global-dimension-size-175: 18px;
+  --spectrum-global-dimension-font-size-50: 13px;
+}

@@ -1,0 +1,12 @@
+
+.spectrum--medium .spectrum-Radio {
+  --spectrum-global-dimension-size-40: 3px;
+  --spectrum-global-dimension-size-75: 6px;
+  --spectrum-radio-text-size: 14px;
+  --spectrum-radio-text-gap: 10px;
+  --spectrum-radio-circle-dot-size: 4px;
+  --spectrum-radio-circle-border-size: 2px;
+  --spectrum-radio-circle-diameter: 14px;
+  --spectrum-radio-height: 32px;
+  --spectrum-radio-cursor-hit-x: 8px;
+}

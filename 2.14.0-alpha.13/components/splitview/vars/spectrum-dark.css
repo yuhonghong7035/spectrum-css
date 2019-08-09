@@ -1,0 +1,8 @@
+
+.spectrum--dark .spectrum-SplitView {
+  --spectrum-alias-focus-color: rgb(38, 128, 235);
+  --spectrum-rail-content-background-color: rgb(50, 50, 50);
+  --spectrum-rail-handle-background-color: rgb(74, 74, 74);
+  --spectrum-rail-handle-background-color-hover: rgb(90, 90, 90);
+  --spectrum-rail-handle-background-color-down: rgb(227, 227, 227);
+}

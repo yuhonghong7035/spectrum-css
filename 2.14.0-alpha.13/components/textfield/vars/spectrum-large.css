@@ -1,0 +1,22 @@
+
+.spectrum--large .spectrum-Textfield {
+  --spectrum-global-dimension-size-40: 4px;
+  --spectrum-global-dimension-size-50: 5px;
+  --spectrum-global-dimension-size-65: 6px;
+  --spectrum-global-dimension-size-700: 70px;
+  --spectrum-alias-single-line-width: 240px;
+  --spectrum-icon-alert-medium-width: 22px;
+  --spectrum-icon-checkmark-medium-width: 16px;
+  --spectrum-textfield-placeholder-text-font-style: italic;
+  --spectrum-textfield-placeholder-text-font-weight: 400;
+  --spectrum-textfield-text-line-height: 1.5;
+  --spectrum-textfield-text-size: 17px;
+  --spectrum-textfield-height: 40px;
+  --spectrum-textfield-min-width: 60px;
+  --spectrum-textfield-padding-x: 15px;
+  --spectrum-textfield-icon-size: 22px;
+  --spectrum-textfield-icon-margin-left: 15px;
+  --spectrum-textfield-border-size: 1px;
+  --spectrum-textfield-quiet-padding-x: 0;
+  --spectrum-textfield-quiet-border-size: 1px;
+}
