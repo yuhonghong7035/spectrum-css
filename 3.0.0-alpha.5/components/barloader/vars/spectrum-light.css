@@ -1,0 +1,11 @@
+
+.spectrum--light .spectrum-BarLoader {
+  --spectrum-barloader-large-track-color: rgb(225, 225, 225);
+  --spectrum-barloader-large-track-fill-color: rgb(20, 115, 230);
+  --spectrum-barloader-large-over-background-track-color: rgba(255,255,255,0.2);
+  --spectrum-barloader-large-over-background-track-fill-color: rgb(255, 255, 255);
+  --spectrum-fieldlabel-text-color: rgb(110, 110, 110);
+  --spectrum-meter-large-track-color-positive: rgb(45, 157, 120);
+  --spectrum-meter-large-track-color-warning: rgb(230, 134, 25);
+  --spectrum-meter-large-track-color-critical: rgb(227, 72, 80);
+}

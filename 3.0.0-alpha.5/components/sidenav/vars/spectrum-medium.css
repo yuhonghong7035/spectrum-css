@@ -1,0 +1,23 @@
+
+.spectrum--medium .spectrum-SideNav {
+  --spectrum-global-dimension-size-65: 5px;
+  --spectrum-sidenav-item-text-size: 14px;
+  --spectrum-sidenav-item-font-weight: 400;
+  --spectrum-sidenav-item-height: 32px;
+  --spectrum-sidenav-item-padding-x: 12px;
+  --spectrum-sidenav-item-border-radius: 4px;
+  --spectrum-sidenav-item-gap: 4px;
+  --spectrum-sidenav-icon-gap: 8px;
+  --spectrum-sidenav-header-text-size: 11px;
+  --spectrum-sidenav-header-font-weight: 500;
+  --spectrum-sidenav-header-letter-spacing: 0.06em;
+  --spectrum-sidenav-header-height: 32px;
+  --spectrum-sidenav-header-padding-x: 12px;
+  --spectrum-sidenav-header-border-radius: 4px;
+  --spectrum-sidenav-header-gap-top: 16px;
+  --spectrum-sidenav-header-gap-bottom: 4px;
+  --spectrum-sidenav-multilevel-main-item-font-weight: 700;
+  --spectrum-sidenav-multilevel-item-indentation-level1: 12px;
+  --spectrum-sidenav-multilevel-item-indentation-level2: 24px;
+  --spectrum-tabs-focus-ring-size: 2px;
+}

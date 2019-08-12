@@ -1,0 +1,12 @@
+
+.spectrum--dark .spectrum-Accordion {
+  --spectrum-accordion-border-color: rgb(74, 74, 74);
+  --spectrum-accordion-icon-color: rgb(144, 144, 144);
+  --spectrum-accordion-text-color: rgb(185, 185, 185);
+  --spectrum-accordion-icon-color-hover: rgb(227, 227, 227);
+  --spectrum-accordion-text-color-hover: rgb(255, 255, 255);
+  --spectrum-accordion-background-color-hover: rgb(62, 62, 62);
+  --spectrum-accordion-border-left-color-key-focus: rgb(38, 128, 235);
+  --spectrum-accordion-icon-color-disabled: rgb(90, 90, 90);
+  --spectrum-accordion-text-color-disabled: rgb(110, 110, 110);
+}
