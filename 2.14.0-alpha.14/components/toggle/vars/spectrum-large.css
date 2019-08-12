@@ -1,0 +1,13 @@
+
+.spectrum--large .spectrum-ToggleSwitch {
+  --spectrum-global-dimension-size-75: 8px;
+  --spectrum-switch-text-size: 17px;
+  --spectrum-switch-handle-border-size: 2px;
+  --spectrum-switch-track-width: 36px;
+  --spectrum-switch-handle-size: 18px;
+  --spectrum-switch-text-gap: 13px;
+  --spectrum-switch-track-height: 18px;
+  --spectrum-switch-handle-border-radius: 9px;
+  --spectrum-switch-height: 40px;
+  --spectrum-switch-cursor-hit-x: 10px;
+}

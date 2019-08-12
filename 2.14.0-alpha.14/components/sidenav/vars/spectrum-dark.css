@@ -1,0 +1,16 @@
+
+.spectrum--dark .spectrum-SideNav {
+  --spectrum-sidenav-item-background-color: rgba(0, 0, 0, 0);
+  --spectrum-sidenav-item-text-color: rgb(227, 227, 227);
+  --spectrum-sidenav-header-text-color: rgb(185, 185, 185);
+  --spectrum-sidenav-item-background-color-hover: rgba(255,255,255,0.07);
+  --spectrum-sidenav-item-text-color-hover: rgb(255, 255, 255);
+  --spectrum-sidenav-item-background-color-key-focus: rgba(255,255,255,0.07);
+  --spectrum-sidenav-item-text-color-key-focus: rgb(255, 255, 255);
+  --spectrum-sidenav-item-border-color-key-focus: rgb(38, 128, 235);
+  --spectrum-sidenav-item-background-color-down: rgba(255,255,255,0.07);
+  --spectrum-sidenav-item-background-color-disabled: rgba(0, 0, 0, 0);
+  --spectrum-sidenav-item-text-color-disabled: rgb(110, 110, 110);
+  --spectrum-sidenav-item-background-color-selected: rgba(255,255,255,0.07);
+  --spectrum-sidenav-item-text-color-selected: rgb(255, 255, 255);
+}
