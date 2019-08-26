@@ -177,6 +177,11 @@ else {
   );
 }
 
+exports.devHeavy = gulp.series(
+  build,
+  dev.watch
+);
+
 exports.prePack = gulp.series(
   build,
   release.releaseBackwardsCompat
