@@ -108,6 +108,8 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-Site-searchResults {
+  top: -100%;
+  left: -100%;
   max-height: calc(90vh - 120px);
   z-index: 101;
   position: absolute;
