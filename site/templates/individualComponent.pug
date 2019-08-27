@@ -90,7 +90,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
       each example in examples
         article.spectrum-CSSExample
           if example != component
-            header.row(id=example.slug)
+            header(id=example.slug)
               h4.spectrum-Heading--subtitle3 #{example.name}
 
             if example.description

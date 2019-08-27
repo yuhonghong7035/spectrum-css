@@ -31,6 +31,9 @@ window.addEventListener('DOMContentLoaded', function() {
     console.log('⚡️ Fast-loading ' + href);
 
     function handleLoad() {
+      var template;
+      var newMainContainer;
+
       function handleLinkOnload(dependencyName, event) {
         console.log('    ✅ ' + dependencyName + ' loaded...');
         loadingDependencies.splice(loadingDependencies.indexOf(dependencyName), 1);
@@ -62,10 +65,10 @@ window.addEventListener('DOMContentLoaded', function() {
       }
 
       if (req.status === 200) {
-        var template = document.createElement('template');
+        template = document.createElement('template');
         template.innerHTML = this.responseText;
 
-        var newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
+        newMainContainer = template.content.querySelector('.spectrum-Site-mainContainer');
 
         if (newMainContainer) {
           // Load in extra deps before last link
@@ -226,10 +229,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Search
+  // Search isn't supported on IE 11
   if (typeof Search !== 'undefined') {
     window.search = new Search(document.querySelector('#site-search'))
   }
+
   window.addEventListener('SearchFocused', function() {
     showSideBar();
 
