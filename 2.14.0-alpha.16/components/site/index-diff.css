@@ -1,0 +1,124 @@
+.spectrum--large .spectrum-Site-header {
+  height: 60px;
+  padding: 10px;
+}
+.spectrum--large .spectrum-Site-sideBarHeader {
+
+  padding: 40px;
+}
+.spectrum--large .spectrum-Site-search {
+  padding: 0 40px 40px 40px;
+}
+.spectrum--large .spectrum-Site-noSearchResults {
+  padding: 40px 40px 40px;
+}
+.spectrum--large .spectrum-Site-logo {
+  margin-right: 25px;
+  width: 50px;
+}
+.spectrum--large .spectrum-Site-nav {
+
+  padding: 0px 24px 40px;
+}
+.spectrum--large .spectrum-Site-bottomNav {
+  margin-top: 80px;
+}
+@media screen and (max-width: 960px) {
+  .spectrum--large .spectrum-Site-overlay {
+    transition: opacity 160ms ease-out 0ms,
+                visibility 0ms linear 160ms;
+  }
+
+  .spectrum--large .spectrum-Site-overlay.is-open {
+    transition: opacity 160ms ease-in 0ms;
+  }
+
+  .spectrum--large .spectrum-Site-sideBar {
+    transition: transform 160ms ease-in-out;
+  }
+
+  .spectrum--large .spectrum-Site-heroHeading h1.spectrum-Heading1--display {
+    font-size: 44px;
+  }
+}
+.spectrum--large .spectrum-CSSComponent {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 70px;
+}
+.spectrum--large .spectrum-CSSComponent-heading {
+  margin-bottom: 20px;
+}
+.spectrum--large .spectrum-CSSComponent-statusContainer {
+  margin: 0 20px;
+}
+.spectrum--large .spectrum-CSSComponent-status {
+  margin: 0 10px;
+}
+.spectrum--large .spectrum-CSSComponent-description {
+  margin-bottom: 80px;
+}
+.spectrum--large .spectrum-CSSExample {
+  margin-bottom: 50px;
+}
+.spectrum--large .spectrum-CSSExample-container {
+
+  border-radius: 8px;
+}
+.spectrum--large .spectrum-CSSExample-header {
+  margin-bottom: 50px;
+}
+.spectrum--large .spectrum-CSSExample-example {
+
+  min-height: 80px;
+
+  padding: 40px 50px;
+
+  border-radius: 8px 8px 0 0;
+}
+.spectrum--large .spectrum-CSSExample-markup {
+  max-height: 112px;
+
+  padding: 13px 22px;
+
+  border-radius: 0 0 8px 8px;
+
+  font-size: 12px;
+}
+.spectrum--large .spectrum-CSSExample-markupToggle + pre {
+  padding-bottom: 10px;
+}
+.spectrum--large .spectrum-CSSExample-markupToggle {
+
+
+  font-size: 17px;
+}
+.spectrum--large .spectrum-CSSExample-markupToggle::before {
+  height: 40px;
+
+}
+@media screen and (max-width: 960px) {
+  .spectrum--large .spectrum-CSSComponent {
+    padding: 0 15px;
+    margin: 10px auto;
+  }
+
+  .spectrum--large .spectrum-CSSComponent-description {
+    margin-bottom: 15px;
+  }
+
+  .spectrum--large .spectrum-CSSExample {
+    margin-bottom: 20px;
+  }
+
+  .spectrum--large .spectrum-CSSExample-example {
+    padding: 20px 20px;
+  }
+
+  .spectrum--large .spectrum-CSSExample-header {
+    margin-bottom: 15px;
+  }
+  .spectrum--large .spectrum-CSSComponent-title {
+    font-size: 34px;
+  }
+}
