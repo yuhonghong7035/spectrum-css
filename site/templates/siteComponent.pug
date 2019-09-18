@@ -23,7 +23,7 @@
       example.status = 'Deprecated';
     }
     else if (example.cssStatus === 'Verified' || example.dnaStatus === 'Canon') {
-      example.status = 'Canon';
+      example.status = 'Verified';
     }
     else {
       example.status = 'Contribution';
@@ -31,7 +31,7 @@
   });
 
   examples = {
-    canon: examples.filter(example => example.status === 'Canon'),
+    verified: examples.filter(example => example.status === 'Verified'),
     contribution: examples.filter(example => example.status === 'Contribution'),
     deprecated: examples.filter(example => example.status === 'Deprecated')
   };
@@ -60,9 +60,6 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
               h2.spectrum-CSSComponent-title.spectrum-Article.spectrum-Heading1--display
                 a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
-            if component.description
-              section.spectrum-CSSComponent-description.spectrum-Body2!= util.markdown.toHTML(component.description)
-
             table.spectrum-CSSComponent-detailsTable
               tr
                 th.spectrum-Body--secondary Component status
@@ -80,7 +77,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                 tr!= util.markdown.toHTML(component.details)
 
             div.spectrum-CSSComponent-resources
-              a.spectrum-ResourceCard.spectrum-ResourceCard--adobe(href=`${spectrumURL || 'https://spectrum.corp.adobe.com/'+${pkg.name.split('/').pop()}}`)
+              a.spectrum-ResourceCard.spectrum-ResourceCard--adobe(href=`${spectrumURL || 'https://spectrum.corp.adobe.com/'+pkg.name.split('/').pop()}`)
                 .spectrum-ResourceCard-image
                   svg(class="spectrum-Icon spectrum-Icon--sizeL" viewBox="0 0 36 36" focusable="false" aria-hidden="true" aria-label="AdobeLogo")
                     path(d="M22.175 4H34v28L22.175 4zm-8.336 0H2v28L13.839 4zm4.165 10.317l7.538 17.682h-4.939l-2.258-5.632h-5.517l5.176-12.05z")
@@ -112,7 +109,14 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                   span.spectrum-ResourceCard-subtitle.spectrum-Body4.
                     npm
 
-            if examples.canon.length
+            if component.description
+              header.spectrum-CSSComponent-sectionHeading(id=usage)
+                h4.spectrum-Heading3.
+                  Usage notes
+                hr.spectrum-Rule.spectrum-Rule--large
+                section.spectrum-CSSComponent-description.spectrum-Body3!= util.markdown.toHTML(component.description)
+
+            if examples.verified.length
               header.spectrum-CSSComponent-sectionHeading(id=verified)
                 h4.spectrum-Heading3
                   div.spectrum-CSSComponent-link
@@ -120,7 +124,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                     .
                       Verified variants
                 hr.spectrum-Rule.spectrum-Rule--large
-              each example in examples.canon
+              each example in examples.verified
                 include ../includes/example.pug
 
             if examples.contribution.length

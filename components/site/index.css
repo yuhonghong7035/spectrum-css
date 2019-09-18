@@ -27,7 +27,8 @@ governing permissions and limitations under the License.
   --spectrum-csscomponent-margin: var(--spectrum-global-dimension-size-500);
   --spectrum-csscomponent-padding: var(--spectrum-global-dimension-size-700);
   --spectrum-csscomponent-max-width: 1080px;
-  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-200);
+  --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-700);
+  --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
   --spectrum-csscomponent-header-margin-bottom: var(--spectrum-global-dimension-size-500);
 
   --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-800);
@@ -290,6 +291,7 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSComponent-sectionHeading {
+  margin-top: var(--spectrum-csscomponent-sectionheading-margin-top);
   margin-bottom: var(--spectrum-csscomponent-sectionheading-margin-bottom);
 }
 
@@ -301,6 +303,10 @@ governing permissions and limitations under the License.
 
 .spectrum-CSSComponent-status::before {
   margin-left: 0 !important;
+}
+
+.spectrum-CSSExample-status {
+  margin-left: var(--spectrum-global-dimension-size-200);
 }
 
 .spectrum-CSSComponent-version {
@@ -348,18 +354,18 @@ governing permissions and limitations under the License.
   justify-content: center;
 
   border-right: var(--spectrum-resourcecard-border-size) solid var(--spectrum-resourcecard-border-color);
+  background-color: var(--spectrum-global-color-gray-100);
 
   width: var(--spectrum-resourcecard-image-size);
   height: var(--spectrum-resourcecard-image-size);
 }
 
 .spectrum-ResourceCard--adobe .spectrum-ResourceCard-image {
-  background-color: var(--spectrum-global-color-gray-100);
   color: rgb(255, 2, 1);
 }
 
 .spectrum-ResourceCard--github .spectrum-ResourceCard-image {
-  background-color: rgb(229, 247, 255);
+  background-color: rgb(234, 234, 234);
   color: black;
 }
 
@@ -400,6 +406,9 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-CSSExample-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-bottom: var(--spectrum-cssexample-heading-margin-bottom) !important;
 }
 
@@ -482,9 +491,8 @@ governing permissions and limitations under the License.
   box-sizing: border-box;
   padding: 0.5rem 0;
 
-
   font-size: var(--spectrum-global-dimension-font-size-100);
-  text-align: center;
+  text-align: left
 }
 
 .spectrum-CSSExample-markupToggle::before {
