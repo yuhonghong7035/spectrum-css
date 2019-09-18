@@ -30,11 +30,25 @@
     }
   });
 
-  examples = {
-    verified: examples.filter(example => example.status === 'Verified'),
-    contribution: examples.filter(example => example.status === 'Contribution'),
-    deprecated: examples.filter(example => example.status === 'Deprecated')
+  let exampleOrder = {
+    'Verified': 1,
+    'Contribution': 2,
+    'Deprecated': 3
   };
+
+  // examples = examples.sort((a, b) => {
+  //   if (a.name < b.name) {
+  //     return -1;
+  //   }
+  //   if (a.name > b.name) {
+  //     return 1;
+  //   }
+  //   return 0;
+  // });
+
+  // examples = examples.sort((a, b) => {
+  //   return exampleOrder[a.status] - exampleOrder[b.status];
+  // });
 
 doctype html
 html(lang='en-US').spectrum.spectrum--light.spectrum--medium
@@ -116,37 +130,12 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                 hr.spectrum-Rule.spectrum-Rule--large
                 section.spectrum-CSSComponent-description.spectrum-Body3!= util.markdown.toHTML(component.description)
 
-            if examples.verified.length
-              header.spectrum-CSSComponent-sectionHeading(id=verified)
-                h4.spectrum-Heading3
-                  div.spectrum-CSSComponent-link
-                    div(class=`spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--positive`)
-                    .
-                      Verified variants
+            if examples.length
+              header.spectrum-CSSComponent-sectionHeading(id=varia ts)
+                h4.spectrum-Heading3.
+                  Variants
                 hr.spectrum-Rule.spectrum-Rule--large
-              each example in examples.verified
-                include ../includes/example.pug
-
-            if examples.contribution.length
-              header.spectrum-CSSComponent-sectionHeading(id=contributed)
-                h4.spectrum-Heading3
-                  div.spectrum-CSSComponent-link
-                    div(class=`spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--notice`)
-                    .
-                      Contributed variants
-                hr.spectrum-Rule.spectrum-Rule--large
-              each example in examples.contribution
-                include ../includes/example.pug
-
-            if examples.deprecated.length
-              header.spectrum-CSSComponent-sectionHeading(id=deprecated)
-                h4.spectrum-Heading3
-                  div.spectrum-CSSComponent-link
-                    div(class=`spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--negative`)
-                    .
-                      Deprecated variants
-                hr.spectrum-Rule.spectrum-Rule--large
-              each example in examples.deprecated
+              each example in examples
                 include ../includes/example.pug
 
     include ../includes/footer.pug
