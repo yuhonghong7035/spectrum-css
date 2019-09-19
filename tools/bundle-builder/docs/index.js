@@ -40,8 +40,12 @@ let minimumDeps = [
   'menu',
   'popover',
   'underlay',
+  'breadcrumb',
   'rule',
-  'illustratedmessage'
+  'illustratedmessage',
+  'fieldlabel',
+  'accordion',
+  'decoratedtextfield'
 ];
 
 let templateData = {
