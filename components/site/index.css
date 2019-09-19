@@ -29,7 +29,7 @@ governing permissions and limitations under the License.
   --spectrum-csscomponent-max-width: 1080px;
   --spectrum-csscomponent-sectionheading-margin-top: var(--spectrum-global-dimension-size-700);
   --spectrum-csscomponent-sectionheading-margin-bottom: var(--spectrum-global-dimension-size-400);
-  --spectrum-csscomponent-header-margin-bottom: var(--spectrum-global-dimension-size-500);
+  --spectrum-csscomponent-heading-margin-bottom: var(--spectrum-global-dimension-size-500);
 
   --spectrum-csscomponent-description-margin-bottom: var(--spectrum-global-dimension-size-800);
 
@@ -333,7 +333,7 @@ governing permissions and limitations under the License.
   --spectrum-resourcecard-content-padding: var(--spectrum-global-dimension-size-200);
   --spectrum-resourcecard-border-radius: var(--spectrum-alias-border-radius-regular);
   --spectrum-resourcecard-border-size: var(--spectrum-global-dimension-size-10);
-  --spectrum-resourcecard-border-color: var(--spectrum-alias-border-color-light);
+  --spectrum-resourcecard-border-color: var(--spectrum-global-color-gray-200);
   --spectrum-resourcecard-image-size: var(--spectrum-global-dimension-size-800);
   --spectrum-resourcecard-min-width: var(--spectrum-global-dimension-size-2400);
   --spectrum-resourcecard-subtitle-color: var(--spectrum-global-color-gray-700);
