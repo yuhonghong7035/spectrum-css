@@ -117,7 +117,8 @@ governing permissions and limitations under the License.
   }
 }
 
-.spectrum-Tooltip--bottom {
+.spectrum-Tooltip--bottom,
+.spectrum-Tooltip--bottomLeft {
   margin-top: var(--spectrum-tooltip-target-offset);
   &.is-open {
     @inherit: %spectrum-overlay--bottom--open;
@@ -135,6 +136,13 @@ governing permissions and limitations under the License.
     margin-left: calc(-1 * var(--spectrum-tooltip-tip-width));
   }
 }
+
+.spectrum-Tooltip--bottomLeft {
+  .spectrum-Tooltip-tip {
+    right: calc(1.5 * var(--spectrum-tooltip-tip-width))
+  }
+}
+
 
 .spectrum-Tooltip-typeIcon {
   margin-left: calc(var(--spectrum-tooltip-icon-margin-x) - var(--spectrum-tooltip-padding-x));
@@ -161,10 +169,12 @@ governing permissions and limitations under the License.
   .spectrum-Tooltip {
     position: absolute;
     white-space: nowrap;
+    z-index: 1;
     /* Required for animations to work, !important for diff scaling to work */
     visibility: visible !important;
     transition: transform var(--spectrum-global-animation-duration-100) ease-in-out;
-    top: -100%;
+    top: auto;
+    left: auto;
   }
 
   .spectrum-Tooltip-label {
@@ -198,31 +208,46 @@ governing permissions and limitations under the License.
   }
 
   .spectrum-Tooltip--bottom {
-    top: 100%;
+    top: calc(100% + var(--spectrum-tooltip-tip-margin));
     transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
   }
 
   .spectrum-Tooltip--top {
+    bottom: 100%;
     transform: translate(-50%, var(--spectrum-tooltip-tip-margin));
   }
 
-  &:hover .spectrum-Tooltip {
-    opacity: 1;
+  .spectrum-Tooltip--bottomLeft {
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, 0);
+    margin-right: 50%;
   }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--bottom {
-    transform: translate(-50%, 0);
-  }
+  &.is-open,
+  &:hover {
+    .spectrum-Tooltip {
+      opacity: 1;
+    }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--top {
-    transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
-  }
+    .spectrum-Tooltip--bottomLeft {
+      transform: translate(-100%, var(--spectrum-tooltip-tip-margin));
+    }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--left {
-    transform: translate(calc(-100% - var(--spectrum-tooltip-tip-margin)), -50%);
-  }
+    .spectrum-Tooltip.spectrum-Tooltip--bottom {
+      transform: translate(-50%, 0);
+    }
 
-  &:hover .spectrum-Tooltip.spectrum-Tooltip--right {
-    transform: translate(var(--spectrum-tooltip-tip-margin), -50%);
+    .spectrum-Tooltip.spectrum-Tooltip--top {
+      transform: translate(-50%, calc(-1 * var(--spectrum-tooltip-tip-margin)));
+    }
+
+    .spectrum-Tooltip.spectrum-Tooltip--left {
+      transform: translate(calc(-100% - var(--spectrum-tooltip-tip-margin)), -50%);
+    }
+
+    .spectrum-Tooltip.spectrum-Tooltip--right {
+      transform: translate(var(--spectrum-tooltip-tip-margin), -50%);
+    }
   }
 }
