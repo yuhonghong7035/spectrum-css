@@ -78,7 +78,7 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
               tr
                 th.spectrum-Body--secondary Component status
                 td
-                  div(class=`spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.dnaStatus)}`)= component.dnaStatus
+                  div(class=`spectrum-StatusLight spectrum-CSSComponent-status spectrum-StatusLight--${util.getStatusLightVariant(component.status)}`)= component.status
               tr
                 th.spectrum-Body--secondary Last released
                 td= releaseDate
