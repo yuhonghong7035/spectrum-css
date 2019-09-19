@@ -73,14 +73,51 @@ governing permissions and limitations under the License.
   border-bottom-style: solid;
 }
 
+.spectrum-Site-panel,
 .spectrum-Site-sideBar {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   max-width: 100%;
+  max-height: 100%;
 
   transition: none;
+}
+
+.spectrum-Site-panel-section {
+  overflow: auto;
+  flex-shrink: 0;
+  padding: var(--spectrum-global-dimension-size-100);
+}
+
+.spectrum-Site-panel-section--primary {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 0;
+}
+
+.spectrum-Site-panel {
+  display: none;
+}
+
+.spectrum-Site-panel.is-open {
+  display: flex;
+}
+
+.spectrum-Site-panel--floating {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 100;
+
+  transform: translateX(0);
+  transition: transform var(--spectrum-global-animation-duration-200) ease-in-out;
+}
+
+.spectrum-Site-panel--floating.is-open {
+  transform: translateX(-100%);
 }
 
 .spectrum-Site-sideBarHeader {
@@ -229,10 +266,6 @@ governing permissions and limitations under the License.
   .spectrum-Site-page {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .spectrum-Site-hero {
-    max-width: 100%;
   }
 
   .spectrum-Site-heroHeading h1.spectrum-Heading1--display {

@@ -115,6 +115,11 @@ governing permissions and limitations under the License.
   line-height: var(--spectrum-selectlist-option-label-line-height);
 }
 
+.spectrum-Menu-itemDetail {
+  flex: 0 1 auto;
+  margin-left: var(--spectrum-selectlist-icon-gap);
+}
+
 .spectrum-Menu-itemLabel--wrapping {
   text-overflow: ellipsis;
   white-space: nowrap;

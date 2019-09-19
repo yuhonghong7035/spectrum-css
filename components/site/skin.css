@@ -12,12 +12,12 @@ governing permissions and limitations under the License.
 
 :root {
   /* .spectrum-Site */
-  --spectrum-site-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-site-background-color: var(--spectrum-alias-background-color-default);
   --spectrum-site-content-background-color: var(--spectrum-global-color-gray-50);
   --spectrum-site-header-border-color: var(--spectrum-global-color-gray-300);
   --spectrum-site-header-background-color: var(--spectrum-site-content-background-color);
-  --spectrum-site-sidebar-background-color: var(--spectrum-site-background-color);
-  --spectrum-site-scrollbar-track-color: var(--spectrum-site-background-color);
+  --spectrum-site-sidebar-background-color: var(--spectrum-global-color-gray-75);
+  --spectrum-site-scrollbar-track-color: var(--spectrum-site-sidebar-background-color);
   --spectrum-site-scrollbar-thumb-color: var(--spectrum-global-color-gray-400);
 
   /* .spectrum-Site-overlay */
@@ -38,6 +38,7 @@ governing permissions and limitations under the License.
   background-color: var(--spectrum-site-header-background-color);
 }
 
+.spectrum-Site-panel,
 .spectrum-Site-sideBar {
   background-color: var(--spectrum-site-sidebar-background-color);
 }

@@ -1,0 +1,147 @@
+.CSSVariableEditor-variableFieldContainer,
+.CSSVariableEditor-variableField {
+  width: 100%;
+}
+
+.CSSVariableEditor-value {
+  font-size: var(--spectrum-global-dimension-font-size-25);
+  cursor: pointer;
+}
+
+.CSSVariableEditor-container {
+  min-width: calc(var(--spectrum-global-dimension-size-3600) + var(--spectrum-global-dimension-size-800));
+}
+
+.CSSVariableEditor-swatch {
+  width: var(--spectrum-global-dimension-size-200);
+  height: var(--spectrum-global-dimension-size-200);
+  border-radius: var(--spectrum-alias-border-radius-regular);
+  border: 1px solid var(--spectrum-global-color-gray-300);
+}
+
+.CSSVariableEditor-swatch--transparent {
+  /* Add a half-percent to fix diagonal line issue in Chrome on non-retina displays */
+  background-image:
+    linear-gradient(-45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(45deg, transparent 75.5%, var(--spectrum-global-color-static-gray-500) 75.5%),
+    linear-gradient(-45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%),
+    linear-gradient(45deg, var(--spectrum-global-color-static-gray-500) 25.5%, transparent 25.5%);
+  background-size:
+    var(--spectrum-global-dimension-static-size-200)
+    var(--spectrum-global-dimension-static-size-200);
+  background-position:
+    0 0,
+    0 var(--spectrum-global-dimension-static-size-100),
+    var(--spectrum-global-dimension-static-size-100) calc(-1 * var(--spectrum-global-dimension-static-size-100)),
+    calc(-1 * var(--spectrum-global-dimension-static-size-100)) 0;
+}
+
+.CSSVariableEditor-inspectangle {
+  /* Blue 400 in light theme */
+  --cssvariableeditor-inspectangle-color: rgb(38, 128, 235);
+  --cssvariableeditor-inspectangle-color-transparent: rgba(38, 128, 235, 0.3);
+  --cssvariableeditor-inspectangle-background-color: var(--cssvariableeditor-inspectangle-color-transparent);
+  --cssvariableeditor-inspectangle-border-color: var(--cssvariableeditor-inspectangle-color);
+  --cssvariableeditor-inspectangle-tooltip-color: var(--cssvariableeditor-inspectangle-color);
+
+  position: fixed;
+  z-index: 1000;
+  background: var(--cssvariableeditor-inspectangle-background-color);
+  border: 2px dashed var(--cssvariableeditor-inspectangle-border-color);
+}
+
+.CSSVariableEditor-inspectangle,
+.CSSVariableEditor-inspectanglePadding {
+  box-sizing: border-box;
+}
+
+.CSSVariableEditor-inspectanglePadding {
+  position: absolute;
+  top: 0;
+  box-sizing: content-box;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  box-sizing: content-box;
+}
+
+.CSSVariableEditor-inspectangle .spectrum-Tooltip {
+  --spectrum-tooltip-background-color: var(--cssvariableeditor-inspectangle-tooltip-color);
+}
+
+.CSSVariableEditor-inspectangle--redline {
+  /* Custom highlight color #E366EF */
+  --cssvariableeditor-redline-color: rgb(227, 102, 239);
+  --cssvariableeditor-redline-color-transparent: rgba(227, 102, 239, 0.5);
+  --cssvariableeditor-redline-background-color: var(--cssvariableeditor-redline-color-transparent);
+  --cssvariableeditor-redline-border-color: var(--cssvariableeditor-redline-color-transparent);
+  --cssvariableeditor-redline-tooltip-color: var(--cssvariableeditor-redline-color);
+
+  background: var(--cssvariableeditor-redline-background-color);
+  border: none;
+}
+
+.CSSVariableEditor-inspectangle--redline .CSSVariableEditor-inspectanglePadding {
+  border: 0 solid var(--cssvariableeditor-redline-border-color);
+}
+
+.CSSVariableEditor-inspectangle--redline .spectrum-Tooltip {
+  --spectrum-tooltip-background-color: var(--cssvariableeditor-redline-tooltip-color);
+}
+
+.CSSVariableEditor-inspectangle.is-fading {
+  transition: background-color var(--spectrum-global-animation-duration-2000) var(--spectrum-global-animation-ease-out),
+              border-color var(--spectrum-global-animation-duration-2000) var(--spectrum-global-animation-ease-out);
+
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.CSSVariableEditor-inspectangle.is-fading .CSSVariableEditor-inspectanglePadding {
+  transition: border-color var(--spectrum-global-animation-duration-2000) var(--spectrum-global-animation-ease-out);
+
+  border-color: transparent;
+}
+
+
+.CSSVariableEditor-saveArea {
+  display: flex;
+  flex-direction: row;
+}
+
+.CSSVariableEditor-filenameField {
+  margin-left: var(--spectrum-global-dimension-size-100);
+  flex: 1;
+}
+
+
+.CSSVariableEditor-actionContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.CSSVariableEditor-filter {
+  display: block;
+  flex: 1;
+  margin: 0 var(--spectrum-global-dimension-size-100);
+}
+
+.CSSVariableEditor-variableFieldContainer {
+  position: relative;
+}
+.CSSVariableEditor-variableField {
+  padding-right: var(--spectrum-global-dimension-size-500);
+}
+
+.CSSVariableEditor-variableFieldPreview {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spectrum-global-dimension-size-500);
+  height: var(--spectrum-global-dimension-size-400);
+}
