@@ -12,9 +12,6 @@ governing permissions and limitations under the License.
 
 /* https://git.corp.adobe.com/Spectrum/spectrum-origins/pull/60 */
 :root {
-  --spectrum-accordion-icon-width: 6px;
-  --spectrum-accordion-icon-height: 10px;
-
   /* Subtract the size of the border since it's on the item itself */
   --spectrum-accordion-item-height-actual: calc(var(--spectrum-accordion-item-height) - var(--spectrum-accordion-item-border-size));
   --spectrum-accordion-item-title-tracking-actual: calc(var(--spectrum-accordion-item-title-tracking) / 100);
