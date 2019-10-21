@@ -1,7 +1,0 @@
-
-.spectrum--light .spectrum-Dropzone {
-  --spectrum-global-color-blue-400: rgb(38, 128, 235);
-  --spectrum-dropzone-border-color: rgb(225, 225, 225);
-  --spectrum-dropzone-border-color-selected-hover: rgb(38, 128, 235);
-  --spectrum-dropzone-background-color-selected-hover: rgba(20,115,230,0.1);
-}

@@ -1,7 +1,0 @@
-
-.spectrum--darkest .spectrum-CircleLoader {
-  --spectrum-loader-circle-medium-track-color: rgb(57, 57, 57);
-  --spectrum-loader-circle-medium-track-fill-color: rgb(38, 128, 235);
-  --spectrum-loader-circle-medium-over-background-track-color: rgba(255,255,255,0.2);
-  --spectrum-loader-circle-medium-over-background-track-fill-color: rgb(255, 255, 255);
-}

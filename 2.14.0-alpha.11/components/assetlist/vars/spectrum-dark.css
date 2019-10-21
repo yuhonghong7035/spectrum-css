@@ -1,8 +1,0 @@
-
-.spectrum--dark .spectrum-AssetList {
-  --spectrum-alias-border-color-focus: rgb(38, 128, 235);
-  --spectrum-miller-column-item-background-color-hover: rgb(62, 62, 62);
-  --spectrum-miller-column-item-background-color-down: rgb(74, 74, 74);
-  --spectrum-miller-column-item-background-color-selected: rgba(55,142,240,0.1);
-  --spectrum-miller-column-item-background-color-selected-hover: rgba(55,142,240,0.2);
-}

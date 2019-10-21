@@ -1,9 +1,0 @@
-
-.spectrum--light .spectrum-Toast {
-  --spectrum-toast-background-color: rgb(116, 116, 116);
-  --spectrum-toast-text-color: rgb(255, 255, 255);
-  --spectrum-toast-error-background-color: rgb(201, 37, 45);
-  --spectrum-toast-info-background-color: rgb(13, 102, 208);
-  --spectrum-toast-positive-background-color: rgb(18, 128, 92);
-  --spectrum-toast-warning-background-color: rgb(203, 111, 16);
-}
