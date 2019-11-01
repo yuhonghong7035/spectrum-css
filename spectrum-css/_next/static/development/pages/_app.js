@@ -35,6 +35,17 @@ var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Logo.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -60,14 +71,14 @@ function (_React$Component) {
         as: "".concat("", "/"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 24
         },
         __self: this
       }, __jsx("a", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.headerLink,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 25
         },
         __self: this
       }, __jsx("div", {
@@ -75,14 +86,14 @@ function (_React$Component) {
         tabIndex: "-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 26
         },
         __self: this
       }, __jsx("div", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 28
         },
         __self: this
       }, __jsx("img", (_jsx = {
@@ -91,25 +102,25 @@ function (_React$Component) {
         alt: "Adobe Logo"
       }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "className", _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.logo), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__source", {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 30
       }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_jsx, "__self", this), _jsx)), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 36
         },
         __self: this
       }, __jsx("h2", {
         className: classnames__WEBPACK_IMPORTED_MODULE_8___default()(_css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.titleText, "spectrum-Site-title", "spectrum-Heading3"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 37
         },
         __self: this
       }, "Spectrum CSS"), undefined === "internal" || undefined === "both" ? __jsx("div", {
         className: _css_logo_scss__WEBPACK_IMPORTED_MODULE_9___default.a.internal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 48
         },
         __self: this
       }, "ADOBE INTERNAL") : undefined)))));
@@ -169,6 +180,17 @@ var _data_newmenu__WEBPACK_IMPORTED_MODULE_16___namespace = /*#__PURE__*/__webpa
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Sidebar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 
 
@@ -285,14 +307,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 94
         },
         __self: this
       }), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.appHeader,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 101
         },
         __self: this
       }, __jsx(_react_react_spectrum_Button__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -300,7 +322,7 @@ function (_React$Component) {
         icon: __jsx(_react_react_spectrum_Icon_ShowMenu__WEBPACK_IMPORTED_MODULE_12___default.a, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 104
           },
           __self: this
         }),
@@ -310,48 +332,48 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 102
         },
         __self: this
       })), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.sideBar, this.state.menuOpen ? _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuOpen : _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.menuClosed),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 109
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_14___default()(_css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.spectrumSidebar),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 115
         },
         __self: this
       }, __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.header,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 116
         },
         __self: this
       }, __jsx(_Logo__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 117
         },
         __self: this
       }), __jsx(_SiteSearch__WEBPACK_IMPORTED_MODULE_13__["default"], {
         ref: this.search,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 119
         },
         __self: this
       })), __jsx("div", {
         className: _css_sidebar_scss__WEBPACK_IMPORTED_MODULE_17___default.a.navigation,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 122
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNav"], {
@@ -363,7 +385,7 @@ function (_React$Component) {
         variant: "multiLevel",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 123
         },
         __self: this
       }, _data_newmenu__WEBPACK_IMPORTED_MODULE_16__.menu[0].children.map(function (item, i) {
@@ -386,7 +408,7 @@ function (_React$Component) {
                 }, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 134
+                    lineNumber: 145
                   },
                   __self: this
                 }), item.title);
@@ -394,13 +416,13 @@ function (_React$Component) {
                 return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(item), {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 138
+                    lineNumber: 149
                   },
                   __self: this
                 }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 139
+                    lineNumber: 150
                   },
                   __self: this
                 }), item.title));
@@ -408,7 +430,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 120
+              lineNumber: 131
             },
             __self: this
           });
@@ -423,7 +445,7 @@ function (_React$Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 148
+              lineNumber: 159
             },
             __self: this
           }, item.children && item.children.map(function (childItem, childI) {
@@ -439,12 +461,13 @@ function (_React$Component) {
                 delete props.href;
 
                 if (childItem.linkType === "External") {
+                  props.target = "_blank";
                   return __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
                     target: "_blanks"
                   }, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 172
+                      lineNumber: 184
                     },
                     __self: this
                   }), childItem.title);
@@ -452,13 +475,13 @@ function (_React$Component) {
                   return __jsx(next_link__WEBPACK_IMPORTED_MODULE_9___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, createLinkProps(childItem), {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 176
+                      lineNumber: 188
                     },
                     __self: this
                   }), __jsx("a", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 177
+                      lineNumber: 189
                     },
                     __self: this
                   }), childItem.title));
@@ -466,7 +489,7 @@ function (_React$Component) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 158
+                lineNumber: 169
               },
               __self: this
             });
@@ -479,7 +502,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 202
         },
         __self: this
       }, __jsx(_react_react_spectrum_SideNav__WEBPACK_IMPORTED_MODULE_7__["SideNavItem"], {
@@ -491,7 +514,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 203
         },
         __self: this
       }, "Spectrum"))))));
@@ -549,6 +572,17 @@ var _data_search_index__WEBPACK_IMPORTED_MODULE_15___namespace = /*#__PURE__*/__
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SiteSearch.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
 
 
 
@@ -848,14 +882,14 @@ function (_React$Component) {
         role: "search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 278
+          lineNumber: 289
         },
         __self: this
       }, __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlay,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 283
+          lineNumber: 294
         },
         __self: this
       }), __jsx(_react_react_spectrum_Search__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -881,7 +915,7 @@ function (_React$Component) {
         disabled: !this.state.searchLoaded,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 284
+          lineNumber: 295
         },
         __self: this
       }), __jsx("div", {
@@ -891,7 +925,7 @@ function (_React$Component) {
         className: classnames__WEBPACK_IMPORTED_MODULE_11___default()(_css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlay, this.state.menuOpen && this.state.searchVal.length > 2 ? _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.overlayOpen : undefined),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 303
+          lineNumber: 314
         },
         __self: this
       }), __jsx("div", {
@@ -902,34 +936,34 @@ function (_React$Component) {
         "aria-label": "Search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 325
         },
         __self: this
       }, this.state.numResults === 0 ? __jsx("div", {
         className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResultsContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 338
         },
         __self: this
       }, __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Heading2--quiet", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResults),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 339
         },
         __self: this
       }, "No results found"), __jsx("div", {
         className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.noResulsSub),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 336
+          lineNumber: 347
         },
         __self: this
       }, __jsx("em", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 337
+          lineNumber: 348
         },
         __self: this
       }, "Try another search term."))) : undefined, this.state.foundation.length ? __jsx("div", {
@@ -938,7 +972,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Foundation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 344
+          lineNumber: 355
         },
         __self: this
       }, __jsx("div", {
@@ -946,7 +980,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 345
+          lineNumber: 356
         },
         __self: this
       }, __jsx("h4", {
@@ -955,7 +989,7 @@ function (_React$Component) {
         id: "results_Foundation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 346
+          lineNumber: 357
         },
         __self: this
       }, "Foundation")), __jsx("ul", {
@@ -963,7 +997,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 348
+          lineNumber: 359
         },
         __self: this
       }, this.state.foundation.map(function (result, i) {
@@ -972,7 +1006,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 350
+            lineNumber: 361
           },
           __self: this
         }, __jsx("a", {
@@ -982,7 +1016,7 @@ function (_React$Component) {
           href: _this2.getHREF(result.slug, "Internal"),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 351
+            lineNumber: 362
           },
           __self: this
         }, result.name));
@@ -992,7 +1026,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Components",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 371
+          lineNumber: 382
         },
         __self: this
       }, __jsx("div", {
@@ -1000,7 +1034,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 372
+          lineNumber: 383
         },
         __self: this
       }, __jsx("h4", {
@@ -1009,7 +1043,7 @@ function (_React$Component) {
         id: "results_Components",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 373
+          lineNumber: 384
         },
         __self: this
       }, "Components")), __jsx("ul", {
@@ -1017,7 +1051,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 375
+          lineNumber: 386
         },
         __self: this
       }, this.state.components.map(function (result, i) {
@@ -1026,7 +1060,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 377
+            lineNumber: 388
           },
           __self: this
         }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -1034,7 +1068,7 @@ function (_React$Component) {
           as: "".concat("", "/components/").concat(result.slug),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 378
+            lineNumber: 389
           },
           __self: this
         }, __jsx("a", {
@@ -1046,7 +1080,7 @@ function (_React$Component) {
           className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body4", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.listItem, _this2.getHighlighted(searchIndex)),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 380
+            lineNumber: 391
           },
           __self: this
         }, result.name)));
@@ -1056,7 +1090,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Resources",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 400
+          lineNumber: 411
         },
         __self: this
       }, __jsx("div", {
@@ -1064,7 +1098,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 401
+          lineNumber: 412
         },
         __self: this
       }, __jsx("h4", {
@@ -1073,7 +1107,7 @@ function (_React$Component) {
         id: "results_Resources",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 402
+          lineNumber: 413
         },
         __self: this
       }, "Resources")), __jsx("ul", {
@@ -1081,7 +1115,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 404
+          lineNumber: 415
         },
         __self: this
       }, this.state.resources.map(function (result, i) {
@@ -1090,7 +1124,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 406
+            lineNumber: 417
           },
           __self: this
         }, __jsx("a", {
@@ -1100,7 +1134,7 @@ function (_React$Component) {
           href: _this2.getHREF(result.slug, "Internal"),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 406
+            lineNumber: 417
           },
           __self: this
         }, result.name));
@@ -1110,7 +1144,7 @@ function (_React$Component) {
         "aria-labelledby": "results_UsageGuidelines",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 425
+          lineNumber: 436
         },
         __self: this
       }, __jsx("div", {
@@ -1118,7 +1152,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 426
+          lineNumber: 437
         },
         __self: this
       }, __jsx("h4", {
@@ -1127,7 +1161,7 @@ function (_React$Component) {
         id: "results_UsageGuidelines",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 427
+          lineNumber: 438
         },
         __self: this
       }, "Usage Guidelines")), __jsx("ul", {
@@ -1135,7 +1169,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 429
+          lineNumber: 440
         },
         __self: this
       }, this.state.usageGuidelines.map(function (result, i) {
@@ -1144,7 +1178,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 431
+            lineNumber: 442
           },
           __self: this
         }, __jsx("a", {
@@ -1154,27 +1188,27 @@ function (_React$Component) {
           href: _this2.getHREF(result.slug, "Internal", result.query),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 431
+            lineNumber: 442
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 441
+            lineNumber: 452
           },
           __self: this
         }, result.pageType, " ", __jsx("span", {
           "aria-hidden": "true",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 444
+            lineNumber: 455
           },
           __self: this
         }, ">"), " ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 446
+            lineNumber: 457
           },
           __self: this
         }, result.display_description)));
@@ -1184,7 +1218,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Behaviors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 456
+          lineNumber: 467
         },
         __self: this
       }, __jsx("div", {
@@ -1192,7 +1226,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 457
+          lineNumber: 468
         },
         __self: this
       }, __jsx("h4", {
@@ -1201,7 +1235,7 @@ function (_React$Component) {
         id: "results_Behaviors",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 458
+          lineNumber: 469
         },
         __self: this
       }, "Behaviors")), __jsx("ul", {
@@ -1209,7 +1243,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 460
+          lineNumber: 471
         },
         __self: this
       }, this.state.behaviors.map(function (result, i) {
@@ -1218,7 +1252,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 462
+            lineNumber: 473
           },
           __self: this
         }, __jsx("a", {
@@ -1228,27 +1262,27 @@ function (_React$Component) {
           href: _this2.getHREF(result.slug, "Internal", result.query),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 462
+            lineNumber: 473
           },
           __self: this
         }, __jsx("div", {
           className: classnames__WEBPACK_IMPORTED_MODULE_11___default()("spectrum-Body5", _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.subHeader),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 472
+            lineNumber: 483
           },
           __self: this
         }, result.pageType, " ", __jsx("span", {
           "aria-hidden": "true",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 475
+            lineNumber: 486
           },
           __self: this
         }, ">"), " ", result.name), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 477
+            lineNumber: 488
           },
           __self: this
         }, result.display_description)));
@@ -1258,7 +1292,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Downloads",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 487
+          lineNumber: 498
         },
         __self: this
       }, __jsx("div", {
@@ -1266,7 +1300,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 488
+          lineNumber: 499
         },
         __self: this
       }, __jsx("h4", {
@@ -1275,7 +1309,7 @@ function (_React$Component) {
         id: "results_Downloads",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 489
+          lineNumber: 500
         },
         __self: this
       }, "Downloads")), __jsx("ul", {
@@ -1283,7 +1317,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 491
+          lineNumber: 502
         },
         __self: this
       }, this.state.files.map(function (result, i) {
@@ -1292,7 +1326,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 493
+            lineNumber: 504
           },
           __self: this
         }, __jsx("a", {
@@ -1303,21 +1337,21 @@ function (_React$Component) {
           href: _this2.getHREF("/static/resources/Latest/".concat(result.slug), "File"),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 493
+            lineNumber: 504
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.file,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 504
+            lineNumber: 515
           },
           __self: this
         }, __jsx("div", {
           className: _css_siteSearch_scss__WEBPACK_IMPORTED_MODULE_12___default.a.icon,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 505
+            lineNumber: 516
           },
           __self: this
         }, __jsx("img", {
@@ -1325,7 +1359,7 @@ function (_React$Component) {
           alt: "XD File",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 506
+            lineNumber: 517
           },
           __self: this
         })), result.slug)));
@@ -1335,7 +1369,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Tutorials",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 518
+          lineNumber: 529
         },
         __self: this
       }, __jsx("div", {
@@ -1343,7 +1377,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 519
+          lineNumber: 530
         },
         __self: this
       }, __jsx("h4", {
@@ -1352,7 +1386,7 @@ function (_React$Component) {
         id: "results_Tutorials",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 520
+          lineNumber: 531
         },
         __self: this
       }, "Tutorials")), __jsx("ul", {
@@ -1360,7 +1394,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 522
+          lineNumber: 533
         },
         __self: this
       }, this.state.tutorials.map(function (result, i) {
@@ -1369,7 +1403,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 524
+            lineNumber: 535
           },
           __self: this
         }, __jsx("a", {
@@ -1380,7 +1414,7 @@ function (_React$Component) {
           onClick: _this2.getHREF(result.slug, "External"),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 524
+            lineNumber: 535
           },
           __self: this
         }, result.name));
@@ -1390,7 +1424,7 @@ function (_React$Component) {
         "aria-labelledby": "results_Contributions",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 544
+          lineNumber: 555
         },
         __self: this
       }, __jsx("div", {
@@ -1398,7 +1432,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 545
+          lineNumber: 556
         },
         __self: this
       }, __jsx("h4", {
@@ -1407,7 +1441,7 @@ function (_React$Component) {
         id: "results_Contributions",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 546
+          lineNumber: 557
         },
         __self: this
       }, "Contributions")), __jsx("ul", {
@@ -1415,7 +1449,7 @@ function (_React$Component) {
         role: "presentation",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 548
+          lineNumber: 559
         },
         __self: this
       }, this.state.contributions.map(function (result, i) {
@@ -1424,7 +1458,7 @@ function (_React$Component) {
           role: "presentation",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 550
+            lineNumber: 561
           },
           __self: this
         }, __jsx("a", {
@@ -1435,13 +1469,13 @@ function (_React$Component) {
           href: _this2.getHREF("https://spectrum-contributions.corp.adobe.com/submissions/".concat(result.slug), "External"),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 550
+            lineNumber: 561
           },
           __self: this
         }, __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 564
+            lineNumber: 575
           },
           __self: this
         }, result.description)));
@@ -32957,6 +32991,17 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -32999,7 +33044,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 39
         },
         __self: this
       }, children, __jsx(_react_react_spectrum_Rule__WEBPACK_IMPORTED_MODULE_22___default.a, {
@@ -33009,7 +33054,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 41
         },
         __self: this
       }));
@@ -33119,7 +33164,7 @@ function (_App) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 118
         },
         __self: this
       }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_19__["Helmet"], {
@@ -33133,7 +33178,7 @@ function (_App) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 120
         },
         __self: this
       }, __jsx("meta", {
@@ -33142,7 +33187,7 @@ function (_App) {
         key: "viewport",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 124
         },
         __self: this
       }), __jsx("link", {
@@ -33151,7 +33196,7 @@ function (_App) {
         href: "".concat("", "/static/favicon.ico"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 125
         },
         __self: this
       }), __jsx("link", {
@@ -33160,7 +33205,7 @@ function (_App) {
         href: "https://wwwimages2.adobe.com/etc/beagle/public/globalnav/adobe-globalnav/latest/adobe-globalnav.min.css",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 126
         },
         __self: this
       })), __jsx(_react_react_spectrum_Provider__WEBPACK_IMPORTED_MODULE_20___default.a, {
@@ -33169,33 +33214,33 @@ function (_App) {
         typekitId: "uma8ayv",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 129
         },
         __self: this
       }, __jsx("div", {
         className: 'flexContainer',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 130
         },
         __self: this
       }, __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_24__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 131
         },
         __self: this
       })), __jsx(Layout, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 132
         },
         __self: this
       }, __jsx("div", {
         className: "switcherContainer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 133
         },
         __self: this
       }, __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -33205,7 +33250,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 134
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
@@ -33230,7 +33275,7 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 135
         },
         __self: this
       })), __jsx(_react_react_spectrum_FieldLabel__WEBPACK_IMPORTED_MODULE_18___default.a, {
@@ -33240,7 +33285,7 @@ function (_App) {
         position: "left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 150
         },
         __self: this
       }, __jsx(_react_react_spectrum_Select__WEBPACK_IMPORTED_MODULE_23___default.a, {
@@ -33267,13 +33312,13 @@ function (_App) {
         flexible: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 151
         },
         __self: this
       }))), __jsx(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 173
         },
         __self: this
       })))), __jsx("div", {
@@ -33281,7 +33326,7 @@ function (_App) {
         id: "spectrum-underlay",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 176
         },
         __self: this
       })));

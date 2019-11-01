@@ -33,6 +33,17 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/DoubleTextWithVisual.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -59,14 +70,14 @@ function (_React$Component) {
         className: classnames__WEBPACK_IMPORTED_MODULE_10___default()('afg-row', _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a.row),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 28
         },
         __self: this
       }, __jsx("div", {
         className: "afg-col-xs-12 afg-col-sm-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 29
         },
         __self: this
       }, __jsx("div", {
@@ -76,7 +87,7 @@ function (_React$Component) {
         className: classnames__WEBPACK_IMPORTED_MODULE_10___default()(this.props.imageStyle ? _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a[this.props.imageStyle] : _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a.Standard),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 30
         },
         __self: this
       }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -84,56 +95,11 @@ function (_React$Component) {
         alt: props.desktopImage1.fields.file,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      })), __jsx(_SubHeader__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        title: this.props.title1,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      }), __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, __jsx(_Markdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        source: this.props.text1,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }))), props.desktopImage2 ? __jsx("div", {
-        className: "afg-col-xs-12 afg-col-sm-6",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }, __jsx("div", {
-        style: {
-          backgroundColor: this.props.customBackgroundColor1 ? this.props.customBackgroundColorImage2 : undefined
-        },
-        className: classnames__WEBPACK_IMPORTED_MODULE_10___default()(this.props.imageStyle ? _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a[this.props.imageStyle] : _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a.Standard),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        image: props.desktopImage2.fields.file,
-        alt: props.desktopImage1.fields.file,
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 31
         },
         __self: this
       })), __jsx(_SubHeader__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        title: this.props.title2,
+        title: this.props.title1,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36
@@ -146,10 +112,55 @@ function (_React$Component) {
         },
         __self: this
       }, __jsx(_Markdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        source: this.props.text2,
+        source: this.props.text1,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 37
+        },
+        __self: this
+      }))), props.desktopImage2 ? __jsx("div", {
+        className: "afg-col-xs-12 afg-col-sm-6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, __jsx("div", {
+        style: {
+          backgroundColor: this.props.customBackgroundColor1 ? this.props.customBackgroundColorImage2 : undefined
+        },
+        className: classnames__WEBPACK_IMPORTED_MODULE_10___default()(this.props.imageStyle ? _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a[this.props.imageStyle] : _css_doubleTextWithVisual_scss__WEBPACK_IMPORTED_MODULE_11___default.a.Standard),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        image: props.desktopImage2.fields.file,
+        alt: props.desktopImage1.fields.file,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      })), __jsx(_SubHeader__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        title: this.props.title2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, __jsx(_Markdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        source: this.props.text2,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
         },
         __self: this
       }))) : undefined));
@@ -183,6 +194,17 @@ var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/HeroImage.js
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -191,21 +213,21 @@ var HeroImage = function HeroImage(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('afg-row', _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.row),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
     },
     __self: this
   }, __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('afg-col-xs-12 afg-col-sm-12', _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.heroImage),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 19
     },
     __self: this
   }, __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(_css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a.heroContainer, _css_heroImage_scss__WEBPACK_IMPORTED_MODULE_3___default.a[props.style]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 20
     },
     __self: this
   }, __jsx(_ResponsiveImage__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -214,7 +236,7 @@ var HeroImage = function HeroImage(props) {
     imageMobile: props.mobile ? props.mobile.file : undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 21
     },
     __self: this
   }))));
@@ -247,6 +269,17 @@ var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/Markdown.js"
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -263,7 +296,7 @@ var link = function link(props) {
       className: classnames__WEBPACK_IMPORTED_MODULE_3___default()("spectrum-Button", className),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 24
       },
       __self: this
     }, buttonText) : __jsx("a", {
@@ -271,7 +304,7 @@ var link = function link(props) {
       className: classnames__WEBPACK_IMPORTED_MODULE_3___default()("spectrum-Button", className),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 25
       },
       __self: this
     }, buttonText);
@@ -281,14 +314,14 @@ var link = function link(props) {
       target: "_blank",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 30
       },
       __self: this
     }, props.children) : __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: props.href,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 31
       },
       __self: this
     }, props.children);
@@ -300,7 +333,7 @@ var paragraph = function paragraph(props) {
     className: 'spectrum-Body3',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 36
     },
     __self: this
   }, props.children);
@@ -311,7 +344,7 @@ var table = function table(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('spectrum-Table spectrum-Table--quiet', _css_markdown_scss__WEBPACK_IMPORTED_MODULE_4___default.a.table),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 37
     },
     __self: this
   }, props.children);
@@ -322,7 +355,7 @@ var tableHead = function tableHead(props) {
     className: 'spectrum-Table-head',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 38
     },
     __self: this
   }, props.children);
@@ -333,7 +366,7 @@ var tableRow = function tableRow(props) {
     className: 'spectrum-Table-row',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 39
     },
     __self: this
   }, props.children);
@@ -344,7 +377,7 @@ var tableBody = function tableBody(props) {
     className: "spectrum-Table-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 40
     },
     __self: this
   }, props.children);
@@ -355,7 +388,7 @@ var list = function list(props) {
     className: _css_markdown_scss__WEBPACK_IMPORTED_MODULE_4___default.a.list,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 41
     },
     __self: this
   }, props.children);
@@ -366,7 +399,7 @@ var tableCell = function tableCell(props) {
     className: 'spectrum-Table-headCell',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 45
     },
     __self: this
   }, props.children) : __jsx("td", {
@@ -374,7 +407,7 @@ var tableCell = function tableCell(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_3___default()('spectrum-Table-cell'),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 46
     },
     __self: this
   }, props.children);
@@ -384,7 +417,7 @@ var Markdown = function Markdown(props) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 54
     },
     __self: this
   }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -402,7 +435,7 @@ var Markdown = function Markdown(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 55
     },
     __self: this
   }));
@@ -431,6 +464,17 @@ var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/PageHeader.j
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 var PageHeader = function PageHeader(props) {
@@ -438,21 +482,21 @@ var PageHeader = function PageHeader(props) {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('afg-row', _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_2___default.a.headerRow),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 17
     },
     __self: this
   }, __jsx("div", {
-    className: "afg-col-xs-9 spectrum-Article",
+    className: "afg-col-xs-12 spectrum-Article",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 18
     },
     __self: this
   }, __jsx("h1", {
     className: classnames__WEBPACK_IMPORTED_MODULE_1___default()('spectrum-Heading1--display', _css_pageHeader_scss__WEBPACK_IMPORTED_MODULE_2___default.a.pageHeading),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 19
     },
     __self: this
   }, props.title)));
@@ -481,6 +525,17 @@ var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/ResponsiveIm
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 var ResponsiveImage = function ResponsiveImage(props) {
@@ -491,7 +546,7 @@ var ResponsiveImage = function ResponsiveImage(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 17
     },
     __self: this
   }, __jsx("img", {
@@ -502,7 +557,7 @@ var ResponsiveImage = function ResponsiveImage(props) {
     srcSet: props.image.url + ' 2x',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 21
     },
     __self: this
   }), props.imageMobile ? __jsx("img", {
@@ -513,7 +568,7 @@ var ResponsiveImage = function ResponsiveImage(props) {
     srcSet: props.imageMobile.url + ' 2x',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }) : undefined);
@@ -556,6 +611,17 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/components/SubHeader.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -583,14 +649,14 @@ function (_React$Component) {
         id: title.split(" ").join("-"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 26
         },
         __self: this
       }, this.props.title, __jsx("span", {
         className: _css_subHeader_scss__WEBPACK_IMPORTED_MODULE_10___default.a.headingAnchor,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 28
         },
         __self: this
       }, __jsx("a", {
@@ -598,7 +664,7 @@ function (_React$Component) {
         href: '#' + title.split(" ").join("-"),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 29
         },
         __self: this
       }, "#")), this.props.children);
@@ -10130,7 +10196,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 107));
+__export(__webpack_require__(/*! ./WritableStream */ 108));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -28582,6 +28648,17 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/garthdb/Spectrum/spectrum-css/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
 
 
 
@@ -28600,13 +28677,13 @@ var Home = function Home() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 24
     },
     __self: this
   }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 25
     },
     __self: this
   }, __jsx("meta", {
@@ -28614,27 +28691,27 @@ var Home = function Home() {
     content: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 26
     },
     __self: this
   }), __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
   }, "Spectrum CSS")), __jsx(_components_PageHeader__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: "Meet Spectrum CSS",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 29
     },
     __self: this
   }), __jsx("p", {
     className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("spectrum-Body2", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.description),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 30
     },
     __self: this
   }, "Spectrum CSS is an open-source implementation of Spectrum, Adobe\u2019s design system. It includes components and resources to make applications more cohesive."), __jsx(_components_HeroImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -28671,21 +28748,21 @@ var Home = function Home() {
     style: 'Illustration',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 31
     },
     __self: this
   }), __jsx("div", {
     className: "afg-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 64
     },
     __self: this
   }, __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("afg-col-xs-12", "afg-col-sm-6", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.homecard),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 65
     },
     __self: this
   }, __jsx("img", {
@@ -28694,48 +28771,48 @@ var Home = function Home() {
     height: "80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 66
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 67
     },
     __self: this
   }, __jsx(_components_SubHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Robust documentation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 68
     },
     __self: this
   }), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 69
     },
     __self: this
   }, "Spectrum CSS is designed to be used in partnership with Spectrum\u2019s detailed usage guidelines."), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 70
     },
     __self: this
   }, __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "https://spectrum.adobe.com/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 70
     },
     __self: this
   }, "View Spectrum guidelines")))), __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("afg-col-xs-12", "afg-col-sm-6", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.homecard),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 73
     },
     __self: this
   }, __jsx("img", {
@@ -28744,34 +28821,34 @@ var Home = function Home() {
     height: "80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 74
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 75
     },
     __self: this
   }, __jsx(_components_SubHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Flexible",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 76
     },
     __self: this
   }), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 77
     },
     __self: this
   }, "Our CSS is customizable, powerful, and designed to work with any javascript framework."), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 78
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -28779,28 +28856,28 @@ var Home = function Home() {
     as: "".concat("", "/get-started/"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 78
     },
     __self: this
   }, __jsx("a", {
     className: "spectrum-Link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 78
     },
     __self: this
   }, "Get Started")))))), __jsx("div", {
     className: "afg-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 82
     },
     __self: this
   }, __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("afg-col-xs-12", "afg-col-sm-6", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.homecard),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 83
     },
     __self: this
   }, __jsx("img", {
@@ -28809,34 +28886,34 @@ var Home = function Home() {
     height: "80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 84
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 85
     },
     __self: this
   }, __jsx(_components_SubHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Rigorously tested",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 86
     },
     __self: this
   }), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 87
     },
     __self: this
   }, "These individually-versioned components have been vetted to be accessible and inclusive of global audiences."))), __jsx("div", {
     className: classnames__WEBPACK_IMPORTED_MODULE_9___default()("afg-col-xs-12", "afg-col-sm-6", _css_homepage_scss__WEBPACK_IMPORTED_MODULE_8___default.a.homecard),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 90
     },
     __self: this
   }, __jsx("img", {
@@ -28845,51 +28922,48 @@ var Home = function Home() {
     height: "80",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 91
     },
     __self: this
   }), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 92
     },
     __self: this
   }, __jsx(_components_SubHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
     title: "Multi-platform support",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 93
     },
     __self: this
   }), __jsx("p", {
     className: "spectrum-Body3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 94
     },
     __self: this
-  }, "We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility."), __jsx("p", {
-    className: "spectrum-Body3",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, __jsx(_react_react_spectrum_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "https://spectrum.adobe.com/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, "View Spectrum guidelines"))))));
+  }, "We support evergreen browsers (minus one version) and IE 11 for scalability and flexibility.")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 100:
+/***/ 108:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 124:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js ***!
   \********************************************************************************************************************************/
@@ -28898,17 +28972,6 @@ var Home = function Home() {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Findex.js!./");
 
-
-/***/ }),
-
-/***/ 107:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -28923,5 +28986,5 @@ module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[100,"static/runtime/webpack.js","styles"]]]);
+},[[124,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
