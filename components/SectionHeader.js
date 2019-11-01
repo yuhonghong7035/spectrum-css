@@ -22,7 +22,7 @@ class SectionHeader extends React.Component {
     return (
         <div className={classNames('afg-row',styles.headerContainer)}>
             <div className={classNames('afg-col-xs-12')}>
-            <h2 id={this.props.title.split(" ").join("-")} className={classNames('spectrum-Heading3',styles.sectionHeader, styles.header)}>
+            <h2 id={this.props.title.split(" ").join("-")} className={classNames('spectrum-Heading3', styles.sectionHeader, styles.header)}>
               {this.props.title}
               <span className={styles.headingAnchor}>
                  <a className={classNames(`spectrum-Link`, styles.anchor)} href={'#' + title.split(" ").join("-")} aria-label="§">#</a> {this.props.id  && process.env.NODE_ENV != 'production' ? <span className="spectrum-Body"><a className={classNames("spectrum-Link",styles.editLink)} tabIndex="-1" target="_blank" href={`https://app.contentful.com/spaces/${this.props.space}/entries/${this.props.id}`}>Edit</a></span>:undefined}
