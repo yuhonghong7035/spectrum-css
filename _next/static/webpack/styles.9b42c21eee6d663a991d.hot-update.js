@@ -30,7 +30,7 @@ module.exports = {"detailsTable":"detailsTable___2x6rG","resourceCards":"resourc
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649014445");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649552403");
           });
       }
     }
@@ -68,7 +68,7 @@ module.exports = {"table":"table___1eH1D","list":"list___hsw97"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015100");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553046");
           });
       }
     }
@@ -106,7 +106,7 @@ module.exports = {"pageContainer":"pageContainer___3Z_T8","resources":"resources
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649014458");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649552413");
           });
       }
     }
@@ -144,7 +144,7 @@ module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015108");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553089");
           });
       }
     }
@@ -182,7 +182,7 @@ module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015141");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553080");
           });
       }
     }
@@ -220,7 +220,7 @@ module.exports = {"section":"section___1Znpf","introRow":"introRow___hejS3","sec
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015153");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553131");
           });
       }
     }
@@ -258,7 +258,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015122");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553103");
           });
       }
     }
@@ -295,7 +295,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649014423");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649552367");
           });
       }
     }
@@ -332,7 +332,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015396");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553380");
           });
       }
     }
@@ -369,7 +369,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015411");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553372");
           });
       }
     }
@@ -406,7 +406,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015419");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553396");
           });
       }
     }
@@ -443,7 +443,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015428");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553410");
           });
       }
     }
@@ -480,7 +480,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015405");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553388");
           });
       }
     }
@@ -517,7 +517,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015439");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553434");
           });
       }
     }
@@ -554,7 +554,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015468");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553420");
           });
       }
     }
@@ -591,7 +591,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015454");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553402");
           });
       }
     }
@@ -628,7 +628,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015462");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553441");
           });
       }
     }
@@ -665,7 +665,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015482");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553456");
           });
       }
     }
@@ -702,7 +702,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015447");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553427");
           });
       }
     }
@@ -739,7 +739,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649015475");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649553449");
           });
       }
     }
@@ -748,4 +748,4 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
 /***/ })
 
 })
-//# sourceMappingURL=styles.3e3901edf892a7c3446a.hot-update.js.map
+//# sourceMappingURL=styles.9b42c21eee6d663a991d.hot-update.js.map

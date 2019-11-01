@@ -1,14 +1,14 @@
 webpackHotUpdate("styles",{
 
-/***/ "./components/css/pageHeader.scss":
-/*!****************************************!*\
-  !*** ./components/css/pageHeader.scss ***!
-  \****************************************/
+/***/ "./css/error.scss":
+/*!************************!*\
+  !*** ./css/error.scss ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2meAi"};;
+module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"header___1nDdP","body":"body___2uvXd"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -30,7 +30,7 @@ module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649133700");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572649556128");
           });
       }
     }
@@ -39,4 +39,4 @@ module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2
 /***/ })
 
 })
-//# sourceMappingURL=styles.a5b88f6aec67f0c1c889.hot-update.js.map
+//# sourceMappingURL=styles.33d50dd999288aa810e6.hot-update.js.map
