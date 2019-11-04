@@ -63,7 +63,7 @@ class Markup extends React.Component {
 
 class Variant extends React.Component {
   render() {
-    this.props.example.markup = this.props.example.markup.replace('src="img/', `src="${process.env.BACKEND_URL}/static/images/`).replace('url(img/', `url(${process.env.BACKEND_URL}/static/images/`)
+    this.props.example.markup = this.props.example.markup.replace(/src="img\//g, `src="${process.env.BACKEND_URL}/static/images/`).replace(/url\(img\//g, `url(${process.env.BACKEND_URL}/static/images/`)
     return (
       <article>
         <SubHeader title={this.props.example.name}>
