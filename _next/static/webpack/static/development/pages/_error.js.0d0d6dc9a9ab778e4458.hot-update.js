@@ -281,7 +281,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 122:
+/***/ 115:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2F_error.js ***!
   \***************************************************************************************************************************************/
@@ -294,4 +294,4 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F_error
 /***/ })
 
 })
-//# sourceMappingURL=_error.js.33d50dd999288aa810e6.hot-update.js.map
+//# sourceMappingURL=_error.js.0d0d6dc9a9ab778e4458.hot-update.js.map

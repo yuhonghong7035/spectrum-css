@@ -30,45 +30,7 @@ module.exports = {"detailsTable":"detailsTable___2x6rG","resourceCards":"resourc
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649552403");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./components/css/markdown.scss":
-/*!**************************************!*\
-  !*** ./components/css/markdown.scss ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"table":"table___1eH1D","list":"list___hsw97"};;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553046");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887640836");
           });
       }
     }
@@ -106,45 +68,7 @@ module.exports = {"pageContainer":"pageContainer___3Z_T8","resources":"resources
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649552413");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./components/css/pageHeader.scss":
-/*!****************************************!*\
-  !*** ./components/css/pageHeader.scss ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"pageHeading":"pageHeading___26RtH","headerRow":"headerRow___2meAi"};;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553089");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887640829");
           });
       }
     }
@@ -182,7 +106,7 @@ module.exports = {"card":"card___2ZaLE","content":"content___1VKv9","cardTitle":
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553080");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887640843");
           });
       }
     }
@@ -220,7 +144,7 @@ module.exports = {"section":"section___1Znpf","introRow":"introRow___hejS3","sec
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553131");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887640839");
           });
       }
     }
@@ -228,15 +152,15 @@ module.exports = {"section":"section___1Znpf","introRow":"introRow___hejS3","sec
 
 /***/ }),
 
-/***/ "./components/css/subHeader.scss":
-/*!***************************************!*\
-  !*** ./components/css/subHeader.scss ***!
-  \***************************************/
+/***/ "./css/error.scss":
+/*!************************!*\
+  !*** ./css/error.scss ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"sectionHeader___1vbUF","subHeader":"subHeader___l-0m8","headerContainer":"headerContainer___3NxS9","anchor":"anchor___NrH_s","editLink":"editLink___1-WTE","header":"header___3q7Ji"};;
+module.exports = {"container":"container___-roxm","row":"row___2qpW7","header":"header___1nDdP","body":"body___2uvXd"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -258,7 +182,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553103");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887605314");
           });
       }
     }
@@ -295,229 +219,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649552367");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/index-diff.css":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/index-diff.css ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553380");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/index.css":
-/*!************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/index.css ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553372");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/dark.css":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/dark.css ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553396");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/darkest.css":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/darkest.css ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553410");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/light.css":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/light.css ***!
-  \***********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553388");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/lightest.css":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@react/react-spectrum/spectrum-css/link/multiStops/lightest.css ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553434");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887640834");
           });
       }
     }
@@ -554,7 +256,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553420");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641157");
           });
       }
     }
@@ -591,7 +293,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553402");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641166");
           });
       }
     }
@@ -628,7 +330,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553441");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641202");
           });
       }
     }
@@ -665,7 +367,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553456");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641211");
           });
       }
     }
@@ -702,7 +404,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553427");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641178");
           });
       }
     }
@@ -739,7 +441,7 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1572649553449");
+            injectCss(link, link.href.split("?")[0] + "?unix=1572887641219");
           });
       }
     }
@@ -748,4 +450,4 @@ module.exports = {"headingAnchor":"headingAnchor___CupO2","sectionHeader":"secti
 /***/ })
 
 })
-//# sourceMappingURL=styles.9b42c21eee6d663a991d.hot-update.js.map
+//# sourceMappingURL=styles.0d0d6dc9a9ab778e4458.hot-update.js.map

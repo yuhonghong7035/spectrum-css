@@ -35089,7 +35089,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 108));
+__export(__webpack_require__(/*! ./WritableStream */ 107));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -54284,7 +54284,7 @@ function (_React$Component2) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Variant, [{
     key: "render",
     value: function render() {
-      this.props.example.markup = this.props.example.markup.replace('src="img/', "src=\"".concat("", "/static/images/")).replace('url(img/', "url(".concat("", "/static/images/"));
+      this.props.example.markup = this.props.example.markup.replace(/src="img\//g, "src=\"".concat("", "/static/images/")).replace(/url\(img\//g, "url(".concat("", "/static/images/"));
       return __jsx("article", {
         __source: {
           fileName: _jsxFileName,
@@ -54632,7 +54632,18 @@ function () {
 
 /***/ }),
 
-/***/ 100:
+/***/ 107:
+/*!**********************************!*\
+  !*** ./WritableStream (ignored) ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 117:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js ***!
   \*********************************************************************************************************************************************************/
@@ -54641,17 +54652,6 @@ function () {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fcomponents%2Fid&absolutePagePath=%2FUsers%2Fgarthdb%2FSpectrum%2Fspectrum-css%2Fpages%2Fcomponents%2Fid.js!./");
 
-
-/***/ }),
-
-/***/ 108:
-/*!**********************************!*\
-  !*** ./WritableStream (ignored) ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -54666,5 +54666,5 @@ module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[100,"static/runtime/webpack.js","styles"]]]);
+},[[117,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=id.js.map
