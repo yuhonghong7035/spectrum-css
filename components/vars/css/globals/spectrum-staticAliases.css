@@ -49,8 +49,8 @@
   --spectrum-alias-heading-text-font-weight-strong-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-subheading-text-font-weight: var(--spectrum-global-font-weight-bold);
   --spectrum-alias-subheading-text-font-weight-strong: var(--spectrum-global-font-weight-black);
-  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-regular);
-  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-detail-text-font-weight: var(--spectrum-global-font-weight-bold);
+  --spectrum-alias-detail-text-font-weight-strong: var(--spectrum-global-font-weight-black);
   --spectrum-alias-serif-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-text-font-family: var(--spectrum-global-font-family-serif);
   --spectrum-alias-article-body-text-font-weight: var(--spectrum-global-font-weight-regular);
