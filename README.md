@@ -194,6 +194,12 @@ Deploy
 npm run deploy
 ```
 
+Push changes to `nextjs` branch
+
+```
+git push origin nextjs
+```
+
 ### Updating Tokens / CSS variables from Spectrum DNA
 Instructions for updating tokens from [Spectrum DNA](https://git.corp.adobe.com/Spectrum/spectrum-dna) can be found here:
 [components/vars/README.md](components/vars/README.md)
