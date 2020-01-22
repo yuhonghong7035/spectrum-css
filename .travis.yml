@@ -1,7 +1,10 @@
 language: node_js
+os: linux
 node_js:
   - "node"
 before_install:
+  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch
   - npm install -g yarn
 install:
   - yarn
@@ -10,8 +13,9 @@ script:
   - yarn run prep
 deploy:
   provider: pages
-  skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: spectrum-css
+  target_branch: test-pages
+  skip_cleaup: true
   on:
     branch: nextjs

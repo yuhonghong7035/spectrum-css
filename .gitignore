@@ -12,4 +12,5 @@ npm-debug.log*
 /.idea
 .next
 .env
-/spectrum-css
+components/**/*.yml
+spectrum-css
