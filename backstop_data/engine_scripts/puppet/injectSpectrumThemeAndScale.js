@@ -31,5 +31,7 @@ module.exports = function (page, scenario) {
       });
       bodyElm.classList.toggle(`spectrum--${window._spectrumTheme}`);
     }
+
+    window.testMultistops();
   });
 };
