@@ -201,18 +201,26 @@ window.addEventListener('DOMContentLoaded', function() {
     else if (event.target.id === 'switcher-theme') {
       switcher.theme = event.detail.value;
     }
+    else if (event.target.id === 'switcher-direction') {
+      switcher.direction = event.detail.value;
+    }
   });
 
   let scaleDropdown = document.querySelector('#switcher-scale');
   let themeDropdown = document.querySelector('#switcher-theme');
+  let directionDropdown = document.querySelector('#switcher-direction');
   window.addEventListener('PageFastLoaded', function updateScaleDropdowns() {
     scaleDropdown = document.querySelector('#switcher-scale');
     themeDropdown = document.querySelector('#switcher-theme');
+    directionDropdown = document.querySelector('#switcher-direction');
     if (scaleDropdown) {
       setDropdownValue(scaleDropdown, switcher.scale);
     }
     if (themeDropdown) {
       setDropdownValue(themeDropdown, switcher.theme);
+    }
+    if (directionDropdown) {
+      setDropdownValue(directionDropdown, switcher.direction);
     }
   });
 
